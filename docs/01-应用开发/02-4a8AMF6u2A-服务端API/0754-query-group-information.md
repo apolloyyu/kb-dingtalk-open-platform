@@ -1,26 +1,29 @@
 ---
-title: "更新群管理员"
-source_url: "https://open.dingtalk.com/document/development/update-group-administrators"
+title: "查询场景群简要信息"
+source_url: "https://open.dingtalk.com/document/development/query-group-information"
 namespace: "development"
-slug: "update-group-administrators"
+slug: "query-group-information"
 group: "应用开发"
 tab: "服务端API"
-breadcrumb: "即时通信 > 会话管理 > 场景群 > 群管理 > 更新群管理员"
-doc_id: "a9nGMwKy69"
-updated_at: "2026-05-10 01:06:15"
+breadcrumb: "即时通信 > 会话管理 > 场景群 > 群管理 > 查询场景群简要信息"
+doc_id: "oMZn2ooR6S"
+updated_at: "2026-05-10 01:09:42"
 ---
 
-> Source: https://open.dingtalk.com/document/development/update-group-administrators
-> Path: 应用开发 / 服务端API / 即时通信 > 会话管理 > 场景群 > 群管理 > 更新群管理员
-> Updated: 2026-05-10 01:06:15
+> Source: https://open.dingtalk.com/document/development/query-group-information
+> Path: 应用开发 / 服务端API / 即时通信 > 会话管理 > 场景群 > 群管理 > 查询场景群简要信息
+> Updated: 2026-05-10 01:09:42
 
-# 更新群管理员
+# 查询场景群简要信息
 
-调用本接口，更新群的群管理员，适用于群创建者或已有管理员需要调整群管理员设置，如添加新管理员、移除现有管理员等场景。
+调用本接口，根据群ID查询群名称、群图标、群主id等基本信息，适用于需要快速获取群基本信息的场景，如在群列表展示群名称、头像等信息，或者在业务处理中需要判断群状态等情况。
 
 ## 接口调用说明
 
-支持基于群模板创建的群，详情参见[创建场景群](0746-create-a-scene-group.md)。
+支持以下场景使用：
+
+- 基于群模板创建的群，详情参见[创建场景群](0746-create-a-scene-group.md)。
+- 安装群聊酷应用的群，详情参见[群聊酷应用](../01-XOnnmGCTbn-开发指南/0042-coolapp-overview.md)。
 
 ## 请求
 
@@ -28,8 +31,8 @@ updated_at: "2026-05-10 01:06:15"
 
 | 字段 | 值 |
 | --- | --- |
-| HTTP URL | https://api.dingtalk.com/v1.0/im/sceneGroups/subAdmins |
-| HTTP Method | PUT |
+| HTTP URL | https://api.dingtalk.com/v1.0/im/sceneGroups/query |
+| HTTP Method | POST |
 | 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
 | 权限要求 | permission-qyapi\_chat\_manage-钉钉群基础信息管理权限 |
 
@@ -43,26 +46,22 @@ updated_at: "2026-05-10 01:06:15"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| openConversationId | String | 是 | 群ID，调用[创建场景群](0746-create-a-scene-group.md)接口获取`open_conversation_id`参数值。 |
-| userIds | Array of String | 否 | 用户userid列表。      最多传12个。 |
-| role | Long | 是 | 群成员类型：   - **2**：群管理员 - **3**：普通群成员 |
-| unionIds | Array of String | 否 | 外部联系人unionId列表。 |
+| openConversationId | String | 是 | 群ID：   - 基于群模板创建的群：调用[创建场景群](0746-create-a-scene-group.md)接口获取`open_conversation_id`参数值。 - 安装群聊酷应用的群：通过[群内安装酷应用事件](../01-XOnnmGCTbn-开发指南/0058-group-chat-coolapp-event.md)获取回调参数`OpenConversationId`参数值。 |
+| coolAppCode | String | 否 | 群聊酷应用编码：   - 基于群模板创建的群：不需要传入此参数。 - 安装群聊酷应用的群，**必须**传入此参数。 |
 
 ### 请求示例
 
 HTTP
 
 ```
-PUT /v1.0/im/sceneGroups/subAdmins HTTP/1.1
+POST /v1.0/im/sceneGroups/query HTTP/1.1
 Host:api.dingtalk.com
-x-acs-dingtalk-access-token:BExxx
+x-acs-dingtalk-access-token:c0fa518xxx
 Content-Type:application/json
 
 {
-  "openConversationId" : "cidXxxx",
-  "userIds" : [ "user123" ],
-  "role" : 2,
-  "unionIds" : [ "unionId" ]
+  "openConversationId" : "cid/i4vQnDxxx",
+  "coolAppCode" : "XXXXXXX"
 }
 ```
 
@@ -92,19 +91,13 @@ public class Sample {
     public static void main(String[] args_) throws Exception {
         
         com.aliyun.dingtalkim_1_0.Client client = Sample.createClient();
-        com.aliyun.dingtalkim_1_0.models.UpdateGroupSubAdminHeaders updateGroupSubAdminHeaders = new com.aliyun.dingtalkim_1_0.models.UpdateGroupSubAdminHeaders();
-        updateGroupSubAdminHeaders.xAcsDingtalkAccessToken = "<your access token>";
-        com.aliyun.dingtalkim_1_0.models.UpdateGroupSubAdminRequest updateGroupSubAdminRequest = new com.aliyun.dingtalkim_1_0.models.UpdateGroupSubAdminRequest()
-                .setOpenConversationId("cidXxxx")
-                .setUserIds(java.util.Arrays.asList(
-                    "user123"
-                ))
-                .setRole(2L)
-                .setUnionIds(java.util.Arrays.asList(
-                    "unionId"
-                ));
+        com.aliyun.dingtalkim_1_0.models.GetSceneGroupInfoHeaders getSceneGroupInfoHeaders = new com.aliyun.dingtalkim_1_0.models.GetSceneGroupInfoHeaders();
+        getSceneGroupInfoHeaders.xAcsDingtalkAccessToken = "<your access token>";
+        com.aliyun.dingtalkim_1_0.models.GetSceneGroupInfoRequest getSceneGroupInfoRequest = new com.aliyun.dingtalkim_1_0.models.GetSceneGroupInfoRequest()
+                .setOpenConversationId("cid/i4vQnDxxx")
+                .setCoolAppCode("XXXXXXX");
         try {
-            client.updateGroupSubAdminWithOptions(updateGroupSubAdminRequest, updateGroupSubAdminHeaders, new com.aliyun.teautil.models.RuntimeOptions());
+            client.getSceneGroupInfoWithOptions(getSceneGroupInfoRequest, getSceneGroupInfoHeaders, new com.aliyun.teautil.models.RuntimeOptions());
         } catch (TeaException err) {
             if (!com.aliyun.teautil.Common.empty(err.code) && !com.aliyun.teautil.Common.empty(err.message)) {
                 // err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -159,20 +152,14 @@ class Sample:
         args: List[str],
     ) -> None:
         client = Sample.create_client()
-        update_group_sub_admin_headers = dingtalkim__1__0_models.UpdateGroupSubAdminHeaders()
-        update_group_sub_admin_headers.x_acs_dingtalk_access_token = '<your access token>'
-        update_group_sub_admin_request = dingtalkim__1__0_models.UpdateGroupSubAdminRequest(
-            open_conversation_id='cidXxxx',
-            user_ids=[
-                'user123'
-            ],
-            role=2,
-            union_ids=[
-                'unionId'
-            ]
+        get_scene_group_info_headers = dingtalkim__1__0_models.GetSceneGroupInfoHeaders()
+        get_scene_group_info_headers.x_acs_dingtalk_access_token = '<your access token>'
+        get_scene_group_info_request = dingtalkim__1__0_models.GetSceneGroupInfoRequest(
+            open_conversation_id='cid/i4vQnDxxx',
+            cool_app_code='XXXXXXX'
         )
         try:
-            client.update_group_sub_admin_with_options(update_group_sub_admin_request, update_group_sub_admin_headers, util_models.RuntimeOptions())
+            client.get_scene_group_info_with_options(get_scene_group_info_request, get_scene_group_info_headers, util_models.RuntimeOptions())
         except Exception as err:
             if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
                 # err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -183,20 +170,14 @@ class Sample:
         args: List[str],
     ) -> None:
         client = Sample.create_client()
-        update_group_sub_admin_headers = dingtalkim__1__0_models.UpdateGroupSubAdminHeaders()
-        update_group_sub_admin_headers.x_acs_dingtalk_access_token = '<your access token>'
-        update_group_sub_admin_request = dingtalkim__1__0_models.UpdateGroupSubAdminRequest(
-            open_conversation_id='cidXxxx',
-            user_ids=[
-                'user123'
-            ],
-            role=2,
-            union_ids=[
-                'unionId'
-            ]
+        get_scene_group_info_headers = dingtalkim__1__0_models.GetSceneGroupInfoHeaders()
+        get_scene_group_info_headers.x_acs_dingtalk_access_token = '<your access token>'
+        get_scene_group_info_request = dingtalkim__1__0_models.GetSceneGroupInfoRequest(
+            open_conversation_id='cid/i4vQnDxxx',
+            cool_app_code='XXXXXXX'
         )
         try:
-            await client.update_group_sub_admin_with_options_async(update_group_sub_admin_request, update_group_sub_admin_headers, util_models.RuntimeOptions())
+            await client.get_scene_group_info_with_options_async(get_scene_group_info_request, get_scene_group_info_headers, util_models.RuntimeOptions())
         except Exception as err:
             if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
                 # err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -220,8 +201,8 @@ use AlibabaCloud\Tea\Exception\TeaError;
 use AlibabaCloud\Tea\Utils\Utils;
 
 use Darabonba\OpenApi\Models\Config;
-use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\UpdateGroupSubAdminHeaders;
-use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\UpdateGroupSubAdminRequest;
+use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\GetSceneGroupInfoHeaders;
+use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\GetSceneGroupInfoRequest;
 use AlibabaCloud\Tea\Utils\Utils\RuntimeOptions;
 
 class Sample {
@@ -243,20 +224,14 @@ class Sample {
      */
     public static function main($args){
         $client = self::createClient();
-        $updateGroupSubAdminHeaders = new UpdateGroupSubAdminHeaders([]);
-        $updateGroupSubAdminHeaders->xAcsDingtalkAccessToken = "<your access token>";
-        $updateGroupSubAdminRequest = new UpdateGroupSubAdminRequest([
-            "openConversationId" => "cidXxxx",
-            "userIds" => [
-                "user123"
-            ],
-            "role" => 2,
-            "unionIds" => [
-                "unionId"
-            ]
+        $getSceneGroupInfoHeaders = new GetSceneGroupInfoHeaders([]);
+        $getSceneGroupInfoHeaders->xAcsDingtalkAccessToken = "<your access token>";
+        $getSceneGroupInfoRequest = new GetSceneGroupInfoRequest([
+            "openConversationId" => "cid/i4vQnDxxx",
+            "coolAppCode" => "XXXXXXX"
         ]);
         try {
-            $client->updateGroupSubAdminWithOptions($updateGroupSubAdminRequest, $updateGroupSubAdminHeaders, new RuntimeOptions([]));
+            $client->getSceneGroupInfoWithOptions($getSceneGroupInfoRequest, $getSceneGroupInfoHeaders, new RuntimeOptions([]));
         }
         catch (Exception $err) {
             if (!($err instanceof TeaError)) {
@@ -313,13 +288,11 @@ func _main (args []*string) (_err error) {
     return _err
   }
 
-  updateGroupSubAdminHeaders := &dingtalkim_1_0.UpdateGroupSubAdminHeaders{}
-  updateGroupSubAdminHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
-  updateGroupSubAdminRequest := &dingtalkim_1_0.UpdateGroupSubAdminRequest{
-    OpenConversationId: tea.String("cidXxxx"),
-    UserIds: []*string{tea.String("user123")},
-    Role: tea.Int64(2),
-    UnionIds: []*string{tea.String("unionId")},
+  getSceneGroupInfoHeaders := &dingtalkim_1_0.GetSceneGroupInfoHeaders{}
+  getSceneGroupInfoHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
+  getSceneGroupInfoRequest := &dingtalkim_1_0.GetSceneGroupInfoRequest{
+    OpenConversationId: tea.String("cid/i4vQnDxxx"),
+    CoolAppCode: tea.String("XXXXXXX"),
   }
   tryErr := func()(_e error) {
     defer func() {
@@ -327,7 +300,7 @@ func _main (args []*string) (_err error) {
         _e = r
       }
     }()
-    _, _err = client.UpdateGroupSubAdminWithOptions(updateGroupSubAdminRequest, updateGroupSubAdminHeaders, &util.RuntimeOptions{})
+    _, _err = client.GetSceneGroupInfoWithOptions(getSceneGroupInfoRequest, getSceneGroupInfoHeaders, &util.RuntimeOptions{})
     if _err != nil {
       return _err
     }
@@ -384,20 +357,14 @@ class Client {
 
   static async main(args) {
     let client = Client.createClient();
-    let updateGroupSubAdminHeaders = new dingtalkim_1_0.UpdateGroupSubAdminHeaders({ });
-    updateGroupSubAdminHeaders.xAcsDingtalkAccessToken = '<your access token>';
-    let updateGroupSubAdminRequest = new dingtalkim_1_0.UpdateGroupSubAdminRequest({
-      openConversationId: 'cidXxxx',
-      userIds: [
-        'user123'
-      ],
-      role: 2,
-      unionIds: [
-        'unionId'
-      ],
+    let getSceneGroupInfoHeaders = new dingtalkim_1_0.GetSceneGroupInfoHeaders({ });
+    getSceneGroupInfoHeaders.xAcsDingtalkAccessToken = '<your access token>';
+    let getSceneGroupInfoRequest = new dingtalkim_1_0.GetSceneGroupInfoRequest({
+      openConversationId: 'cid/i4vQnDxxx',
+      coolAppCode: 'XXXXXXX',
     });
     try {
-      await client.updateGroupSubAdminWithOptions(updateGroupSubAdminRequest, updateGroupSubAdminHeaders, new Util.RuntimeOptions({ }));
+      await client.getSceneGroupInfoWithOptions(getSceneGroupInfoRequest, getSceneGroupInfoHeaders, new Util.RuntimeOptions({ }));
     } catch (err) {
       if (!Util.default.empty(err.code) && !Util.default.empty(err.message)) {
         // err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -452,24 +419,16 @@ namespace AlibabaCloud.SDK.Sample
         public static void Main(string[] args)
         {
             AlibabaCloud.SDK.Dingtalkim_1_0.Client client = CreateClient();
-            AlibabaCloud.SDK.Dingtalkim_1_0.Models.UpdateGroupSubAdminHeaders updateGroupSubAdminHeaders = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.UpdateGroupSubAdminHeaders();
-            updateGroupSubAdminHeaders.XAcsDingtalkAccessToken = "<your access token>";
-            AlibabaCloud.SDK.Dingtalkim_1_0.Models.UpdateGroupSubAdminRequest updateGroupSubAdminRequest = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.UpdateGroupSubAdminRequest
+            AlibabaCloud.SDK.Dingtalkim_1_0.Models.GetSceneGroupInfoHeaders getSceneGroupInfoHeaders = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.GetSceneGroupInfoHeaders();
+            getSceneGroupInfoHeaders.XAcsDingtalkAccessToken = "<your access token>";
+            AlibabaCloud.SDK.Dingtalkim_1_0.Models.GetSceneGroupInfoRequest getSceneGroupInfoRequest = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.GetSceneGroupInfoRequest
             {
-                OpenConversationId = "cidXxxx",
-                UserIds = new List<string>
-                {
-                    "user123"
-                },
-                Role = 2,
-                UnionIds = new List<string>
-                {
-                    "unionId"
-                },
+                OpenConversationId = "cid/i4vQnDxxx",
+                CoolAppCode = "XXXXXXX",
             };
             try
             {
-                client.UpdateGroupSubAdminWithOptions(updateGroupSubAdminRequest, updateGroupSubAdminHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
+                client.GetSceneGroupInfoWithOptions(getSceneGroupInfoRequest, getSceneGroupInfoHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
             }
             catch (TeaException err)
             {
@@ -501,7 +460,14 @@ namespace AlibabaCloud.SDK.Sample
 
 | 名称 | 类型 | 描述 |
 | --- | --- | --- |
-| success | Boolean | 更新是否成功。 |
+| success | Boolean | 调用是否成功。 |
+| openConversationId | String | 开放群ID。 |
+| templateId | String | 场景群模板ID。 |
+| title | String | 群名称。 |
+| ownerUserId | String | 群主的userId。 |
+| icon | String | 群头像mediaId。 |
+| groupUrl | String | 群URL。 |
+| status | Integer | 群状态：   - **1**：正常 - **2**：已解散 |
 
 ### 响应体示例
 
@@ -510,7 +476,14 @@ HTTP/1.1 200 OK
 Content-Type:application/json
 
 {
-  "success" : true
+  "success" : true,
+  "openConversationId" : "cidXXXXXXXXX==",
+  "templateId" : "13d42075-b3e2-xxx",
+  "title" : "奥运项目组",
+  "ownerUserId" : "wb292913",
+  "icon" : "@sdkhaiuhxxx",
+  "groupUrl" : "https://xxx.com",
+  "status" : 1
 }
 ```
 
@@ -520,18 +493,14 @@ Content-Type:application/json
 
 | HttpCode | 错误码 | 错误信息 | 说明 |
 | --- | --- | --- | --- |
-| 400 | openConversationIdDecriptFailed | 群 ID 解码失败 | 群 ID 解码失败 |
-| 400 | groupPermissionDenied | 无权限访问此群数据 | 无权限访问此群数据 |
-| 400 | grayControlDenied | 接口灰度中暂时无法使用 | 接口灰度中暂时无法使用 |
-| 400 | apiPermissionDenied | 无权限访问此接口 | 无权限访问此接口 |
-| 400 | commonParamIllegal | 网关入参非法 | 网关入参非法 |
-| 400 | invalidUserId | 无效的用户ID清单 | 无效的用户ID清单 |
-| 400 | subAdminNumberExcessive | 管理员数量超过最大限制 | 管理员数量超过最大限制 |
-| 400 | invalidUserIds | 无效的用户ID清单 | 无效的用户ID清单 |
-| 400 | invalidOpenConversationId | 无效的群ID | 无效的群ID |
-| 400 | systemError | 系统异常 | 系统异常 |
-| 400 | userNotInGroup | 用户不在群中 | 用户不在群中 |
-| 400 | userNotExists | 用户不存在 | 用户不存在 |
+| 400 | groupPermissionDenied | 无权限 | 无权限,该群不是内部群，或者未安装群模板，或者未安装入参指定的群聊酷应用，或者入参指定的群聊酷应用不属于当前token所属应用名下 |
+| 400 | paramIllegal | 请求参数非法 | 请求参数非法 |
+| 400 | paramBlank | 请求参数为空 | 请求参数为空 |
+| 400 | cidEncryptError | 群ID解析错误 | 群ID解析错误 |
+| 400 | groupTemplatePermissionDenied | 无权限，该群安装的群模板不属于当前token对应的应用名下 | 无权限，该群安装的群模板不属于当前token对应的应用名下 |
+| 400 | coolAppUninstalled | 无权限，该群没有安装群聊酷应用 | 无权限，该群没有安装群聊酷应用 |
+| 400 | coolAppUnexist | 群聊酷应用不存在 | 群聊酷应用不存在 |
+| 400 | coolAppPermissionDenied | 无权限，指定的群扩展不属于当前token对应的应用名下 | 无权限，指定的群扩展不属于当前token对应的应用名下 |
 | 400 | permession.checkFailed | 群主不在应用可见性内 | 群主不在应用可见性内 |
-| 400 | groupDisbang | 群已经解散 | 群已经解散 |
-| 400 | invalidParams | 不合法的参数 | 不合法的参数 |
+| 400 | systemError | 系统异常 | 系统内部异常，请稍后再试 |
+| 400 | auth.error | %s | 权限校验不通过 |

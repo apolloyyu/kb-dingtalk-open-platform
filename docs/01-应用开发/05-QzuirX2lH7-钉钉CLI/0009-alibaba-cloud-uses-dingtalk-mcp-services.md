@@ -5,13 +5,13 @@ namespace: "development"
 slug: "alibaba-cloud-uses-dingtalk-mcp-services"
 group: "应用开发"
 tab: "钉钉CLI"
-breadcrumb: "钉钉MCP > 使用指南 > 阿里云百炼使用钉钉MCP服务"
+breadcrumb: "进阶实战 > MCP 服务接入 > 阿里云百炼使用钉钉MCP服务"
 doc_id: "Ib3gxduS9e"
 updated_at: "2026-05-19 16:40:40"
 ---
 
 > Source: https://open.dingtalk.com/document/development/alibaba-cloud-uses-dingtalk-mcp-services
-> Path: 应用开发 / 钉钉CLI / 钉钉MCP > 使用指南 > 阿里云百炼使用钉钉MCP服务
+> Path: 应用开发 / 钉钉CLI / 进阶实战 > MCP 服务接入 > 阿里云百炼使用钉钉MCP服务
 > Updated: 2026-05-19 16:40:40
 
 # 阿里云百炼使用钉钉MCP服务

@@ -5,13 +5,13 @@ namespace: "development"
 slug: "dingtalk-deap-platform-using-mcp-services"
 group: "应用开发"
 tab: "钉钉CLI"
-breadcrumb: "钉钉MCP > 使用指南 > 钉钉Deap平台使用MCP服务"
+breadcrumb: "进阶实战 > MCP 服务接入 > 钉钉Deap平台使用MCP服务"
 doc_id: "qPyDVv1SJx"
 updated_at: "2026-05-19 16:40:40"
 ---
 
 > Source: https://open.dingtalk.com/document/development/dingtalk-deap-platform-using-mcp-services
-> Path: 应用开发 / 钉钉CLI / 钉钉MCP > 使用指南 > 钉钉Deap平台使用MCP服务
+> Path: 应用开发 / 钉钉CLI / 进阶实战 > MCP 服务接入 > 钉钉Deap平台使用MCP服务
 > Updated: 2026-05-19 16:40:40
 
 # 钉钉Deap平台使用MCP服务

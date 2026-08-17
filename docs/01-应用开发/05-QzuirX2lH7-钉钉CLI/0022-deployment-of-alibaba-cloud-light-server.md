@@ -5,13 +5,13 @@ namespace: "development"
 slug: "deployment-of-alibaba-cloud-light-server"
 group: "应用开发"
 tab: "钉钉CLI"
-breadcrumb: "OpenClaw > OpenClaw常用部署方式 > 阿里云轻量服务器部署"
+breadcrumb: "高级集成 > OpenClaw 常用部署方式 > 阿里云轻量服务器部署"
 doc_id: "hAiYYyqsoT"
 updated_at: "2026-07-14 09:22:36"
 ---
 
 > Source: https://open.dingtalk.com/document/development/deployment-of-alibaba-cloud-light-server
-> Path: 应用开发 / 钉钉CLI / OpenClaw > OpenClaw常用部署方式 > 阿里云轻量服务器部署
+> Path: 应用开发 / 钉钉CLI / 高级集成 > OpenClaw 常用部署方式 > 阿里云轻量服务器部署
 > Updated: 2026-07-14 09:22:36
 
 # 阿里云轻量服务器部署

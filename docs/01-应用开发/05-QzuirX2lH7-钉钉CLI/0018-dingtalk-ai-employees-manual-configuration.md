@@ -5,13 +5,13 @@ namespace: "development"
 slug: "dingtalk-ai-employees-manual-configuration"
 group: "应用开发"
 tab: "钉钉CLI"
-breadcrumb: "OpenClaw > OpenClaw机器人手动配置"
+breadcrumb: "高级集成 > OpenClaw 框架集成 > OpenClaw机器人手动配置"
 doc_id: "e8TS1kDOf5"
 updated_at: "2026-07-14 09:22:37"
 ---
 
 > Source: https://open.dingtalk.com/document/development/dingtalk-ai-employees-manual-configuration
-> Path: 应用开发 / 钉钉CLI / OpenClaw > OpenClaw机器人手动配置
+> Path: 应用开发 / 钉钉CLI / 高级集成 > OpenClaw 框架集成 > OpenClaw机器人手动配置
 > Updated: 2026-07-14 09:22:37
 
 # OpenClaw机器人手动配置
@@ -20,7 +20,7 @@ updated_at: "2026-07-14 09:22:37"
 
 > **[!NOTE]**
 >
-> 钉钉开放平台已支持一键自动创建OpenClaw机器人应用，详情可查看[一键创建OpenClaw机器人·即刻拥有钉钉 AI 助理](0017-build-dingtalk-ai-employees.md)文档。
+> 钉钉开放平台已支持一键自动创建OpenClaw机器人应用，详情可查看[一键创建OpenClaw机器人·即刻拥有钉钉 AI 助理](0020-build-dingtalk-ai-employees.md)文档。
 
 ## **简介**
 
@@ -122,9 +122,9 @@ OpenClaw 支持全场景灵活部署，无论您选择阿里云 ECS 、阿里云
 
 以下是两种部署OpenClaw 的方式，可根据实际需求进行选择：
 
-- 阿里云轻量服务器：请参考[阿里云轻量服务器部署](0020-deployment-of-alibaba-cloud-light-server.md)
-- ECS服务器部署：请参考[阿里云ECS服务器部署](0021-deployment-alibaba-cloud-ecs-server.md)
-- 本地安装OpenClaw：请参考[本地安装OpenClaw](0022-install-openclaw-locally.md)
+- 阿里云轻量服务器：请参考[阿里云轻量服务器部署](0022-deployment-of-alibaba-cloud-light-server.md)
+- ECS服务器部署：请参考[阿里云ECS服务器部署](0023-deployment-alibaba-cloud-ecs-server.md)
+- 本地安装OpenClaw：请参考[本地安装OpenClaw](0021-install-openclaw-locally.md)
 
 ## **步骤五：使用钉钉机器人**
 

@@ -5,13 +5,13 @@ namespace: "development"
 slug: "create-dingtalk-intelligent-agent-application"
 group: "应用开发"
 tab: "钉钉CLI"
-breadcrumb: "Agent接入钉钉 > 一键创建钉钉智能体应用"
+breadcrumb: "进阶实战 > Agent 场景案例库 > 快速创建入口 > 一键创建钉钉智能体应用"
 doc_id: "8Owr5ZoXhP"
 updated_at: "2026-04-24 10:51:22"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-dingtalk-intelligent-agent-application
-> Path: 应用开发 / 钉钉CLI / Agent接入钉钉 > 一键创建钉钉智能体应用
+> Path: 应用开发 / 钉钉CLI / 进阶实战 > Agent 场景案例库 > 快速创建入口 > 一键创建钉钉智能体应用
 > Updated: 2026-04-24 10:51:22
 
 # 一键创建钉钉智能体应用

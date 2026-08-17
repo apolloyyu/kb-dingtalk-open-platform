@@ -1,20 +1,20 @@
 ---
-title: "设置群成员禁言状态"
+title: "设置场景群成员禁言状态"
 source_url: "https://open.dingtalk.com/document/development/set-group-members-access-control"
 namespace: "development"
 slug: "set-group-members-access-control"
 group: "应用开发"
 tab: "服务端API"
-breadcrumb: "即时通信 > 会话管理 > 场景群 > 群管理 > 设置群成员禁言状态"
+breadcrumb: "即时通信 > 会话管理 > 场景群 > 群管理 > 设置场景群成员禁言状态"
 doc_id: "8ncPWvbEFF"
 updated_at: "2025-09-12 17:18:30"
 ---
 
 > Source: https://open.dingtalk.com/document/development/set-group-members-access-control
-> Path: 应用开发 / 服务端API / 即时通信 > 会话管理 > 场景群 > 群管理 > 设置群成员禁言状态
+> Path: 应用开发 / 服务端API / 即时通信 > 会话管理 > 场景群 > 群管理 > 设置场景群成员禁言状态
 > Updated: 2025-09-12 17:18:30
 
-# 设置群成员禁言状态
+# 设置场景群成员禁言状态
 
 调用本接口设置场景群内的群成员禁言状态，可设置指定群成员禁言或解除禁言，适用于企业群管理员对群内成员进行管理，需要对违规成员进行禁言或解除禁言的场景。
 

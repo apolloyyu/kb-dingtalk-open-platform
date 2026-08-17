@@ -5,13 +5,13 @@ namespace: "development"
 slug: "creat-dingtalk-application-scan-process"
 group: "应用开发"
 tab: "钉钉CLI"
-breadcrumb: "Agent接入钉钉 > 一键创建钉钉应用扫码接入流程"
+breadcrumb: "进阶实战 > Agent 场景案例库 > 快速创建入口 > 一键创建钉钉应用扫码接入流程"
 doc_id: "x2RwzPxqkm"
 updated_at: "2026-04-24 14:39:18"
 ---
 
 > Source: https://open.dingtalk.com/document/development/creat-dingtalk-application-scan-process
-> Path: 应用开发 / 钉钉CLI / Agent接入钉钉 > 一键创建钉钉应用扫码接入流程
+> Path: 应用开发 / 钉钉CLI / 进阶实战 > Agent 场景案例库 > 快速创建入口 > 一键创建钉钉应用扫码接入流程
 > Updated: 2026-04-24 14:39:18
 
 # 一键创建钉钉应用扫码接入流程

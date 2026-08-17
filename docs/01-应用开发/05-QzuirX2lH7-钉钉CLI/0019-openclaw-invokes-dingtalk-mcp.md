@@ -5,13 +5,13 @@ namespace: "development"
 slug: "openclaw-invokes-dingtalk-mcp"
 group: "应用开发"
 tab: "钉钉CLI"
-breadcrumb: "OpenClaw > 深度集成：OpenClaw调用钉钉MCP"
+breadcrumb: "高级集成 > OpenClaw 框架集成 > 深度集成：OpenClaw调用钉钉MCP"
 doc_id: "228Sw1pcmx"
 updated_at: "2026-07-24 09:14:15"
 ---
 
 > Source: https://open.dingtalk.com/document/development/openclaw-invokes-dingtalk-mcp
-> Path: 应用开发 / 钉钉CLI / OpenClaw > 深度集成：OpenClaw调用钉钉MCP
+> Path: 应用开发 / 钉钉CLI / 高级集成 > OpenClaw 框架集成 > 深度集成：OpenClaw调用钉钉MCP
 > Updated: 2026-07-24 09:14:15
 
 # 深度集成：OpenClaw调用钉钉MCP

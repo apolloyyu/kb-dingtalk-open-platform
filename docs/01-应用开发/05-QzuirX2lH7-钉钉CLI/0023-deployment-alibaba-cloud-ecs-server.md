@@ -5,13 +5,13 @@ namespace: "development"
 slug: "deployment-alibaba-cloud-ecs-server"
 group: "应用开发"
 tab: "钉钉CLI"
-breadcrumb: "OpenClaw > OpenClaw常用部署方式 > 阿里云ECS服务器部署"
+breadcrumb: "高级集成 > OpenClaw 常用部署方式 > 阿里云ECS服务器部署"
 doc_id: "nh2a9CkJ5W"
 updated_at: "2026-07-14 09:22:35"
 ---
 
 > Source: https://open.dingtalk.com/document/development/deployment-alibaba-cloud-ecs-server
-> Path: 应用开发 / 钉钉CLI / OpenClaw > OpenClaw常用部署方式 > 阿里云ECS服务器部署
+> Path: 应用开发 / 钉钉CLI / 高级集成 > OpenClaw 常用部署方式 > 阿里云ECS服务器部署
 > Updated: 2026-07-14 09:22:35
 
 # 阿里云ECS服务器部署

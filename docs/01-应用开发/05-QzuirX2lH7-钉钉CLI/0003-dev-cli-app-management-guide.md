@@ -5,13 +5,13 @@ namespace: "development"
 slug: "dev-cli-app-management-guide"
 group: "应用开发"
 tab: "钉钉CLI"
-breadcrumb: "钉钉CLI > 开发者命令行 · CLI 应用管理指南"
+breadcrumb: "新手入门 > 命令速查 > 开发者命令行 · CLI 应用管理指南"
 doc_id: "JhNOrF0vs1"
 updated_at: "2026-06-26 17:11:34"
 ---
 
 > Source: https://open.dingtalk.com/document/development/dev-cli-app-management-guide
-> Path: 应用开发 / 钉钉CLI / 钉钉CLI > 开发者命令行 · CLI 应用管理指南
+> Path: 应用开发 / 钉钉CLI / 新手入门 > 命令速查 > 开发者命令行 · CLI 应用管理指南
 > Updated: 2026-06-26 17:11:34
 
 # 开发者命令行 · CLI 应用管理指南

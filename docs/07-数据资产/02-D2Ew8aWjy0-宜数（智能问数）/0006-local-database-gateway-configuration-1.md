@@ -7,18 +7,20 @@ group: "数据资产"
 tab: "宜数（智能问数）"
 breadcrumb: "问数助理 > 本地数据库网关配置"
 doc_id: "6pk5vLicID"
-updated_at: "2025-09-23 19:20:45"
+updated_at: "2026-08-13 09:05:21"
 ---
 
 > Source: https://open.dingtalk.com/document/aipass/local-database-gateway-configuration-1
 > Path: 数据资产 / 宜数（智能问数） / 问数助理 > 本地数据库网关配置
-> Updated: 2025-09-23 19:20:45
+> Updated: 2026-08-13 09:05:21
 
 # 本地数据库网关配置
 
 ## **本地网关介绍**
 
 **智能问数本地网关**是基于钉钉开放平台 Stream 能力构建的数据连接器，方便用户快速将本地环境的数据库连接到智能问数上，免去了繁琐的公网IP、白名单等步骤。它的原理是，在用户本地部署客户端代理（agent），以提供反向代理服务，通过钉钉开发平台 Stream 网关连接到智能问数。
+
+![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8831450471/p920883.png)
 
 Stream模式的智能问数本地网关有以下优点：
 
@@ -27,33 +29,24 @@ Stream模式的智能问数本地网关有以下优点：
 - **零防火墙白名单**：Stream 模式下开发者无需向公网开放提供任何服务端口，无需部署防火墙和配置白名单。
 - **轻量级网关部署**：通过反向连接的方式建立通道，开发者只需保证运行环境具备公网访问能力即可，无需部署网关。
 
-![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8831450471/p920883.png)
-
 ## **本地网关客户端安装**
 
-### **1. 下载本地网关客户端**
+### **下载本地网关**
 
-#### **v0.0.2**
-
-| **客户端** | **下载地址** |
-| --- | --- |
-| mac | [dpaas-agent-mac.zip](https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20250303/rrquqb/dpaas-agent-mac.zip) |
+| **版本** | **客户端** | **下载地址** |
+| --- | --- | --- |
+| **V0.0.2** | mac | [dpaas-agent-mac.zip](https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20250303/rrquqb/dpaas-agent-mac.zip) |
 | win 64 | [dpaas-agent-win.zip](https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20250327/orvwle/dpaas-agent-win.zip) |
 | linux 64 | [dpaas-agent-linux .zip](https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20250303/gsczmu/dpaas-agent-linux+.zip) |
-
-#### **v0.0.1**
-
-| **客户端** | **下载地址** |
-| --- | --- |
-| mac | [dpaas-agent-mac.zip](https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20250226/tfeuhe/dpaas-agent-mac.zip) |
+| **V0.0.1** | mac | [dpaas-agent-mac.zip](https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20250226/tfeuhe/dpaas-agent-mac.zip) |
 | win 64 | [dpaas-agent-win.zip](https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20250226/vmwowx/dpaas-agent-win.zip) |
 | linux 64 | [dpaas-agent-linux.zip](https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20250226/fyyrxv/dpaas-agent-linux.zip) |
 
-### **2. 配置本地网关**
+### **配置本地网关**
 
 1. 配置应用信息，获取应用凭证信息：
 
-   1. 创建企业应用信息，详情参考[创建应用](../../01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md)。
+   1. 创建企业应用信息，详情参考[应用创建与配置](../../01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md)。
    2. 创建完成后，获取应用凭证信息，单击**基础信息** > **凭证与基础信息**，即可查看。
 
       | **凭证信息** | **说明** |
@@ -62,7 +55,7 @@ Stream模式的智能问数本地网关有以下优点：
       | Client ID | 客户端 ID。 |
       | Client Secret | 客户端密码。 |
 
-      ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8831450471/p920988.png)
+      ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/1213856871/p920988.png)
    3. 解压下载的本地网关软件，打开配置文件（config.json），填写 client 信息，配置文件中 client 部分用于身份验证和与钉钉开放平台的通信。
 
       > 对应上述凭证信息中的 Client ID 和 Client Secret。
@@ -81,9 +74,9 @@ Stream模式的智能问数本地网关有以下优点：
 
    > **[!NOTE]**
    >
-   > 1. 当前每个网关仅支持配置一个数据库，暂不支持在配置文件中配置多个数据库。
-   > 2. 每个网关对应一个开放平台上创建的钉钉应用，不同网关需要创建不同的钉钉应用。
-   > 3. 同一个网关支持负载均衡，部署在多个节点，但是底层数据库需同时支持集群式访问，这种情况下，查询请求会随机打到某个网关节点。
+   > - 当前每个网关仅支持配置一个数据库，暂不支持在配置文件中配置多个数据库。
+   > - 每个网关对应一个开放平台上创建的钉钉应用，不同网关需要创建不同的钉钉应用。
+   > - 同一个网关支持负载均衡，部署在多个节点，但是底层数据库需同时支持集群式访问，这种情况下，查询请求会随机打到某个网关节点。
 
    | **数据库** | **样例** |
    | --- | --- |
@@ -92,7 +85,7 @@ Stream模式的智能问数本地网关有以下优点：
    | SQLserver | ``` client:   client_id: dingexxxx   client_secret: xxxx  db_config:  - host: localhost    addr: localhost:1433    username: 填写用户名    password: 填写密码    database: 填写数据库名称    config_key: my_sqlserver ``` |
    | Oracle | ``` client:   client_id: dingexxxx   client_secret: xxxx  db_config:  - host: localhost    port: 1521    addr: localhost:1521    username: 填写用户名    password: 填写密码    database: 填写数据库名称(Oracle的PDB名称/Service Name)    config_key: my_oracle ``` |
 
-### **3. 启动客户端**
+### **启动客户端**
 
 运行网关，根据不同的使用场景，运行本地网关dpaas-agent，如下：
 
@@ -120,7 +113,7 @@ Stream模式的智能问数本地网关有以下优点：
    配置完成后，你就可以单击测试连通性。连接成功后，你就可以单击**下一步**。
 4. 在数据表配置页面，单击**新建数据表，**选择对应数据表**，**完成字段配置说明。
 
-   ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8831450471/p920906.png)
+   ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/1213856871/p920906.png)
 5. 选择本地网关配置的数据库。
 
    ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8831450471/p920902.png)
@@ -137,4 +130,4 @@ Stream模式的智能问数本地网关有以下优点：
    配置完成后，你就可以单击测试连通性。连接成功后，你就可以单击**下一步**。
 7. 在数据表配置页面，单击**新建数据表，**选择对应数据表**，**完成字段配置说明。
 
-   ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8831450471/p920906.png)
+   ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/1213856871/p920906.png)

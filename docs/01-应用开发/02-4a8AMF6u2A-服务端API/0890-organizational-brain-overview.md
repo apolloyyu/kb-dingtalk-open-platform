@@ -130,8 +130,8 @@ updated_at: "2026-05-19 20:33:13"
 
 组织大脑支持人才池新增、人才池编辑和人才池人员新增等回调事件。
 
-- [组织大脑人才池新增](../04-LFcRvVD08N-事件订阅/0176-events-hrbrain-talent-pool-add.md)
-- [组织大脑人才池编辑](../04-LFcRvVD08N-事件订阅/0177-events-hrbrain-talent-pool-edit.md)
-- [组织大脑人才池删除](../04-LFcRvVD08N-事件订阅/0178-events-hrbrain-talent-pool-delete.md)
-- [组织大脑人才池人员新增](../04-LFcRvVD08N-事件订阅/0179-events-hrbrain-talent-pool-staff-add.md)
-- [组织大脑人才池人员删除](../04-LFcRvVD08N-事件订阅/0180-events-hrbrain-talent-pool-staff-delete.md)
+- [组织大脑人才池新增](../04-LFcRvVD08N-事件订阅/0177-events-hrbrain-talent-pool-add.md)
+- [组织大脑人才池编辑](../04-LFcRvVD08N-事件订阅/0178-events-hrbrain-talent-pool-edit.md)
+- [组织大脑人才池删除](../04-LFcRvVD08N-事件订阅/0179-events-hrbrain-talent-pool-delete.md)
+- [组织大脑人才池人员新增](../04-LFcRvVD08N-事件订阅/0180-events-hrbrain-talent-pool-staff-add.md)
+- [组织大脑人才池人员删除](../04-LFcRvVD08N-事件订阅/0181-events-hrbrain-talent-pool-staff-delete.md)

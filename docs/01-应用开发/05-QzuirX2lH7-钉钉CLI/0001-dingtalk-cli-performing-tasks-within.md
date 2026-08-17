@@ -5,13 +5,13 @@ namespace: "development"
 slug: "dingtalk-cli-performing-tasks-within"
 group: "应用开发"
 tab: "钉钉CLI"
-breadcrumb: "钉钉CLI > DingTalk CLI — 让 AI 真正帮你在钉钉里干活"
+breadcrumb: "新手入门 > DingTalk CLI — 让 AI 真正帮你在钉钉里干活"
 doc_id: "vph4EMZ206"
 updated_at: "2026-07-14 09:22:39"
 ---
 
 > Source: https://open.dingtalk.com/document/development/dingtalk-cli-performing-tasks-within
-> Path: 应用开发 / 钉钉CLI / 钉钉CLI > DingTalk CLI — 让 AI 真正帮你在钉钉里干活
+> Path: 应用开发 / 钉钉CLI / 新手入门 > DingTalk CLI — 让 AI 真正帮你在钉钉里干活
 > Updated: 2026-07-14 09:22:39
 
 # DingTalk CLI — 让 AI 真正帮你在钉钉里干活

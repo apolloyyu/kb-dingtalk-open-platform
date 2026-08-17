@@ -1,22 +1,22 @@
 ---
-title: "删除群成员"
-source_url: "https://open.dingtalk.com/document/development/api-removescenegroupmember"
+title: "添加场景群成员"
+source_url: "https://open.dingtalk.com/document/development/api-addscenegroupmember"
 namespace: "development"
-slug: "api-removescenegroupmember"
+slug: "api-addscenegroupmember"
 group: "应用开发"
 tab: "服务端API"
-breadcrumb: "即时通信 > 会话管理 > 场景群 > 群管理 > 删除群成员"
-doc_id: "Hq2KLlwBXZ"
-updated_at: "2026-05-10 01:04:36"
+breadcrumb: "即时通信 > 会话管理 > 场景群 > 群管理 > 添加场景群成员"
+doc_id: "mEyjOlnkTo"
+updated_at: "2026-05-13 16:22:57"
 ---
 
-> Source: https://open.dingtalk.com/document/development/api-removescenegroupmember
-> Path: 应用开发 / 服务端API / 即时通信 > 会话管理 > 场景群 > 群管理 > 删除群成员
-> Updated: 2026-05-10 01:04:36
+> Source: https://open.dingtalk.com/document/development/api-addscenegroupmember
+> Path: 应用开发 / 服务端API / 即时通信 > 会话管理 > 场景群 > 群管理 > 添加场景群成员
+> Updated: 2026-05-13 16:22:57
 
-# 删除群成员
+# 添加场景群成员
 
-调用本接口，根据群ID和群成员ID删除群成员，适用于企业需要批量移除群成员的场景，如员工离职、项目结束等。
+调用本接口用于向群内新增群成员（群成员人数上限1000），适用于企业需要批量添加成员到群聊的场景，如项目组扩充人员、活动组织新增参与者等。
 
 ## 请求
 
@@ -24,7 +24,7 @@ updated_at: "2026-05-10 01:04:36"
 
 | 字段 | 值 |
 | --- | --- |
-| HTTP URL | https://api.dingtalk.com/v1.0/im/sceneGroup/member/delete |
+| HTTP URL | https://api.dingtalk.com/v1.0/im/sceneGroup/member/add |
 | HTTP Method | POST |
 | 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
 | 权限要求 | permission-qyapi\_chat\_manage-钉钉群基础信息管理权限 |
@@ -39,8 +39,8 @@ updated_at: "2026-05-10 01:04:36"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| open\_conversation\_id | String | 是 | 群会话Id。 |
-| user\_ids | Array of String | 否 | userId列表。 |
+| open\_conversation\_id | String | 是 | 群会话Id，可通过[创建场景群](0746-create-a-scene-group.md)接口获取。 |
+| user\_ids | Array of String | 否 | userid列表。 |
 | union\_ids | Array of String | 否 | unionId列表。 |
 
 ### 请求示例
@@ -48,9 +48,9 @@ updated_at: "2026-05-10 01:04:36"
 HTTP
 
 ```
-POST /v1.0/im/sceneGroup/member/delete HTTP/1.1
+POST /v1.0/im/sceneGroup/member/add HTTP/1.1
 Host:api.dingtalk.com
-x-acs-dingtalk-access-token:be311*****
+x-acs-dingtalk-access-token:6d1b*****
 Content-Type:application/json
 
 {
@@ -86,9 +86,9 @@ public class Sample {
     public static void main(String[] args_) throws Exception {
         
         com.aliyun.dingtalkim_1_0.Client client = Sample.createClient();
-        com.aliyun.dingtalkim_1_0.models.RemoveSceneGroupMemberHeaders removeSceneGroupMemberHeaders = new com.aliyun.dingtalkim_1_0.models.RemoveSceneGroupMemberHeaders();
-        removeSceneGroupMemberHeaders.xAcsDingtalkAccessToken = "<your access token>";
-        com.aliyun.dingtalkim_1_0.models.RemoveSceneGroupMemberRequest removeSceneGroupMemberRequest = new com.aliyun.dingtalkim_1_0.models.RemoveSceneGroupMemberRequest()
+        com.aliyun.dingtalkim_1_0.models.AddSceneGroupMemberHeaders addSceneGroupMemberHeaders = new com.aliyun.dingtalkim_1_0.models.AddSceneGroupMemberHeaders();
+        addSceneGroupMemberHeaders.xAcsDingtalkAccessToken = "<your access token>";
+        com.aliyun.dingtalkim_1_0.models.AddSceneGroupMemberRequest addSceneGroupMemberRequest = new com.aliyun.dingtalkim_1_0.models.AddSceneGroupMemberRequest()
                 .setOpenConversationId("cidxxxxxx==")
                 .setUserIds(java.util.Arrays.asList(
                     "1107****2120"
@@ -97,7 +97,7 @@ public class Sample {
                     "1107****2120"
                 ));
         try {
-            client.removeSceneGroupMemberWithOptions(removeSceneGroupMemberRequest, removeSceneGroupMemberHeaders, new com.aliyun.teautil.models.RuntimeOptions());
+            client.addSceneGroupMemberWithOptions(addSceneGroupMemberRequest, addSceneGroupMemberHeaders, new com.aliyun.teautil.models.RuntimeOptions());
         } catch (TeaException err) {
             if (!com.aliyun.teautil.Common.empty(err.code) && !com.aliyun.teautil.Common.empty(err.message)) {
                 // err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -152,9 +152,9 @@ class Sample:
         args: List[str],
     ) -> None:
         client = Sample.create_client()
-        remove_scene_group_member_headers = dingtalkim__1__0_models.RemoveSceneGroupMemberHeaders()
-        remove_scene_group_member_headers.x_acs_dingtalk_access_token = '<your access token>'
-        remove_scene_group_member_request = dingtalkim__1__0_models.RemoveSceneGroupMemberRequest(
+        add_scene_group_member_headers = dingtalkim__1__0_models.AddSceneGroupMemberHeaders()
+        add_scene_group_member_headers.x_acs_dingtalk_access_token = '<your access token>'
+        add_scene_group_member_request = dingtalkim__1__0_models.AddSceneGroupMemberRequest(
             open_conversation_id='cidxxxxxx==',
             user_ids=[
                 '1107****2120'
@@ -164,7 +164,7 @@ class Sample:
             ]
         )
         try:
-            client.remove_scene_group_member_with_options(remove_scene_group_member_request, remove_scene_group_member_headers, util_models.RuntimeOptions())
+            client.add_scene_group_member_with_options(add_scene_group_member_request, add_scene_group_member_headers, util_models.RuntimeOptions())
         except Exception as err:
             if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
                 # err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -175,9 +175,9 @@ class Sample:
         args: List[str],
     ) -> None:
         client = Sample.create_client()
-        remove_scene_group_member_headers = dingtalkim__1__0_models.RemoveSceneGroupMemberHeaders()
-        remove_scene_group_member_headers.x_acs_dingtalk_access_token = '<your access token>'
-        remove_scene_group_member_request = dingtalkim__1__0_models.RemoveSceneGroupMemberRequest(
+        add_scene_group_member_headers = dingtalkim__1__0_models.AddSceneGroupMemberHeaders()
+        add_scene_group_member_headers.x_acs_dingtalk_access_token = '<your access token>'
+        add_scene_group_member_request = dingtalkim__1__0_models.AddSceneGroupMemberRequest(
             open_conversation_id='cidxxxxxx==',
             user_ids=[
                 '1107****2120'
@@ -187,7 +187,7 @@ class Sample:
             ]
         )
         try:
-            await client.remove_scene_group_member_with_options_async(remove_scene_group_member_request, remove_scene_group_member_headers, util_models.RuntimeOptions())
+            await client.add_scene_group_member_with_options_async(add_scene_group_member_request, add_scene_group_member_headers, util_models.RuntimeOptions())
         except Exception as err:
             if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
                 # err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -211,8 +211,8 @@ use AlibabaCloud\Tea\Exception\TeaError;
 use AlibabaCloud\Tea\Utils\Utils;
 
 use Darabonba\OpenApi\Models\Config;
-use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\RemoveSceneGroupMemberHeaders;
-use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\RemoveSceneGroupMemberRequest;
+use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\AddSceneGroupMemberHeaders;
+use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\AddSceneGroupMemberRequest;
 use AlibabaCloud\Tea\Utils\Utils\RuntimeOptions;
 
 class Sample {
@@ -234,9 +234,9 @@ class Sample {
      */
     public static function main($args){
         $client = self::createClient();
-        $removeSceneGroupMemberHeaders = new RemoveSceneGroupMemberHeaders([]);
-        $removeSceneGroupMemberHeaders->xAcsDingtalkAccessToken = "<your access token>";
-        $removeSceneGroupMemberRequest = new RemoveSceneGroupMemberRequest([
+        $addSceneGroupMemberHeaders = new AddSceneGroupMemberHeaders([]);
+        $addSceneGroupMemberHeaders->xAcsDingtalkAccessToken = "<your access token>";
+        $addSceneGroupMemberRequest = new AddSceneGroupMemberRequest([
             "openConversationId" => "cidxxxxxx==",
             "userIds" => [
                 "1107****2120"
@@ -246,7 +246,7 @@ class Sample {
             ]
         ]);
         try {
-            $client->removeSceneGroupMemberWithOptions($removeSceneGroupMemberRequest, $removeSceneGroupMemberHeaders, new RuntimeOptions([]));
+            $client->addSceneGroupMemberWithOptions($addSceneGroupMemberRequest, $addSceneGroupMemberHeaders, new RuntimeOptions([]));
         }
         catch (Exception $err) {
             if (!($err instanceof TeaError)) {
@@ -303,9 +303,9 @@ func _main (args []*string) (_err error) {
     return _err
   }
 
-  removeSceneGroupMemberHeaders := &dingtalkim_1_0.RemoveSceneGroupMemberHeaders{}
-  removeSceneGroupMemberHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
-  removeSceneGroupMemberRequest := &dingtalkim_1_0.RemoveSceneGroupMemberRequest{
+  addSceneGroupMemberHeaders := &dingtalkim_1_0.AddSceneGroupMemberHeaders{}
+  addSceneGroupMemberHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
+  addSceneGroupMemberRequest := &dingtalkim_1_0.AddSceneGroupMemberRequest{
     OpenConversationId: tea.String("cidxxxxxx=="),
     UserIds: []*string{tea.String("1107****2120")},
     UnionIds: []*string{tea.String("1107****2120")},
@@ -316,7 +316,7 @@ func _main (args []*string) (_err error) {
         _e = r
       }
     }()
-    _, _err = client.RemoveSceneGroupMemberWithOptions(removeSceneGroupMemberRequest, removeSceneGroupMemberHeaders, &util.RuntimeOptions{})
+    _, _err = client.AddSceneGroupMemberWithOptions(addSceneGroupMemberRequest, addSceneGroupMemberHeaders, &util.RuntimeOptions{})
     if _err != nil {
       return _err
     }
@@ -373,9 +373,9 @@ class Client {
 
   static async main(args) {
     let client = Client.createClient();
-    let removeSceneGroupMemberHeaders = new dingtalkim_1_0.RemoveSceneGroupMemberHeaders({ });
-    removeSceneGroupMemberHeaders.xAcsDingtalkAccessToken = '<your access token>';
-    let removeSceneGroupMemberRequest = new dingtalkim_1_0.RemoveSceneGroupMemberRequest({
+    let addSceneGroupMemberHeaders = new dingtalkim_1_0.AddSceneGroupMemberHeaders({ });
+    addSceneGroupMemberHeaders.xAcsDingtalkAccessToken = '<your access token>';
+    let addSceneGroupMemberRequest = new dingtalkim_1_0.AddSceneGroupMemberRequest({
       openConversationId: 'cidxxxxxx==',
       userIds: [
         '1107****2120'
@@ -385,7 +385,7 @@ class Client {
       ],
     });
     try {
-      await client.removeSceneGroupMemberWithOptions(removeSceneGroupMemberRequest, removeSceneGroupMemberHeaders, new Util.RuntimeOptions({ }));
+      await client.addSceneGroupMemberWithOptions(addSceneGroupMemberRequest, addSceneGroupMemberHeaders, new Util.RuntimeOptions({ }));
     } catch (err) {
       if (!Util.default.empty(err.code) && !Util.default.empty(err.message)) {
         // err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -440,9 +440,9 @@ namespace AlibabaCloud.SDK.Sample
         public static void Main(string[] args)
         {
             AlibabaCloud.SDK.Dingtalkim_1_0.Client client = CreateClient();
-            AlibabaCloud.SDK.Dingtalkim_1_0.Models.RemoveSceneGroupMemberHeaders removeSceneGroupMemberHeaders = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.RemoveSceneGroupMemberHeaders();
-            removeSceneGroupMemberHeaders.XAcsDingtalkAccessToken = "<your access token>";
-            AlibabaCloud.SDK.Dingtalkim_1_0.Models.RemoveSceneGroupMemberRequest removeSceneGroupMemberRequest = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.RemoveSceneGroupMemberRequest
+            AlibabaCloud.SDK.Dingtalkim_1_0.Models.AddSceneGroupMemberHeaders addSceneGroupMemberHeaders = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.AddSceneGroupMemberHeaders();
+            addSceneGroupMemberHeaders.XAcsDingtalkAccessToken = "<your access token>";
+            AlibabaCloud.SDK.Dingtalkim_1_0.Models.AddSceneGroupMemberRequest addSceneGroupMemberRequest = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.AddSceneGroupMemberRequest
             {
                 OpenConversationId = "cidxxxxxx==",
                 UserIds = new List<string>
@@ -456,7 +456,7 @@ namespace AlibabaCloud.SDK.Sample
             };
             try
             {
-                client.RemoveSceneGroupMemberWithOptions(removeSceneGroupMemberRequest, removeSceneGroupMemberHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
+                client.AddSceneGroupMemberWithOptions(addSceneGroupMemberRequest, addSceneGroupMemberHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
             }
             catch (TeaException err)
             {
@@ -488,7 +488,7 @@ namespace AlibabaCloud.SDK.Sample
 
 | 名称 | 类型 | 描述 |
 | --- | --- | --- |
-| success | Boolean | 调用是否成功。   - true：成功 - false：失败 |
+| success | Boolean | 调用是否成功：   - **true**：成功 - **false**：失败 |
 
 ### 响应体示例
 

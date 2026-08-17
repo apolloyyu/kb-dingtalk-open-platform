@@ -7,14 +7,18 @@ group: "数据资产"
 tab: "宜数（智能问数）"
 breadcrumb: "数据工厂 > 加工数据集"
 doc_id: "OXN3iLycxk"
-updated_at: "2025-09-23 19:20:54"
+updated_at: "2026-08-14 09:26:56"
 ---
 
 > Source: https://open.dingtalk.com/document/aipass/machining-data-set
 > Path: 数据资产 / 宜数（智能问数） / 数据工厂 > 加工数据集
-> Updated: 2025-09-23 19:20:54
+> Updated: 2026-08-14 09:26:56
 
 # 加工数据集
+
+> **[!NOTE]**
+>
+> **高级版**可使用。
 
 ## **概述**
 
@@ -24,7 +28,7 @@ updated_at: "2025-09-23 19:20:54"
 
 通过数据加工，可以实现多表关联，新增衍生字段，数据过滤，并支持与官方数据进行融合分析，满足多样化的数据消费场景。
 
-## **场景 1：关联维表进行统计分析**
+## **场景一：关联维表进行统计分析**
 
 在很多数据处理的场景中，都有事实表与维表关联进行统计分析的需求，通过数据工厂，可以实现多张表的关联。
 
@@ -38,17 +42,15 @@ updated_at: "2025-09-23 19:20:54"
    - **预览字段**：预览关联表的字段信息
    - **预览数据**：预览关联表的数据
 
-   ![image.png](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/7145754371/p889040.png)
+   ![image.png](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/6180766871/p889040.png)
 
-## **场景 2：新增衍生字段扩展数据集字段**
+## **场景二：新增衍生字段扩展数据集字段**
 
 如在销售问数助理中，业务系统中的订单状态字段为0，1，3的数据值字段，在智能问数场景下对大模型不友好，可以通过新增衍生字段，将数据值字段 映射为中文名称字段，便于大模型理解，提高大模型问题识别率及准确率。
 
-### **新增“订单状态” 中文字段：**
-
 1. 单击右上角的“配置数据集”按钮，下方面板区会出现“新增衍生字段”按钮，单击“新增衍生字段”，进入衍生字段配置区
 
-   ![image.png](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/7145754371/p889037.png)
+   ![image.png](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/6180766871/p889037.png)
 2. 配置衍生字段
 
    - 填写字段名称，字段类型及字段描述，
@@ -58,7 +60,7 @@ updated_at: "2025-09-23 19:20:54"
    CASEWHEN(订单状态=0,'未支付',订单状态=1,'已支付',订单状态=2,'未发货',订单状态=3,'已发货','未知')
    ```
 
-   ![image.png](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/7145754371/p889038.png)
+   ![image.png](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/6180766871/p889038.png)
 
    目前支持的函数列表：
 
@@ -88,7 +90,7 @@ updated_at: "2025-09-23 19:20:54"
    | FLOOR | FLOOR(字段) 字段为1.5,返回值为1 |
    | **逻辑类** | CASEWHEN | CASEWHEN(a.score<=60, '差', a.score>60 and a.score <=85, '良', a.score>85, '优秀'),score为90,返回结果:优秀 |
 
-## **场景 3：数据过滤精准获取所需数据**
+## **场景三：数据过滤获取所需数据**
 
 如需要对数据集进行筛选，可以通过数据过滤能力，对数据进行筛选过滤。如需要筛选出已支付的物品单价大于100元的订单信息。
 
@@ -100,8 +102,4 @@ updated_at: "2025-09-23 19:20:54"
 - 订单状态=1
 - 物品单价大于100
 
-![image.png](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/7145754371/p889039.png)
-
-## **所属版本**
-
-高级版
+![image.png](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/6180766871/p889039.png)

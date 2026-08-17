@@ -7,12 +7,12 @@ group: "数据资产"
 tab: "宜数（智能问数）"
 breadcrumb: "数据资产 > 最佳实践：企业年度个性化报告"
 doc_id: "BYPta157oj"
-updated_at: "2025-09-23 19:20:56"
+updated_at: "2026-08-14 09:27:01"
 ---
 
 > Source: https://open.dingtalk.com/document/aipass/best-practice-annual-personalized-corporate-reporting
 > Path: 数据资产 / 宜数（智能问数） / 数据资产 > 最佳实践：企业年度个性化报告
-> Updated: 2025-09-23 19:20:56
+> Updated: 2026-08-14 09:27:01
 
 # 最佳实践：企业年度个性化报告
 
@@ -28,7 +28,11 @@ updated_at: "2025-09-23 19:20:56"
 
 ## **搭建流程**
 
-### **方案1：模板方案**
+> **[!NOTE]**
+>
+> 以下流程可参考帮助手册：[企业年度报告模板](../01-fIz0pQ6X4y-平台介绍/0016-enterprise-annual-report-template.md)。
+
+### **方案一：使用模板定制专属年报**
 
 提供开箱即用的设计模板，丰富的数据项，5分钟快速定制专属年报。
 
@@ -44,7 +48,7 @@ updated_at: "2025-09-23 19:20:56"
    ![image.png](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0245754371/p889096.png)
 5. 编辑无误后，点击发布，即可投放使用。目前支持二维表、URL链接两种方式查看。
 
-### 方案2：接口方案
+### 方案二：使用接口定制个性化年报
 
 提供年报数据API，开发者可基于API定制个性化年报：
 
@@ -59,5 +63,3 @@ updated_at: "2025-09-23 19:20:56"
 
    ![image.png](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0245754371/p889097.png)
 5. 接口完成发布审核后，即可在内部系统进行调用使用，企业结合具体需求自行设计年报呈现方式和样式。
-
-以上流程，具体可参考帮助手册：[企业年度报告模板](../01-fIz0pQ6X4y-平台介绍/0016-enterprise-annual-report-template.md)。

@@ -1,20 +1,20 @@
 ---
-title: "解散群聊"
+title: "解散场景群"
 source_url: "https://open.dingtalk.com/document/development/api-dsbandopenscenegroup"
 namespace: "development"
 slug: "api-dsbandopenscenegroup"
 group: "应用开发"
 tab: "服务端API"
-breadcrumb: "即时通信 > 会话管理 > 场景群 > 群管理 > 解散群聊"
+breadcrumb: "即时通信 > 会话管理 > 场景群 > 群管理 > 解散场景群"
 doc_id: "MfTls3182y"
 updated_at: "2026-05-10 01:10:50"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-dsbandopenscenegroup
-> Path: 应用开发 / 服务端API / 即时通信 > 会话管理 > 场景群 > 群管理 > 解散群聊
+> Path: 应用开发 / 服务端API / 即时通信 > 会话管理 > 场景群 > 群管理 > 解散场景群
 > Updated: 2026-05-10 01:10:50
 
-# 解散群聊
+# 解散场景群
 
 调用本接口，根据群ID解散指定群。
 

@@ -5,13 +5,13 @@ namespace: "development"
 slug: "enterprise-knowledge-qa-agent"
 group: "应用开发"
 tab: "钉钉CLI"
-breadcrumb: "Agent解决方案 > 企业知识问答 Agent"
+breadcrumb: "进阶实战 > Agent 场景案例库 > 典型 Agent 实现 > 企业知识问答 Agent"
 doc_id: "6QTxXAn1oP"
 updated_at: "2026-06-16 11:36:11"
 ---
 
 > Source: https://open.dingtalk.com/document/development/enterprise-knowledge-qa-agent
-> Path: 应用开发 / 钉钉CLI / Agent解决方案 > 企业知识问答 Agent
+> Path: 应用开发 / 钉钉CLI / 进阶实战 > Agent 场景案例库 > 典型 Agent 实现 > 企业知识问答 Agent
 > Updated: 2026-06-16 11:36:11
 
 # 企业知识问答 Agent

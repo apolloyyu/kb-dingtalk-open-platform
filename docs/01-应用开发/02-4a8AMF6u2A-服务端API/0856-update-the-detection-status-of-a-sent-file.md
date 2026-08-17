@@ -43,7 +43,7 @@ updated_at: "2025-09-23 19:20:10"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| requestIds | Array of String | 是 | 文件发送的请求requestId，从订阅的[企业员工发送文件的检测事件](../04-LFcRvVD08N-事件订阅/0205-detection-event-of-enterprise-employee-sending-file.md)中获取。 |
+| requestIds | Array of String | 是 | 文件发送的请求requestId，从订阅的[企业员工发送文件的检测事件](../04-LFcRvVD08N-事件订阅/0206-detection-event-of-enterprise-employee-sending-file.md)中获取。 |
 | status | Integer | 是 | 更新状态，取值：   - 1：检测通过。 - 2：检测不通过。 - 3：需要额外审批（需要先勾选“启用DLP后审批”）       如果检测不通过或额外审批未通过，文件接收方无法预览或者下载该文件。 |
 
 ### 请求示例

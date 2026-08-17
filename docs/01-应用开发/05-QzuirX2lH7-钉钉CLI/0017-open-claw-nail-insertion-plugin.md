@@ -5,13 +5,13 @@ namespace: "development"
 slug: "open-claw-nail-insertion-plugin"
 group: "应用开发"
 tab: "钉钉CLI"
-breadcrumb: "Agent接入钉钉 > Open Claw钉钉插件"
+breadcrumb: "高级集成 > OpenClaw 框架集成 > Open Claw钉钉插件"
 doc_id: "pToVvtQxOI"
 updated_at: "2026-07-22 16:25:42"
 ---
 
 > Source: https://open.dingtalk.com/document/development/open-claw-nail-insertion-plugin
-> Path: 应用开发 / 钉钉CLI / Agent接入钉钉 > Open Claw钉钉插件
+> Path: 应用开发 / 钉钉CLI / 高级集成 > OpenClaw 框架集成 > Open Claw钉钉插件
 > Updated: 2026-07-22 16:25:42
 
 # Open Claw钉钉插件

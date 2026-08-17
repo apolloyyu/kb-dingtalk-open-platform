@@ -7,12 +7,12 @@ group: "数据资产"
 tab: "宜数（智能问数）"
 breadcrumb: "互动大屏 > 数据源配置"
 doc_id: "yFV62Bh4Wv"
-updated_at: "2025-09-23 19:20:51"
+updated_at: "2026-08-14 09:26:53"
 ---
 
 > Source: https://open.dingtalk.com/document/aipass/data-source-configuration
 > Path: 数据资产 / 宜数（智能问数） / 互动大屏 > 数据源配置
-> Updated: 2025-09-23 19:20:51
+> Updated: 2026-08-14 09:26:53
 
 # 数据源配置
 
@@ -20,17 +20,21 @@ updated_at: "2025-09-23 19:20:51"
 
 互动大屏兼容多种数据源，包括静态数据、CSV文件、全局变量数据、API接口以及数据资产平台，旨在通过钉钉的数据可视化功能，为用户提供强大而灵活的数据展示支持。
 
+> **[!NOTE]**
+>
+> 当前的版本属于**高级版**。
+
 ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8973954371/p890866.png)
 
-## **场景 1：基于“数据资产平台-钉钉官方数据”搭建大屏**
+## **场景一：基于“钉钉官方数据”搭建大屏**
 
-### **功能使用效果**
+### **使用效果**
 
 使用数据资产平台通道快速获取钉钉最近 30 天成功发起的语音会议平均参会人数。
 
 ![image.png](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/3145754371/p889198.png)
 
-### **功能搭建流程**
+### **搭建流程**
 
 1. 在大屏中选中数据组件，此处以数字翻牌器为例。
 
@@ -51,22 +55,22 @@ updated_at: "2025-09-23 19:20:51"
 
    ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/9770954371/p890604.png)
 
-## **场景 2：基于“数据资产平台-自有数据”搭建大屏**
+## **场景 2：基于“自有数据”搭建大屏**
 
-### **功能使用效果**
+### **使用效果**
 
 使用资产平台自有数据，快速在智能大屏上展示。
 
 ![image.png](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/3145754371/p889204.png)
 
-### **功能搭建流程**
+### **搭建流程**
 
 1. 通过Excel 方式上传地理位置数据。
 
-   ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/9770954371/p890605.png)
+   ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/1387946871/p890605.png)
 2. 通过数据准备加工数据，详见[数据工厂](0014-overview-1.md)。
 
-   ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/9770954371/p890608.png)
+   ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/1387946871/p890608.png)
 3. 在大屏中选择对应的地图组件。
 
    ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/9770954371/p890611.png)
@@ -85,7 +89,3 @@ updated_at: "2025-09-23 19:20:51"
 8. 效果展示。
 
    ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/9770954371/p890617.png)
-
-## **所属版本**
-
-高级版

@@ -5,13 +5,13 @@ namespace: "development"
 slug: "ai-digital-twin-group-chat"
 group: "应用开发"
 tab: "钉钉CLI"
-breadcrumb: "Agent解决方案 > 构建群聊感知 Agent"
+breadcrumb: "进阶实战 > Agent 场景案例库 > 典型 Agent 实现 > 构建群聊感知 Agent"
 doc_id: "j7nCVSVfqi"
 updated_at: "2026-07-24 09:14:25"
 ---
 
 > Source: https://open.dingtalk.com/document/development/ai-digital-twin-group-chat
-> Path: 应用开发 / 钉钉CLI / Agent解决方案 > 构建群聊感知 Agent
+> Path: 应用开发 / 钉钉CLI / 进阶实战 > Agent 场景案例库 > 典型 Agent 实现 > 构建群聊感知 Agent
 > Updated: 2026-07-24 09:14:25
 
 # 构建群聊感知 Agent

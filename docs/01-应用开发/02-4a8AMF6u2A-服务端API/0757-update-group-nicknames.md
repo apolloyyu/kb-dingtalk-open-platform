@@ -1,26 +1,26 @@
 ---
-title: "更新群成员的群昵称"
+title: "更新场景群成员的群昵称"
 source_url: "https://open.dingtalk.com/document/development/update-group-nicknames"
 namespace: "development"
 slug: "update-group-nicknames"
 group: "应用开发"
 tab: "服务端API"
-breadcrumb: "即时通信 > 会话管理 > 场景群 > 群管理 > 更新群成员的群昵称"
+breadcrumb: "即时通信 > 会话管理 > 场景群 > 群管理 > 更新场景群成员的群昵称"
 doc_id: "tHiOmCEpdD"
 updated_at: "2026-04-24 14:11:24"
 ---
 
 > Source: https://open.dingtalk.com/document/development/update-group-nicknames
-> Path: 应用开发 / 服务端API / 即时通信 > 会话管理 > 场景群 > 群管理 > 更新群成员的群昵称
+> Path: 应用开发 / 服务端API / 即时通信 > 会话管理 > 场景群 > 群管理 > 更新场景群成员的群昵称
 > Updated: 2026-04-24 14:11:24
 
-# 更新群成员的群昵称
+# 更新场景群成员的群昵称
 
 调用本接口，根据群id和群成员id，更新群成员的群昵称，适用于群管理员或群成员需要修改群成员在群内的昵称的场景，如群成员希望使用更具辨识度的昵称，或管理员为了统一管理修改成员昵称。
 
 ## **接口调用说明**
 
-支持以下场景使用：基于群模板创建的群，详情参见[创建场景群](0746-create-a-scene-group.md)。
+支持以下场景使用：基于群模板创建的群，详情参见[创建群](1484-create-a-scene-group-v2.md)。
 
 ## 请求
 
@@ -43,7 +43,7 @@ updated_at: "2026-04-24 14:11:24"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| openConversationId | String | 是 | 群ID，可调用[创建场景群](0746-create-a-scene-group.md)接口获取`open_conversation_id`参数值。 |
+| openConversationId | String | 是 | 群ID，可调用[创建群](1484-create-a-scene-group-v2.md)接口获取`open_conversation_id`参数值。 |
 | userId | String | 是 | 用户的userid，可通过[获取部门用户userid列表](0065-query-the-list-of-department-userids.md)接口获取。 |
 | groupNick | String | 是 | 用户群昵称，最长不超过30字符，建议长度在10字符以内。 |
 

@@ -37,7 +37,7 @@ updated_at: "2025-12-08 15:15:24"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| orderId | Long | 否 | 订单ID，可以从推送信息中获取，请参考[应用市场事件biz\_type=17](../04-LFcRvVD08N-事件订阅/0184-application-market-order.md#section-sample-code)。 |
+| orderId | Long | 否 | 订单ID，可以从推送信息中获取，请参考[应用市场事件biz\_type=17](../04-LFcRvVD08N-事件订阅/0185-application-market-order.md#section-sample-code)。 |
 
 ### 请求示例
 

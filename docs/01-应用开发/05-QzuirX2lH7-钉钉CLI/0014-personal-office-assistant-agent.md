@@ -5,13 +5,13 @@ namespace: "development"
 slug: "personal-office-assistant-agent"
 group: "应用开发"
 tab: "钉钉CLI"
-breadcrumb: "Agent解决方案 > 个人办公助理 Agent"
+breadcrumb: "进阶实战 > Agent 场景案例库 > 典型 Agent 实现 > 个人办公助理 Agent"
 doc_id: "yYUK6pH9py"
 updated_at: "2026-06-16 11:36:12"
 ---
 
 > Source: https://open.dingtalk.com/document/development/personal-office-assistant-agent
-> Path: 应用开发 / 钉钉CLI / Agent解决方案 > 个人办公助理 Agent
+> Path: 应用开发 / 钉钉CLI / 进阶实战 > Agent 场景案例库 > 典型 Agent 实现 > 个人办公助理 Agent
 > Updated: 2026-06-16 11:36:12
 
 # 个人办公助理 Agent

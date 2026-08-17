@@ -5,13 +5,13 @@ namespace: "development"
 slug: "multi-agent-expert-collaboration"
 group: "应用开发"
 tab: "钉钉CLI"
-breadcrumb: "Agent解决方案 > 多 Agent 垂直专家协同"
+breadcrumb: "进阶实战 > Agent 场景案例库 > 典型 Agent 实现 > 多 Agent 垂直专家协同"
 doc_id: "SWf5TgBXNk"
 updated_at: "2026-06-16 11:36:14"
 ---
 
 > Source: https://open.dingtalk.com/document/development/multi-agent-expert-collaboration
-> Path: 应用开发 / 钉钉CLI / Agent解决方案 > 多 Agent 垂直专家协同
+> Path: 应用开发 / 钉钉CLI / 进阶实战 > Agent 场景案例库 > 典型 Agent 实现 > 多 Agent 垂直专家协同
 > Updated: 2026-06-16 11:36:14
 
 # 多 Agent 垂直专家协同

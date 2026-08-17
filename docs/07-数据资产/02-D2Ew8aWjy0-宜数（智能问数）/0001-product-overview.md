@@ -1,32 +1,39 @@
 ---
-title: "产品概述"
+title: "概述"
 source_url: "https://open.dingtalk.com/document/aipass/product-overview"
 namespace: "aipass"
 slug: "product-overview"
 group: "数据资产"
 tab: "宜数（智能问数）"
-breadcrumb: "产品概述"
+breadcrumb: "概述"
 doc_id: "YblBiWWjwR"
-updated_at: "2025-09-23 19:20:41"
+updated_at: "2026-08-13 09:05:16"
 ---
 
 > Source: https://open.dingtalk.com/document/aipass/product-overview
-> Path: 数据资产 / 宜数（智能问数） / 产品概述
-> Updated: 2025-09-23 19:20:41
+> Path: 数据资产 / 宜数（智能问数） / 概述
+> Updated: 2026-08-13 09:05:16
 
-# 产品概述
+# 概述
 
-## **产品简介**
+## **简介**
 
-### **宜数（智能问数）是什么？**
+### **什么是宜数**
 
 宜数（智能问数）是大模型驱动的智能数据分析产品，致力于打造数据智能消费新范式，盘活企业数据资产，为客户提供“盘资产（数据工厂）、知数据（对话式数据分析）、酷体验（智能互动大屏）、易协同（数据驱动运营）”一站式数据智能解决方案，实现数据驱动组织管理和业务运营。
 
 ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2660954371/p890501.png)
 
-### **解决企业什么问题？**
+### **能解决什么问题**
+
+企业在数智化转型中，高质量数据消费面临四大难题：
 
 ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2660954371/p890503.png)
+
+- **数据口径不一致，孤岛问题依然存在**：同一个指标在不同系统里定义不同，业务方问"哪个数是对的"，开发只能回答"都对，只是口径不同"。
+- **数据分析依赖角色多、链路长、响应效率低**：取个数要跨业务→产品→分析师→后端→DBA五个环节，排期两周，交付时场景已变。
+- **数据可视化成本高、互动体验感弱**：做个交互式大屏要写大量前端代码+定制聚合接口，改一个字段就要重新发版。
+- **数据分析与业务运营未形成联动，数据价值难体现**：BI报表做得漂亮但业务方看完就关，数据分析和日常运营流程是割裂的。
 
 ## **产品亮点**
 

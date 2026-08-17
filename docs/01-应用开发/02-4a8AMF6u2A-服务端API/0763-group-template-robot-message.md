@@ -45,11 +45,11 @@ updated_at: "2026-07-14 09:22:07"
 | msg\_template\_id | String | 是 | offical\_template\_test\_action\_card | 消息模板ID，详情参见下文场景群通用消息模板。 |
 | msg\_param\_map | String | 否 | {\"text1\":\"hello\",\"text2\":\"world\"} | 消息模板内容替换参数，普通文本类型。  **[!NOTE]**  取值为Json格式的字符串。 |
 | msg\_media\_id\_param\_map | String | 否 | {\"pic1\":\"@123\",\"pic2\":\"@456\"} | 消息模板内容替换参数，多媒体类型。  **[!NOTE]**  取值为Json格式的字符串。 |
-| receiver\_user\_ids | String[] | 否 | "072\*\*\*\*\*,manager422\*\*\*\*\*" | 消息接收人userId列表，调用[查询群成员](0752-query-group-members.md)接口获取`member_user_ids`参数值。  **[!NOTE]**  不设置任何接收人则消息对群内所有成员可见。 |
+| receiver\_user\_ids | String[] | 否 | "072\*\*\*\*\*,manager422\*\*\*\*\*" | 消息接收人userId列表，调用[查询群成员](0751-query-group-members.md)接口获取`member_user_ids`参数值。  **[!NOTE]**  不设置任何接收人则消息对群内所有成员可见。 |
 | receiver\_union\_ids | String | 否 | "jHs\*\*\*\*\*,atc\*\*\*\*\*" | 消息接收人unionId列表，调用[查询用户详情](0056-query-user-details.md)接口获取`unionid`参数值。  **[!NOTE]**  不设置任何接收人则消息对群内所有成员可见。 |
 | receiver\_mobiles | String | 否 | "137\*\*\*\*\*000,158\*\*\*\*\*000" | 消息接收人手机号列表，调用[查询用户详情](0056-query-user-details.md)接口获取`mobile`参数值。  **[!NOTE]**  不设置任何接收人则消息对群内所有成员可见。 |
 | at\_mobiles | String | 否 | "137\*\*\*\*\*000" | @人的手机号列表，调用[查询用户详情](0056-query-user-details.md)接口获取`mobile`参数值。  **[!NOTE]**  一次调用最多支持50人。 |
-| at\_users | String | 否 | "072\*\*\*\*\*" | @人的userid列表，调用[查询群成员](0752-query-group-members.md)接口获取`member_user_ids`参数值。  **[!NOTE]**  一次调用最多支持50人。 |
+| at\_users | String | 否 | "072\*\*\*\*\*" | @人的userid列表，调用[查询群成员](0751-query-group-members.md)接口获取`member_user_ids`参数值。  **[!NOTE]**  一次调用最多支持50人。 |
 | is\_at\_all | Boolean | 否 | true | 是否@所有人：   - **true**：是 - **false**：否 |
 | robot\_code | String | 是 | fTv5O\*\*\*\*\* | 机器人编码，登录[开发者后台 > 开放能力 > 场景群 > 机器人](https://open-dev.dingtalk.com/fe/im#/robot/list)查看id。 |
 

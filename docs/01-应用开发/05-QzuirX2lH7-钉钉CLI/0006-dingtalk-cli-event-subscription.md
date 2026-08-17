@@ -5,13 +5,13 @@ namespace: "development"
 slug: "dingtalk-cli-event-subscription"
 group: "应用开发"
 tab: "钉钉CLI"
-breadcrumb: "钉钉CLI > 钉钉 CLI 事件订阅 — 给你的 Agent 装上钉钉的\"耳朵\""
+breadcrumb: "进阶实战 > 事件驱动开发 > 钉钉 CLI 事件订阅 — 给你的 Agent 装上钉钉的\"耳朵\""
 doc_id: "e6ollBomSO"
 updated_at: "2026-07-24 09:14:13"
 ---
 
 > Source: https://open.dingtalk.com/document/development/dingtalk-cli-event-subscription
-> Path: 应用开发 / 钉钉CLI / 钉钉CLI > 钉钉 CLI 事件订阅 — 给你的 Agent 装上钉钉的"耳朵"
+> Path: 应用开发 / 钉钉CLI / 进阶实战 > 事件驱动开发 > 钉钉 CLI 事件订阅 — 给你的 Agent 装上钉钉的"耳朵"
 > Updated: 2026-07-24 09:14:13
 
 # 钉钉 CLI 事件订阅 — 给你的 Agent 装上钉钉的"耳朵"

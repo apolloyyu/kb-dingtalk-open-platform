@@ -1,0 +1,311 @@
+# 快照对账 2026-08-17
+
+- 旧：3664 篇（本库 meta/documents.jsonl）
+- 新：3666 篇（/home/yuweilun.ywl/Documents/工作/开放平台/wiki/dingtalk-open-platform-docs-20260814-1647）
+- 新增 2 / 更新 34 / 移动 260 / 删除 0
+
+## 新增
+- [DingTalkB1设备状态变更事件](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0122-events-badge-device-status-change.md) · 应用开发/事件订阅 · 2022-01-19
+- [在千问办公中接入钉钉](docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0004-qwenwork-dingtalk-integration.md) · 应用开发/钉钉CLI · 2026-08-14
+
+## 内容更新
+- [获取群会话的OpenConversationId](docs/01-应用开发/02-4a8AMF6u2A-服务端API/0745-obtain-group-openconversationid.md) · 2025-09-12 → 2025-09-12
+- [解散场景群](docs/01-应用开发/02-4a8AMF6u2A-服务端API/0748-api-dsbandopenscenegroup.md) · 2026-05-10 → 2026-05-10
+- [添加场景群成员](docs/01-应用开发/02-4a8AMF6u2A-服务端API/0749-api-addscenegroupmember.md) · 2026-05-13 → 2026-05-13
+- [删除场景群成员](docs/01-应用开发/02-4a8AMF6u2A-服务端API/0750-api-removescenegroupmember.md) · 2026-05-10 → 2026-05-10
+- [查询场景群成员](docs/01-应用开发/02-4a8AMF6u2A-服务端API/0751-query-group-members.md) · 2026-05-10 → 2026-05-10
+- [更新场景群管理员](docs/01-应用开发/02-4a8AMF6u2A-服务端API/0752-update-group-administrators.md) · 2026-05-10 → 2026-05-10
+- [查询场景群禁言状态](docs/01-应用开发/02-4a8AMF6u2A-服务端API/0753-query-group-silence-status.md) · 2025-09-12 → 2025-09-12
+- [查询场景群简要信息](docs/01-应用开发/02-4a8AMF6u2A-服务端API/0754-query-group-information.md) · 2026-05-10 → 2026-05-10
+- [查询场景群基本信息](docs/01-应用开发/02-4a8AMF6u2A-服务端API/0755-queries-the-basic-information-of-a-scenario-group.md) · 2026-07-14 → 2026-08-14
+- [设置场景群成员禁言状态](docs/01-应用开发/02-4a8AMF6u2A-服务端API/0756-set-group-members-access-control.md) · 2025-09-12 → 2025-09-12
+- [更新场景群成员的群昵称](docs/01-应用开发/02-4a8AMF6u2A-服务端API/0757-update-group-nicknames.md) · 2026-04-24 → 2026-04-24
+- [查询场景群内群模板机器人](docs/01-应用开发/02-4a8AMF6u2A-服务端API/0758-search-group-scene-template-robot.md) · 2025-09-12 → 2025-09-12
+- [事件订阅总览](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0002-org-event-overview.md) · 2026-07-30 → 2026-08-13
+- [安装与使用指南](docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0002-dingtalk-dws-cli-install-guide.md) · 2026-08-07 → 2026-08-14
+- [概述](docs/07-数据资产/02-D2Ew8aWjy0-宜数（智能问数）/0001-product-overview.md) · 2025-09-23 → 2026-08-13
+- [计费模型](docs/07-数据资产/02-D2Ew8aWjy0-宜数（智能问数）/0002-product-billing-model.md) · 2025-09-23 → 2026-08-13
+- [基础信息配置](docs/07-数据资产/02-D2Ew8aWjy0-宜数（智能问数）/0004-basic-information-configuration.md) · 2025-09-23 → 2026-08-13
+- [数据管理配置](docs/07-数据资产/02-D2Ew8aWjy0-宜数（智能问数）/0005-data-management-configuration.md) · 2025-09-23 → 2026-08-13
+- [本地数据库网关配置](docs/07-数据资产/02-D2Ew8aWjy0-宜数（智能问数）/0006-local-database-gateway-configuration-1.md) · 2025-09-23 → 2026-08-13
+- [调优配置](docs/07-数据资产/02-D2Ew8aWjy0-宜数（智能问数）/0007-tuning-configuration.md) · 2025-09-23 → 2026-08-13
+- [大屏配置](docs/07-数据资产/02-D2Ew8aWjy0-宜数（智能问数）/0008-large-screen-configuration.md) · 2025-09-23 → 2026-08-14
+- [数据权限配置](docs/07-数据资产/02-D2Ew8aWjy0-宜数（智能问数）/0009-data-permission-configuration.md) · 2025-09-23 → 2026-08-14
+- [基础大屏搭建教学](docs/07-数据资产/02-D2Ew8aWjy0-宜数（智能问数）/0011-basic-large-screen-building-teaching.md) · 2025-09-23 → 2026-08-14
+- [大屏模板使用](docs/07-数据资产/02-D2Ew8aWjy0-宜数（智能问数）/0012-large-screen-template-use.md) · 2025-09-23 → 2026-08-14
+- [数据源配置](docs/07-数据资产/02-D2Ew8aWjy0-宜数（智能问数）/0013-data-source-configuration.md) · 2025-09-23 → 2026-08-14
+- [创建数据源](docs/07-数据资产/02-D2Ew8aWjy0-宜数（智能问数）/0015-create-a-data-source.md) · 2025-09-23 → 2026-08-14
+- [创建数据集](docs/07-数据资产/02-D2Ew8aWjy0-宜数（智能问数）/0016-create-a-data-set.md) · 2025-09-23 → 2026-08-14
+- [加工数据集](docs/07-数据资产/02-D2Ew8aWjy0-宜数（智能问数）/0017-machining-data-set.md) · 2025-09-23 → 2026-08-14
+- [使用数据集](docs/07-数据资产/02-D2Ew8aWjy0-宜数（智能问数）/0018-using-data-sets.md) · 2025-09-23 → 2026-08-14
+- [最佳实践：智能财务企业经营台账分析](docs/07-数据资产/02-D2Ew8aWjy0-宜数（智能问数）/0019-best-practice-smart-finance-business-account-analysis.md) · 2025-09-23 → 2026-08-14
+- [概述](docs/07-数据资产/02-D2Ew8aWjy0-宜数（智能问数）/0020-data-assets-overview.md) · 2025-12-08 → 2026-08-14
+- [最佳实践：企业年度个性化报告](docs/07-数据资产/02-D2Ew8aWjy0-宜数（智能问数）/0021-best-practice-annual-personalized-corporate-reporting.md) · 2025-09-23 → 2026-08-14
+- [最佳实践：一站式运营参谋，赋能组织治理提效](docs/07-数据资产/02-D2Ew8aWjy0-宜数（智能问数）/0022-best-practice-one-stop-operation-staff-empowering-organizational-governance-to-improve.md) · 2025-09-23 → 2026-08-14
+- [最佳实践：教育行业“局-校-师-生”全链路数字化](docs/07-数据资产/02-D2Ew8aWjy0-宜数（智能问数）/0023-best-practice-education-industry-bureau-school-teacher-student-full-link-digitalization.md) · 2025-09-23 → 2026-08-14
+
+## 目录位置移动（内容未变）
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0122-intelligent-personnel-shift-change.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0123-intelligent-personnel-shift-change.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0123-attendance-group-change.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0124-attendance-group-change.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0124-employee-clock-in-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0125-employee-clock-in-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0125-employee-overtime-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0126-employee-overtime-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0126-watermark-punch-in.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0127-watermark-punch-in.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0127-change-of-attendance-results.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0128-change-of-attendance-results.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0128-holiday-data-synchronization.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0129-holiday-data-synchronization.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0129-holiday-consumption-record-change.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0130-holiday-consumption-record-change.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0130-vacation-rule-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0131-vacation-rule-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0131-manually-modify-the-holiday-balance.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0132-manually-modify-the-holiday-balance.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0132-attendance-day-statistics-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0133-attendance-day-statistics-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0133-attendance-report-field-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0134-attendance-report-field-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0134-leave-overtime-business-trip-out-of-office-status-change-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0135-leave-overtime-business-trip-out-of-office-status-change-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0135-recruitment-channel-message-push-switch.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0136-recruitment-channel-message-push-switch.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0136-change-of-rights-and-interests-of-recruitment-business-platform.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0137-change-of-rights-and-interests-of-recruitment-business-platform.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0137-intelligent-recruitment-talent-through-train-task.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0138-intelligent-recruitment-talent-through-train-task.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0138-recruitment-platform-position-delivery-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0139-recruitment-platform-position-delivery-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0139-event-ats-config-change.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0140-event-ats-config-change.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0140-personnel-file-change.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0141-personnel-file-change.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0141-personnel-solution-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0142-personnel-solution-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0142-personnel-platform-employee-change-event-v2.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0143-personnel-platform-employee-change-event-v2.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0143-personnel-commercialization-program-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0144-personnel-commercialization-program-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0144-training-learning-record-sync-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0145-training-learning-record-sync-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0145-intelligent-personnel-integration-application-authorization.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0146-intelligent-personnel-integration-application-authorization.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0146-intelligent-financial-enterprise-information-change.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0147-intelligent-financial-enterprise-information-change.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0147-smart-financial-approval-template-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0148-smart-financial-approval-template-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0148-invoice-data-associated-with-invoicing-requisition-change.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0149-invoice-data-associated-with-invoicing-requisition-change.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0149-intelligent-financial-enterprise-multi-subject-information-change.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0150-intelligent-financial-enterprise-multi-subject-information-change.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0150-dingtalk-intelligent-financial-customer-information-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0151-dingtalk-intelligent-financial-customer-information-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0151-dingtalk-intelligent-financial-commodity-information-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0152-dingtalk-intelligent-financial-commodity-information-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0152-dingtalk-smart-finance-role-member-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0153-dingtalk-smart-finance-role-member-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0153-dingtalk-intelligent-financial-project-information-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0154-dingtalk-intelligent-financial-project-information-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0154-dingtalk-intelligent-financial-supplier-information-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0155-dingtalk-intelligent-financial-supplier-information-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0155-dingtalk-intelligent-financial-revenue-and-expenditure-category-information-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0156-dingtalk-intelligent-financial-revenue-and-expenditure-category-information-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0156-dingtalk-intelligent-financial-custom-profile-information-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0157-dingtalk-intelligent-financial-custom-profile-information-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0157-dingtalk-intelligent-financial-custom-file-data-information-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0158-dingtalk-intelligent-financial-custom-file-data-information-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0158-event-ding-crm-object-meta.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0159-event-ding-crm-object-meta.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0159-crm-customer-dynamics.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0160-crm-customer-dynamics.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0160-events-ding-paas-object-data-create.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0161-events-ding-paas-object-data-create.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0161-event-ding-paas-object-data-delete.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0162-event-ding-paas-object-data-delete.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0162-event-ding-paas-object-data-update.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0163-event-ding-paas-object-data-update.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0163-events-agoal-indicator-add.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0164-events-agoal-indicator-add.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0164-events-agoal-indicator-modify.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0165-events-agoal-indicator-modify.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0165-events-agoal-indicator-copy.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0166-events-agoal-indicator-copy.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0166-events-agoal-indicator-remove.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0167-events-agoal-indicator-remove.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0167-events-agoal-objectiveprogress-add.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0168-events-agoal-objectiveprogress-add.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0168-events-agoal-objectiveprogress-modify.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0169-events-agoal-objectiveprogress-modify.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0169-events-agoal-objectiveprogress-remove.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0170-events-agoal-objectiveprogress-remove.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0170-events-agoal-objectiverule-add.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0171-events-agoal-objectiverule-add.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0171-events-agoal-objectiverule-modify.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0172-events-agoal-objectiverule-modify.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0172-events-agoal-objectiverule-remove.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0173-events-agoal-objectiverule-remove.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0173-agoal-personal-goal-deletion-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0174-agoal-personal-goal-deletion-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0174-agoal-personal-goal-update-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0175-agoal-personal-goal-update-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0175-agoal-personal-goals-have-added-new-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0176-agoal-personal-goals-have-added-new-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0176-events-hrbrain-talent-pool-add.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0177-events-hrbrain-talent-pool-add.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0177-events-hrbrain-talent-pool-edit.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0178-events-hrbrain-talent-pool-edit.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0178-events-hrbrain-talent-pool-delete.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0179-events-hrbrain-talent-pool-delete.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0179-events-hrbrain-talent-pool-staff-add.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0180-events-hrbrain-talent-pool-staff-add.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0180-events-hrbrain-talent-pool-staff-delete.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0181-events-hrbrain-talent-pool-staff-delete.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0181-honor-confer.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0182-honor-confer.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0182-honor-review-results.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0183-honor-review-results.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0183-commodity-operation.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0184-commodity-operation.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0184-application-market-order.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0185-application-market-order.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0185-market-order-identification.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0186-market-order-identification.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0186-lightweight-opportunity-notification.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0187-lightweight-opportunity-notification.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0187-apply-order-refund-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0188-apply-order-refund-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0188-dingtalk-transaction-ordering-on.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0189-dingtalk-transaction-ordering-on.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0189-dingtalk-transaction-ordering-closed.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0190-dingtalk-transaction-ordering-closed.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0190-all-in-one-application-installation-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0191-all-in-one-application-installation-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0191-events-market-ai-agent-order.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0192-events-market-ai-agent-order.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0192-enterprise-logic-enabled-microapps.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0193-enterprise-logic-enabled-microapps.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0193-enterprise-logic-deactivates-microapps.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0194-enterprise-logic-deactivates-microapps.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0194-enterprise-physical-deletion-of-micro-applications.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0195-enterprise-physical-deletion-of-micro-applications.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0195-enterprise-micro-application-visible-range-change.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0196-enterprise-micro-application-visible-range-change.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0196-enterprise-self-built-application-version-release-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0197-enterprise-self-built-application-version-release-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0197-enterprise-self-built-application-version-rollback-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0198-enterprise-self-built-application-version-rollback-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0198-enterprise-self-built-application-release.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0199-enterprise-self-built-application-release.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0199-enterprise-self-built-application-status-change.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0200-enterprise-self-built-application-status-change.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0200-enterprise-self-built-applications-can-be-used-to-change-the-scope.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0201-enterprise-self-built-applications-can-be-used-to-change-the-scope.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0201-exclusive-group-expansion-approval.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0202-exclusive-group-expansion-approval.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0202-dedicated-dingtalk-data-migration.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0203-dedicated-dingtalk-data-migration.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0203-service-number-receiving-single-chat-message.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0204-service-number-receiving-single-chat-message.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0204-events-exclusive-delete-trusted-device.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0205-events-exclusive-delete-trusted-device.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0205-detection-event-of-enterprise-employee-sending-file.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0206-detection-event-of-enterprise-employee-sending-file.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0206-full-synchronization-of-medical-address-book.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0207-full-synchronization-of-medical-address-book.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0207-user-attribute-change-in-medical-industry.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0208-user-attribute-change-in-medical-industry.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0208-changes-in-medical-departments-and-medical-groups-in-the-medical.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0209-changes-in-medical-departments-and-medical-groups-in-the-medical.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0209-change-of-attribute-of-medical-group-of-medical-department-in.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0210-change-of-attribute-of-medical-group-of-medical-department-in.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0210-changes-in-the-medical-group-of-the-department-where-the.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0211-changes-in-the-medical-group-of-the-department-where-the.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0211-new-education-sector.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0212-new-education-sector.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0212-education-sector-update.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0213-education-sector-update.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0213-education-department-delete.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0214-education-department-delete.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0214-new-education-staff-added.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0215-new-education-staff-added.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0215-new-education-staff-update.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0216-new-education-staff-update.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0216-new-education-staff-deleted.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0217-new-education-staff-deleted.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0217-new-education-staff-relations-added.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0218-new-education-staff-relations-added.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0218-new-education-staff-relationship-update.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0219-new-education-staff-relationship-update.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0219-new-education-staff-relation-delete.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0220-new-education-staff-relation-delete.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0220-events-edu-card-update.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0221-events-edu-card-update.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0221-events-edu-card-end.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0222-events-edu-card-end.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0222-events-edu-card-delete.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0223-events-edu-card-delete.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0223-payment-status-synchronization.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0224-payment-status-synchronization.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0224-store-pass-node-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0225-store-pass-node-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0225-stores-through-stores-grouping-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0226-stores-through-stores-grouping-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0226-store-general-business-role-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0227-store-general-business-role-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0227-store-general-account-equity-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0228-store-general-account-equity-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0228-event-subscription-and-data-push.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0229-event-subscription-and-data-push.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0229-http-callback-overview.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0230-http-callback-overview.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0230-register-callback-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0231-register-callback-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0231-receive-callback-message.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0232-receive-callback-message.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0232-list-of-events-where-historical-push-notifications-failed.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0233-list-of-events-where-historical-push-notifications-failed.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0233-update-event-interface.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0234-update-event-interface.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0234-query-subscribed-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0235-query-subscribed-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0235-delete-an-event-callback-interface.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0236-delete-an-event-callback-interface.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0236-activate-suite.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0237-activate-suite.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0237-obtain-a-permanent-authorization-code.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0238-obtain-a-permanent-authorization-code.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0238-test-callback-url-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0239-test-callback-url-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0239-push-suite-ticket-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0240-push-suite-ticket-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0240-validating-and-updating-callback-url-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0241-validating-and-updating-callback-url-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0241-app-callback-url-update.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0242-app-callback-url-update.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0242-enterprise-authorized-application-activation-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0243-enterprise-authorized-application-activation-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0243-revoke-authorization.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0244-revoke-authorization.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0244-enable-and-disable-application-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0245-enable-and-disable-application-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0245-address-book-authorization-scope-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0246-address-book-authorization-scope-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0246-event-subscription-approval-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0247-event-subscription-approval-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0247-user-purchase-order-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0248-user-purchase-order-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0248-asynchronous-translation-task-completion-notification-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0249-asynchronous-translation-task-completion-notification-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0249-develop-mini-programs-http-callback.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0250-develop-mini-programs-http-callback.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0250-hidden-event-list.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0251-hidden-event-list.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0251-event-subscription-application-callback-address-update.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0252-event-subscription-application-callback-address-update.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0252-event-subscription-verification-update-callbackurl-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0253-event-subscription-verification-update-callbackurl-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0253-event-subscription-push-suite-ticket-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0254-event-subscription-push-suite-ticket-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0254-event-subscription-callback-test-url-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0255-event-subscription-callback-test-url-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0255-approval-events-1.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0256-approval-events-1.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0256-group-session-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0257-group-session-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0257-sign-in-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0258-sign-in-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0258-attendance-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0259-attendance-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0259-meeting-room-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0260-meeting-room-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0260-home-school-address-book-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0261-home-school-address-book-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0261-enterprise-authorization-to-open-application-event-history.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0262-enterprise-authorization-to-open-application-event-history.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0262-history-of-authorization-cancellation-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0263-history-of-authorization-cancellation-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0263-event-subscription-enables-disables-application-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0264-event-subscription-enables-disables-application-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0264-event-subscription-address-book-auth-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0265-event-subscription-address-book-auth-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0265-approval-events-2.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0266-approval-events-2.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0266-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0267-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0267-kit-ticket-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0268-kit-ticket-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0268-enterprise-de-authorization-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0269-enterprise-de-authorization-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0269-enterprise-authorized-application-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0270-enterprise-authorized-application-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0270-enterprise-change-scope-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0271-enterprise-change-scope-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0271-enable-for-third-party-enterprise-applications-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0272-enable-for-third-party-enterprise-applications-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0272-third-party-enterprise-application-deactivation-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0273-third-party-enterprise-application-deactivation-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0273-third-party-enterprise-app-deletion-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0274-third-party-enterprise-app-deletion-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0274-third-party-enterprise-application-visible-scope-change-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0275-third-party-enterprise-application-visible-scope-change-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0275-event-subscription-enterprises-increase-employee-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0276-event-subscription-enterprises-increase-employee-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0276-enterprise-modifies-the-employee-incident.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0277-enterprise-modifies-the-employee-incident.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0277-employee-information-event-after-the-enterprise-modifies-the-employee-dept-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0278-employee-information-event-after-the-enterprise-modifies-the-employee-dept-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0278-employee-information-event-after-the-enterprise-modifies-the-employee-role-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0279-employee-information-event-after-the-enterprise-modifies-the-employee-role-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0279-event-subscription-user-activation-information.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0280-event-subscription-user-activation-information.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0280-enterprise-deletes-the-employee.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0281-enterprise-deletes-the-employee.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0281-event-subscription-creates-department-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0282-event-subscription-creates-department-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0282-modify-department-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0283-modify-department-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0283-delete-department-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0284-delete-department-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0284-enterprise-add-role-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0285-enterprise-add-role-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0285-enterprise-modify-role-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0286-enterprise-modify-role-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0286-enterprise-delete-role-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0287-enterprise-delete-role-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0287-enterprise-change-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0288-enterprise-change-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0288-enterprise-delete-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0289-enterprise-delete-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0289-enterprise-add-external-contacts-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0290-enterprise-add-external-contacts-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0290-enterprise-modify-external-contact-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0291-enterprise-modify-external-contact-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0291-enterprise-delete-external-contact-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0292-enterprise-delete-external-contact-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0292-asynchronous-translation-address-book-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0293-asynchronous-translation-address-book-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0293-video-conference-status-change-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0294-video-conference-status-change-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0294-video-conference-member-status-change-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0295-video-conference-member-status-change-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0295-ai-assistant-installation-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0296-ai-assistant-installation-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0296-ai-assistant-information-change.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0297-ai-assistant-information-change.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0297-add-personnel-event-subscription-group-session.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0298-add-personnel-event-subscription-group-session.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0298-event-subscription-group-session-deletion-personnel.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0299-event-subscription-group-session-deletion-personnel.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0299-group-session-users-actively-withdraw-from-group-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0300-group-session-users-actively-withdraw-from-group-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0300-group-session-change-group-owner-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0301-group-session-change-group-owner-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0301-event-subscription-group-session-changes-name-group.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0302-event-subscription-group-session-changes-name-group.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0302-group-session-dismiss-group-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0303-group-session-dismiss-group-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0303-live-status-change-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0304-live-status-change-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0304-live-modify-information-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0305-live-modify-information-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0305-live-viewing-playback-information-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0306-live-viewing-playback-information-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0306-live-end-data-processing-task-completion-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0307-live-end-data-processing-task-completion-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0307-approve-instance-state-change-directed-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0308-approve-instance-state-change-directed-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0308-approve-task-status-change-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0309-approve-task-status-change-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0309-approve-instance-state-change-event-broadcast-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0310-approve-instance-state-change-event-broadcast-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0310-approve-task-status-change-broadcast-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0311-approve-task-status-change-broadcast-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0311-file-or-folder-add-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0312-file-or-folder-add-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0312-file-or-folder-update-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0313-file-or-folder-update-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0313-file-or-folder-delete-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0314-file-or-folder-delete-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0314-event-subscription-old-crm-metadata.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0315-event-subscription-old-crm-metadata.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0315-crm-customer-dynamic-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0316-crm-customer-dynamic-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0316-vacation-data-synchronization-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0317-vacation-data-synchronization-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0317-event-subscription-attendance-group-changes.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0318-event-subscription-attendance-group-changes.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0318-shift-change-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0319-shift-change-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0319-attendance-result-change-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0320-attendance-result-change-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0320-subscribe-to-the-personnel-solution-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0321-subscribe-to-the-personnel-solution-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0321-event-subscription-personnel-commercialization-plan-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0322-event-subscription-personnel-commercialization-plan-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0322-training-learning-record-synchronization-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0323-training-learning-record-synchronization-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0323-personnel-platform-employee-change-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0324-personnel-platform-employee-change-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0324-personnel-platform-employee-file-change-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0325-personnel-platform-employee-file-change-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0325-home-school-address-book-department-change-department-node-added-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0326-home-school-address-book-department-change-department-node-added-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0326-home-school-address-book-department-change-department-node-update-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0327-home-school-address-book-department-change-department-node-update-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0327-home-school-address-book-department-change-department-node-delete-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0328-home-school-address-book-department-change-department-node-delete-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0328-home-school-address-book-personnel-change-personnel-identity-added-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0329-home-school-address-book-personnel-change-personnel-identity-added-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0329-home-school-address-book-personnel-change-personnel-identity-update-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0330-home-school-address-book-personnel-change-personnel-identity-update-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0330-home-school-address-book-personnel-change-personnel-identity-deletion-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0331-home-school-address-book-personnel-change-personnel-identity-deletion-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0331-event-subscription-app-order-refund-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0332-event-subscription-app-order-refund-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0332-callback-information-activation-record-event-subscription-application.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0333-callback-information-activation-record-event-subscription-application.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0333-orders-generated-by-enterprises-opening-applications-in-the-application-market-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0334-orders-generated-by-enterprises-opening-applications-in-the-application-market-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0334-equity-services-open-etc-corresponding-to-goods-purchased-by-the-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0335-equity-services-open-etc-corresponding-to-goods-purchased-by-the-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0335-equity-services-close-etc-corresponding-to-goods-purchased-by-the-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0336-equity-services-close-etc-corresponding-to-goods-purchased-by-the-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0336-smart-hardware-binding-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0337-smart-hardware-binding-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0337-install-group-extension-event-in-the-group-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0338-install-group-extension-event-in-the-group-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0338-intra-cluster-offload-cluster-extension-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0339-intra-cluster-offload-cluster-extension-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0339-have-one-chat-about-installing-old-version-cool-app.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0340-have-one-chat-about-installing-old-version-cool-app.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0340-single-chat-uninstall-cool-app-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0341-single-chat-uninstall-cool-app-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0341-callback-events-overview.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0342-callback-events-overview.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0342-third-party-enterprise-application-address-book-change-event-subscription-process.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0343-third-party-enterprise-application-address-book-change-event-subscription-process.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0343-callback-event-message-body-encryption-and-decryption.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0344-callback-event-message-body-encryption-and-decryption.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0344-develop-mini-programs-using-rds-push.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0345-develop-mini-programs-using-rds-push.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0345-configure-rds-push-table.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0346-configure-rds-push-table.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0347-configure-synchttp-push.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0348-configure-synchttp-push.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0348-configure-http-push.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0349-configure-http-push.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0349-authorization-event-1.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0350-authorization-event-1.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0350-activate-authorized-applications.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0351-activate-authorized-applications.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0351-address-book-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0352-address-book-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0352-intelligent-personnel-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0353-intelligent-personnel-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0353-live-stream-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0354-live-stream-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0354-video-conference-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0355-video-conference-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0355-business-integration-receiving.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0356-business-integration-receiving.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0356-approval-events-3.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0357-approval-events-3.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0357-storage-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0358-storage-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0358-oa-approval-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0359-oa-approval-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0359-crm-metadata.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0360-crm-metadata.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0360-crm-customer-dynamic-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0361-crm-customer-dynamic-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0361-teambiton-work-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0362-teambiton-work-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0362-subscribe-to-attendance-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0363-subscribe-to-attendance-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0363-event-subscription-attendance-result-changes.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0364-event-subscription-attendance-result-changes.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0364-subscribe-to-events-home-school-address-book.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0365-subscribe-to-events-home-school-address-book.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0365-application-market-related-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0366-application-market-related-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0366-smart-hardware-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0367-smart-hardware-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0367-croud-expansion-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0368-croud-expansion-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0368-one-on-one-chat-cool-application-extension-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0369-one-on-one-chat-cool-application-extension-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0369-notification-callback.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0370-notification-callback.md
+- docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0002-dingtalk-cli-event-subscription.md → docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0006-dingtalk-cli-event-subscription.md
+- docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0006-mcp-square-introduction.md → docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0007-mcp-square-introduction.md
+- docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0007-dingtalk-deap-platform-using-mcp-services.md → docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0008-dingtalk-deap-platform-using-mcp-services.md
+- docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0008-alibaba-cloud-uses-dingtalk-mcp-services.md → docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0009-alibaba-cloud-uses-dingtalk-mcp-services.md
+- docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0009-create-dingtalk-intelligent-agent-application.md → docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0010-create-dingtalk-intelligent-agent-application.md
+- docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0010-creat-dingtalk-application-scan-process.md → docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0011-creat-dingtalk-application-scan-process.md
+- docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0011-open-claw-nail-insertion-plugin.md → docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0017-open-claw-nail-insertion-plugin.md
+- docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0017-build-dingtalk-ai-employees.md → docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0020-build-dingtalk-ai-employees.md
+- docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0022-install-openclaw-locally.md → docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0021-install-openclaw-locally.md
+- docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0020-deployment-of-alibaba-cloud-light-server.md → docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0022-deployment-of-alibaba-cloud-light-server.md
+- docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0021-deployment-alibaba-cloud-ecs-server.md → docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0023-deployment-alibaba-cloud-ecs-server.md
+- docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0023-dws-cli-frequently-asked-questions.md → docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0024-dws-cli-frequently-asked-questions.md
+- docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0024-dws-cli-log.md → docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0025-dws-cli-log.md
+
+## 后续动作
+- 结构层（index/ graph/ meta/kb_manifest）：--apply 已全量重建；未 --apply 则本报告仅供预览。
+- 认知层（index/TOPICS.md）：对照上面清单，凡命中 TOPICS 引用的文档（可用 `rg <path> index/TOPICS.md` 与 `graph/links.jsonl` 反查），由 LLM 复核该主题条目是否要改写。

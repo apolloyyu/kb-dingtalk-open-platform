@@ -43,14 +43,14 @@ updated_at: "2025-09-12 17:18:29"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| chatId | String | 是 | 群会话chatId，可通过[创建群会话](0738-create-common-group-new-version-v2.md)接口获取chatId参数值。 |
+| chatId | String | 是 | 群会话chatId：   - **服务端**：通过[创建群会话](0738-create-common-group-new-version-v2.md)接口获取。 - **客户端**：通过[chooseChat](../03-Ogu5SlPY4t-客户端JSAPI/0318-jsapi-choose-chat.md)JSAPI获取。 |
 
 ### 请求示例
 
 HTTP
 
 ```
-POST /v1.0/im/chat/chatfaabe59a460527f5fb72fbbdfe3f061e/convertToOpenConversationId HTTP/1.1
+POST /v1.0/im/chat/chatfaaxxxx3f061e/convertToOpenConversationId HTTP/1.1
 Host:api.dingtalk.com
 Content-Type:application/json
 ```
@@ -469,3 +469,4 @@ Content-Type:application/json
 | HttpCode | 错误码 | 错误信息 | 说明 |
 | --- | --- | --- | --- |
 | 400 | invalideChatId | 不合法的chatId | 不合法的chatId |
+| 400 | permession.checkFailed | 群主不在应用可见性内 | 群主不在应用可见性内 |

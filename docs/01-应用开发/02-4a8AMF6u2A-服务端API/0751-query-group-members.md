@@ -1,20 +1,20 @@
 ---
-title: "查询群成员"
+title: "查询场景群成员"
 source_url: "https://open.dingtalk.com/document/development/query-group-members"
 namespace: "development"
 slug: "query-group-members"
 group: "应用开发"
 tab: "服务端API"
-breadcrumb: "即时通信 > 会话管理 > 场景群 > 群管理 > 查询群成员"
+breadcrumb: "即时通信 > 会话管理 > 场景群 > 群管理 > 查询场景群成员"
 doc_id: "PqCzlH6p65"
 updated_at: "2026-05-10 01:08:15"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-group-members
-> Path: 应用开发 / 服务端API / 即时通信 > 会话管理 > 场景群 > 群管理 > 查询群成员
+> Path: 应用开发 / 服务端API / 即时通信 > 会话管理 > 场景群 > 群管理 > 查询场景群成员
 > Updated: 2026-05-10 01:08:15
 
-# 查询群成员
+# 查询场景群成员
 
 调用本接口，查询群成员信息，适用于需要获取群成员信息的场景，如在群管理界面展示群成员列表、统计群成员数量等。
 
@@ -39,7 +39,7 @@ updated_at: "2026-05-10 01:08:15"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| openConversationId | String | 是 | 群ID：   - 基于群模板创建的群，可调用[创建场景群](0746-create-a-scene-group.md)接口获取`open_conversation_id`参数值。 - 安装群聊酷应用的群，通过[安装酷应用入群](../03-Ogu5SlPY4t-客户端JSAPI/0273-install-coothe-group.md)获取返回参数`openConversationId`参数值。 |
+| openConversationId | String | 是 | 群ID：   - 基于群模板创建的群，可调用[创建群](1484-create-a-scene-group-v2.md)接口获取`open_conversation_id`参数值。 - 安装群聊酷应用的群，通过[安装酷应用入群](../03-Ogu5SlPY4t-客户端JSAPI/0273-install-coothe-group.md)获取返回参数`openConversationId`参数值。 |
 | coolAppCode | String | 否 | 群聊酷应用编码：   - 基于群模板创建的群，不需要传入此参数。 - 安装群聊酷应用的群，**必须**传入此参数。 |
 | maxResults | Long | 是 | 分页大小。      接口返回结果可能会大于或小于maxResults，以实际返回结果为准。如果群成员数量不超过1000，而直接一次性返回全部群成员；如果群成员数量大于1000，则按照分页大小分批次返回。 |
 | nextToken | String | 否 | 分页游标，置空表示从首页开始查询。 |

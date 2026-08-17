@@ -1,20 +1,20 @@
 ---
-title: "查询群内群模板机器人"
+title: "查询场景群内群模板机器人"
 source_url: "https://open.dingtalk.com/document/development/search-group-scene-template-robot"
 namespace: "development"
 slug: "search-group-scene-template-robot"
 group: "应用开发"
 tab: "服务端API"
-breadcrumb: "即时通信 > 会话管理 > 场景群 > 群管理 > 查询群内群模板机器人"
+breadcrumb: "即时通信 > 会话管理 > 场景群 > 群管理 > 查询场景群内群模板机器人"
 doc_id: "AC6kVRH98Y"
 updated_at: "2025-09-12 17:18:35"
 ---
 
 > Source: https://open.dingtalk.com/document/development/search-group-scene-template-robot
-> Path: 应用开发 / 服务端API / 即时通信 > 会话管理 > 场景群 > 群管理 > 查询群内群模板机器人
+> Path: 应用开发 / 服务端API / 即时通信 > 会话管理 > 场景群 > 群管理 > 查询场景群内群模板机器人
 > Updated: 2025-09-12 17:18:35
 
-# 查询群内群模板机器人
+# 查询场景群内群模板机器人
 
 调用本接口，查询群内群模板机器人信息，适用于需要获取群内群模板机器人信息的场景，如在群管理界面展示机器人信息，或者在业务处理中需要使用机器人的 userId 和 unionId 等情况。
 

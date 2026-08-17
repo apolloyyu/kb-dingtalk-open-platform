@@ -5,13 +5,13 @@ namespace: "development"
 slug: "ai-bot-configuration-guide"
 group: "应用开发"
 tab: "钉钉CLI"
-breadcrumb: "钉钉CLI > 5分钟配置：给自己配个嘴替AI 机器人"
+breadcrumb: "新手入门 > 快速尝试 > 5分钟配置：给自己配个嘴替AI 机器人"
 doc_id: "hZ0wNBWaPo"
 updated_at: "2026-08-07 14:13:19"
 ---
 
 > Source: https://open.dingtalk.com/document/development/ai-bot-configuration-guide
-> Path: 应用开发 / 钉钉CLI / 钉钉CLI > 5分钟配置：给自己配个嘴替AI 机器人
+> Path: 应用开发 / 钉钉CLI / 新手入门 > 快速尝试 > 5分钟配置：给自己配个嘴替AI 机器人
 > Updated: 2026-08-07 14:13:19
 
 # 5分钟配置：给自己配个嘴替AI 机器人

@@ -5,13 +5,13 @@ namespace: "development"
 slug: "project-progress-management-agent"
 group: "应用开发"
 tab: "钉钉CLI"
-breadcrumb: "Agent解决方案 > 项目进度管理 Agent "
+breadcrumb: "进阶实战 > Agent 场景案例库 > 典型 Agent 实现 > 项目进度管理 Agent "
 doc_id: "QkoeyH4Evo"
 updated_at: "2026-06-16 11:36:13"
 ---
 
 > Source: https://open.dingtalk.com/document/development/project-progress-management-agent
-> Path: 应用开发 / 钉钉CLI / Agent解决方案 > 项目进度管理 Agent 
+> Path: 应用开发 / 钉钉CLI / 进阶实战 > Agent 场景案例库 > 典型 Agent 实现 > 项目进度管理 Agent 
 > Updated: 2026-06-16 11:36:13
 
 # 项目进度管理 Agent

@@ -5,13 +5,13 @@ namespace: "development"
 slug: "mcp-square-introduction"
 group: "应用开发"
 tab: "钉钉CLI"
-breadcrumb: "钉钉MCP > 概述"
+breadcrumb: "进阶实战 > MCP 服务接入 > 概述"
 doc_id: "I6bFMbY4LH"
 updated_at: "2026-07-22 16:32:38"
 ---
 
 > Source: https://open.dingtalk.com/document/development/mcp-square-introduction
-> Path: 应用开发 / 钉钉CLI / 钉钉MCP > 概述
+> Path: 应用开发 / 钉钉CLI / 进阶实战 > MCP 服务接入 > 概述
 > Updated: 2026-07-22 16:32:38
 
 # 概述
@@ -99,10 +99,10 @@ MCP 服务支持 **双路径接入**方式，满足不同开发场景：
 - 钉钉内集成  
   直接在 Deap 技能中心 或 自动化工作流 中调用，无需额外开发。
 
-  示例：在审批流程中嵌入智能问答能力，如何操作可查看[钉钉Deap平台使用MCP服务](0007-dingtalk-deap-platform-using-mcp-services.md)文档。
+  示例：在审批流程中嵌入智能问答能力，如何操作可查看[钉钉Deap平台使用MCP服务](0008-dingtalk-deap-platform-using-mcp-services.md)文档。
 - 外部系统集成  
   通过 标准 RESTful API 集成至自研系统或第三方 Agent 平台，支持跨平台调用。  
-  示例：在阿里云百炼中使用MCP服务，如何操作可查看[阿里云百炼使用钉钉MCP服务](0008-alibaba-cloud-uses-dingtalk-mcp-services.md)文档。
+  示例：在阿里云百炼中使用MCP服务，如何操作可查看[阿里云百炼使用钉钉MCP服务](0009-alibaba-cloud-uses-dingtalk-mcp-services.md)文档。
 
 ## **立即开始**
 

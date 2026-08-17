@@ -1,20 +1,20 @@
 ---
-title: "钉钉dws CLI安装与使用指南"
+title: "安装与使用指南"
 source_url: "https://open.dingtalk.com/document/development/dingtalk-dws-cli-install-guide"
 namespace: "development"
 slug: "dingtalk-dws-cli-install-guide"
 group: "应用开发"
 tab: "钉钉CLI"
-breadcrumb: "钉钉CLI > 钉钉dws CLI安装与使用指南"
+breadcrumb: "新手入门 > 安装与使用指南"
 doc_id: "XYk3YaeWim"
-updated_at: "2026-08-07 10:33:36"
+updated_at: "2026-08-14 12:11:27"
 ---
 
 > Source: https://open.dingtalk.com/document/development/dingtalk-dws-cli-install-guide
-> Path: 应用开发 / 钉钉CLI / 钉钉CLI > 钉钉dws CLI安装与使用指南
-> Updated: 2026-08-07 10:33:36
+> Path: 应用开发 / 钉钉CLI / 新手入门 > 安装与使用指南
+> Updated: 2026-08-14 12:11:27
 
-# 钉钉dws CLI安装与使用指南
+# 安装与使用指南
 
 ## 什么是钉钉 dws CLI
 

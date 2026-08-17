@@ -1,20 +1,20 @@
 ---
-title: "查询群禁言状态"
+title: "查询场景群禁言状态"
 source_url: "https://open.dingtalk.com/document/development/query-group-silence-status"
 namespace: "development"
 slug: "query-group-silence-status"
 group: "应用开发"
 tab: "服务端API"
-breadcrumb: "即时通信 > 会话管理 > 场景群 > 群管理 > 查询群禁言状态"
+breadcrumb: "即时通信 > 会话管理 > 场景群 > 群管理 > 查询场景群禁言状态"
 doc_id: "5pLM3VRQar"
 updated_at: "2025-09-12 17:18:31"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-group-silence-status
-> Path: 应用开发 / 服务端API / 即时通信 > 会话管理 > 场景群 > 群管理 > 查询群禁言状态
+> Path: 应用开发 / 服务端API / 即时通信 > 会话管理 > 场景群 > 群管理 > 查询场景群禁言状态
 > Updated: 2025-09-12 17:18:31
 
-# 查询群禁言状态
+# 查询场景群禁言状态
 
 通过本接口查询群和群内成员的禁言状态，适用于企业管理员需要查看群和群成员禁言状态的场景，如处理群内违规行为、管理群秩序等。
 
@@ -519,4 +519,5 @@ Content-Type:application/json
 | 400 | invalidParam.openConversationIdDecryptFailed | 会话ID解密失败 | 会话ID解密失败 |
 | 400 | invalidParam.openConversationIdEmpry | 不合法的会话ID | 不合法的会话ID |
 | 400 | group.org.checkFailed | 无权限，群不属于当前企业 | 无权限，群不属于当前企业 |
+| 400 | permession.checkFailed | 群主不在应用可见性内 | 群主不在应用可见性内 |
 | 500 | systemInnerError | 系统繁忙，请稍后再试 | 系统繁忙，请稍后再试 |

@@ -5,13 +5,13 @@ namespace: "development"
 slug: "install-openclaw-locally"
 group: "应用开发"
 tab: "钉钉CLI"
-breadcrumb: "OpenClaw > OpenClaw常用部署方式 > 本地安装OpenClaw"
+breadcrumb: "高级集成 > OpenClaw 常用部署方式 > 本地安装 OpenClaw"
 doc_id: "extDn0AnNy"
 updated_at: "2026-07-14 09:22:36"
 ---
 
 > Source: https://open.dingtalk.com/document/development/install-openclaw-locally
-> Path: 应用开发 / 钉钉CLI / OpenClaw > OpenClaw常用部署方式 > 本地安装OpenClaw
+> Path: 应用开发 / 钉钉CLI / 高级集成 > OpenClaw 常用部署方式 > 本地安装 OpenClaw
 > Updated: 2026-07-14 09:22:36
 
 # 本地安装OpenClaw

@@ -24,10 +24,10 @@ updated_at: "2026-05-22 18:17:57"
 2. 拥有组织的[钉钉管理后台](https://oa.dingtalk.com/#/welcome)的登录权限。
 3. 需完成插件开发流程：
 
-   - [开发 Android 插件](../02-sakFIe9HDV-插件开发/0001-process-overview.md)
-   - [开发 iOS 插件](../02-sakFIe9HDV-插件开发/0002-an-overview-of-the-exclusive-client-plugin-process.md)
-   - [创建插件工程](../02-sakFIe9HDV-插件开发/0003-create-plug-in-project.md)
-   - [开发 Windows 插件](../02-sakFIe9HDV-插件开发/0004-create-a-windows-lug-in-project.md)
+   - [开发 Android 插件](../02-sakFIe9HDV-Android-插件/0001-process-overview.md)
+   - [开发 iOS 插件](../03-gh7c55BOlV-iOS-插件/0001-an-overview-of-the-exclusive-client-plugin-process.md)
+   - [创建插件工程](../04-ooCjrSfXpn-HarmonyOS-插件/0001-create-plug-in-project.md)
+   - [开发 Windows 插件](../05-9GcTDwdGCc-Windows-插件/0001-create-a-windows-lug-in-project.md)
 
 ## **操作步骤**
 

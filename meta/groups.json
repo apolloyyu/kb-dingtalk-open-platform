@@ -107,8 +107,23 @@
     "tabs": [
       {
         "tabCode": "bUKfVUPJsL",
-        "tabName": "智能硬件",
+        "tabName": "SDK 接入（通用）",
         "sort": 1
+      },
+      {
+        "tabCode": "i2KMOlcfB3",
+        "tabName": "门禁/考勤机接入",
+        "sort": 2
+      },
+      {
+        "tabCode": "CkFsxzbZNt",
+        "tabName": "门禁Linux 接入",
+        "sort": 3
+      },
+      {
+        "tabCode": "5Q63YgAfzq",
+        "tabName": "Android设备接入",
+        "sort": 4
       }
     ]
   },
@@ -151,8 +166,23 @@
       },
       {
         "tabCode": "sakFIe9HDV",
-        "tabName": "插件开发",
+        "tabName": "Android 插件",
         "sort": 2
+      },
+      {
+        "tabCode": "gh7c55BOlV",
+        "tabName": "iOS 插件",
+        "sort": 3
+      },
+      {
+        "tabCode": "ooCjrSfXpn",
+        "tabName": "HarmonyOS 插件",
+        "sort": 4
+      },
+      {
+        "tabCode": "9GcTDwdGCc",
+        "tabName": " Windows 插件",
+        "sort": 5
       }
     ]
   },

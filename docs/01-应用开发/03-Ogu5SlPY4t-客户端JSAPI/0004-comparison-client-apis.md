@@ -81,8 +81,8 @@ import * as dd from 'dingtalk-jsapi'; // 此方式为整体加载，也可按需
 - 新版客户端 API，详情参考新版[JSAPI 总览](0002-jsapi-overview.md)。
 - 旧版客户端 API，分为小程序和H5微应用：
 
-  - 小程序详情参考旧版[小程序JSAPI总览](0433-mini-program-jsapi-overview.md)。
-  - H5微应用详情参考旧版[H5微应用JSAPI总览](0749-jsapi-overview-1.md)。
+  - 小程序详情参考旧版[小程序JSAPI总览](0434-mini-program-jsapi-overview.md)。
+  - H5微应用详情参考旧版[H5微应用JSAPI总览](0750-jsapi-overview-1.md)。
 
 ### 核心区别
 

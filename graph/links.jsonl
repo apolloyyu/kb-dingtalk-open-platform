@@ -44,7 +44,7 @@
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0021-application-configuration-and-management.md", "to": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0027-isv-cooperation-guide.md", "text": "合作全流程指引", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0021-application-configuration-and-management.md", "to": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0045-mr22h2.md", "text": "联系运营", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0022-mini-app-client-jsapi-overview.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0002-jsapi-overview.md", "text": "客户端API总览", "n": 1}
-{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0023-mini-app-steps.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0772-select-department-and-person.md", "text": "选择部门和人", "n": 1}
+{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0023-mini-app-steps.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0773-select-department-and-person.md", "text": "选择部门和人", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0024-optional-develop-a-small-program-server.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md", "text": "unionId介绍", "n": 2}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0024-optional-develop-a-small-program-server.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0002-application-type-introduction.md", "text": "应用类型与能力说明", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0024-optional-develop-a-small-program-server.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0002-download-the-server-side-sdk.md", "text": "服务端SDK下载", "n": 1}
@@ -57,8 +57,8 @@
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0025-configure-secure-domain-name.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0009-jsapi-http-request.md", "text": "httpRequest", "n": 2}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0026-develop-miniapp-fe.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "应用创建与配置", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0026-develop-miniapp-fe.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0027-upload-miniapp.md", "text": "上传小程序", "n": 1}
-{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0026-develop-miniapp-fe.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0435-mini-app-directory-structure-of-mini-programs.md", "text": "钉钉小程序框架", "n": 1}
-{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0026-develop-miniapp-fe.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0480-mini-app-dd-view-container.md", "text": "小程序基础组件", "n": 1}
+{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0026-develop-miniapp-fe.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0436-mini-app-directory-structure-of-mini-programs.md", "text": "钉钉小程序框架", "n": 1}
+{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0026-develop-miniapp-fe.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0481-mini-app-dd-view-container.md", "text": "小程序基础组件", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0026-develop-miniapp-fe.md", "to": "docs/01-应用开发/06-JDICnQyZLF-开发工具/0001-miniapp-tool.md", "text": "小程序开发工具", "n": 2}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0027-upload-miniapp.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "应用创建与配置", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0027-upload-miniapp.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0017-publish-dingtalk-application.md", "text": "发布应用", "n": 1}
@@ -82,7 +82,7 @@
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0031-develop-webapp-frontend.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0034-obtain-the-access-token-of-the-authorized-enterprise-1.md", "text": "获取第三方应用授权企业的accessToken", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0031-develop-webapp-frontend.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0039-create-a-jsapi-ticket.md", "text": "获取jsapiTicket", "n": 4}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0031-develop-webapp-frontend.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0318-jsapi-choose-chat.md", "text": "chooseChat", "n": 1}
-{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0031-develop-webapp-frontend.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0776-on-the-pc-select-the-person-in-the-enterprise.md", "text": "biz.contact.choose", "n": 1}
+{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0031-develop-webapp-frontend.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0777-on-the-pc-select-the-person-in-the-enterprise.md", "text": "biz.contact.choose", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0032-develop-webapp-backend.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0002-download-the-server-side-sdk.md", "text": "服务端SDK下载", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0032-develop-webapp-backend.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0003-add-api-permission.md", "text": "添加接口调用权限", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0032-develop-webapp-backend.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0018-enterprise-internal-application-logon-free.md", "text": "网页应用（H5微应用）免登", "n": 1}
@@ -137,7 +137,7 @@
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0056-permanent-type-suspended-ceiling.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0761-send-group-helper-message.md", "text": "创建并开启互动卡片吊顶", "n": 2}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0056-permanent-type-suspended-ceiling.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0762-close-interactive-card-ceiling.md", "text": "关闭互动卡片吊顶", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0057-group-jump-protocol.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md", "text": "基础概念-AppId", "n": 2}
-{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0057-group-jump-protocol.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0467-scheme-of-mini-programs-1.md", "text": "小程序 scheme", "n": 1}
+{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0057-group-jump-protocol.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0468-scheme-of-mini-programs-1.md", "text": "小程序 scheme", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0058-group-chat-coolapp-event.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0004-develop-stream-mode-push-server.md", "text": "开发 HTTP 模式", "n": 2}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0059-group-chat-coolapp-expands-immersive-container.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/1394-structure-of-applink.md", "text": "AppLink协议", "n": 3}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0060-private-chat-coolapp-overview.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0276-batch-chat-session.md", "text": "批量安装酷应用到单聊会话", "n": 1}
@@ -153,7 +153,7 @@
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0063-private-chat-coolapp-develop-interactive-cards.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0762-close-interactive-card-ceiling.md", "text": "关闭互动卡片吊顶", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0063-private-chat-coolapp-develop-interactive-cards.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0783-create-and-deliver-cards.md", "text": "创建并投放卡片", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0064-private-chat-related-jump-protocol.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md", "text": "基础概念", "n": 2}
-{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0064-private-chat-related-jump-protocol.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0467-scheme-of-mini-programs-1.md", "text": "小程序 scheme", "n": 1}
+{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0064-private-chat-related-jump-protocol.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0468-scheme-of-mini-programs-1.md", "text": "小程序 scheme", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0066-access-link-enhancements-coolapp.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "创建酷应用", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0066-access-link-enhancements-coolapp.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0017-publish-dingtalk-application.md", "text": "发布应用", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0066-access-link-enhancements-coolapp.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0780-interface-for-creating-a-card-instance.md", "text": "创建卡片", "n": 1}
@@ -276,7 +276,7 @@
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0013-server-api-error-codes-1.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/1427-signature-personal-registration.md", "text": "个人免登场景的签名计算方法", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0013-server-api-error-codes-1.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/1428-the-signature-calculation-method-of-the-third-party-access-interface.md", "text": "第三方访问接口的签名计算方法", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0013-server-api-error-codes-1.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/1481-session-management-creates-groups.md", "text": "创建群", "n": 2}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0013-server-api-error-codes-1.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0235-query-subscribed-events.md", "text": "查询订阅事件", "n": 2}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0013-server-api-error-codes-1.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0236-query-subscribed-events.md", "text": "查询订阅事件", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0014-event-subscription-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0003-configure-stream-push.md", "text": "配置 Stream 推送（推荐）", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0015-obtain-the-event-list-of-failed-push-messages.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0013-server-api-error-codes-1.md", "text": "全局错误码", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0016-sso-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0024-obtain-the-userid-of-a-user-by-using-the-log-free.md", "text": "通过免登码获取用户信息", "n": 2}
@@ -525,7 +525,7 @@
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0051-third-party-personal-applet-to-obtain-login-user-information-tutorial.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0032-obtain-user-token.md", "text": "获取用户token", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0051-third-party-personal-applet-to-obtain-login-user-information-tutorial.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0054-dingtalk-retrieve-user-information.md", "text": "获取用户通讯录个人信息", "n": 3}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0052-queries-basic-user-information.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0013-server-api-error-codes-1.md", "text": "全局错误码", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0052-queries-basic-user-information.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0514-mini-program-free-login.md", "text": "免登授权码", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0052-queries-basic-user-information.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0515-mini-program-free-login.md", "text": "免登授权码", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0053-obtain-corpsecret-authorization-scope.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0013-server-api-error-codes-1.md", "text": "全局错误码", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0053-obtain-corpsecret-authorization-scope.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/1443-obtain-orgapp-token.md", "text": "获取企业内部应用的access\\_token", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0053-obtain-corpsecret-authorization-scope.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/1445-obtain-isvapp-token.md", "text": "获取第三方企业的access\\_token", "n": 1}
@@ -4283,7 +4283,7 @@
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0766-send-personal-work-notifications.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0775-message-types-and-data-format.md", "text": "消息通知类型", "n": 3}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0766-send-personal-work-notifications.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0776-message-link-description.md", "text": "消息链接说明", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0766-send-personal-work-notifications.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/1443-obtain-orgapp-token.md", "text": "获取企业内部应用的access\\_token", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0766-send-personal-work-notifications.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0467-scheme-of-mini-programs-1.md", "text": "小程序 scheme", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0766-send-personal-work-notifications.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0468-scheme-of-mini-programs-1.md", "text": "小程序 scheme", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0767-redirect-micro-applications-to-work-messages.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md", "text": "AgentId", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0767-redirect-micro-applications-to-work-messages.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "应用创建与配置", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0767-redirect-micro-applications-to-work-messages.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0765-manage-message-templates.md", "text": "管理消息模板", "n": 1}
@@ -5809,7 +5809,7 @@
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/1126-education-application-solution.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0005-jsapi-get-auth-code.md", "text": "免登授权码", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/1126-education-application-solution.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0006-jsapi-request-auth-code.md", "text": "免登流程", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/1126-education-application-solution.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0003-configure-stream-push.md", "text": "配置事件推送方式", "n": 2}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/1126-education-application-solution.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0346-configure-rds-push-table.md", "text": "配置RDS推送表", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/1126-education-application-solution.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0347-configure-rds-push-table.md", "text": "配置RDS推送表", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/1126-education-application-solution.md", "to": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0017-cooperation-process-of-customized-services-from-product-solution-providers.md", "text": "产品方案商定制服务合作流程", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/1126-education-application-solution.md", "to": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0027-isv-cooperation-guide.md", "text": "合作全流程指引", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/1127-dingtalk-the-main-data-of-the-education-ecosystem-to-query.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0013-server-api-error-codes-1.md", "text": "全局错误码", "n": 1}
@@ -7905,7 +7905,7 @@
 {"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0003-jsapi-authentication.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0033-obtain-the-access-token-of-an-internal-app.md", "text": "获取企业内部应用的accessToken", "n": 1}
 {"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0003-jsapi-authentication.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0034-obtain-the-access-token-of-the-authorized-enterprise-1.md", "text": "获取第三方应用授权企业的accessToken", "n": 1}
 {"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0003-jsapi-authentication.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0039-create-a-jsapi-ticket.md", "text": "获取jsapiTicket", "n": 2}
-{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0003-jsapi-authentication.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0749-jsapi-overview-1.md", "text": "H5微应用JSAPI总览", "n": 1}
+{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0003-jsapi-authentication.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0750-jsapi-overview-1.md", "text": "H5微应用JSAPI总览", "n": 1}
 {"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0004-comparison-client-apis.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0002-jsapi-overview.md", "text": "JSAPI 总览", "n": 1}
 {"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0004-comparison-client-apis.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0005-jsapi-get-auth-code.md", "text": "getAuthCode", "n": 1}
 {"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0004-comparison-client-apis.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0007-jsapi-get-operate-auth-code.md", "text": "getOperateAuthCode", "n": 1}
@@ -8020,24 +8020,33 @@
 {"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0004-comparison-client-apis.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0417-jsapi-reset-screen-view.md", "text": "resetScreenView", "n": 1}
 {"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0004-comparison-client-apis.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0418-jsapi-rotate-screen-view.md", "text": "rotateScreenView", "n": 1}
 {"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0004-comparison-client-apis.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0424-jsapi-get-user-exclusive-info.md", "text": "getUserExclusiveInfo", "n": 1}
-{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0004-comparison-client-apis.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0433-mini-program-jsapi-overview.md", "text": "小程序JSAPI总览", "n": 1}
-{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0004-comparison-client-apis.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0749-jsapi-overview-1.md", "text": "H5微应用JSAPI总览", "n": 1}
-{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0428-small-program.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0503-mini-app-video-player-1.md", "text": "video 视频播放器", "n": 2}
-{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0428-small-program.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0506-mini-app-web-view.md", "text": "web-view", "n": 1}
-{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0428-small-program.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0514-mini-program-free-login.md", "text": "免登授权码", "n": 1}
-{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0428-small-program.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0516-send-network-requests.md", "text": "发网络请求", "n": 1}
-{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0428-small-program.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0546-dd-settabbarbadge.md", "text": "添加tabBar文本", "n": 1}
-{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0428-small-program.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0560-dd-enableleaveconfirm.md", "text": "离开二次确认配置", "n": 1}
+{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0004-comparison-client-apis.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0434-mini-program-jsapi-overview.md", "text": "小程序JSAPI总览", "n": 1}
+{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0004-comparison-client-apis.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0750-jsapi-overview-1.md", "text": "H5微应用JSAPI总览", "n": 1}
+{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0428-small-program.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0504-mini-app-video-player-1.md", "text": "video 视频播放器", "n": 2}
+{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0428-small-program.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0507-mini-app-web-view.md", "text": "web-view", "n": 1}
+{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0428-small-program.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0515-mini-program-free-login.md", "text": "免登授权码", "n": 1}
+{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0428-small-program.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0517-send-network-requests.md", "text": "发网络请求", "n": 1}
+{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0428-small-program.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0547-dd-settabbarbadge.md", "text": "添加tabBar文本", "n": 1}
+{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0428-small-program.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0561-dd-enableleaveconfirm.md", "text": "离开二次确认配置", "n": 1}
 {"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0429-h5-micro-application.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0003-jsapi-authentication.md", "text": "JSAPI鉴权", "n": 1}
-{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0429-h5-micro-application.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0752-obtain-the-micro-application-exemption-authorization-code.md", "text": "获取微应用免登授权码", "n": 1}
-{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0429-h5-micro-application.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0778-share-1.md", "text": "分享", "n": 1}
-{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0429-h5-micro-application.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0782-set-the-navigation-bar-color.md", "text": "设置导航栏颜色", "n": 1}
-{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0429-h5-micro-application.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0821-preview-nail-plate-file.md", "text": "预览钉盘文件", "n": 1}
-{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0429-h5-micro-application.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0863-full-screen-display-of-microapplication-page.md", "text": "微应用页面全屏展示", "n": 1}
-{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0430-unified-jump-protocol.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0872-open-side-panel.md", "text": "打开侧边面板", "n": 1}
+{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0429-h5-micro-application.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0753-obtain-the-micro-application-exemption-authorization-code.md", "text": "获取微应用免登授权码", "n": 1}
+{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0429-h5-micro-application.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0779-share-1.md", "text": "分享", "n": 1}
+{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0429-h5-micro-application.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0783-set-the-navigation-bar-color.md", "text": "设置导航栏颜色", "n": 1}
+{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0429-h5-micro-application.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0822-preview-nail-plate-file.md", "text": "预览钉盘文件", "n": 1}
+{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0429-h5-micro-application.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0864-full-screen-display-of-microapplication-page.md", "text": "微应用页面全屏展示", "n": 1}
+{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0430-unified-jump-protocol.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0873-open-side-panel.md", "text": "打开侧边面板", "n": 1}
 {"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0431-sharing-and-login.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0106-mini-app-procedures-for-authorized-logon-to-ios-applications.md", "text": "Android应用授权登录接入流程", "n": 1}
-{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0467-scheme-of-mini-programs-1.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md", "text": "基础概念-CorpId", "n": 3}
-{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0750-logon-free-process.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0752-obtain-the-micro-application-exemption-authorization-code.md", "text": "获取微应用免登授权码", "n": 1}
+{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0433-client-log.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0004-comparison-client-apis.md", "text": "版本对比与迁移", "n": 1}
+{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0433-client-log.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0212-jsapi-choose-media.md", "text": "chooseMedia", "n": 1}
+{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0433-client-log.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0419-jsapi-remove-cached-a-p-i-response.md", "text": "removeCachedAPIResponse", "n": 1}
+{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0433-client-log.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0420-jsapi-get-cached-a-p-i-response.md", "text": "getCachedAPIResponse", "n": 1}
+{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0433-client-log.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0421-jsapi-enable-a-p-i-response-cache.md", "text": "enableAPIResponseCache", "n": 1}
+{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0433-client-log.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0422-jsapi-get-page-terminate-info.md", "text": "getPageTerminateInfo", "n": 1}
+{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0433-client-log.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0425-jsapi-start-dinger-record.md", "text": "startDingerRecord", "n": 1}
+{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0433-client-log.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0426-jsapi-stop-dinger-record.md", "text": "stopDingerRecord", "n": 1}
+{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0433-client-log.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0427-jsapi-get-dinger-device-status.md", "text": "getDingerDeviceStatus", "n": 1}
+{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0468-scheme-of-mini-programs-1.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md", "text": "基础概念-CorpId", "n": 3}
+{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0751-logon-free-process.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0753-obtain-the-micro-application-exemption-authorization-code.md", "text": "获取微应用免登授权码", "n": 1}
 {"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0001-overview-of-event-subscription.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0003-configure-stream-push.md", "text": "配置 Stream 推送（推荐）", "n": 2}
 {"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0001-overview-of-event-subscription.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0039-event-bpms-instance-change.md", "text": "审批实例开始、结束、终止、删除", "n": 1}
 {"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0002-org-event-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0006-event-suite-ticket.md", "text": "套件票据", "n": 1}
@@ -8282,8 +8291,8 @@
 {"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0015-event-storage-dentry-update.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0696-subscribe-to-file-change-events.md", "text": "订阅文件变更事件", "n": 1}
 {"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0016-event-storage-dentry-delete.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0696-subscribe-to-file-change-events.md", "text": "订阅文件变更事件", "n": 1}
 {"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0017-event-storage-dentry-create.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0696-subscribe-to-file-change-events.md", "text": "订阅文件变更事件", "n": 1}
-{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0033-event-workflow-instance-change-broadcast.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0746-authorize-to-obtain-approved-instance-data-1.md", "text": "授权获取审批实例数据", "n": 2}
-{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0034-event-workflow-task-change-broadcast.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0746-authorize-to-obtain-approved-instance-data-1.md", "text": "授权获取审批实例数据", "n": 2}
+{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0033-event-workflow-instance-change-broadcast.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0747-authorize-to-obtain-approved-instance-data-1.md", "text": "授权获取审批实例数据", "n": 2}
+{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0034-event-workflow-task-change-broadcast.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0747-authorize-to-obtain-approved-instance-data-1.md", "text": "授权获取审批实例数据", "n": 2}
 {"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0039-event-bpms-instance-change.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0473-workflow-overview.md", "text": "审批 ID 说明", "n": 2}
 {"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0045-nqrbp8.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0253-query-details-about-an-event.md", "text": "查询单个日程详情", "n": 6}
 {"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0080-enterprise-modify-employee-event.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0056-query-user-details.md", "text": "查询用户详情", "n": 1}
@@ -8294,6 +8303,28 @@
 {"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0101-service-window-close-event.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/1278-self-built-service-window-application.md", "text": "自建服务窗应用", "n": 1}
 {"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0229-event-subscription-and-data-push.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0015-obtain-the-event-list-of-failed-push-messages.md", "text": "获取推送失败的事件列表", "n": 1}
 {"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0229-event-subscription-and-data-push.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0003-configure-stream-push.md", "text": "配置事件推送", "n": 1}
+{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0230-event-log.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0013-events-doc-export-completed.md", "text": "文档导出任务完成事件", "n": 1}
+{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0230-event-log.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0046-events-open-meeting-room-central-control.md", "text": "设备中控事件", "n": 1}
+{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0230-event-log.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0117-events-aiot-device-uplink-event.md", "text": "AIoT设备上行事件", "n": 1}
+{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0230-event-log.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0118-events-aone-assistant-summary-change.md", "text": "DingTalkA1小助理总结完成事件", "n": 1}
+{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0230-event-log.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0119-events-aone-assistant-status-change-1.md", "text": "DingTalkA1小助理状态变更", "n": 1}
+{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0230-event-log.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0120-events-dvi-device-owner-change.md", "text": "AI销售管理设备使用人变更事件", "n": 1}
+{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0230-event-log.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0121-events-dvi-custom-ai-analysis-completed.md", "text": "智能工牌自定义AI分析项完成事件", "n": 1}
+{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0230-event-log.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0122-events-badge-device-status-change.md", "text": "DingTalkB1设备状态变更事件", "n": 1}
+{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0230-event-log.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0164-events-agoal-indicator-add.md", "text": "Agoal新增指标事件", "n": 1}
+{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0230-event-log.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0165-events-agoal-indicator-modify.md", "text": "Agoal修改指标事件", "n": 1}
+{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0230-event-log.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0166-events-agoal-indicator-copy.md", "text": "Agoal复制指标事件", "n": 1}
+{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0230-event-log.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0167-events-agoal-indicator-remove.md", "text": "Agoal删除指标事件", "n": 1}
+{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0230-event-log.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0177-events-hrbrain-talent-pool-add.md", "text": "组织大脑人才池新增", "n": 1}
+{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0230-event-log.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0178-events-hrbrain-talent-pool-edit.md", "text": "组织大脑人才池编辑", "n": 1}
+{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0230-event-log.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0179-events-hrbrain-talent-pool-delete.md", "text": "组织大脑人才池删除", "n": 1}
+{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0230-event-log.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0180-events-hrbrain-talent-pool-staff-add.md", "text": "组织大脑人才池人员新增", "n": 1}
+{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0230-event-log.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0181-events-hrbrain-talent-pool-staff-delete.md", "text": "组织大脑人才池人员删除", "n": 1}
+{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0230-event-log.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0192-events-market-ai-agent-order.md", "text": "市场AI助理下单", "n": 1}
+{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0230-event-log.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0205-events-exclusive-delete-trusted-device.md", "text": "专属可信设备删除推送事件", "n": 1}
+{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0230-event-log.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0221-events-edu-card-update.md", "text": "打卡任务更新", "n": 1}
+{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0230-event-log.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0222-events-edu-card-end.md", "text": "打卡任务结束", "n": 1}
+{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0230-event-log.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0223-events-edu-card-delete.md", "text": "打卡任务删除", "n": 1}
 {"from": "docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0005-ai-bot-configuration-guide.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0075-robot-application-overview.md", "text": "机器人概述", "n": 1}
 {"from": "docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0005-ai-bot-configuration-guide.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0077-add-robot-to-group.md", "text": "添加机器人入群", "n": 1}
 {"from": "docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0007-mcp-square-introduction.md", "to": "docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0008-dingtalk-deap-platform-using-mcp-services.md", "text": "钉钉Deap平台使用MCP服务", "n": 1}
@@ -8330,12 +8361,12 @@
 {"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0005-design-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0473-workflow-overview.md", "text": "OA工作流概述", "n": 1}
 {"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0005-design-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0633-ding-drive-overview.md", "text": "钉盘", "n": 1}
 {"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0005-design-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0774-work-notification-templating-send-notification-interface.md", "text": "使用模板发送工作通知消息", "n": 1}
-{"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0005-design-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0727-candidates-and-departments.md", "text": "小程序选人与部门", "n": 1}
-{"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0005-design-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0734-ding-1.md", "text": "小程序发DING", "n": 1}
-{"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0005-design-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0735-call-dingtalk.md", "text": "拨打钉钉电话", "n": 1}
-{"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0005-design-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0772-select-department-and-person.md", "text": "微应用选择部门和人", "n": 1}
-{"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0005-design-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0809-call-dingtalk-h5.md", "text": "拨打钉钉电话", "n": 1}
-{"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0005-design-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0810-ding-2-0-hair-pin.md", "text": "微应用发DING", "n": 1}
+{"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0005-design-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0728-candidates-and-departments.md", "text": "小程序选人与部门", "n": 1}
+{"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0005-design-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0735-ding-1.md", "text": "小程序发DING", "n": 1}
+{"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0005-design-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0736-call-dingtalk.md", "text": "拨打钉钉电话", "n": 1}
+{"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0005-design-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0773-select-department-and-person.md", "text": "微应用选择部门和人", "n": 1}
+{"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0005-design-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0810-call-dingtalk-h5.md", "text": "拨打钉钉电话", "n": 1}
+{"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0005-design-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0811-ding-2-0-hair-pin.md", "text": "微应用发DING", "n": 1}
 {"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0006-technical-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0003-add-api-permission.md", "text": "添加接口调用权限", "n": 1}
 {"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0006-technical-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0016-sso-overview.md", "text": "免登概述", "n": 1}
 {"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0006-technical-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0056-query-user-details.md", "text": "通讯录基础信息", "n": 1}
@@ -8345,12 +8376,12 @@
 {"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0006-technical-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0473-workflow-overview.md", "text": "OA工作流概述", "n": 1}
 {"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0006-technical-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0633-ding-drive-overview.md", "text": "钉盘", "n": 1}
 {"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0006-technical-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0774-work-notification-templating-send-notification-interface.md", "text": "使用模板发送工作通知消息", "n": 1}
-{"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0006-technical-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0727-candidates-and-departments.md", "text": "小程序选人与部门", "n": 1}
-{"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0006-technical-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0734-ding-1.md", "text": "小程序发DING", "n": 1}
-{"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0006-technical-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0735-call-dingtalk.md", "text": "拨打钉钉电话", "n": 1}
-{"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0006-technical-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0772-select-department-and-person.md", "text": "微应用选择部门和人", "n": 1}
-{"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0006-technical-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0809-call-dingtalk-h5.md", "text": "拨打钉钉电话", "n": 1}
-{"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0006-technical-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0810-ding-2-0-hair-pin.md", "text": "微应用发DING", "n": 1}
+{"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0006-technical-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0728-candidates-and-departments.md", "text": "小程序选人与部门", "n": 1}
+{"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0006-technical-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0735-ding-1.md", "text": "小程序发DING", "n": 1}
+{"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0006-technical-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0736-call-dingtalk.md", "text": "拨打钉钉电话", "n": 1}
+{"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0006-technical-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0773-select-department-and-person.md", "text": "微应用选择部门和人", "n": 1}
+{"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0006-technical-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0810-call-dingtalk-h5.md", "text": "拨打钉钉电话", "n": 1}
+{"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0006-technical-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0811-ding-2-0-hair-pin.md", "text": "微应用发DING", "n": 1}
 {"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0006-technical-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0045-mr22h2.md", "text": "运营支持", "n": 1}
 {"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0006-technical-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0046-eupgs5.md", "text": "需求建议", "n": 1}
 {"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0014-personalapp-commercial-release.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0005-jsapi-get-auth-code.md", "text": "免登授权码", "n": 1}
@@ -8865,25 +8896,25 @@
 {"from": "docs/05-互动卡片/04-zGou6m9pee-卡片规范设计/0003-list-of-dingtalk-expressions.md", "to": "docs/05-互动卡片/03-MhNX42mFB1-模板搭建器/0005-variable-type.md", "text": "普通变量", "n": 1}
 {"from": "docs/05-互动卡片/04-zGou6m9pee-卡片规范设计/0004-configure-widescreen-cards.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0783-create-and-deliver-cards.md", "text": "创建并投放卡片", "n": 1}
 {"from": "docs/06-专属版客户端插件/01-XYCsE5MGJh-功能介绍/0002-creating-a-client-plug-in-1.md", "to": "docs/06-专属版客户端插件/01-XYCsE5MGJh-功能介绍/0003-upload-and-publish-plug-ins-1.md", "text": "上传并发布插件", "n": 1}
-{"from": "docs/06-专属版客户端插件/01-XYCsE5MGJh-功能介绍/0002-creating-a-client-plug-in-1.md", "to": "docs/06-专属版客户端插件/02-sakFIe9HDV-插件开发/0001-process-overview.md", "text": "开发 Android 插件", "n": 1}
-{"from": "docs/06-专属版客户端插件/01-XYCsE5MGJh-功能介绍/0002-creating-a-client-plug-in-1.md", "to": "docs/06-专属版客户端插件/02-sakFIe9HDV-插件开发/0002-an-overview-of-the-exclusive-client-plugin-process.md", "text": "开发 iOS 插件", "n": 1}
-{"from": "docs/06-专属版客户端插件/01-XYCsE5MGJh-功能介绍/0002-creating-a-client-plug-in-1.md", "to": "docs/06-专属版客户端插件/02-sakFIe9HDV-插件开发/0003-create-plug-in-project.md", "text": "创建插件工程", "n": 1}
-{"from": "docs/06-专属版客户端插件/01-XYCsE5MGJh-功能介绍/0002-creating-a-client-plug-in-1.md", "to": "docs/06-专属版客户端插件/02-sakFIe9HDV-插件开发/0004-create-a-windows-lug-in-project.md", "text": "开发 Windows 插件", "n": 1}
+{"from": "docs/06-专属版客户端插件/01-XYCsE5MGJh-功能介绍/0002-creating-a-client-plug-in-1.md", "to": "docs/06-专属版客户端插件/02-sakFIe9HDV-Android-插件/0001-process-overview.md", "text": "开发 Android 插件", "n": 1}
+{"from": "docs/06-专属版客户端插件/01-XYCsE5MGJh-功能介绍/0002-creating-a-client-plug-in-1.md", "to": "docs/06-专属版客户端插件/03-gh7c55BOlV-iOS-插件/0001-an-overview-of-the-exclusive-client-plugin-process.md", "text": "开发 iOS 插件", "n": 1}
+{"from": "docs/06-专属版客户端插件/01-XYCsE5MGJh-功能介绍/0002-creating-a-client-plug-in-1.md", "to": "docs/06-专属版客户端插件/04-ooCjrSfXpn-HarmonyOS-插件/0001-create-plug-in-project.md", "text": "创建插件工程", "n": 1}
+{"from": "docs/06-专属版客户端插件/01-XYCsE5MGJh-功能介绍/0002-creating-a-client-plug-in-1.md", "to": "docs/06-专属版客户端插件/05-9GcTDwdGCc-Windows-插件/0001-create-a-windows-lug-in-project.md", "text": "开发 Windows 插件", "n": 1}
 {"from": "docs/06-专属版客户端插件/01-XYCsE5MGJh-功能介绍/0003-upload-and-publish-plug-ins-1.md", "to": "docs/06-专属版客户端插件/01-XYCsE5MGJh-功能介绍/0002-creating-a-client-plug-in-1.md", "text": "创建客户端插件", "n": 1}
 {"from": "docs/06-专属版客户端插件/01-XYCsE5MGJh-功能介绍/0003-upload-and-publish-plug-ins-1.md", "to": "docs/06-专属版客户端插件/01-XYCsE5MGJh-功能介绍/0004-building-integration-plug-ins-1.md", "text": "构建集成插件", "n": 1}
 {"from": "docs/06-专属版客户端插件/01-XYCsE5MGJh-功能介绍/0004-building-integration-plug-ins-1.md", "to": "docs/06-专属版客户端插件/01-XYCsE5MGJh-功能介绍/0003-upload-and-publish-plug-ins-1.md", "text": "上传并发布插件", "n": 1}
-{"from": "docs/06-专属版客户端插件/02-sakFIe9HDV-插件开发/0001-process-overview.md", "to": "docs/06-专属版客户端插件/02-sakFIe9HDV-插件开发/0006-client-specific-configuration-plugin-dependencies.md", "text": "配置插件依赖项", "n": 1}
-{"from": "docs/06-专属版客户端插件/02-sakFIe9HDV-插件开发/0001-process-overview.md", "to": "docs/06-专属版客户端插件/02-sakFIe9HDV-插件开发/0041-development-building-faq.md", "text": "常见问题", "n": 1}
-{"from": "docs/06-专属版客户端插件/02-sakFIe9HDV-插件开发/0002-an-overview-of-the-exclusive-client-plugin-process.md", "to": "docs/06-专属版客户端插件/01-XYCsE5MGJh-功能介绍/0002-creating-a-client-plug-in-1.md", "text": "创建客户端插件", "n": 1}
-{"from": "docs/06-专属版客户端插件/02-sakFIe9HDV-插件开发/0002-an-overview-of-the-exclusive-client-plugin-process.md", "to": "docs/06-专属版客户端插件/02-sakFIe9HDV-插件开发/0041-development-building-faq.md", "text": "开发 IOS 插件", "n": 1}
-{"from": "docs/06-专属版客户端插件/02-sakFIe9HDV-插件开发/0003-create-plug-in-project.md", "to": "docs/06-专属版客户端插件/02-sakFIe9HDV-插件开发/0018-new-page-and-route.md", "text": "新建页面和路由", "n": 1}
-{"from": "docs/06-专属版客户端插件/02-sakFIe9HDV-插件开发/0003-create-plug-in-project.md", "to": "docs/06-专属版客户端插件/02-sakFIe9HDV-插件开发/0024-set-item-extension-point-harmonyos.md", "text": "设置项扩展点（HarmonyOS）", "n": 1}
-{"from": "docs/06-专属版客户端插件/02-sakFIe9HDV-插件开发/0038-obtain-authorization-code.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0006-jsapi-request-auth-code.md", "text": "requestAuthCode", "n": 2}
-{"from": "docs/06-专属版客户端插件/02-sakFIe9HDV-插件开发/0040-vpn-network-connection-android-1.md", "to": "docs/06-专属版客户端插件/02-sakFIe9HDV-插件开发/0007-define-extension-jsapi.md", "text": "开发自定义JSAPI", "n": 1}
-{"from": "docs/06-专属版客户端插件/02-sakFIe9HDV-插件开发/0040-vpn-network-connection-android-1.md", "to": "docs/06-专属版客户端插件/02-sakFIe9HDV-插件开发/0023-set-item-extension-point-android-1.md", "text": "设置项扩展点（Android）", "n": 3}
-{"from": "docs/06-专属版客户端插件/02-sakFIe9HDV-插件开发/0040-vpn-network-connection-android-1.md", "to": "docs/06-专属版客户端插件/02-sakFIe9HDV-插件开发/0026-login-process-extension-android-1.md", "text": "登录流程扩展（Android）", "n": 2}
-{"from": "docs/06-专属版客户端插件/02-sakFIe9HDV-插件开发/0040-vpn-network-connection-android-1.md", "to": "docs/06-专属版客户端插件/02-sakFIe9HDV-插件开发/0027-home-lifecycle-extension-android-1.md", "text": "首页生命周期扩展（Android）", "n": 1}
-{"from": "docs/06-专属版客户端插件/02-sakFIe9HDV-插件开发/0040-vpn-network-connection-android-1.md", "to": "docs/06-专属版客户端插件/02-sakFIe9HDV-插件开发/0035-get-employee-information.md", "text": "获取员工信息", "n": 3}
+{"from": "docs/06-专属版客户端插件/01-XYCsE5MGJh-功能介绍/0010-obtain-authorization-code.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0006-jsapi-request-auth-code.md", "text": "requestAuthCode", "n": 2}
+{"from": "docs/06-专属版客户端插件/02-sakFIe9HDV-Android-插件/0001-process-overview.md", "to": "docs/06-专属版客户端插件/02-sakFIe9HDV-Android-插件/0003-client-specific-configuration-plugin-dependencies.md", "text": "配置插件依赖项", "n": 1}
+{"from": "docs/06-专属版客户端插件/02-sakFIe9HDV-Android-插件/0001-process-overview.md", "to": "docs/06-专属版客户端插件/02-sakFIe9HDV-Android-插件/0016-development-building-faq.md", "text": "常见问题", "n": 1}
+{"from": "docs/06-专属版客户端插件/02-sakFIe9HDV-Android-插件/0015-vpn-network-connection-android-1.md", "to": "docs/06-专属版客户端插件/01-XYCsE5MGJh-功能介绍/0007-get-employee-information.md", "text": "获取员工信息", "n": 3}
+{"from": "docs/06-专属版客户端插件/02-sakFIe9HDV-Android-插件/0015-vpn-network-connection-android-1.md", "to": "docs/06-专属版客户端插件/02-sakFIe9HDV-Android-插件/0004-define-extension-jsapi.md", "text": "开发自定义JSAPI", "n": 1}
+{"from": "docs/06-专属版客户端插件/02-sakFIe9HDV-Android-插件/0015-vpn-network-connection-android-1.md", "to": "docs/06-专属版客户端插件/02-sakFIe9HDV-Android-插件/0010-set-item-extension-point-android-1.md", "text": "设置项扩展点（Android）", "n": 3}
+{"from": "docs/06-专属版客户端插件/02-sakFIe9HDV-Android-插件/0015-vpn-network-connection-android-1.md", "to": "docs/06-专属版客户端插件/02-sakFIe9HDV-Android-插件/0011-login-process-extension-android-1.md", "text": "登录流程扩展（Android）", "n": 2}
+{"from": "docs/06-专属版客户端插件/02-sakFIe9HDV-Android-插件/0015-vpn-network-connection-android-1.md", "to": "docs/06-专属版客户端插件/02-sakFIe9HDV-Android-插件/0012-home-lifecycle-extension-android-1.md", "text": "首页生命周期扩展（Android）", "n": 1}
+{"from": "docs/06-专属版客户端插件/03-gh7c55BOlV-iOS-插件/0001-an-overview-of-the-exclusive-client-plugin-process.md", "to": "docs/06-专属版客户端插件/01-XYCsE5MGJh-功能介绍/0002-creating-a-client-plug-in-1.md", "text": "创建客户端插件", "n": 1}
+{"from": "docs/06-专属版客户端插件/03-gh7c55BOlV-iOS-插件/0001-an-overview-of-the-exclusive-client-plugin-process.md", "to": "docs/06-专属版客户端插件/02-sakFIe9HDV-Android-插件/0016-development-building-faq.md", "text": "开发 IOS 插件", "n": 1}
+{"from": "docs/06-专属版客户端插件/04-ooCjrSfXpn-HarmonyOS-插件/0001-create-plug-in-project.md", "to": "docs/06-专属版客户端插件/04-ooCjrSfXpn-HarmonyOS-插件/0004-new-page-and-route.md", "text": "新建页面和路由", "n": 1}
+{"from": "docs/06-专属版客户端插件/04-ooCjrSfXpn-HarmonyOS-插件/0001-create-plug-in-project.md", "to": "docs/06-专属版客户端插件/04-ooCjrSfXpn-HarmonyOS-插件/0008-set-item-extension-point-harmonyos.md", "text": "设置项扩展点（HarmonyOS）", "n": 1}
 {"from": "docs/07-数据资产/01-fIz0pQ6X4y-平台介绍/0006-data-asset-interface-adjustment-description-1.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/1492-queries-the-playback-data-of-a-live-stream.md", "text": "查询直播的观看数据", "n": 1}
 {"from": "docs/07-数据资产/01-fIz0pQ6X4y-平台介绍/0006-data-asset-interface-adjustment-description-1.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/1549-query-log-statistics.md", "text": "获取日志统计数据", "n": 1}
 {"from": "docs/07-数据资产/01-fIz0pQ6X4y-平台介绍/0006-data-asset-interface-adjustment-description-1.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/1752-queries-the-number-of-dingtalk-movement-steps-of-multiple-users.md", "text": "批量获取钉钉运动数据", "n": 1}

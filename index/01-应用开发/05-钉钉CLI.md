@@ -7,7 +7,7 @@
 - [开发者命令行 · CLI 应用管理指南](../../docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0003-dev-cli-app-management-guide.md) · 新手入门 › 命令速查 · 2026-06-26
 - [在千问办公中接入钉钉](../../docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0004-qwenwork-dingtalk-integration.md) · 新手入门 › 快速尝试 · 2026-08-14
 - [5分钟配置：给自己配个嘴替AI 机器人](../../docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0005-ai-bot-configuration-guide.md) · 新手入门 › 快速尝试 · 2026-08-07
-- [钉钉 CLI 事件订阅 — 给你的 Agent 装上钉钉的"耳朵"](../../docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0006-dingtalk-cli-event-subscription.md) · 进阶实战 › 事件驱动开发 · 2026-07-24
+- [钉钉 CLI 事件订阅 — 给你的 Agent 装上钉钉的"耳朵"](../../docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0006-dingtalk-cli-event-subscription.md) · 进阶实战 › 事件驱动开发 · 2026-08-17
 - [概述](../../docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0007-mcp-square-introduction.md) · 进阶实战 › MCP 服务接入 · 2026-07-22
 - [钉钉Deap平台使用MCP服务](../../docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0008-dingtalk-deap-platform-using-mcp-services.md) · 进阶实战 › MCP 服务接入 · 2026-05-19
 - [阿里云百炼使用钉钉MCP服务](../../docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0009-alibaba-cloud-uses-dingtalk-mcp-services.md) · 进阶实战 › MCP 服务接入 · 2026-05-19
@@ -26,4 +26,4 @@
 - [阿里云轻量服务器部署](../../docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0022-deployment-of-alibaba-cloud-light-server.md) · 高级集成 › OpenClaw 常用部署方式 · 2026-07-14
 - [阿里云ECS服务器部署](../../docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0023-deployment-alibaba-cloud-ecs-server.md) · 高级集成 › OpenClaw 常用部署方式 · 2026-07-14
 - [常见问题](../../docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0024-dws-cli-frequently-asked-questions.md) · 2026-08-12
-- [更新日志](../../docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0025-dws-cli-log.md) · 2026-08-10
+- [更新日志](../../docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0025-dws-cli-log.md) · 2026-08-17

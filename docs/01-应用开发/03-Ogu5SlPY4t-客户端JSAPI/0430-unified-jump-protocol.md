@@ -22,7 +22,7 @@ updated_at: "2026-07-22 16:25:13"
 
   答：链接在PC端侧边栏和在工作台中打开方式如下。
 
-  - **在PC端侧边栏打开**：加上`pc_slide=true`后缀，如`dingtalk://dingtalkclient/page/link?url=https%3A%2F%2Fwww.dingtalk.com&pc_slide=true`。此外，在H5微应用中，也可以通过[打开侧边面板](0872-open-side-panel.md)来实现。
+  - **在PC端侧边栏打开**：加上`pc_slide=true`后缀，如`dingtalk://dingtalkclient/page/link?url=https%3A%2F%2Fwww.dingtalk.com&pc_slide=true`。此外，在H5微应用中，也可以通过[打开侧边面板](0873-open-side-panel.md)来实现。
   - **在工作台中打开**：加上`%26ddtab%3Dtrue`后缀，如`dingtalk://dingtalkclient/page/link?url=https%3A%2F%2Fwww.dingtalk.com%26ddtab%3Dtrue`。
   > **[!IMPORTANT]**
   >

@@ -25,11 +25,11 @@ updated_at: "2022-01-19 19:29:22"
 
 ## 功能描述
 
-审批广播事件场景，归属于某个ISV或官方OA审批应用的审批单模板，有可能也需要授权给另外的ISV做系统集成，在通过[授权获取审批实例数据](../03-Ogu5SlPY4t-客户端JSAPI/0746-authorize-to-obtain-approved-instance-data-1.md)获取企业授权后，针对已授权的审批模板，触发该审批单相应实例、任务状态变更后，会给已授权的ISV推送回调。
+审批广播事件场景，归属于某个ISV或官方OA审批应用的审批单模板，有可能也需要授权给另外的ISV做系统集成，在通过[授权获取审批实例数据](../03-Ogu5SlPY4t-客户端JSAPI/0747-authorize-to-obtain-approved-instance-data-1.md)获取企业授权后，针对已授权的审批模板，触发该审批单相应实例、任务状态变更后，会给已授权的ISV推送回调。
 
 ### 审批广播事件场景
 
-归属于某个ISV或官方OA审批应用的审批单模板，在通过[授权获取审批实例数据](../03-Ogu5SlPY4t-客户端JSAPI/0746-authorize-to-obtain-approved-instance-data-1.md)获取企业授权后，会给所有已授权的ISV推送回调。
+归属于某个ISV或官方OA审批应用的审批单模板，在通过[授权获取审批实例数据](../03-Ogu5SlPY4t-客户端JSAPI/0747-authorize-to-obtain-approved-instance-data-1.md)获取企业授权后，会给所有已授权的ISV推送回调。
 ![图片](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2661366761/p554629.png)
 
 该事件为审批任务状态变更时推送给开发者的内容。

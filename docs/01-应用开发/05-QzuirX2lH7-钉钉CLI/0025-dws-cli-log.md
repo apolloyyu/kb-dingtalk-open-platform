@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "钉钉CLI"
 breadcrumb: "更新日志"
 doc_id: "JqaPUpyWXl"
-updated_at: "2026-08-10 16:30:16"
+updated_at: "2026-08-17 17:38:14"
 ---
 
 > Source: https://open.dingtalk.com/document/development/dws-cli-log
 > Path: 应用开发 / 钉钉CLI / 更新日志
-> Updated: 2026-08-10 16:30:16
+> Updated: 2026-08-17 17:38:14
 
 # 更新日志
 
@@ -37,9 +37,164 @@ dws upgrade --list
 
 - 您可前往 [GitHub 仓库](https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli)查看并下载最新代码。
 - 如有宝贵建议或想法，欢迎提交至[许愿墙](https://docs.dingtalk.com/notable/share/form/v01eLbnj1bw1ELb0laN_dv19yqvsgs3oebp3pcjys_1qX0QQ0?source=link)，我们将尽快安排专员与您联系沟通。
-- 钉钉 CLI 每周发布更新，开发者可扫描下方二维码加入"**dwa 开源沟通群**"获取最新动态。
+- 钉钉 CLI 每周发布更新，开发者可扫描下方二维码加入"**dws 开源沟通群**"获取最新动态。
 
   ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/6160536871/p1094200.png)
+
+## **2026-08-14**
+
+### **更新说明**
+
+本周 CLI 聚焦 **AI 听记**、**AI 表格**与**在线电子表格**、**IM** 与**机器人消息** 三大方向，正式发布稳定版 [v1.0.58](https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli/releases/tag/v1.0.58)。
+
+建议所有开发者通过 `dws upgrade` 升级到最新版。
+
+```
+# 查看产品与工具数量；定位命令后再查询 compact leaf
+dws schema
+dws schema --cli-path "chat +messages-send" --compact
+```
+
+### **新增功能**
+
+#### AI 听记
+
+- **音频开放能力补齐** ：27个公开 Shortcut 覆盖音频上传、下载、导出、录音、分析、分享与恢复。
+
+  > **[!NOTE]**
+  >
+  > 均保留显式确认。
+
+  - 示例：`dws minutes +upload-and-analyze --file ./meeting.mp3 --title "项目周会" --artifacts transcript,summary`
+  - 相关命令：`dws minutes +detail`、`dws minutes +export-pack`、`dws minutes +record-wrap-up`、`dws minutes +share`
+
+#### AI 表格与在线电子表格
+
+- **工作流支持立即执行与历史追踪** ：支持定时或记录触发自动工作流，按状态/时间/分页查询历史；`executionId` 关联历史 `instanceId`。
+
+  - 相关命令：`dws aitable workflow run`、`dws aitable workflow history`
+  - 示例：`dws aitable workflow history --base-id BASE_ID --workflow-id WORKFLOW_ID --status failed --page 0 --size 50`
+- **Agent 发现能力增强** ：92个 Shortcut 进入 Runtime Schema，涵盖 Base/表/记录/附件/视图/仪表盘/工作流；
+
+  > **[!NOTE]**
+  >
+  > 写操作需显式确认并核验结果。
+
+  - 入口：`dws aitable --help`、`dws schema aitable --compact`
+- **在线电子表格一键创建写入样式** ：支持单表二维数据、多工作表 typed table 及可选样式；输入创建前校验、写入后回读核验，防止空文档或数据丢失。
+
+  - 示例：`dws sheet create-with-data --name "名单" --values '[["姓名","分数"],["张三",90]]'`
+- **同步导出 CSV** ：支持指定工作表/A1范围/取值模式，输出至 stdout 或原子落盘；数据被截断时默认中止，需 `--allow-truncated` 才接受不完整结果。
+
+  - 示例：`dws sheet export-csv --node NODE_ID --sheet-id SHEET_ID --range A1:Z1000 --value-render-option raw_value --output ./data.csv`
+- **样式与公式操作更完整** ：支持行列像素/尺寸/行高自适应、公式替换、斜体/下划线/删除线/字体族/四边边框；批量样式可在一次原子请求中处理多个区域。
+
+  - 相关参数：`--size-type pixel|standard|auto`、`--match-formula`、`--font-style`、`--font-line`、`--font-family`、`--border-styles-json`
+
+#### IM 与机器人消息能力增强
+
+- **机器人支持图片 URL 与本地文件消息** ：`send-by-bot` 按消息类型发送公网图片或上传本地文件，未指定类型默认发送 Markdown。
+
+  - 图片：`dws chat message send-by-bot --robot-code ROBOT_CODE --group CID --msg-type image --image-url https://example.com/image.png`
+  - 文件：`dws chat message send-by-bot --robot-code ROBOT_CODE --group CID --msg-type file --file-path ./report.pdf`
+- **会话快捷栏管理** ：支持快捷栏查询/添加/隐藏/排序及自定义入口管理。
+
+  > **[!NOTE]**
+  >
+  > 删除自定义入口需显式确认。
+
+  - 相关命令：`dws chat toolbar list|add|hide|sort|create-custom|update-custom|remove-custom`
+- **流式卡片支持 @成员与 @所有人** ：群卡片支持传入 `--at-open-dingtalk-ids` 或 `--at-all`。
+
+  - 示例：`dws chat message send-card --group CID --at-all`
+  - 提示：原生 `send-card` 仅创建卡片，需用 `update-card --flow-status 3` 完成；自动创建+更新请用 `dws chat +messages-send-card`。
+- **Chat 自动翻页支持结果上限与请求间隔** ：核心消息/会话/群组/收藏列表 Shortcut 支持 `--page-all` 下的 `--max-items` 与可取消的  `--page-delay`，返回续页及截断信息。
+
+  - 示例：`dws chat +chat-messages --group CID --page-all --max-items 300 --page-delay 0`
+- **更多 Chat 命令可被 Agent 直接发现** ：30 个 typed Chat 命令已进入 Runtime Schema 与 Agent 目录，敏感写操作含确认要求。
+
+  - 入口：`dws schema chat --compact`
+
+#### 审批事件能力增强
+
+- **审批事件能力增强** ：支持审批任务创建/完成/转交及实例发起/终止/完成事件，输出类型化结果。
+
+  - 查看事件：`dws event list --category oa --format json`
+  - 示例：`dws event consume user_oa_approval_task_created user_oa_approval_instance_finished --flatten`
+
+#### 文档与文件协作增强
+
+- **钉盘普通预览文件支持评论** ：支持查询/创建全文纯文本评论。
+
+  > **[!NOTE]**
+  >
+  > 仅适用于普通预览文件，与钉钉文档评论入口独立。
+
+  - 相关命令：`dws drive comment list`、`dws drive comment create`
+- **导出与下载提供稳定机器回执** ：JSON 模式下，文档导出/文件下载/历史版本下载的进度写入 stderr，成功时 stdout 仅输出含路径与字节数的 JSON。
+
+  - 相关命令：`dws doc export`、`dws drive download`、`dws drive download --version`
+
+### **体验优化**
+
+#### Skill 布局与调用成功率
+
+- **默认 Skill 布局由 mono 切换为 multi** ：新装/`dws skill setup`/`dws upgrade` 默认启用按产品拆分的 Skill，mono 安装升级时自动迁移，调用成功率提升约 25%；旧布局任可显式选择 legacy mono。
+
+  - 多 Skill：`dws skill setup --mode multi --target codex`
+  - 旧布局：`dws skill setup --mode mono --target codex`
+
+#### Chat、文档与 Agent 交互
+
+- **Chat 读取结果统一** ：typed 命令与 Shortcut 统一提供顶层 `messages`，稳定输出 `messageId` 与 `text`，保留原有响应字段。
+- **发送后 ID 链路更清晰** ：发送结果中的 `openTaskId` 用于 `query-send-status`，查询得 `openMessageId` 和 `openConversationId` 用于编辑/撤回。
+
+  > **[!NOTE]**
+  >
+  > 勿将任务 ID 当作消息 ID。
+
+  - 流程：`send → query-send-status → edit/recall`
+- **钉钉文档导入增加原文件兜底** ：html/pdf/zip/无扩展名等非白名单文件不报错而上传原文件。
+
+  > **[!NOTE]**
+  >
+  > 调用方可通过 `fallback: "upload"` 和 `converted: false` 判断结果。
+- **IM 自然目标与历史读取对齐** ：Chat Shortcut 执行前唯一解析人员/群聊，历史查询涵盖时间范围/排序/全量翻页/续页账本/安全导出和话题回复分页。
+- **Wiki 动态输出更简洁** ：`wiki feed list` 统一时间格式、裁剪冗余字段；
+
+  > **[!NOTE]**
+  >
+  > `--limit` 默认 10、最大 20。
+- **Agent 可透传版本与扩展上下文** ：普通非插件 MCP 请求支持校验后的 `DWS_AGENT_VER` 和敏感 JSON 对象 `DWS_AGENT_EXT`；两者不发往 A2A/OAuth/Discovery或第三方插件。
+
+#### 兼容性说明（ **行为变更** ）
+
+- **在线电子表格 CSV 公式语义显式化**：`dws sheet csv-put` 中 `=` 开头字段作为公式写入；
+
+  > **[!NOTE]**
+  >
+  > 字面量文本请在字段前加单引号。
+- **行列长度改为严格正整数校验** ：`sheet insert-dimension`/`delete-dimension`/`update-dimension` 拒绝 `2x`/`3foo` 等畸形值当作数字执行；
+
+  > **[!NOTE]**
+  >
+  > 脚本参数须为完整正整数。
+- **批量样式改为原子提交** ：`sheet range batch-set-style` 整批原子回滚，上限 100 区域/20万单元格，`--ranges` 须为 JSON 数组且各区域带工作表前缀。
+- **CSV 导出使用独立命令**：`dws sheet export` 仅导出 xlsx；CSV 请改用 `dws sheet export-csv`，勿传无效参数 `--export-format csv`。
+- **AI 听记权限参数类型更准确**：`dws minutes permission apply --policy` 在 Help/Schema 中类型由字符串改为整数，合法值仍为 `2`/`3`/`4`。
+
+### **问题优化**
+
+- **IM 翻页不再把不完整结果当成功** ：消息/话题回复/@我的消息/我的群等 Shortcut 保留部分失败，拒绝缺失/停滞游标，跨页去重。
+
+  - 相关命令：`dws chat +chat-messages`、`dws chat +search-msg`、`dws chat +thread-replies`、`dws chat +at-me`
+- **IM 搜索与流式卡片写入更安全** ：会话目标不可核验时中止搜索；卡片更新需业务成功凭证，不以传输成功为据。
+- **流式卡片避免重复更新** ：服务端返回 `success: true` 视为有效写入回执，仍拒绝显式失败/冲突/`bizId` 漂移。
+- **在线电子表格公式校验恢复可用** ：`dws sheet formula-verify` 调用正确远端工具，修复网关工具名不匹配导致的失败。
+- **个人事件正确继承根级 Token** ：`event consume`/`status`/`stop`/`+listen-im` 继承根级 `--token`；凭证经 owner-only 内存态 IPC 传递，不落盘至参数/环境/配置/日志/状态文件。
+- **文档 Shortcut 写入结果更可靠** ：写入/回读/分页/模板版本/导出/媒体/本地文件流程拒绝模糊成功结果，降低 Agent 误判风险。
+- **文本输入限制一致** ：字面量/stdin/`@file` 统一字节上限，文件打开后仍限读，防止路径替换/文件增长绕过限制。
+- **Agent 路径与参数恢复失败时停止** ：CLI 命令/参数无法对齐时中止猜测重试，降低错误写操作风险。
 
 ## **2026-08-07**
 

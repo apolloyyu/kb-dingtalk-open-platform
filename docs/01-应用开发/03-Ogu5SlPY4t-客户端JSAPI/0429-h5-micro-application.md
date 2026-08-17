@@ -20,17 +20,17 @@ updated_at: "2026-07-22 16:25:13"
 
 - **H5微应用是否支持去掉钉钉自带的导航栏？**
 
-  答：若需去掉钉钉自带的导航栏，可以考虑通过[微应用页面全屏展示](0863-full-screen-display-of-microapplication-page.md)来实现。
+  答：若需去掉钉钉自带的导航栏，可以考虑通过[微应用页面全屏展示](0864-full-screen-display-of-microapplication-page.md)来实现。
 - **获取微应用免登授权码报错{ errorCode: 9, errorMessage: "对应企业没有 xxx 域名微应用" }**
 
-  答：调用[获取微应用免登授权码](0752-obtain-the-micro-application-exemption-authorization-code.md)接口出现上述报错时，其可能原因包括但不限于以下几点：
+  答：调用[获取微应用免登授权码](0753-obtain-the-micro-application-exemption-authorization-code.md)接口出现上述报错时，其可能原因包括但不限于以下几点：
 
   - corpid入参不正确
   - H5微应用中应用首页地址跳转到非本应用服务器页面(跳转到重定向页面)也会报上述错误异常
   - 根据入参的corpid值未检测出该企业下H5微应用-开发管理-应用首页地址中有上述错误信息中的域名(需确保微应用中应用首页地址中域名有错误信息中的提示域名则正常)。
 - 导航栏背景色设置色差问题
 
-  答：Android端[设置导航栏颜色](0782-set-the-navigation-bar-color.md)出现背景色差是策略设计如此，起到颜色过渡的效果。![](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/W4j6OJrPZyAeO3p8/img/88475552-de89-4a58-a01c-877ce03a41cb.png)
+  答：Android端[设置导航栏颜色](0783-set-the-navigation-bar-color.md)出现背景色差是策略设计如此，起到颜色过渡的效果。![](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/W4j6OJrPZyAeO3p8/img/88475552-de89-4a58-a01c-877ce03a41cb.png)
 - 钉钉iOS H5微应用缓存不更新
 
   答：更新钉钉H5微应用出现未能更新完成的可能原因包括但不限于以下情况：
@@ -50,12 +50,12 @@ updated_at: "2026-07-22 16:25:13"
   例如：需要在钉钉移动端Android端、iOS端打开，或者钉钉PC端 Windows端、mac端打开等，在浏览器里打开会报错。
 - **调用biz.util.share分享的页面，安卓与iOS表示不一致**
 
-  答：调用[分享](0778-share-1.md)出现上述原因可能如下:
+  答：调用[分享](0779-share-1.md)出现上述原因可能如下:
 
   由于设计原因，https链接在iOS上分享样式不是卡片样式，如果URL使用https协议iOS端不会解析成卡片样式 使其安卓与iOS页面不一致。
 - **H5微应用调用预览钉盘文件，审批附件图片提示：图片已被删除**
 
-  答：调用[预览钉盘文件](0821-preview-nail-plate-file.md)出现上述错误的原因可能如下:
+  答：调用[预览钉盘文件](0822-preview-nail-plate-file.md)出现上述错误的原因可能如下:
 
   查看上传的审批附件时:excel、word文件格式不需要授权即可预览，但图片格式需[授权预览审批附件](https://open.dingtalk.com/document/orgapp/preview-authorization-attachment-pop)才可以正常预览。
 - **调用H5微应用接口报错{errorCode: "7",errorMessage: "API not authed"}**

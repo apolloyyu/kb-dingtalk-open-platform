@@ -309,3 +309,8 @@
 ## 后续动作
 - 结构层（index/ graph/ meta/kb_manifest）：--apply 已全量重建；未 --apply 则本报告仅供预览。
 - 认知层（index/TOPICS.md）：对照上面清单，凡命中 TOPICS 引用的文档（可用 `rg <path> index/TOPICS.md` 与 `graph/links.jsonl` 反查），由 LLM 复核该主题条目是否要改写。
+
+## 认知层复核记录(2026-08-17)
+- 反查命中 1 条:`org-event-overview`(事件订阅总览)被 TOPICS「事件订阅」条目引用。
+  复核结论:本次更新为新增 DingTalkB1 设备事件导致的表格行号重排,TOPICS 引用路径与
+  描述均仍准确,条目无需改写。(修正上一提交信息中"反查无命中"的表述)

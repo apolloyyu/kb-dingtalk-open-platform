@@ -9021,9 +9021,7 @@
 {"from": "docs/08-工作台/02-Qzb8Lpee2t-使用教程/0005-official-components-1.md", "to": "docs/08-工作台/02-Qzb8Lpee2t-使用教程/0028-qbmg52.md", "text": "官方组件数据格式", "n": 1}
 {"from": "docs/08-工作台/02-Qzb8Lpee2t-使用教程/0007-self-built-workbench-card-integrated-connector.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md", "text": "基础概念-UserId", "n": 2}
 {"from": "docs/08-工作台/02-Qzb8Lpee2t-使用教程/0008-dashboard-overview-workbench.md", "to": "docs/08-工作台/02-Qzb8Lpee2t-使用教程/0028-qbmg52.md", "text": "官方组件数据格式", "n": 1}
-{"from": "docs/08-工作台/02-Qzb8Lpee2t-使用教程/0009-step-1-environmental-preparation-1.md", "to": "docs/01-应用开发/06-JDICnQyZLF-开发工具/0001-miniapp-tool.md", "text": "小程序开发工具", "n": 1}
 {"from": "docs/08-工作台/02-Qzb8Lpee2t-使用教程/0011-step-3-develop-components.md", "to": "docs/08-工作台/02-Qzb8Lpee2t-使用教程/0008-dashboard-overview-workbench.md", "text": "什么是数据源", "n": 1}
-{"from": "docs/08-工作台/02-Qzb8Lpee2t-使用教程/0014-dashboard-create-data-source.md", "to": "docs/08-工作台/02-Qzb8Lpee2t-使用教程/0015-send-a-request-within-a-component.md", "text": "在组件内发送请求", "n": 1}
 {"from": "docs/08-工作台/02-Qzb8Lpee2t-使用教程/0017-component-monitoring-1.md", "to": "docs/08-工作台/01-ECKYIf1yqx-平台介绍/0004-how-to-become-a-dingtalk-customization-service-provider-1.md", "text": "通过产品方案商开通", "n": 1}
 {"from": "docs/08-工作台/02-Qzb8Lpee2t-使用教程/0022-support-pc-workbench-1.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0002-jsapi-overview.md", "text": "客户端API总览", "n": 1}
 {"from": "docs/08-工作台/02-Qzb8Lpee2t-使用教程/0026-call-the-workbench-api.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端API/0002-download-the-server-side-sdk.md", "text": "服务端SDK下载", "n": 1}

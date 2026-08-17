@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 使用教程 > 自由OA 审批 > 自定义快捷审批：三方任务待办卡片审批"
 doc_id: "qadJyJX9rv"
-updated_at: "2026-07-10 10:11:20"
+updated_at: "2026-08-17 17:52:30"
 ---
 
 > Source: https://open.dingtalk.com/document/development/custom-quick-approval-supports-quick-approval-of-pending-tasks-from
 > Path: 应用开发 / 服务端API / OA 审批 > 使用教程 > 自由OA 审批 > 自定义快捷审批：三方任务待办卡片审批
-> Updated: 2026-07-10 10:11:20
+> Updated: 2026-08-17 17:52:30
 
 # 自定义快捷审批：三方任务待办卡片审批
 

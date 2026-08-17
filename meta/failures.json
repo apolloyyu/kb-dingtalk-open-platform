@@ -16,5 +16,152 @@
     ],
     "error": "<HTTPError 404: 'Not Found'>",
     "traceback": "Traceback (most recent call last):\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 396, in fetch_and_write_doc\n    raw = request_bytes(url)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 99, in request_bytes\n    raise last_error\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 92, in request_bytes\n    with urllib.request.urlopen(req, timeout=timeout) as resp:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.11/urllib/request.py\", line 216, in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.11/urllib/request.py\", line 525, in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\nurllib.error.HTTPError: HTTP Error 404: Not Found\n"
+  },
+  {
+    "doc_name": "通过钉钉专属版开通",
+    "source_url": "https://open.dingtalk.com/document/dingstart/open-through-exclusive-dingtalk",
+    "oss_url": "https://icms-document.oss-cn-beijing.aliyuncs.com/zh-CN/dingtalk/dingstart/topics/open-through-exclusive-dingtalk.html",
+    "namespace": "dingstart",
+    "slug": "open-through-exclusive-dingtalk",
+    "group": "工作台",
+    "tab": "平台介绍",
+    "breadcrumb": [
+      "开通方式",
+      "通过钉钉专属版开通"
+    ],
+    "error": "<HTTPError 404: 'Not Found'>",
+    "traceback": "Traceback (most recent call last):\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 396, in fetch_and_write_doc\n    raw = request_bytes(url)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 99, in request_bytes\n    raise last_error\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 92, in request_bytes\n    with urllib.request.urlopen(req, timeout=timeout) as resp:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.11/urllib/request.py\", line 216, in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.11/urllib/request.py\", line 525, in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\nurllib.error.HTTPError: HTTP Error 404: Not Found\n"
+  },
+  {
+    "doc_name": "通过钉钉专业版开通",
+    "source_url": "https://open.dingtalk.com/document/dingstart/open-through-dingtalk-professional-edition",
+    "oss_url": "https://icms-document.oss-cn-beijing.aliyuncs.com/zh-CN/dingtalk/dingstart/topics/open-through-dingtalk-professional-edition.html",
+    "namespace": "dingstart",
+    "slug": "open-through-dingtalk-professional-edition",
+    "group": "工作台",
+    "tab": "平台介绍",
+    "breadcrumb": [
+      "开通方式",
+      "通过钉钉专业版开通"
+    ],
+    "error": "<HTTPError 404: 'Not Found'>",
+    "traceback": "Traceback (most recent call last):\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 396, in fetch_and_write_doc\n    raw = request_bytes(url)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 99, in request_bytes\n    raise last_error\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 92, in request_bytes\n    with urllib.request.urlopen(req, timeout=timeout) as resp:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.11/urllib/request.py\", line 216, in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.11/urllib/request.py\", line 525, in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\nurllib.error.HTTPError: HTTP Error 404: Not Found\n"
+  },
+  {
+    "doc_name": "自定义工作台后台管理",
+    "source_url": "https://open.dingtalk.com/document/dingstart/custom-workbench-background-management",
+    "oss_url": "https://icms-document.oss-cn-beijing.aliyuncs.com/zh-CN/dingtalk/dingstart/topics/custom-workbench-background-management.html",
+    "namespace": "dingstart",
+    "slug": "custom-workbench-background-management",
+    "group": "工作台",
+    "tab": "平台介绍",
+    "breadcrumb": [
+      "开通方式",
+      "自定义工作台后台管理"
+    ],
+    "error": "<HTTPError 404: 'Not Found'>",
+    "traceback": "Traceback (most recent call last):\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 396, in fetch_and_write_doc\n    raw = request_bytes(url)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 99, in request_bytes\n    raise last_error\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 92, in request_bytes\n    with urllib.request.urlopen(req, timeout=timeout) as resp:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.11/urllib/request.py\", line 216, in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.11/urllib/request.py\", line 525, in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\nurllib.error.HTTPError: HTTP Error 404: Not Found\n"
+  },
+  {
+    "doc_name": "步骤一：环境准备",
+    "source_url": "https://open.dingtalk.com/document/dingstart/step-1-environmental-preparation-1",
+    "oss_url": "https://icms-document.oss-cn-beijing.aliyuncs.com/zh-CN/dingtalk/dingstart/topics/step-1-environmental-preparation-1.html",
+    "namespace": "dingstart",
+    "slug": "step-1-environmental-preparation-1",
+    "group": "工作台",
+    "tab": "使用教程",
+    "breadcrumb": [
+      "组件教程",
+      "全码组件",
+      "基础教程",
+      "步骤一：环境准备"
+    ],
+    "error": "<HTTPError 404: 'Not Found'>",
+    "traceback": "Traceback (most recent call last):\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 396, in fetch_and_write_doc\n    raw = request_bytes(url)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 99, in request_bytes\n    raise last_error\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 92, in request_bytes\n    with urllib.request.urlopen(req, timeout=timeout) as resp:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.11/urllib/request.py\", line 216, in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.11/urllib/request.py\", line 525, in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\nurllib.error.HTTPError: HTTP Error 404: Not Found\n"
+  },
+  {
+    "doc_name": "步骤二：创建组件",
+    "source_url": "https://open.dingtalk.com/document/dingstart/step-2-create-components",
+    "oss_url": "https://icms-document.oss-cn-beijing.aliyuncs.com/zh-CN/dingtalk/dingstart/topics/step-2-create-components.html",
+    "namespace": "dingstart",
+    "slug": "step-2-create-components",
+    "group": "工作台",
+    "tab": "使用教程",
+    "breadcrumb": [
+      "组件教程",
+      "全码组件",
+      "基础教程",
+      "步骤二：创建组件"
+    ],
+    "error": "<HTTPError 404: 'Not Found'>",
+    "traceback": "Traceback (most recent call last):\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 396, in fetch_and_write_doc\n    raw = request_bytes(url)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 99, in request_bytes\n    raise last_error\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 92, in request_bytes\n    with urllib.request.urlopen(req, timeout=timeout) as resp:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.11/urllib/request.py\", line 216, in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.11/urllib/request.py\", line 525, in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\nurllib.error.HTTPError: HTTP Error 404: Not Found\n"
+  },
+  {
+    "doc_name": "步骤四：调试插件",
+    "source_url": "https://open.dingtalk.com/document/dingstart/step-4-debug-the-plug-in",
+    "oss_url": "https://icms-document.oss-cn-beijing.aliyuncs.com/zh-CN/dingtalk/dingstart/topics/step-4-debug-the-plug-in.html",
+    "namespace": "dingstart",
+    "slug": "step-4-debug-the-plug-in",
+    "group": "工作台",
+    "tab": "使用教程",
+    "breadcrumb": [
+      "组件教程",
+      "全码组件",
+      "基础教程",
+      "步骤四：调试插件"
+    ],
+    "error": "<HTTPError 404: 'Not Found'>",
+    "traceback": "Traceback (most recent call last):\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 396, in fetch_and_write_doc\n    raw = request_bytes(url)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 99, in request_bytes\n    raise last_error\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 92, in request_bytes\n    with urllib.request.urlopen(req, timeout=timeout) as resp:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.11/urllib/request.py\", line 216, in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.11/urllib/request.py\", line 525, in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\nurllib.error.HTTPError: HTTP Error 404: Not Found\n"
+  },
+  {
+    "doc_name": "步骤五：发布插件",
+    "source_url": "https://open.dingtalk.com/document/dingstart/step-5-publish-the-plug-in",
+    "oss_url": "https://icms-document.oss-cn-beijing.aliyuncs.com/zh-CN/dingtalk/dingstart/topics/step-5-publish-the-plug-in.html",
+    "namespace": "dingstart",
+    "slug": "step-5-publish-the-plug-in",
+    "group": "工作台",
+    "tab": "使用教程",
+    "breadcrumb": [
+      "组件教程",
+      "全码组件",
+      "基础教程",
+      "步骤五：发布插件"
+    ],
+    "error": "<HTTPError 404: 'Not Found'>",
+    "traceback": "Traceback (most recent call last):\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 396, in fetch_and_write_doc\n    raw = request_bytes(url)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 99, in request_bytes\n    raise last_error\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 92, in request_bytes\n    with urllib.request.urlopen(req, timeout=timeout) as resp:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.11/urllib/request.py\", line 216, in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.11/urllib/request.py\", line 525, in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\nurllib.error.HTTPError: HTTP Error 404: Not Found\n"
+  },
+  {
+    "doc_name": "在组件内发送请求",
+    "source_url": "https://open.dingtalk.com/document/dingstart/send-a-request-within-a-component",
+    "oss_url": "https://icms-document.oss-cn-beijing.aliyuncs.com/zh-CN/dingtalk/dingstart/topics/send-a-request-within-a-component.html",
+    "namespace": "dingstart",
+    "slug": "send-a-request-within-a-component",
+    "group": "工作台",
+    "tab": "使用教程",
+    "breadcrumb": [
+      "组件教程",
+      "全码组件",
+      "数据源",
+      "在组件内发送请求"
+    ],
+    "error": "<HTTPError 404: 'Not Found'>",
+    "traceback": "Traceback (most recent call last):\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 396, in fetch_and_write_doc\n    raw = request_bytes(url)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 99, in request_bytes\n    raise last_error\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 92, in request_bytes\n    with urllib.request.urlopen(req, timeout=timeout) as resp:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.11/urllib/request.py\", line 216, in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.11/urllib/request.py\", line 525, in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\nurllib.error.HTTPError: HTTP Error 404: Not Found\n"
+  },
+  {
+    "doc_name": "调试数据源请求",
+    "source_url": "https://open.dingtalk.com/document/dingstart/debugging-data-source-requests",
+    "oss_url": "https://icms-document.oss-cn-beijing.aliyuncs.com/zh-CN/dingtalk/dingstart/topics/debugging-data-source-requests.html",
+    "namespace": "dingstart",
+    "slug": "debugging-data-source-requests",
+    "group": "工作台",
+    "tab": "使用教程",
+    "breadcrumb": [
+      "组件教程",
+      "全码组件",
+      "数据源",
+      "调试数据源请求"
+    ],
+    "error": "<HTTPError 404: 'Not Found'>",
+    "traceback": "Traceback (most recent call last):\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 396, in fetch_and_write_doc\n    raw = request_bytes(url)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 99, in request_bytes\n    raise last_error\n  File \"/home/yuweilun.ywl/knowledge-git/open-platform-wiki/ops/scripts/build_dingtalk_open_docs_kb.py\", line 92, in request_bytes\n    with urllib.request.urlopen(req, timeout=timeout) as resp:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.11/urllib/request.py\", line 216, in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.11/urllib/request.py\", line 525, in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\nurllib.error.HTTPError: HTTP Error 404: Not Found\n"
   }
 ]

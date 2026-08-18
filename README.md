@@ -1,4 +1,4 @@
-# open-platform-wiki
+# kb-dingtalk-open-platform — 钉钉开放平台文档知识库
 
 钉钉开放平台文档中心的完整本地知识库——**拿到文件夹即可离线技术答疑**，无需联网、向量库或任何第三方依赖。
 
@@ -83,3 +83,12 @@ python3 ops/scripts/diff_snapshot.py <新快照目录> --apply         # 3. 换�
 ## dws 域(已迁移)
 
 dws CLI 整理版知识库已独立为 [kb-dws-wiki](https://github.com/apolloyyu/kb-dws-wiki) 仓库(知识库组按「一库一仓」组织,权限与生命周期独立)。
+
+## 更新机制与协作规则
+
+本仓库是**知识库组**的一员,遵循 KB Spec v1(布局与元数据见 `meta/MANIFEST.json`)。
+
+- **正规更新通道**:自动流水线(每日爬取官方文档站→doc_id 对账→索引/图谱重建→lint 门禁→直推),无变化不产生提交
+- **可以手改的**:认知/策展层(如 TOPICS、README、AGENTS)欢迎直接 PR;
+- **不要手改的**:docs/(上游镜像,下次 ingest 覆盖)与 index/graph/meta 派生层(脚本全量重建);文档勘误写入 index/TOPICS.md 对应主题并注明与官方原文的分歧
+- 勘误与建议:提 Issue,或联系维护人(MANIFEST 的 contact)。

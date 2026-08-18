@@ -1,5 +1,5 @@
 ---
-title: "首页生命周期扩展（HarmonyOS）"
+title: "首页生命周期扩展"
 source_url: "https://open.dingtalk.com/document/development/home-lifecycle-extensions-harmonyos"
 namespace: "development"
 slug: "home-lifecycle-extensions-harmonyos"
@@ -7,14 +7,14 @@ group: "专属版客户端插件"
 tab: "HarmonyOS 插件"
 breadcrumb: "使用扩展点 > 首页生命周期扩展"
 doc_id: "dwnDZfFRDG"
-updated_at: "2026-08-12 09:20:55"
+updated_at: "2026-08-18 09:07:58"
 ---
 
 > Source: https://open.dingtalk.com/document/development/home-lifecycle-extensions-harmonyos
 > Path: 专属版客户端插件 / HarmonyOS 插件 / 使用扩展点 > 首页生命周期扩展
-> Updated: 2026-08-12 09:20:55
+> Updated: 2026-08-18 09:07:58
 
-# 首页生命周期扩展（HarmonyOS）
+# 首页生命周期扩展
 
 ## **基础信息**
 

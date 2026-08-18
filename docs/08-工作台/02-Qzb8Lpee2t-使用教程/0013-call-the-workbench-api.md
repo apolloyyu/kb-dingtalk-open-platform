@@ -5,13 +5,13 @@ namespace: "dingstart"
 slug: "call-the-workbench-api"
 group: "工作台"
 tab: "使用教程"
-breadcrumb: "组件教程 > 全码组件 > API参考 > 调用工作台 API"
+breadcrumb: "组件教程 > 全码组件 > 其他参考"
 doc_id: "SO2afwaWFW"
 updated_at: "2025-12-08 09:29:42"
 ---
 
 > Source: https://open.dingtalk.com/document/dingstart/call-the-workbench-api
-> Path: 工作台 / 使用教程 / 组件教程 > 全码组件 > API参考 > 调用工作台 API
+> Path: 工作台 / 使用教程 / 组件教程 > 全码组件 > 其他参考
 > Updated: 2025-12-08 09:29:42
 
 # 调用工作台 API

@@ -168,7 +168,7 @@ updated_at: "2026-07-14 09:09:58"
 
 专属钉钉支持企业员工发送文件的检测事件和服务号收到用户消息回调事件。
 
-- [服务号接收单聊消息](../04-LFcRvVD08N-事件订阅/0204-service-number-receiving-single-chat-message.md)
-- [企业员工发送文件的检测事件](../04-LFcRvVD08N-事件订阅/0206-detection-event-of-enterprise-employee-sending-file.md)
-- [专属群扩容审批](../04-LFcRvVD08N-事件订阅/0202-exclusive-group-expansion-approval.md)
-- [专属钉钉数据迁移](../04-LFcRvVD08N-事件订阅/0203-dedicated-dingtalk-data-migration.md)
+- [服务号接收单聊消息](../04-LFcRvVD08N-事件订阅/0205-service-number-receiving-single-chat-message.md)
+- [企业员工发送文件的检测事件](../04-LFcRvVD08N-事件订阅/0207-detection-event-of-enterprise-employee-sending-file.md)
+- [专属群扩容审批](../04-LFcRvVD08N-事件订阅/0203-exclusive-group-expansion-approval.md)
+- [专属钉钉数据迁移](../04-LFcRvVD08N-事件订阅/0204-dedicated-dingtalk-data-migration.md)

@@ -1,5 +1,5 @@
 ---
-title: "网络异常提醒扩展（Android）"
+title: "网络异常提醒扩展"
 source_url: "https://open.dingtalk.com/document/development/network-exception-alert-extension-android-1"
 namespace: "development"
 slug: "network-exception-alert-extension-android-1"
@@ -7,14 +7,14 @@ group: "专属版客户端插件"
 tab: "Android 插件"
 breadcrumb: "使用扩展点 > 网络异常提醒扩展"
 doc_id: "0StAFpurmg"
-updated_at: "2025-10-15 17:02:23"
+updated_at: "2026-08-18 09:07:59"
 ---
 
 > Source: https://open.dingtalk.com/document/development/network-exception-alert-extension-android-1
 > Path: 专属版客户端插件 / Android 插件 / 使用扩展点 > 网络异常提醒扩展
-> Updated: 2025-10-15 17:02:23
+> Updated: 2026-08-18 09:07:59
 
-# 网络异常提醒扩展（Android）
+# 网络异常提醒扩展
 
 ## **基础信息**
 

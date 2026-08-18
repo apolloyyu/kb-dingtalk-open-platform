@@ -1,5 +1,5 @@
 ---
-title: "设置项扩展点（Android）"
+title: "设置项扩展点"
 source_url: "https://open.dingtalk.com/document/development/set-item-extension-point-android-1"
 namespace: "development"
 slug: "set-item-extension-point-android-1"
@@ -7,14 +7,14 @@ group: "专属版客户端插件"
 tab: "Android 插件"
 breadcrumb: "使用扩展点 > 设置项扩展点"
 doc_id: "PQxnen23wp"
-updated_at: "2026-08-12 09:20:50"
+updated_at: "2026-08-18 09:07:54"
 ---
 
 > Source: https://open.dingtalk.com/document/development/set-item-extension-point-android-1
 > Path: 专属版客户端插件 / Android 插件 / 使用扩展点 > 设置项扩展点
-> Updated: 2026-08-12 09:20:50
+> Updated: 2026-08-18 09:07:54
 
-# 设置项扩展点（Android）
+# 设置项扩展点
 
 ## **基础信息**
 

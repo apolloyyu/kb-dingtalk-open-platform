@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "开发工具"
 breadcrumb: "开发者工具 > DingTalk Design CLI > 使用教程 > 开发工作台组件"
 doc_id: "kgUCaQP9qa"
-updated_at: "2025-09-23 19:21:09"
+updated_at: "2026-08-18 09:13:17"
 ---
 
 > Source: https://open.dingtalk.com/document/download/console-components
 > Path: 应用开发 / 开发工具 / 开发者工具 > DingTalk Design CLI > 使用教程 > 开发工作台组件
-> Updated: 2025-09-23 19:21:09
+> Updated: 2026-08-18 09:13:17
 
 # 开发工作台组件
 
@@ -23,29 +23,26 @@ updated_at: "2025-09-23 19:21:09"
 在正式开发前，请确保你已完成了以下的准备工作：
 
 - 确保安装了项目管理工具Git。若未安装，请访问[Git官网](https://git-scm.com/downloads)下载并安装。
-- 确保已经获取了API Token和小程序的miniAppId。
+- 确保已经获取了 API Token 和[目标小程序MiniAppId](../01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md#ebd9434a92c8s)。
 
-请根据以下步骤获取API Token和miniAppId：
+  1. 在开发者后台首页，单击**生成TOKEN**，用于生成持久的API Token。
 
-1. 登录[开发者后台](https://open-dev.dingtalk.com/)。
-2. 在开发者后台首页，单击**生成TOKEN**，用于生成持久的API Token。
+     > **[!NOTE]**
+     >
+     > - 重新生成Token之后，之前的Token会失效。
+     > - 同一企业同一时间生效的Token只有一个。
 
-   > **[!NOTE]**
-   >
-   > - 重新生成Token之后，之前的Token会失效。
-   > - 同一企业同一时间生效的Token只有一个。
+     ![生成TOKEN](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/5857473261/p283653.png)
+  2. （可选）生成Token后，单击后面的设置图标，设置Token的IP白名单。
 
-   ![生成TOKEN](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/5857473261/p283653.png)
-3. （可选）生成Token后，单击后面的设置图标，设置Token的IP白名单。
+     > **[!NOTE]**
+     >
+     > 钉钉开放平台支持为 Token 设置 IP 白名单，防止因凭证泄露导致的安全风险。建议仅允许受信任的服务器 IP 访问。
 
-   > **[!NOTE]**
-   >
-   > 出于安全性考虑，钉钉开放平台提供了生成Token和设置Token生效的IP白名单功能，降低了因Token泄漏导致的安全风险。
+     ![设置TOKEN白名单 ](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/5857473261/p283660.png)
+  3. 依次选择**定制服务>插件管理**，在插件管理界面选择对应工作台组件miniAppId。
 
-   ![设置TOKEN白名单 ](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/5857473261/p283660.png)
-4. 依次选择**定制服务>插件管理**，在插件管理界面选择对应工作台组件miniAppId。
-
-   ![工作台组件获取miniAppId ](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8556444261/p286478.png)
+     ![工作台组件获取miniAppId ](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8556444261/p286478.png)
 
 ## 步骤一：初始化项目
 
@@ -55,7 +52,9 @@ updated_at: "2025-09-23 19:21:09"
 ding init
 ```
 
-项目初始化配置，如下图所示：![工作台配置](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0598444261/p286726.png)
+项目初始化配置，如下图所示：
+
+![工作台配置](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0598444261/p286726.png)
 
 - **应用类型**：选择**自定义组件**。
 - **选择模板**：选择**default**。
@@ -78,7 +77,9 @@ ding init
 ding dev
 ```
 
-当`ding dev`命令执行完成后，可执行该命令的子命令进行其他操作，如下图所示：![定制工作台子命令](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2190164261/p289260.png)
+当`ding dev`命令执行完成后，可执行该命令的子命令进行其他操作，如下图所示：
+
+![定制工作台子命令](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2190164261/p289260.png)
 
 1. 执行`ding dev`的**ide**子命令，使用IDE打开当前项目。
 

@@ -1,5 +1,5 @@
 ---
-title: "首页生命周期扩展（Android）"
+title: "首页生命周期扩展"
 source_url: "https://open.dingtalk.com/document/development/home-lifecycle-extension-android-1"
 namespace: "development"
 slug: "home-lifecycle-extension-android-1"
@@ -7,14 +7,14 @@ group: "专属版客户端插件"
 tab: "Android 插件"
 breadcrumb: "使用扩展点 > 首页生命周期扩展"
 doc_id: "tH6cnJnKWs"
-updated_at: "2025-10-15 17:02:21"
+updated_at: "2026-08-18 09:07:58"
 ---
 
 > Source: https://open.dingtalk.com/document/development/home-lifecycle-extension-android-1
 > Path: 专属版客户端插件 / Android 插件 / 使用扩展点 > 首页生命周期扩展
-> Updated: 2025-10-15 17:02:21
+> Updated: 2026-08-18 09:07:58
 
-# 首页生命周期扩展（Android）
+# 首页生命周期扩展
 
 ## **基础信息**
 

@@ -1,5 +1,5 @@
 ---
-title: "VPN网络连接（Android）"
+title: "VPN网络连接"
 source_url: "https://open.dingtalk.com/document/development/vpn-network-connection-android-1"
 namespace: "development"
 slug: "vpn-network-connection-android-1"
@@ -7,14 +7,14 @@ group: "专属版客户端插件"
 tab: "Android 插件"
 breadcrumb: "解决方案 > VPN网络连接"
 doc_id: "AfuDviKlNm"
-updated_at: "2025-10-15 17:02:33"
+updated_at: "2026-08-18 09:08:02"
 ---
 
 > Source: https://open.dingtalk.com/document/development/vpn-network-connection-android-1
 > Path: 专属版客户端插件 / Android 插件 / 解决方案 > VPN网络连接
-> Updated: 2025-10-15 17:02:33
+> Updated: 2026-08-18 09:08:02
 
-# VPN网络连接（Android）
+# VPN网络连接
 
 本文仅为建议方案，不一定适合所有业务场景，仅供参考。
 
@@ -33,9 +33,9 @@ updated_at: "2025-10-15 17:02:33"
 
 | **扩展点** | **描述** |
 | --- | --- |
-| [登录流程扩展（Android）](0011-login-process-extension-android-1.md) | 主要用于内访外的场景，需要在登录前连接VPN |
-| [首页生命周期扩展（Android）](0012-home-lifecycle-extension-android-1.md) | 主要用于外访内的场景，唤起钉钉后自动连接VPN |
-| [设置项扩展点（Android）](0010-set-item-extension-point-android-1.md) | 可用于添加VPN相关的用户设置 |
+| [登录流程扩展](0011-login-process-extension-android-1.md) | 主要用于内访外的场景，需要在登录前连接VPN |
+| [首页生命周期扩展](0012-home-lifecycle-extension-android-1.md) | 主要用于外访内的场景，唤起钉钉后自动连接VPN |
+| [设置项扩展点](0010-set-item-extension-point-android-1.md) | 可用于添加VPN相关的用户设置 |
 
 ## **关键开放API**
 
@@ -56,7 +56,7 @@ updated_at: "2025-10-15 17:02:33"
   额外开发一个H5/小程序应用，用户可以在该应用中开启/断开VPN连接，可以参考[开发自定义JSAPI](0004-define-extension-jsapi.md)自定义JSAPI实现。
 - 方式2：
 
-  在设置项中新增VPN设置页，用户可以在页面中开启/断开VPN连接。方案较简单，可以参考[设置项扩展点（Android）](0010-set-item-extension-point-android-1.md)自定义Activity实现。
+  在设置项中新增VPN设置页，用户可以在页面中开启/断开VPN连接。方案较简单，可以参考[设置项扩展点](0010-set-item-extension-point-android-1.md)自定义Activity实现。
 - 方式3（推荐）：
 
   专属版钉钉App启动时自动连接VPN网络，下文中重点描述该方式。
@@ -114,7 +114,7 @@ public class VpnEventReceiver implements EventReceiver {
 
 ### **基本思路**
 
-- 使用[登录流程扩展（Android）](0011-login-process-extension-android-1.md)，在账号登录前连接VPN通道
+- 使用[登录流程扩展](0011-login-process-extension-android-1.md)，在账号登录前连接VPN通道
 - 在BundleApplication.onCreate回调中，判断应用是否已有登录态，解决APP杀进程重启时的VPN通道建立；
 - 监听logout等事件，在账号退出等时机完成VPN通道断开；
 
@@ -185,4 +185,4 @@ public class VpnEventReceiver implements EventReceiver {
 
 #### **步骤五：使用设置扩展点，完善体验**
 
-可使用[设置项扩展点（Android）](0010-set-item-extension-point-android-1.md)，添加网络设置页面，完善在网络异常时自检测等功能。
+可使用[设置项扩展点](0010-set-item-extension-point-android-1.md)，添加网络设置页面，完善在网络异常时自检测等功能。

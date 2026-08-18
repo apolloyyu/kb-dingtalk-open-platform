@@ -1,5 +1,5 @@
 ---
-title: "登录流程扩展（Android）"
+title: "登录流程扩展"
 source_url: "https://open.dingtalk.com/document/development/login-process-extension-android-1"
 namespace: "development"
 slug: "login-process-extension-android-1"
@@ -7,14 +7,14 @@ group: "专属版客户端插件"
 tab: "Android 插件"
 breadcrumb: "使用扩展点 > 登录流程扩展"
 doc_id: "zznWtIfwPD"
-updated_at: "2025-10-15 17:02:20"
+updated_at: "2026-08-18 09:07:57"
 ---
 
 > Source: https://open.dingtalk.com/document/development/login-process-extension-android-1
 > Path: 专属版客户端插件 / Android 插件 / 使用扩展点 > 登录流程扩展
-> Updated: 2025-10-15 17:02:20
+> Updated: 2026-08-18 09:07:57
 
-# 登录流程扩展（Android）
+# 登录流程扩展
 
 ## **基础信息**
 

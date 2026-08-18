@@ -1,5 +1,5 @@
 ---
-title: "设置项扩展点（iOS）"
+title: "设置项扩展点"
 source_url: "https://open.dingtalk.com/document/development/set-item-extension-point-ios-1"
 namespace: "development"
 slug: "set-item-extension-point-ios-1"
@@ -7,14 +7,14 @@ group: "专属版客户端插件"
 tab: "iOS 插件"
 breadcrumb: "使用扩展点 > 设置项扩展点"
 doc_id: "wCq13DeQOS"
-updated_at: "2025-10-15 17:02:17"
+updated_at: "2026-08-18 09:07:56"
 ---
 
 > Source: https://open.dingtalk.com/document/development/set-item-extension-point-ios-1
 > Path: 专属版客户端插件 / iOS 插件 / 使用扩展点 > 设置项扩展点
-> Updated: 2025-10-15 17:02:17
+> Updated: 2026-08-18 09:07:56
 
-# 设置项扩展点（iOS）
+# 设置项扩展点
 
 ## **基础信息**
 

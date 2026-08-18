@@ -48,8 +48,8 @@ updated_at: "2026-05-19 11:19:34"
 
 医疗通讯录支持行业用户属性变动、科室医疗组变动、科室医疗组属性变动等多种回调事件。
 
-- [医疗行业用户属性变动](../04-LFcRvVD08N-事件订阅/0208-user-attribute-change-in-medical-industry.md)
-- [医疗行业用户所在科室医疗组变动](../04-LFcRvVD08N-事件订阅/0211-changes-in-the-medical-group-of-the-department-where-the.md)
-- [医疗行业科室医疗组变动](../04-LFcRvVD08N-事件订阅/0209-changes-in-medical-departments-and-medical-groups-in-the-medical.md)
-- [医疗行业科室医疗组属性变动](../04-LFcRvVD08N-事件订阅/0210-change-of-attribute-of-medical-group-of-medical-department-in.md)
-- [医疗通讯录全量同步](../04-LFcRvVD08N-事件订阅/0207-full-synchronization-of-medical-address-book.md)
+- [医疗行业用户属性变动](../04-LFcRvVD08N-事件订阅/0209-user-attribute-change-in-medical-industry.md)
+- [医疗行业用户所在科室医疗组变动](../04-LFcRvVD08N-事件订阅/0212-changes-in-the-medical-group-of-the-department-where-the.md)
+- [医疗行业科室医疗组变动](../04-LFcRvVD08N-事件订阅/0210-changes-in-medical-departments-and-medical-groups-in-the-medical.md)
+- [医疗行业科室医疗组属性变动](../04-LFcRvVD08N-事件订阅/0211-change-of-attribute-of-medical-group-of-medical-department-in.md)
+- [医疗通讯录全量同步](../04-LFcRvVD08N-事件订阅/0208-full-synchronization-of-medical-address-book.md)

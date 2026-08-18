@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "开发工具"
 breadcrumb: "开发者工具 > DingTalk Design CLI > 使用教程 > 开发H5微应用"
 doc_id: "DM8oV2sptg"
-updated_at: "2026-01-22 19:53:08"
+updated_at: "2026-08-18 09:13:16"
 ---
 
 > Source: https://open.dingtalk.com/document/download/develop-h5-micro-applications
 > Path: 应用开发 / 开发工具 / 开发者工具 > DingTalk Design CLI > 使用教程 > 开发H5微应用
-> Updated: 2026-01-22 19:53:08
+> Updated: 2026-08-18 09:13:16
 
 # 开发H5微应用
 
@@ -32,7 +32,9 @@ updated_at: "2026-01-22 19:53:08"
 ding init
 ```
 
-项目初始化配置如下图所示![H5微应用初始化](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/1778444261/p286778.png)
+项目初始化配置如下图所示：
+
+![H5微应用初始化](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/1778444261/p286778.png)
 
 - **应用类型**：选择**H5微应用**。
 - **选择模板**：默认为**default**。
@@ -69,21 +71,19 @@ CLI 将自动启动本地服务（默认端口 8080），并监听文件变化�
 
 ## 常见问题
 
-### Q1：执行 `ding init` 报错“command not found”
+- **执行** `ding init` **报错“command not found”**
 
-A：请确认是否已全局安装 `@dingtalk/design-cli`。尝试运行 `npm install -g @dingtalk/design-cli` 并检查 Node.js 和 npm 环境变量配置。
+  请确认是否已全局安装 `@dingtalk/design-cli`。尝试运行 `npm install -g @dingtalk/design-cli` 并检查 Node.js 和 npm 环境变量配置。
+- **本地开发时页面无法加载 JSAPI**
 
-### Q2：本地开发时页面无法加载 JSAPI
+  请检查网络是否能正常访问 `https://g.alicdn.com`，该地址托管了钉钉 JSAPI SDK。也可尝试更换网络环境。
+- **部署后页面空白**
 
-A：请检查网络是否能正常访问 `https://g.alicdn.com`，该地址托管了钉钉 JSAPI SDK。也可尝试更换网络环境。
+  常见原因包括：
 
-### Q3：部署后页面空白
+  - 未启用 HTTPS；
+  - 服务器未正确返回 HTML 文件；
+  - JSAPI 安全域名未配置或拼写错误；
+  - 浏览器控制台报跨域或证书错误。
 
-A：常见原因包括：
-
-- 未启用 HTTPS；
-- 服务器未正确返回 HTML 文件；
-- JSAPI 安全域名未配置或拼写错误；
-- 浏览器控制台报跨域或证书错误。
-
-建议使用钉钉客户端内置浏览器调试工具排查具体错误。
+  建议使用钉钉客户端内置浏览器调试工具排查具体错误。

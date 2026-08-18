@@ -1,5 +1,5 @@
 ---
-title: "设置项扩展点（HarmonyOS）"
+title: "设置项扩展点"
 source_url: "https://open.dingtalk.com/document/development/set-item-extension-point-harmonyos"
 namespace: "development"
 slug: "set-item-extension-point-harmonyos"
@@ -7,14 +7,14 @@ group: "专属版客户端插件"
 tab: "HarmonyOS 插件"
 breadcrumb: "使用扩展点 > 设置项扩展点"
 doc_id: "yOU8gDeb8a"
-updated_at: "2026-08-12 09:20:51"
+updated_at: "2026-08-18 09:07:55"
 ---
 
 > Source: https://open.dingtalk.com/document/development/set-item-extension-point-harmonyos
 > Path: 专属版客户端插件 / HarmonyOS 插件 / 使用扩展点 > 设置项扩展点
-> Updated: 2026-08-12 09:20:51
+> Updated: 2026-08-18 09:07:55
 
-# 设置项扩展点（HarmonyOS）
+# 设置项扩展点
 
 ## **基础信息**
 

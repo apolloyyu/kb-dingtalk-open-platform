@@ -7,12 +7,12 @@ group: "工作台"
 tab: "使用教程"
 breadcrumb: "合作伙伴教程 > 第三方全码组件 > 上架流程 > 步骤三：组件上架和审核"
 doc_id: "Dehy56h9Ry"
-updated_at: "2025-09-03 15:57:23"
+updated_at: "2026-08-18 09:12:09"
 ---
 
 > Source: https://open.dingtalk.com/document/dingstart/step-3-component-shelf-and-review
 > Path: 工作台 / 使用教程 / 合作伙伴教程 > 第三方全码组件 > 上架流程 > 步骤三：组件上架和审核
-> Updated: 2025-09-03 15:57:23
+> Updated: 2026-08-18 09:12:09
 
 # 步骤三：组件上架和审核
 
@@ -42,8 +42,8 @@ updated_at: "2025-09-03 15:57:23"
 
 ## 二、应用接入应用内授权能力
 
-- 应用内授权简述，请参考[概述](https://open.dingtalk.com/document/development/1-product-interaction-process)。
-- 应用内授权开通接入方案，请参考[接入方案总览](https://open.dingtalk.com/document/development/ii-access-solution-overview)。
+- 应用内授权简述，请参考[概述](../../01-应用开发/02-4a8AMF6u2A-服务端API/0876-application-market-overview.md)。
+- 应用内授权开通接入方案，请参考[应用内授权开通接入](../../01-应用开发/02-4a8AMF6u2A-服务端API/0879-in-app-authorization-to-open-access.md)。
 
 ## 三、组件接入审核
 

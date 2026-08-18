@@ -7,12 +7,12 @@ group: "工作台"
 tab: "平台介绍"
 breadcrumb: "概述"
 doc_id: "OtIzeVUj3x"
-updated_at: "2025-09-03 15:56:52"
+updated_at: "2026-08-18 09:11:58"
 ---
 
 > Source: https://open.dingtalk.com/document/dingstart/custom-workbench-and-self-built-components
 > Path: 工作台 / 平台介绍 / 概述
-> Updated: 2025-09-03 15:56:52
+> Updated: 2026-08-18 09:11:58
 
 # 概述
 
@@ -25,7 +25,27 @@ updated_at: "2025-09-03 15:56:52"
 - **通过设计器自定义：**该版本专业版和专属版客户均可采用，本文档主要阐述的是此种自定义方式的使用方法。
 - **通过H5/宜搭自定义：**该版本仅支持专属版客户采用，可通过提供自定义地址替换钉钉工作台，如需了解，可通过登记[专属版意向](https://pages.dingtalk.com/wow/z/tianyuan/default/opportunity_index?wh_biz=tm&wh_weex=true&channel=aggregation_discover&spm=a2q49.26303778)获取专人支持。
 
-## **一、通过设计器搭建自定义工作台的简介**
+## **功能介绍**
+
+### **自定义工作台设计器**
+
+通过自定义工作台设计器，企业可以创建、设计和管理个性化的移动端和桌面端工作门户。设计器支持添加多个工作台页面、设计多种不同的页面布局、配置个性化工作台背景、支持自建组件设计和发布，同时拥有丰富的钉钉官方组件及生态服务商组件可供选用。
+
+**自定义工作设计器-桌面端**，如下图所示：
+
+![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8155107871/p1095177.png)
+
+**自定义工作设计器-移动端**，如下图所示：
+
+![image.png](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8155107871/p735038.png)
+
+### **自定义工作台模板**
+
+钉钉联合优质的定制服务商，为企业客户提供丰富的自定义工作台模板，适配不同行业的特色门户，包含制造业、服装业、互联网业、食品业、服务业、餐饮业。企业客户可一键启用模板，或编排修改模板后向企业员工发布启用。企业也可以通过这些行业内的标杆模板，获取更多工作台创建灵感。
+
+![image.gif](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/3528329961/p735029.gif)
+
+## **通过设计器搭建自定义工作台**
 
 通过**设计器**搭建自定义工作台是专业钉和专属钉客户的专属特权，支持自建应用、自建分组、自建组件，并且可根据企业的诉求支持统一文化设计、千人千面等个性化效果，为企业成员提供一站式的工作门户。
 
@@ -40,18 +60,10 @@ updated_at: "2025-09-03 15:56:52"
 - **数据连接：**配置钉钉官方连接器能力，轻松实现应用间数据互通，并在组件高效整合展示。
 - **定制保障**：提供官方认证的定制服务商，为有诉求的企业提供统一服务、统一安全、统一体验的定制服务。
 
-![概述-标准自定义对比](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/5091951761/p537194.png)
+**标准工作台**，如下图所示：
 
-## **二、产品功能示意**
+![概述-标准自定义对比](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8155107871/p537194.png)
 
-### **自定义工作台设计器**
+**自定义工作台**，如下图所示：
 
-通过自定义工作台设计器，企业可以创建、设计和管理个性化的移动端和桌面端工作门户。设计器支持添加多个工作台页面、设计多种不同的页面布局、配置个性化工作台背景、支持自建组件设计和发布，同时拥有丰富的钉钉官方组件及生态服务商组件可供选用。
-
-![image.png](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2528329961/p735038.png)
-
-### **自定义工作台模板**
-
-钉钉联合优质的定制服务商，为企业客户提供丰富的自定义工作台模板，适配不同行业的特色门户，包含制造业、服装业、互联网业、食品业、服务业、餐饮业。企业客户可一键启用模板，或编排修改模板后向企业员工发布启用。企业也可以通过这些行业内的标杆模板，获取更多工作台创建灵感。
-
-![image.gif](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/3528329961/p735029.gif)
+![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8155107871/p1095171.png)

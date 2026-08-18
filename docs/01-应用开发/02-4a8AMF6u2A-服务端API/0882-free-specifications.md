@@ -69,7 +69,7 @@ updated_at: "2026-07-14 09:22:28"
 **订单消息格式请参考**：
 
 - **RDS/SyncHTTP推送**：[biz\_type=17](../04-LFcRvVD08N-事件订阅/0005-development-data-format-help.md#section-5je-fzy-8p5)
-- **HTTP推送请参考**：[应用市场下单事件](../04-LFcRvVD08N-事件订阅/0185-application-market-order.md)
+- **HTTP推送请参考**：[应用市场下单事件](../04-LFcRvVD08N-事件订阅/0186-application-market-order.md)
 
 试用规格自动切换为免费规格，应用使用范围的变化规则是：
 

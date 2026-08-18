@@ -7,12 +7,12 @@ group: "工作台"
 tab: "使用教程"
 breadcrumb: "合作伙伴教程 > 第三方全码组件 > 上架流程 > 步骤二：组件的开发和预览"
 doc_id: "i5lKDtsvmM"
-updated_at: "2025-10-22 18:06:52"
+updated_at: "2026-08-18 09:12:08"
 ---
 
 > Source: https://open.dingtalk.com/document/dingstart/step-2-develop-three-party-application-components
 > Path: 工作台 / 使用教程 / 合作伙伴教程 > 第三方全码组件 > 上架流程 > 步骤二：组件的开发和预览
-> Updated: 2025-10-22 18:06:52
+> Updated: 2026-08-18 09:12:08
 
 # 步骤二：组件的开发和预览
 
@@ -76,9 +76,9 @@ updated_at: "2025-10-22 18:06:52"
   >
   > 脚手架初始化第5步时，模板请选择**application-ecology**。
 
-  建议存量组件，可以将原工程中的plugin添加到新的模板中，在新的模板中修改相关的mock数据和配置文件，方便IDE中调试，详情可参考[开发组件](0011-step-3-develop-components.md)。
-- 第三方企业应用组件开发需遵循第三方企业应用组件[设计规范](https://ding.design/?spm=ding_open_doc.document.0.0.18684a707LUUDg#/cate/1/page/824)和[开发规范](0040-development-specification.md)。
-- 如果在开发过程中遇到问题，可通过[联系我们](https://open.dingtalk.com/document/dingstart/dashboard-model-overview2)加入**标准工作台组件/解决方案接入群**，在群内咨询服务小蜜。
+  建议存量组件，可以将原工程中的plugin添加到新的模板中，在新的模板中修改相关的mock数据和配置文件，方便IDE中调试，详情可参考[开发组件](0011-step-3-develop-components.md#8b8144165eltj)。
+- 第三方企业应用组件开发需遵循第三方企业应用组件[设计规范](https://ding.design/?spm=ding_open_doc.document.0.0.18684a707LUUDg#/cate/1/page/824)和[开发规范](0026-development-specification.md)。
+- 如果在开发过程中遇到问题，可通过[联系我们](0019-workbench-dashboard-model-overview.md)加入**标准工作台组件/解决方案接入群**，在群内咨询服务小蜜。
 
 ## 三、设计器调试预览
 

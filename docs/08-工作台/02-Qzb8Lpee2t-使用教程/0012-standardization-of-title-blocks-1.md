@@ -5,13 +5,13 @@ namespace: "dingstart"
 slug: "standardization-of-title-blocks-1"
 group: "工作台"
 tab: "使用教程"
-breadcrumb: "组件教程 > 全码组件 > 场景示例 > 标题栏的标准化"
+breadcrumb: "组件教程 > 全码组件 > 场景示例"
 doc_id: "LuDZwLxoS7"
 updated_at: "2025-09-03 15:57:08"
 ---
 
 > Source: https://open.dingtalk.com/document/dingstart/standardization-of-title-blocks-1
-> Path: 工作台 / 使用教程 / 组件教程 > 全码组件 > 场景示例 > 标题栏的标准化
+> Path: 工作台 / 使用教程 / 组件教程 > 全码组件 > 场景示例
 > Updated: 2025-09-03 15:57:08
 
 # 标题栏的标准化

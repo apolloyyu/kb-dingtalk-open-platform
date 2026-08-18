@@ -7,18 +7,18 @@ group: "应用开发"
 tab: "开发工具"
 breadcrumb: "开发者工具 > DingTalk Design CLI > 使用教程 > 开发小程序"
 doc_id: "GQJhohNveG"
-updated_at: "2026-01-22 19:53:09"
+updated_at: "2026-08-18 09:13:16"
 ---
 
 > Source: https://open.dingtalk.com/document/download/develop-mini-program-applications
 > Path: 应用开发 / 开发工具 / 开发者工具 > DingTalk Design CLI > 使用教程 > 开发小程序
-> Updated: 2026-01-22 19:53:09
+> Updated: 2026-08-18 09:13:16
 
 # 开发小程序
 
 本文简要介绍使用 DingTalk Design CLI 开发小程序的操作步骤，帮助开发者快速完成项目初始化、开发调试及上传部署。
 
-## 准备工作
+## **目标人群**
 
 本指南适用于企业内部开发的小程序应用。在正式开始前，请确保您具备以下条件：
 
@@ -26,34 +26,28 @@ updated_at: "2026-01-22 19:53:09"
 - 上传和调用相关接口需配置有效的 API Token，并建议启用 IP 白名单以提升安全性。
 - 小程序的发布与更新操作依赖于正确的 `miniAppId` 和权限配置。
 
+## 准备工作
+
 请确认已完成以下准备工作：
 
 - 安装项目管理工具 Git。若尚未安装，请访问[Git官网](https://git-scm.com/downloads)下载并安装。
-- 获取 API Token 和目标小程序的 `miniAppId`。
+- 获取 API Token 和[目标小程序MiniAppId](../01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md#ebd9434a92c8s)。
 
-### 获取 API Token 和 miniAppId
+  1. 在开发者后台首页，单击**生成TOKEN**，用于生成持久的API Token。
 
-请根据以下步骤获取API Token和miniAppId：
+     > **[!NOTE]**
+     >
+     > - 重新生成Token之后，之前的Token会失效。
+     > - 同一企业同一时间生效的Token只有一个。
 
-1. 登录[开发者后台](https://open-dev.dingtalk.com/)。
-2. 在开发者后台首页，单击**生成TOKEN**，用于生成持久的API Token。
+     ![生成TOKEN](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/5857473261/p283653.png)
+  2. （可选）生成Token后，单击后面的设置图标，设置Token的IP白名单。
 
-   > **[!NOTE]**
-   >
-   > - 重新生成Token之后，之前的Token会失效。
-   > - 同一企业同一时间生效的Token只有一个。
+     > **[!NOTE]**
+     >
+     > 钉钉开放平台支持为 Token 设置 IP 白名单，防止因凭证泄露导致的安全风险。建议仅允许受信任的服务器 IP 访问。
 
-   ![生成TOKEN](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/5857473261/p283653.png)
-3. （可选）生成Token后，单击后面的设置图标，设置Token的IP白名单。
-
-   > **[!NOTE]**
-   >
-   > 钉钉开放平台支持为 Token 设置 IP 白名单，防止因凭证泄露导致的安全风险。建议仅允许受信任的服务器 IP 访问。
-
-   ![设置TOKEN白名单 ](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/5857473261/p283660.png)
-4. 在目标应用的**基础信息**页面，获取miniAppId。
-
-   ![小程序miniAppId ](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/3356444261/p286472.png)
+     ![设置TOKEN白名单 ](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/5857473261/p283660.png)
 
 ## 步骤一：初始化项目
 
@@ -88,7 +82,9 @@ ding init
 ding dev
 ```
 
-当`ding dev`命令执行完成后，可执行该命令的子命令进行其他操作，如下图所示：![ding_dev子命令 ](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/7787854261/p287855.png)
+当`ding dev`命令执行完成后，可执行该命令的子命令进行其他操作，如下图所示：
+
+![ding_dev子命令 ](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/7787854261/p287855.png)
 
 1. 执行`ding dev`的**ide**子命令，使用IDE打开当前项目。
 
@@ -143,18 +139,15 @@ ding dev
 
 ## 常见问题
 
-### **Q1：执行** `upload` **命令时报错 “invalid token”？**
+- **执行** `upload` **命令时报错 “invalid token”？**
 
-A：请确认当前使用的 API Token 是否有效，是否已被重新生成而导致失效，并检查是否设置了 IP 白名单且当前出口 IP 已加入。
+  请确认当前使用的 API Token 是否有效，是否已被重新生成而导致失效，并检查是否设置了 IP 白名单且当前出口 IP 已加入。
+- **二维码无法加载或显示空白？**
 
-### **Q2：二维码无法加载或显示空白？**
+  请确认 `miniAppId` 是否正确，且该应用为小程序类型；同时检查网络是否正常，尝试重新执行 `qrcode` 命令。
+- **如何查看已申请的 API 权限？**
 
-A：请确认 `miniAppId` 是否正确，且该应用为小程序类型；同时检查网络是否正常，尝试重新执行 `qrcode` 命令。
+  进入开发者后台，选择目标应用，点击 **权限管理**，即可查看当前已添加和待审批的 API 权限列表。
+- **TypeScript 项目构建后未生成输出文件？**
 
-### **Q3：如何查看已申请的 API 权限？**
-
-A：进入开发者后台，选择目标应用，点击 **权限管理**，即可查看当前已添加和待审批的 API 权限列表。
-
-### **Q4：TypeScript 项目构建后未生成输出文件？**
-
-A：请确认 `tsconfig.json` 配置正确，并在 `ding.config.json` 中设置正确的 `outDir` 路径，确保与构建输出一致。
+  请确认 `tsconfig.json` 配置正确，并在 `ding.config.json` 中设置正确的 `outDir` 路径，确保与构建输出一致。

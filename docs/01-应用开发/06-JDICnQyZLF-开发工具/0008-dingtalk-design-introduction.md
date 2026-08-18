@@ -1,20 +1,20 @@
 ---
-title: "DingTalk Design CLI简介"
+title: "简介"
 source_url: "https://open.dingtalk.com/document/download/dingtalk-design-introduction"
 namespace: "download"
 slug: "dingtalk-design-introduction"
 group: "应用开发"
 tab: "开发工具"
-breadcrumb: "开发者工具 > DingTalk Design CLI > DingTalk Design CLI简介"
+breadcrumb: "开发者工具 > DingTalk Design CLI > 简介"
 doc_id: "9iWoMDbhRT"
-updated_at: "2025-10-20 18:27:41"
+updated_at: "2026-08-18 09:13:14"
 ---
 
 > Source: https://open.dingtalk.com/document/download/dingtalk-design-introduction
-> Path: 应用开发 / 开发工具 / 开发者工具 > DingTalk Design CLI > DingTalk Design CLI简介
-> Updated: 2025-10-20 18:27:41
+> Path: 应用开发 / 开发工具 / 开发者工具 > DingTalk Design CLI > 简介
+> Updated: 2026-08-18 09:13:14
 
-# DingTalk Design CLI简介
+# 简介
 
 本文介绍DingTalk Design CLI工具的基本概念和常见命令。
 
@@ -26,7 +26,15 @@ DingTalk Design CLI是钉钉前端应用研发命令行工具，提供以下能�
 - 提供小程序和工作台组件的本地构建、开发调试、预览、校验和上传等能力。
 - 提供H5微应用本地模拟器开发的能力
 
-## 用法
+## 能力介绍
+
+使用DingTalk Design CLI的能力，可以开发不同的应用类型，开发者可进行自主选择：
+
+- **小程序**：如需使用DingTalk Design CLI工具开发小程序，请参考[开发小程序](0010-develop-mini-program-applications.md)。
+- **H5微应用**：如需使用DingTalk Design CLI工具开发H5微应用，请参考[开发H5微应用](0011-develop-h5-micro-applications.md)。
+- **工作台组件**：如需使用DingTalk Design CLI工具开发工作台组件，请参考[开发工作台组件](0012-console-components.md)。
+
+## 常规用法
 
 你可以通过以下命令使用DingTalk Design CLI工具。
 
@@ -46,11 +54,11 @@ $ ding <command> [options]
 | upload | 上传小程序、工作台组件项目到开发者后台。 |
 | lint | 校验小程序、h5微应用、工作台组件。  **[!NOTE]**  本地校验时，小程序、H5微应用的校验规则是项目目录中的eslint配置文件。工作台组件的校验规则等同于提交上架会进行的校验规则。 |
 
-### ding init [options]
+### ding init
 
 创建一个钉钉应用，可以是小程序、h5、工作台组件。
 
-#### **命令参数 - options**
+#### **命令参数**
 
 - `-a, --appType <appType>`：（可选）指定应用类型，值可以为**mp** | **h5** | **plugin**。
 - `-t, --template <template>`：（可选）指定模板，模板的key可以从[Git](https://github.com/open-dingtalk/dd-application-template)上查阅，例如：**plugin\_default**，则模板**key**为**default**。
@@ -59,11 +67,11 @@ $ ding <command> [options]
 - `-o, --outDir <outDir>`：（可选）输出目录，若不指定时，将默认在当前目录新建。
 - `--cwd [cwd]`：（可选）当前的工作目录, 默认值是`process.cwd()`。
 
-### ding preview [options]
+### ding preview
 
 生成二维码，扫码预览本地构建出来的小程序或工作台组件。
 
-#### 命令参数 - options
+#### 命令参数
 
 `--miniAppId <miniAppId>`：（可选）钉钉小程序或工作台组件的**miniAppId**。默认从当前工作目录下的 ding.config.json 中读取
 
@@ -73,7 +81,7 @@ $ ding <command> [options]
 
 `--cwd [cwd]`：（可选）当前的工作目录, 默认值是`process.cwd()`。
 
-### ding lint [options]
+### ding lint
 
 校验钉钉小程序、h5、工作台组件的代码规范和平台要求规范。
 
@@ -81,19 +89,19 @@ $ ding <command> [options]
 
 工作台组件会校验组件内使用的JSAPI、使用的样式、变量等是否符合平台要求规范。
 
-### ding upload [options]
+### ding upload
 
 上传小程序、工作台组件项目到开发者后台。
 
-#### 命令参数 - options
+#### 命令参数
 
 `--miniAppId <miniAppId>`：（可选）钉钉小程序或工作台组件的**miniAppId**。默认从当前工作目录下的 ding.config.json 中读取
 
-`--token <token>`：（可选）API访问凭证，默认从当前工作目录下的`ding.config.json`中读取，生成方式参考[调用工作台 API](https://open.dingtalk.com/document/dingstart/workbench)。
+`--token <token>`：（可选）API访问凭证，默认从当前工作目录下的`ding.config.json`中读取，生成方式参考[调用工作台 API](../../08-工作台/02-Qzb8Lpee2t-使用教程/0013-call-the-workbench-api.md)。
 
 `--cwd [cwd]`：（可选）当前的工作目录, 默认值是`process.cwd()`。
 
-### ding dev [subCommand] [options]
+### ding dev
 
 开发调试小程序、H5微应用、工作台组件。
 
@@ -113,7 +121,7 @@ $ ding <command> [options]
 
 > **[!NOTE]**
 >
-> 此功能需要安装特定版本DingTalk Design CLI，请参考[微应用本地开发工具](https://open.dingtalk.com/document/download/local-development-tools-for-microapplications)。
+> 此功能需要安装特定版本DingTalk Design CLI。
 
 例如：
 
@@ -309,14 +317,6 @@ ding dev lint
 ```
 
 ![检验规范](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2281894461/p385758.png)
-
-## 能力介绍
-
-使用DingTalk Design CLI的能力，可以开发不同的应用类型，开发者可进行自主选择：
-
-- **小程序**：如需使用DingTalk Design CLI工具开发小程序，请参考[开发小程序](0010-develop-mini-program-applications.md)。
-- **H5微应用**：如需使用DingTalk Design CLI工具开发H5微应用，请参考[开发H5微应用](0011-develop-h5-micro-applications.md)。
-- **工作台组件**：如需使用DingTalk Design CLI工具开发工作台组件，请参考[开发工作台组件](0012-console-components.md)。
 
 ## **常见问题**
 

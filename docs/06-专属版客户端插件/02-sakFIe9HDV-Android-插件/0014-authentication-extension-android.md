@@ -1,5 +1,5 @@
 ---
-title: "登录认证扩展（Android）"
+title: "登录认证扩展（认证多因子）"
 source_url: "https://open.dingtalk.com/document/development/authentication-extension-android"
 namespace: "development"
 slug: "authentication-extension-android"
@@ -7,14 +7,14 @@ group: "专属版客户端插件"
 tab: "Android 插件"
 breadcrumb: "使用扩展点 > 登录认证扩展（认证多因子）"
 doc_id: "Cat2wY9Ul0"
-updated_at: "2025-10-15 17:02:20"
+updated_at: "2026-08-18 09:07:56"
 ---
 
 > Source: https://open.dingtalk.com/document/development/authentication-extension-android
 > Path: 专属版客户端插件 / Android 插件 / 使用扩展点 > 登录认证扩展（认证多因子）
-> Updated: 2025-10-15 17:02:20
+> Updated: 2026-08-18 09:07:56
 
-# 登录认证扩展（Android）
+# 登录认证扩展（认证多因子）
 
 ## **基础信息**
 

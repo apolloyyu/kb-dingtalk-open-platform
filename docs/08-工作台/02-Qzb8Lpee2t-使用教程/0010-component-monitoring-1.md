@@ -30,7 +30,7 @@ updated_at: "2025-10-22 18:05:56"
 
 > **[!NOTE]**
 >
-> 只有定制服务商的身份才能查看监控，如何成为定制服务商，请参考[通过产品方案商开通](../01-ECKYIf1yqx-平台介绍/0004-how-to-become-a-dingtalk-customization-service-provider-1.md)。
+> 只有定制服务商的身份才能查看监控，如何成为定制服务商，请参考[通过产品方案商开通](../01-ECKYIf1yqx-平台介绍/0002-how-to-become-a-dingtalk-customization-service-provider-1.md)。
 
 1. 登录[开发者后台](https://open-dev.dingtalk.com/)。
 2. 依次选择**定制服务**>**插件管理**，选择目标插件，单击**监控中心。**

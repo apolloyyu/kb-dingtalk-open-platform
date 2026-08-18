@@ -1,5 +1,5 @@
 ---
-title: "Web容器生命周期扩展（HarmonyOS）"
+title: "Web容器生命周期扩展"
 source_url: "https://open.dingtalk.com/document/development/web-extensions-harmonyos"
 namespace: "development"
 slug: "web-extensions-harmonyos"
@@ -7,14 +7,14 @@ group: "专属版客户端插件"
 tab: "HarmonyOS 插件"
 breadcrumb: "使用扩展点 > Web容器生命周期扩展"
 doc_id: "ofh2aRydMo"
-updated_at: "2026-08-12 09:20:54"
+updated_at: "2026-08-18 09:08:01"
 ---
 
 > Source: https://open.dingtalk.com/document/development/web-extensions-harmonyos
 > Path: 专属版客户端插件 / HarmonyOS 插件 / 使用扩展点 > Web容器生命周期扩展
-> Updated: 2026-08-12 09:20:54
+> Updated: 2026-08-18 09:08:01
 
-# Web容器生命周期扩展（HarmonyOS）
+# Web容器生命周期扩展
 
 ## **基础信息**
 

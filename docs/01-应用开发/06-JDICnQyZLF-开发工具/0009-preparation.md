@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "开发工具"
 breadcrumb: "开发者工具 > DingTalk Design CLI > 准备工作"
 doc_id: "7TUdGOHv9R"
-updated_at: "2026-01-22 19:53:09"
+updated_at: "2026-08-18 09:13:15"
 ---
 
 > Source: https://open.dingtalk.com/document/download/preparation
 > Path: 应用开发 / 开发工具 / 开发者工具 > DingTalk Design CLI > 准备工作
-> Updated: 2026-01-22 19:53:09
+> Updated: 2026-08-18 09:13:15
 
 # 准备工作
 
@@ -62,7 +62,7 @@ ding -v
 
 如正确显示版本信息（例如 `@dingtalk/design-cli/1.2.0 darwin-x64 node-v18.17.0`），表示安装成功。
 
-## CLI 支持命令列表
+## 命令列表
 
 | **命令** | **用途说明** |
 | --- | --- |
@@ -76,23 +76,22 @@ ding -v
 
 建议结合 `--help` 参数查看各子命令的详细选项，例如：`ding build --help`。
 
-## 常见问题与解决方案
+## 常见问题
 
-### 命令未找到：`ding: command not found`
+- **命令未找到：**`ding: command not found`
 
-**原因**：npm 全局 bin 目录未加入系统 PATH 环境变量
+  **原因**：npm 全局 bin 目录未加入系统 PATH 环境变量
 
-**解决方案**：
+  **解决方案**：
 
-1. 检查 npm 全局路径：通常返回如 `/Users/username/.nvm/versions/node/v18.17.0`，其下的 `bin` 目录需加入 PATH。
-2. 在 shell 配置文件（`.zshrc` / `.bashrc`）中添加：
+  1. 检查 npm 全局路径：通常返回如 `/Users/username/.nvm/versions/node/v18.17.0`，其下的 `bin` 目录需加入 PATH。
+  2. 在 shell 配置文件（`.zshrc` / `.bashrc`）中添加：
+- **版本过旧或缓存污染**
 
-### 版本过旧或缓存污染
+  **建议操作**：
 
-**建议操作**：
-
-```
-npm uninstall -g dingtalk-design-cli
-npm cache clean --force
-npm i dingtalk-design-cli@latest -g
-```
+  ```
+  npm uninstall -g dingtalk-design-cli
+  npm cache clean --force
+  npm i dingtalk-design-cli@latest -g
+  ```

@@ -1,5 +1,5 @@
 ---
-title: "截录屏控制扩展点（HarmonyOS）"
+title: "截录屏控制扩展点"
 source_url: "https://open.dingtalk.com/document/development/screen-extension-harmonyos"
 namespace: "development"
 slug: "screen-extension-harmonyos"
@@ -7,14 +7,14 @@ group: "专属版客户端插件"
 tab: "HarmonyOS 插件"
 breadcrumb: "使用扩展点 > 截录屏控制扩展点"
 doc_id: "fJ3yTbRZzY"
-updated_at: "2026-08-12 09:20:54"
+updated_at: "2026-08-18 09:08:00"
 ---
 
 > Source: https://open.dingtalk.com/document/development/screen-extension-harmonyos
 > Path: 专属版客户端插件 / HarmonyOS 插件 / 使用扩展点 > 截录屏控制扩展点
-> Updated: 2026-08-12 09:20:54
+> Updated: 2026-08-18 09:08:00
 
-# 截录屏控制扩展点（HarmonyOS）
+# 截录屏控制扩展点
 
 ## **基础信息**
 

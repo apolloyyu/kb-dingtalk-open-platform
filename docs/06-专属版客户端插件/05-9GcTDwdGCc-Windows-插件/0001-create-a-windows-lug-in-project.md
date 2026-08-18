@@ -7,12 +7,12 @@ group: "专属版客户端插件"
 tab: " Windows 插件"
 breadcrumb: "开发 Windows 插件"
 doc_id: "hxb7KqxSJw"
-updated_at: "2026-08-12 09:20:43"
+updated_at: "2026-08-18 09:08:05"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-a-windows-lug-in-project
 > Path: 专属版客户端插件 /  Windows 插件 / 开发 Windows 插件
-> Updated: 2026-08-12 09:20:43
+> Updated: 2026-08-18 09:08:05
 
 # 开发 Windows 插件
 
@@ -41,7 +41,7 @@ updated_at: "2026-08-12 09:20:43"
 
    ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/1922376671/p1038966.png)
 
-### **编辑插件配置**
+## **编辑插件配置**
 
 钉钉开放插件包括两个重要的组成部分：
 
@@ -55,8 +55,6 @@ updated_at: "2026-08-12 09:20:43"
 - 发送文件（checkFile）
 
 每种事件触发时，钉钉客户端会通知已注册的插件，并调用 pluginHostEvent 下对应事件内的方法。
-
-### **配置模板**
 
 插件配置文件的模板定义如下：
 
@@ -137,7 +135,7 @@ typedef void (*SPI_CommonEventNotify)(const char* event_name,
                                       SPI_CommonEventResult callback);
 ```
 
-### **实现插件功能**
+## **实现插件功能**
 
 ### **开发插件**
 

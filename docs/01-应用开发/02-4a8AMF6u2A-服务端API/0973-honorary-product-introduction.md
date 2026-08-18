@@ -72,8 +72,8 @@ updated_at: "2026-07-20 09:25:26"
 
 荣誉支持荣誉授予、荣誉审核结果回调事件。
 
-- [荣誉授予](../04-LFcRvVD08N-事件订阅/0182-honor-confer.md)
-- [荣誉审核结果](../04-LFcRvVD08N-事件订阅/0183-honor-review-results.md)
+- [荣誉授予](../04-LFcRvVD08N-事件订阅/0183-honor-confer.md)
+- [荣誉审核结果](../04-LFcRvVD08N-事件订阅/0184-honor-review-results.md)
 
 ## 名词解释
 

@@ -1,7 +1,7 @@
 {
   "name": "钉钉开放平台文档中心知识库",
   "source_entry": "https://open.dingtalk.com/document/dingstart/basic-concepts-beta",
-  "crawl_time": "2026-08-18T07:04:26+08:00",
+  "crawl_time": "2026-08-19T07:04:30+08:00",
   "source_apis": [
     "https://open.dingtalk.com/api/docCenter/getDocPageGroupList",
     "https://open.dingtalk.com/api/docCenter/getDocInfoList",
@@ -9,24 +9,24 @@
   ],
   "groups": 8,
   "tabs": 33,
-  "documents_discovered": 3671,
-  "documents_written": 3661,
-  "failures": 10,
+  "documents_discovered": 3656,
+  "documents_written": 3655,
+  "failures": 1,
   "counts_by_group": {
-    "应用开发": 3342,
+    "应用开发": 3343,
     "连接平台": 102,
     "AI PaaS": 25,
     "硬件开发": 15,
     "互动卡片": 42,
-    "专属版客户端插件": 47,
+    "专属版客户端插件": 48,
     "数据资产": 50,
-    "工作台": 38
+    "工作台": 30
   },
   "counts_by_tab": {
     "应用开发 / 开发指南": 109,
     "应用开发 / 服务端API": 1882,
     "应用开发 / 客户端JSAPI": 886,
-    "应用开发 / 事件订阅": 370,
+    "应用开发 / 事件订阅": 371,
     "应用开发 / 钉钉CLI": 25,
     "应用开发 / 开发工具": 24,
     "应用开发 / 平台服务": 46,
@@ -49,12 +49,12 @@
     "互动卡片 / 卡片规范设计": 4,
     "专属版客户端插件 / 功能介绍": 11,
     "专属版客户端插件 / Android 插件": 16,
-    "专属版客户端插件 / iOS 插件": 7,
+    "专属版客户端插件 / iOS 插件": 8,
     "专属版客户端插件 / HarmonyOS 插件": 12,
     "专属版客户端插件 /  Windows 插件": 1,
     "数据资产 / 平台介绍": 27,
     "数据资产 / 宜数（智能问数）": 23,
     "工作台 / 平台介绍": 2,
-    "工作台 / 使用教程": 36
+    "工作台 / 使用教程": 28
   }
 }

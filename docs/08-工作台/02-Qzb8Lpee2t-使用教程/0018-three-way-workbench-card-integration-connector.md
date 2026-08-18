@@ -133,6 +133,6 @@ updated_at: "2025-09-03 15:57:18"
 卡片实例投放后，点击提醒内的**点击这里**，进入工作台卡片的编辑和发布页面。
 
 1. 在插件管理页面，查看创建的卡片实例，目前为已上架状态。![iShot2022-11-10 17](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2804529661/p516029.png)
-2. 已上架状态的插件，需要经过产品验收审核后才能正常使用。提交组件验收申请，请参考[组件上架和审核](0038-step-3-component-shelf-and-review.md)。
+2. 已上架状态的插件，需要经过产品验收审核后才能正常使用。提交组件验收申请，请参考[组件上架和审核](0024-step-3-component-shelf-and-review.md)。
 3. 组件验收申请通过后，卡片实例状态变更为验收通过，单击**版本管理**。![iShot2022-11-10 17](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2804529661/p516036.png)
 4. 在卡片实例详情页面，需要先设置卡片的灰度企业，然后可以全量发布。![iShot2022-11-10 17](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2804529661/p516041.png)

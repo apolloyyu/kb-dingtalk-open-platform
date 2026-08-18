@@ -224,13 +224,15 @@ fs.createReadStream('/Users/dengxian.ldx/temp/test/a.txt').pipe(request(options)
 | uploadKey | String | 是 | 添加文件唯一标识，调用[获取文件上传信息](0674-obtain-file-upload-informations.md)接口获取uploadKey参数值。 |
 | name | String | 是 | 文件的名称，带后缀。命名有以下要求：   - 头尾不能包含空格，否则会自动去除 - 不能包含特殊字符，包括：制表符、\*、"、<、>、| - 不能以"."结尾 |
 | option | Object | 否 | 可选参数。 |
-| size | Long | 否 | 默认文件大小, 单位:Byte。    如果此字段不为空，企业存储系统会校验文件实际大小是否和此字段是否一致，不一致会报错。 |
+| size | Long | 否 | 默认文件大小，单位:Byte。  **[!NOTE]**  如果此字段不为空，企业存储系统会校验文件实际大小是否和此字段是否一致，不一致会报错 |
 | conflictStrategy | String | 否 | 文件名称冲突策略。   - **AUTO\_RENAME**：自动重命名，默认值 - **OVERWRITE**：覆盖 - **RETURN\_DENTRY\_IF\_EXISTS**：返回已存在文件 - **RETURN\_ERROR\_IF\_EXISTS**：文件已存在时报错 |
 | appProperties | Array | 否 | 当前文件的应用属性列表，最大值3。 |
-| name | String | 是 | 属性名称。    该属性名称在当前app下需要保证唯一，不同app间同名属性互不影响。 |
+| name | String | 是 | 属性名称。  **[!NOTE]**  该属性名称在当前app下需要保证唯一，不同app间同名属性互不影响。 |
 | value | String | 是 | 属性值。 |
 | visibility | String | 是 | 属性可见性。   - **PUBLIC**：所有应用都可见 - **PRIVATE**：仅限当前应用可见 |
 | convertToOnlineDoc | Boolean | 否 | 是否转换成在线文档。   - **false**（默认值）：否 - **true**：是 |
+| convertToOnlineDocTargetDocumentType | String | 否 | 转换成在线文档目标格式，未指定时按源文件后缀得到目标格式：   - **DOC**：钉钉文档 - **WORKBOOK**：钉钉表格 - **SMART\_TABLE**：钉钉多维表 |
+| classificationLabelId | String | 否 | 文件密级UUID， |
 
 ### 请求示例
 
@@ -253,7 +255,9 @@ Content-Type:application/json
       "value" : "property_value",
       "visibility" : "PRIVATE"
     } ],
-    "convertToOnlineDoc" : false
+    "convertToOnlineDoc" : false,
+    "convertToOnlineDocTargetDocumentType" : "DOC",
+    "classificationLabelId" : "880787xxxxaf08b6"
   }
 }
 ```
@@ -261,7 +265,6 @@ Content-Type:application/json
 Java
 
 ```
-// This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sample;
 
 import com.aliyun.tea.*;
@@ -269,8 +272,10 @@ import com.aliyun.tea.*;
 public class Sample {
 
     /**
-     * 使用 Token 初始化账号Client
+     * <b>description</b> :
+     * <p>使用 Token 初始化账号Client</p>
      * @return Client
+     * 
      * @throws Exception
      */
     public static com.aliyun.dingtalkstorage_2_0.Client createClient() throws Exception {
@@ -281,7 +286,7 @@ public class Sample {
     }
 
     public static void main(String[] args_) throws Exception {
-        java.util.List<String> args = java.util.Arrays.asList(args_);
+        
         com.aliyun.dingtalkstorage_2_0.Client client = Sample.createClient();
         com.aliyun.dingtalkstorage_2_0.models.CommitFileHeaders commitFileHeaders = new com.aliyun.dingtalkstorage_2_0.models.CommitFileHeaders();
         commitFileHeaders.xAcsDingtalkAccessToken = "<your access token>";
@@ -295,7 +300,9 @@ public class Sample {
                 .setAppProperties(java.util.Arrays.asList(
                     optionAppProperties0
                 ))
-                .setConvertToOnlineDoc(false);
+                .setConvertToOnlineDoc(false)
+                .setConvertToOnlineDocTargetDocumentType("DOC")
+                .setClassificationLabelId("88078761-1821-47c3-9825-24db78af08b6");
         com.aliyun.dingtalkstorage_2_0.models.CommitFileRequest commitFileRequest = new com.aliyun.dingtalkstorage_2_0.models.CommitFileRequest()
                 .setUnionId("union_id")
                 .setUploadKey("upload_key")
@@ -324,7 +331,9 @@ Python
 ```
 # -*- coding: utf-8 -*-
 # This file is auto-generated, don't edit it. Thanks.
+import os
 import sys
+import json
 
 from typing import List
 
@@ -368,7 +377,9 @@ class Sample:
             app_properties=[
                 option_app_properties_0
             ],
-            convert_to_online_doc=False
+            convert_to_online_doc=False,
+            convert_to_online_doc_target_document_type='DOC',
+            classification_label_id='88078761-1821-47c3-9825-24db78af08b6'
         )
         commit_file_request = dingtalkstorage__2__0_models.CommitFileRequest(
             union_id='union_id',
@@ -401,7 +412,9 @@ class Sample:
             app_properties=[
                 option_app_properties_0
             ],
-            convert_to_online_doc=False
+            convert_to_online_doc=False,
+            convert_to_online_doc_target_document_type='DOC',
+            classification_label_id='88078761-1821-47c3-9825-24db78af08b6'
         )
         commit_file_request = dingtalkstorage__2__0_models.CommitFileRequest(
             union_id='union_id',
@@ -472,7 +485,9 @@ class Sample {
             "appProperties" => [
                 $optionAppProperties0
             ],
-            "convertToOnlineDoc" => false
+            "convertToOnlineDoc" => false,
+            "convertToOnlineDocTargetDocumentType" => "DOC",
+            "classificationLabelId" => "88078761-1821-47c3-9825-24db78af08b6"
         ]);
         $commitFileRequest = new CommitFileRequest([
             "unionId" => "union_id",
@@ -503,10 +518,12 @@ Sample::main(array_slice($argv, 1));
 Go
 
 ```
-// This file is auto-generated, don't edit it. Thanks.
 package main
 
 import (
+  "encoding/json"
+  "strings"
+  "fmt"
   "os"
   util  "github.com/alibabacloud-go/tea-utils/v2/service"
   dingtalkstorage_2_0  "github.com/alibabacloud-go/dingtalk/storage_2_0"
@@ -514,11 +531,13 @@ import (
   "github.com/alibabacloud-go/tea/tea"
 )
 
-/**
- * 使用 Token 初始化账号Client
- * @return Client
- * @throws Exception
- */
+// Description:
+// 
+// 使用 Token 初始化账号Client
+// 
+// @return Client
+// 
+// @throws Exception
 func CreateClient () (_result *dingtalkstorage_2_0.Client, _err error) {
   config := &openapi.Config{}
   config.Protocol = tea.String("https")
@@ -546,6 +565,8 @@ func _main (args []*string) (_err error) {
     ConflictStrategy: tea.String("AUTO_RENAME"),
     AppProperties: []*dingtalkstorage_2_0.CommitFileRequestOptionAppProperties{optionAppProperties0},
     ConvertToOnlineDoc: tea.Bool(false),
+    ConvertToOnlineDocTargetDocumentType: tea.String("DOC"),
+    ClassificationLabelId: tea.String("88078761-1821-47c3-9825-24db78af08b6"),
   }
   commitFileRequest := &dingtalkstorage_2_0.CommitFileRequest{
     UnionId: tea.String("union_id"),
@@ -593,53 +614,56 @@ func main() {
 Node.js
 
 ```
+'use strict';
 // This file is auto-generated, don't edit it
-import Util, * as $Util from '@alicloud/tea-util';
-import dingtalkstorage_2_0, * as $dingtalkstorage_2_0 from '@alicloud/dingtalk/storage_2_0';
-import OpenApi, * as $OpenApi from '@alicloud/openapi-client';
-import * as $tea from '@alicloud/tea-typescript';
+const Util = require('@alicloud/tea-util');
+const dingtalkstorage_2_0 = require('@alicloud/dingtalk/storage_2_0');
+const OpenApi = require('@alicloud/openapi-client');
+const Tea = require('@alicloud/tea-typescript');
 
-export default class Client {
+class Client {
 
   /**
    * 使用 Token 初始化账号Client
    * @return Client
    * @throws Exception
    */
-  static createClient(): dingtalkstorage_2_0 {
-    let config = new $OpenApi.Config({ });
-    config.protocol = "https";
-    config.regionId = "central";
-    return new dingtalkstorage_2_0(config);
+  static createClient() {
+    let config = new OpenApi.Config({ });
+    config.protocol = 'https';
+    config.regionId = 'central';
+    return new dingtalkstorage_2_0.default(config);
   }
 
-  static async main(args: string[]): Promise<void> {
+  static async main(args) {
     let client = Client.createClient();
-    let commitFileHeaders = new $dingtalkstorage_2_0.CommitFileHeaders({ });
-    commitFileHeaders.xAcsDingtalkAccessToken = "<your access token>";
-    let optionAppProperties0 = new $dingtalkstorage_2_0.CommitFileRequestOptionAppProperties({
-      name: "property_name",
-      value: "property_value",
-      visibility: "PRIVATE",
+    let commitFileHeaders = new dingtalkstorage_2_0.CommitFileHeaders({ });
+    commitFileHeaders.xAcsDingtalkAccessToken = '<your access token>';
+    let optionAppProperties0 = new dingtalkstorage_2_0.CommitFileRequestOptionAppProperties({
+      name: 'property_name',
+      value: 'property_value',
+      visibility: 'PRIVATE',
     });
-    let option = new $dingtalkstorage_2_0.CommitFileRequestOption({
+    let option = new dingtalkstorage_2_0.CommitFileRequestOption({
       size: 512,
-      conflictStrategy: "AUTO_RENAME",
+      conflictStrategy: 'AUTO_RENAME',
       appProperties: [
         optionAppProperties0
       ],
       convertToOnlineDoc: false,
+      convertToOnlineDocTargetDocumentType: 'DOC',
+      classificationLabelId: '88078761-1821-47c3-9825-24db78af08b6',
     });
-    let commitFileRequest = new $dingtalkstorage_2_0.CommitFileRequest({
-      unionId: "union_id",
-      uploadKey: "upload_key",
-      name: "dentry_name",
+    let commitFileRequest = new dingtalkstorage_2_0.CommitFileRequest({
+      unionId: 'union_id',
+      uploadKey: 'upload_key',
+      name: 'dentry_name',
       option: option,
     });
     try {
-      await client.commitFileWithOptions("uuid", commitFileRequest, commitFileHeaders, new $Util.RuntimeOptions({ }));
+      await client.commitFileWithOptions('uuid', commitFileRequest, commitFileHeaders, new Util.RuntimeOptions({ }));
     } catch (err) {
-      if (!Util.empty(err.code) && !Util.empty(err.message)) {
+      if (!Util.default.empty(err.code) && !Util.default.empty(err.message)) {
         // err 中含有 code 和 message 属性，可帮助开发定位问题
       }
 
@@ -648,14 +672,14 @@ export default class Client {
 
 }
 
+exports.Client = Client;
 Client.main(process.argv.slice(2));
 ```
 
 C#
 
 ```
-// This file is auto-generated, don't edit it. Thanks.
-
+using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -670,11 +694,17 @@ namespace AlibabaCloud.SDK.Sample
     public class Sample 
     {
 
-        /**
-         * 使用 Token 初始化账号Client
-         * @return Client
-         * @throws Exception
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用 Token 初始化账号Client</para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// Client
+        /// </returns>
+        /// 
+        /// <term><b>Exception:</b></term>
+        /// Exception
         public static AlibabaCloud.SDK.Dingtalkstorage_2_0.Client CreateClient()
         {
             AlibabaCloud.OpenApiClient.Models.Config config = new AlibabaCloud.OpenApiClient.Models.Config();
@@ -703,6 +733,8 @@ namespace AlibabaCloud.SDK.Sample
                     optionAppProperties0
                 },
                 ConvertToOnlineDoc = false,
+                ConvertToOnlineDocTargetDocumentType = "DOC",
+                ClassificationLabelId = "88078761-1821-47c3-9825-24db78af08b6",
             };
             AlibabaCloud.SDK.Dingtalkstorage_2_0.Models.CommitFileRequest commitFileRequest = new AlibabaCloud.SDK.Dingtalkstorage_2_0.Models.CommitFileRequest
             {

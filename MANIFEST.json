@@ -1,52 +1,67 @@
 {
-  "name": "open-platform-wiki",
-  "description": "钉钉开放平台文档中心快照 + Agent 优先的三级索引、类型化关系图谱与变更维护协议",
-  "layout_version": "1.0",
-  "entry": {
-    "human": "README.md",
-    "agent": "AGENTS.md",
-    "cli": "bin/dkdoc",
-    "topics": "index/TOPICS.md",
-    "l1_index": "index/INDEX.md",
-    "graph": "graph/GRAPH.md",
-    "maintenance": "ops/INGEST.md"
-  },
-  "snapshot": {
-    "crawl_time": "2026-08-18T07:04:26+08:00",
-    "documents": 3661,
-    "applied_at": "2026-08-18",
-    "diff_report": "ops/changes/2026-08-18-dingtalk-open-platform-docs-20260818-0701.md"
-  },
-  "layers": {
-    "raw": [
-      "docs/",
-      "meta/documents.jsonl",
-      "meta/source_manifest.json",
-      "meta/failures.json",
-      "meta/UNAVAILABLE.md",
-      "meta/tombstones.jsonl"
-    ],
-    "derived": [
-      "index/ (除 TOPICS.md)",
-      "graph/ (除 GRAPH.md)",
-      "meta/kb_manifest.jsonl",
-      "meta/COMPILE_REPORT.md"
-    ],
-    "curated": [
-      "index/TOPICS.md",
-      "graph/GRAPH.md",
-      "README.md",
-      "AGENTS.md",
-      "CLAUDE.md",
-      "bin/dkdoc",
-      "ops/INGEST.md"
-    ]
-  },
-  "regenerate": [
-    "python3 ops/scripts/compile_qa_kb.py",
-    "python3 ops/scripts/build_qa_index.py",
-    "python3 ops/scripts/build_index.py",
-    "python3 ops/scripts/build_links.py",
-    "python3 ops/scripts/lint.py"
+ "name": "open-platform-wiki",
+ "description": "钉钉开放平台文档中心快照 + Agent 优先的三级索引、类型化关系图谱与变更维护协议",
+ "layout_version": "1.0",
+ "entry": {
+  "human": "README.md",
+  "agent": "AGENTS.md",
+  "cli": "bin/dkdoc",
+  "topics": "index/TOPICS.md",
+  "l1_index": "index/INDEX.md",
+  "graph": "graph/GRAPH.md",
+  "maintenance": "ops/INGEST.md"
+ },
+ "snapshot": {
+  "crawl_time": "2026-08-18T07:04:26+08:00",
+  "documents": 3661,
+  "applied_at": "2026-08-18",
+  "diff_report": "ops/changes/2026-08-18-dingtalk-open-platform-docs-20260818-0701.md"
+ },
+ "layers": {
+  "raw": [
+   "docs/",
+   "meta/documents.jsonl",
+   "meta/source_manifest.json",
+   "meta/failures.json",
+   "meta/UNAVAILABLE.md",
+   "meta/tombstones.jsonl"
+  ],
+  "derived": [
+   "index/ (除 TOPICS.md)",
+   "graph/ (除 GRAPH.md)",
+   "meta/kb_manifest.jsonl",
+   "meta/COMPILE_REPORT.md"
+  ],
+  "curated": [
+   "index/TOPICS.md",
+   "graph/GRAPH.md",
+   "README.md",
+   "AGENTS.md",
+   "CLAUDE.md",
+   "bin/dkdoc",
+   "ops/INGEST.md"
   ]
+ },
+ "regenerate": [
+  "python3 ops/scripts/compile_qa_kb.py",
+  "python3 ops/scripts/build_qa_index.py",
+  "python3 ops/scripts/build_index.py",
+  "python3 ops/scripts/build_links.py",
+  "python3 ops/scripts/lint.py"
+ ],
+ "spec_version": "1.0",
+ "id": "dingtalk-open-platform-docs",
+ "visibility": "public",
+ "maintenance": "pipeline",
+ "language": "zh-CN",
+ "contact": "yuweilun.ywl",
+ "tags": [
+  "dingtalk",
+  "open-platform",
+  "docs"
+ ],
+ "source": {
+  "type": "crawl",
+  "origin": "https://open.dingtalk.com"
+ }
 }

@@ -4,7 +4,7 @@
 
 本库是钉钉开放平台文档中心 **2026-08-18 快照**（8 大类 / 27 子类 / 3661 篇；权威日期见 `meta/source_manifest.json`）+ 索引 + 图谱 + 查询 CLI，离线自足。用途：回答钉钉开放平台开发问题。
 
-本库含两个知识域:**开放平台域**(本目录 docs/ index/ graph/ meta/,下文即其检索协议)与 **dws 域**(`dws/`,DingTalk Workspace CLI 整理版,入口 `dws/AGENTS.md`)。路由按「用户手里拿的是什么」:自己的代码/HTTP 报文/开放平台后台 → 开放平台域;`dws` 命令及其输出 → dws 域;跨域问题(如 dws 报了平台 errcode)两域都查。
+本库是知识库组的一员,专注**钉钉开放平台域**。dws CLI 的整理版知识在独立仓库 [kb-dws-wiki](https://github.com/apolloyyu/kb-dws-wiki);跨域问题(如 dws 报了平台 errcode)两库都查。
 
 
 三个前提：**外挂目录**（`$WIKI` 指本目录绝对路径，命令均 cwd 无关）；答疑**只读**；答案只从库内来，没有就如实说，**不编造**。

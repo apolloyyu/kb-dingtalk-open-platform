@@ -80,9 +80,6 @@ python3 ops/scripts/diff_snapshot.py <新快照目录> --apply         # 3. 换�
 - 已知抓取盲区见 [meta/UNAVAILABLE.md](meta/UNAVAILABLE.md) 与 `meta/failures.json`（1 篇失败）。
 - 文档内容版权归钉钉官方；本仓库提供快照的组织方式、索引与工具。
 
-## dws 域（dws/）
+## dws 域(已迁移)
 
-自 2026-08-17 起，本仓库同时承载 dws CLI（DingTalk Workspace CLI）的整理版知识层，位于 `dws/`：
-- 10 篇主题文档（架构/命令契约/认证/事件/消息/文件/审计/配置/排错/构建），基于源码实读生成，每篇 frontmatter 带 `source_refs`；
-- 入口与检索协议见 [dws/AGENTS.md](dws/AGENTS.md)，源码 commit 锚定见 `dws/meta/MANIFEST.json`；
-- 该层由流水线整目录再生成维护，不做手工增量修改。
+dws CLI 整理版知识库已独立为 [kb-dws-wiki](https://github.com/apolloyyu/kb-dws-wiki) 仓库(知识库组按「一库一仓」组织,权限与生命周期独立)。

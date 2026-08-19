@@ -20,9 +20,7 @@ updated_at: "2026-04-17 11:33:46"
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/notable/bases/{baseId}/sheets/{sheetIdOrName}/records |
 | HTTP Method | POST |
@@ -33,14 +31,14 @@ updated_at: "2026-04-17 11:33:46"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，可调用[获取企业内部应用的accessToken](0033-obtain-the-access-token-of-an-internal-app.md)接口获取。 |
+| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，调用[获取企业内部应用的accessToken](0033-obtain-the-access-token-of-an-internal-app.md)接口获取。 |
 
 ### 路径参数
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| baseId | String | 是 | AI表格ID，获取方式请参考[数据结构](0457-data-structure.md)。 |
-| sheetIdOrName | String | 是 | 数据表ID或数据表名称。数据表ID可以通过以下两种方式获取：   - 调用[获取所有数据表](0461-api-notable-getallsheets.md)接口获取。 - 调用[获取数据表](0460-api-notable-getsheet.md)接口获取。 |
+| baseId | String | 是 | AI表格ID，获取方式请参考[数据结构](0457-data-structure.md#e2156ac0b1eko)。 |
+| sheetIdOrName | String | 是 | 数据表ID或数据表名称。数据表ID可通过[获取所有数据表](0461-api-notable-getallsheets.md)或[获取数据表](0460-api-notable-getsheet.md)接口获取。 |
 
 ### 查询参数
 
@@ -54,8 +52,8 @@ updated_at: "2026-04-17 11:33:46"
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
 | records | Array | 是 | 需要写入的行记录数据。 |
-| fields | Map<String, Any> | 是 | 该行记录中各字段的值，采用Map<String, Any>格式：   - key：字段名称（String类型），对应数据表中的字段名 - value：字段值（Any类型），根据字段类型传入相应格式的值，具体的字段值格式请参考记录值格式文档。[记录值格式](https://open.dingtalk.com/document/development/record-value-format)。 |
-|  | Any | 否 | 字段值。根据字段类型不同，值的格式也不同，具体请参考记录值格式。 |
+| fields | Map<String, Any> | 是 | 该行记录中各字段的值，采用Map<String, Any>格式：   - key：字段名称（String类型），对应数据表中的字段名 - value：字段值（Any类型），根据字段类型传入相应格式的值，格式请参考[记录值格式](0457-data-structure.md#d684dc15ef145)。 |
+|  | Any | 否 | 字段值。根据字段类型不同，值的格式也不同，具体请参考[记录值格式](0457-data-structure.md#d684dc15ef145)。 |
 
 ### 请求示例
 

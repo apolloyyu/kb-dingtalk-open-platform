@@ -2502,8 +2502,8 @@ updated_at: "2026-05-06 10:20:52"
 | 900002 | 加密时间戳参数非法 | 加密时间戳参数非法。加密时间戳不能为空。 |  |
 | 900003 | 加密随机字符串参数非法 | 加密随机字符串参数非法。加密随机字符串不能为空。 |  |
 | 900004 | 不合法的aeskey | 不合法的aeskey。检查aeskey是否符合规格，长度固定为43个字符，从a-z, A-Z, 0-9共62个字符中选取，是AESKey的Base64编码。解码后即为32字节长的AESKey。 |  |
-| 900005 | 签名不匹配 | 签名不匹配。检查签名计算的参数是否正确。 \* 个人免登：[个人免登场景的签名计算方法](1427-signature-personal-registration.md) \* 第三方企业：[第三方访问接口的签名计算方法](1428-the-signature-calculation-method-of-the-third-party-access-interface.md) |  |
-| 900006 | 计算签名错误 | 计算签名错误。检查签名计算的参数是否正确。 \* 个人免登：[个人免登场景的签名计算方法](1427-signature-personal-registration.md) \* 第三方企业：[第三方访问接口的签名计算方法](1428-the-signature-calculation-method-of-the-third-party-access-interface.md) |  |
+| 900005 | 签名不匹配 | 签名不匹配。检查签名计算的参数是否正确。 \* 个人免登：[个人免登场景的签名计算方法](1428-signature-personal-registration.md) \* 第三方企业：[第三方访问接口的签名计算方法](1429-the-signature-calculation-method-of-the-third-party-access-interface.md) |  |
+| 900006 | 计算签名错误 | 计算签名错误。检查签名计算的参数是否正确。 \* 个人免登：[个人免登场景的签名计算方法](1428-signature-personal-registration.md) \* 第三方企业：[第三方访问接口的签名计算方法](1429-the-signature-calculation-method-of-the-third-party-access-interface.md) |  |
 | 900007 | 计算加密文字错误 | 计算加密文字错误。检查是否安装JRE补丁或者对应的JRE版本是否正常。 |  |
 | 900008 | 计算解密文字错误 | 计算解密文字错误。检查是否安装JRE补丁或者对应的JRE版本是否正常。 |  |
 | 900009 | 计算解密文字长度不匹配 | 计算解密文字长度不匹配。检查aeskey是否符合规格。长度固定为43个字符，从a-z, A-Z, 0-9共62个字符中选取，是AESKey的Base64编码。 |  |

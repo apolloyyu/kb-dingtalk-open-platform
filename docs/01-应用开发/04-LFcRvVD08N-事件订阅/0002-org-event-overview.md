@@ -215,17 +215,17 @@ updated_at: "2026-08-13 09:05:46"
 | [群会话更换群名称](0108-group-session-change-group-name.md) | 开发者监听群回调事件可以更及时地响应群的变化，与业务集成。为群会话更换群名称事件数据说明。 |
 | [群会话用户主动退群](0109-group-session-users-actively-withdraw-from-the-group.md) | 开发者监听群回调事件可以更及时地响应群的变化，与业务集成。为群会话删除人员事件推送数据说明。 |
 | [群模板被启用或停用](0110-group-templates-are-enabled-or-disabled.md) | 群模板被启用或停用的推送数据。 |
-| [单聊安装酷应用](0111-single-chat-install-cool-app.md) | 单聊安装酷应用的推送数据。 |
-| [单聊卸载酷应用](0112-single-chat-uninstall-cool-application.md) | 单聊卸载酷应用的推送数据。 |
-| [群内安装酷应用事件](0113-install-cool-application-events-in-the-group.md) | 群内安装酷应用的推送数据。 |
-| [群内卸载酷应用事件](0114-uninstall-cool-app-event-in-group.md) | 群内卸载酷应用的推送数据。 |
+| [单聊安装酷应用](0113-single-chat-install-cool-app.md) | 单聊安装酷应用的推送数据。 |
+| [单聊卸载酷应用](0114-single-chat-uninstall-cool-application.md) | 单聊卸载酷应用的推送数据。 |
+| [群内安装酷应用事件](0115-install-cool-application-events-in-the-group.md) | 群内安装酷应用的推送数据。 |
+| [群内卸载酷应用事件](0116-uninstall-cool-app-event-in-group.md) | 群内卸载酷应用的推送数据。 |
 
 ### **机器人**
 
 | **名称** | **描述** |
 | --- | --- |
-| [机器人消息已读事件](0116-bot-message-read-event.md) | 开发者操作机器人发消息时，机器人消息被读的推送数据。 |
-| [机器人消息撤回事件](0115-bot-message-withdrawal-event.md) | 开发者操作机器人发消息时，机器人消息撤回的推送数据。 |
+| [机器人消息已读事件](0112-bot-message-read-event.md) | 开发者操作机器人发消息时，机器人消息被读的推送数据。 |
+| [机器人消息撤回事件](0111-bot-message-withdrawal-event.md) | 开发者操作机器人发消息时，机器人消息撤回的推送数据。 |
 
 ## **智能硬件**
 

@@ -31,7 +31,7 @@
 - [添加接口调用权限](../docs/01-应用开发/02-4a8AMF6u2A-服务端API/0003-add-api-permission.md) · [敏感权限使用](../docs/01-应用开发/02-4a8AMF6u2A-服务端API/0004-use-sensitive-permissions.md)
 - 找某个接口 / 权限点 → 别翻目录，直接查 [graph/api.jsonl 与 permission.jsonl](../graph/GRAPH.md)
 - 新旧双轨：`api.dingtalk.com`（新版）与 `oapi.dingtalk.com`（旧版）并存，`graph/api.jsonl` 的 `version` 字段可判别
-- 限流/QPS/调用频率：[调用频率限制](../docs/01-应用开发/02-4a8AMF6u2A-服务端API/0012-call-frequency-limit.md)（规避实践/指数退避）+ [调用频次与限流](../docs/01-应用开发/02-4a8AMF6u2A-服务端API/1432-how-to-process-api-throttling-on-the-dingtalk-server.md)（应用/IP/组织/全局四维度阈值与 90018 等限流错误码；检索注意该文标题用「频次」不用「频率」），两篇一并给；按 appKey 维度为主，不按操作人；库内无"带宽"维度条目
+- 限流/QPS/调用频率：[调用频率限制](../docs/01-应用开发/02-4a8AMF6u2A-服务端API/0012-call-frequency-limit.md)（规避实践/指数退避）+ [调用频次与限流](../docs/01-应用开发/02-4a8AMF6u2A-服务端API/1433-how-to-process-api-throttling-on-the-dingtalk-server.md)（应用/IP/组织/全局四维度阈值与 90018 等限流错误码；检索注意该文标题用「频次」不用「频率」），两篇一并给；按 appKey 维度为主，不按操作人；库内无"带宽"维度条目
 
 ## 错误码排查
 

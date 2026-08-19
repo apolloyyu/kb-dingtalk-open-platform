@@ -42,7 +42,7 @@ updated_at: "2026-04-24 14:10:38"
 | delUserIds | Array of String | 否 | 移除的员工userId列表，可通过[获取部门用户userid列表](0065-query-the-list-of-department-userids.md)接口获取。 |
 | deviceIds | Array of String | 否 | 加密后的考勤机设备ID列表，字符串数组，可调用[查询考勤机信息](0223-query-attendance-machine-information.md)接口获取deviceId参数值。 |
 | addUserIds | Array of String | 否 | 新增的员工userId列表，可通过[获取部门用户userid列表](0065-query-the-list-of-department-userids.md)接口获取。 |
-| devIds | Array of Long | 否 | 考勤机设备ID列表，Long数组，可调用[查询设备列表](1316-intelligent-hardware-list-query.md)接口获取device\_id参数值。 |
+| devIds | Array of Long | 否 | 考勤机设备ID列表，Long数组，可调用[查询设备列表](1317-intelligent-hardware-list-query.md)接口获取device\_id参数值。 |
 | delDeptIds | Array of Long | 否 | 删除的部门id列表，可调用[获取部门列表](0082-user-management-acquires-the-list-departments.md)接口获取dept\_id参数值。 |
 | addDeptIds | Array of Long | 否 | 新增的部门id列表，可调用[获取部门列表](0082-user-management-acquires-the-list-departments.md)接口获取dept\_id参数值。 |
 

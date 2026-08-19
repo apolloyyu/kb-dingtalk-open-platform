@@ -1,0 +1,516 @@
+# 快照对账 2026-08-20
+
+- 旧：3655 篇（本库 meta/documents.jsonl）
+- 新：3655 篇（/home/yuweilun.ywl/Documents/工作/开放平台/wiki/dingtalk-open-platform-docs-20260820-0700）
+- 新增 0 / 更新 45 / 移动 458 / 删除 0
+
+## 内容更新
+- [获取企业内部应用的accessToken](docs/01-应用开发/02-4a8AMF6u2A-服务端API/0033-obtain-the-access-token-of-an-internal-app.md) · 2026-04-29 → 2026-04-29
+- [创建数据表](docs/01-应用开发/02-4a8AMF6u2A-服务端API/0459-api-createsheet.md) · 2025-09-12 → 2025-09-12
+- [获取数据表](docs/01-应用开发/02-4a8AMF6u2A-服务端API/0460-api-notable-getsheet.md) · 2025-09-12 → 2025-09-12
+- [获取所有数据表](docs/01-应用开发/02-4a8AMF6u2A-服务端API/0461-api-notable-getallsheets.md) · 2025-09-12 → 2025-09-12
+- [更新数据表](docs/01-应用开发/02-4a8AMF6u2A-服务端API/0462-api-noatable-updatesheet.md) · 2025-09-12 → 2025-09-12
+- [删除数据表](docs/01-应用开发/02-4a8AMF6u2A-服务端API/0463-api-noatable-deletesheet.md) · 2025-09-12 → 2025-09-12
+- [创建字段](docs/01-应用开发/02-4a8AMF6u2A-服务端API/0464-api-noatable-createfield.md) · 2025-09-12 → 2025-09-12
+- [更新字段](docs/01-应用开发/02-4a8AMF6u2A-服务端API/0465-api-noatable-updatefield.md) · 2025-09-12 → 2025-09-12
+- [获取所有字段](docs/01-应用开发/02-4a8AMF6u2A-服务端API/0466-api-noatable-getallfields.md) · 2025-09-12 → 2025-09-12
+- [删除字段](docs/01-应用开发/02-4a8AMF6u2A-服务端API/0467-api-noatable-deletefield.md) · 2025-09-12 → 2025-09-12
+- [新增记录](docs/01-应用开发/02-4a8AMF6u2A-服务端API/0468-api-notable-insertrecords.md) · 2026-04-17 → 2026-04-17
+- [获取记录](docs/01-应用开发/02-4a8AMF6u2A-服务端API/0469-api-getrecord.md) · 2025-09-12 → 2025-09-12
+- [列出多行记录](docs/01-应用开发/02-4a8AMF6u2A-服务端API/0470-api-notable-listrecords.md) · 2026-04-17 → 2026-04-17
+- [更新多行记录](docs/01-应用开发/02-4a8AMF6u2A-服务端API/0471-api-noatable-updaterecords.md) · 2025-09-12 → 2025-09-12
+- [删除多行记录](docs/01-应用开发/02-4a8AMF6u2A-服务端API/0472-api-noatable-deleterecords.md) · 2025-09-12 → 2025-09-12
+- [获取单个审批实例详情](docs/01-应用开发/02-4a8AMF6u2A-服务端API/0498-obtains-the-details-of-a-single-approval-instance-pop.md) · 2025-09-11 → 2025-09-11
+- [提交文件](docs/01-应用开发/02-4a8AMF6u2A-服务端API/0675-submittal-file.md) · 2026-03-27 → 2026-03-27
+- [更新日志](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0231-event-log.md) · 2026-08-14 → 2026-08-19
+- [入驻服务协议](docs/01-应用开发/07-TjCzIgfQs3-平台服务/0003-dingtalk-service-agreement-with-customized-service-providers.md) · 2025-09-23 → 2026-08-19
+- [合作协议](docs/01-应用开发/07-TjCzIgfQs3-平台服务/0004-dingtalk-software-vendor-cooperation-service-agreement.md) · 2025-09-23 → 2026-08-19
+- [设计规范](docs/01-应用开发/07-TjCzIgfQs3-平台服务/0005-design-specification-for-dingtalk-product-solution-provider.md) · 2025-09-23 → 2026-08-19
+- [技术规范](docs/01-应用开发/07-TjCzIgfQs3-平台服务/0006-technical-specification-for-dingtalk-product-solution-provider.md) · 2025-09-23 → 2026-08-19
+- [安全规范](docs/01-应用开发/07-TjCzIgfQs3-平台服务/0007-safety-specification-for-dingtalk-product-solution-providers.md) · 2025-09-23 → 2026-08-19
+- [保证金规范](docs/01-应用开发/07-TjCzIgfQs3-平台服务/0008-dingtalk-product-solution-provider-margin-specification.md) · 2025-09-23 → 2026-08-19
+- [入驻规范与流程](docs/01-应用开发/07-TjCzIgfQs3-平台服务/0009-become-sales-service-provider.md) · 2025-09-23 → 2026-08-19
+- [运营规范](docs/01-应用开发/07-TjCzIgfQs3-平台服务/0010-xblw3k.md) · 2025-09-23 → 2026-08-19
+- [产品设计规范](docs/01-应用开发/07-TjCzIgfQs3-平台服务/0015-product-design-specification.md) · 2025-09-23 → 2026-08-19
+- [产品方案商定制服务合作流程](docs/01-应用开发/07-TjCzIgfQs3-平台服务/0017-cooperation-process-of-customized-services-from-product-solution-providers.md) · 2025-09-23 → 2026-08-19
+- [授权服务商开发定制应用](docs/01-应用开发/07-TjCzIgfQs3-平台服务/0018-customize-application-development-process.md) · 2025-09-23 → 2026-08-19
+- [步骤一：申请成为钉钉产品方案商](docs/01-应用开发/07-TjCzIgfQs3-平台服务/0019-step-1-apply-to-become-a-dingtalk-customization-service-provider-1.md) · 2025-09-23 → 2026-08-19
+- [步骤四：服务商进行工作台设计和搭建](docs/01-应用开发/07-TjCzIgfQs3-平台服务/0022-step-4-the-service-provider-designs-and-builds-the-workbench-1.md) · 2025-10-21 → 2026-08-19
+- [步骤六：客户修改方案](docs/01-应用开发/07-TjCzIgfQs3-平台服务/0024-step-6-modify-solution-1.md) · 2025-12-18 → 2026-08-19
+- [合作全流程指引](docs/01-应用开发/07-TjCzIgfQs3-平台服务/0027-isv-cooperation-guide.md) · 2026-01-19 → 2026-08-19
+- [步骤一：入驻成为产品方案商](docs/01-应用开发/07-TjCzIgfQs3-平台服务/0028-become-an-application-service-provider.md) · 2025-09-23 → 2026-08-19
+- [概述](docs/08-工作台/01-ECKYIf1yqx-平台介绍/0001-custom-workbench-and-self-built-components.md) · 2026-08-18 → 2026-08-19
+- [场景示例](docs/08-工作台/02-Qzb8Lpee2t-使用教程/0012-standardization-of-title-blocks-1.md) · 2025-09-03 → 2026-08-19
+- [其他参考](docs/08-工作台/02-Qzb8Lpee2t-使用教程/0013-call-the-workbench-api.md) · 2025-12-08 → 2026-08-19
+- [三方 工作台卡片的创建和使用](docs/08-工作台/02-Qzb8Lpee2t-使用教程/0017-creation-and-use-of-tripartite-ecological-cards.md) · 2025-09-03 → 2026-08-19
+- [三方工作台卡片集成连接器](docs/08-工作台/02-Qzb8Lpee2t-使用教程/0018-three-way-workbench-card-integration-connector.md) · 2025-09-03 → 2026-08-19
+- [步骤二：组件的开发和预览](docs/08-工作台/02-Qzb8Lpee2t-使用教程/0023-step-2-develop-three-party-application-components.md) · 2026-08-18 → 2026-08-19
+- [步骤三：组件上架和审核](docs/08-工作台/02-Qzb8Lpee2t-使用教程/0024-step-3-component-shelf-and-review.md) · 2026-08-18 → 2026-08-19
+- [步骤四：组件的发布](docs/08-工作台/02-Qzb8Lpee2t-使用教程/0025-step-4-publish-the-component.md) · 2025-09-03 → 2026-08-19
+- [开发规范](docs/08-工作台/02-Qzb8Lpee2t-使用教程/0026-development-specification.md) · 2025-10-21 → 2026-08-19
+- [共享组件](docs/08-工作台/02-Qzb8Lpee2t-使用教程/0027-shared-components-1.md) · 2025-10-21 → 2026-08-19
+- [常见问题](docs/08-工作台/02-Qzb8Lpee2t-使用教程/0028-faq.md) · 2025-09-03 → 2026-08-19
+
+## 目录位置移动（内容未变）
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1449-used-to-obtain-the-application-authorization-without-api-token.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/0998-used-to-obtain-the-application-authorization-without-api-token.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/0998-add-recently-used-apps-in-bulk.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/0999-add-recently-used-apps-in-bulk.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/0999-obtain-the-permissions-of-the-workbench-plug-in.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1000-obtain-the-permissions-of-the-workbench-plug-in.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1000-you-can-call-this-operation-to-obtain-the-information-about.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1001-you-can-call-this-operation-to-obtain-the-information-about.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1001-intelligent-customer-service-overview.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1002-intelligent-customer-service-overview.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1002-create-a-self-service-ticket.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1003-create-a-self-service-ticket.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1003-intelligent-customer-service-execute-work-order-activities.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1004-intelligent-customer-service-execute-work-order-activities.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1004-intelligent-customer-service-query-action-records.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1005-intelligent-customer-service-query-action-records.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1005-intelligent-customer-service-paging-query-work-order.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1006-intelligent-customer-service-paging-query-work-order.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1006-development-ai-overview.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1007-development-ai-overview.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1007-translation-of-text-content.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1008-translation-of-text-content.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1008-dingtalk-translation.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1009-dingtalk-translation.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1009-structured-image-recognition-api.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1010-structured-image-recognition-api.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1010-overview-travel.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1011-overview-travel.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1011-air-ticket-city-search.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1012-air-ticket-city-search.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1012-train-ticket-city-search.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1013-train-ticket-city-search.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1013-new-cost-center.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1014-new-cost-center.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1014-modify-basic-cost-center-information.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1015-modify-basic-cost-center-information.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1015-delete-cost-center.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1016-delete-cost-center.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1016-query-cost-center.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1017-query-cost-center.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1017-set-up-cost-center-personnel-information.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1018-set-up-cost-center-personnel-information.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1018-delete-the-personnel-information-of-the-cost-center.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1019-delete-the-personnel-information-of-the-cost-center.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1019-business-travel-cost-center-converted-to-external-cost-center.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1020-business-travel-cost-center-converted-to-external-cost-center.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1020-add-a-project.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1021-add-a-project.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1021-project-change.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1022-project-change.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1022-delete-a-project.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1023-delete-a-project.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1023-user-new-approval-form.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1024-user-new-approval-form.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1024-search-enterprise-approval-form-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1025-search-enterprise-approval-form-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1025-obtains-the-detailed-data-of-a-single-request.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1026-obtains-the-detailed-data-of-a-single-request.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1026-user-modify-approval-form.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1027-user-modify-approval-form.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1027-update-approval-form.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1028-update-approval-form.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1028-dingtalk-oapi-alitrip-btrip-exceedapply-hotel-get.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1029-dingtalk-oapi-alitrip-btrip-exceedapply-hotel-get.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1029-dingtalk-oapi-alitrip-btrip-exceedapply-train-get.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1030-dingtalk-oapi-alitrip-btrip-exceedapply-train-get.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1030-dingtalk-oapi-alitrip-btrip-exceedapply-sync.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1031-dingtalk-oapi-alitrip-btrip-exceedapply-sync.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1031-dingtalk-oapi-alitrip-btrip-exceedapply-flight.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1032-dingtalk-oapi-alitrip-btrip-exceedapply-flight.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1032-obtains-enterprise-ticket-order-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1033-obtains-enterprise-ticket-order-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1033-enterprises-obtain-order-data-for-business-hotels.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1034-enterprises-obtain-order-data-for-business-hotels.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1034-obtains-the-enterprise-train-ticket-order-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1035-obtains-the-enterprise-train-ticket-order-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1035-vehicle-order-query-interface.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1036-vehicle-order-query-interface.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1036-related-order-information.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1037-related-order-information.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1037-obtain-business-travel-access-addresses.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1038-obtain-business-travel-access-addresses.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1038-new-invoice-configuration.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1039-new-invoice-configuration.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1039-configure-invoice-users.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1040-configure-invoice-users.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1040-query-available-invoices.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1041-query-available-invoices.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1041-modify-invoice-configuration.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1042-modify-invoice-configuration.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1042-delete-invoice-information.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1043-delete-invoice-information.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1043-synchronize-third-party-city-vehicle-approval-form.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1044-synchronize-third-party-city-vehicle-approval-form.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1044-approval-of-third-party-city-car-application-form.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1045-approval-of-third-party-city-car-application-form.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1045-query-the-application-form-for-third-party-vehicles-in-the-city.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1046-query-the-application-form-for-third-party-vehicles-in-the-city.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1046-query-interface-for-vehicle-settlement-and-bookkeeping.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1047-query-interface-for-vehicle-settlement-and-bookkeeping.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1047-business-travel-train-ticket-settlement-bookkeeping-query-interface.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1048-business-travel-train-ticket-settlement-bookkeeping-query-interface.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1048-hotel-settlement-bookkeeping-query-interface.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1049-hotel-settlement-bookkeeping-query-interface.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1049-ticket-settlement-bookkeeping-query-interface.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1050-ticket-settlement-bookkeeping-query-interface.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1050-obtain-monthly-reconciliation-settlement-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1051-obtain-monthly-reconciliation-settlement-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1051-query-estimated-price.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1052-query-estimated-price.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1052-jinzhi-crm-interface-call-description.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1053-jinzhi-crm-interface-call-description.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1053-management-of-order-delivery-in-the-manufacturing-industry.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1054-management-of-order-delivery-in-the-manufacturing-industry.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1054-add-or-edit-customer-profile.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1055-add-or-edit-customer-profile.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1055-add-or-edit-customer-public-pools.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1056-add-or-edit-customer-public-pools.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1056-add-or-edit-contacts.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1057-add-or-edit-contacts.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1057-add-or-edit-contract-orders.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1058-add-or-edit-contract-orders.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1058-add-or-edit-invoices.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1059-add-or-edit-invoices.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1059-add-or-edit-a-sales-order.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1060-add-or-edit-a-sales-order.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1060-add-or-edit-opportunities.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1061-add-or-edit-opportunities.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1061-add-or-edit-quotation-records.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1062-add-or-edit-quotation-records.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1062-edit-purchase-order.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1063-edit-purchase-order.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1063-add-or-edit-a-production-order.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1064-add-or-edit-a-production-order.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1064-add-or-edit-product-information.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1065-add-or-edit-product-information.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1065-add-or-edit-a-shipment-record.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1066-add-or-edit-a-shipment-record.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1066-add-or-edit-an-issue-ticket.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1067-add-or-edit-an-issue-ticket.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1067-queries-data-details.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1068-queries-data-details.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1068-obtain-the-data-list.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1069-obtain-the-data-list.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1069-overview-of-e-sign-open-ability.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1070-overview-of-e-sign-open-ability.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1070-isv-service-provider-data-initialization.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1071-isv-service-provider-data-initialization.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1071-obtain-the-address-of-the-authorized-page.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1072-obtain-the-address-of-the-authorized-page.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1072-cancel-enterprise-authorization.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1073-cancel-enterprise-authorization.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1073-package-resale-1-distribution-mode.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1074-package-resale-1-distribution-mode.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1074-package-resale-2-reserve-price-settlement-mode.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1075-package-resale-2-reserve-price-settlement-mode.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1075-query-package-balance.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1076-query-package-balance.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1076-obtain-the-current-status-of-the-company-s-e-sign-micro-application.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1077-obtain-the-current-status-of-the-company-s-e-sign-micro-application.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1077-query-enterprise-information.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1078-query-enterprise-information.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1078-get-enterprise-console-address.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1079-get-enterprise-console-address.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1079-query-personal-information.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1080-query-personal-information.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1080-obtain-the-address-that-is-redirected-to-the-user-s-real.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1081-obtain-the-address-that-is-redirected-to-the-user-s-real.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1081-obtain-the-address-that-is-redirected-to-the-enterprise-s-real.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1082-obtain-the-address-that-is-redirected-to-the-enterprise-s-real.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1082-upload-objects-1.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1083-upload-objects-1.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1083-gets-the-file-details.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1084-gets-the-file-details.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1084-obtain-the-upload-url-of-a-file-1.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1085-obtain-the-upload-url-of-a-file-1.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1085-use-the-api-to-initiate-a-signature-process.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1086-use-the-api-to-initiate-a-signature-process.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1086-get-signatory-address.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1087-get-signatory-address.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1087-get-the-details-of-process-signing.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1088-get-the-details-of-process-signing.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1088-obtain-the-address-used-to-initiate-a-signed-task.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1089-obtain-the-address-used-to-initiate-a-signed-task.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1089-obtains-the-print-approval-list-for-process-tasks.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1090-obtains-the-print-approval-list-for-process-tasks.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1090-obtains-the-task-details.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1091-obtains-the-task-details.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1091-get-a-list-of-all-contracts-for-the-process-task.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1092-get-a-list-of-all-contracts-for-the-process-task.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1092-api-submittripapprovalprocess.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1093-api-submittripapprovalprocess.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1093-overview-of-digital-districts-and-counties.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1094-overview-of-digital-districts-and-counties.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1094-increase-or-decrease-resident-points.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1095-increase-or-decrease-resident-points.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1095-query-all-credit-rules.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1096-query-all-credit-rules.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1096-query-the-integral-flow-records-by-page.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1097-query-the-integral-flow-records-by-page.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1097-overview-of-real-estate-park-address-book.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1098-overview-of-real-estate-park-address-book.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1098-create-a-project-group.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1099-create-a-project-group.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1099-delete-the-project-group-team.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1100-delete-the-project-group-team.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1100-create-a-campus-project.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1101-create-a-campus-project.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1101-query-a-project-group-in-the-specified-park.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1102-query-a-project-group-in-the-specified-park.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1102-query-a-project-in-a-specified-campus.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1103-query-a-project-in-a-specified-campus.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1103-medical-address-book-overview.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1104-medical-address-book-overview.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1104-personnel-extension-property-error.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1105-personnel-extension-property-error.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1105-overview-of-manufacturing-open-api.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1106-overview-of-manufacturing-open-api.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1106-basic-use-process-of-a-piece-report-worker.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1107-basic-use-process-of-a-piece-report-worker.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1107-riqing-monthly-settlement-piece-rate-reporting-interface.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1108-riqing-monthly-settlement-piece-rate-reporting-interface.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1108-riqing-monthly-settlement-query-interface-for-piece-rate-reporting.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1109-riqing-monthly-settlement-query-interface-for-piece-rate-reporting.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1109-overview-of-equipment-nailing.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1110-overview-of-equipment-nailing.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1110-pin-registration-interface.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1111-pin-registration-interface.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1111-register-and-activate-devices-in-batches.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1112-register-and-activate-devices-in-batches.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1112-query-information-about-a-registered-device.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1113-query-information-about-a-registered-device.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1113-obtain-the-repair-report-record.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1114-obtain-the-repair-report-record.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1114-obtain-inspection-and-maintenance-records.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1115-obtain-inspection-and-maintenance-records.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1115-service-group-overview.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1116-service-group-overview.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1116-enable-the-service-group-to-send-messages.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1117-enable-the-service-group-to-send-messages.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1117-service-group-sending-task-interface.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1118-service-group-sending-task-interface.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1118-service-group-message-sending-interface.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1119-service-group-message-sending-interface.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1119-create-a-scenario-service-group.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1120-create-a-scenario-service-group.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1120-add-service-group-members.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1121-add-service-group-members.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1121-queries-active-service-users.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1122-queries-active-service-users.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1122-modify-a-service-group.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1123-modify-a-service-group.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1123-a-dingtalk-group-is-upgraded-to-one-of-the-intelligent.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1124-a-dingtalk-group-is-upgraded-to-one-of-the-intelligent.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1124-upgraded-the-cloud-customer-service-group-to-the-dingtalk-intelligent.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1125-upgraded-the-cloud-customer-service-group-to-the-dingtalk-intelligent.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1125-ai-overview-of-education.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1126-ai-overview-of-education.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1126-education-application-solution.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1127-education-application-solution.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1127-dingtalk-the-main-data-of-the-education-ecosystem-to-query.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1128-dingtalk-the-main-data-of-the-education-ecosystem-to-query.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1128-create-dingtalk-education-subject-instance.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1129-create-dingtalk-education-subject-instance.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1129-update-dingtalk-education-instance.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1130-update-dingtalk-education-instance.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1130-delete-dingtalk-education-disciplines.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1131-delete-dingtalk-education-disciplines.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1131-query-dingtalk-education-subject-instances.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1132-query-dingtalk-education-subject-instances.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1132-get-the-list-of-subject-examples.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1133-get-the-list-of-subject-examples.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1133-dingtalk-the-main-data-of-the-education-ecosystem-query-the-subject.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1134-dingtalk-the-main-data-of-the-education-ecosystem-query-the-subject.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1134-edu-overview.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1135-edu-overview.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1135-teaching-data-overview.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1136-teaching-data-overview.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1136-create-course.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1137-create-course.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1137-modify-course.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1138-modify-course.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1138-delete-course.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1139-delete-course.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1139-get-course-details.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1140-get-course-details.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1140-get-course-list.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1141-get-course-list.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1141-add-course-participants.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1142-add-course-participants.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1142-get-a-list-of-course-participants.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1143-get-a-list-of-course-participants.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1143-remove-course-participants.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1144-remove-course-participants.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1144-start-course.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1145-start-course.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1145-join-course.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1146-join-course.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1146-end-course.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1147-end-course.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1147-replay-course.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1148-replay-course.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1148-get-course-summary-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1149-get-course-summary-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1149-obtain-course-detail-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1150-obtain-course-detail-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1150-dingtalk-education-family-feed-synchronization.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1151-dingtalk-education-family-feed-synchronization.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1151-query-family-child-information.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1152-query-family-child-information.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1152-learn-to-recommend-data-backflow.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1153-learn-to-recommend-data-backflow.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1153-statically-recommended-data-synchronization.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1154-statically-recommended-data-synchronization.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1154-obtains-queries-department-details.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1155-obtains-queries-department-details.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1155-obtains-the-department-node-list.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1156-obtains-the-department-node-list.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1156-obtains-a-list-of-home-school-user-identities.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1157-obtains-a-list-of-home-school-user-identities.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1157-obtain-the-identity-details-of-home-school-personnel.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1158-obtain-the-identity-details-of-home-school-personnel.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1158-queries-the-list-of-relationships.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1159-queries-the-list-of-relationships.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1159-obtain-the-relationship-between-home-and-school-personnel.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1160-obtain-the-relationship-between-home-and-school-personnel.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1160-initialize-the-home-school-architecture.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1161-initialize-the-home-school-architecture.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1161-create-a-learning-segment.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1162-create-a-learning-segment.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1162-create-grade.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1163-create-grade.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1163-create-a-class.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1164-create-a-class.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1164-add-student.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1165-add-student.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1165-add-parent.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1166-add-parent.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1166-add-teacher.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1167-add-teacher.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1167-shift-students.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1168-shift-students.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1168-retrieve-student-based-class.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1169-retrieve-student-based-class.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1169-obtain-student-information.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1170-obtain-student-information.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1170-api-updateclass.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1171-api-updateclass.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1171-api-updatestudent.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1172-api-updatestudent.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1172-api-updateguardian.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1173-api-updateguardian.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1173-delete-teacher.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1174-delete-teacher.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1174-delete-student.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1175-delete-student.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1175-delete-parent-relationship.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1176-delete-parent-relationship.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1176-delete-home-school-department.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1177-delete-home-school-department.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1177-create-a-custom-campus-or-department.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1178-create-a-custom-campus-or-department.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1178-create-classes-in-a-custom-department.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1179-create-classes-in-a-custom-department.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1179-api-isyuwencertifiedteacher.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1180-api-isyuwencertifiedteacher.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1180-feature-field.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1181-feature-field.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1181-api-addcollegecontactuser.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1182-api-addcollegecontactuser.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1182-api-addcollegecontactexclusive.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1183-api-addcollegecontactexclusive.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1183-api-updatecollegecontactuser.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1184-api-updatecollegecontactuser.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1184-api-updatecollegecontactexclusive.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1185-api-updatecollegecontactexclusive.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1185-api-updatecollegeuseremptype.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1186-api-updatecollegeuseremptype.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1186-api-querycollegecontactuserdetail.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1187-api-querycollegecontactuserdetail.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1187-api-createcollegecontactdept.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1188-api-createcollegecontactdept.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1188-api-updatecollegecontactdept.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1189-api-updatecollegecontactdept.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1189-api-getcollegecontactdeptdetail.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1190-api-getcollegecontactdeptdetail.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1190-api-listcollegecontactsubdepts.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1191-api-listcollegecontactsubdepts.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1191-api-listcollegecontactdepttypeconfig.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1192-api-listcollegecontactdepttypeconfig.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1192-api-getcollegecontactstandardstrudeptdetail.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1193-api-getcollegecontactstandardstrudeptdetail.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1193-obtain-a-topic-list-of-class-circles.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1194-obtain-a-topic-list-of-class-circles.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1194-dynamic-list-opening-of-class-circle.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1195-dynamic-list-opening-of-class-circle.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1195-obtain-digital-certificate.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1196-obtain-digital-certificate.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1196-obtain-the-industry-role-information-of-the-user.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1197-obtain-the-industry-role-information-of-the-user.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1197-obtains-a-list-of-users-under-an-industry-role.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1198-obtains-a-list-of-users-under-an-industry-role.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1198-api-liandanluexclusivemodel.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1199-api-liandanluexclusivemodel.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1199-api-exclusivemodelcompleteservice.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1200-api-exclusivemodelcompleteservice.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1200-large-model-reasoning-service-interface-multimodal-model-1.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1201-large-model-reasoning-service-interface-multimodal-model-1.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1201-project-management-overview.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1202-project-management-overview.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1202-obtain-the-project-management-log.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1203-obtain-the-project-management-log.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1203-teambition-free-task-operation-process.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1204-teambition-free-task-operation-process.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1204-team-ambition-project-operation-process.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1205-team-ambition-project-operation-process.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1205-create-project.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1206-create-project.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1206-query-enterprise-all-projects.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1207-query-enterprise-all-projects.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1207-archiving-project.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1208-archiving-project.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1208-cancel-project-archiving.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1209-cancel-project-archiving.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1209-get-project-members.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1210-get-project-members.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1210-query-project-status.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1211-query-project-status.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1211-add-project-members.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1212-add-project-members.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1212-delete-project-members.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1213-delete-project-members.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1213-items-in-recycle-bin.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1214-items-in-recycle-bin.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1214-get-projects-joined-by-users.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1215-get-projects-joined-by-users.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1215-search-for-enterprise-custom-templates-by-project-template-name.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1216-search-for-enterprise-custom-templates-by-project-template-name.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1216-create-a-project-from-a-project-template.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1217-create-a-project-from-a-project-template.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1217-query-available-project-groups.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1218-query-available-project-groups.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1218-update-project-grouping.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1219-update-project-grouping.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1219-query-file-operation-logs-of-a-project.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1220-query-file-operation-logs-of-a-project.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1220-create-or-update-field-values-project-overview.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1221-create-or-update-field-values-project-overview.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1221-create-a-project-task.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1222-create-a-project-task.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1222-delete-task.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1223-delete-task.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1223-get-task-details.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1224-get-task-details.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1224-query-task-grouping.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1225-query-task-grouping.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1225-get-task-list.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1226-get-task-list.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1226-query-task-workflow.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1227-query-task-workflow.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1227-querying-user-tasks.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1228-querying-user-tasks.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1228-query-tasks-in-a-project.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1229-query-tasks-in-a-project.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1229-create-a-linked-object-associated-with-a-task.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1230-create-a-linked-object-associated-with-a-task.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1230-archive-tasks.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1231-archive-tasks.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1231-search-task-workflow-status.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1232-search-task-workflow-status.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1232-update-task-workflow-status.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1233-update-task-workflow-status.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1233-update-task-notes.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1234-update-task-notes.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1234-update-task-content.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1235-update-task-content.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1235-update-task-performer.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1236-update-task-performer.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1236-update-task-priority.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1237-update-task-priority.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1237-update-task-participants.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1238-update-task-participants.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1238-update-task-deadline.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1239-update-task-deadline.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1239-update-task-start-time.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1240-update-task-start-time.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1240-update-task-custom-field-value.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1241-update-task-custom-field-value.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1241-create-a-free-task.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1242-create-a-free-task.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1242-queries-free-task-details.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1243-queries-free-task-details.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1243-query-a-priority-list.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1244-query-a-priority-list.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1244-obtains-details-about-multiple-free-tasks.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1245-obtains-details-about-multiple-free-tasks.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1245-change-free-task-title.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1246-change-free-task-title.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1246-change-free-task-status.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1247-change-free-task-status.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1247-update-free-task-notes.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1248-update-free-task-notes.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1248-change-free-task-executor.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1249-change-free-task-executor.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1249-change-free-task-priority.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1250-change-free-task-priority.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1250-change-free-task-deadline.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1251-change-free-task-deadline.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1251-change-task-participant.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1252-change-task-participant.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1252-create-planned-work.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1253-create-planned-work.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1253-create-actual-work.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1254-create-actual-work.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1254-obtain-the-teambition-enterprise-id.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1255-obtain-the-teambition-enterprise-id.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1255-obtain-dingtalk-teambition-user-id-based-on-userid.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1256-obtain-dingtalk-teambition-user-id-based-on-userid.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1256-the-description-of-the-tql-task.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1257-the-description-of-the-tql-task.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1257-teambition-faq.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1258-teambition-faq.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1258-introduction-to-dingtalk-badge.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1259-introduction-to-dingtalk-badge.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1259-nail-badge-for-identity-verification.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1260-nail-badge-for-identity-verification.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1260-save-dingtalk-enterprise-instance.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1261-save-dingtalk-enterprise-instance.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1261-create-a-badge-user-instance.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1262-create-a-badge-user-instance.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1262-update-dingtalk-user-instance.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1263-update-dingtalk-user-instance.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1263-stack-dingtalk-badge.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1264-stack-dingtalk-badge.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1264-sync-dingtalk-badge-code-payment-result.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1265-sync-dingtalk-badge-code-payment-result.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1265-notification-dingtalk-badge-code-refund-result.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1266-notification-dingtalk-badge-code-refund-result.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1266-dingtalk-badge-notification-message.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1267-dingtalk-badge-notification-message.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1267-notification-dingtalk-badge-verification-result.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1268-notification-dingtalk-badge-verification-result.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1268-create-a-user-code-instance.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1269-create-a-user-code-instance.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1269-update-user-code-instance.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1270-update-user-code-instance.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1270-decoding-dingtalk-payment-code.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1271-decoding-dingtalk-payment-code.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1271-notify-dingtalk-payment-code-payment-result.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1272-notify-dingtalk-payment-code-payment-result.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1272-dingtalk-payment-code-refund-information-synchronization-operation.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1273-dingtalk-payment-code-refund-information-synchronization-operation.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1273-sync-pin-badge-code-verification-result.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1274-sync-pin-badge-code-verification-result.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1274-set-up-enterprise-payment-code-configuration-interface.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1275-set-up-enterprise-payment-code-configuration-interface.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1275-dingbadge-faq.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1276-dingbadge-faq.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1276-customer-service-overview.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1277-customer-service-overview.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1277-service-window-message-types-1.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1278-service-window-message-types-1.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1278-self-built-service-window-application.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1279-self-built-service-window-application.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1279-batch-sending-of-service-window-messages.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1280-batch-sending-of-service-window-messages.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1280-sends-a-single-message-from-the-service-window.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1281-sends-a-single-message-from-the-service-window.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1281-queries-the-list-of-services-under-an-enterprise.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1282-queries-the-list-of-services-under-an-enterprise.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1282-the-third-party-enterprise-application-obtains-the-account-list-of-the.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1283-the-third-party-enterprise-application-obtains-the-account-list-of-the.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1283-obtains-the-follower-information-from-the-service-window.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1284-obtains-the-follower-information-from-the-service-window.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1284-queries-the-follower-information-of-the-service-window.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1285-queries-the-follower-information-of-the-service-window.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1285-obtain-the-attention-status-of-the-user-service-window.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1286-obtain-the-attention-status-of-the-user-service-window.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1286-third-party-enterprise-application-obtains-user-attention-service-window-status.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1287-third-party-enterprise-application-obtains-user-attention-service-window-status.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1287-a-third-party-personal-application-sends-a-message-to-a-single.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1288-a-third-party-personal-application-sends-a-message-to-a-single.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1288-queries-the-basic-information-of-fans-in-the-service-window.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1289-queries-the-basic-information-of-fans-in-the-service-window.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1289-customer-service-faq.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1290-customer-service-faq.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1290-api-queryvipmemberinfo.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1291-api-queryvipmemberinfo.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1291-audiovisual-intelligence-service-overview.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1292-audiovisual-intelligence-service-overview.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1292-api-getcustomerinfo.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1293-api-getcustomerinfo.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1293-api-listteam.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1294-api-listteam.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1294-api-querydevicestatus.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1295-api-querydevicestatus.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1295-api-getservicerecord.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1296-api-getservicerecord.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1296-api-listservicetodo.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1297-api-listservicetodo.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1297-api-getservicechatsummary.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1298-api-getservicechatsummary.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1298-api-getservicequalityinspection.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1299-api-getservicequalityinspection.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1299-api-listcustomer.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1300-api-listcustomer.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1300-api-listdevice.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1301-api-listdevice.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1301-api-querydevicedetail.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1302-api-querydevicedetail.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1302-api-updatedevicebinding.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1303-api-updatedevicebinding.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1303-api-getaudiofileinfo.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1304-api-getaudiofileinfo.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1304-api-getasrtranscription.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1305-api-getasrtranscription.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1305-api-createasrtranscription.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1306-api-createasrtranscription.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1306-api-getservicechaptersummary.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1307-api-getservicechaptersummary.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1307-api-gettranscriptsummary.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1308-api-gettranscriptsummary.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1308-api-getcustomerinsight.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1309-api-getcustomerinsight.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1309-api-queryfileinfobyminutesid.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1310-api-queryfileinfobyminutesid.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1310-api-listservicerecord.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1311-api-listservicerecord.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1311-api-queryaudiofile.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1312-api-queryaudiofile.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1312-intelligent-hardware-overview.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1313-intelligent-hardware-overview.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1313-establishing-a-binding-relationship-between-intelligent-hardware-and-cloud.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1314-establishing-a-binding-relationship-between-intelligent-hardware-and-cloud.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1314-unbind-a-smart-hardware-device.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1315-unbind-a-smart-hardware-device.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1315-intelligent-hardware-device-nickname-modification.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1316-intelligent-hardware-device-nickname-modification.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1316-intelligent-hardware-list-query.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1317-intelligent-hardware-list-query.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1317-intelligent-hardware-device-query.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1318-intelligent-hardware-device-query.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1318-the-smart-hardware-can-query-details-based-on-the-device.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1319-the-smart-hardware-can-query-details-based-on-the-device.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1319-api-getdevicedetail.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1320-api-getdevicedetail.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1320-api-setdeviceproperties.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1321-api-setdeviceproperties.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1321-api-getserviceinvocation.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1322-api-getserviceinvocation.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1322-api-confirmfirmwareupgrade.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1323-api-confirmfirmwareupgrade.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1323-api-checkdeviceupdate.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1324-api-checkdeviceupdate.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1324-api-getdeviceproperties.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1325-api-getdeviceproperties.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1325-api-invokedeviceservice.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1326-api-invokedeviceservice.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1326-api-querysmartdeviceaisummary.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1327-api-querysmartdeviceaisummary.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1327-api-createsmartdeviceaisummary.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1328-api-createsmartdeviceaisummary.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1328-dingtalk-carbon-neutral-overview.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1329-dingtalk-carbon-neutral-overview.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1329-write-in-the-detailed-information-of-daily-user-carbon-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1330-write-in-the-detailed-information-of-daily-user-carbon-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1330-third-party-applications-write-daily-organizational-carbon-data-details-1.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1331-third-party-applications-write-daily-organizational-carbon-data-details-1.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1331-hcm-master-data-overview.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1332-hcm-master-data-overview.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1332-api-amdpemployeedatapush.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1333-api-amdpemployeedatapush.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1333-api-amdporganizationdatapush.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1334-api-amdporganizationdatapush.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1334-api-amdpjobpositiondatapush.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1335-api-amdpjobpositiondatapush.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1335-api-amdpemproledatapush.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1336-api-amdpemproledatapush.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1336-overview-digital-managers.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1337-overview-digital-managers.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1337-querying-completed-tasks.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1338-querying-completed-tasks.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1338-docking-of-provincial-practical-exercises-for-digital-managers.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1339-docking-of-provincial-practical-exercises-for-digital-managers.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1339-crm-overview.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1340-crm-overview.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1340-customer-management-operation-process.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1341-customer-management-operation-process.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1341-crm-contact-data-operation-process.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1342-crm-contact-data-operation-process.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1342-crm-follow-up-record-data-operation-process.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1343-crm-follow-up-record-data-operation-process.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1343-crm-custom-object-data-operation-process.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1344-crm-custom-object-data-operation-process.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1344-crm-customer-group-operation-process.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1345-crm-customer-group-operation-process.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1345-retrieves-customer-information-based-on-the-union-id.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1346-retrieves-customer-information-based-on-the-union-id.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1346-obtain-the-metadata-of-individual-enterprise-customers.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1347-obtain-the-metadata-of-individual-enterprise-customers.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1347-add-crm-personal-customers.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1348-add-crm-personal-customers.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1348-update-crm-personal-customers.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1349-update-crm-personal-customers.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1349-delete-crm-personal-customer.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1350-delete-crm-personal-customer.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1350-add-multiple-relationship-data-in-batches.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1351-add-multiple-relationship-data-in-batches.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1351-update-multiple-relational-data-tables-at-a-time.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1352-update-multiple-relational-data-tables-at-a-time.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1352-acquire-crm-individual-customers-in-batches.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1353-acquire-crm-individual-customers-in-batches.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1353-crm-obtains-all-private-sea-customer-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1354-crm-obtains-all-private-sea-customer-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1354-obtains-crm-individual-customers-in-batches-based-on-specified-query.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1355-obtains-crm-individual-customers-in-batches-based-on-specified-query.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1355-obtain-duplicate-check-fields.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1356-obtain-duplicate-check-fields.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1356-get-customer-management-global-information.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1357-get-customer-management-global-information.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1357-querying-customer-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1358-querying-customer-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1358-api-getrelatedviewtabmeta.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1359-api-getrelatedviewtabmeta.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1359-api-getrelatedviewtabdata.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1360-api-getrelatedviewtabdata.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1360-add-contact-data-in-batches.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1361-add-contact-data-in-batches.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1361-delete-crm-contact.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1362-delete-crm-contact.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1362-modify-contact-data-in-batches.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1363-modify-contact-data-in-batches.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1363-gets-the-metadata-description-of-a-crm-contact-object.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1364-gets-the-metadata-description-of-a-crm-contact-object.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1364-api-getcontacts.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1365-api-getcontacts.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1365-retrieves-contact-data-in-batches-based-on-the-id-list.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1366-retrieves-contact-data-in-batches-based-on-the-id-list.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1366-obtains-the-metadata-description-of-the-crm-follow-up-record-object.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1367-obtains-the-metadata-description-of-the-crm-follow-up-record-object.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1367-batch-add-follow-up-record-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1368-batch-add-follow-up-record-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1368-batch-update-follow-up-record-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1369-batch-update-follow-up-record-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1369-batch-delete-follow-up-record-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1370-batch-delete-follow-up-record-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1370-query-and-dingtalk-data-of-track-records-in-apsara-stack.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1371-query-and-dingtalk-data-of-track-records-in-apsara-stack.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1371-dingtalk-the-primary-data-of-apsara-stack-agility-paas-allows-you.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1372-dingtalk-the-primary-data-of-apsara-stack-agility-paas-allows-you.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1372-dingtalk-paas-master-create-custom-crm-object-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1373-dingtalk-paas-master-create-custom-crm-object-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1373-delete-crm-custom-object-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1374-delete-crm-custom-object-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1374-crm-master-data-opens-interface-for-updating-custom-object-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1375-crm-master-data-opens-interface-for-updating-custom-object-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1375-get-metadata-description-of-crm-custom-object.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1376-get-metadata-description-of-crm-custom-object.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1376-api-getobjectdata.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1377-api-getobjectdata.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1377-retrieves-custom-crm-forms-from-the-id-list.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1378-retrieves-custom-crm-forms-from-the-id-list.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1378-create-a-customer-group.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1379-create-a-customer-group.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1379-query-the-list-of-customer-groups.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1380-query-the-list-of-customer-groups.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1380-obtain-a-single-customer-group.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1381-obtain-a-single-customer-group.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1381-query-customer-groups-in-batches.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1382-query-customer-groups-in-batches.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1382-crm-create-group.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1383-crm-create-group.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1383-queries-the-details-of-a-single-customer-group.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1384-queries-the-details-of-a-single-customer-group.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1384-crm-update-group.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1385-crm-update-group.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1385-query-groups.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1386-query-groups.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1386-custom-control-field-format-description-v1.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1387-custom-control-field-format-description-v1.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1387-custom-control-field-format-description-v2.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1388-custom-control-field-format-description-v2.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1388-add-and-update-customer-field-format-description-v1.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1389-add-and-update-customer-field-format-description-v1.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1389-the-model-fields-supported-by-the-interface-and-their-value.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1390-the-model-fields-supported-by-the-interface-and-their-value.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1390-add-and-update-contact-field-format-description-v1.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1391-add-and-update-contact-field-format-description-v1.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1391-add-and-update-contact-field-format-description-v2.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1392-add-and-update-contact-field-format-description-v2.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1392-inner-query-dsl-description.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1393-inner-query-dsl-description.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1393-dsl-syntax-description.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1394-dsl-syntax-description.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1394-structure-of-applink.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1395-structure-of-applink.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1395-open-applet.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1396-open-applet.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1396-open-h5-micro-application-1.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1397-open-h5-micro-application-1.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1397-open-normal-page.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1398-open-normal-page.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1398-open-personal-details-page.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1399-open-personal-details-page.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1399-send-mail.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1400-send-mail.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1400-open-and-sweep.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1401-open-and-sweep.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1401-enter-a-group-chat-session.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1402-enter-a-group-chat-session.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1402-select-employee-to-send-message.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1403-select-employee-to-send-message.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1403-create-group.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1404-create-group.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1404-open-my-group.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1405-open-my-group.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1405-client-tab-switching.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1406-client-tab-switching.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1406-open-the-cloud-disk-home-page.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1407-open-the-cloud-disk-home-page.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1407-open-file-dynamic.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1408-open-file-dynamic.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1408-open-the-chain-management.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1409-open-the-chain-management.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1409-send-ding-message.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1410-send-ding-message.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1410-open-my-information-page.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1411-open-my-information-page.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1411-open-account-and-security.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1412-open-account-and-security.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1412-open-special-attention.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1413-open-special-attention.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1413-create-dingtalk-organization.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1414-create-dingtalk-organization.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1414-open-member-request-1.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1415-open-member-request-1.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1415-open-team-invitation-qr-code.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1416-open-team-invitation-qr-code.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1416-open-join-team.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1417-open-join-team.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1417-open-set-dingtalk-number.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1418-open-set-dingtalk-number.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1418-open-select-contact-initiating-phone.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1419-open-select-contact-initiating-phone.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1419-open-dingtalk-screen.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1420-open-dingtalk-screen.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1420-open-add-friend.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1421-open-add-friend.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1421-open-it-and-see.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1422-open-it-and-see.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1422-initiate-approval.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1423-initiate-approval.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1423-open-approval-home-page.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1424-open-approval-home-page.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1424-open-approval-details.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1425-open-approval-details.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1425-open-approval-filter-page.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1426-open-approval-filter-page.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1426-immersive-container-1.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1427-immersive-container-1.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1427-signature-personal-registration.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1428-signature-personal-registration.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1428-the-signature-calculation-method-of-the-third-party-access-interface.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1429-the-signature-calculation-method-of-the-third-party-access-interface.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1429-rsa-private-key-to-sign-parameters-1.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1430-rsa-private-key-to-sign-parameters-1.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1430-dingtalk-application-development-platform-billing-model.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1431-dingtalk-application-development-platform-billing-model.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1431-basic-interfaces-such-as-log-off-and-address-book.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1432-basic-interfaces-such-as-log-off-and-address-book.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1432-how-to-process-api-throttling-on-the-dingtalk-server.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1433-how-to-process-api-throttling-on-the-dingtalk-server.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1433-appendix-a-list-of-events-not-included-in-webhook.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1434-appendix-a-list-of-events-not-included-in-webhook.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1434-appendix-b-proposals-for-rational-use-of-resources.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1435-appendix-b-proposals-for-rational-use-of-resources.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1435-service-log.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1436-service-log.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1436-open-ai-paas-report.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1437-open-ai-paas-report.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1437-notice-on-the-equity-adjustment-of-enterprise-application-development-and.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1438-notice-on-the-equity-adjustment-of-enterprise-application-development-and.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1438-notice-optimization-payment-metering.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1439-notice-optimization-payment-metering.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1439-dingtalk-document-whitelist.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1440-dingtalk-document-whitelist.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1440-notes-on-purchasing-enterprise-application-development-package-to-obtain-exclusive.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1441-notes-on-purchasing-enterprise-application-development-package-to-obtain-exclusive.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1441-description-of-new-oa-approval-premium-exclusive-openapi-and-solutions.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1442-description-of-new-oa-approval-premium-exclusive-openapi-and-solutions.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1442-description-of-the-new-professional-and-exclusive-editions-of-nail-exclusive-openapi.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1443-description-of-the-new-professional-and-exclusive-editions-of-nail-exclusive-openapi.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1443-obtain-orgapp-token.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1444-obtain-orgapp-token.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1444-obtain-application-suite-ticket.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1445-obtain-application-suite-ticket.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1445-obtain-isvapp-token.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1446-obtain-isvapp-token.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1446-obtain-jsapi-ticket.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1447-obtain-jsapi-ticket.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1447-obtains-the-enterprise-authorized-credential.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1448-obtains-the-enterprise-authorized-credential.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1448-obtain-the-ssotoken-for-micro-application-background-logon-free.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1449-obtain-the-ssotoken-for-micro-application-background-logon-free.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0115-bot-message-withdrawal-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0111-bot-message-withdrawal-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0116-bot-message-read-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0112-bot-message-read-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0111-single-chat-install-cool-app.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0113-single-chat-install-cool-app.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0112-single-chat-uninstall-cool-application.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0114-single-chat-uninstall-cool-application.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0113-install-cool-application-events-in-the-group.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0115-install-cool-application-events-in-the-group.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0114-uninstall-cool-app-event-in-group.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0116-uninstall-cool-app-event-in-group.md
+
+## 后续动作
+- 结构层（index/ graph/ meta/kb_manifest）：--apply 已全量重建；未 --apply 则本报告仅供预览。
+- 认知层（index/TOPICS.md）：对照上面清单，凡命中 TOPICS 引用的文档（可用 `rg <path> index/TOPICS.md` 与 `graph/links.jsonl` 反查），由 LLM 复核该主题条目是否要改写。

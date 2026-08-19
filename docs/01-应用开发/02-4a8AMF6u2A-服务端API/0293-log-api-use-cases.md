@@ -29,7 +29,7 @@ updated_at: "2026-07-08 14:13:48"
 
 ## 操作步骤
 
-1. 获取应用访问凭证[获取企业内部应用的access\_token](1443-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
+1. 获取应用访问凭证[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
 2. 手动在钉钉的日志中创建一个日志模板。
 
    ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/5600089071/p776197.png)

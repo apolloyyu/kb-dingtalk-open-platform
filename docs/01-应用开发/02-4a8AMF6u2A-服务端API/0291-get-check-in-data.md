@@ -39,7 +39,7 @@ updated_at: "2026-05-27 17:06:34"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | 6d1bxxxx | 调用该接口的应用凭证，通过[获取企业内部应用的access\_token](1443-obtain-orgapp-token.md)接口获取。 |
+| access\_token | String | 是 | 6d1bxxxx | 调用该接口的应用凭证，通过[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)接口获取。 |
 | department\_id | String | 是 | 1 | 部门ID，1表示根部门，可通过[获取部门列表](0082-user-management-acquires-the-list-departments.md)接口获取dept\_id参数值。 |
 | end\_time | Number | 是 | 1520956800000 | 结束时间，Unix时间戳，单位毫秒。 |
 | start\_time | Number | 是 | 1520956800000 | 开始时间，开始时间，Unix时间戳，单位毫秒。  **[!NOTE]**  开始时间和结束时间的间隔不能大于45天。 |

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "平台服务"
 breadcrumb: "合作指南 > 产品方案商 > 应用市场的合作指引 > 步骤一：入驻成为产品方案商"
 doc_id: "L3mzzuUV2M"
-updated_at: "2025-09-23 19:21:56"
+updated_at: "2026-08-19 09:15:35"
 ---
 
 > Source: https://open.dingtalk.com/document/services/become-an-application-service-provider
 > Path: 应用开发 / 平台服务 / 合作指南 > 产品方案商 > 应用市场的合作指引 > 步骤一：入驻成为产品方案商
-> Updated: 2025-09-23 19:21:56
+> Updated: 2026-08-19 09:15:35
 
 # 步骤一：入驻成为产品方案商
 
@@ -42,18 +42,18 @@ updated_at: "2025-09-23 19:21:56"
 
    - 通讯录如何操作认证：
 
-     ![企业普通认证..png](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/9901414861/p670927.png)
+     ![企业普通认证..png](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/5312017871/p670927.png)
 
 ## 二、申请入驻
 
 1. 登录[钉钉合作伙伴平台](https://partner.dingtalk.com/)。
 2. 选择**产品方案商**，单击**服务商资料**，单击**申请入驻**，然后根据表单填写企业信息、公司介绍和合同签署等。
 
-> **[!NOTE]**
->
-> 入驻申请提交成功后，钉钉开放平台会在1-2个工作日完成入驻审核。
+   > **[!NOTE]**
+   >
+   > 入驻申请提交成功后，钉钉开放平台会在1-2个工作日完成入驻审核。
 
-![njknbfjksz](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/9834069561/p475013.png)
+   ![njknbfjksz](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/5312017871/p475013.png)
 
 ## 三、绑定收款账号
 
@@ -69,7 +69,9 @@ updated_at: "2025-09-23 19:21:56"
    > - **网商银行账户开通非必选项，开通后客户可通过银行汇款方式支付，建议开通。**
 2. **绑定操作路径**
 
-   登录[钉钉合作伙伴管理后台](https://partner.dingtalk.com/index.html#/providerinfo)，单击**通用管理**，然后单击**收款账号**，最后选择对应的收款方式，单击**立即开通**。![bfkhvef](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/9834069561/p475018.png)
+   登录[钉钉合作伙伴管理后台](https://partner.dingtalk.com/index.html#/providerinfo)，单击**通用管理**，然后单击**收款账号**，最后选择对应的收款方式，单击**立即开通**。
+
+   ![bfkhvef](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/5312017871/p475018.png)
 3. **常见问题说明**
 
    - 失败原因为“**工商网校验法人不匹配**”。
@@ -87,4 +89,4 @@ updated_at: "2025-09-23 19:21:56"
        ![支付宝代发协议](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/9034687161/p261462.png)![扫码](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/9034687161/p261464.png)
      - 入口二：企业支付宝端开通。
 
-       ![企业支付宝端开通](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/9034687161/p261465.png)
+       ![企业支付宝端开通](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/5312017871/p261465.png)

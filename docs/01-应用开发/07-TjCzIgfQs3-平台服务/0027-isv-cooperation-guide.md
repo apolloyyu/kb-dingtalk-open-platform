@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "平台服务"
 breadcrumb: "合作指南 > 产品方案商 > 应用市场的合作指引 > 合作全流程指引"
 doc_id: "SvTVjHl6uU"
-updated_at: "2026-01-19 16:42:44"
+updated_at: "2026-08-19 09:15:33"
 ---
 
 > Source: https://open.dingtalk.com/document/services/isv-cooperation-guide
 > Path: 应用开发 / 平台服务 / 合作指南 > 产品方案商 > 应用市场的合作指引 > 合作全流程指引
-> Updated: 2026-01-19 16:42:44
+> Updated: 2026-08-19 09:15:33
 
 # 合作全流程指引
 
@@ -103,4 +103,4 @@ updated_at: "2026-01-19 16:42:44"
   >
   > 钉钉扫码识别下方二维码选择对应入驻组织加入官方对接群。
 
-  ![运营二维码扫码](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/4778359761/p608436.png)
+  ![运营二维码扫码](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/3312017871/p608436.png)

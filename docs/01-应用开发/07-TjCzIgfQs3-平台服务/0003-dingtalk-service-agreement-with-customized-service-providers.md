@@ -1,20 +1,20 @@
 ---
-title: "钉钉产品方案商入驻服务协议"
+title: "入驻服务协议"
 source_url: "https://open.dingtalk.com/document/services/dingtalk-service-agreement-with-customized-service-providers"
 namespace: "services"
 slug: "dingtalk-service-agreement-with-customized-service-providers"
 group: "应用开发"
 tab: "平台服务"
-breadcrumb: "平台协议 > 产品方案商 > 钉钉产品方案商入驻服务协议"
+breadcrumb: "平台协议 > 产品方案商 > 入驻服务协议"
 doc_id: "PVfPQdpIX9"
-updated_at: "2025-09-23 19:21:22"
+updated_at: "2026-08-19 09:15:21"
 ---
 
 > Source: https://open.dingtalk.com/document/services/dingtalk-service-agreement-with-customized-service-providers
-> Path: 应用开发 / 平台服务 / 平台协议 > 产品方案商 > 钉钉产品方案商入驻服务协议
-> Updated: 2025-09-23 19:21:22
+> Path: 应用开发 / 平台服务 / 平台协议 > 产品方案商 > 入驻服务协议
+> Updated: 2026-08-19 09:15:21
 
-# 钉钉产品方案商入驻服务协议
+# 入驻服务协议
 
 版本更新日期：2024年6月24日
 

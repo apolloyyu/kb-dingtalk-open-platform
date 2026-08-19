@@ -94,7 +94,7 @@ updated_at: "2026-04-24 14:10:43"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| bizDetailPageUrl | String | 否 | 第三方审批系统中审批单详情页地址，用于满足三方业务自研页面 + OA审批官方工作流集成的复杂业务场景诉求。最大长度1024字符。     - 指定bizDetailPageUrl功能为[OA高级版](dingtalk://dingtalkclient/page/link?url=https%3A%2F%2Fpage.dingtalk.com%2Fwow%2Fdingtalk%2Fdefault%2Fdingtalk%2FlnfR8GaRSWqNncZHSvLLx%3Fdd_mini_app_id%3D5000000004997171&web_wnd=general&width=480&height=800)专享功能，升级OA高级版可用，可满足更高级的开发需求，响应个性化的业务场景。[查看全部专享OpenAPI](1441-description-of-new-oa-approval-premium-exclusive-openapi-and-solutions.md#a56c9869e4v0i) - 若指定了bizDetailPageUrl，在钉钉OA审批、钉钉待办、消息卡片等入口点击跳转时，将会直接跳转对应业务系统详情页地址。 |
+| bizDetailPageUrl | String | 否 | 第三方审批系统中审批单详情页地址，用于满足三方业务自研页面 + OA审批官方工作流集成的复杂业务场景诉求。最大长度1024字符。     - 指定bizDetailPageUrl功能为[OA高级版](dingtalk://dingtalkclient/page/link?url=https%3A%2F%2Fpage.dingtalk.com%2Fwow%2Fdingtalk%2Fdefault%2Fdingtalk%2FlnfR8GaRSWqNncZHSvLLx%3Fdd_mini_app_id%3D5000000004997171&web_wnd=general&width=480&height=800)专享功能，升级OA高级版可用，可满足更高级的开发需求，响应个性化的业务场景。[查看全部专享OpenAPI](1442-description-of-new-oa-approval-premium-exclusive-openapi-and-solutions.md#a56c9869e4v0i) - 若指定了bizDetailPageUrl，在钉钉OA审批、钉钉待办、消息卡片等入口点击跳转时，将会直接跳转对应业务系统详情页地址。 |
 | originatorUserId | String | 是 | 审批发起人的userId，可通过[获取部门用户userid列表](0065-query-the-list-of-department-userids.md)接口获取。 |
 | processCode | String | 是 | 审批流的唯一码。process\_code在审批模板编辑页面的URL中获取。 |
 | deptId | Long | 否 | 审批发起人所在的部门ID。     - 若approvers已传值时（即直接指定审批人列表），则deptId不需填写。 - 若approvers未传值时（即不直接指定审批人列表），则deptId需必填，可通过[查询用户详情](0056-query-user-details.md)接口获取返回的部门ID，若为根部门ID需填-1。 |

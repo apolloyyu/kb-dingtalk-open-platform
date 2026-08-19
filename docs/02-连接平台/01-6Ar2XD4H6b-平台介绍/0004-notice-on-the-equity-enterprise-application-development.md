@@ -75,7 +75,7 @@ updated_at: "2026-01-22 21:25:56"
 
 **方式二**：
 
-- 支持购买[企业开发增购包](../../01-应用开发/02-4a8AMF6u2A-服务端API/1430-dingtalk-application-development-platform-billing-model.md)，开发者可登录[开发者后台-资源管理](https://open-dev.dingtalk.com/?hash=%23%2F#/)查看企业所有的用量权益。如您已经收到用量预警，或调用额度无法满足使用，您可以购买[应用开发增购包（独立购）](dingtalk://dingtalkclient/page/link?url=https%3A%2F%2Fn.dingtalk.com%2Fdingding%2Fdd-pro-composite-order%2Fpc%2Findex.html%3Fpopup_wnd%3Dtrue%26dd_tab%3Dtrue%26width%3D900%26height%3D600%26title%3D%25E9%2592%2589%25E9%2592%2589%25E6%2595%25B0%25E5%25AD%2597%25E8%25B5%2584%25E4%25BA%25A7%26articleCode%3DDT_GOODS_dingtalkmemberplus%26channel%3Dopenpf_web_devdoc%26corpId%3D${corpId}%26accessoryProduct%3DpaasWithConnector%26tabKey%3DDT_GOODS_dingtalkmemberplus&popup_wnd=true&height=600&width=900)提升当月调用总额度。
+- 支持购买[企业开发增购包](../../01-应用开发/02-4a8AMF6u2A-服务端API/1431-dingtalk-application-development-platform-billing-model.md)，开发者可登录[开发者后台-资源管理](https://open-dev.dingtalk.com/?hash=%23%2F#/)查看企业所有的用量权益。如您已经收到用量预警，或调用额度无法满足使用，您可以购买[应用开发增购包（独立购）](dingtalk://dingtalkclient/page/link?url=https%3A%2F%2Fn.dingtalk.com%2Fdingding%2Fdd-pro-composite-order%2Fpc%2Findex.html%3Fpopup_wnd%3Dtrue%26dd_tab%3Dtrue%26width%3D900%26height%3D600%26title%3D%25E9%2592%2589%25E9%2592%2589%25E6%2595%25B0%25E5%25AD%2597%25E8%25B5%2584%25E4%25BA%25A7%26articleCode%3DDT_GOODS_dingtalkmemberplus%26channel%3Dopenpf_web_devdoc%26corpId%3D${corpId}%26accessoryProduct%3DpaasWithConnector%26tabKey%3DDT_GOODS_dingtalkmemberplus&popup_wnd=true&height=600&width=900)提升当月调用总额度。
 
   |  | **企业应用开发增购包** | **价格** |
   | --- | --- | --- |

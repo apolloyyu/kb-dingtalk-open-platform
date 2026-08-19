@@ -22,7 +22,7 @@ updated_at: "2026-01-23 10:46:02"
 
 > **[!NOTE]**
 >
-> 当前接口为[OA高级版](dingtalk://dingtalkclient/page/link?url=https%3A%2F%2Fpage.dingtalk.com%2Fwow%2Fdingtalk%2Fdefault%2Fdingtalk%2FlnfR8GaRSWqNncZHSvLLx%3Fdd_mini_app_id%3D5000000004997171&web_wnd=general&width=480&height=800)专享接口，升级OA高级版可用，可满足更高级的开发需求，响应个性化的业务场景，查看全部[专享OpenAPI](1441-description-of-new-oa-approval-premium-exclusive-openapi-and-solutions.md)。
+> 当前接口为[OA高级版](dingtalk://dingtalkclient/page/link?url=https%3A%2F%2Fpage.dingtalk.com%2Fwow%2Fdingtalk%2Fdefault%2Fdingtalk%2FlnfR8GaRSWqNncZHSvLLx%3Fdd_mini_app_id%3D5000000004997171&web_wnd=general&width=480&height=800)专享接口，升级OA高级版可用，可满足更高级的开发需求，响应个性化的业务场景，查看全部[专享OpenAPI](1442-description-of-new-oa-approval-premium-exclusive-openapi-and-solutions.md)。
 
 - 每个企业最多创建流程中心200个模板，超过最大数量后调用接口会报错。
 - 钉钉客户端展示审批列表时，仅展示模板表单的前三个选项。

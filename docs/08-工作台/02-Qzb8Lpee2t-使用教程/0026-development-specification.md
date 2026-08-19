@@ -7,12 +7,12 @@ group: "工作台"
 tab: "使用教程"
 breadcrumb: "合作伙伴教程 > 第三方全码组件 > 组件规范 > 开发规范"
 doc_id: "L0HlGrrIJc"
-updated_at: "2025-10-21 14:11:19"
+updated_at: "2026-08-19 09:12:37"
 ---
 
 > Source: https://open.dingtalk.com/document/dingstart/development-specification
 > Path: 工作台 / 使用教程 / 合作伙伴教程 > 第三方全码组件 > 组件规范 > 开发规范
-> Updated: 2025-10-21 14:11:19
+> Updated: 2026-08-19 09:12:37
 
 # 开发规范
 
@@ -92,7 +92,9 @@ updated_at: "2025-10-21 14:11:19"
 >
 > 目前code为10002表示网关黑名单异常，其它code是接口本身异常。
 
-代码示例：![组件三种状态支持](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/7551987261/p300403.png)
+代码示例：
+
+![组件三种状态支持](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/7551987261/p300403.png)
 
 - 当组件关联的应用未被安装，但组件被投放到工作台时，组件状态为营销态。
 - 当组件所属的解决方案未被安装，但组件被投放到工作台时，组件状态为营销态。
@@ -111,8 +113,8 @@ this.props.componentProps.promotionState === 'STANDARD_WORKTAB'
   ```
   // 营销态时打开试用地址的示例代码
   if (this.props.componentProps.promotionState === 'STANDARD_WORKTAB') {
-   getSdk().openApp({
-     url: this.props.componentProps.tryoutAddress,
+    getSdk().openApp({
+      url: this.props.componentProps.tryoutAddress,
     });
   }
   ```
@@ -165,20 +167,20 @@ PC端示意图：
 
     ```
     {
-        "pluginComponentName": "project-select-view",
+      "pluginComponentName": "project-select-view",
         "name": "对应下图中的title",
         "icon": "对应下图中的icon",
         "previewUrl": "https://img.alicdn.com/tfs/TB1KcAWdrj1gK0jSZFOXXc7GpXa-750-100.jpg",
         "previewHeight": 200,        
-      // 工作台组件的快速设置选项   
+        // 工作台组件的快速设置选项   
         "quickSetting": {
-            "useStandardHead": true,     // 使用工作台组件标准标题栏，请所有组件升级到此设置
-            "useStandardContainer": true,   // 使用工作台组件标准样式，请所有组件升级到此设置
-            "containerType": "standard",    // 组件是标准高度的组件值设置为standard，2倍高度的组件值为doubleHeight
-        },
-        "props": {
+        "useStandardHead": true,     // 使用工作台组件标准标题栏，请所有组件升级到此设置
+          "useStandardContainer": true,   // 使用工作台组件标准样式，请所有组件升级到此设置
+          "containerType": "standard",    // 组件是标准高度的组件值设置为standard，2倍高度的组件值为doubleHeight
+          },
+          "props": {
 
-        }
+      }
     }
     ```
 
@@ -199,27 +201,27 @@ PC端示意图：
 
   ```
   export enum OpenType {
-   // 使用侧边栏直接打开链接
-   OPEN_SLIDE_PANEL = 'open_slide_panel',
-    // 将链接转为二维码后在侧边栏显示
-   OPEN_SLIDE_PANEL_QRCODE = 'open_slide_panel_qrcode',
-    // 将链接转为短链二维码后在侧边栏显示
-    // 注：小程序链接使用短链二维码可能会出现打不开的问题，
-    // 建议使用'open_slide_panel_qrcode'方式
-    OPEN_SLIDE_PANEL_SHORT_URL_QRCODE = 'open_slide_panel_short_url_qrcode', 
-   // 将链接使用工作台新建选项卡打开
-    OPEN_PC_APP = 'open_dd_tab',
-   // 将链接使用端外浏览器打开
-    OPEN_EXTERNAL_BROWSER = 'open_external_browser', 
-  }
+    // 使用侧边栏直接打开链接
+    OPEN_SLIDE_PANEL = 'open_slide_panel',
+      // 将链接转为二维码后在侧边栏显示
+      OPEN_SLIDE_PANEL_QRCODE = 'open_slide_panel_qrcode',
+      // 将链接转为短链二维码后在侧边栏显示
+      // 注：小程序链接使用短链二维码可能会出现打不开的问题，
+      // 建议使用'open_slide_panel_qrcode'方式
+      OPEN_SLIDE_PANEL_SHORT_URL_QRCODE = 'open_slide_panel_short_url_qrcode', 
+      // 将链接使用工作台新建选项卡打开
+      OPEN_PC_APP = 'open_dd_tab',
+      // 将链接使用端外浏览器打开
+      OPEN_EXTERNAL_BROWSER = 'open_external_browser', 
+      }
   interface opt extends IAppDetailModel {
-   url: string;
+    url: string;
     name?: string; // 如果侧边栏打开则需要提供一个title
     openType?: string;
     // pc端必传，pc端若不传默认为'open_slide_panel_qrcode'方式打开链接
   }
   openApp({
-   url,
+    url,
     name,
     openType,
   })
@@ -302,4 +304,4 @@ PC端示意图：
 
   > **[!NOTE]**
   >
-  > 如果之前自建组件使用了上述列表之外的JSAPI，PC端将无法正常调用，目前尚未有其它的替代方案。具体诉求可通过[联系我们](https://open.dingtalk.com/document/dingstart/dashboard-model-overview2)加入**标准工作台组件/解决方案接入群**，在群内咨询服务小蜜。
+  > 如果之前自建组件使用了上述列表之外的JSAPI，PC端将无法正常调用，目前尚未有其它的替代方案。

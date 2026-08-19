@@ -1,5 +1,5 @@
 ---
-title: "调用工作台 API"
+title: "其他参考"
 source_url: "https://open.dingtalk.com/document/dingstart/call-the-workbench-api"
 namespace: "dingstart"
 slug: "call-the-workbench-api"
@@ -7,25 +7,79 @@ group: "工作台"
 tab: "使用教程"
 breadcrumb: "组件教程 > 全码组件 > 其他参考"
 doc_id: "SO2afwaWFW"
-updated_at: "2025-12-08 09:29:42"
+updated_at: "2026-08-19 09:12:29"
 ---
 
 > Source: https://open.dingtalk.com/document/dingstart/call-the-workbench-api
 > Path: 工作台 / 使用教程 / 组件教程 > 全码组件 > 其他参考
-> Updated: 2025-12-08 09:29:42
+> Updated: 2026-08-19 09:12:29
 
-# 调用工作台 API
+# 其他参考
 
 调用工作台API前，需要先获取API调用凭证并申请接口权限。
 
-## **开放能力**
+## **打开应用或链接**
+
+如何在组件内打开其他应用或者链接，通过调用 **getSdk().openApp** 方法。
+
+### **移动端**
+
+跳转的应用可以是网页应用（原H5微应用），可以是小程序应用，也可以是应用中的某个页面地址。
+
+> **[!NOTE]**
+>
+> 如果想要打开外部链接，可以先将外部链接注册成钉钉的H5微应用，再跳转到该微应用。
+
+```
+// 打开微应用
+getSdk().openApp({
+  // 要跳转的应用的完整链接，小程序应用是dingtalk开头的链接
+  url: '',
+});
+```
+
+### **PC 端**
+
+组件内链接在PC端和移动端的打开方式具有差异。
+
+```
+export enum OpenType {
+  // 使用侧边栏直接打开链接
+  OPEN_SLIDE_PANEL = 'open_slide_panel',
+    // 将链接转为二维码后在侧边栏显示
+    OPEN_SLIDE_PANEL_QRCODE = 'open_slide_panel_qrcode',
+    // 将链接转为短链二维码后在侧边栏显示
+    // 注：小程序链接使用短链二维码可能会出现打不开的问题，
+    // 建议使用'open_slide_panel_qrcode'方式
+    OPEN_SLIDE_PANEL_SHORT_URL_QRCODE = 'open_slide_panel_short_url_qrcode', 
+    // 将链接使用工作台新建选项卡打开
+    OPEN_PC_APP = 'open_dd_tab',
+    // 将链接使用端外浏览器打开
+    OPEN_EXTERNAL_BROWSER = 'open_external_browser', 
+    }
+interface opt extends IAppDetailModel {
+  url: string;
+  name?: string; // 如果侧边栏打开则需要提供一个title
+  openType?: string;
+  // pc端必传，pc端若不传默认为'open_slide_panel_qrcode'方式打开链接
+}
+openApp({
+  url,
+  name,
+  openType,
+})
+```
+
+## **调用工作台 API**
+
+### **开放能力**
 
 在调用DingTalk OpenAPI中的工作台相关接口前，必须从开放平台获取访问凭证API Token，这个访问凭证包含你的企业信息以及可调用的接口权限，目前可调用工作台相关的接口如下：
 
-- [获取工作台插件检验的规则信息](../../01-应用开发/02-4a8AMF6u2A-服务端API/1000-you-can-call-this-operation-to-obtain-the-information-about.md)
-- [获取工作台插件权限点](../../01-应用开发/02-4a8AMF6u2A-服务端API/0999-obtain-the-permissions-of-the-workbench-plug-in.md)
+- [获取工作台插件检验的规则信息](../../01-应用开发/02-4a8AMF6u2A-服务端API/1001-you-can-call-this-operation-to-obtain-the-information-about.md)
+- [获取工作台插件权限点](../../01-应用开发/02-4a8AMF6u2A-服务端API/1000-obtain-the-permissions-of-the-workbench-plug-in.md)
 
-## 获取访问凭证API Token
+### **获取访问凭证API Token**
 
 API Token是由钉钉开放平台颁发，用来调用钉钉开放平台提供的应用管理能力。在调用钉钉开放平台提供的应用管理能力前，需要通过以下步骤，获取API Token：
 
@@ -46,7 +100,7 @@ API Token是由钉钉开放平台颁发，用来调用钉钉开放平台提供�
 
    ![设置IP白名单](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/3700594261/p290039.png)
 
-## **权限申请**
+### **权限申请**
 
 通过以下步骤添加工作台相关接口权限：
 
@@ -56,7 +110,7 @@ API Token是由钉钉开放平台颁发，用来调用钉钉开放平台提供�
 
    ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8137405171/p786690.png)
 
-## **接口调用流程**
+### **接口调用流程**
 
 如下图所示，在调用工作台API前，您需要完成以下准备工作：
 
@@ -68,7 +122,7 @@ API Token是由钉钉开放平台颁发，用来调用钉钉开放平台提供�
 
      ![调用流程](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/5025515361/p132205.png)
 
-## 调用方式
+### **调用方式**
 
 钉钉开放平台提供了API Explorer和SDK方便开发者调用服务端API。
 
@@ -78,3 +132,35 @@ API Token是由钉钉开放平台颁发，用来调用钉钉开放平台提供�
 - SDK:
 
   钉钉开放平台提供了Java、PHP、Python、.NET SDK供开发者使用。单击[服务端SDK下载](../../01-应用开发/02-4a8AMF6u2A-服务端API/0002-download-the-server-side-sdk.md)。
+
+## **其他 JSAPI 参考**
+
+### **查看地图位置**
+
+**openLocation**
+
+更多参数内容。请参考[使用内置地图查看位置](../../01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0325-jsapi-open-location.md)。
+
+```
+getSdk().openLocation({
+    longitude: '120.126293',
+    latitude: '30.274653',
+    name: '黄龙万科中心',
+    address: '学院路77号',
+});
+```
+
+### **扫码**
+
+**scan**
+
+更多参数内容。请参考[扫码](../../01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0406-jsapi-scan.md)。
+
+```
+getSdk().scan({
+    type: 'qr',
+    success: (res) => {
+       dd.alert({ title: res.code });
+    },
+});
+```

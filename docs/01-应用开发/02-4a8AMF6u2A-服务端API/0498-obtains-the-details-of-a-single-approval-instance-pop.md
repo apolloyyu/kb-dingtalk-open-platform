@@ -443,16 +443,16 @@ namespace AlibabaCloud.SDK.Sample
 | originatorDeptId | String | 发起人的部门，-1表示根部门。 |
 | originatorDeptName | String | 发起人的部门名称。 |
 | status | String | 审批状态：   - **RUNNING**：审批中 - **TERMINATED**：已撤销 - **COMPLETED**：审批完成 |
-| approverUserIds | Array of String | 审批人userId。       - 使用接口发起的审批单返回该参数。 - 在OA审批应用手动发起的审批单不返回该参数。 |
+| approverUserIds | Array of String | 审批人userId。  **[!NOTE]**  - 使用接口发起的审批单返回该参数。 - 在OA审批应用手动发起的审批单不返回该参数。 |
 | ccUserIds | Array of String | 抄送人userId。 |
-| result | String | 审批结果：   - **agree**：同意 - **refuse**：拒绝       status为**COMPLETED**且result为**agree**时，表示审批单完结并审批通过。 |
+| result | String | 审批结果：   - **agree**：同意 - **refuse**：拒绝   **[!NOTE]**  status为**COMPLETED**且result为**agree**时，表示审批单完结并审批通过。 |
 | businessId | String | 审批实例业务编号。 |
 | operationRecords | Array | 操作记录列表。 |
 | userId | String | 操作人userId。 |
 | date | String | 操作时间。 |
 | type | String | 操作类型：   - **EXECUTE\_TASK\_NORMAL**：正常执行任务 - **EXECUTE\_TASK\_AGENT**：代理人执行任务 - **APPEND\_TASK\_BEFORE**：前加签任务 - **APPEND\_TASK\_AFTER**：后加签任务 - **REDIRECT\_TASK**：转交任务 - **START\_PROCESS\_INSTANCE**：发起流程实例 - **TERMINATE\_PROCESS\_INSTANCE**：终止(撤销)流程实例 - **FINISH\_PROCESS\_INSTANCE**：结束流程实例 - **ADD\_REMARK**：添加评论 - **REDIRECT\_PROCESS**：审批退回 - **PROCESS\_CC**：抄送 |
 | result | String | 操作结果：   - **AGREE**：同意 - **REFUSE**：拒绝 - **NONE**：未处理 |
-| remark | String | 评论内容。      审批操作附带评论时才返回该字段。 |
+| remark | String | 评论内容。  **[!NOTE]**  审批操作附带评论时才返回该字段。 |
 | attachments | Array | 评论附件列表。 |
 | fileName | String | 附件名称。 |
 | fileSize | String | 附件大小。 |
@@ -474,6 +474,7 @@ namespace AlibabaCloud.SDK.Sample
 | pcUrl | String | PC端任务URL。 |
 | processInstanceId | String | 实例ID。 |
 | activityId | String | 任务节点ID。 |
+| taskGroupName | String | 审批组名称。 |
 | bizAction | String | 审批实例业务动作：   - **MODIFY**：表示该审批实例是基于原来的实例修改而来 - **REVOKE**：表示该审批实例是由原来的实例撤销后重新发起的 - **NONE**：表示正常发起 |
 | bizData | String | 用户自定义业务参数透出。 |
 | attachedProcessInstanceIds | Array of String | 审批附属实例。 |
@@ -534,7 +535,8 @@ Content-Type:application/json
       "mobileUrl" : "https://www.xxxx.com",
       "pcUrl" : "https://www.xxxx.com",
       "processInstanceId" : "111",
-      "activityId" : "111"
+      "activityId" : "111",
+      "taskGroupName" : "审批人1"
     } ],
     "bizAction" : "MODIFY",
     "bizData" : "{\"mykey\": \"myData\"}",
@@ -576,5 +578,7 @@ Content-Type:application/json
 | 400 | processInstanceIdError | processInstanceId参数无效 | processInstanceId参数无效 |
 | 400 | internalError | %s | 系统内部异常 |
 | 400 | processFormDataIsNull | 流程表单数据为空 | 流程表单数据为空 |
+| 400 | internalError | %s | 系统内部异常 |
 | 400 | processInstanceNotExist | 审批实例不存在 | 审批实例不存在 |
+| 500 | systemError | 系统异常 | 系统异常 |
 | 500 | systemError | 系统异常 | 系统异常 |

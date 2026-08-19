@@ -7,12 +7,12 @@ group: "工作台"
 tab: "使用教程"
 breadcrumb: "合作伙伴教程 > 共享组件"
 doc_id: "PtVuXsNe9A"
-updated_at: "2025-10-21 14:09:16"
+updated_at: "2026-08-19 09:12:38"
 ---
 
 > Source: https://open.dingtalk.com/document/dingstart/shared-components-1
 > Path: 工作台 / 使用教程 / 合作伙伴教程 > 共享组件
-> Updated: 2025-10-21 14:09:16
+> Updated: 2026-08-19 09:12:38
 
 # 共享组件
 
@@ -35,9 +35,11 @@ updated_at: "2025-10-21 14:09:16"
 
 ![](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/0QvjnAMjjbB3nXo5/img/d322e407-6ae7-4971-9906-cea12bd25032.png)
 
-### **前端SDK**
+组件调用开放平台API的前端SDK，示例如下：
 
-组件调用开放平台API的SDK示例如下：
+> **[!IMPORTANT]**
+>
+> 调用钉钉开放平台API时，尽量采用新版本API。
 
 ```
 const data = await getSdk().request({
@@ -45,16 +47,12 @@ const data = await getSdk().request({
   type: 'OPEN_API', // type类型固定为OPEN_API
   method: 'GET', // GET或POST
   path: '/v1.0/calendar/users/Y9za3KXqU2siE/calendars/primary/events',
- 	host: 'oapi.dingtalk.com',
-	headParams: '{}',    // json 字符串格式，生效到http协议的头部, 没有可以为空
- 	params: '{}',    // json 字符串格式，生效到http协议请求的url参数, 没有可以为空
- 	body: '{"language":"zh_CN", "userid":"0828416124358791"}' // json 字符串格式，生效到http协议请求的body, 没有可以为空
+  host: 'oapi.dingtalk.com',
+  headParams: '{}',    // json 字符串格式，生效到http协议的头部, 没有可以为空
+  params: '{}',    // json 字符串格式，生效到http协议请求的url参数, 没有可以为空
+  body: '{"language":"zh_CN", "userid":"0828416124358791"}' // json 字符串格式，生效到http协议请求的body, 没有可以为空
 });
 ```
-
-> **[!IMPORTANT]**
->
-> 调用钉钉开放平台API时，尽量采用新版本API。
 
 ## 共享组件的规范
 
@@ -78,11 +76,9 @@ const data = await getSdk().request({
 
 > **[!NOTE]**
 >
-> - 共享组件目前还在共创阶段，如有关于共创组件的开发和上架需求，可以扫描下方钉钉群二维码，加入群内反馈。
+> - 共享组件目前还在共创阶段，如有关于共创组件的开发和上架需求，可以[联系我们](../01-ECKYIf1yqx-平台介绍/0001-custom-workbench-and-self-built-components.md#f0278e7bealct)，加入群内反馈。
 > - 基于验收要求，建议开发者提前准备好产品设计稿，扫码加入共创群，提供给钉钉侧的产品和设计同学。
 > - 共享组件在共创期间，合作伙伴只需要开发好自己的组件，并保证体验和稳定性，钉钉侧会负责帮助合作伙伴的组件上架，让所有钉钉组织用户可以使用和体验组件。
-
-![iShot_2023-03-08_09](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0799328761/p579080.png)
 
 ## **共享组件实践案例**
 

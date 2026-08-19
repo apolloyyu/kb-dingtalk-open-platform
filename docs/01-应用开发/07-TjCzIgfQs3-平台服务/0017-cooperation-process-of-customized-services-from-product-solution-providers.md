@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "平台服务"
 breadcrumb: "合作指南 > 产品方案商 > 定制业务的合作指引 > 产品方案商定制服务合作流程"
 doc_id: "JUEyHMzI3h"
-updated_at: "2025-09-23 19:22:07"
+updated_at: "2026-08-19 09:15:38"
 ---
 
 > Source: https://open.dingtalk.com/document/services/cooperation-process-of-customized-services-from-product-solution-providers
 > Path: 应用开发 / 平台服务 / 合作指南 > 产品方案商 > 定制业务的合作指引 > 产品方案商定制服务合作流程
-> Updated: 2025-09-23 19:22:07
+> Updated: 2026-08-19 09:15:38
 
 # 产品方案商定制服务合作流程
 
@@ -54,8 +54,7 @@ updated_at: "2025-09-23 19:22:07"
    > - 定制服务商已经合并到产品方案商，请进入产品方案页面申请入驻。
    > - 钉钉指数不达标的，请联系@自亦申请特批。
 
-![njkfbg](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/4887949561/p474482.png)
-
+   ![njkfbg](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/4887949561/p474482.png)
 2. 在**申请入驻**页面，依照下列要求填写信息后单击**提交**，等待入驻审批结果。
 
    - **业务范围：**请选择定制服务范围。
@@ -67,23 +66,28 @@ updated_at: "2025-09-23 19:22:07"
    - **官网地址：**请输入企业官网地址，若无官网，请填“无”。
    - **拟上架应用名称：**请输入拟上架应用名称，若无应用上架，请填“无”。
 
-![填写产品方案商入驻信息](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/3887949561/p474311.png)
+     ![填写产品方案商入驻信息](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/3887949561/p474311.png)
 
 ### 缴纳保证金
 
-1. 入驻审批通过后，依次单击**产品方案商 > 保证金**，根据**保证金**页面缴费方式缴纳保证金。![ndfksabk](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/3887949561/p474487.png)
+1. 入驻审批通过后，依次单击**产品方案商 > 保证金**，根据**保证金**页面缴费方式缴纳保证金。
 
-> **[!NOTE]**
->
-> 满足保证金特批条件的可走专门审批表单。
->
-> 将钉钉组织切换至**钉钉合作伙伴**，依次单击**工作台 > 审批**，搜索**保证金特批申请单**，发起审批申请。![nkasfjbvnjf](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/3887949561/p474386.png)
+   ![ndfksabk](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/3887949561/p474487.png)
 
-2. 缴纳保证金后，在**保证金**页面，单击**上传缴费凭证**，等待审核通过即可。![nsdbfnsgjknb](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/3887949561/p474490.png)
+   > **[!NOTE]**
+   >
+   > 满足保证金特批条件的可走专门审批表单。
+   >
+   > 将钉钉组织切换至**钉钉合作伙伴**，依次单击**工作台 > 审批**，搜索**保证金特批申请单**，发起审批申请。![nkasfjbvnjf](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/3887949561/p474386.png)
+2. 缴纳保证金后，在**保证金**页面，单击**上传缴费凭证**，等待审核通过即可。
+
+   ![nsdbfnsgjknb](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/3887949561/p474490.png)
 
 ### 签署合同
 
-保证金审核通过后，依次单击**产品方案商 > 合同管理**，在**合同管理**页面，单击**签署**按钮签署《钉钉大客户合作伙伴入驻协议》以及《钉钉服务商经销框架协议（含专属钉钉等）》共两份协议。签署后，合同审核通过，则表示整个定制服务商入驻流程完成。![nkjrngsavjkfs](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/4887949561/p474495.png)
+保证金审核通过后，依次单击**产品方案商 > 合同管理**，在**合同管理**页面，单击**签署**按钮签署《钉钉大客户合作伙伴入驻协议》以及《钉钉服务商经销框架协议（含专属钉钉等）》共两份协议。签署后，合同审核通过，则表示整个定制服务商入驻流程完成。
+
+![nkjrngsavjkfs](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/4887949561/p474495.png)
 
 ## 三、完善服务内容
 
@@ -104,9 +108,9 @@ updated_at: "2025-09-23 19:22:07"
    3. **服务最小单位定价（人日）**
 2. **定制服务商配置规则引擎，确保定制商机分配及时跟进**。
 
-规则引擎配置操作，请参见[钉钉开放平台帮助中心-服务商配置规则引擎](https://alidocs.dingtalk.com/i/p/KrwmPQ5g4OEAG79n/docs/mdvQnONayjBJKNbyZ9lnVPY2MeXzp5o0)。
+规则引擎配置操作，请参见[钉钉开放平台帮助中心-服务商配置规则引擎](https://alidocs.dingtalk.com/i/p/KrwmPQ5g4OEAG79n/docs/2X3LRMZdxkAJpjeyrQlLWGgrBYeOq5Ew?dontjump=true)。
 
-更多商机相关信息，请参见[钉钉开放平台帮助中心-商机管理](https://alidocs.dingtalk.com/i/p/KrwmPQ5g4OEAG79n/docs/EGd6jK4Nvk3JlROjv5l4WZOP0LawMmQq?dontjump=true)。
+更多商机相关信息，请参见[钉钉开放平台帮助中心-商机管理](https://alidocs.dingtalk.com/i/p/KrwmPQ5g4OEAG79n/docs/gvNG4YZ7JneLOg1nc23mBaKNV2LD0oRE?dontjump=true)。
 
 ## 五、认证授牌评级
 
@@ -127,8 +131,12 @@ updated_at: "2025-09-23 19:22:07"
 
 定制服务商授牌评级申请可以通过以下两种方式。
 
-- **方式一：钉钉ISV沟通组 >工作台 > OA审批**，搜索**定制服务商授牌评级申请**，发起审批申请。![njjjnkfds](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/3887949561/p474387.png)
-- **方式二：**扫描下方二维码进行**定制服务商授牌证书申请**。![nfbadnssa](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/3887949561/p474384.png)
+- **方式一：钉钉ISV沟通组 >工作台 > OA审批**，搜索**定制服务商授牌评级申请**，发起审批申请。
+
+  ![njjjnkfds](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/3887949561/p474387.png)
+- **方式二：**扫描下方二维码进行**定制服务商授牌证书申请**。
+
+  ![nfbadnssa](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/3887949561/p474384.png)
 
 ## 六、定制服务规范
 

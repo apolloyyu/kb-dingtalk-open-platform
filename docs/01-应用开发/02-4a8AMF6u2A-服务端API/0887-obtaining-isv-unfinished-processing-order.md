@@ -31,7 +31,7 @@ updated_at: "2026-06-08 09:43:56"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | 6d1bxxxx | 调用服务端接口的授权凭证，可调用[获取第三方企业应用的suite\_access\_token](1444-obtain-application-suite-ticket.md)接口获得。 |
+| access\_token | String | 是 | 6d1bxxxx | 调用服务端接口的授权凭证，可调用[获取第三方企业应用的suite\_access\_token](1445-obtain-application-suite-ticket.md)接口获得。 |
 
 ### **请求体**
 

@@ -25,7 +25,7 @@ updated_at: "2026-07-02 10:34:59"
 ## **前置工作**
 
 1. **基础概念**：已了解钉钉开放平台的基础概念及各产品块文档说明，详见[基础概念](../01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md)文档说明。
-2. **接口频率限制：**已了解API的调用频率限制，详见[调用频次与限流](1432-how-to-process-api-throttling-on-the-dingtalk-server.md)文档说明。
+2. **接口频率限制：**已了解API的调用频率限制，详见[调用频次与限流](1433-how-to-process-api-throttling-on-the-dingtalk-server.md)文档说明。
 3. **开发者权限**：具有[开发者后台](https://open-dev.dingtalk.com/?spm=dd_developers.header.unLogin.openDevBtn&hash=%23%2F#/)子管理员和开发者权限，也可以登录钉钉开发者完成新用户的注册与激活。
 4. **获取用户**`UserId`：登录[钉钉管理后台](http://oa.dingtalk.com/)并在**通讯录 > 成员管理**下查看`UserId`，详见[基础概念](../01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md)说明。
 

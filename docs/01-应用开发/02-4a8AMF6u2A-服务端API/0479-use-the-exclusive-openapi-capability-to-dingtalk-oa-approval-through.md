@@ -100,13 +100,13 @@ updated_at: "2026-07-10 10:11:18"
 1. **自有OA审批集成：**三方业务系统分别对接钉钉自有OA审批，通过钉钉**自有OA审批相关接口**将业务系统的审批任务数据同步至钉钉OA审批流程中心，具体步骤参考[自有OA审批：三方流程与页面对接](0477-use-three-party-process-and-page-docking.md)。
 2. **官方OA审批集成：**三方业务系统也可对接钉钉官方OA审批，通过钉钉**官方OA审批相关接口**直接在业务系统内发起钉钉官方OA审批流程，具体步骤参考：[官方OA审批：钉钉流程与页面对接](0489-use-the-dingtalk-oa-approval-process-and-page-interface.md)
 3. 用户也可直接在钉钉官方OA审批应用内提交审批流程，通过步骤1-3可以将分散的业务流程集中到钉钉OA审批中心进行管理。
-4. **获取审批中心数据：**企业自建审批中心应用可调用[关于新增OA审批高级版专享OpenAPI和解决方案的说明](1441-description-of-new-oa-approval-premium-exclusive-openapi-and-solutions.md)中的查询审批中心列表相关接口（高级版专享），分别获取用户在钉钉审批中心的[待处理](0535-api-premiumgettodotasks.md)、[已处理](0536-api-premiumgetdonetasks.md)、[已发起的](0527-api-premiumgetsubmittedinstances.md)、[已收到的](0528-api-premiumgetnoticedinstances.md)审批列表数据。
+4. **获取审批中心数据：**企业自建审批中心应用可调用[关于新增OA审批高级版专享OpenAPI和解决方案的说明](1442-description-of-new-oa-approval-premium-exclusive-openapi-and-solutions.md)中的查询审批中心列表相关接口（高级版专享），分别获取用户在钉钉审批中心的[待处理](0535-api-premiumgettodotasks.md)、[已处理](0536-api-premiumgetdonetasks.md)、[已发起的](0527-api-premiumgetsubmittedinstances.md)、[已收到的](0528-api-premiumgetnoticedinstances.md)审批列表数据。
 5. **批量审批任务：**企业自建审批中心应用获取到用户审批中心任务列表数据后，可根据待处理列表接口返回的审批类型`processType`（0：官方OA审批、1：自有OA审批），分别对官方OA审批、自有OA审批的任务进行批量更新。
 
    1. **自有OA审批任务批量更新：**根据审批实例`processInstanceId`和审批待办任务taskId，可以调用[更新流程中心任务状态](0518-update-process-center-task-status.md)接口，同步完成自有审批待办状态的更新。在或签等场景，可以调用[批量取消流程中心待处理任务](0519-cancel-multiple-oa-approval-tasks.md)接口，批量将审批实例下正在运行中的待办事项设置为CANCELED。
    2. **官方OA审批任务批量更新：**业务系统根据审批实例`processInstanceId`和相应的任务节点`taskId`信息，调用新版服务端API-[批量同意或拒绝审批任务](0537-api-premiumbatchexecuteprocessinstances.md)，对一批具有不同审批实例ID、任务节点ID的审批任务，进行批量处理。
 6. 审批单状态发生变化后，OA审批支持将[审批任务状态变化](../04-LFcRvVD08N-事件订阅/0038-event-bpms-task-change.md)和[审批实例状态变化](../04-LFcRvVD08N-事件订阅/0039-event-bpms-instance-change.md)等回调事件推送至业务系统侧，可以让企业应用能够更深度地与钉钉平台集成，实现信息共享和业务协同。具体使用教程参考：[事件订阅操作指南](0014-event-subscription-overview.md)。
-7. **流程交接：**企业自建审批中心应用也可调用[关于新增OA审批高级版专享OpenAPI和解决方案的说明](1441-description-of-new-oa-approval-premium-exclusive-openapi-and-solutions.md)中的流程交接相关接口，实现管理员批量将审批任务转交给组织内其他人员处理。
+7. **流程交接：**企业自建审批中心应用也可调用[关于新增OA审批高级版专享OpenAPI和解决方案的说明](1442-description-of-new-oa-approval-premium-exclusive-openapi-and-solutions.md)中的流程交接相关接口，实现管理员批量将审批任务转交给组织内其他人员处理。
 
    1. 调用[管理员查询指定员工的待处理任务列表](0538-api-premiumquerytodotasksbymanager.md)，通过管理员(managerUserId) 查询当前审批人UserId的所有待处理的OA审批任务信息。
    2. 调用[管理员批量转交指定员工的待处理任务](0539-api-premiumredirecttasksbymanager.md)，由管理员将管理员查询指定员工的待处理任务列表接口返回的任务批量转交给组织内其他在职人员处理。

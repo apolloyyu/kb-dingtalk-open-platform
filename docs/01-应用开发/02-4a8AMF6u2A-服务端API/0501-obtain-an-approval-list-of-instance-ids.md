@@ -22,7 +22,7 @@ updated_at: "2026-04-24 14:10:44"
 
 ### 特别提醒
 
-当前接口针对[OA高级版](dingtalk://dingtalkclient/page/link?url=https%3A%2F%2Fpage.dingtalk.com%2Fwow%2Fdingtalk%2Fdefault%2Fdingtalk%2FlnfR8GaRSWqNncZHSvLLx%3Fdd_mini_app_id%3D5000000004997171&web_wnd=general&width=480&height=800)客户可支持查询最多5年内的实例数据（即startTime时间距当前时间不能超过5年），升级OA高级版可用，可满足更高级的开发需求，响应个性化的业务场景，查看全部[专享OpenAPI](1441-description-of-new-oa-approval-premium-exclusive-openapi-and-solutions.md)。
+当前接口针对[OA高级版](dingtalk://dingtalkclient/page/link?url=https%3A%2F%2Fpage.dingtalk.com%2Fwow%2Fdingtalk%2Fdefault%2Fdingtalk%2FlnfR8GaRSWqNncZHSvLLx%3Fdd_mini_app_id%3D5000000004997171&web_wnd=general&width=480&height=800)客户可支持查询最多5年内的实例数据（即startTime时间距当前时间不能超过5年），升级OA高级版可用，可满足更高级的开发需求，响应个性化的业务场景，查看全部[专享OpenAPI](1442-description-of-new-oa-approval-premium-exclusive-openapi-and-solutions.md)。
 
 ### 接口调用流程
 

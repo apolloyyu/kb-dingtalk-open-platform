@@ -39,7 +39,7 @@ updated_at: "2025-09-11 21:02:16"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| devId | Long | 是 | 考勤机设备ID，可调用[查询设备列表](1316-intelligent-hardware-list-query.md)接口获取device\_id参数值。 |
+| devId | Long | 是 | 考勤机设备ID，可调用[查询设备列表](1317-intelligent-hardware-list-query.md)接口获取device\_id参数值。 |
 
 ### 请求示例
 

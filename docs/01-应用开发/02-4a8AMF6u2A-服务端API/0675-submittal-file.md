@@ -225,14 +225,14 @@ fs.createReadStream('/Users/dengxian.ldx/temp/test/a.txt').pipe(request(options)
 | name | String | 是 | 文件的名称，带后缀。命名有以下要求：   - 头尾不能包含空格，否则会自动去除 - 不能包含特殊字符，包括：制表符、\*、"、<、>、| - 不能以"."结尾 |
 | option | Object | 否 | 可选参数。 |
 | size | Long | 否 | 默认文件大小，单位:Byte。  **[!NOTE]**  如果此字段不为空，企业存储系统会校验文件实际大小是否和此字段是否一致，不一致会报错 |
-| conflictStrategy | String | 否 | 文件名称冲突策略。   - **AUTO\_RENAME**：自动重命名，默认值 - **OVERWRITE**：覆盖 - **RETURN\_DENTRY\_IF\_EXISTS**：返回已存在文件 - **RETURN\_ERROR\_IF\_EXISTS**：文件已存在时报错 |
+| conflictStrategy | String | 否 | 文件名称冲突策略：   - **AUTO\_RENAME（默认）**：自动重命名。 - **OVERWRITE**：覆盖 - **RETURN\_DENTRY\_IF\_EXISTS**：返回已存在文件 - **RETURN\_ERROR\_IF\_EXISTS**：文件已存在时报错 |
 | appProperties | Array | 否 | 当前文件的应用属性列表，最大值3。 |
 | name | String | 是 | 属性名称。  **[!NOTE]**  该属性名称在当前app下需要保证唯一，不同app间同名属性互不影响。 |
 | value | String | 是 | 属性值。 |
-| visibility | String | 是 | 属性可见性。   - **PUBLIC**：所有应用都可见 - **PRIVATE**：仅限当前应用可见 |
-| convertToOnlineDoc | Boolean | 否 | 是否转换成在线文档。   - **false**（默认值）：否 - **true**：是 |
+| visibility | String | 是 | 属性可见性：   - **PUBLIC**：所有应用都可见 - **PRIVATE**：仅限当前应用可见 |
+| convertToOnlineDoc | Boolean | 否 | 是否转换成在线文档：   - **false**（默认值）：否 - **true**：是 |
 | convertToOnlineDocTargetDocumentType | String | 否 | 转换成在线文档目标格式，未指定时按源文件后缀得到目标格式：   - **DOC**：钉钉文档 - **WORKBOOK**：钉钉表格 - **SMART\_TABLE**：钉钉多维表 |
-| classificationLabelId | String | 否 | 文件密级UUID， |
+| classificationLabelId | String | 否 | 文件密级的UUID。 |
 
 ### 请求示例
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "更新日志"
 doc_id: "ErYhfh3yI8"
-updated_at: "2026-08-14 17:08:13"
+updated_at: "2026-08-19 09:07:58"
 ---
 
 > Source: https://open.dingtalk.com/document/development/event-log
 > Path: 应用开发 / 事件订阅 / 更新日志
-> Updated: 2026-08-14 17:08:13
+> Updated: 2026-08-19 09:07:58
 
 # 更新日志
 
@@ -22,6 +22,7 @@ updated_at: "2026-08-14 17:08:13"
 
 | **类目** | **说明** | **应用范围** |
 | --- | --- | --- |
+| 智能招聘 | 新增[AI招聘找简历事件变更](0141-events-hire-agent-sourcing-task-change.md)，AI招聘找简历任务任务变更的相关数据推送。 | - 企业内部应用 - 第三方企业应用 |
 | 视听智能服务 | **新增事件订阅：**   - 新增[DingTalkB1设备状态变更事件](0122-events-badge-device-status-change.md)，DingTalkB1设备状态发生变更事件。 | - 企业内部应用 - 第三方企业应用 |
 
 ## **2026年07月**

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "平台服务"
 breadcrumb: "合作指南 > 产品方案商 > 定制业务的合作指引 > 自定义工作台开发流程 > 步骤四：服务商进行工作台设计和搭建"
 doc_id: "duoAGra38O"
-updated_at: "2025-10-21 14:10:13"
+updated_at: "2026-08-19 09:15:42"
 ---
 
 > Source: https://open.dingtalk.com/document/services/step-4-the-service-provider-designs-and-builds-the-workbench-1
 > Path: 应用开发 / 平台服务 / 合作指南 > 产品方案商 > 定制业务的合作指引 > 自定义工作台开发流程 > 步骤四：服务商进行工作台设计和搭建
-> Updated: 2025-10-21 14:10:13
+> Updated: 2026-08-19 09:15:42
 
 # 步骤四：服务商进行工作台设计和搭建
 
@@ -24,7 +24,7 @@ updated_at: "2025-10-21 14:10:13"
    ![开发中定制工作台](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/5476275261/p262391.png)
 3. 点击**配置**按钮进入工作台设计器，可为客户进行工作台方案的设计和搭建。
 
-   首次进入工作台设计器时可选择预置好的工作台模板，工作台模板管理相关，请参见[工作台模板概述](https://open.dingtalk.com/document/dingstart/dashboard-model-overview)。
+   首次进入工作台设计器时可选择预置好的工作台模板，工作台模板管理相关，请参见[工作台模板-概述](../../08-工作台/02-Qzb8Lpee2t-使用教程/0015-overview-of-workbench-template.md)。
 
    > **[!IMPORTANT]**
    >

@@ -1,20 +1,20 @@
 ---
-title: "销售咨询服务商入驻规范与流程"
+title: "入驻规范与流程"
 source_url: "https://open.dingtalk.com/document/services/become-sales-service-provider"
 namespace: "services"
 slug: "become-sales-service-provider"
 group: "应用开发"
 tab: "平台服务"
-breadcrumb: "平台基础规则 > 销售服务商 > 销售咨询服务商入驻规范与流程"
+breadcrumb: "平台基础规则 > 销售服务商 > 入驻规范与流程"
 doc_id: "ch9WQY6Ugl"
-updated_at: "2025-09-23 19:21:29"
+updated_at: "2026-08-19 09:15:30"
 ---
 
 > Source: https://open.dingtalk.com/document/services/become-sales-service-provider
-> Path: 应用开发 / 平台服务 / 平台基础规则 > 销售服务商 > 销售咨询服务商入驻规范与流程
-> Updated: 2025-09-23 19:21:29
+> Path: 应用开发 / 平台服务 / 平台基础规则 > 销售服务商 > 入驻规范与流程
+> Updated: 2026-08-19 09:15:30
 
-# 销售咨询服务商入驻规范与流程
+# 入驻规范与流程
 
 ## 一、目的
 
@@ -62,7 +62,7 @@ updated_at: "2025-09-23 19:21:29"
 
 4）上线合作：完成人员培训，正式开展业务
 
-## 六、以下特殊情况不接受入驻申请
+## 六、特殊情况不接受入驻申请
 
 1）因一类违规被终止合作的销售咨询服务商禁止二次引入，其法定代表人或者股东参股公司禁止引入；
 

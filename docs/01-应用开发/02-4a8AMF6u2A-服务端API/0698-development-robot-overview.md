@@ -105,8 +105,8 @@ updated_at: "2026-07-14 09:07:38"
 
 机器人支持消息撤回和消息已读的回调事件：
 
-- [机器人消息撤回事件](../04-LFcRvVD08N-事件订阅/0115-bot-message-withdrawal-event.md)
-- [机器人消息已读事件](../04-LFcRvVD08N-事件订阅/0116-bot-message-read-event.md)
+- [机器人消息撤回事件](../04-LFcRvVD08N-事件订阅/0111-bot-message-withdrawal-event.md)
+- [机器人消息已读事件](../04-LFcRvVD08N-事件订阅/0112-bot-message-read-event.md)
 
 ## **使用教程**
 

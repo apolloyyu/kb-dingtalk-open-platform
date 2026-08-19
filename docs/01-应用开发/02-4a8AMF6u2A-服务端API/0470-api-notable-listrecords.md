@@ -20,9 +20,7 @@ updated_at: "2026-04-17 11:33:52"
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/notable/bases/{baseId}/sheets/{sheetIdOrName}/records/list |
 | HTTP Method | POST |
@@ -33,20 +31,20 @@ updated_at: "2026-04-17 11:33:52"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，可通过[获取企业内部应用的accessToken](0033-obtain-the-access-token-of-an-internal-app.md)接口获取。 |
+| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，调用[获取企业内部应用的accessToken](0033-obtain-the-access-token-of-an-internal-app.md)接口获取。 |
 
 ### 路径参数
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| baseId | String | 是 | AI表格ID，获取方式请参考[数据结构](0457-data-structure.md)。 |
-| sheetIdOrName | String | 是 | 数据表ID或数据表名称。数据表ID可以通过以下两种方式获取：   - 调用[获取所有数据表](0461-api-notable-getallsheets.md)接口获取。 - 调用[获取数据表](0460-api-notable-getsheet.md)接口获取。 |
+| baseId | String | 是 | AI表格ID，获取方式请参考[数据结构](0457-data-structure.md#e2156ac0b1eko)。 |
+| sheetIdOrName | String | 是 | 数据表ID或数据表名称。数据表ID可通过[获取所有数据表](0461-api-notable-getallsheets.md)或[获取数据表](0460-api-notable-getsheet.md)接口获取。 |
 
 ### 查询参数
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| operatorId | String | 是 | 操作人的unionId，可通过以下两种方式获取：   - 可以调用[查询用户详情](0056-query-user-details.md)接口获取。 - 可以调用[通过免登码获取用户信息](0024-obtain-the-userid-of-a-user-by-using-the-log-free.md)接口获取。 |
+| operatorId | String | 是 | 操作人的unionId，可通过以下两种方式获取：   - 调用[查询用户详情](0056-query-user-details.md)接口获取。 - 调用[通过免登码获取用户信息](0024-obtain-the-userid-of-a-user-by-using-the-log-free.md)接口获取。 |
 
 ### 请求体
 
@@ -57,7 +55,7 @@ updated_at: "2026-04-17 11:33:52"
 | conditions | Array | 是 | 条件。 |
 | field | String | 是 | 字段ID或字段名。 |
 | operator | String | 是 | 条件类型：equal | notEqual | greater | greaterEqual | less | lessEqual | contain | notContain | empty | notEmpty。 |
-| value | Array of Any | 否 | 条件值，参考[记录值格式](https://open.dingtalk.com/document/development/record-value-format)。 |
+| value | Array of Any | 否 | 条件值，参考[记录值格式](0457-data-structure.md#d684dc15ef145)。 |
 | maxResults | Integer | 否 | 每页获取的数据量，默认值为100，最小值为1，最大值为100。 |
 | nextToken | String | 否 | 上一次查询返回的游标，首次查询时不需要传。 |
 | fieldIdOrNames | Array of String | 否 | 可选。指定要返回的字段列表。 建议在字段较多时按需传入，可显著减少响应体积；单次最多 100 个。 |

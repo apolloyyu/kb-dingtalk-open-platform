@@ -31,7 +31,7 @@ updated_at: "2026-06-08 09:43:53"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | 6d1bxxxx | 调用本接口的访问凭证，通过调用获[服务商获取第三方应用授权企业的access\_token](1445-obtain-isvapp-token.md)接口获取。 |
+| access\_token | String | 是 | 6d1bxxxx | 调用本接口的访问凭证，通过调用获[服务商获取第三方应用授权企业的access\_token](1446-obtain-isvapp-token.md)接口获取。 |
 
 ### **请求体**
 

@@ -20,7 +20,7 @@ updated_at: "2025-09-23 19:21:23"
 
 ## **接口调用说明**
 
-当前接口已完成升级迭代且不再支持新应用申请，存量应用调用不受影响，建议未接入的开发者使用[获取跳转到企业实名的地址](1081-obtain-the-address-that-is-redirected-to-the-enterprise-s-real.md)接口，已接入的开发者结合实际尽快完成迁移。
+当前接口已完成升级迭代且不再支持新应用申请，存量应用调用不受影响，建议未接入的开发者使用[获取跳转到企业实名的地址](1082-obtain-the-address-that-is-redirected-to-the-enterprise-s-real.md)接口，已接入的开发者结合实际尽快完成迁移。
 
 ## 请求
 

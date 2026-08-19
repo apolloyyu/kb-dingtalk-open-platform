@@ -33,7 +33,7 @@ OA高级版，是钉钉 OA 审批团队新推出的商业化版本，详情请�
 
 为满足广大开发者在个性化应用开发方面的需求，钉钉OA审批新增了一批面向[OA审批高级版](dingtalk://dingtalkclient/page/link?url=https%3A%2F%2Fpage.dingtalk.com%2Fwow%2Fdingtalk%2Fdefault%2Fdingtalk%2FlnfR8GaRSWqNncZHSvLLx%3Fdd_mini_app_id%3D5000000004997171&web_wnd=general&width=480&height=800)客户的专享OpenAPI&解决方案。这些专享OpenAPI&解决方案将提供更丰富的能力，响应更个性化的业务需求，支持不同场景下的企业内部应用开发，建议开发者更合理、有效地使用OpenAPI，打造更健康的钉钉开放生态。
 
-专享开放能力介绍详情请参见：[关于新增OA审批高级版专享OpenAPI和解决方案的说明](1441-description-of-new-oa-approval-premium-exclusive-openapi-and-solutions.md)。
+专享开放能力介绍详情请参见：[关于新增OA审批高级版专享OpenAPI和解决方案的说明](1442-description-of-new-oa-approval-premium-exclusive-openapi-and-solutions.md)。
 
 - OA 高级版提供 30+专享开放API，包含批量同意或拒绝等高效的 API
 - OA 高级版提供 2 个专享流程中心对接方案，支持使用三方流程+钉钉 OA 页面对接和自建应用集成钉钉 OA 审批来实现业务定制。
@@ -114,7 +114,7 @@ OA审批提供了丰富的接口开放能力，开发者通过API接口可以实
 
 ### **专享开放**
 
-专享开放介绍详情请参见：[关于新增OA审批高级版专享OpenAPI和解决方案的说明](1441-description-of-new-oa-approval-premium-exclusive-openapi-and-solutions.md)。
+专享开放介绍详情请参见：[关于新增OA审批高级版专享OpenAPI和解决方案的说明](1442-description-of-new-oa-approval-premium-exclusive-openapi-and-solutions.md)。
 
 ### 回调事件列表
 
@@ -143,10 +143,10 @@ OA审批提供了丰富的接口开放能力，开发者通过API接口可以实
 
 **钉钉应用标准链接协议，可以让钉钉的应用或功能直接通过链接即可访问**，如跳转某个审批页面、打开审批详情页、发起页等功能等。
 
-- [打开审批首页](1423-open-approval-home-page.md)
-- [打开审批筛选页](1425-open-approval-filter-page.md)
-- [发起审批](1422-initiate-approval.md)
-- [打开审批详情](1424-open-approval-details.md)
+- [打开审批首页](1424-open-approval-home-page.md)
+- [打开审批筛选页](1426-open-approval-filter-page.md)
+- [发起审批](1423-initiate-approval.md)
+- [打开审批详情](1425-open-approval-details.md)
 
 > **[!IMPORTANT]**
 >

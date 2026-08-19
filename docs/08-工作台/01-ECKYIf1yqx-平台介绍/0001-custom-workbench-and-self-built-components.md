@@ -7,12 +7,12 @@ group: "工作台"
 tab: "平台介绍"
 breadcrumb: "概述"
 doc_id: "OtIzeVUj3x"
-updated_at: "2026-08-18 09:11:58"
+updated_at: "2026-08-19 09:12:40"
 ---
 
 > Source: https://open.dingtalk.com/document/dingstart/custom-workbench-and-self-built-components
 > Path: 工作台 / 平台介绍 / 概述
-> Updated: 2026-08-18 09:11:58
+> Updated: 2026-08-19 09:12:40
 
 # 概述
 
@@ -67,3 +67,7 @@ updated_at: "2026-08-18 09:11:58"
 **自定义工作台**，如下图所示：
 
 ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8155107871/p1095171.png)
+
+## **联系我们**
+
+如果在开发过程中有任何问题，可通过搜索“**23108710**”群号，加入**钉钉组件和工作台开发互助群**。

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "平台服务"
 breadcrumb: "合作指南 > 产品方案商 > 定制业务的合作指引 > 授权服务商开发定制应用"
 doc_id: "JmUb9d4s9Q"
-updated_at: "2025-09-23 19:22:08"
+updated_at: "2026-08-19 09:15:40"
 ---
 
 > Source: https://open.dingtalk.com/document/services/customize-application-development-process
 > Path: 应用开发 / 平台服务 / 合作指南 > 产品方案商 > 定制业务的合作指引 > 授权服务商开发定制应用
-> Updated: 2025-09-23 19:22:08
+> Updated: 2026-08-19 09:15:40
 
 # 授权服务商开发定制应用
 
@@ -42,25 +42,20 @@ updated_at: "2025-09-23 19:22:08"
 
 参考以下操作，创建一个小程序应用：
 
-1. 登录[钉钉开发者后台](https://open-dev.dingtalk.com/)。
+1. 登录[钉钉开发者后台](https://open-dev.dingtalk.com/)，然后依次选择**应用开发** >**钉钉应用**，然后在创建应用按钮中选择**委托服务商开发**。
 
    > **[!NOTE]**
    >
    > 只有管理员和子管理员可登录开发者后台。
-2. 在**应用开发**页面，选择**企业内部开发**，然后单击**创建应用**。
 
-   ![1](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2942360261/p255125.png)
-3. 选择**小程序**，填写应用的基本信息，然后单击**确定创建**。
+   ![1](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0412017871/p255125.png)
+2. 在弹窗中选择**小程序**，填写应用的基本信息，然后单击**确定创建**。
 
-   > **[!IMPORTANT]**
-   >
-   > 开发方式选择委托服务商开发。
+   ![p133352](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0412017871/p255131.png)
+3. 应用创建后，在**授权产品方案商开发**区域输入产品方案商的CorpId，然后单击**查找服务商**，再单击**点击授权**。
 
-   ![p133352](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/5160360261/p255131.png)
-4. 应用创建后，在**授权产品方案商开发**区域输入产品方案商的CorpId，然后单击**查找服务商**，再单击**点击授权**。
-
-   ![授权服务商](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0373251361/p135198.png)
-5. 在弹出的页面，单击**确认并授权**完成服务商开发授权。
+   ![授权服务商](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0412017871/p135198.png)
+4. 在弹出的页面，单击**确认并授权**完成服务商开发授权。
 
 ## 步骤二：产品方案商配置应用
 

@@ -1,22 +1,22 @@
 ---
-title: "钉钉产品方案商安全规范"
+title: "安全规范"
 source_url: "https://open.dingtalk.com/document/services/safety-specification-for-dingtalk-product-solution-providers"
 namespace: "services"
 slug: "safety-specification-for-dingtalk-product-solution-providers"
 group: "应用开发"
 tab: "平台服务"
-breadcrumb: "平台基础规则 > 产品方案商 > 钉钉产品方案商安全规范"
+breadcrumb: "平台基础规则 > 产品方案商 > 安全规范"
 doc_id: "oFk41tOiyY"
-updated_at: "2025-09-23 19:21:27"
+updated_at: "2026-08-19 09:15:28"
 ---
 
 > Source: https://open.dingtalk.com/document/services/safety-specification-for-dingtalk-product-solution-providers
-> Path: 应用开发 / 平台服务 / 平台基础规则 > 产品方案商 > 钉钉产品方案商安全规范
-> Updated: 2025-09-23 19:21:27
+> Path: 应用开发 / 平台服务 / 平台基础规则 > 产品方案商 > 安全规范
+> Updated: 2026-08-19 09:15:28
 
-# 钉钉产品方案商安全规范
+# 安全规范
 
-## **一、第三方企业应用安全认证评分标准**
+## **一、安全认证评分标准**
 
 ### **第一章 目的和适用对象**
 

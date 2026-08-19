@@ -20,9 +20,7 @@ updated_at: "2025-09-12 17:21:02"
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/notable/bases/{baseId}/sheets |
 | HTTP Method | POST |
@@ -33,13 +31,13 @@ updated_at: "2025-09-12 17:21:02"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，通过调用[获取企业内部应用的accessToken](0033-obtain-the-access-token-of-an-internal-app.md)接口获取。 |
+| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，调用[获取企业内部应用的accessToken](0033-obtain-the-access-token-of-an-internal-app.md)接口获取。 |
 
 ### 路径参数
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| baseId | String | 是 | AI表格ID，获取方式请参考[数据结构](0457-data-structure.md)。 |
+| baseId | String | 是 | AI表格ID，获取方式请参考[数据结构](0457-data-structure.md#e2156ac0b1eko)。 |
 
 ### 查询参数
 
@@ -54,8 +52,8 @@ updated_at: "2025-09-12 17:21:02"
 | name | String | 否 | 数据表名。 |
 | fields | Array | 否 | 数据表字段相关配置。 |
 | name | String | 是 | 字段名。 |
-| type | String | 是 | 字段类型，支持的类型请参考[字段属性](https://open.dingtalk.com/document/development/field-properties)。 |
-| property | Map<String, Any> | 否 | 字段属性，具体格式请参考[字段属性](https://open.dingtalk.com/document/development/field-properties)。 |
+| type | String | 是 | 字段类型，支持的类型请参考[字段属性](0457-data-structure.md#e1e0d1e78820h)。 |
+| property | Map<String, Any> | 否 | 字段属性，具体格式请参考[字段属性](0457-data-structure.md#e1e0d1e78820h)。 |
 |  | Any | 否 | 字段属性，不同类型的字段有着不同的属性配置。 |
 
 ### 请求示例

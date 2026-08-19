@@ -34,7 +34,7 @@ updated_at: "2026-07-14 09:22:11"
 
 步骤二：申请接口权限，申请工作通知相关接口的权限。
 
-步骤三：获取应用访问凭证[获取企业内部应用的access\_token](1443-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
+步骤三：获取应用访问凭证[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
 
 步骤四：调用工作通知相关API：
 
@@ -63,7 +63,7 @@ updated_at: "2026-07-14 09:22:11"
 >
 > 服务端API差异详情参见[新版API VS 旧版API](0002-download-the-server-side-sdk.md#section-8lr-id4-rbz)。以下接口均使用服务端API接口，SDK下载详情参见[服务端SDK下载](0002-download-the-server-side-sdk.md)。
 
-根据步骤一中的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的access\_token](1443-obtain-orgapp-token.md)。
+根据步骤一中的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)。
 
 ```
 public void getAccessToken() throws ApiException {

@@ -1,20 +1,20 @@
 ---
-title: "钉钉产品方案商保证金规范"
+title: "保证金规范"
 source_url: "https://open.dingtalk.com/document/services/dingtalk-product-solution-provider-margin-specification"
 namespace: "services"
 slug: "dingtalk-product-solution-provider-margin-specification"
 group: "应用开发"
 tab: "平台服务"
-breadcrumb: "平台基础规则 > 产品方案商 > 钉钉产品方案商保证金规范"
+breadcrumb: "平台基础规则 > 产品方案商 > 保证金规范"
 doc_id: "Sz5nyneBFB"
-updated_at: "2025-09-23 19:21:28"
+updated_at: "2026-08-19 09:15:29"
 ---
 
 > Source: https://open.dingtalk.com/document/services/dingtalk-product-solution-provider-margin-specification
-> Path: 应用开发 / 平台服务 / 平台基础规则 > 产品方案商 > 钉钉产品方案商保证金规范
-> Updated: 2025-09-23 19:21:28
+> Path: 应用开发 / 平台服务 / 平台基础规则 > 产品方案商 > 保证金规范
+> Updated: 2026-08-19 09:15:29
 
-# 钉钉产品方案商保证金规范
+# 保证金规范
 
 ## **第一章 概述**
 

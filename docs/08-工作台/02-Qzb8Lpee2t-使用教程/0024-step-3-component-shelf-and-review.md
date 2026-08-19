@@ -7,18 +7,18 @@ group: "工作台"
 tab: "使用教程"
 breadcrumb: "合作伙伴教程 > 第三方全码组件 > 上架流程 > 步骤三：组件上架和审核"
 doc_id: "Dehy56h9Ry"
-updated_at: "2026-08-18 09:12:09"
+updated_at: "2026-08-19 09:12:35"
 ---
 
 > Source: https://open.dingtalk.com/document/dingstart/step-3-component-shelf-and-review
 > Path: 工作台 / 使用教程 / 合作伙伴教程 > 第三方全码组件 > 上架流程 > 步骤三：组件上架和审核
-> Updated: 2026-08-18 09:12:09
+> Updated: 2026-08-19 09:12:35
 
 # 步骤三：组件上架和审核
 
 当组件完成开发后，开发者需要提交组件上架申请并完成组件接入审核。
 
-## 一、准备上架素材
+## 准备上架素材
 
 ### 组件截图
 
@@ -40,12 +40,12 @@ updated_at: "2026-08-18 09:12:09"
 
 说明组件使用的角色，用于平台的精准推荐。
 
-## 二、应用接入应用内授权能力
+## 应用接入应用内授权能力
 
 - 应用内授权简述，请参考[概述](../../01-应用开发/02-4a8AMF6u2A-服务端API/0876-application-market-overview.md)。
 - 应用内授权开通接入方案，请参考[应用内授权开通接入](../../01-应用开发/02-4a8AMF6u2A-服务端API/0879-in-app-authorization-to-open-access.md)。
 
-## 三、组件接入审核
+## 组件接入审核
 
 > **[!IMPORTANT]**
 >

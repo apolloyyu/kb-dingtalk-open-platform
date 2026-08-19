@@ -60,7 +60,7 @@ updated_at: "2026-07-10 10:11:22"
 1. **自有OA审批集成：**三方业务系统分别对接钉钉自有OA审批，通过钉钉**自有OA审批相关接口**将业务系统的审批任务数据同步至钉钉OA审批流程中心，具体步骤参考[自有OA审批：三方流程与页面对接](0477-use-three-party-process-and-page-docking.md)。
 2. **官方OA审批集成：**三方业务系统也可对接钉钉官方OA审批，通过钉钉**官方OA审批相关接口**直接在业务系统内发起钉钉官方OA审批流程，具体步骤参考：[官方OA审批：钉钉流程与页面对接](0489-use-the-dingtalk-oa-approval-process-and-page-interface.md)。
 3. **用户主动发起：**用户也可直接在钉钉官方OA审批应用内提交审批流程，通过步骤1-3可以将分散的业务流程集中到钉钉OA审批中心进行管理。
-4. **获取审批中心数据：**企业自建审批中心应用可调用[关于新增OA审批高级版专享OpenAPI和解决方案的说明](1441-description-of-new-oa-approval-premium-exclusive-openapi-and-solutions.md)中的查询审批中心列表相关接口（高级版专享），分别获取用户在钉钉审批中心的[待处理](0535-api-premiumgettodotasks.md)、[已处理](0536-api-premiumgetdonetasks.md)、[已发起的](0527-api-premiumgetsubmittedinstances.md)、[已收到的](0528-api-premiumgetnoticedinstances.md)审批列表数据。
+4. **获取审批中心数据：**企业自建审批中心应用可调用[关于新增OA审批高级版专享OpenAPI和解决方案的说明](1442-description-of-new-oa-approval-premium-exclusive-openapi-and-solutions.md)中的查询审批中心列表相关接口（高级版专享），分别获取用户在钉钉审批中心的[待处理](0535-api-premiumgettodotasks.md)、[已处理](0536-api-premiumgetdonetasks.md)、[已发起的](0527-api-premiumgetsubmittedinstances.md)、[已收到的](0528-api-premiumgetnoticedinstances.md)审批列表数据。
 5. **批量审批任务：**企业自建审批中心应用获取到用户审批中心任务列表数据后，可根据待处理列表接口返回的审批类型`processType`（0：官方OA审批、1：自有OA审批），分别对官方OA审批、自有OA审批的任务进行批量更新。
 
    1. **自有OA审批任务批量更新：**根据审批实例`processInstanceId`和审批待办任务taskId，可以调用[更新流程中心任务状态](0518-update-process-center-task-status.md)接口，同步完成自有审批待办状态的更新。在或签等场景，可以调用[批量取消流程中心待处理任务](0519-cancel-multiple-oa-approval-tasks.md)接口，批量将审批实例下正在运行中的待办事项设置为CANCELED。

@@ -38,7 +38,7 @@ unionid是员工在当前开发者企业账号范围内的唯一标识，由系�
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | be3Fxxxx | 调用该接口的应用凭证。  **[!NOTE]**  如果是通过**免登方式**获取的unionid，则不能使用免登获取的 token 调用该接口，需要使用下方的接口重新获取。   - 企业内部应用，通过[获取企业内部应用的access\_token](1443-obtain-orgapp-token.md)接口获取。 - 第三方企业应用，通过[获取第三方企业的access\_token](1445-obtain-isvapp-token.md)接口获取。 |
+| access\_token | String | 是 | be3Fxxxx | 调用该接口的应用凭证。  **[!NOTE]**  如果是通过**免登方式**获取的unionid，则不能使用免登获取的 token 调用该接口，需要使用下方的接口重新获取。   - 企业内部应用，通过[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)接口获取。 - 第三方企业应用，通过[获取第三方企业的access\_token](1446-obtain-isvapp-token.md)接口获取。 |
 
 ### **请求体**
 

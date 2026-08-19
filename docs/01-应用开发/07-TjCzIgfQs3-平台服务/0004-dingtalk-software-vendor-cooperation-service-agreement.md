@@ -1,20 +1,20 @@
 ---
-title: "钉钉销售咨询服务商合作协议"
+title: "合作协议"
 source_url: "https://open.dingtalk.com/document/services/dingtalk-software-vendor-cooperation-service-agreement"
 namespace: "services"
 slug: "dingtalk-software-vendor-cooperation-service-agreement"
 group: "应用开发"
 tab: "平台服务"
-breadcrumb: "平台协议 > 销售服务商 > 钉钉销售咨询服务商合作协议"
+breadcrumb: "平台协议 > 销售服务商 > 合作协议"
 doc_id: "FpzLblgG1i"
-updated_at: "2025-09-23 19:21:23"
+updated_at: "2026-08-19 09:15:23"
 ---
 
 > Source: https://open.dingtalk.com/document/services/dingtalk-software-vendor-cooperation-service-agreement
-> Path: 应用开发 / 平台服务 / 平台协议 > 销售服务商 > 钉钉销售咨询服务商合作协议
-> Updated: 2025-09-23 19:21:23
+> Path: 应用开发 / 平台服务 / 平台协议 > 销售服务商 > 合作协议
+> Updated: 2026-08-19 09:15:23
 
-# **钉钉销售咨询服务商合作协议**
+# **合作协议**
 
 **版本更新日期：2023年12月**
 
@@ -262,7 +262,7 @@ updated_at: "2025-09-23 19:21:23"
 
 收款银行：浙江网商银行股份有限公司
 
-银行帐户：8888888655762753
+银行账户：8888888655762753
 
 **9.2. 您方保证金的缴纳时间及方式以我方安排为准。您方在缴纳保证金时，需备注说明“销售咨询服务商保证金＂字样，并在保证金缴纳后3个工作日内将打款凭证上传至我方指定的系统，以便申请开具保证金收据，具体以钉钉公司的系统操作流程为准。**
 

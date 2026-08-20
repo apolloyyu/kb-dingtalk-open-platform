@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > OA审批 > 清理审批数据"
 doc_id: "7n4BtAF9yn"
-updated_at: "2025-10-17 17:11:32"
+updated_at: "2026-08-20 16:40:54"
 ---
 
 > Source: https://open.dingtalk.com/document/development/clean-up-workflow-data
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > OA审批 > 清理审批数据
-> Updated: 2025-10-17 17:11:32
+> Updated: 2026-08-20 16:40:54
 
 # 清理审批数据
 

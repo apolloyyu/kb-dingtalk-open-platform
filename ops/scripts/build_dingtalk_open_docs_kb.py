@@ -230,6 +230,89 @@ def table_first_row_to_header(soup: BeautifulSoup) -> None:
             td.name = "th"
 
 
+def render_json_schema_components(soup: BeautifulSoup) -> int:
+    """展开官方文档的字段说明组件(JsonSchemaEditor)。
+
+    2025 年起官方把事件/接口的字段表做成前端组件,数据以 URL 编码 JSON 存放在
+    <div data-type="JsonSchemaEditor" value="%7B..."> 属性里;html_to_md 只保留
+    正文文本,组件会整体丢失(实测 579/3664 篇受影响,含 type/result 等关键枚举)。
+    此处解码 schema,按 index 顺序展开为「字段说明」标题 + 列表。返回替换个数。
+    """
+    count = 0
+    for div in soup.find_all("div", attrs={"data-type": "JsonSchemaEditor"}):
+        raw = div.get("value") or ""
+        try:
+            schema = json.loads(urllib.parse.unquote(raw))
+        except Exception:
+            continue
+        items: list[tuple[str, dict[str, Any], bool]] = []
+
+        def walk(node: dict[str, Any], path: str) -> None:
+            props = node.get("properties") or {}
+            required = set(node.get("required") or [])
+            ordered = sorted(
+                (kv for kv in props.items() if isinstance(kv[1], dict)),
+                key=lambda kv: kv[1].get("index", 0),
+            )
+            for name, sub in ordered:
+                dotted = f"{path}.{name}" if path else name
+                items.append((dotted, sub, name in required))
+                walk(sub, dotted)
+                if isinstance(sub.get("items"), dict):
+                    walk(sub["items"], f"{dotted}[]")
+
+        walk(schema if isinstance(schema, dict) else {}, "")
+        if not isinstance(schema, dict):
+            continue
+        title = str(schema.get("title") or "").strip() or "字段说明"
+        container = soup.new_tag("div")
+        heading = soup.new_tag("h3")
+        heading.string = title
+        container.append(heading)
+        if not items:
+            # 标量 schema(常见于 JSAPI 出参):无 properties,只有类型/描述/示例
+            desc = str(schema.get("description") or "").strip()
+            if not desc and not schema.get("type"):
+                continue
+            p = soup.new_tag("p")
+            bits = [b for b in (str(schema.get("type") or ""),) if b]
+            if bits:
+                p.append(f"（{bits[0]}）")
+            if desc:
+                p.append(desc)
+            sample = schema.get("sample")
+            if sample not in (None, "") and not schema.get("hiddenSample"):
+                p.append(" 示例：")
+                code = soup.new_tag("code")
+                code.string = str(sample)
+                p.append(code)
+            container.append(p)
+            div.replace_with(container)
+            count += 1
+            continue
+        ul = soup.new_tag("ul")
+        for dotted, sub, req in items:
+            li = soup.new_tag("li")
+            code = soup.new_tag("code")
+            code.string = dotted
+            li.append(code)
+            bits = [b for b in (str(sub.get("type") or ""), "必填" if req else "") if b]
+            if bits:
+                li.append(f"（{'，'.join(bits)}）")
+            desc = str(sub.get("description") or "").strip()
+            if desc:
+                li.append("：")
+                for i, line in enumerate(desc.splitlines()):
+                    if i:
+                        li.append(soup.new_tag("br"))
+                    li.append(line)
+            ul.append(li)
+        container.append(ul)
+        div.replace_with(container)
+        count += 1
+    return count
+
+
 def rewrite_notes(soup: BeautifulSoup) -> None:
     note_type_map = {
         "note-important": "IMPORTANT",
@@ -314,6 +397,7 @@ def clean_html_to_markdown(doc: DocRef, html_text: str, local_map: dict[str, Pat
     for tag in soup(["script", "style", "noscript"]):
         tag.decompose()
     table_first_row_to_header(soup)
+    render_json_schema_components(soup)
     rewrite_notes(soup)
     rewrite_links(soup, doc, local_map)
 
@@ -324,10 +408,15 @@ def clean_html_to_markdown(doc: DocRef, html_text: str, local_map: dict[str, Pat
         title = soup.find("title").get_text(" ", strip=True)
     title = title or doc.doc_name
 
+    # 页面可能带多个 gmtModify meta(历史版本+最近修改),取最大值才是真实更新时间
     updated_at = ""
-    meta = soup.find("meta", attrs={"name": "gmtModify"})
-    if meta and meta.get("content"):
-        updated_at = str(meta["content"])
+    dates = [
+        str(m["content"]).strip()
+        for m in soup.find_all("meta", attrs={"name": "gmtModify"})
+        if m.get("content")
+    ]
+    if dates:
+        updated_at = max(dates)
 
     main = soup.find("main") or soup.find("body") or soup
     headings = [

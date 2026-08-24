@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "认证与授权 > 授权套件 > 查询个人授权记录"
 doc_id: "loBxU9dL4a"
-updated_at: "2026-01-23 10:46:02"
+updated_at: "2026-06-01 15:19:00"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-personal-authorization-records
 > Path: 应用开发 / 服务端API / 认证与授权 > 授权套件 > 查询个人授权记录
-> Updated: 2026-01-23 10:46:02
+> Updated: 2026-06-01 15:19:00
 
 # 查询个人授权记录
 

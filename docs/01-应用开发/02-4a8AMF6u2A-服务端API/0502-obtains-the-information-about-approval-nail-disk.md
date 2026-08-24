@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 官方 OA 审批 > 审批钉盘空间&附件 > 获取审批钉盘空间信息"
 doc_id: "511yHAnSYZ"
-updated_at: "2025-09-11 21:04:02"
+updated_at: "2026-06-03 10:12:30"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtains-the-information-about-approval-nail-disk
 > Path: 应用开发 / 服务端API / OA 审批 > 官方 OA 审批 > 审批钉盘空间&附件 > 获取审批钉盘空间信息
-> Updated: 2025-09-11 21:04:02
+> Updated: 2026-06-03 10:12:30
 
 # 获取审批钉盘空间信息
 

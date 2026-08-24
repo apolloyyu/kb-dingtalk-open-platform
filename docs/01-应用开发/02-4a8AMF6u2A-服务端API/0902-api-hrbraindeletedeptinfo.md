@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "组织大脑 > 数据集成 > 组织与人员 > 数据集成组织架构数据删除"
 doc_id: "KN6ZyE6ara"
-updated_at: "2025-09-12 17:19:39"
+updated_at: "2026-06-02 19:28:01"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-hrbraindeletedeptinfo
 > Path: 应用开发 / 服务端API / 组织大脑 > 数据集成 > 组织与人员 > 数据集成组织架构数据删除
-> Updated: 2025-09-12 17:19:39
+> Updated: 2026-06-02 19:28:01
 
 # 数据集成组织架构数据删除
 

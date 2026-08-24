@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "音频会议 > getThirdAppUserCustomData"
 doc_id: "7ggGVlwzx8"
-updated_at: "2024-07-23"
+updated_at: "2025-08-27 18:08:41"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-get-third-app-user-custom-data
 > Path: 应用开发 / 客户端JSAPI / 音频会议 > getThirdAppUserCustomData
-> Updated: 2024-07-23
+> Updated: 2025-08-27 18:08:41
 
 # getThirdAppUserCustomData
 
@@ -45,13 +45,20 @@ updated_at: "2024-07-23"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `thirdAppId`（string，必填）：会议扩展应用的appId，从开发者后台对应的微应用基础信息页面获取：  
+  - 企业自建应用为原企业内部应用AgentId  
+  - 第三方企业应用为原三方企业应用AppId。
+- `coolAppCode`（string，必填）：会议扩展应用的酷应用id，从开发者后台对应的酷应用页面获取。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### userCustomData
+
+（string）用户的业务自定义信息 示例：`Q09PTEFQUC0wLTEwMjcxMTdENkRDNjIxMzY3N0E5MDAwWA`
 
 ## **示例****代码**
 

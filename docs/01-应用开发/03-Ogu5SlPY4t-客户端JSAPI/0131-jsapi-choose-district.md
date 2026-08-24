@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 地图 > chooseDistrict"
 doc_id: "R4Z5apvcxZ"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:05:52"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-choose-district
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 地图 > chooseDistrict
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:05:52
 
 # chooseDistrict
 
@@ -43,13 +43,20 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `selectedCode`（string）：选择地区。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `region`（string）：选择地区。
+- `regionCode`（string，必填）：地区编码。
+- `regionName`（string，必填）：地区的名称
+- `regionFullName`（string，必填）：地区的全名
 
 ## **示例****代码**
 

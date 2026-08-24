@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "AI 表格 > 字段 > 创建字段"
 doc_id: "aC9kXibPnK"
-updated_at: "2025-09-12 17:20:54"
+updated_at: "2026-08-19 09:07:45"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-noatable-createfield
 > Path: 应用开发 / 服务端API / AI 表格 > 字段 > 创建字段
-> Updated: 2025-09-12 17:20:54
+> Updated: 2026-08-19 09:07:45
 
 # 创建字段
 

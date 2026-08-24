@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "公告 > 查询公告已读未读人员列表"
 doc_id: "Wi2b1zCvgU"
-updated_at: "2025-10-21 13:56:42"
+updated_at: "2026-06-01 18:25:31"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-bulletin-read-unread-persons-list
 > Path: 应用开发 / 服务端API / 公告 > 查询公告已读未读人员列表
-> Updated: 2025-10-21 13:56:42
+> Updated: 2026-06-01 18:25:31
 
 # 查询公告已读未读人员列表
 

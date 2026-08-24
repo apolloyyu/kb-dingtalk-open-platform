@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "AI 表格 > 记录 > 更新多行记录"
 doc_id: "5d9lOfxcS9"
-updated_at: "2025-09-12 17:21:00"
+updated_at: "2026-08-19 09:07:56"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-noatable-updaterecords
 > Path: 应用开发 / 服务端API / AI 表格 > 记录 > 更新多行记录
-> Updated: 2025-09-12 17:21:00
+> Updated: 2026-08-19 09:07:56
 
 # 更新多行记录
 

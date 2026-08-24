@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 知识库 > 知识库目录树管理 > 创建知识库文档"
 doc_id: "cS9vmubdzf"
-updated_at: "2025-09-12 17:20:01"
+updated_at: "2026-06-03 10:13:09"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-team-space-document
 > Path: 应用开发 / 服务端API / 文档/文件 > 知识库 > 知识库目录树管理 > 创建知识库文档
-> Updated: 2025-09-12 17:20:01
+> Updated: 2026-06-03 10:13:09
 
 # 创建知识库文档
 

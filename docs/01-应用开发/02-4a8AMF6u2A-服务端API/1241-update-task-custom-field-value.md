@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "Teambition 项目管理 > 任务 > 项目任务 > 更新项目任务的自定义字段值"
 doc_id: "WQoTEmL6bE"
-updated_at: "2025-10-09 18:06:53"
+updated_at: "2026-06-04 19:11:43"
 ---
 
 > Source: https://open.dingtalk.com/document/development/update-task-custom-field-value
 > Path: 应用开发 / 服务端API / Teambition 项目管理 > 任务 > 项目任务 > 更新项目任务的自定义字段值
-> Updated: 2025-10-09 18:06:53
+> Updated: 2026-06-04 19:11:43
 
 # 更新项目任务的自定义字段值
 

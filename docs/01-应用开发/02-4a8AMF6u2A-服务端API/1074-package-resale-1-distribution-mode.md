@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 生态开放 > e签宝 2.0 > 套餐 > 套餐转售—分润模式"
 doc_id: "NFFvkaecLg"
-updated_at: "2025-09-23 19:21:35"
+updated_at: "2026-06-23 18:15:57"
 ---
 
 > Source: https://open.dingtalk.com/document/development/package-resale-1-distribution-mode
 > Path: 应用开发 / 服务端API / 行业与生态 > 生态开放 > e签宝 2.0 > 套餐 > 套餐转售—分润模式
-> Updated: 2025-09-23 19:21:35
+> Updated: 2026-06-23 18:15:57
 
 # 套餐转售—分润模式
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "即时通信 > 机器人 > 发送DING消息 > 发送DING消息"
 doc_id: "b7OGbH7uqQ"
-updated_at: "2026-04-22 20:37:59"
+updated_at: "2026-06-05 13:37:43"
 ---
 
 > Source: https://open.dingtalk.com/document/development/robot-sends-nail-message
 > Path: 应用开发 / 服务端API / 即时通信 > 机器人 > 发送DING消息 > 发送DING消息
-> Updated: 2026-04-22 20:37:59
+> Updated: 2026-06-05 13:37:43
 
 # 发送DING消息
 

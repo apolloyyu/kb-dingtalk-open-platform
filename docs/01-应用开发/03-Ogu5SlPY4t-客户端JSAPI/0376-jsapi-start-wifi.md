@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > Wi-Fi > startWifi"
 doc_id: "idwCeFnANC"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:07:41"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-start-wifi
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > Wi-Fi > startWifi
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:07:41
 
 # startWifi
 

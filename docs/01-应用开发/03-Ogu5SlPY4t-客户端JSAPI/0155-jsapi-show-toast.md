@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 交互反馈 > showToast"
 doc_id: "YDnBy4mwwf"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:06:06"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-show-toast
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 交互反馈 > showToast
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:06:06
 
 # showToast
 
@@ -41,7 +41,13 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `content`（string，必填）：提示内容。
+- `duration`（number）：显示时长，单位为毫秒，默认 2000。  
+    
+  > 按系统规范，对于Android只有两种(<=2s和>2s)。
+- `type`（string）：根据类型展示相应图标，支持：success、fail、none。
 
 ## **返回结果**
 

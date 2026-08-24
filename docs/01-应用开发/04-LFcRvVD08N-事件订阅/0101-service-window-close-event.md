@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "组织关系 > 服务窗 > 服务窗取关事件"
 doc_id: "oxwJ0QGLJD"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2026-07-22 16:25:40"
 ---
 
 > Source: https://open.dingtalk.com/document/development/service-window-close-event
 > Path: 应用开发 / 事件订阅 / 组织关系 > 服务窗 > 服务窗取关事件
-> Updated: 2022-01-19 19:29:22
+> Updated: 2026-07-22 16:25:40
 
 # 服务窗取关事件
 
@@ -41,6 +41,20 @@ updated_at: "2022-01-19 19:29:22"
 
 Stream模式推送
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.data`（array）：取关用户列表。
+- `data.data[].name`（string）：取关人姓名。
+- `data.data[].type`（string）：操作类型。
+- `data.data[].userId`（string）：取关人的userId。
+- `data.data[].timestamp`（long）：取消关注时间戳，单位毫秒。
+
 ### **事件体示例**
 
 ```
@@ -64,6 +78,19 @@ Stream模式推送
 ```
 
 HTTP推送
+
+### 字段说明
+
+- `EventType`（String）：事件英文名称。
+- `EventTime`（Long）：事件发生的时间。
+- `CorpId`（String）：企业corpId。
+- `BizId`（String）：无业务意义，幂等。
+- `eventId`（String）：事件的唯一Id。
+- `data`（array）：取关用户列表。
+- `data[].name`（string）：取关人姓名。
+- `data[].type`（string）：操作类型。
+- `data[].userId`（string）：取关人的userId。
+- `data[].timestamp`（long）：取消关注时间戳，单位毫秒。
 
 ### **事件体示例**
 

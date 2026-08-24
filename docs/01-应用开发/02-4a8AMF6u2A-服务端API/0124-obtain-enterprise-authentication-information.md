@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "通讯录管理 > 企业管理 > 获取企业认证信息"
 doc_id: "u3vR2w2xAf"
-updated_at: "2025-09-11 21:01:56"
+updated_at: "2026-06-01 16:09:42"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-enterprise-authentication-information
 > Path: 应用开发 / 服务端API / 通讯录管理 > 企业管理 > 获取企业认证信息
-> Updated: 2025-09-11 21:01:56
+> Updated: 2026-06-01 16:09:42
 
 # 获取企业认证信息
 

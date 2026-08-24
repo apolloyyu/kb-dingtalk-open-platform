@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 行业开放 > 设备上钉 > 注册设备到钉钉"
 doc_id: "mhxV1eITvd"
-updated_at: "2025-09-23 19:22:24"
+updated_at: "2026-06-03 09:09:30"
 ---
 
 > Source: https://open.dingtalk.com/document/development/pin-registration-interface
 > Path: 应用开发 / 服务端API / 行业与生态 > 行业开放 > 设备上钉 > 注册设备到钉钉
-> Updated: 2025-09-23 19:22:24
+> Updated: 2026-06-03 09:09:30
 
 # 注册设备到钉钉
 

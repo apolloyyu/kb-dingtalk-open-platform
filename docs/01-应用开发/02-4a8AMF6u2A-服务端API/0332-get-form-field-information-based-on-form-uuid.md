@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "宜搭 > 表单 > 获取表单内的组件信息"
 doc_id: "iFyLiY6smV"
-updated_at: "2026-04-24 14:14:27"
+updated_at: "2026-06-03 10:11:43"
 ---
 
 > Source: https://open.dingtalk.com/document/development/get-form-field-information-based-on-form-uuid
 > Path: 应用开发 / 服务端API / 宜搭 > 表单 > 获取表单内的组件信息
-> Updated: 2026-04-24 14:14:27
+> Updated: 2026-06-03 10:11:43
 
 # 获取表单内的组件信息
 

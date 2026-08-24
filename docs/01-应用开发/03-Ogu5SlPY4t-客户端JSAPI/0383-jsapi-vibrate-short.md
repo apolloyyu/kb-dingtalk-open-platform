@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > 振动 > vibrateShort"
 doc_id: "qtRhIFy8AI"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:07:45"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-vibrate-short
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > 振动 > vibrateShort
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:07:45
 
 # vibrateShort
 

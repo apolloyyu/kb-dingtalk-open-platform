@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 高级版专享接口 > 官方 OA 审批 > 审批实例 > 查询审批中心用户已收到的实例列表"
 doc_id: "cuJ0T3F4vB"
-updated_at: "2025-09-11 21:04:26"
+updated_at: "2026-06-03 10:12:48"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-premiumgetnoticedinstances
 > Path: 应用开发 / 服务端API / OA 审批 > 高级版专享接口 > 官方 OA 审批 > 审批实例 > 查询审批中心用户已收到的实例列表
-> Updated: 2025-09-11 21:04:26
+> Updated: 2026-06-03 10:12:48
 
 # 查询审批中心用户已收到的实例列表
 

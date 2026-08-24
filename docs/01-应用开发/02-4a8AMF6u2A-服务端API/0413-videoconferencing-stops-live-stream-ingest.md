@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "音视频 > 会议 > 停止视频会议直播推流"
 doc_id: "RfIecXStG7"
-updated_at: "2026-05-28 18:22:31"
+updated_at: "2026-06-02 12:08:26"
 ---
 
 > Source: https://open.dingtalk.com/document/development/videoconferencing-stops-live-stream-ingest
 > Path: 应用开发 / 服务端API / 音视频 > 会议 > 停止视频会议直播推流
-> Updated: 2026-05-28 18:22:31
+> Updated: 2026-06-02 12:08:26
 
 # 停止视频会议直播推流
 

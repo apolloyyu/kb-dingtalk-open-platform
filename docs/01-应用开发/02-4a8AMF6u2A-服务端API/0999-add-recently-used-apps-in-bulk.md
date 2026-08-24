@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "钉钉工作台 > 批量添加最近使用应用"
 doc_id: "DZRBJ8hUti"
-updated_at: "2025-09-11 21:03:43"
+updated_at: "2026-06-02 19:48:40"
 ---
 
 > Source: https://open.dingtalk.com/document/development/add-recently-used-apps-in-bulk
 > Path: 应用开发 / 服务端API / 钉钉工作台 > 批量添加最近使用应用
-> Updated: 2025-09-11 21:03:43
+> Updated: 2026-06-02 19:48:40
 
 # 批量添加最近使用应用
 

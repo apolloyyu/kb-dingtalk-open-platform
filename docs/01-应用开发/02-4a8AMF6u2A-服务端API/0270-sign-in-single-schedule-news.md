@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "日程 > 签到 > 针对单个日程进行签到"
 doc_id: "Iu0yK0xY2B"
-updated_at: "2026-05-28 11:13:30"
+updated_at: "2026-06-01 18:18:49"
 ---
 
 > Source: https://open.dingtalk.com/document/development/sign-in-single-schedule-news
 > Path: 应用开发 / 服务端API / 日程 > 签到 > 针对单个日程进行签到
-> Updated: 2026-05-28 11:13:30
+> Updated: 2026-06-01 18:18:49
 
 # 针对单个日程进行签到
 

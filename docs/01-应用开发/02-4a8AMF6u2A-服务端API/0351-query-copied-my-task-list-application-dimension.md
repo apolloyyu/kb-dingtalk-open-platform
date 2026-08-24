@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "宜搭 > 任务 > 查询抄送我的任务列表（应用维度）"
 doc_id: "XA7bOPOykV"
-updated_at: "2025-10-09 18:05:53"
+updated_at: "2026-06-02 11:25:32"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-copied-my-task-list-application-dimension
 > Path: 应用开发 / 服务端API / 宜搭 > 任务 > 查询抄送我的任务列表（应用维度）
-> Updated: 2025-10-09 18:05:53
+> Updated: 2026-06-02 11:25:32
 
 # 查询抄送我的任务列表（应用维度）
 

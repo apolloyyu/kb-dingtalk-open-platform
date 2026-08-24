@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "智能人事 > 考勤 > 假期数据同步"
 doc_id: "QBAFUr6VK5"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-08-28 19:46:54"
 ---
 
 > Source: https://open.dingtalk.com/document/development/holiday-data-synchronization
 > Path: 应用开发 / 事件订阅 / 智能人事 > 考勤 > 假期数据同步
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-08-28 19:46:54
 
 # 假期数据同步
 
@@ -36,6 +36,30 @@ updated_at: "2022-01-19 19:29:22"
 ## 事件体描述
 
 Stream模式推送
+
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.workHoursPerDay`（integer）：一天的工作时长（单位：小时）。
+- `data.overtimeDayType`（string）：加班类型：  
+  - workDay：工作日加班转调休  
+  - restDay：休息日加班转调休  
+  - holiday：节假日加班转调休
+- `data.workDate`（string）：对应的工作日，格式yyyyMMdd，如：20210312。
+- `data.overtimeDay`（float）：加班转调休时长（以天为单位），例如：0.262。
+- `data.corpId`（string）：企业的corpid。
+- `data.delayEndTime`（long）：假期的延迟失效时间（unix时间戳）。 startTime < endTime <= delayEndTime。
+- `data.leaveCode`（string）：转成的调休假，对应的假期code。
+- `data.overtimeHour`（float）：加班转调休时长（以小时为单位），例如：2.1。 与overtimeDay的换算关系：overtimeDay=overtimeHour/workHoursPerDay。
+- `data.vacationRate`（integer）：加班转调休的比例，即实际工作时长\*vacationRate=调休时长。
+- `data.startTime`（long）：该假期的开始生效时间（unix时间戳）。
+- `data.endTime`（long）：该假期的结束生效时间（unix时间戳）。
+- `data.userId`（string）：对应的员工id。
 
 ### **事件体示例**
 
@@ -66,6 +90,30 @@ Stream模式推送
 SyncHTTP/RDS推送
 
 为RDS推送方式时，数据插入表open\_sync\_biz\_data\_medium中。
+
+### 字段说明
+
+- `corp_id`（String）：企业corp\_id。
+- `biz_id`（String）：biz\_id无业务意义，幂等。
+- `biz_type`（Integer）：事件bizType。
+- `biz_data`（object）：事件bizData介绍。
+- `biz_data.syncAction`（String）：事件英文名。
+- `biz_data.eventId`（String）：事件的唯一Id。
+- `biz_data.workHoursPerDay`（integer）：一天的工作时长（单位：小时）。
+- `biz_data.overtimeDayType`（string）：加班类型：  
+  - workDay：工作日加班转调休  
+  - restDay：休息日加班转调休  
+  - holiday：节假日加班转调休
+- `biz_data.workDate`（string）：对应的工作日，格式yyyyMMdd，如：20210312。
+- `biz_data.overtimeDay`（float）：加班转调休时长（以天为单位），例如：0.262。
+- `biz_data.corpId`（string）：企业的corpid。
+- `biz_data.delayEndTime`（long）：假期的延迟失效时间（unix时间戳）。 startTime < endTime <= delayEndTime。
+- `biz_data.leaveCode`（string）：转成的调休假，对应的假期code。
+- `biz_data.overtimeHour`（float）：加班转调休时长（以小时为单位），例如：2.1。 与overtimeDay的换算关系：overtimeDay=overtimeHour/workHoursPerDay。
+- `biz_data.vacationRate`（integer）：加班转调休的比例，即实际工作时长\*vacationRate=调休时长。
+- `biz_data.startTime`（long）：该假期的开始生效时间（unix时间戳）。
+- `biz_data.endTime`（long）：该假期的结束生效时间（unix时间戳）。
+- `biz_data.userId`（string）：对应的员工id。
 
 ### **biz\_data数据示例(biz\_type=67)**
 

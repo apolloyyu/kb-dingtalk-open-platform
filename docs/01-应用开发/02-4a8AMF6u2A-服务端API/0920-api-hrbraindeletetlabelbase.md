@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "组织大脑 > 数据集成 > 能力与标签 > 数据集成人员标签删除"
 doc_id: "bLafL5RNvR"
-updated_at: "2025-09-12 17:19:33"
+updated_at: "2026-06-02 19:34:52"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-hrbraindeletetlabelbase
 > Path: 应用开发 / 服务端API / 组织大脑 > 数据集成 > 能力与标签 > 数据集成人员标签删除
-> Updated: 2025-09-12 17:19:33
+> Updated: 2026-06-02 19:34:52
 
 # 数据集成人员标签删除
 

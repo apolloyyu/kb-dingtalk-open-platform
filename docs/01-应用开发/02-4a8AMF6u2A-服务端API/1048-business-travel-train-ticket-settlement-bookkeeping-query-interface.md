@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 生态开放 > 阿里商旅 > 账单管理 > 查询商旅火车票结算记账数据"
 doc_id: "1l2gk0XvGo"
-updated_at: "2026-01-29 14:31:02"
+updated_at: "2026-06-03 15:45:28"
 ---
 
 > Source: https://open.dingtalk.com/document/development/business-travel-train-ticket-settlement-bookkeeping-query-interface
 > Path: 应用开发 / 服务端API / 行业与生态 > 生态开放 > 阿里商旅 > 账单管理 > 查询商旅火车票结算记账数据
-> Updated: 2026-01-29 14:31:02
+> Updated: 2026-06-03 15:45:28
 
 # 查询商旅火车票结算记账数据
 

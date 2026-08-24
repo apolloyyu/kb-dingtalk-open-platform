@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "更多开放 > 客户管理（官方CRM） > 跟进记录 > 批量更新跟进记录数据"
 doc_id: "DfXBnZOvf0"
-updated_at: "2026-04-17 09:24:38"
+updated_at: "2026-06-04 19:12:14"
 ---
 
 > Source: https://open.dingtalk.com/document/development/batch-update-follow-up-record-data
 > Path: 应用开发 / 服务端API / 更多开放 > 客户管理（官方CRM） > 跟进记录 > 批量更新跟进记录数据
-> Updated: 2026-04-17 09:24:38
+> Updated: 2026-06-04 19:12:14
 
 # 批量更新跟进记录数据
 

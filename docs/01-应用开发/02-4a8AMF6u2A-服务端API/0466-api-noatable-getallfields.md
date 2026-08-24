@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "AI 表格 > 字段 > 获取所有字段"
 doc_id: "x9fg5rS3OB"
-updated_at: "2025-09-12 17:20:56"
+updated_at: "2026-08-19 09:07:48"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-noatable-getallfields
 > Path: 应用开发 / 服务端API / AI 表格 > 字段 > 获取所有字段
-> Updated: 2025-09-12 17:20:56
+> Updated: 2026-08-19 09:07:48
 
 # 获取所有字段
 

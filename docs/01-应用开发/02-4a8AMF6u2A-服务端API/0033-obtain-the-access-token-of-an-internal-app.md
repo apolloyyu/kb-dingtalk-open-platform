@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "认证与授权 > 访问凭证 > 应用身份凭证 > 获取企业内部应用的accessToken"
 doc_id: "yCG0X9Q1im"
-updated_at: "2026-04-29 22:27:38"
+updated_at: "2026-08-19 09:07:38"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-the-access-token-of-an-internal-app
 > Path: 应用开发 / 服务端API / 认证与授权 > 访问凭证 > 应用身份凭证 > 获取企业内部应用的accessToken
-> Updated: 2026-04-29 22:27:38
+> Updated: 2026-08-19 09:07:38
 
 # 获取企业内部应用的accessToken
 

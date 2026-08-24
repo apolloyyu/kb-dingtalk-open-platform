@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "音视频 > 会议 > 更新预约会议设置"
 doc_id: "vwc2mz8MnQ"
-updated_at: "2026-04-29 13:15:21"
+updated_at: "2026-06-02 12:08:31"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-updatescheduleconfsettings
 > Path: 应用开发 / 服务端API / 音视频 > 会议 > 更新预约会议设置
-> Updated: 2026-04-29 13:15:21
+> Updated: 2026-06-02 12:08:31
 
 # 更新预约会议设置
 

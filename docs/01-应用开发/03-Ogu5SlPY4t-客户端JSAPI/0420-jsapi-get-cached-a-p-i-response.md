@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > 内存不足处理 > getCachedAPIResponse"
 doc_id: "ycyLf5VGoj"
-updated_at: "2025-10-16"
+updated_at: "2025-10-16 15:45:35"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-get-cached-a-p-i-response
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > 内存不足处理 > getCachedAPIResponse
-> Updated: 2025-10-16
+> Updated: 2025-10-16 15:45:35
 
 # getCachedAPIResponse
 
@@ -158,7 +158,9 @@ H5 和小程序上拍照后，有时会发生页面崩溃刷新，导致一直�
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+（object）返回值是个字典，key 是每个 JSAPI 的名称，value 是个数组，数组的每一项是缓存的 JSAPI 返回值
 
 ## **示例****代码**
 

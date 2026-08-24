@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "音视频 > 会议 > 更新预约会议"
 doc_id: "uiiiH2NC5N"
-updated_at: "2025-09-11 21:03:03"
+updated_at: "2026-06-02 12:08:29"
 ---
 
 > Source: https://open.dingtalk.com/document/development/update-appointment-meeting
 > Path: 应用开发 / 服务端API / 音视频 > 会议 > 更新预约会议
-> Updated: 2025-09-11 21:03:03
+> Updated: 2026-06-02 12:08:29
 
 # 更新预约会议
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "多媒体 > 录音 > RecorderManager.onresume"
 doc_id: "4T21glLj8m"
-updated_at: "2023-08-11"
+updated_at: "2025-08-27 18:06:44"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-recorder-manager-on-resume
 > Path: 应用开发 / 客户端JSAPI / 多媒体 > 录音 > RecorderManager.onresume
-> Updated: 2023-08-11
+> Updated: 2025-08-27 18:06:44
 
 # RecorderManager.onresume
 
@@ -45,7 +45,9 @@ updated_at: "2023-08-11"
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+（object）
 
 ## **示例****代码**
 

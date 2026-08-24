@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "Agoal > 绩效考核 > 查询某个考核计划的部门得分"
 doc_id: "O8k1Lg2VOe"
-updated_at: "2025-11-28 09:39:56"
+updated_at: "2026-06-02 11:55:25"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-agoalorgperfdocquery
 > Path: 应用开发 / 服务端API / Agoal > 绩效考核 > 查询某个考核计划的部门得分
-> Updated: 2025-11-28 09:39:56
+> Updated: 2026-06-02 11:55:25
 
 # 查询某个考核计划的部门得分
 

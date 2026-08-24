@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "音视频 > 会议 > 踢出会议成员"
 doc_id: "fmUkMJ12nJ"
-updated_at: "2025-09-11 21:02:57"
+updated_at: "2026-06-02 12:06:17"
 ---
 
 > Source: https://open.dingtalk.com/document/development/kick-out-meeting-members
 > Path: 应用开发 / 服务端API / 音视频 > 会议 > 踢出会议成员
-> Updated: 2025-09-11 21:02:57
+> Updated: 2026-06-02 12:06:17
 
 # 踢出会议成员
 

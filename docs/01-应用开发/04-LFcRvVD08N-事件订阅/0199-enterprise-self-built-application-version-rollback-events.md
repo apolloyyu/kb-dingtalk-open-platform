@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "应用管理 > 小程序版本回滚事件"
 doc_id: "mJLaLIoPwT"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-08-28 19:47:28"
 ---
 
 > Source: https://open.dingtalk.com/document/development/enterprise-self-built-application-version-rollback-events
 > Path: 应用开发 / 事件订阅 / 应用管理 > 小程序版本回滚事件
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-08-28 19:47:28
 
 # 小程序版本回滚事件
 
@@ -37,6 +37,24 @@ updated_at: "2022-01-19 19:29:22"
 
 Stream模式推送
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.originVersionId`（long）：小程序回滚前线上版本号id。
+- `data.agentId`（long）：应用AgentId。
+- `data.miniAppId`（string）：小程序id。
+- `data.originVersion`（long）：小程序回滚前线上版本号。
+- `data.miniAppOnPc`（boolean）：小程序回滚目标版本是否发布PC端：  
+  - false：表示不发布PC端，只发布移动端。  
+  - true：表示既发布移动端又发布PC端。
+- `data.targetVersion`（string）：小程序回滚目标版本号。
+- `data.targetVersionId`（long）：小程序回滚目标版本号id。
+
 ### **事件体示例**
 
 ```
@@ -59,6 +77,23 @@ Stream模式推送
 ```
 
 HTTP推送
+
+### 字段说明
+
+- `EventType`（String）：事件英文名称。
+- `EventTime`（Long）：事件发生的时间。
+- `CorpId`（String）：企业corpId。
+- `BizId`（String）：无业务意义，幂等。
+- `eventId`（String）：事件的唯一Id。
+- `originVersionId`（long）：小程序回滚前线上版本号id。
+- `agentId`（long）：应用AgentId。
+- `miniAppId`（string）：小程序id。
+- `originVersion`（long）：小程序回滚前线上版本号。
+- `miniAppOnPc`（boolean）：小程序回滚目标版本是否发布PC端：  
+  - false：表示不发布PC端，只发布移动端。  
+  - true：表示既发布移动端又发布PC端。
+- `targetVersion`（string）：小程序回滚目标版本号。
+- `targetVersionId`（long）：小程序回滚目标版本号id。
 
 ### **事件体示例**
 

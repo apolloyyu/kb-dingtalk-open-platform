@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 表格 > 行列 > 设置自动行高"
 doc_id: "a6LtVCUl2C"
-updated_at: "2026-03-31 10:02:20"
+updated_at: "2026-06-04 19:09:09"
 ---
 
 > Source: https://open.dingtalk.com/document/development/set-row-height-automatically
 > Path: 应用开发 / 服务端API / 文档/文件 > 表格 > 行列 > 设置自动行高
-> Updated: 2026-03-31 10:02:20
+> Updated: 2026-06-04 19:09:09
 
 # 设置自动行高
 

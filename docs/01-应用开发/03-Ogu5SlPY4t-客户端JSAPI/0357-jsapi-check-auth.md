@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > 系统信息 > checkAuth"
 doc_id: "Ef4368Hmf3"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:07:29"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-check-auth
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > 系统信息 > checkAuth
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:07:29
 
 # checkAuth
 
@@ -58,13 +58,17 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `authType`（string，必填）：权限类型
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `granted`（boolean，必填）：是否获得授权
 
 ## **示例****代码**
 

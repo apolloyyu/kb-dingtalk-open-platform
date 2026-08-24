@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "宜搭 > 任务 > 获取发送给用户的通知"
 doc_id: "0y4YFy9FW5"
-updated_at: "2025-10-09 18:05:52"
+updated_at: "2026-06-03 10:11:55"
 ---
 
 > Source: https://open.dingtalk.com/document/development/get-notifications-sent-to-users
 > Path: 应用开发 / 服务端API / 宜搭 > 任务 > 获取发送给用户的通知
-> Updated: 2025-10-09 18:05:52
+> Updated: 2026-06-03 10:11:55
 
 # 获取发送给用户的通知
 

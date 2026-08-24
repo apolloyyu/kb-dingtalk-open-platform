@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 地图 > MapContext.getCenterLocation"
 doc_id: "xDzPIq8eVh"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:05:56"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-map-context-get-center-location
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 地图 > MapContext.getCenterLocation
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:05:56
 
 # MapContext.getCenterLocation
 
@@ -49,7 +49,10 @@ updated_at: "2023-08-08"
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `latitude`（number，必填）：纬度。
+- `longitude`（number，必填）：经度。
 
 ## **示例****代码**
 

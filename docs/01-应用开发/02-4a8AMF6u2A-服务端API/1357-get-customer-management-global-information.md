@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "更多开放 > 客户管理（官方CRM） > 客户 > 获取客户管理全局信息"
 doc_id: "seCKsO3L9A"
-updated_at: "2025-10-09 18:06:10"
+updated_at: "2026-06-03 09:36:56"
 ---
 
 > Source: https://open.dingtalk.com/document/development/get-customer-management-global-information
 > Path: 应用开发 / 服务端API / 更多开放 > 客户管理（官方CRM） > 客户 > 获取客户管理全局信息
-> Updated: 2025-10-09 18:06:10
+> Updated: 2026-06-03 09:36:56
 
 # 获取客户管理全局信息
 

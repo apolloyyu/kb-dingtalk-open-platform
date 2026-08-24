@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > e签宝 1.0 > 签署流程 > 获取流程签署详细信息"
 doc_id: "PUvb0m4cd0"
-updated_at: "2025-09-23 19:21:30"
+updated_at: "2026-06-23 18:10:46"
 ---
 
 > Source: https://open.dingtalk.com/document/development/get-process-sign-off-details
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > e签宝 1.0 > 签署流程 > 获取流程签署详细信息
-> Updated: 2025-09-23 19:21:30
+> Updated: 2026-06-23 18:10:46
 
 # 获取流程签署详细信息
 

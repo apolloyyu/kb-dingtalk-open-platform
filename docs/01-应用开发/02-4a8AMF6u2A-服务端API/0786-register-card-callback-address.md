@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "即时通信 > 互动卡片 > 注册卡片回调地址"
 doc_id: "fMpsu2f4po"
-updated_at: "2025-09-23 19:18:44"
+updated_at: "2026-06-04 10:50:04"
 ---
 
 > Source: https://open.dingtalk.com/document/development/register-card-callback-address
 > Path: 应用开发 / 服务端API / 即时通信 > 互动卡片 > 注册卡片回调地址
-> Updated: 2025-09-23 19:18:44
+> Updated: 2026-06-04 10:50:04
 
 # 注册卡片回调地址
 

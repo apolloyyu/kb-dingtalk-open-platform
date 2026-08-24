@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 生态开放 > e签宝 2.0 > 鉴权 > 取消企业授权"
 doc_id: "67OkiAtP5Y"
-updated_at: "2025-09-23 19:21:33"
+updated_at: "2026-06-04 19:11:04"
 ---
 
 > Source: https://open.dingtalk.com/document/development/cancel-enterprise-authorization
 > Path: 应用开发 / 服务端API / 行业与生态 > 生态开放 > e签宝 2.0 > 鉴权 > 取消企业授权
-> Updated: 2025-09-23 19:21:33
+> Updated: 2026-06-04 19:11:04
 
 # 取消企业授权
 

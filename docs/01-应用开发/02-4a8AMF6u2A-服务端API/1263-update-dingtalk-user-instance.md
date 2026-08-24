@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "更多开放 > 钉工牌 > 更新钉工牌电子码"
 doc_id: "R0NujUIZ0I"
-updated_at: "2025-09-11 21:03:34"
+updated_at: "2026-06-04 19:11:52"
 ---
 
 > Source: https://open.dingtalk.com/document/development/update-dingtalk-user-instance
 > Path: 应用开发 / 服务端API / 更多开放 > 钉工牌 > 更新钉工牌电子码
-> Updated: 2025-09-11 21:03:34
+> Updated: 2026-06-04 19:11:52
 
 # 更新钉工牌电子码
 

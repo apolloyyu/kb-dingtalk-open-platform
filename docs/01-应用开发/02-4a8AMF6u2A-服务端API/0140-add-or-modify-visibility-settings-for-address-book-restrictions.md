@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "通讯录管理 > 通讯录可见性管理 > 新增或修改限制查看通讯录设置"
 doc_id: "hwPJ9ZDhQG"
-updated_at: "2025-09-11 21:02:03"
+updated_at: "2026-06-02 09:24:45"
 ---
 
 > Source: https://open.dingtalk.com/document/development/add-or-modify-visibility-settings-for-address-book-restrictions
 > Path: 应用开发 / 服务端API / 通讯录管理 > 通讯录可见性管理 > 新增或修改限制查看通讯录设置
-> Updated: 2025-09-11 21:02:03
+> Updated: 2026-06-02 09:24:45
 
 # 新增或修改限制查看通讯录设置
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > e签宝 1.0 > 签署流程 > 获取流程任务用印审批列表"
 doc_id: "sGov9QCMOW"
-updated_at: "2025-09-23 19:21:29"
+updated_at: "2026-06-23 18:10:44"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-the-process-task-print-approval-list-1
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > e签宝 1.0 > 签署流程 > 获取流程任务用印审批列表
-> Updated: 2025-09-23 19:21:29
+> Updated: 2026-06-23 18:10:44
 
 # 获取流程任务用印审批列表
 

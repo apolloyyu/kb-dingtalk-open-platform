@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "历史文档（不推荐） > Stream推送 > AI 助理 > AI助理信息变更"
 doc_id: "HVqAvN6FEK"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-08-28 19:46:20"
 ---
 
 > Source: https://open.dingtalk.com/document/development/ai-assistant-information-change
 > Path: 应用开发 / 事件订阅 / 历史文档（不推荐） > Stream推送 > AI 助理 > AI助理信息变更
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-08-28 19:46:20
 
 # AI助理信息变更
 
@@ -40,6 +40,21 @@ AI 助理的信息变更，包括AI助理的创建、修改、删除事件。
 
 Stream模式推送
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.assistantId`（string）：助理的 ID，唯一标识一个 AI 助理
+- `data.unionId`（string）：助理创建人的用户 ID
+- `data.icon`（string）：助理的头像（图标），采用钉钉多媒体文件的 Media ID 标识
+- `data.name`（string）：助理的名称
+- `data.action`（string）：助理信息变更的动作，create/update/delete分别对应创建、修改、删除
+- `data.description`（string）：助理的描述
+
 ### **事件体示例**
 
 ```
@@ -61,6 +76,20 @@ Stream模式推送
 
 HTTP推送
 
+### 字段说明
+
+- `EventType`（String）：事件英文名称。
+- `EventTime`（Long）：事件发生的时间。
+- `CorpId`（String）：企业corpId。
+- `BizId`（String）：无业务意义，幂等。
+- `eventId`（String）：事件的唯一Id。
+- `assistantId`（string，必填）：助理的 ID，唯一标识一个 AI 助理
+- `unionId`（string，必填）：助理创建人的用户 ID
+- `icon`（string，必填）：助理的头像（图标），采用钉钉多媒体文件的 Media ID 标识
+- `name`（string，必填）：助理的名称
+- `action`（string，必填）：助理信息变更的动作，create/update/delete分别对应创建、修改、删除
+- `description`（string，必填）：助理的描述
+
 ### **事件体示例**
 
 ```
@@ -81,6 +110,21 @@ HTTP推送
 SyncHTTP/RDS推送
 
 为RDS推送方式时，数据插入表open\_sync\_biz\_data\_medium中。
+
+### 字段说明
+
+- `corp_id`（String）：企业corp\_id。
+- `biz_id`（String）：biz\_id无业务意义，幂等。
+- `biz_type`（Integer）：事件bizType。
+- `biz_data`（object）：事件bizData介绍。
+- `biz_data.syncAction`（String）：事件英文名。
+- `biz_data.eventId`（String）：事件的唯一Id。
+- `biz_data.assistantId`（string）：助理的 ID，唯一标识一个 AI 助理
+- `biz_data.unionId`（string）：助理创建人的用户 ID
+- `biz_data.icon`（string）：助理的头像（图标），采用钉钉多媒体文件的 Media ID 标识
+- `biz_data.name`（string）：助理的名称
+- `biz_data.action`（string）：助理信息变更的动作，create/update/delete分别对应创建、修改、删除
+- `biz_data.description`（string）：助理的描述
 
 ### **biz\_data数据示例(biz\_type=381)**
 

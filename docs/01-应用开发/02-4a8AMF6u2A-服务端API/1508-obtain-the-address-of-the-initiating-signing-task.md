@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > e签宝 1.0 > 签署流程 > 获取发起签署任务地址"
 doc_id: "Q4UdwwCXPq"
-updated_at: "2025-09-23 19:21:27"
+updated_at: "2026-06-23 18:10:42"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-the-address-of-the-initiating-signing-task
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > e签宝 1.0 > 签署流程 > 获取发起签署任务地址
-> Updated: 2025-09-23 19:21:27
+> Updated: 2026-06-23 18:10:42
 
 # 获取发起签署任务地址
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "更多开放 > HCM 主数据 > 组织变革主数据人员数据推送"
 doc_id: "hE10tPzzYC"
-updated_at: "2025-09-23 19:23:39"
+updated_at: "2026-06-03 09:34:44"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-amdpemployeedatapush
 > Path: 应用开发 / 服务端API / 更多开放 > HCM 主数据 > 组织变革主数据人员数据推送
-> Updated: 2025-09-23 19:23:39
+> Updated: 2026-06-03 09:34:44
 
 # 组织变革主数据人员数据推送
 

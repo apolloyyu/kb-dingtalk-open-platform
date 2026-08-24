@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 行业开放 > 设备上钉 > 批量注册与激活设备"
 doc_id: "T0z7aC2cQw"
-updated_at: "2025-09-23 19:22:25"
+updated_at: "2026-06-03 09:09:32"
 ---
 
 > Source: https://open.dingtalk.com/document/development/register-and-activate-devices-in-batches
 > Path: 应用开发 / 服务端API / 行业与生态 > 行业开放 > 设备上钉 > 批量注册与激活设备
-> Updated: 2025-09-23 19:22:25
+> Updated: 2026-06-03 09:09:32
 
 # 批量注册与激活设备
 

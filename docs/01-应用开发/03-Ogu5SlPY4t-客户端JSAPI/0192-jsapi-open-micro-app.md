@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 跳转 > openMicroApp"
 doc_id: "0VcIfda6NO"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:06:29"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-open-micro-app
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 跳转 > openMicroApp
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:06:29
 
 # openMicroApp
 
@@ -56,7 +56,11 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `agentId`（string）：要打开应用的agentId，第三方企业应用需要
+- `appId`（string）：要打开应用的appId，可以在开发者后台应用详情页获取
+- `corpId`（string）：要打开的应用所属的corpId
 
 ## **返回结果**
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "组织大脑 > 数据集成 > 绩效与奖惩 > 数据集成处分记录删除"
 doc_id: "Id6dqpPloZ"
-updated_at: "2025-09-12 17:19:36"
+updated_at: "2026-06-02 19:31:51"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-hrbraindeletepundetail
 > Path: 应用开发 / 服务端API / 组织大脑 > 数据集成 > 绩效与奖惩 > 数据集成处分记录删除
-> Updated: 2025-09-12 17:19:36
+> Updated: 2026-06-02 19:31:51
 
 # 数据集成处分记录删除
 

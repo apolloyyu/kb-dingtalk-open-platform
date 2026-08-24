@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "办公电话 > callUsers"
 doc_id: "cPG87loyqm"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:08:35"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-call-users
 > Path: 应用开发 / 客户端JSAPI / 办公电话 > callUsers
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:08:35
 
 # callUsers
 
@@ -43,7 +43,12 @@ updated_at: "2023-08-08"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `users`（array，必填）：用户列表。
+- `corpId`（string）：企业corpId。  
+    
+  > H5应用中必填。
 
 ## **返回结果**
 

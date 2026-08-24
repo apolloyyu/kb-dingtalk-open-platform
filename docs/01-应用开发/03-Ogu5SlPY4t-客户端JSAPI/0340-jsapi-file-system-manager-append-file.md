@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "文件存储 > 文件 > FileSystemManager.appendFile"
 doc_id: "mKQ8zQYUW8"
-updated_at: "2023-08-11"
+updated_at: "2025-08-27 18:08:25"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-file-system-manager-append-file
 > Path: 应用开发 / 客户端JSAPI / 文件存储 > 文件 > FileSystemManager.appendFile
-> Updated: 2023-08-11
+> Updated: 2025-08-27 18:08:25
 
 # FileSystemManager.appendFile
 
@@ -41,7 +41,25 @@ updated_at: "2023-08-11"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `data`（string，必填）：要写入的文本内容或二进制数据。
+- `encoding`（string）：指定写入文件的字符编码：  
+    
+  \* ascii  
+    
+  \* base64  
+    
+  \* hex  
+    
+  \* binary  
+    
+  \* ucs2/ucs-2/utf16le/utf-16le  
+    
+  \* utf-8/utf8，默认值  
+    
+  \* latin1
+- `filePath`（string，必填）：要添加内容的文件路径。
 
 ## **返回结果**
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "考勤 > 假期管理 > 批量查询员工假期余额变更记录"
 doc_id: "f8PgW8FwWT"
-updated_at: "2025-09-11 21:02:21"
+updated_at: "2026-06-02 09:24:54"
 ---
 
 > Source: https://open.dingtalk.com/document/development/batch-query-employee-leave-balance-change-record
 > Path: 应用开发 / 服务端API / 考勤 > 假期管理 > 批量查询员工假期余额变更记录
-> Updated: 2025-09-11 21:02:21
+> Updated: 2026-06-02 09:24:54
 
 # 批量查询员工假期余额变更记录
 

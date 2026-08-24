@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "通讯录管理 > 企业账号 > 企业账号修改钉钉号"
 doc_id: "9VI0AepSKW"
-updated_at: "2025-09-11 21:01:52"
+updated_at: "2026-06-04 14:29:35"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-changedingtalkid
 > Path: 应用开发 / 服务端API / 通讯录管理 > 企业账号 > 企业账号修改钉钉号
-> Updated: 2025-09-11 21:01:52
+> Updated: 2026-06-04 14:29:35
 
 # 企业账号修改钉钉号
 

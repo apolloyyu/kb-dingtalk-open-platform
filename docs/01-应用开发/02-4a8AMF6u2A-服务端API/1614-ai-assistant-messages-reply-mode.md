@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > 智能交互 > AI 助理发消息（回复消息模式）"
 doc_id: "xjAAfXetpB"
-updated_at: "2026-03-06 09:27:14"
+updated_at: "2026-08-24 14:32:53"
 ---
 
 > Source: https://open.dingtalk.com/document/development/ai-assistant-messages-reply-mode
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > 智能交互 > AI 助理发消息（回复消息模式）
-> Updated: 2026-03-06 09:27:14
+> Updated: 2026-08-24 14:32:53
 
 # AI 助理发消息（回复消息模式）
 

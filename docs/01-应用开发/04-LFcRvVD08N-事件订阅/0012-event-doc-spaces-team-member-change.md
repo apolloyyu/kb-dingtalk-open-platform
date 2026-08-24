@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "协同 > 文档 > 文档知识库中小组成员变更"
 doc_id: "TMbs7Kq4T2"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-08-27 16:10:52"
 ---
 
 > Source: https://open.dingtalk.com/document/development/event-doc-spaces-team-member-change
 > Path: 应用开发 / 事件订阅 / 协同 > 文档 > 文档知识库中小组成员变更
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-08-27 16:10:52
 
 # 文档知识库中小组成员变更
 
@@ -36,6 +36,36 @@ updated_at: "2022-01-19 19:29:22"
 ## 事件体描述
 
 Stream模式推送
+
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.unionId`（string）：事件操作人unionId。
+- `data.teamId`（string）：小组id。
+- `data.roleCode`（string）：当前成员的角色：  
+  - 1：只读成员  
+  - 2：只读成员（可下载）  
+  - 3：成员  
+  - 4：管理员  
+  - 5：所有者
+- `data.member`（object）：变更的成员信息，具体字段见下文变更成员字段说明。
+- `data.member.memberName`（string）：成员名称。
+- `data.member.memberType`（string）：变更的成员类型：  
+  - USER：用户  
+  - CONVERSATION：群  
+  - ORG：组织  
+  - DEPT：部门
+- `data.member.memberId`（string）：变更的成员id。  
+  > 类型是USER，memberId是用户的 unionId。
+- `data.type`（string）：类型：  
+  - TEAM\_MODIFY\_MEMBER：修改成员  
+  - TEAM\_ADD\_MEMBER：添加成员  
+  - TEAM\_REMOVE\_MEMBER：移除成员
 
 ### **事件体示例**
 
@@ -61,6 +91,35 @@ Stream模式推送
 ```
 
 HTTP推送
+
+### 字段说明
+
+- `EventType`（String）：事件英文名称。
+- `EventTime`（Long）：事件发生的时间。
+- `CorpId`（String）：企业corpId。
+- `BizId`（String）：无业务意义，幂等。
+- `eventId`（String）：事件的唯一Id。
+- `unionId`（string）：事件操作人unionId。
+- `teamId`（string）：小组id。
+- `roleCode`（string）：当前成员的角色：  
+  - 1：只读成员  
+  - 2：只读成员（可下载）  
+  - 3：成员  
+  - 4：管理员  
+  - 5：所有者
+- `member`（object）：变更的成员信息，具体字段见下文变更成员字段说明。
+- `member.memberName`（string）：成员名称。
+- `member.memberType`（string）：变更的成员类型：  
+  - USER：用户  
+  - CONVERSATION：群  
+  - ORG：组织  
+  - DEPT：部门
+- `member.memberId`（string）：变更的成员id。  
+  > 类型是USER，memberId是用户的 unionId。
+- `type`（string）：类型：  
+  - TEAM\_MODIFY\_MEMBER：修改成员  
+  - TEAM\_ADD\_MEMBER：添加成员  
+  - TEAM\_REMOVE\_MEMBER：移除成员
 
 ### **事件体示例**
 

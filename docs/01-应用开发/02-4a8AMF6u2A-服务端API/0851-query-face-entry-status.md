@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "专属钉钉 > 查询人脸录入状态"
 doc_id: "gPLQXfngVg"
-updated_at: "2025-09-23 19:20:06"
+updated_at: "2026-06-02 19:19:56"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-face-entry-status
 > Path: 应用开发 / 服务端API / 专属钉钉 > 查询人脸录入状态
-> Updated: 2025-09-23 19:20:06
+> Updated: 2026-06-02 19:19:56
 
 # 查询人脸录入状态
 

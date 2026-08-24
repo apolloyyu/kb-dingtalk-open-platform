@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "即时通信 > 会话管理 > 群管理 > 创建群会话"
 doc_id: "bVZ7zI1LZf"
-updated_at: "2026-05-10 00:49:47"
+updated_at: "2026-06-04 19:09:49"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-common-group-new-version-v2
 > Path: 应用开发 / 服务端API / 即时通信 > 会话管理 > 群管理 > 创建群会话
-> Updated: 2026-05-10 00:49:47
+> Updated: 2026-06-04 19:09:49
 
 # 创建群会话
 

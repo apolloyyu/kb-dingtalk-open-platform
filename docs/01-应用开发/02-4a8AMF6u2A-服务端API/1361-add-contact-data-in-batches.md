@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "更多开放 > 客户管理（官方CRM） > 联系人管理 > 批量新增联系人数据"
 doc_id: "yPIo68XCUs"
-updated_at: "2025-10-09 18:06:14"
+updated_at: "2026-06-04 19:12:11"
 ---
 
 > Source: https://open.dingtalk.com/document/development/add-contact-data-in-batches
 > Path: 应用开发 / 服务端API / 更多开放 > 客户管理（官方CRM） > 联系人管理 > 批量新增联系人数据
-> Updated: 2025-10-09 18:06:14
+> Updated: 2026-06-04 19:12:11
 
 # 批量新增联系人数据
 

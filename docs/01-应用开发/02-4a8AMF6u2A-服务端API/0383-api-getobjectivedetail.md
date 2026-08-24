@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "Agoal > 目标与关键行动 > 查询企业下个人目标详情"
 doc_id: "FwY4lkiOsv"
-updated_at: "2025-11-28 11:30:35"
+updated_at: "2026-06-02 11:54:14"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-getobjectivedetail
 > Path: 应用开发 / 服务端API / Agoal > 目标与关键行动 > 查询企业下个人目标详情
-> Updated: 2025-11-28 11:30:35
+> Updated: 2026-06-02 11:54:14
 
 # 查询企业下个人目标详情
 

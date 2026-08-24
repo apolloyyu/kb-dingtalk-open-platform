@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "文件存储 > 文件 > FileSystemManager.getFileInfo"
 doc_id: "PmJxDgRcs9"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:08:26"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-file-system-manager-get-file-info
 > Path: 应用开发 / 客户端JSAPI / 文件存储 > 文件 > FileSystemManager.getFileInfo
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:08:26
 
 # FileSystemManager.getFileInfo
 
@@ -41,13 +41,19 @@ updated_at: "2023-08-08"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `filePath`（string，必填）：文件的路径。 本地临时文件路径，可调用选择图片或选择视频获取。 本地缓存文件和本地用户文件路径，可调用保存文件获取。
+- `digestAlgorithm`（string）：文件编码，默认md5。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `size`（number，必填）：文件大小，单位Byte。
+- `digest`（string，必填）：文件md5加密后的信息。
 
 ## **示例****代码**
 

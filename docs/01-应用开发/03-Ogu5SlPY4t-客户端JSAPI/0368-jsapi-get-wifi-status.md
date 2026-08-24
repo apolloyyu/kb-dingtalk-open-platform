@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > Wi-Fi > getWifiStatus"
 doc_id: "AQ2XBCkKkW"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:07:36"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-get-wifi-status
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > Wi-Fi > getWifiStatus
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:07:36
 
 # getWifiStatus
 
@@ -45,7 +45,12 @@ updated_at: "2024-12-04"
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `status`（number，必填）：当前连接wifi的状态：  
+    
+  \* 1：已连接wifi  
+  \* 0：未连接wifi
 
 ## **示例****代码**
 

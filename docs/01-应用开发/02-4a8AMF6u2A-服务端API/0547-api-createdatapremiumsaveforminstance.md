@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 高级版专享接口 > 数据表单 > 表单实例 > 创建数据表单实例"
 doc_id: "10BbxPsNVW"
-updated_at: "2025-12-05 18:02:40"
+updated_at: "2026-06-03 10:13:03"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-createdatapremiumsaveforminstance
 > Path: 应用开发 / 服务端API / OA 审批 > 高级版专享接口 > 数据表单 > 表单实例 > 创建数据表单实例
-> Updated: 2025-12-05 18:02:40
+> Updated: 2026-06-03 10:13:03
 
 # 创建数据表单实例
 

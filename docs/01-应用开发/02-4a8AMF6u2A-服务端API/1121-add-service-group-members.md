@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 行业开放 > 服务群 > 添加服务群成员"
 doc_id: "kx2sMzdKPC"
-updated_at: "2025-09-23 19:22:33"
+updated_at: "2026-06-03 09:11:04"
 ---
 
 > Source: https://open.dingtalk.com/document/development/add-service-group-members
 > Path: 应用开发 / 服务端API / 行业与生态 > 行业开放 > 服务群 > 添加服务群成员
-> Updated: 2025-09-23 19:22:33
+> Updated: 2026-06-03 09:11:04
 
 # 添加服务群成员
 

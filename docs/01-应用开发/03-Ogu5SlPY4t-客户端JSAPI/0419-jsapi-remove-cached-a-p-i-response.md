@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > 内存不足处理 > removeCachedAPIResponse"
 doc_id: "702lcs0vJg"
-updated_at: "2025-10-16"
+updated_at: "2025-10-16 15:45:34"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-remove-cached-a-p-i-response
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > 内存不足处理 > removeCachedAPIResponse
-> Updated: 2025-10-16
+> Updated: 2025-10-16 15:45:34
 
 # removeCachedAPIResponse
 
@@ -45,7 +45,10 @@ updated_at: "2025-10-16"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `jsapiName`（string，必填）：需要清除的 JSAPI 名称
+- `removeAll`（boolean，必填）：是否清除所有 JSAPI 的返回值缓存，默认 false
 
 ## **返回结果**
 

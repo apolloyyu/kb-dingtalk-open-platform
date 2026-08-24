@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "通讯录管理 > 通讯录ID转译 > 获取异步转译任务结果"
 doc_id: "Qd412Y1qzD"
-updated_at: "2025-09-11 21:01:59"
+updated_at: "2026-07-02 10:35:54"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtains-the-results-of-an-asynchronous-translation-task
 > Path: 应用开发 / 服务端API / 通讯录管理 > 通讯录ID转译 > 获取异步转译任务结果
-> Updated: 2025-09-11 21:01:59
+> Updated: 2026-07-02 10:35:54
 
 # 获取异步转译任务结果
 

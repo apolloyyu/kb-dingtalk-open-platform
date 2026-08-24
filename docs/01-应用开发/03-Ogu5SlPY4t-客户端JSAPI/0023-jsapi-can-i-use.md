@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 基础 > canIUse"
 doc_id: "7XP8bcR3VZ"
-updated_at: "2023-08-09"
+updated_at: "2025-08-27 18:04:54"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-can-i-use
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 基础 > canIUse
-> Updated: 2023-08-09
+> Updated: 2025-08-27 18:04:54
 
 # canIUse
 
@@ -56,13 +56,20 @@ ${API}.${type}.${param}.${option}：
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `key`（string）：判断可用：  
+    
+  \* 如果想判断 API 是否可用，入参需要如： ${API}.${type}.${param}.${option}。  
+  \* 如果想判断组件是否可用，入参需要如： ${component}.${attribute}.${option}。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### res
+
+（boolean）是否可用。 示例：`true`
 
 ## **示例****代码**
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "即时通信 > 会话管理 > 场景群 > 群管理 > 删除场景群成员"
 doc_id: "Hq2KLlwBXZ"
-updated_at: "2026-05-10 01:04:36"
+updated_at: "2026-08-14 09:41:52"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-removescenegroupmember
 > Path: 应用开发 / 服务端API / 即时通信 > 会话管理 > 场景群 > 群管理 > 删除场景群成员
-> Updated: 2026-05-10 01:04:36
+> Updated: 2026-08-14 09:41:52
 
 # 删除场景群成员
 

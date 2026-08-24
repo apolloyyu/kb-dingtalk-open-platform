@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > 剪贴板 > getClipboard"
 doc_id: "iuuB4PrqfC"
-updated_at: "2023-08-11"
+updated_at: "2025-08-27 18:07:43"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-get-clipboard
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > 剪贴板 > getClipboard
-> Updated: 2023-08-11
+> Updated: 2025-08-27 18:07:43
 
 # getClipboard
 
@@ -45,7 +45,9 @@ updated_at: "2023-08-11"
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `text`（string）：剪切板数据。
 
 ## **示例****代码**
 

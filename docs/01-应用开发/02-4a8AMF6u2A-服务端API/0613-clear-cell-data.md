@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 表格 > 单元格区域 > 清除单元格区域内数据"
 doc_id: "a2484O97v6"
-updated_at: "2025-09-12 17:20:28"
+updated_at: "2026-06-04 19:09:16"
 ---
 
 > Source: https://open.dingtalk.com/document/development/clear-cell-data
 > Path: 应用开发 / 服务端API / 文档/文件 > 表格 > 单元格区域 > 清除单元格区域内数据
-> Updated: 2025-09-12 17:20:28
+> Updated: 2026-06-04 19:09:16
 
 # 清除单元格区域内数据
 

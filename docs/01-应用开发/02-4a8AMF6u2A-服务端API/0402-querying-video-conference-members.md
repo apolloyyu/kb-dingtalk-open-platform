@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "音视频 > 会议 > 查询视频会议成员"
 doc_id: "Gu3lyRg4cG"
-updated_at: "2025-12-08 14:35:10"
+updated_at: "2026-06-02 09:18:03"
 ---
 
 > Source: https://open.dingtalk.com/document/development/querying-video-conference-members
 > Path: 应用开发 / 服务端API / 音视频 > 会议 > 查询视频会议成员
-> Updated: 2025-12-08 14:35:10
+> Updated: 2026-06-02 09:18:03
 
 # 查询视频会议成员
 

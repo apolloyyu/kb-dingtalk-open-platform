@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "Teambition 项目管理 > 任务 > 项目任务 > 更新任务截止时间"
 doc_id: "8aQSShMDto"
-updated_at: "2025-10-09 18:06:51"
+updated_at: "2026-06-03 09:26:15"
 ---
 
 > Source: https://open.dingtalk.com/document/development/update-task-deadline
 > Path: 应用开发 / 服务端API / Teambition 项目管理 > 任务 > 项目任务 > 更新任务截止时间
-> Updated: 2025-10-09 18:06:51
+> Updated: 2026-06-03 09:26:15
 
 # 更新任务截止时间
 

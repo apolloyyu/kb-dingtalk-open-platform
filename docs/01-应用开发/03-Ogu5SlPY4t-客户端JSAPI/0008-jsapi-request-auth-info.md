@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "获取凭证 > requestAuthInfo"
 doc_id: "8at5dVSMt7"
-updated_at: "2025-08-11"
+updated_at: "2025-10-21 16:39:08"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-request-auth-info
 > Path: 应用开发 / 客户端JSAPI / 获取凭证 > requestAuthInfo
-> Updated: 2025-08-11
+> Updated: 2025-10-21 16:39:08
 
 # requestAuthInfo
 
@@ -54,7 +54,46 @@ updated_at: "2025-08-11"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `authorizeType`（number，必填）：固定传1。
+- `ext`（string，必填）：授权内容参数，根据授权场景不同有较大差异：  
+    
+  \* 审批 — 授权获取审批实例数据   
+     
+  ```  
+    
+  {  
+   "modelKey": "dd.oa|bpms", // 常量  
+   "bizScene": "processCode", // 常量  
+   "content": [  
+   "#这里填processCode(审批模板的唯一码)，仅支持1个#"  
+   ]  
+  }  
+  ```  
+    
+  \* 服务窗 — 获取服务窗用户授权  
+     
+  ```  
+  {  
+   "dataType": 1, // 固定值  
+   "fieldScope": [ // 固定值  
+   "mobile",  
+   "mainOrgName"  
+   ]  
+  }  
+  ```  
+    
+  \* 服务窗 — 获取服务窗发送单聊消息授权  
+     
+  ```  
+  {  
+   "dataType": 1, // 固定值  
+   "rpcScope": [ // 固定值  
+   "send\_dingmi\_message"  
+   ]  
+  }  
+  ```
 
 ## **返回结果**
 

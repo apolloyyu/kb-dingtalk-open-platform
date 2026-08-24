@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 群文件 > 以应用身份发送文件给指定用户"
 doc_id: "8jD6jKyfXo"
-updated_at: "2025-09-12 17:20:10"
+updated_at: "2026-06-04 19:09:29"
 ---
 
 > Source: https://open.dingtalk.com/document/development/sends-a-storage-file-to-a-specified-user
 > Path: 应用开发 / 服务端API / 文档/文件 > 群文件 > 以应用身份发送文件给指定用户
-> Updated: 2025-09-12 17:20:10
+> Updated: 2026-06-04 19:09:29
 
 # 以应用身份发送文件给指定用户
 

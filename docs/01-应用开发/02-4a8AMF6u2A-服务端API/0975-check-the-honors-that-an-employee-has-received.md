@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "企业文化 > 荣誉 > 查询员工已获得的组织荣誉"
 doc_id: "qO3hZ7g5vi"
-updated_at: "2025-09-23 19:19:20"
+updated_at: "2026-06-04 19:10:40"
 ---
 
 > Source: https://open.dingtalk.com/document/development/check-the-honors-that-an-employee-has-received
 > Path: 应用开发 / 服务端API / 企业文化 > 荣誉 > 查询员工已获得的组织荣誉
-> Updated: 2025-09-23 19:19:20
+> Updated: 2026-06-04 19:10:40
 
 # 查询员工已获得的组织荣誉
 

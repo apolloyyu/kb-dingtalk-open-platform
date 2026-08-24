@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "音视频 > 智能会议室 > 会议室 > 创建会议室"
 doc_id: "K7HCgNrGh3"
-updated_at: "2026-05-22 15:59:43"
+updated_at: "2026-06-03 10:12:05"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-a-meeting-room
 > Path: 应用开发 / 服务端API / 音视频 > 智能会议室 > 会议室 > 创建会议室
-> Updated: 2026-05-22 15:59:43
+> Updated: 2026-06-03 10:12:05
 
 # 创建会议室
 

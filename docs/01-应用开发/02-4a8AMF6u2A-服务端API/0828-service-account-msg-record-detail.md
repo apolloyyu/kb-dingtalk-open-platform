@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "专属钉钉 > 互动服务窗 > 消息群发 > 查询群发消息详情"
 doc_id: "Ca3kQ6QT6y"
-updated_at: "2026-01-04 11:27:41"
+updated_at: "2026-06-02 19:13:04"
 ---
 
 > Source: https://open.dingtalk.com/document/development/service-account-msg-record-detail
 > Path: 应用开发 / 服务端API / 专属钉钉 > 互动服务窗 > 消息群发 > 查询群发消息详情
-> Updated: 2026-01-04 11:27:41
+> Updated: 2026-06-02 19:13:04
 
 # 查询群发消息详情
 

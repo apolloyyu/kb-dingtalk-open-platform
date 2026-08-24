@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "通讯录管理 > 上下游组织（原合作空间） > 设置伙伴组织在上下游组织内的可见范围"
 doc_id: "NTOntm4lJv"
-updated_at: "2025-09-11 21:02:10"
+updated_at: "2026-06-01 16:31:55"
 ---
 
 > Source: https://open.dingtalk.com/document/development/set-the-visible-range-of-the-branch-in-the-group-1
 > Path: 应用开发 / 服务端API / 通讯录管理 > 上下游组织（原合作空间） > 设置伙伴组织在上下游组织内的可见范围
-> Updated: 2025-09-11 21:02:10
+> Updated: 2026-06-01 16:31:55
 
 # 设置伙伴组织在上下游组织内的可见范围
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > Wi-Fi > getConnectedWifi"
 doc_id: "Rpb0q5lyeF"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:07:37"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-get-connected-wifi
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > Wi-Fi > getConnectedWifi
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:07:37
 
 # getConnectedWifi
 
@@ -45,7 +45,18 @@ updated_at: "2024-12-04"
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `wifi`（object，必填）：Wi-Fi 信息。
+- `wifi.SSID`（string，必填）：设备的 SSID。
+- `wifi.BSSID`（string，必填）：设备的 BSSID。
+- `wifi.secure`（string，必填）：是否安全：   
+    
+  \* true：安全   
+  \* false：不安全
+- `wifi.signalStrength`（string，必填）：Wi-Fi 信号强度，取值 0 ～ 100。  
+    
+  > 值越大强度越大。
 
 ## **错误码**
 

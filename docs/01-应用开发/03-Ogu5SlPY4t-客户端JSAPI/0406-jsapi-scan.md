@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > 扫码 > scan"
 doc_id: "NGuySAjiGl"
-updated_at: "2025-08-06"
+updated_at: "2025-10-21 16:38:13"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-scan
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > 扫码 > scan
-> Updated: 2025-08-06
+> Updated: 2025-10-21 16:38:13
 
 # scan
 
@@ -41,13 +41,19 @@ updated_at: "2025-08-06"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `type`（string）：扫码框 UI 样式，默认值： `qr`  
+  \* `qr`：二维码扫码框  
+  \* `bar`：条形码扫码框
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `text`（string，必填）：扫码所得数据。
 
 ## **示例****代码**
 

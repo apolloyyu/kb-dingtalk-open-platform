@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 搜索 > 搜索文件"
 doc_id: "3dpgjZBxT0"
-updated_at: "2025-09-12 17:20:31"
+updated_at: "2026-06-04 19:09:27"
 ---
 
 > Source: https://open.dingtalk.com/document/development/search-for-files
 > Path: 应用开发 / 服务端API / 文档/文件 > 搜索 > 搜索文件
-> Updated: 2025-09-12 17:20:31
+> Updated: 2026-06-04 19:09:27
 
 # 搜索文件
 

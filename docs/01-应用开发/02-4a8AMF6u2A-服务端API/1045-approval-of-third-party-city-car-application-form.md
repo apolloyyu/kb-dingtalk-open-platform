@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 生态开放 > 阿里商旅 > 市内用车申请 > 审批市内用车申请单"
 doc_id: "zYuWEesjM9"
-updated_at: "2026-01-29 14:31:14"
+updated_at: "2026-06-04 19:10:48"
 ---
 
 > Source: https://open.dingtalk.com/document/development/approval-of-third-party-city-car-application-form
 > Path: 应用开发 / 服务端API / 行业与生态 > 生态开放 > 阿里商旅 > 市内用车申请 > 审批市内用车申请单
-> Updated: 2026-01-29 14:31:14
+> Updated: 2026-06-04 19:10:48
 
 # 审批市内用车申请单
 

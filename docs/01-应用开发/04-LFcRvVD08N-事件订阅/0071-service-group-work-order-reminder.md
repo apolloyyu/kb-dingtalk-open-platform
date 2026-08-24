@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "服务群 > 服务群工单催办"
 doc_id: "eE8N4R2fgp"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-08-28 19:46:18"
 ---
 
 > Source: https://open.dingtalk.com/document/development/service-group-work-order-reminder
 > Path: 应用开发 / 事件订阅 / 服务群 > 服务群工单催办
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-08-28 19:46:18
 
 # 服务群工单催办
 
@@ -37,6 +37,30 @@ updated_at: "2022-01-19 19:29:22"
 ## 事件体描述
 
 Stream模式推送
+
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.spiTicketModel`（object）
+- `data.spiTicketModel.openTicketId`（string）：工单ID。
+- `data.spiTicketModel.operateData`（object）
+- `data.spiTicketModel.operateData.receivers`（array）：接收人。
+- `data.spiTicketModel.operateData.receivers[].nickName`（string）：昵称。
+- `data.spiTicketModel.operateData.receivers[].unionId`（string）：ID。
+- `data.spiTicketModel.operateMemo`（object）：备注内容。
+- `data.spiTicketModel.operateMemo.attachments`（array）：附件。
+- `data.spiTicketModel.operateMemo.attachments[].fileName`（string）：文件名。
+- `data.spiTicketModel.operateMemo.attachments[].key`（string）：文件。
+- `data.spiTicketModel.operateMemo.attachments[].type`（string）：文件类型。
+- `data.spiTicketModel.operateMemo.memo`（string）：备注-文字版。
+- `data.spiTicketModel.operatorNickName`（string）：操作人昵称。
+- `data.spiTicketModel.operatorUnionId`（string）：操作人ID。
+- `data.spiTicketModel.operateType`（string）：操作类型。
 
 ### **事件体示例**
 
@@ -78,6 +102,29 @@ Stream模式推送
 
 HTTP推送
 
+### root
+
+- `EventType`（String）：事件英文名称。
+- `EventTime`（Long）：事件发生的时间。
+- `CorpId`（String）：企业corpId。
+- `BizId`（String）：无业务意义，幂等。
+- `eventId`（String）：事件的唯一Id。
+- `spiTicketModel`（object）
+- `spiTicketModel.openTicketId`（string）：工单ID。
+- `spiTicketModel.operateData`（object）
+- `spiTicketModel.operateData.receivers`（array）：接收人。
+- `spiTicketModel.operateData.receivers[].nickName`（string）：昵称。
+- `spiTicketModel.operateData.receivers[].unionId`（string）：ID。
+- `spiTicketModel.operateMemo`（object）：备注内容。
+- `spiTicketModel.operateMemo.attachments`（array）：附件。
+- `spiTicketModel.operateMemo.attachments[].fileName`（string）：文件名。
+- `spiTicketModel.operateMemo.attachments[].key`（string）：文件。
+- `spiTicketModel.operateMemo.attachments[].type`（string）：文件类型。
+- `spiTicketModel.operateMemo.memo`（string）：备注-文字版。
+- `spiTicketModel.operatorNickName`（string）：操作人昵称。
+- `spiTicketModel.operatorUnionId`（string）：操作人ID。
+- `spiTicketModel.operateType`（string）：操作类型。
+
 ### **事件体示例**
 
 ```
@@ -117,6 +164,30 @@ HTTP推送
 SyncHTTP/RDS推送
 
 为RDS推送方式时，数据插入表open\_sync\_biz\_data\_medium中。
+
+### root
+
+- `corp_id`（String）：企业corp\_id。
+- `biz_id`（String）：biz\_id无业务意义，幂等。
+- `biz_type`（Integer）：事件bizType。
+- `biz_data`（object）：事件bizData介绍。
+- `biz_data.syncAction`（String）：事件英文名。
+- `biz_data.eventId`（String）：事件的唯一Id。
+- `biz_data.spiTicketModel`（object）
+- `biz_data.spiTicketModel.openTicketId`（string）：工单ID。
+- `biz_data.spiTicketModel.operateData`（object）
+- `biz_data.spiTicketModel.operateData.receivers`（array）：接收人。
+- `biz_data.spiTicketModel.operateData.receivers[].nickName`（string）：昵称。
+- `biz_data.spiTicketModel.operateData.receivers[].unionId`（string）：ID。
+- `biz_data.spiTicketModel.operateMemo`（object）：备注内容。
+- `biz_data.spiTicketModel.operateMemo.attachments`（array）：附件。
+- `biz_data.spiTicketModel.operateMemo.attachments[].fileName`（string）：文件名。
+- `biz_data.spiTicketModel.operateMemo.attachments[].key`（string）：文件。
+- `biz_data.spiTicketModel.operateMemo.attachments[].type`（string）：文件类型。
+- `biz_data.spiTicketModel.operateMemo.memo`（string）：备注-文字版。
+- `biz_data.spiTicketModel.operatorNickName`（string）：操作人昵称。
+- `biz_data.spiTicketModel.operatorUnionId`（string）：操作人ID。
+- `biz_data.spiTicketModel.operateType`（string）：操作类型。
 
 ### **biz\_data数据示例(biz\_type=122)**
 

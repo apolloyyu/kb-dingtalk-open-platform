@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "Teambition 项目管理 > 项目 > 搜索企业项目模板"
 doc_id: "esLK98SLOP"
-updated_at: "2025-10-09 18:06:34"
+updated_at: "2026-06-04 19:11:35"
 ---
 
 > Source: https://open.dingtalk.com/document/development/search-for-enterprise-custom-templates-by-project-template-name
 > Path: 应用开发 / 服务端API / Teambition 项目管理 > 项目 > 搜索企业项目模板
-> Updated: 2025-10-09 18:06:34
+> Updated: 2026-06-04 19:11:35
 
 # 搜索企业项目模板
 

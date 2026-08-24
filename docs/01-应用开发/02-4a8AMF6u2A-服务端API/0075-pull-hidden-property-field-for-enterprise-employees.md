@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "通讯录管理 > 用户管理 > 获取用户属性可见性设置"
 doc_id: "UeUsWt9n3q"
-updated_at: "2025-09-11 21:01:40"
+updated_at: "2026-06-02 09:18:12"
 ---
 
 > Source: https://open.dingtalk.com/document/development/pull-hidden-property-field-for-enterprise-employees
 > Path: 应用开发 / 服务端API / 通讯录管理 > 用户管理 > 获取用户属性可见性设置
-> Updated: 2025-09-11 21:01:40
+> Updated: 2026-06-02 09:18:12
 
 # 获取用户属性可见性设置
 

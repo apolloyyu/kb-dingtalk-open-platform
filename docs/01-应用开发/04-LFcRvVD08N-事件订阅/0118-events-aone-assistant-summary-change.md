@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "智能硬件 > DingTalk A1 > DingTalkA1小助理总结完成事件"
 doc_id: "Neg0hWN3QK"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2026-07-01 17:49:27"
 ---
 
 > Source: https://open.dingtalk.com/document/development/events-aone-assistant-summary-change
 > Path: 应用开发 / 事件订阅 / 智能硬件 > DingTalk A1 > DingTalkA1小助理总结完成事件
-> Updated: 2022-01-19 19:29:22
+> Updated: 2026-07-01 17:49:27
 
 # DingTalkA1小助理总结完成事件
 
@@ -37,6 +37,24 @@ DingTalkA1小助理执行分析结果事件
 ## 事件体描述
 
 Stream模式推送
+
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.agentId`（string）：A1小助理id
+- `data.agentResult`（object）：A1小助理执行结果
+- `data.agentResult.promptTemplateResults`（array）：提示词模板结果
+- `data.agentResult.promptTemplateResults[].summary`（string）：总结内容
+- `data.agentResult.promptTemplateResults[].templateId`（string）：提示词模板id
+- `data.agentResult.promptTemplateResults[].title`（string）：总结标题
+- `data.creatorUnionId`（string）：创建人unionId
+- `data.fileId`（string）：A1文件id
+- `data.minutesId`（string）：A1文件听记id
 
 ### **事件体示例**
 
@@ -67,6 +85,23 @@ Stream模式推送
 
 HTTP推送
 
+### root
+
+- `EventType`（String）：事件英文名称。
+- `EventTime`（Long）：事件发生的时间。
+- `CorpId`（String）：企业corpId。
+- `BizId`（String）：无业务意义，幂等。
+- `eventId`（String）：事件的唯一Id。
+- `agentId`（string）：A1小助理id
+- `agentResult`（object）：A1小助理执行结果
+- `agentResult.promptTemplateResults`（array）：提示词模板结果
+- `agentResult.promptTemplateResults[].summary`（string）：总结内容
+- `agentResult.promptTemplateResults[].templateId`（string）：提示词模板id
+- `agentResult.promptTemplateResults[].title`（string）：总结标题
+- `creatorUnionId`（string）：创建人unionId
+- `fileId`（string）：A1文件id
+- `minutesId`（string）：A1文件听记id
+
 ### **事件体示例**
 
 ```
@@ -95,6 +130,24 @@ HTTP推送
 SyncHTTP/RDS推送
 
 为RDS推送方式时，数据插入表open\_sync\_biz\_data\_medium中。
+
+### root
+
+- `corp_id`（String）：企业corp\_id。
+- `biz_id`（String）：biz\_id无业务意义，幂等。
+- `biz_type`（Integer）：事件bizType。
+- `biz_data`（object）：事件bizData介绍。
+- `biz_data.syncAction`（String）：事件英文名。
+- `biz_data.eventId`（String）：事件的唯一Id。
+- `biz_data.agentId`（string）：A1小助理id
+- `biz_data.agentResult`（object）：A1小助理执行结果
+- `biz_data.agentResult.promptTemplateResults`（array）：提示词模板结果
+- `biz_data.agentResult.promptTemplateResults[].summary`（string）：总结内容
+- `biz_data.agentResult.promptTemplateResults[].templateId`（string）：提示词模板id
+- `biz_data.agentResult.promptTemplateResults[].title`（string）：总结标题
+- `biz_data.creatorUnionId`（string）：创建人unionId
+- `biz_data.fileId`（string）：A1文件id
+- `biz_data.minutesId`（string）：A1文件听记id
 
 ### **biz\_data数据示例(biz\_type=468)**
 

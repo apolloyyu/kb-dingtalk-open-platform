@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "即时通信 > 会话管理 > 群管理 > 批量设置企业群管理员"
 doc_id: "2e31sgGFPZ"
-updated_at: "2024-02-27 10:07:50"
+updated_at: "2026-06-15 10:56:53"
 ---
 
 > Source: https://open.dingtalk.com/document/development/batch-setup-group-administrator
 > Path: 应用开发 / 服务端API / 即时通信 > 会话管理 > 群管理 > 批量设置企业群管理员
-> Updated: 2024-02-27 10:07:50
+> Updated: 2026-06-15 10:56:53
 
 # 批量设置企业群管理员
 

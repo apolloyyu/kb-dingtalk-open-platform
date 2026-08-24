@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "视听智能服务 > 智能工牌自定义AI分析项完成事件"
 doc_id: "oFPNTMRdJ7"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2026-07-28 17:49:26"
 ---
 
 > Source: https://open.dingtalk.com/document/development/events-dvi-custom-ai-analysis-completed
 > Path: 应用开发 / 事件订阅 / 视听智能服务 > 智能工牌自定义AI分析项完成事件
-> Updated: 2022-01-19 19:29:22
+> Updated: 2026-07-28 17:49:26
 
 # 智能工牌自定义AI分析项完成事件
 
@@ -37,6 +37,21 @@ updated_at: "2022-01-19 19:29:22"
 
 Stream模式推送
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.entityType`（string）：分析的实体类型，例如服务记录、客户
+- `data.teamCode`（string）：团队code
+- `data.outBizData`（string）：外部数据信息，用于和外部系统打通时的关联数据字段
+- `data.analysisResult`（string）：AI分析的结果
+- `data.entityId`（string）：分析的实体ID，例如服务记录id或客户id
+- `data.userId`（string）：分析实体所归属的员工userId
+
 ### **事件体示例**
 
 ```
@@ -58,6 +73,20 @@ Stream模式推送
 ```
 
 HTTP推送
+
+### 字段说明
+
+- `EventType`（String）：事件英文名称。
+- `EventTime`（Long）：事件发生的时间。
+- `CorpId`（String）：企业corpId。
+- `BizId`（String）：无业务意义，幂等。
+- `eventId`（String）：事件的唯一Id。
+- `entityType`（string，必填）：分析的实体类型，例如服务记录、客户
+- `teamCode`（string，必填）：团队code
+- `outBizData`（string，必填）：外部数据信息，用于和外部系统打通时的关联数据字段
+- `analysisResult`（string，必填）：AI分析的结果
+- `entityId`（string，必填）：分析的实体ID，例如服务记录id或客户id
+- `userId`（string，必填）：分析实体所归属的员工userId
 
 ### **事件体示例**
 

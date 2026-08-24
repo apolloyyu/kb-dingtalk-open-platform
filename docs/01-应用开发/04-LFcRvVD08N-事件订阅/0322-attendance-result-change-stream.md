@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "历史文档（不推荐） > Stream推送 > 考勤事件 > 考勤结果变更"
 doc_id: "JyVhlUCJ3r"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-10-16 14:32:35"
 ---
 
 > Source: https://open.dingtalk.com/document/development/attendance-result-change-stream
 > Path: 应用开发 / 事件订阅 / 历史文档（不推荐） > Stream推送 > 考勤事件 > 考勤结果变更
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-10-16 14:32:35
 
 # 考勤结果变更
 
@@ -38,7 +38,22 @@ updated_at: "2022-01-19 19:29:22"
 
 ### header部分
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+
 ### data部分(事件业务信息)
+
+### 入参
+
+- `planId`（integer，必填）：排班Id。
+- `userId`（string，必填）：用户userId。
+- `workDate`（string，必填）：工作日。
+- `action`（string，必填）：推送类型。
 
 ### **事件体数据示例如下:**
 

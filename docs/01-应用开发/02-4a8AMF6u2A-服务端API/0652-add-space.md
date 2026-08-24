@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 存储管理 > 空间管理 > 添加空间"
 doc_id: "8V20ooS7X1"
-updated_at: "2025-09-12 17:20:34"
+updated_at: "2026-07-14 09:21:52"
 ---
 
 > Source: https://open.dingtalk.com/document/development/add-space
 > Path: 应用开发 / 服务端API / 文档/文件 > 存储管理 > 空间管理 > 添加空间
-> Updated: 2025-09-12 17:20:34
+> Updated: 2026-07-14 09:21:52
 
 # 添加空间
 

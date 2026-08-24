@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 跳转 > openPageInWorkBenchForPC"
 doc_id: "hQbj2PE2J5"
-updated_at: "2025-08-06"
+updated_at: "2025-08-27 18:06:31"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-open-page-in-work-bench-for-pc
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 跳转 > openPageInWorkBenchForPC
-> Updated: 2025-08-06
+> Updated: 2025-08-27 18:06:31
 
 # openPageInWorkBenchForPC
 
@@ -45,13 +45,27 @@ updated_at: "2025-08-06"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `app_url`（string，必填）：弹窗页面的链接地址。
+- `app_info`（object）：弹窗页面的配置信息。
+- `app_info.app_tab_key`（string，必填）：弹窗页面的Id。
+- `app_info.app_active_if_exist`（boolean，必填）：如果弹窗页面存在，是否切换到该页面：  
+    
+  \* true：切换  
+  \* false：不切换
+- `app_info.app_refresh_if_exist`（boolean，必填）：如果弹窗页面存在，是否刷新该页面：  
+    
+  \* true：刷新  
+  \* false：不刷新
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `body`（boolean，必填）：调用成功时，返回结果为{"body":true}。
 
 ## **示例****代码**
 

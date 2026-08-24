@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 画布 > CanvasContext.getImageData"
 doc_id: "VJYXXLiR2n"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:05:36"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-canvas-context-get-image-data
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 画布 > CanvasContext.getImageData
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:05:36
 
 # CanvasContext.getImageData
 
@@ -60,7 +60,12 @@ ctx.getImageData({
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `x`（number，必填）：将要被提取的图像数据矩形区域的左上角横坐标。
+- `y`（number，必填）：将要被提取的图像数据矩形区域的左上角纵坐标。
+- `width`（number，必填）：将要被提取的图像数据矩形区域的宽度。
+- `height`（number，必填）：将要被提取的图像数据矩形区域的高度。
 
 ## **返回结果**
 

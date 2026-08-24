@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "Teambition 项目管理 > 任务 > 项目任务 > 搜索任务工作流状态"
 doc_id: "oUJsLLP2uK"
-updated_at: "2025-10-09 18:06:46"
+updated_at: "2026-06-04 19:11:41"
 ---
 
 > Source: https://open.dingtalk.com/document/development/search-task-workflow-status
 > Path: 应用开发 / 服务端API / Teambition 项目管理 > 任务 > 项目任务 > 搜索任务工作流状态
-> Updated: 2025-10-09 18:06:46
+> Updated: 2026-06-04 19:11:41
 
 # 搜索任务工作流状态
 

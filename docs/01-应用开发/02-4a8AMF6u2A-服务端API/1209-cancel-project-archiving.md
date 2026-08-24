@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "Teambition 项目管理 > 项目 > 恢复项目归档"
 doc_id: "Ka4A2HXKIx"
-updated_at: "2025-10-09 18:06:29"
+updated_at: "2026-06-03 09:19:53"
 ---
 
 > Source: https://open.dingtalk.com/document/development/cancel-project-archiving
 > Path: 应用开发 / 服务端API / Teambition 项目管理 > 项目 > 恢复项目归档
-> Updated: 2025-10-09 18:06:29
+> Updated: 2026-06-03 09:19:53
 
 # 恢复项目归档
 

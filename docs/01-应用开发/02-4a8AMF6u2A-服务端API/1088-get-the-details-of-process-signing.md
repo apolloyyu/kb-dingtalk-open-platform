@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 生态开放 > e签宝 2.0 > 签署流程 > 获取流程的签署详情"
 doc_id: "pqtCZ4M1rE"
-updated_at: "2025-09-23 19:21:45"
+updated_at: "2026-06-04 19:11:14"
 ---
 
 > Source: https://open.dingtalk.com/document/development/get-the-details-of-process-signing
 > Path: 应用开发 / 服务端API / 行业与生态 > 生态开放 > e签宝 2.0 > 签署流程 > 获取流程的签署详情
-> Updated: 2025-09-23 19:21:45
+> Updated: 2026-06-04 19:11:14
 
 # 获取流程的签署详情
 

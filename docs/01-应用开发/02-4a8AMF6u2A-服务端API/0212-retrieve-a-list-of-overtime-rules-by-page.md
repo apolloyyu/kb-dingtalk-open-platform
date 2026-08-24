@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "考勤 > 考勤规则 > 分页获取加班规则列表"
 doc_id: "dGUTCzvZvz"
-updated_at: "2025-09-11 21:02:13"
+updated_at: "2026-06-01 16:47:19"
 ---
 
 > Source: https://open.dingtalk.com/document/development/retrieve-a-list-of-overtime-rules-by-page
 > Path: 应用开发 / 服务端API / 考勤 > 考勤规则 > 分页获取加班规则列表
-> Updated: 2025-09-11 21:02:13
+> Updated: 2026-06-01 16:47:19
 
 # 分页获取加班规则列表
 

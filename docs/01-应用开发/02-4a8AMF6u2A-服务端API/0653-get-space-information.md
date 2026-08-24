@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 存储管理 > 空间管理 > 获取空间信息"
 doc_id: "8TUzoEG5yQ"
-updated_at: "2025-09-12 17:20:35"
+updated_at: "2026-06-04 19:09:31"
 ---
 
 > Source: https://open.dingtalk.com/document/development/get-space-information
 > Path: 应用开发 / 服务端API / 文档/文件 > 存储管理 > 空间管理 > 获取空间信息
-> Updated: 2025-09-12 17:20:35
+> Updated: 2026-06-04 19:09:31
 
 # 获取空间信息
 

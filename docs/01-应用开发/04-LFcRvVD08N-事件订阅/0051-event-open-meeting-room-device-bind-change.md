@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "音视频 > 视频/音频会议 > 设备绑定会议室变更"
 doc_id: "n8NuT1hxgo"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-08-27 16:11:18"
 ---
 
 > Source: https://open.dingtalk.com/document/development/event-open-meeting-room-device-bind-change
 > Path: 应用开发 / 事件订阅 / 音视频 > 视频/音频会议 > 设备绑定会议室变更
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-08-27 16:11:18
 
 # 设备绑定会议室变更
 
@@ -37,6 +37,23 @@ updated_at: "2022-01-19 19:29:22"
 
 Stream模式推送
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.operateTime`（long）：设备绑定/解绑操作时间。
+- `data.openRoomId`（string）：绑定/解绑的会议室id。
+- `data.deviceUnionId`（string）：设备unionId。
+- `data.operatorUnionId`（string）：设备绑定/解绑操作人unionId。
+- `data.type`（string）：标识事件子类型：  
+  - bind：绑定  
+  - unbind：解绑
+- `data.deviceId`（string）：设备id。
+
 ### **事件体示例**
 
 ```
@@ -58,6 +75,22 @@ Stream模式推送
 ```
 
 HTTP推送
+
+### 字段说明
+
+- `EventType`（String）：事件英文名称。
+- `EventTime`（Long）：事件发生的时间。
+- `CorpId`（String）：企业corpId。
+- `BizId`（String）：无业务意义，幂等。
+- `eventId`（String）：事件的唯一Id。
+- `operateTime`（long）：设备绑定/解绑操作时间。
+- `openRoomId`（string）：绑定/解绑的会议室id。
+- `deviceUnionId`（string）：设备unionId。
+- `operatorUnionId`（string）：设备绑定/解绑操作人unionId。
+- `type`（string）：标识事件子类型：  
+  - bind：绑定  
+  - unbind：解绑
+- `deviceId`（string）：设备id。
 
 ### **事件体示例**
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "多媒体 > 音频 > BackgroundAudioManager.seek"
 doc_id: "wUwyd4azwp"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:07:03"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-background-audio-manager-seek
 > Path: 应用开发 / 客户端JSAPI / 多媒体 > 音频 > BackgroundAudioManager.seek
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:07:03
 
 # BackgroundAudioManager.seek
 
@@ -41,7 +41,9 @@ updated_at: "2023-08-08"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `position`（string，必填）：跳转到指定位置position，以秒为单位。
 
 ## **返回结果**
 

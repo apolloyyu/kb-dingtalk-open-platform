@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "多媒体 > 音频 > onAudioInterruptionBegin"
 doc_id: "uzaDWe3Z8J"
-updated_at: "2023-08-11"
+updated_at: "2025-08-27 18:07:04"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-on-audio-interruption-begin
 > Path: 应用开发 / 客户端JSAPI / 多媒体 > 音频 > onAudioInterruptionBegin
-> Updated: 2023-08-11
+> Updated: 2025-08-27 18:07:04
 
 # onAudioInterruptionBegin
 
@@ -45,7 +45,9 @@ updated_at: "2023-08-11"
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+（object）
 
 ## **示例****代码**
 

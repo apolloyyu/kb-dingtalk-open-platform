@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "音视频 > 会议 > 批量查询视频会议信息"
 doc_id: "YgiByk4X13"
-updated_at: "2025-09-11 21:02:53"
+updated_at: "2026-06-02 09:18:02"
 ---
 
 > Source: https://open.dingtalk.com/document/development/batch-query-of-video-conference-information
 > Path: 应用开发 / 服务端API / 音视频 > 会议 > 批量查询视频会议信息
-> Updated: 2025-09-11 21:02:53
+> Updated: 2026-06-02 09:18:02
 
 # 批量查询视频会议信息
 

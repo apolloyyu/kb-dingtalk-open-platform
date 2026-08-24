@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "宜搭 > 任务 > 获取审批记录"
 doc_id: "6l32VVyHkF"
-updated_at: "2026-04-24 14:14:19"
+updated_at: "2026-06-03 10:12:03"
 ---
 
 > Source: https://open.dingtalk.com/document/development/queries-an-approval-record
 > Path: 应用开发 / 服务端API / 宜搭 > 任务 > 获取审批记录
-> Updated: 2026-04-24 14:14:19
+> Updated: 2026-06-03 10:12:03
 
 # 获取审批记录
 

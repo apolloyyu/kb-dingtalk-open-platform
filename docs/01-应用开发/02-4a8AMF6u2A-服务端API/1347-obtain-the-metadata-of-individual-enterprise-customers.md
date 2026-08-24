@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "更多开放 > 客户管理（官方CRM） > 客户 > 获取个人或企业客户的元数据"
 doc_id: "5MHKbt0NUG"
-updated_at: "2025-12-08 14:14:33"
+updated_at: "2026-06-04 19:12:05"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-the-metadata-of-individual-enterprise-customers
 > Path: 应用开发 / 服务端API / 更多开放 > 客户管理（官方CRM） > 客户 > 获取个人或企业客户的元数据
-> Updated: 2025-12-08 14:14:33
+> Updated: 2026-06-04 19:12:05
 
 # 获取个人或企业客户的元数据
 

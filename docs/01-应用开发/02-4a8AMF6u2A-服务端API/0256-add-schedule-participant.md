@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "日程 > 日程参与者 > 添加日程参与者"
 doc_id: "8brpIk1ZkD"
-updated_at: "2025-09-11 21:02:33"
+updated_at: "2026-06-02 09:25:03"
 ---
 
 > Source: https://open.dingtalk.com/document/development/add-schedule-participant
 > Path: 应用开发 / 服务端API / 日程 > 日程参与者 > 添加日程参与者
-> Updated: 2025-09-11 21:02:33
+> Updated: 2026-06-02 09:25:03
 
 # 添加日程参与者
 

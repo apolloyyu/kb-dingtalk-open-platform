@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "更多开放 > 服务窗 > 获取企业下服务窗列表"
 doc_id: "6QwBkoFt8K"
-updated_at: "2025-09-11 21:03:47"
+updated_at: "2026-06-04 19:12:01"
 ---
 
 > Source: https://open.dingtalk.com/document/development/queries-the-list-of-services-under-an-enterprise
 > Path: 应用开发 / 服务端API / 更多开放 > 服务窗 > 获取企业下服务窗列表
-> Updated: 2025-09-11 21:03:47
+> Updated: 2026-06-04 19:12:01
 
 # 获取企业下服务窗列表
 

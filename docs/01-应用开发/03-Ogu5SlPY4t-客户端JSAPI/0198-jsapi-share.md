@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 分享 > share"
 doc_id: "D6cWdk20le"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:08:13"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-share
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 分享 > share
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:08:13
 
 # share
 
@@ -43,7 +43,17 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `type`（number，必填）：分享类型：  
+    
+  \* 0：全部组件默认  
+  \* 1：只能分享到钉钉  
+  \* 2：不能分享，只有刷新按钮
+- `url`（string）：url地址。
+- `title`（string，必填）：分享标题。
+- `content`（string）：分享内容。
+- `image`（string）：分享的图片url地址。
 
 ## **返回结果**
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 表格 > 行列 > 删除列"
 doc_id: "9XRuRVgmNt"
-updated_at: "2025-09-12 17:20:23"
+updated_at: "2026-06-04 19:09:08"
 ---
 
 > Source: https://open.dingtalk.com/document/development/delete-column
 > Path: 应用开发 / 服务端API / 文档/文件 > 表格 > 行列 > 删除列
-> Updated: 2025-09-12 17:20:23
+> Updated: 2026-06-04 19:09:08
 
 # 删除列
 

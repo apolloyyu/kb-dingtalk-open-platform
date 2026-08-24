@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "Teambition 项目管理 > 工时 > 创建实际工时"
 doc_id: "0fgFjKBxLt"
-updated_at: "2025-10-09 18:07:04"
+updated_at: "2026-06-03 09:29:40"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-actual-work
 > Path: 应用开发 / 服务端API / Teambition 项目管理 > 工时 > 创建实际工时
-> Updated: 2025-10-09 18:07:04
+> Updated: 2026-06-03 09:29:40
 
 # 创建实际工时
 

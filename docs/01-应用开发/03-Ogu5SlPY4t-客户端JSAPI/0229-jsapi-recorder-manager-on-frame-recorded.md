@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "多媒体 > 录音 > RecorderManager.onframerecorded"
 doc_id: "8lACZYOIQe"
-updated_at: "2023-10-12"
+updated_at: "2025-08-27 18:06:45"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-recorder-manager-on-frame-recorded
 > Path: 应用开发 / 客户端JSAPI / 多媒体 > 录音 > RecorderManager.onframerecorded
-> Updated: 2023-10-12
+> Updated: 2025-08-27 18:06:45
 
 # RecorderManager.onframerecorded
 
@@ -47,7 +47,11 @@ updated_at: "2023-10-12"
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `type`（string，必填）：类型。
+- `isLastFrame`（boolean，必填）：当前帧是否正常录音结束前的最后一帧。
+- `frameBuffer`（string，必填）：录音分片数据。
 
 ## **示例****代码**
 

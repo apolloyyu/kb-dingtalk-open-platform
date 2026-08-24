@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "更多开放 > 服务窗 > 获取用户关注服务窗状态"
 doc_id: "l7rFDEADoB"
-updated_at: "2025-09-11 21:03:50"
+updated_at: "2026-06-04 11:32:14"
 ---
 
 > Source: https://open.dingtalk.com/document/development/third-party-enterprise-application-obtains-user-attention-service-window-status
 > Path: 应用开发 / 服务端API / 更多开放 > 服务窗 > 获取用户关注服务窗状态
-> Updated: 2025-09-11 21:03:50
+> Updated: 2026-06-04 11:32:14
 
 # 获取用户关注服务窗状态
 

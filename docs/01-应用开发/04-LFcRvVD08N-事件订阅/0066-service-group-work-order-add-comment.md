@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "服务群 > 服务群工单添加备注"
 doc_id: "5KsDtGVSkE"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-08-28 19:46:15"
 ---
 
 > Source: https://open.dingtalk.com/document/development/service-group-work-order-add-comment
 > Path: 应用开发 / 事件订阅 / 服务群 > 服务群工单添加备注
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-08-28 19:46:15
 
 # 服务群工单添加备注
 
@@ -36,6 +36,26 @@ updated_at: "2022-01-19 19:29:22"
 ## 事件体描述
 
 Stream模式推送
+
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.spiTicketModel`（object）：工单事件数据。
+- `data.spiTicketModel.openTicketId`（string）：工单ID。
+- `data.spiTicketModel.operateMemo`（object）：工单备注。
+- `data.spiTicketModel.operateMemo.attachments`（array）：附件。
+- `data.spiTicketModel.operateMemo.attachments[].fileName`（string）：文件名称。
+- `data.spiTicketModel.operateMemo.attachments[].key`（string）：文件key。
+- `data.spiTicketModel.operateMemo.attachments[].type`（string）：文件类型。
+- `data.spiTicketModel.operateMemo.memo`（string）：备注-文字。
+- `data.spiTicketModel.operatorNickName`（string）：操作人昵称。
+- `data.spiTicketModel.operatorUnionId`（string）：操作人ID。
+- `data.spiTicketModel.operateType`（string）：操作类型。
 
 ### **事件体示例**
 
@@ -68,6 +88,25 @@ Stream模式推送
 ```
 
 HTTP推送
+
+### root
+
+- `EventType`（String）：事件英文名称。
+- `EventTime`（Long）：事件发生的时间。
+- `CorpId`（String）：企业corpId。
+- `BizId`（String）：无业务意义，幂等。
+- `eventId`（String）：事件的唯一Id。
+- `spiTicketModel`（object）：工单事件数据。
+- `spiTicketModel.openTicketId`（string）：工单ID。
+- `spiTicketModel.operateMemo`（object）：工单备注。
+- `spiTicketModel.operateMemo.attachments`（array）：附件。
+- `spiTicketModel.operateMemo.attachments[].fileName`（string）：文件名称。
+- `spiTicketModel.operateMemo.attachments[].key`（string）：文件key。
+- `spiTicketModel.operateMemo.attachments[].type`（string）：文件类型。
+- `spiTicketModel.operateMemo.memo`（string）：备注-文字。
+- `spiTicketModel.operatorNickName`（string）：操作人昵称。
+- `spiTicketModel.operatorUnionId`（string）：操作人ID。
+- `spiTicketModel.operateType`（string）：操作类型。
 
 ### **事件体示例**
 

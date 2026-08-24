@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "钉钉快办 > 查询任务详情"
 doc_id: "2AbmrsOgVb"
-updated_at: "2025-10-09 18:07:10"
+updated_at: "2026-06-02 19:46:15"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-queryalltask
 > Path: 应用开发 / 服务端API / 钉钉快办 > 查询任务详情
-> Updated: 2025-10-09 18:07:10
+> Updated: 2026-06-02 19:46:15
 
 # 查询任务详情
 

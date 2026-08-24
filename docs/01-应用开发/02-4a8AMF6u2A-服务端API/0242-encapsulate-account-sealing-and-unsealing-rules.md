@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "考勤 > 封账规则 > 查询指定用户的封账规则"
 doc_id: "lAWfGwjzvn"
-updated_at: "2025-09-11 21:02:22"
+updated_at: "2026-06-08 11:46:50"
 ---
 
 > Source: https://open.dingtalk.com/document/development/encapsulate-account-sealing-and-unsealing-rules
 > Path: 应用开发 / 服务端API / 考勤 > 封账规则 > 查询指定用户的封账规则
-> Updated: 2025-09-11 21:02:22
+> Updated: 2026-06-08 11:46:50
 
 # 查询指定用户的封账规则
 

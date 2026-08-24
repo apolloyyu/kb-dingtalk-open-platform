@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "办公 > 待办 > 待办任务新增"
 doc_id: "BImgFp2FpQ"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-08-27 16:11:11"
 ---
 
 > Source: https://open.dingtalk.com/document/development/event-todo-task-create
 > Path: 应用开发 / 事件订阅 / 办公 > 待办 > 待办任务新增
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-08-27 16:11:11
 
 # 待办任务新增
 
@@ -38,6 +38,20 @@ updated_at: "2022-01-19 19:29:22"
 
 Stream模式推送
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.bizTag`（string）：业务类型：  
+  - certify\_todo:OA审批。  
+  - 其他类型：无该字段。
+- `data.taskId`（string）：待办任务id。
+- `data.unionIdList`（array）：所有人的UnionId，包括创建者、执行者、参与者。
+
 ### **事件体示例**
 
 ```
@@ -59,6 +73,19 @@ Stream模式推送
 
 HTTP推送
 
+### root
+
+- `EventType`（String）：事件英文名称。
+- `EventTime`（Long）：事件发生的时间。
+- `CorpId`（String）：企业corpId。
+- `BizId`（String）：无业务意义，幂等。
+- `eventId`（String）：事件的唯一Id。
+- `bizTag`（string）：业务类型：  
+  - certify\_todo:OA审批。  
+  - 其他类型：无该字段。
+- `taskId`（string）：待办任务id。
+- `UnionIdList`（array）：所有人的UnionId，包括创建者、执行者、参与者。
+
 ### **事件体示例**
 
 ```
@@ -79,6 +106,20 @@ HTTP推送
 SyncHTTP/RDS推送
 
 为RDS推送方式时，数据插入表open\_sync\_biz\_data\_medium中。
+
+### root
+
+- `corp_id`（String）：企业corp\_id。
+- `biz_id`（String）：biz\_id无业务意义，幂等。
+- `biz_type`（Integer）：事件bizType。
+- `biz_data`（object）：事件bizData介绍。
+- `biz_data.syncAction`（String）：事件英文名。
+- `biz_data.eventId`（String）：事件的唯一Id。
+- `biz_data.bizTag`（string）：业务类型：  
+  - certify\_todo:OA审批。  
+  - 其他类型：无该字段。
+- `biz_data.taskId`（string）：待办任务id。
+- `biz_data.UnionIdList`（array）：所有人的UnionId，包括创建者、执行者、参与者。
 
 ### **biz\_data数据示例(biz\_type=107)**
 

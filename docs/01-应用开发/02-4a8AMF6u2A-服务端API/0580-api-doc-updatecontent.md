@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 文档 > 文档 > 覆写文档（应用授权）"
 doc_id: "RMfHP8wg6m"
-updated_at: "2026-03-31 09:58:41"
+updated_at: "2026-06-15 10:34:49"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-doc-updatecontent
 > Path: 应用开发 / 服务端API / 文档/文件 > 文档 > 文档 > 覆写文档（应用授权）
-> Updated: 2026-03-31 09:58:41
+> Updated: 2026-06-15 10:34:49
 
 # 覆写文档（应用授权）
 

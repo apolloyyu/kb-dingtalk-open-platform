@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "钉钉CLI"
 breadcrumb: "更新日志"
 doc_id: "JqaPUpyWXl"
-updated_at: "2026-08-17 17:38:14"
+updated_at: "2026-08-24 12:00:12"
 ---
 
 > Source: https://open.dingtalk.com/document/development/dws-cli-log
 > Path: 应用开发 / 钉钉CLI / 更新日志
-> Updated: 2026-08-17 17:38:14
+> Updated: 2026-08-24 12:00:12
 
 # 更新日志
 
@@ -40,6 +40,144 @@ dws upgrade --list
 - 钉钉 CLI 每周发布更新，开发者可扫描下方二维码加入"**dws 开源沟通群**"获取最新动态。
 
   ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/6160536871/p1094200.png)
+
+## **2026-08-21**
+
+### **更新说明**
+
+本周 CLI 聚焦 钉盘同步、AI 表格统计、文档评论协作 及 OA/招聘/日程 等场景，正式发布稳定版 [v1.0.59](https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli/releases/tag/v1.0.59)。
+
+建议所有开发者通过 `dws upgrade` 升级到最新版。
+
+```
+# 查看产品与工具数量；定位命令后再查询 compact leaf
+dws schema
+dws schema --cli-path "chat +messages-send" --compact
+```
+
+### **新增功能**
+
+#### 钉盘文件夹双向同步
+
+- **本地与钉盘文件夹可比对同步** ：支持本地文件夹与钉盘文件夹的差异比较、拉取、推送与双向同步；仅处理常规文件，不删除任一侧多余文件。先通过 `status` 查看差异，确认后再执行同步。
+
+  ```
+  # 先查看差异，不落盘
+  dws drive status --local-folder /abs/path/project --remote-folder <dentryUuid>
+
+  # 预览双向同步计划，确认后以同参数追加 --yes 执行
+  dws drive sync --local-folder /abs/path/project --remote-folder <dentryUuid> --on-conflict keep-both --dry-run
+  ```
+
+#### 钉盘文件筛选增强
+
+- **文件列表支持类型与时间筛选** ：`dws drive list` 支持按文件/文件夹类型及修改时间筛选；使用 `--latest` 时扫描不完整会明确失败，不把不完整结果当作全局最新。
+
+  ```
+  dws drive list --folder <FOLDER_ID> --type file --start 7d --pattern "*.pdf" --format json
+  ```
+
+#### AI 表格直接统计
+
+- **无需导出即可对记录做统计** ：支持对整表或筛选后的记录做计数、求和、平均值等；按字段分组或需去重等高级聚合时使用 `group-stats`。
+
+  ```
+  dws aitable record stats --base-id <BASE_ID> --table-id <TABLE_ID> \
+    --stats '[{"fieldId":"<FIELD_ID>","statsType":"COUNT"}]'
+
+  dws aitable record group-stats --base-id <BASE_ID> --table-id <TABLE_ID> \
+    --group '[{"fieldId":"<CATEGORY_FIELD>","direction":"ASC","fieldConfig":null,"arraySplitMode":true}]' \
+    --stats '[{"fieldId":"<AMOUNT_FIELD>","statsType":"sum"}]'
+  ```
+
+#### 文档评论全周期管理
+
+- **文档与表格评论支持批量处理** ：钉钉文档和在线电子表格均支持批量查询、解决、恢复及表情回复评论；批量查询保持输入顺序并标记不存在的评论。
+
+  ```
+  dws doc comment batch-query --node <NODE_ID> \
+    --comment-ref <TOPIC_ID>:<COMMENT_KEY> --format json
+
+  dws sheet comment react-reply --node <NODE_ID> \
+    --comment-key <COMMENT_KEY> --reaction "鼓掌" --format json
+  ```
+
+#### OA审批管理员查询
+
+- **支持管理员视角查询审批实例** ：新增 `dws oa approval list-by-admin`，具备 OA 审批管理员权限时，可按模板、时间、状态和人员筛选实例。
+
+  ```
+  dws oa approval list-by-admin --process-code <PROCESS_CODE> --start "2026-08-14T00:00:00+08:00" --cursor 0 --limit 20
+  ```
+
+#### 日程分享信息获取
+
+- **可获取日程的分享详情** ：新增 `dws calendar event share-info`，支持取回日程主题、组织人、地点和入会信息；可通过 `--calendar-id`、`--language` 指定目标日历与返回语言。
+
+  ```
+  dws calendar event share-info --id <EVENT_ID> --language zh-CN
+  ```
+
+#### 招聘职位管理
+
+- **支持职位列表、详情查询与创建** ：可在命令行完成职位管理闭环，支持按关键词与状态筛选列表、查询详情及创建新职位。
+
+  ```
+  dws recruit job list --keyword "Java" --status open --size 20 --format json
+  ```
+
+#### 个人表情资产管理
+
+- **支持列出、发送和收藏表情** ：新增 `dws chat emotion list/send/favorite`，让自动化流程也能在会话中复用用户的表情资产。
+
+  ```
+  dws chat emotion list --format json
+  dws chat emotion send --media-id <MEDIA_ID> --group <OPEN_CONVERSATION_ID> --uuid <IDEMPOTENCY_KEY>
+  ```
+
+#### 机器人引用回复
+
+- **Markdown 消息支持引用已有消息** ：`dws chat message send-by-bot` 新增成对参数 `--reply` 与 `--ref-sender`，实现带上下文的引用回复。
+
+  - 相关命令：`dws chat message send-by-bot`（新增参数 `--reply`、`--ref-sender`）
+
+### **体验优化**
+
+#### 聊天参数兼容优化
+
+- **推荐入口统一为长参数名** ：推荐使用 `--conversation-id` 和 `--message-id`，历史的 `--group`、`--id`、`--chat` 等参数仍保留兼容；群机器人查询继续使用 `--group`，可传入会话 ID 或唯一群名。
+
+#### Skill安装升级优化
+
+- **预置 Skills 统一安装路径**：统一安装到 `~/.agents/skills`，可迁移重复副本并保留自定义/XDG Home 与 OpenClaw 兼容路径。升级过程采用备份、校验与无覆盖发布，降低外接盘和并发写入时的覆盖风险。
+
+  ```
+  dws skill setup --mode multi --target codex
+  dws upgrade
+  ```
+
+#### 多产品Shortcut完善
+
+- **Wiki、听记与任务工作流补齐** ：发布经核验的 Wiki 空间、成员、节点和动态 Shortcut；为 AI 听记、钉钉任务和 Wiki 补齐参数别名、歧义拦截和端到端返回校验，让自动化调用更易写、结果更可用。
+
+#### CLI遥测隐私保护
+
+- 仅记录已审核命令结果与身份维度 ：不采集命令参数、输出、路径或设备指纹；如不希望上报，可设置 `DO_NOT_TRACK=1`。
+
+  - 示例：`DO_NOT_TRACK=1 dws version`
+
+### **问题优化**
+
+#### 写入同步结果校验
+
+- **修复多处"假成功"反馈**：修复钉盘 push/sync 预览准确性、AI 表格写入校验与删除计数、Wiki 动态完整性，以及任务、通讯录、AI 听记和知识库等操作的“假成功”反馈；对于无法由服务端回读证明的操作，会明确报告部分成功，而不是直接宣称完成。
+
+#### 分页与身份校验强化
+
+- **AI 表格记录查询保持服务端 20 条分页边界**：避免跨页读取或写后回读被误判失败。
+- **AI 听记取消共享须双重确认**：确认听记存在且服务端确认目标成员后才返回成功。
+- **聊天卡片更新区分请求接受与可见验证** ：保留真实 `bizId` 供后续核验。
+- **文档、钉盘及聊天发送者校验收紧** ：避免模糊输入造成误操作。
 
 ## **2026-08-14**
 

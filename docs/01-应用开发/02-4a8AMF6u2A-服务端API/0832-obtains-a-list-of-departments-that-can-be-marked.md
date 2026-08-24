@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "专属钉钉 > 产业互联 > 获取可打标部门列表"
 doc_id: "LvyxQfHsgI"
-updated_at: "2025-09-23 19:19:55"
+updated_at: "2026-06-02 19:14:50"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtains-a-list-of-departments-that-can-be-marked
 > Path: 应用开发 / 服务端API / 专属钉钉 > 产业互联 > 获取可打标部门列表
-> Updated: 2025-09-23 19:19:55
+> Updated: 2026-06-02 19:14:50
 
 # 获取可打标部门列表
 

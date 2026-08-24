@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "办公电话 > makeCloudCall"
 doc_id: "mnoHNCtaYn"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:08:37"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-make-cloud-call
 > Path: 应用开发 / 客户端JSAPI / 办公电话 > makeCloudCall
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:08:37
 
 # makeCloudCall
 
@@ -43,13 +43,33 @@ updated_at: "2023-08-08"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `corpId`（string，必填）：当前企业的corpId。
+- `openCallRecord`（boolean）：打开通话录音：   
+    
+  \* false（默认）：关闭   
+  \* true：打开
+- `bizNumber`（string，必填）：指定外呼的号码。
+- `calleeNumber`（string，必填）：外呼的被叫号码。
+- `hideCalleeNumber`（boolean）：拨打面板是否完整显示被叫号码 ：   
+    
+  \* false（默认）：不显示   
+  \* true：显示
+- `closePushCallRecord`（boolean）：是否关闭推送钉钉通话记录：   
+    
+  \* false（默认）：不关闭   
+  \* true：关闭推送
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `code`（number，必填）：返回码。
+- `cause`（string，必填）：异常描述。
+- `sessionId`（string，必填）：会话ID。
 
 ## **示例****代码**
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 节点查询 > SelectorQuery.boundingClientRect"
 doc_id: "3m8xhRRrK5"
-updated_at: "2023-08-11"
+updated_at: "2025-08-27 18:06:16"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-selector-query-bounding-client-rect
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 节点查询 > SelectorQuery.boundingClientRect
-> Updated: 2023-08-11
+> Updated: 2025-08-27 18:06:16
 
 # SelectorQuery.boundingClientRect
 

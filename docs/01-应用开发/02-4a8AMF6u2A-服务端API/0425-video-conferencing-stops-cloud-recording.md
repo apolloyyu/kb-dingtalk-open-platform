@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "音视频 > 会议 > 停止视频会议云录制"
 doc_id: "8zJaLtj0Ih"
-updated_at: "2025-09-11 21:03:09"
+updated_at: "2026-06-02 09:10:48"
 ---
 
 > Source: https://open.dingtalk.com/document/development/video-conferencing-stops-cloud-recording
 > Path: 应用开发 / 服务端API / 音视频 > 会议 > 停止视频会议云录制
-> Updated: 2025-09-11 21:03:09
+> Updated: 2026-06-02 09:10:48
 
 # 停止视频会议云录制
 

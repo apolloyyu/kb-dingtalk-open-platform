@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 导航栏 > setNavigationBar"
 doc_id: "HBLMyHLR7C"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:05:01"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-set-navigation-bar
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 导航栏 > setNavigationBar
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:05:01
 
 # setNavigationBar
 
@@ -43,7 +43,11 @@ updated_at: "2023-08-08"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `title`（string，必填）：导航栏标题。
+- `backgroundColor`（string，必填）：导航栏背景色，支持十六进制颜色值。
+- `reset`（boolean，必填）：是否重置导航栏为钉钉默认配色。 默认值： false。
 
 ## **返回结果**
 

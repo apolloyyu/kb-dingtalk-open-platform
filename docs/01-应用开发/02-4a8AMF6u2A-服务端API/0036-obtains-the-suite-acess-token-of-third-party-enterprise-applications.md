@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "认证与授权 > 访问凭证 > 应用身份凭证 > 获取第三方企业应用的suiteAccessToken"
 doc_id: "5dOoWwTh3G"
-updated_at: "2026-04-29 22:27:41"
+updated_at: "2026-06-08 12:02:04"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtains-the-suite-acess-token-of-third-party-enterprise-applications
 > Path: 应用开发 / 服务端API / 认证与授权 > 访问凭证 > 应用身份凭证 > 获取第三方企业应用的suiteAccessToken
-> Updated: 2026-04-29 22:27:41
+> Updated: 2026-06-08 12:02:04
 
 # 获取第三方企业应用的suiteAccessToken
 

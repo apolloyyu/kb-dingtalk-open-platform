@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "通讯录管理 > 企业账号 > 企业账号转交主管理员（创建者）"
 doc_id: "7lOl6H6zqn"
-updated_at: "2025-09-11 21:01:51"
+updated_at: "2026-06-01 16:05:16"
 ---
 
 > Source: https://open.dingtalk.com/document/development/transfer-exclusive-account-to-main-administrator-creator
 > Path: 应用开发 / 服务端API / 通讯录管理 > 企业账号 > 企业账号转交主管理员（创建者）
-> Updated: 2025-09-11 21:01:51
+> Updated: 2026-06-01 16:05:16
 
 # 企业账号转交主管理员（创建者）
 

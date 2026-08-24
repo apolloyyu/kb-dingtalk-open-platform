@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "多媒体 > 视频 > VideoContext.stop"
 doc_id: "MjLdxy3hDP"
-updated_at: "2023-08-11"
+updated_at: "2025-08-27 18:06:53"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-video-context-stop
 > Path: 应用开发 / 客户端JSAPI / 多媒体 > 视频 > VideoContext.stop
-> Updated: 2023-08-11
+> Updated: 2025-08-27 18:06:53
 
 # VideoContext.stop
 

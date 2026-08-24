@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "音视频 > 智能会议室 > 会议室 > 创建会议室预定黑名单"
 doc_id: "O23nOyz3GL"
-updated_at: "2025-09-11 21:03:25"
+updated_at: "2026-06-02 13:04:56"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-createbookingblacklist
 > Path: 应用开发 / 服务端API / 音视频 > 智能会议室 > 会议室 > 创建会议室预定黑名单
-> Updated: 2025-09-11 21:03:25
+> Updated: 2026-06-02 13:04:56
 
 # 创建会议室预定黑名单
 

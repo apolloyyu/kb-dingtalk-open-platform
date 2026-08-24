@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "多媒体 > 音频 > getBackgroundAudioManager"
 doc_id: "iMZMq845zx"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:06:55"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-get-background-audio-manager
 > Path: 应用开发 / 客户端JSAPI / 多媒体 > 音频 > getBackgroundAudioManager
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:06:55
 
 # getBackgroundAudioManager
 

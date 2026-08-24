@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "通讯录管理 > 上下游组织（原合作空间） > 创建上下游组织"
 doc_id: "oLgFCOlK8p"
-updated_at: "2025-09-11 21:02:06"
+updated_at: "2026-06-02 09:24:46"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-a-cooperation-space
 > Path: 应用开发 / 服务端API / 通讯录管理 > 上下游组织（原合作空间） > 创建上下游组织
-> Updated: 2025-09-11 21:02:06
+> Updated: 2026-06-02 09:24:46
 
 # 创建上下游组织
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > Wi-Fi > registerSSID"
 doc_id: "zO7h2CbSsZ"
-updated_at: "2023-08-11"
+updated_at: "2025-08-27 18:07:39"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-register-ssid
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > Wi-Fi > registerSSID
-> Updated: 2023-08-11
+> Updated: 2025-08-27 18:07:39
 
 # registerSSID
 
@@ -43,13 +43,17 @@ updated_at: "2023-08-11"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `SSID`（string，必填）：设备 SSID。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+（object）回调事件内的对象
 
 ## **错误码**
 

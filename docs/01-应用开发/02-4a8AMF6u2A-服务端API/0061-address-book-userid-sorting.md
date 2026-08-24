@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "通讯录管理 > 用户管理 > 通讯录userId排序"
 doc_id: "H6pL3kluqJ"
-updated_at: "2025-09-11 21:01:42"
+updated_at: "2026-06-02 09:18:13"
 ---
 
 > Source: https://open.dingtalk.com/document/development/address-book-userid-sorting
 > Path: 应用开发 / 服务端API / 通讯录管理 > 用户管理 > 通讯录userId排序
-> Updated: 2025-09-11 21:01:42
+> Updated: 2026-06-02 09:18:13
 
 # 通讯录userId排序
 

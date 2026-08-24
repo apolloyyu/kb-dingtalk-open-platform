@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > 蓝牙 > 传统蓝牙 > onBluetoothAdapterStateChange"
 doc_id: "JwzgDX1wFy"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:07:58"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-on-bluetooth-adapter-state-change
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > 蓝牙 > 传统蓝牙 > onBluetoothAdapterStateChange
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:07:58
 
 # onBluetoothAdapterStateChange
 
@@ -45,7 +45,10 @@ updated_at: "2024-12-04"
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `available`（boolean，必填）：蓝牙模块是否可用。
+- `discovering`（boolean，必填）：蓝牙模块是否处于搜索状态。
 
 ## **示例****代码**
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "AI 表格 > 数据表 > 删除数据表"
 doc_id: "plPZSwJTWf"
-updated_at: "2025-09-12 17:21:05"
+updated_at: "2026-08-19 09:07:44"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-noatable-deletesheet
 > Path: 应用开发 / 服务端API / AI 表格 > 数据表 > 删除数据表
-> Updated: 2025-09-12 17:21:05
+> Updated: 2026-08-19 09:07:44
 
 # 删除数据表
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 行业开放 > 新教育 > 高校通迅录 > 获取组织单元支持的部门类型"
 doc_id: "QI199g9bIH"
-updated_at: "2025-09-23 19:23:30"
+updated_at: "2026-06-04 14:18:32"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-listcollegecontactdepttypeconfig
 > Path: 应用开发 / 服务端API / 行业与生态 > 行业开放 > 新教育 > 高校通迅录 > 获取组织单元支持的部门类型
-> Updated: 2025-09-23 19:23:30
+> Updated: 2026-06-04 14:18:32
 
 # 获取组织单元支持的部门类型
 

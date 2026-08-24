@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 生态开放 > e签宝 2.0 > 签署流程 > 获取流程详细信息及操作记录"
 doc_id: "opeWYyHgTw"
-updated_at: "2025-09-23 19:21:46"
+updated_at: "2026-06-04 19:11:15"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtains-the-task-details
 > Path: 应用开发 / 服务端API / 行业与生态 > 生态开放 > e签宝 2.0 > 签署流程 > 获取流程详细信息及操作记录
-> Updated: 2025-09-23 19:21:46
+> Updated: 2026-06-04 19:11:15
 
 # 获取流程详细信息及操作记录
 

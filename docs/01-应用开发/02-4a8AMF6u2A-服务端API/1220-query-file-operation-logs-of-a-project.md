@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "Teambition 项目管理 > 项目 > 查询项目中文件操作日志"
 doc_id: "WgrPGNW9L9"
-updated_at: "2025-10-09 18:06:36"
+updated_at: "2026-07-20 09:21:55"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-file-operation-logs-of-a-project
 > Path: 应用开发 / 服务端API / Teambition 项目管理 > 项目 > 查询项目中文件操作日志
-> Updated: 2025-10-09 18:06:36
+> Updated: 2026-07-20 09:21:55
 
 # 查询项目中文件操作日志
 

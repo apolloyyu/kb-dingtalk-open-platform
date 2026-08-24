@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "多媒体 > 视频 > createVideoContext"
 doc_id: "Fb65AdTzi1"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:06:49"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-create-video-context
 > Path: 应用开发 / 客户端JSAPI / 多媒体 > 视频 > createVideoContext
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:06:49
 
 # createVideoContext
 
@@ -86,7 +86,9 @@ Page({
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `id`（string，必填）：videoId。
 
 ## **返回结果**
 

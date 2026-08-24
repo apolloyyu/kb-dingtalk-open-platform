@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "音视频 > 会议 > 查询会议录制的详情信息"
 doc_id: "vqLtU2z3fM"
-updated_at: "2025-09-11 21:03:09"
+updated_at: "2026-06-02 09:10:47"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-recording-information
 > Path: 应用开发 / 服务端API / 音视频 > 会议 > 查询会议录制的详情信息
-> Updated: 2025-09-11 21:03:09
+> Updated: 2026-06-02 09:10:47
 
 # 查询会议录制的详情信息
 

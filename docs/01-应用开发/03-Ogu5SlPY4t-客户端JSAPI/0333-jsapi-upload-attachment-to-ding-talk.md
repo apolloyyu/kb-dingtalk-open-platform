@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "文件存储 > 钉盘 > uploadAttachmentToDingTalk"
 doc_id: "qyKeN7qhrB"
-updated_at: "2025-06-13"
+updated_at: "2025-08-27 18:08:21"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-upload-attachment-to-ding-talk
 > Path: 应用开发 / 客户端JSAPI / 文件存储 > 钉盘 > uploadAttachmentToDingTalk
-> Updated: 2025-06-13
+> Updated: 2025-08-27 18:08:21
 
 # uploadAttachmentToDingTalk
 
@@ -51,13 +51,74 @@ updated_at: "2025-06-13"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `types`（array，必填）：支持上传附件的文件类型，至少一个：  
+    
+  \* photo: 从手机相册选择图片上传到钉盘，再返回。  
+  \* camera: 用手机摄像头拍照上传到钉盘，再返回。  
+  \* file: android是“本地文件”， iOS表示从“文件”上传，再返回。  
+  \* space: 从钉盘直接选择文件返回。  
+    
+    
+    
+  > \* Android&iOS端：最多支持四种类型["photo","camera","file","space"]。  
+  > \* PC端：最多支持["photo","file","space"]。
+- `image`（object）：从手机相册或者拍照上传，types这个数组里有photo、camera参数需要构建这个数据。
+- `image.max`（number）：最多选择的图片数目，最多支持9张。
+- `image.multiple`（boolean）：图片是否支持多选，默认为false。
+- `image.compress`（boolean）：图片是否压缩，默认为true。
+- `image.spaceId`（string，必填）：企业自定义空间或存储空间。
+- `image.folderId`（string，必填）：文件夹ID。  
+    
+  `说明  
+  \* 自定义空间和存储空间可调用添加文件夹接口，实现在空间内添加文件夹。  
+    
+  \* 该参数只支持Android和IOS端。`
+- `file`（object，必填）：从手机文件选择上传，types这个数组里有file参数需要构建这个数据。
+- `file.max`（number）：最多选择的文件数量。
+- `file.spaceId`（string，必填）：企业自定义空间或存储空间。
+- `file.folderId`（string，必填）：文件夹ID。  
+    
+  `说明  
+  \* 自定义空间和存储空间可调用添加文件夹接口，实现在空间内添加文件夹。  
+    
+  \* 该参数只支持Android和IOS端。`
+- `space`（object，必填）：从钉盘选择文件，types这个数组里有space参数需要构建这个数据。
+- `space.max`（number）：最多选择的钉盘文件数量。
+- `space.corpId`（string，必填）：钉盘所在的企业id
+- `space.isCopy`（boolean）：\* Android&iOS端：  
+    
+   \* 1：表示复制到钉盘  
+    
+   \* 0：表示返回选中的文件信息  
+    
+  \* PC端：不支持此参数
+- `space.spaceId`（string，必填）：企业自定义空间或存储空间。
+- `space.folderId`（string，必填）：文件夹ID。  
+    
+  `说明  
+  \* 自定义空间和存储空间可调用添加文件夹接口，实现在空间内添加文件夹。  
+    
+  \* 该参数只支持Android和IOS端。`
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `data`（object，必填）：文件信息。
+- `data.spaceId`（string，必填）：钉盘空间id。
+- `data.fileId`（string，必填）：文件id。
+- `data.fileName`（string，必填）：文件名称。
+- `data.fileSize`（string，必填）：文件大小，单位bit。
+- `data.fileType`（string，必填）：文件类型。
+- `type`（string，必填）：用户选择了哪种文件类型 ：  
+    
+  \* image：图片  
+  \* file：手机文件  
+  \* space：钉盘文件
 
 ## **示例****代码**
 

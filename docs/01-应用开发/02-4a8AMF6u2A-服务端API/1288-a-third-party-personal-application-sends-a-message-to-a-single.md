@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "更多开放 > 服务窗 > 第三方个人应用发送服务窗单人消息"
 doc_id: "rH3in84zT7"
-updated_at: "2025-09-11 21:03:51"
+updated_at: "2026-06-04 19:12:03"
 ---
 
 > Source: https://open.dingtalk.com/document/development/a-third-party-personal-application-sends-a-message-to-a-single
 > Path: 应用开发 / 服务端API / 更多开放 > 服务窗 > 第三方个人应用发送服务窗单人消息
-> Updated: 2025-09-11 21:03:51
+> Updated: 2026-06-04 19:12:03
 
 # 第三方个人应用发送服务窗单人消息
 

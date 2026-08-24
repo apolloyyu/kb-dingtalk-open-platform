@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "宜搭 > 流程 > 通过流程code获取流程定义"
 doc_id: "zDzQ4ALGml"
-updated_at: "2026-03-17 14:39:07"
+updated_at: "2026-06-02 09:50:23"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-definition-through-process-code
 > Path: 应用开发 / 服务端API / 宜搭 > 流程 > 通过流程code获取流程定义
-> Updated: 2026-03-17 14:39:07
+> Updated: 2026-06-02 09:50:23
 
 # 通过流程code获取流程定义
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "钉钉应用 > 版本管理 > 回滚企业内部小程序版本"
 doc_id: "O5PR7dz4rL"
-updated_at: "2026-01-22 21:30:04"
+updated_at: "2026-06-03 11:47:36"
 ---
 
 > Source: https://open.dingtalk.com/document/development/rollback-of-enterprise-internal-applet-version
 > Path: 应用开发 / 服务端API / 钉钉应用 > 版本管理 > 回滚企业内部小程序版本
-> Updated: 2026-01-22 21:30:04
+> Updated: 2026-06-03 11:47:36
 
 # 回滚企业内部小程序版本
 

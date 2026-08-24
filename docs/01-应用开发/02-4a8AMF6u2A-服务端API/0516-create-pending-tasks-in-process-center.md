@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 自有 OA 审批 > 流程中心任务 > 创建流程中心待处理任务"
 doc_id: "mxGLeu4NYE"
-updated_at: "2026-04-24 14:10:46"
+updated_at: "2026-06-02 15:54:12"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-pending-tasks-in-process-center
 > Path: 应用开发 / 服务端API / OA 审批 > 自有 OA 审批 > 流程中心任务 > 创建流程中心待处理任务
-> Updated: 2026-04-24 14:10:46
+> Updated: 2026-06-02 15:54:12
 
 # 创建流程中心待处理任务
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "音视频 > 会议 > 设置联席主持人"
 doc_id: "QqYFiuMcnv"
-updated_at: "2025-09-11 21:02:59"
+updated_at: "2026-06-02 12:07:28"
 ---
 
 > Source: https://open.dingtalk.com/document/development/set-up-co-hosts
 > Path: 应用开发 / 服务端API / 音视频 > 会议 > 设置联席主持人
-> Updated: 2025-09-11 21:02:59
+> Updated: 2026-06-02 12:07:28
 
 # 设置联席主持人
 

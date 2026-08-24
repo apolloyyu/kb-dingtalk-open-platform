@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "Teambition 项目管理 > 项目 > 查询项目"
 doc_id: "jfXXDUgzrL"
-updated_at: "2025-10-09 18:06:27"
+updated_at: "2026-06-03 09:19:52"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-enterprise-all-projects
 > Path: 应用开发 / 服务端API / Teambition 项目管理 > 项目 > 查询项目
-> Updated: 2025-10-09 18:06:27
+> Updated: 2026-06-03 09:19:52
 
 # 查询项目
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "音视频 > 视频/音频会议 > 设备属性变更"
 doc_id: "lCIhH8fNJ1"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-08-27 16:11:16"
 ---
 
 > Source: https://open.dingtalk.com/document/development/event-open-meeting-room-device-property-change
 > Path: 应用开发 / 事件订阅 / 音视频 > 视频/音频会议 > 设备属性变更
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-08-27 16:11:16
 
 # 设备属性变更
 
@@ -36,6 +36,43 @@ updated_at: "2022-01-19 19:29:22"
 ## 事件体描述
 
 Stream模式推送
+
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.changeTime`（long）：设备属性变更时间。
+- `data.openRoomId`（string）：绑定的会议室id。  
+  注：该字段在设备绑定会议室后有值。
+- `data.deviceUnionId`（string）：设备unionId。
+- `data.deviceId`（string）：设备id。
+- `data.properties`（array）：设备变更属性列表。  
+    
+  设备属性DeviceProperty：  
+  \* propertyName：设备属性名称  
+  \* propertyValue：设备属性值  
+    
+  设备属性名称列表：  
+  \* dev\_code：投屏码  
+  \* dev\_model：设备型号  
+  \* dev\_app\_status：设备状态  
+  \* dev\_net\_ip：设备ip  
+  \* dev\_wifi\_mac：设备无线mac地址  
+  \* dev\_wire\_mac：设备有线mac地址  
+  \* dev\_firmware\_v：设备固件版本  
+  \* dev\_software\_v：设备软件版本  
+  \* dev\_hdmi：设备外接显示器  
+  \* dev\_net\_type：设备网络类型  
+   - 主要类型：  
+   - net\_wired：有线网络  
+   - net\_offline：离线  
+   - 具体的ssid：Wi-Fi
+- `data.properties[].propertyName`（string）：设备属性名称。
+- `data.properties[].propertyValue`（string）：设备属性值。
 
 ### **事件体示例**
 
@@ -62,6 +99,42 @@ Stream模式推送
 ```
 
 HTTP推送
+
+### 字段说明
+
+- `EventType`（String）：事件英文名称。
+- `EventTime`（Long）：事件发生的时间。
+- `CorpId`（String）：企业corpId。
+- `BizId`（String）：无业务意义，幂等。
+- `eventId`（String）：事件的唯一Id。
+- `changeTime`（long）：设备属性变更时间。
+- `openRoomId`（string）：绑定的会议室id。  
+  注：该字段在设备绑定会议室后有值。
+- `deviceUnionId`（string）：设备unionId。
+- `deviceId`（string）：设备id。
+- `properties`（array）：设备变更属性列表。  
+    
+  设备属性DeviceProperty：  
+  \* propertyName：设备属性名称  
+  \* propertyValue：设备属性值  
+    
+  设备属性名称列表：  
+  \* dev\_code：投屏码  
+  \* dev\_model：设备型号  
+  \* dev\_app\_status：设备状态  
+  \* dev\_net\_ip：设备ip  
+  \* dev\_wifi\_mac：设备无线mac地址  
+  \* dev\_wire\_mac：设备有线mac地址  
+  \* dev\_firmware\_v：设备固件版本  
+  \* dev\_software\_v：设备软件版本  
+  \* dev\_hdmi：设备外接显示器  
+  \* dev\_net\_type：设备网络类型  
+   - 主要类型：  
+   - net\_wired：有线网络  
+   - net\_offline：离线  
+   - 具体的ssid：Wi-Fi
+- `properties[].propertyName`（string）：设备属性名称。
+- `properties[].propertyValue`（string）：设备属性值。
 
 ### **事件体示例**
 

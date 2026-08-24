@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 文档 > 文档 > 获取资源上传信息"
 doc_id: "vbphfGspL2"
-updated_at: "2026-03-31 10:01:21"
+updated_at: "2026-06-02 18:38:02"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-getresourceuploadinfo
 > Path: 应用开发 / 服务端API / 文档/文件 > 文档 > 文档 > 获取资源上传信息
-> Updated: 2026-03-31 10:01:21
+> Updated: 2026-06-02 18:38:02
 
 # 获取资源上传信息
 

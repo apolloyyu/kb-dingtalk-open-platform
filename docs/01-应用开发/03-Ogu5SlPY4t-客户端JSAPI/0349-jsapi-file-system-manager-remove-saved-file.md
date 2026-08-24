@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "文件存储 > 文件 > FileSystemManager.removeSavedFile"
 doc_id: "VgEhpb0RMi"
-updated_at: "2023-10-12"
+updated_at: "2025-08-27 18:08:30"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-file-system-manager-remove-saved-file
 > Path: 应用开发 / 客户端JSAPI / 文件存储 > 文件 > FileSystemManager.removeSavedFile
-> Updated: 2023-10-12
+> Updated: 2025-08-27 18:08:30
 
 # FileSystemManager.removeSavedFile
 
@@ -51,7 +51,9 @@ updated_at: "2023-10-12"
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `filePath`（string，必填）：需要删除的 本地缓存文件路径。
 
 ## **示例****代码**
 

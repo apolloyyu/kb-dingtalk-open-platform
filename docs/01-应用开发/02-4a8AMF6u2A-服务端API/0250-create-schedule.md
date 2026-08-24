@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "日程 > 日程 > 创建日程"
 doc_id: "RXmKYv9nS7"
-updated_at: "2026-05-26 10:11:23"
+updated_at: "2026-06-02 09:24:57"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-schedule
 > Path: 应用开发 / 服务端API / 日程 > 日程 > 创建日程
-> Updated: 2026-05-26 10:11:23
+> Updated: 2026-06-02 09:24:57
 
 # 创建日程
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 画布 > CanvasContext.clearRect"
 doc_id: "MVR9F7ZaPG"
-updated_at: "2023-10-11"
+updated_at: "2025-08-27 18:05:31"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-canvas-context-clear-rect
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 画布 > CanvasContext.clearRect
-> Updated: 2023-10-11
+> Updated: 2025-08-27 18:05:31
 
 # CanvasContext.clearRect
 
@@ -43,7 +43,12 @@ updated_at: "2023-10-11"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `x`（number，必填）：矩形左上角的 x 坐标。
+- `y`（number，必填）：矩形左上角的 y 坐标。
+- `width`（number，必填）：矩形宽度。
+- `height`（number，必填）：矩形高度。
 
 ## **返回结果**
 

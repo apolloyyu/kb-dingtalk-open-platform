@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 知识库 > 知识库目录树管理 > 获取任务状态"
 doc_id: "0JWXheilAn"
-updated_at: "2025-09-12 17:20:00"
+updated_at: "2026-06-02 17:37:14"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-gettaskinfo
 > Path: 应用开发 / 服务端API / 文档/文件 > 知识库 > 知识库目录树管理 > 获取任务状态
-> Updated: 2025-09-12 17:20:00
+> Updated: 2026-06-02 17:37:14
 
 # 获取任务状态
 

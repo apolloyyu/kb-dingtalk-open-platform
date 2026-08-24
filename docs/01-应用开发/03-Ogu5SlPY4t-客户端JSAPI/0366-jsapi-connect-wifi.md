@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > Wi-Fi > connectWifi"
 doc_id: "CZYs3CQnhs"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:07:35"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-connect-wifi
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > Wi-Fi > connectWifi
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:07:35
 
 # connectWifi
 
@@ -43,13 +43,21 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `SSID`（string，必填）：Wi-Fi 设备 SSID。
+- `isWEP`（boolean，必填）：Wi-Fi 是否为 WEP。  
+    
+  > 默认是 false。
+- `password`（string，必填）：Wi-Fi 设备密码。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+（object）
 
 ## **错误码**
 

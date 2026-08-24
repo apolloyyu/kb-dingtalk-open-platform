@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "文件存储 > 钉盘 > chooseDingTalkDir"
 doc_id: "LfxJLrdrUN"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:08:19"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-choose-ding-talk-dir
 > Path: 应用开发 / 客户端JSAPI / 文件存储 > 钉盘 > chooseDingTalkDir
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:08:19
 
 # chooseDingTalkDir
 
@@ -41,13 +41,22 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `corpId`（string）：企业corpId。  
+    
+  > H5应用中必填。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `data`（array，必填）：文件信息。
+- `data[].spaceId`（string，必填）：被选中的空间id。
+- `data[].path`（string，必填）：被选中的文件夹路径。
+- `data[].dirId`（string，必填）：被选中的文件夹id。
 
 ## **示例****代码**
 

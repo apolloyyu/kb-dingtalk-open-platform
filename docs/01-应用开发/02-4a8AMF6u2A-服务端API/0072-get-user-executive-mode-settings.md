@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "通讯录管理 > 用户管理 > 获取用户高管模式设置"
 doc_id: "zjUVKU7Lly"
-updated_at: "2025-09-11 21:01:39"
+updated_at: "2026-06-01 15:25:05"
 ---
 
 > Source: https://open.dingtalk.com/document/development/get-user-executive-mode-settings
 > Path: 应用开发 / 服务端API / 通讯录管理 > 用户管理 > 获取用户高管模式设置
-> Updated: 2025-09-11 21:01:39
+> Updated: 2026-06-01 15:25:05
 
 # 获取用户高管模式设置
 

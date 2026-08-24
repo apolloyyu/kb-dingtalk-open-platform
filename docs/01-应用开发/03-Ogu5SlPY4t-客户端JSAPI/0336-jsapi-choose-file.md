@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "文件存储 > 文件 > chooseFile"
 doc_id: "mQQNtnYY0B"
-updated_at: "2025-12-05"
+updated_at: "2025-12-08 16:47:04"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-choose-file
 > Path: 应用开发 / 客户端JSAPI / 文件存储 > 文件 > chooseFile
-> Updated: 2025-12-05
+> Updated: 2025-12-08 16:47:04
 
 # chooseFile
 
@@ -43,13 +43,21 @@ updated_at: "2025-12-05"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `count`（number）：最多可以选择的文件个数，取值范围[1,9]，默认值1。
+- `multiSelection`（boolean）：是否允许多选，默认值false。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### files
+
+- `files`（object，必填）：文件对象。
+- `files.name`（string，必填）：文件名。
+- `files.path`（string，必填）：文件虚拟路径。
+- `files.size`（number，必填）：文件大小。
 
 ## **示例****代码**
 

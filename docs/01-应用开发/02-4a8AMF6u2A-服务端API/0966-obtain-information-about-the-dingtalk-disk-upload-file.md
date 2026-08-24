@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "智能招聘 > 获取智能招聘文件上传信息"
 doc_id: "vUbq1ngLWv"
-updated_at: "2025-09-12 17:19:07"
+updated_at: "2026-06-04 19:10:36"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-information-about-the-dingtalk-disk-upload-file
 > Path: 应用开发 / 服务端API / 智能招聘 > 获取智能招聘文件上传信息
-> Updated: 2025-09-12 17:19:07
+> Updated: 2026-06-04 19:10:36
 
 # 获取智能招聘文件上传信息
 

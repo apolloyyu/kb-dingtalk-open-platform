@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 自有 OA 审批 > 审批表单 > 获取模板code"
 doc_id: "oEEisfCAI8"
-updated_at: "2025-11-24 16:31:06"
+updated_at: "2026-06-02 15:41:20"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-the-template-code
 > Path: 应用开发 / 服务端API / OA 审批 > 自有 OA 审批 > 审批表单 > 获取模板code
-> Updated: 2025-11-24 16:31:06
+> Updated: 2026-06-02 15:41:20
 
 # 获取模板code
 

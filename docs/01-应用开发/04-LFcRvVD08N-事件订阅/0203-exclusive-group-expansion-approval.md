@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "专属开放 > 专属群扩容审批"
 doc_id: "HtKpAXDIVC"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-08-28 19:47:32"
 ---
 
 > Source: https://open.dingtalk.com/document/development/exclusive-group-expansion-approval
 > Path: 应用开发 / 事件订阅 / 专属开放 > 专属群扩容审批
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-08-28 19:47:32
 
 # 专属群扩容审批
 
@@ -38,6 +38,29 @@ updated_at: "2022-01-19 19:29:22"
 ## 事件体描述
 
 Stream模式推送
+
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.eventType`（string）：事件类型
+- `data.params`（object）
+- `data.params.groupName`（string，必填）：群聊名称
+- `data.params.groupOwner`（string，必填）：群主工号
+- `data.params.remark`（string，必填）：申请描述
+- `data.params.openCid`（string，必填）：群聊cid
+- `data.processInstanceId`（string）：审批实例id
+- `data.corpId`（string）：审批实例所在的企业corpId
+- `data.createTime`（long）：创建审批实例时间。时间戳，单位毫秒。
+- `data.title`（string）：审批实例标题
+- `data.approveType`（string）：类型，approveType为start表示审批实例开始。
+- `data.staffId`（string）：发起审批实例的员工userId
+- `data.url`（string）：审批实例url，可在钉钉内跳转到审批页面。(由接入方提供)
+- `data.approvers`（array）：流程审核人工号列表
 
 ### **事件体示例**
 
@@ -72,6 +95,27 @@ Stream模式推送
 
 HTTP推送
 
+### 字段说明
+
+- `EventType`（String）：事件英文名称。
+- `EventTime`（Long）：事件发生的时间。
+- `CorpId`（String）：企业corpId。
+- `BizId`（String）：无业务意义，幂等。
+- `eventType`（string，必填）：事件类型
+- `params`（object，必填）
+- `params.groupName`（string，必填）：群聊名称
+- `params.groupOwner`（string，必填）：群主工号
+- `params.remark`（string，必填）：申请描述
+- `params.openCid`（string，必填）：群聊cid
+- `processInstanceId`（string，必填）：审批实例id
+- `corpId`（string，必填）：审批实例所在的企业corpId
+- `createTime`（long）：创建审批实例时间。时间戳，单位毫秒。
+- `title`（string，必填）：审批实例标题
+- `approveType`（string，必填）：类型，approveType为start表示审批实例开始。
+- `staffId`（string，必填）：发起审批实例的员工userId
+- `url`（string，必填）：审批实例url，可在钉钉内跳转到审批页面。(由接入方提供)
+- `approvers`（array，必填）：流程审核人工号列表
+
 ### **事件体示例**
 
 ```
@@ -103,6 +147,28 @@ HTTP推送
 SyncHTTP/RDS推送
 
 为RDS推送方式时，数据插入表open\_sync\_biz\_data\_medium中。
+
+### 字段说明
+
+- `corp_id`（String）：企业corp\_id。
+- `biz_id`（String）：biz\_id无业务意义，幂等。
+- `biz_type`（Integer）：事件bizType。
+- `biz_data`（object）：事件bizData介绍。
+- `biz_data.syncAction`（String）：事件英文名。
+- `biz_data.eventType`（string）：事件类型
+- `biz_data.params`（object）
+- `biz_data.params.groupName`（string，必填）：群聊名称
+- `biz_data.params.groupOwner`（string，必填）：群主工号
+- `biz_data.params.remark`（string，必填）：申请描述
+- `biz_data.params.openCid`（string，必填）：群聊cid
+- `biz_data.processInstanceId`（string）：审批实例id
+- `biz_data.corpId`（string）：审批实例所在的企业corpId
+- `biz_data.createTime`（long）：创建审批实例时间。时间戳，单位毫秒。
+- `biz_data.title`（string）：审批实例标题
+- `biz_data.approveType`（string）：类型，approveType为start表示审批实例开始。
+- `biz_data.staffId`（string）：发起审批实例的员工userId
+- `biz_data.url`（string）：审批实例url，可在钉钉内跳转到审批页面。(由接入方提供)
+- `biz_data.approvers`（array）：流程审核人工号列表
 
 ### **biz\_data数据示例(biz\_type=320)**
 

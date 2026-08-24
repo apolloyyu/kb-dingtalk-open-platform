@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 地图 > MapContext.calculateDistance"
 doc_id: "3APRpCZzNO"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:05:54"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-map-context-calculate-distance
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 地图 > MapContext.calculateDistance
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:05:54
 
 # MapContext.calculateDistance
 
@@ -51,13 +51,25 @@ IDE 模拟器暂不支持模拟，请以真机调试效果为准。
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `points`（array，必填）：路线中点的经纬度数组。
+- `targetDistances`（array，必填）：目标距离（直线距离）数组。
+- `exportTotalDistance`（boolean，必填）：是否需要计算总距离。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `distance`（number，必填）：总路径长度。 如果传入的 exportTotalDistance 为 false，则不返回 distance。
+- `targetPoints`（array，必填）：符合目标距离的点，对应的经纬度。具体属性值参见下方 targetPoints 对象表。
+- `targetPoints[].index`（number，必填）：与 points 数组中首个点的直线距离符合目标距离的点，在 targetDistances 中的索引。
+- `targetPoints[].latitude`（number，必填）：纬度。
+- `targetPoints[].longitude`（number，必填）：经度。
+- `targetPoints[].targetDistance`（number，必填）：目标距离的数值。（如果不传 targetPoints 或 targetPoints 参数为空，则返回的 targetDistances字段也为空）。
+- `targetPoints[].targetLineIndex`（number，必填）：假设 points 数组为 [A,B,C]，符合目标距离的点为 B'， 且 B'- A 直线距离在 B-A 直线距离、C-A 直线距离之间，则 targetLineIndex 为 points 数组中的点 B 的索引数值。
 
 ## **示例****代码**
 

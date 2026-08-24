@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 行业开放 > 数字乡村 > 居民积分 > 分页查询居民积分流水"
 doc_id: "vRaUFMpVZT"
-updated_at: "2025-09-23 19:22:12"
+updated_at: "2026-06-03 09:07:33"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-the-integral-flow-records-by-page
 > Path: 应用开发 / 服务端API / 行业与生态 > 行业开放 > 数字乡村 > 居民积分 > 分页查询居民积分流水
-> Updated: 2025-09-23 19:22:12
+> Updated: 2026-06-03 09:07:33
 
 # 分页查询居民积分流水
 

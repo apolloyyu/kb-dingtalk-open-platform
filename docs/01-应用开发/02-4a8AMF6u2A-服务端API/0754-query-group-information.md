@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "即时通信 > 会话管理 > 场景群 > 群管理 > 查询场景群简要信息"
 doc_id: "oMZn2ooR6S"
-updated_at: "2026-05-10 01:09:42"
+updated_at: "2026-08-14 09:41:56"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-group-information
 > Path: 应用开发 / 服务端API / 即时通信 > 会话管理 > 场景群 > 群管理 > 查询场景群简要信息
-> Updated: 2026-05-10 01:09:42
+> Updated: 2026-08-14 09:41:56
 
 # 查询场景群简要信息
 

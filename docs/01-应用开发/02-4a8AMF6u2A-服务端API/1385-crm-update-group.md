@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "更多开放 > 客户管理（官方CRM） > 客户群 > 更新客户群组"
 doc_id: "2vS1U4O2SJ"
-updated_at: "2025-10-09 18:06:25"
+updated_at: "2026-06-04 19:12:20"
 ---
 
 > Source: https://open.dingtalk.com/document/development/crm-update-group
 > Path: 应用开发 / 服务端API / 更多开放 > 客户管理（官方CRM） > 客户群 > 更新客户群组
-> Updated: 2025-10-09 18:06:25
+> Updated: 2026-06-04 19:12:20
 
 # 更新客户群组
 

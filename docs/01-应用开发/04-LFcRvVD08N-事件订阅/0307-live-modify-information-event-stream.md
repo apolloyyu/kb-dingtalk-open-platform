@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "历史文档（不推荐） > Stream推送 > 直播事件 > 直播信息修改"
 doc_id: "BU15pc7eCl"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-10-16 14:32:23"
 ---
 
 > Source: https://open.dingtalk.com/document/development/live-modify-information-event-stream
 > Path: 应用开发 / 事件订阅 / 历史文档（不推荐） > Stream推送 > 直播事件 > 直播信息修改
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-10-16 14:32:23
 
 # 直播信息修改
 
@@ -38,7 +38,24 @@ eventType为live\_update\_event时，表示直播修改信息事件数据。
 
 ### header部分
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+
 ### data部分(事件业务信息)
+
+### 字段说明
+
+- `coverUrl`（string）：直播封面。
+- `preEndTime`（long）：直播预计结束时间戳。
+- `title`（string）：直播标题。
+- `liveId`（string）：直播id。
+- `preStartTime`（long）：直播预计开播时间戳。
+- `introduction`（string）：直播简介。
 
 ### **事件体数据示例如下:**
 

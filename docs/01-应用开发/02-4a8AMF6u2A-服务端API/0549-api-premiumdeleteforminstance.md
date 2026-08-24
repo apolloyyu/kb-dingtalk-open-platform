@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 高级版专享接口 > 数据表单 > 表单实例 > 删除数据表单实例"
 doc_id: "7hDYZO7W3z"
-updated_at: "2025-09-11 21:04:46"
+updated_at: "2026-06-03 10:13:05"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-premiumdeleteforminstance
 > Path: 应用开发 / 服务端API / OA 审批 > 高级版专享接口 > 数据表单 > 表单实例 > 删除数据表单实例
-> Updated: 2025-09-11 21:04:46
+> Updated: 2026-06-03 10:13:05
 
 # 删除数据表单实例
 

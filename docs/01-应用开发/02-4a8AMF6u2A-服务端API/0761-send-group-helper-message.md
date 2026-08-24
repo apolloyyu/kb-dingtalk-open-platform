@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "即时通信 > 会话管理 > 场景群 > 群吊顶 > 创建并开启互动卡片吊顶"
 doc_id: "cLFXx5OSvx"
-updated_at: "2026-04-22 18:28:15"
+updated_at: "2026-07-14 09:29:43"
 ---
 
 > Source: https://open.dingtalk.com/document/development/send-group-helper-message
 > Path: 应用开发 / 服务端API / 即时通信 > 会话管理 > 场景群 > 群吊顶 > 创建并开启互动卡片吊顶
-> Updated: 2026-04-22 18:28:15
+> Updated: 2026-07-14 09:29:43
 
 # 创建并开启互动卡片吊顶
 

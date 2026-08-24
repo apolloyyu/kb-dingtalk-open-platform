@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 存储管理 > 文件管理 > 添加文件夹"
 doc_id: "OhjbwS18tS"
-updated_at: "2025-09-12 17:20:36"
+updated_at: "2026-06-04 19:09:32"
 ---
 
 > Source: https://open.dingtalk.com/document/development/add-folder
 > Path: 应用开发 / 服务端API / 文档/文件 > 存储管理 > 文件管理 > 添加文件夹
-> Updated: 2025-09-12 17:20:36
+> Updated: 2026-06-04 19:09:32
 
 # 添加文件夹
 

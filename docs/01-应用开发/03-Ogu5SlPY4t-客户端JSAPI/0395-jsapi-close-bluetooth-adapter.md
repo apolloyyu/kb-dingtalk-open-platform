@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > 蓝牙 > 传统蓝牙 > closeBluetoothAdapter"
 doc_id: "nvfh2AR8dQ"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:07:54"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-close-bluetooth-adapter
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > 蓝牙 > 传统蓝牙 > closeBluetoothAdapter
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:07:54
 
 # closeBluetoothAdapter
 

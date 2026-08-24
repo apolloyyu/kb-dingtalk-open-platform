@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "通讯录管理 > 企业管理 > 查询管理员是否有应用管理权限"
 doc_id: "IFROzfBJX5"
-updated_at: "2025-09-11 21:01:56"
+updated_at: "2026-06-01 16:10:32"
 ---
 
 > Source: https://open.dingtalk.com/document/development/check-whether-the-administrator-has-application-management-permissions
 > Path: 应用开发 / 服务端API / 通讯录管理 > 企业管理 > 查询管理员是否有应用管理权限
-> Updated: 2025-09-11 21:01:56
+> Updated: 2026-06-01 16:10:32
 
 # 查询管理员是否有应用管理权限
 

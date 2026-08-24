@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "历史文档（不推荐） > Stream推送 > 通讯录事件 > 企业变更"
 doc_id: "BZobmVqyYE"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-10-16 14:32:13"
 ---
 
 > Source: https://open.dingtalk.com/document/development/enterprise-change-stream
 > Path: 应用开发 / 事件订阅 / 历史文档（不推荐） > Stream推送 > 通讯录事件 > 企业变更
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-10-16 14:32:13
 
 # 企业变更
 
@@ -38,7 +38,32 @@ updated_at: "2022-01-19 19:29:22"
 
 ### header部分
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+
 ### data部分(事件业务信息)
+
+### 字段说明
+
+- `errcode`（integer）：返回码。
+- `errmsg`（string，必填）：返回码描述。
+- `corpLogoUrl`（string）：企业图标url。
+- `corpid`（string）：企业corpId。
+- `industry`（string）：行业。
+- `corpName`（string）：企业名称。
+- `isAuthenticated`（boolean）：企业是否认证：  
+  - true 已认证  
+  - false 未认证
+- `authLevel`（integer）：企业认证级别：  
+  - 0：未认证  
+  - 1： 高级认证  
+  - 2： 中级认证  
+  - 3 ：初级认证
 
 ### **事件体数据示例如下:**
 

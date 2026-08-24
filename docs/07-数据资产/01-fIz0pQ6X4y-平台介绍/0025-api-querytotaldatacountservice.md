@@ -7,12 +7,12 @@ group: "数据资产"
 tab: "平台介绍"
 breadcrumb: "API 参考 > 数据资产平台查询数据记录数"
 doc_id: "JO2rXPPiaK"
-updated_at: "2025-09-23 19:20:52"
+updated_at: "2026-06-15 10:33:49"
 ---
 
 > Source: https://open.dingtalk.com/document/dataopen/api-querytotaldatacountservice
 > Path: 数据资产 / 平台介绍 / API 参考 > 数据资产平台查询数据记录数
-> Updated: 2025-09-23 19:20:52
+> Updated: 2026-06-15 10:33:49
 
 # 数据资产平台查询数据记录数
 

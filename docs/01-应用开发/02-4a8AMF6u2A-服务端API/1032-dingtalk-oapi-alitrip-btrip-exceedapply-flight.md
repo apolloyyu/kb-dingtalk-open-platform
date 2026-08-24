@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 生态开放 > 阿里商旅 > 出差申请 > 搜索第三方机票超标审批单"
 doc_id: "LtVql4VW5I"
-updated_at: "2026-01-29 14:31:01"
+updated_at: "2026-06-02 19:51:50"
 ---
 
 > Source: https://open.dingtalk.com/document/development/dingtalk-oapi-alitrip-btrip-exceedapply-flight
 > Path: 应用开发 / 服务端API / 行业与生态 > 生态开放 > 阿里商旅 > 出差申请 > 搜索第三方机票超标审批单
-> Updated: 2026-01-29 14:31:01
+> Updated: 2026-06-02 19:51:50
 
 # 搜索第三方机票超标审批单
 

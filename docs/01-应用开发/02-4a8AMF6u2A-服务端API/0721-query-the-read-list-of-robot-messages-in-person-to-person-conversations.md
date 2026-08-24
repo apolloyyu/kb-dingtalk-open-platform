@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "即时通信 > 机器人 > 消息查询 > 查询人与人会话中机器人消息已读列表"
 doc_id: "TgYeILunOm"
-updated_at: "2025-09-12 17:18:43"
+updated_at: "2026-06-05 13:57:16"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-the-read-list-of-robot-messages-in-person-to-person-conversations
 > Path: 应用开发 / 服务端API / 即时通信 > 机器人 > 消息查询 > 查询人与人会话中机器人消息已读列表
-> Updated: 2025-09-12 17:18:43
+> Updated: 2026-06-05 13:57:16
 
 # 查询人与人会话中机器人消息已读列表
 

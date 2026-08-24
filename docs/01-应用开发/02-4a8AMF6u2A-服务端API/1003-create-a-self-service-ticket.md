@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 生态开放 > 智能客服 > 创建自助单"
 doc_id: "B06Gkn9CAy"
-updated_at: "2025-09-23 19:20:14"
+updated_at: "2026-06-04 19:10:45"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-a-self-service-ticket
 > Path: 应用开发 / 服务端API / 行业与生态 > 生态开放 > 智能客服 > 创建自助单
-> Updated: 2025-09-23 19:20:14
+> Updated: 2026-06-04 19:10:45
 
 # 创建自助单
 

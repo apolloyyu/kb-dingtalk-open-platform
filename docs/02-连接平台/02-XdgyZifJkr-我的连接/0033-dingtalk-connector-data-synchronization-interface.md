@@ -7,12 +7,12 @@ group: "连接平台"
 tab: "我的连接"
 breadcrumb: "开发参考 > API参考 > 发送连接器事件"
 doc_id: "dmlr4goNnM"
-updated_at: "2025-09-23 19:20:33"
+updated_at: "2026-06-15 11:25:36"
 ---
 
 > Source: https://open.dingtalk.com/document/connection/dingtalk-connector-data-synchronization-interface
 > Path: 连接平台 / 我的连接 / 开发参考 > API参考 > 发送连接器事件
-> Updated: 2025-09-23 19:20:33
+> Updated: 2026-06-15 11:25:36
 
 # 发送连接器事件
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 行业开放 > 新教育 > 高校通迅录 > 获取行政组织架构部门详情"
 doc_id: "MVdet4sX0C"
-updated_at: "2025-09-23 19:23:30"
+updated_at: "2026-06-04 19:11:31"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-getcollegecontactstandardstrudeptdetail
 > Path: 应用开发 / 服务端API / 行业与生态 > 行业开放 > 新教育 > 高校通迅录 > 获取行政组织架构部门详情
-> Updated: 2025-09-23 19:23:30
+> Updated: 2026-06-04 19:11:31
 
 # 获取行政组织架构部门详情
 

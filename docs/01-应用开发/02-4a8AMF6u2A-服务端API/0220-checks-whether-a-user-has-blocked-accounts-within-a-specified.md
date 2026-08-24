@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "考勤 > 考勤统计 > 查询用户某段时间内是否处于封账状态"
 doc_id: "8mCM14ZVFw"
-updated_at: "2025-09-11 21:02:15"
+updated_at: "2026-06-02 09:24:49"
 ---
 
 > Source: https://open.dingtalk.com/document/development/checks-whether-a-user-has-blocked-accounts-within-a-specified
 > Path: 应用开发 / 服务端API / 考勤 > 考勤统计 > 查询用户某段时间内是否处于封账状态
-> Updated: 2025-09-11 21:02:15
+> Updated: 2026-06-02 09:24:49
 
 # 查询用户某段时间内是否处于封账状态
 

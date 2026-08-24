@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "宜搭 > 任务 > 获取任务列表（组织维度）"
 doc_id: "VOB0WQJhpi"
-updated_at: "2025-10-09 18:05:51"
+updated_at: "2026-06-02 11:22:55"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-tasks-from-the-organization-dimension
 > Path: 应用开发 / 服务端API / 宜搭 > 任务 > 获取任务列表（组织维度）
-> Updated: 2025-10-09 18:05:51
+> Updated: 2026-06-02 11:22:55
 
 # 获取任务列表（组织维度）
 

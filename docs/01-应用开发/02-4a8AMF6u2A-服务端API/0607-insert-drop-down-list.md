@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 表格 > 单元格区域 > 插入下拉列表"
 doc_id: "MV5kqHgic3"
-updated_at: "2026-04-10 10:44:18"
+updated_at: "2026-06-04 19:09:13"
 ---
 
 > Source: https://open.dingtalk.com/document/development/insert-drop-down-list
 > Path: 应用开发 / 服务端API / 文档/文件 > 表格 > 单元格区域 > 插入下拉列表
-> Updated: 2026-04-10 10:44:18
+> Updated: 2026-06-04 19:09:13
 
 # 插入下拉列表
 

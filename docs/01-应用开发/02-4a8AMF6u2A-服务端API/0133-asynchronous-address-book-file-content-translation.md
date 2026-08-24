@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "通讯录管理 > 通讯录ID转译 > 异步转译通讯录ID"
 doc_id: "Tb2VE3RKXf"
-updated_at: "2025-09-11 21:01:58"
+updated_at: "2026-07-02 10:35:53"
 ---
 
 > Source: https://open.dingtalk.com/document/development/asynchronous-address-book-file-content-translation
 > Path: 应用开发 / 服务端API / 通讯录管理 > 通讯录ID转译 > 异步转译通讯录ID
-> Updated: 2025-09-11 21:01:58
+> Updated: 2026-07-02 10:35:53
 
 # 异步转译通讯录ID
 

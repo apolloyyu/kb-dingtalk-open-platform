@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "位置服务 > startLocating"
 doc_id: "WgHtLWQkdL"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:07:16"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-start-locating
 > Path: 应用开发 / 客户端JSAPI / 位置服务 > startLocating
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:07:16
 
 # startLocating
 
@@ -45,13 +45,73 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `targetAccuracy`（number，必填）：期望定位精度半径(单位米)定位结果尽量满足该参数要求，不保证小于该误差，开发者需要读取返回结果的 accuracy 字段校验坐标精度。  
+    
+  > 建议按照业务需求设置定位精度，推荐采用200m，可获得较好的精度和较短的响应时长。
+- `iOSDistanceFilter`（number，必填）：iOS端位置变更敏感度，单位为m，此值会影响iOS端callback回调速率。  
+    
+  > iOS端参数。
+- `useCache`（boolean，必填）：是否使用缓存：  
+    
+  \* true：默认值，设置true，客户端缓存定位的地理位置信息，在缓存期内(分钟)再次定位会返回旧的定位。  
+  \* false：设置false，不缓存地址位置信息。  
+    
+  > Android端参数。
+- `withReGeocode`（boolean，必填）：是否需要带有逆地理编码信息。  
+    
+  > \* 默认为false。  
+  > \* 该功能需要网络请求，请根据自己的业务场景使用。
+- `callBackInterval`（number，必填）：回传时间间隔，单位ms。
+- `sceneId`（string，必填）：定位场景id。  
+    
+  > 对于同一id，不可连续start，否则会报错。不同scenceId互不影响。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `longitude`（number）：经度。
+- `latitude`（number）：纬度。
+- `accuracy`（number）：实际的定位精度半径 (单位米)。
+- `address`（string）：格式化地址。  
+    
+  > 如需返回该参数，请使用高德坐标并将\*\*withReGeocode\*\*参数设置为\*\*true\*\*。
+- `province`（string）：省份。  
+    
+  > 如需返回该参数，请使用高德坐标并将\*\*withReGeocode\*\*参数设置为\*\*true\*\*。
+- `city`（string）：城市。  
+    
+  > 直辖市会返回空。
+- `district`（string）：行政区。
+- `road`（string）：街道。
+- `netType`（string）：当前设备网络类型。
+- `operatorType`（string）：当前设备使用移动运营商。
+- `locationType`（number）：位置类型：  
+    
+  \* 1：GPS定位结果  
+  \* 2：返回上次定位结果  
+  \* 3：缓存定位结果   
+  \* 4：Wifi定位结果  
+  \* 5：基站定位结果
+- `errorMessage`（string）：返回码描述。
+- `errorCode`（number）：返回码。
+- `isWifiEnabled`（boolean）：wifi设置是否开启，不保证已连接上。  
+    
+  > 仅Android支持。
+- `isGpsEnabled`（boolean）：gps设置是否开启，不保证已连接上。  
+    
+  > 仅Android支持。
+- `isFromMock`（boolean）：定位返回的经纬度是否是模拟的结果。  
+    
+  > 仅Android支持。
+- `provider`（string）：混合定位，具体定位提供者有wifi、lbs、gps这三种。
+- `isMobileEnabled`（boolean）：移动网络是设置是否开启，不保证已连接上。  
+    
+  > 仅Android支持。
 
 ## **示例****代码**
 

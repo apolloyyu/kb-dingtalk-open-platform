@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "专属钉钉 > 文件 > 发送文件更改的评论"
 doc_id: "OGfhlbLWav"
-updated_at: "2025-09-23 19:20:03"
+updated_at: "2026-06-04 19:09:59"
 ---
 
 > Source: https://open.dingtalk.com/document/development/send-comments-on-file-changes
 > Path: 应用开发 / 服务端API / 专属钉钉 > 文件 > 发送文件更改的评论
-> Updated: 2025-09-23 19:20:03
+> Updated: 2026-06-04 19:09:59
 
 # 发送文件更改的评论
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 存储管理 > 回收站管理 > 批量还原回收项"
 doc_id: "cWs4Htpc7j"
-updated_at: "2025-09-23 19:17:47"
+updated_at: "2026-06-03 17:22:00"
 ---
 
 > Source: https://open.dingtalk.com/document/development/batch-restore-recycled-items
 > Path: 应用开发 / 服务端API / 文档/文件 > 存储管理 > 回收站管理 > 批量还原回收项
-> Updated: 2025-09-23 19:17:47
+> Updated: 2026-06-03 17:22:00
 
 # 批量还原回收项
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "即时通信 > 机器人 > 发送普通消息 > 人与人会话中机器人发送普通消息"
 doc_id: "njGIKh1vi0"
-updated_at: "2025-09-12 17:18:40"
+updated_at: "2026-07-14 09:29:37"
 ---
 
 > Source: https://open.dingtalk.com/document/development/the-robot-sends-ordinary-messages-in-a-person-to-person-conversation
 > Path: 应用开发 / 服务端API / 即时通信 > 机器人 > 发送普通消息 > 人与人会话中机器人发送普通消息
-> Updated: 2025-09-12 17:18:40
+> Updated: 2026-07-14 09:29:37
 
 # 人与人会话中机器人发送普通消息
 

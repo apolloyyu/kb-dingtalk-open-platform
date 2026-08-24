@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "多媒体 > 音频 > saveVideoToPhotosAlbum"
 doc_id: "Sc3ivq7fFT"
-updated_at: "2023-12-05"
+updated_at: "2025-08-27 18:07:04"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-save-video-to-photos-album
 > Path: 应用开发 / 客户端JSAPI / 多媒体 > 音频 > saveVideoToPhotosAlbum
-> Updated: 2023-12-05
+> Updated: 2025-08-27 18:07:04
 
 # saveVideoToPhotosAlbum
 
@@ -41,13 +41,17 @@ updated_at: "2023-12-05"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `filePath`（string，必填）：视频文件路径，支持本地虚拟路径和网络地址。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+（object）
 
 ## **错误码**
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "应用授权 > 获取企业开通应用后的授权信息"
 doc_id: "K9lVtuKSBB"
-updated_at: "2026-04-29 22:27:46"
+updated_at: "2026-06-08 12:02:06"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtains-the-authorization-information-after-the-enterprise-activates-the-application-1
 > Path: 应用开发 / 服务端API / 应用授权 > 获取企业开通应用后的授权信息
-> Updated: 2026-04-29 22:27:46
+> Updated: 2026-06-08 12:02:06
 
 # 获取企业开通应用后的授权信息
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "Agoal > 目标与关键行动 > 获取 Agoal 组织目标列表"
 doc_id: "ZZeioYr7Kp"
-updated_at: "2025-12-16 13:53:51"
+updated_at: "2026-07-08 14:13:50"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-agoalorgobjectivelist
 > Path: 应用开发 / 服务端API / Agoal > 目标与关键行动 > 获取 Agoal 组织目标列表
-> Updated: 2025-12-16 13:53:51
+> Updated: 2026-07-08 14:13:50
 
 # 获取 Agoal 组织目标列表
 

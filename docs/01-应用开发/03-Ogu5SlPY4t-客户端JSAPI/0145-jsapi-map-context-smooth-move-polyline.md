@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 地图 > MapContext.smoothMovePolyline"
 doc_id: "DGBPCGf4Nz"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:06:00"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-map-context-smooth-move-polyline
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 地图 > MapContext.smoothMovePolyline
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:06:00
 
 # MapContext.smoothMovePolyline
 
@@ -45,7 +45,22 @@ MapContext.smoothMovePolyline用于轨迹动画。
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `polylineId`（number，必填）：执行动画的路线 ID。
+- `points`（array，必填）：动画路线的经纬度集合。
+- `points[].latitude`（number，必填）：纬度
+- `points[].longitude`（number，必填）：经度
+- `duration`（number）：动画执行时间。 默认值：5000 毫秒（ms）。
+- `color`（string）：轨迹动画的颜色。
+- `width`（number）：路线宽度。
+- `dottedLine`（boolean）：是否虚线。
+- `iconPath`（string）：线的纹理地址。
+- `iconWidth`（number）：线的纹理宽度。
+- `zIndex`（number）：线的 Z 轴坐标。
+- `colorList`（array）：彩虹线。
+- `action`（string）：指定操作动画。   
+  \* action:'stop'表示提前结束动画。
 
 ## **返回结果**
 

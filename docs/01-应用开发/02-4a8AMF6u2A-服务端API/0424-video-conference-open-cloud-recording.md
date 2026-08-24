@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "音视频 > 会议 > 开启视频会议云录制"
 doc_id: "Do02OVjbC1"
-updated_at: "2025-09-11 21:03:08"
+updated_at: "2026-06-02 09:10:50"
 ---
 
 > Source: https://open.dingtalk.com/document/development/video-conference-open-cloud-recording
 > Path: 应用开发 / 服务端API / 音视频 > 会议 > 开启视频会议云录制
-> Updated: 2025-09-11 21:03:08
+> Updated: 2026-06-02 09:10:50
 
 # 开启视频会议云录制
 

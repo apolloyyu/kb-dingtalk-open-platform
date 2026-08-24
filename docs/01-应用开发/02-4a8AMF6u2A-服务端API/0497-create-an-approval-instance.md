@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 官方 OA 审批 > 审批实例 > 发起审批实例"
 doc_id: "2R6nkzxvGs"
-updated_at: "2026-04-24 14:10:43"
+updated_at: "2026-06-03 10:12:25"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-an-approval-instance
 > Path: 应用开发 / 服务端API / OA 审批 > 官方 OA 审批 > 审批实例 > 发起审批实例
-> Updated: 2026-04-24 14:10:43
+> Updated: 2026-06-03 10:12:25
 
 # 发起审批实例
 

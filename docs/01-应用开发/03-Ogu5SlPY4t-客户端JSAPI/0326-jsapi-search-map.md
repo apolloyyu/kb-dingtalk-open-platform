@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "位置服务 > searchMap"
 doc_id: "uF3NR3fq7C"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:07:15"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-search-map
 > Path: 应用开发 / 客户端JSAPI / 位置服务 > searchMap
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:07:15
 
 # searchMap
 
@@ -45,13 +45,30 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `scope`（number，必填）：限制搜索POI的范围；设备位置为中心，scope为搜索半径。
+- `latitude`（number，必填）：纬度。
+- `longitude`（number，必填）：经度。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `latitude`（string，必填）：POI的纬度。
+- `province`（string，必填）：POI所在省会，可能为空。
+- `provinceCode`（string，必填）：POI所在省会编码，可能为空。
+- `city`（string，必填）：POI所在城市，可能为空。
+- `cityCode`（string，必填）：POI所在城市编码，可能为空。
+- `adName`（string，必填）：POI所在区名称，可能为空。
+- `adCode`（string，必填）：POI所在区编码，可能为空。
+- `distance`（string，必填）：POI与设备位置的距离。
+- `postCode`（string，必填）：POI的邮编，可能为空。
+- `snippet`（string，必填）：POI的街道地址，可能为空。
+- `title`（string，必填）：POI的名称。
+- `longitude`（string，必填）：POI的经度。
 
 ## **示例****代码**
 

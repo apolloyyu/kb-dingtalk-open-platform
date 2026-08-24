@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 云盘（原钉盘） > 根据spaceId获取指定空间信息"
 doc_id: "7LfWf0G09M"
-updated_at: "2026-03-24 10:19:44"
+updated_at: "2026-06-02 18:46:45"
 ---
 
 > Source: https://open.dingtalk.com/document/development/retrieves-the-space-list-on-the-management-side
 > Path: 应用开发 / 服务端API / 文档/文件 > 云盘（原钉盘） > 根据spaceId获取指定空间信息
-> Updated: 2026-03-24 10:19:44
+> Updated: 2026-06-02 18:46:45
 
 # 根据spaceId获取指定空间信息
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 自有 OA 审批 > 审批实例 > 创建实例"
 doc_id: "pMujhtQZs9"
-updated_at: "2025-11-24 21:12:34"
+updated_at: "2026-06-03 10:12:38"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-a-ticket-approval-instance
 > Path: 应用开发 / 服务端API / OA 审批 > 自有 OA 审批 > 审批实例 > 创建实例
-> Updated: 2025-11-24 21:12:34
+> Updated: 2026-06-03 10:12:38
 
 # 创建实例
 

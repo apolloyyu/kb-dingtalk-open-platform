@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "办公电话 > quickCallList"
 doc_id: "nKejTRvvUl"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:08:38"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-quick-call-list
 > Path: 应用开发 / 客户端JSAPI / 办公电话 > quickCallList
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:08:38
 
 # quickCallList
 
@@ -43,13 +43,43 @@ updated_at: "2023-08-08"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `title`（string，必填）：拨打电话时展示的标题。
+- `corpId`（string，必填）：当前企业的corpId。
+- `content`（string，必填）：拨打电话时展示的内容。
+- `typeList`（array，必填）：定制拨打类型：  
+    
+  \* 1：VoIP  
+  \* 2：国际电话，  
+  \* 3：系统电话  
+  \* 5：点对点视频通话  
+  \* 7：办公电话
+- `phoneNumber`（string）：被拨打的电话号码。  
+    
+    
+  > staffId和phoneNumber中必须选择一个作为入参。
+- `staffId`（string）：用户的userid。  
+    
+    
+  > staffId和phoneNumber中必须选择一个作为入参。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `callTypeList`（array，必填）：展示的拨打类型，比如办公电话如果没开通则不显示，对方如果未激活钉钉，则VoIP不显示。这是返回的具备的list。  
+    
+  拨打类型：  
+  \* 1：VoIP  
+  \* 2：国际电话  
+  \* 3：系统电话   
+  \* 5：点对点视频通话  
+  \* 7：办公电话
+- `callType`（number，必填）：对应电话类型，如果是-1，说明点击了【取消】。
+- `callId`（string，必填）：标识唯一一通通话。
 
 ## **示例****代码**
 

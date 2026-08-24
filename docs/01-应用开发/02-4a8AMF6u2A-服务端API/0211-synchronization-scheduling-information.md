@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "考勤 > 考勤排班 > 配置考勤排班附加信息"
 doc_id: "munK7AQDGM"
-updated_at: "2025-09-11 21:02:11"
+updated_at: "2026-06-15 10:56:03"
 ---
 
 > Source: https://open.dingtalk.com/document/development/synchronization-scheduling-information
 > Path: 应用开发 / 服务端API / 考勤 > 考勤排班 > 配置考勤排班附加信息
-> Updated: 2025-09-11 21:02:11
+> Updated: 2026-06-15 10:56:03
 
 # 配置考勤排班附加信息
 

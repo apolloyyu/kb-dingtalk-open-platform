@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 存储管理 > 权限管理 > 添加权限"
 doc_id: "9tMIdlAdNV"
-updated_at: "2026-03-27 19:01:40"
+updated_at: "2026-07-08 14:38:35"
 ---
 
 > Source: https://open.dingtalk.com/document/development/add-permissions-file
 > Path: 应用开发 / 服务端API / 文档/文件 > 存储管理 > 权限管理 > 添加权限
-> Updated: 2026-03-27 19:01:40
+> Updated: 2026-07-08 14:38:35
 
 # 添加权限
 

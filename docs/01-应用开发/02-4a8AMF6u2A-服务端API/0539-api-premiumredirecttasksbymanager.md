@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 高级版专享接口 > 官方 OA 审批 > 审批任务 > 管理员批量转交指定员工的待处理任务"
 doc_id: "n3gGcuXyTV"
-updated_at: "2025-09-11 21:04:35"
+updated_at: "2026-06-03 10:12:57"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-premiumredirecttasksbymanager
 > Path: 应用开发 / 服务端API / OA 审批 > 高级版专享接口 > 官方 OA 审批 > 审批任务 > 管理员批量转交指定员工的待处理任务
-> Updated: 2025-09-11 21:04:35
+> Updated: 2026-06-03 10:12:57
 
 # 管理员批量转交指定员工的待处理任务
 

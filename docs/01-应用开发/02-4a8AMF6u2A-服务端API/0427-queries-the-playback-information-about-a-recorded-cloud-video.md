@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "音视频 > 会议 > 查询会议录制中的视频信息"
 doc_id: "GncjrOmAat"
-updated_at: "2025-09-11 21:03:10"
+updated_at: "2026-06-02 09:10:46"
 ---
 
 > Source: https://open.dingtalk.com/document/development/queries-the-playback-information-about-a-recorded-cloud-video
 > Path: 应用开发 / 服务端API / 音视频 > 会议 > 查询会议录制中的视频信息
-> Updated: 2025-09-11 21:03:10
+> Updated: 2026-06-02 09:10:46
 
 # 查询会议录制中的视频信息
 

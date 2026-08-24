@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "专属钉钉 > 可信设备 > 批量新增可信设备"
 doc_id: "PfiDe1Sw0Y"
-updated_at: "2025-10-09 18:05:19"
+updated_at: "2026-06-04 19:09:53"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-multiple-trusted-devices
 > Path: 应用开发 / 服务端API / 专属钉钉 > 可信设备 > 批量新增可信设备
-> Updated: 2025-10-09 18:05:19
+> Updated: 2026-06-04 19:09:53
 
 # 批量新增可信设备
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "炼丹炉（模型服务） > 炼丹炉专属模型服务"
 doc_id: "HHkcQSu1d8"
-updated_at: "2025-10-09 18:07:13"
+updated_at: "2026-06-04 19:11:32"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-liandanluexclusivemodel
 > Path: 应用开发 / 服务端API / 炼丹炉（模型服务） > 炼丹炉专属模型服务
-> Updated: 2025-10-09 18:07:13
+> Updated: 2026-06-04 19:11:32
 
 # 炼丹炉专属模型服务
 

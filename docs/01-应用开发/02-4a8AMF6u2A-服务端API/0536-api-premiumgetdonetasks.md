@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 高级版专享接口 > 官方 OA 审批 > 审批任务 > 查询审批中心用户已处理任务列表"
 doc_id: "wAH1jujbyf"
-updated_at: "2025-09-11 21:04:33"
+updated_at: "2026-06-03 10:12:54"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-premiumgetdonetasks
 > Path: 应用开发 / 服务端API / OA 审批 > 高级版专享接口 > 官方 OA 审批 > 审批任务 > 查询审批中心用户已处理任务列表
-> Updated: 2025-09-11 21:04:33
+> Updated: 2026-06-03 10:12:54
 
 # 查询审批中心用户已处理任务列表
 

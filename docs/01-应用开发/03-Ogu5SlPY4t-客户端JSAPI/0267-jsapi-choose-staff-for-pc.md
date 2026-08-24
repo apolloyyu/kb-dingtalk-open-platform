@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "通讯录 > chooseStaffForPC"
 doc_id: "hxJHbpsoY0"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:08:43"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-choose-staff-for-pc
 > Path: 应用开发 / 客户端JSAPI / 通讯录 > chooseStaffForPC
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:08:43
 
 # chooseStaffForPC
 
@@ -45,13 +45,27 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `users`（array）：已选用户的userId列表。
+- `corpId`（string，必填）：企业id。
+- `multiple`（boolean）：是否可多选。  
+    
+  \* true: 可多选  
+  \* false：仅单选  
+    
+  > 默认仅单选（false）。
+- `max`（number）：最大可选人数。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `name`（string，必填）：用户名。
+- `avatar`（string，必填）：用户头像。
+- `emplId`（string，必填）：员工工号。
 
 ## **示例****代码**
 

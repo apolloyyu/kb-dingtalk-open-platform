@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 画布 > CanvasContext.putImageData"
 doc_id: "dt6EXY53C5"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:05:38"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-canvas-context-put-image-data
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 画布 > CanvasContext.putImageData
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:05:38
 
 # CanvasContext.putImageData
 
@@ -57,7 +57,13 @@ ctx.putImageData({
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `data`（array，必填）：图像像素点数据，一维数组，每四项表示一个像素点的 rgba。
+- `x`（number，必填）：源图像数据在目标画布中的位置偏移量（x 轴方向的偏移量）。
+- `y`（number，必填）：源图像数据在目标画布中的位置偏移量（y 轴方向的偏移量）。
+- `width`（number，必填）：源图像数据矩形区域的宽度 。
+- `height`（number，必填）：源图像数据矩形区域的高度 。
 
 ## **返回结果**
 

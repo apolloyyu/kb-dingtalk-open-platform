@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "通讯录管理 > 企业账号 > 强制登出企业账号"
 doc_id: "KHdTU3eTH3"
-updated_at: "2026-03-24 08:57:04"
+updated_at: "2026-06-01 15:50:16"
 ---
 
 > Source: https://open.dingtalk.com/document/development/force-logout-from-dedicated-account
 > Path: 应用开发 / 服务端API / 通讯录管理 > 企业账号 > 强制登出企业账号
-> Updated: 2026-03-24 08:57:04
+> Updated: 2026-06-01 15:50:16
 
 # 强制登出企业账号
 

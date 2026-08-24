@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 路由 > reLaunch"
 doc_id: "OLWFDkYZWG"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:05:09"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-re-launch
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 路由 > reLaunch
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:05:09
 
 # reLaunch
 
@@ -41,7 +41,11 @@ updated_at: "2023-08-08"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `url`（string，必填）：需要跳转的应用内非 tabBar 的目标页面路径，路径后可以带参数。  
+    
+  > 参数规则如下：路径与参数之间使用”?“分隔，参数键与参数值用=相连，不同参数必须用”&“分隔；如`path?key1=value1&key2=value2。`
 
 ## **返回结果**
 

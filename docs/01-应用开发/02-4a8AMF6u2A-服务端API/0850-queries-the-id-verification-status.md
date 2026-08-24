@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "专属钉钉 > 查询实人认证状态"
 doc_id: "hLhTovXZJz"
-updated_at: "2025-09-23 19:20:05"
+updated_at: "2026-06-02 19:19:55"
 ---
 
 > Source: https://open.dingtalk.com/document/development/queries-the-id-verification-status
 > Path: 应用开发 / 服务端API / 专属钉钉 > 查询实人认证状态
-> Updated: 2025-09-23 19:20:05
+> Updated: 2026-06-02 19:19:55
 
 # 查询实人认证状态
 

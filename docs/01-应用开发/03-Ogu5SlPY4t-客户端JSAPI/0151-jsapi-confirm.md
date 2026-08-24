@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 交互反馈 > confirm"
 doc_id: "FQJpDCcQGX"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:06:04"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-confirm
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 交互反馈 > confirm
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:06:04
 
 # confirm
 
@@ -41,13 +41,20 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `title`（string，必填）：confirm框的标题。
+- `content`（string，必填）：confirm框的内容。
+- `confirmButtonText`（string）：确认按钮文字。
+- `cancelButtonText`（string）：取消按钮文字。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `confirm`（boolean）：返回操作button的结果，确定按钮返回true，取消按钮返回false。
 
 ## **示例****代码**
 

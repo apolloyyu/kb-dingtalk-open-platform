@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "专属钉钉 > 可信设备 > 查询公共设备"
 doc_id: "PFrPfVam5O"
-updated_at: "2025-10-09 18:23:25"
+updated_at: "2026-08-12 09:21:14"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-public-equipment
 > Path: 应用开发 / 服务端API / 专属钉钉 > 可信设备 > 查询公共设备
-> Updated: 2025-10-09 18:23:25
+> Updated: 2026-08-12 09:21:14
 
 # 查询公共设备
 

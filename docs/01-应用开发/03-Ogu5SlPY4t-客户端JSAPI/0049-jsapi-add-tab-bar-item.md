@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > TabBar > addTabBarItem"
 doc_id: "vlRGzprZEg"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:05:03"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-add-tab-bar-item
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > TabBar > addTabBarItem
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:05:03
 
 # addTabBarItem
 
@@ -48,7 +48,13 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `name`（string，必填）：tab标题。
+- `index`（number，必填）：tem插入位置，原位置的页面将后移一个位置，从 0 开始。
+- `icon`（string）：图标。
+- `activeIcon`（string）：选中时的图标。
+- `pagePath`（string，必填）：TabItem对应的页面路径，需要配置在小程序配置文件中。
 
 ## **返回结果**
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "更多开放 > 钉工牌 > 使用SuiteAccessToken调用 > 通知退款结果"
 doc_id: "hoseKMoApA"
-updated_at: "2025-09-11 21:03:41"
+updated_at: "2026-06-04 19:11:58"
 ---
 
 > Source: https://open.dingtalk.com/document/development/dingtalk-payment-code-refund-information-synchronization-operation
 > Path: 应用开发 / 服务端API / 更多开放 > 钉工牌 > 使用SuiteAccessToken调用 > 通知退款结果
-> Updated: 2025-09-11 21:03:41
+> Updated: 2026-06-04 19:11:58
 
 # 通知退款结果
 

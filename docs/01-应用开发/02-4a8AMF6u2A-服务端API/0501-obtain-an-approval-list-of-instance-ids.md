@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 官方 OA 审批 > 审批实例 > 获取审批实例ID列表"
 doc_id: "EzsYM7fkLL"
-updated_at: "2026-04-24 14:10:44"
+updated_at: "2026-06-03 10:12:29"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-an-approval-list-of-instance-ids
 > Path: 应用开发 / 服务端API / OA 审批 > 官方 OA 审批 > 审批实例 > 获取审批实例ID列表
-> Updated: 2026-04-24 14:10:44
+> Updated: 2026-06-03 10:12:29
 
 # 获取审批实例ID列表
 

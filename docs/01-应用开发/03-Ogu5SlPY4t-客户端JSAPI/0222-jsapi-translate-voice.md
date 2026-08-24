@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "多媒体 > 录音 > translateVoice"
 doc_id: "f4ExxGk8ci"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:06:41"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-translate-voice
 > Path: 应用开发 / 客户端JSAPI / 多媒体 > 录音 > translateVoice
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:06:41
 
 # translateVoice
 
@@ -41,13 +41,19 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `mediaId`（string，必填）：要转换的语音的mediaId。
+- `duration`（number，必填）：语音的时长，单位：秒。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `mediaId`（string，必填）：转换的语音的mediaId。
+- `content`（string，必填）：语音转换的文字内容。
 
 ## **示例****代码**
 

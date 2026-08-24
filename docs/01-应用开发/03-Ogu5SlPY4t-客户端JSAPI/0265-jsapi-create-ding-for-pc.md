@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "DING > createDingForPC"
 doc_id: "PEqfHq7PJ1"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:08:56"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-create-ding-for-pc
 > Path: 应用开发 / 客户端JSAPI / DING > createDingForPC
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:08:56
 
 # createDingForPC
 
@@ -47,7 +47,25 @@ DING 1.0只支持PC端发钉。
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `corpId`（string，必填）：企业id。
+- `users`（array，必填）：需要发送到的用户的userid列表。
+- `type`（number）：附件类型：  
+    
+  \* 1：图片  
+  \* 2：链接
+- `alertType`（number）：钉提醒类型：  
+    
+  \* 0：电话  
+  \* 1：短信  
+  \* 2：应用内
+- `alertDate`（object）：钉提醒时间。
+- `alertDate.format`（string）：日期格式
+- `alertDate.value`（string）：日期时间和格式要对应
+- `attachment`（object）：附件信息。
+- `attachment.images`（array）：图片附件列表
+- `text`（string）：消息体。
 
 ## **返回结果**
 

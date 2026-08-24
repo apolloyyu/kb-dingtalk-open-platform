@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "智能人事 > 员工管理 > 更新待离职员工离职信息"
 doc_id: "xGVeP9hiKs"
-updated_at: "2025-09-12 17:18:59"
+updated_at: "2026-06-04 19:10:29"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-updateempdismissioninfo
 > Path: 应用开发 / 服务端API / 智能人事 > 员工管理 > 更新待离职员工离职信息
-> Updated: 2025-09-12 17:18:59
+> Updated: 2026-06-04 19:10:29
 
 # 更新待离职员工离职信息
 

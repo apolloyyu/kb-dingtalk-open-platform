@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > 蓝牙 > 低功耗蓝牙 > offBLEConnectionStateChanged"
 doc_id: "yYjs1DKn3r"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:07:51"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-off-ble-connection-state-changed
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > 蓝牙 > 低功耗蓝牙 > offBLEConnectionStateChanged
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:07:51
 
 # offBLEConnectionStateChanged
 

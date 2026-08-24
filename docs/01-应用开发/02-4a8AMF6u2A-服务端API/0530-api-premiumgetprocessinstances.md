@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 高级版专享接口 > 官方 OA 审批 > 审批实例 > 根据processCode分页获取审批流程数据"
 doc_id: "CRVp7xBqB2"
-updated_at: "2025-11-10 13:51:52"
+updated_at: "2026-06-03 10:12:49"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-premiumgetprocessinstances
 > Path: 应用开发 / 服务端API / OA 审批 > 高级版专享接口 > 官方 OA 审批 > 审批实例 > 根据processCode分页获取审批流程数据
-> Updated: 2025-11-10 13:51:52
+> Updated: 2026-06-03 10:12:49
 
 # 根据processCode分页获取审批流程数据
 

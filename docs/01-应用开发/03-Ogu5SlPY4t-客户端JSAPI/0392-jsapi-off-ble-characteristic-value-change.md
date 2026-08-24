@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > 蓝牙 > 低功耗蓝牙 > offBLECharacteristicValueChange"
 doc_id: "8vWVJ3Zik7"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:07:52"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-off-ble-characteristic-value-change
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > 蓝牙 > 低功耗蓝牙 > offBLECharacteristicValueChange
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:07:52
 
 # offBLECharacteristicValueChange
 

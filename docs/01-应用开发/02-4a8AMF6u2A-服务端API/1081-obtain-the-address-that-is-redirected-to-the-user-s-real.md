@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 生态开放 > e签宝 2.0 > 用户 > 获取个人实名的地址"
 doc_id: "aUz8f565Ga"
-updated_at: "2025-09-23 19:21:39"
+updated_at: "2026-06-04 19:11:09"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-the-address-that-is-redirected-to-the-user-s-real
 > Path: 应用开发 / 服务端API / 行业与生态 > 生态开放 > e签宝 2.0 > 用户 > 获取个人实名的地址
-> Updated: 2025-09-23 19:21:39
+> Updated: 2026-06-04 19:11:09
 
 # 获取个人实名的地址
 

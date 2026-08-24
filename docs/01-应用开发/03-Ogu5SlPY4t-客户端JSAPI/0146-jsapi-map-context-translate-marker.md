@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 地图 > MapContext.translateMarker"
 doc_id: "5Np7rY3ljD"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:06:00"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-map-context-translate-marker
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 地图 > MapContext.translateMarker
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:06:00
 
 # MapContext.translateMarker
 
@@ -43,7 +43,15 @@ MapContext.translateMarker用于平移点标记（marker）。
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `markerId`（number，必填）：指定 marker。
+- `destination`（object，必填）：指定 marker 移动到的目标点。
+- `destination.longitude`（number，必填）：经度
+- `destination.latitude`（number，必填）：纬度
+- `autoRotate`（boolean）：移动过程中是否自动旋转marker。
+- `rotate`（number）：marker 的旋转角度. 默认值：0。
+- `duration`（number）：动画持续时长。 默认值：1000。
 
 ## **返回结果**
 

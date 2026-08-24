@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "组织大脑 > 数据集成 > 组织与人员 > 数据集成人员信息同步"
 doc_id: "ve0OHgSwcG"
-updated_at: "2025-09-12 17:19:15"
+updated_at: "2026-06-04 19:10:09"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-hrbrainimportempinfo
 > Path: 应用开发 / 服务端API / 组织大脑 > 数据集成 > 组织与人员 > 数据集成人员信息同步
-> Updated: 2025-09-12 17:19:15
+> Updated: 2026-06-04 19:10:09
 
 # 数据集成人员信息同步
 

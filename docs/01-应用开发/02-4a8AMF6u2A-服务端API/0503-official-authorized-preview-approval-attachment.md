@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 官方 OA 审批 > 审批钉盘空间&附件 > 授权预览审批附件"
 doc_id: "9ZLTIljbjq"
-updated_at: "2025-12-08 12:34:11"
+updated_at: "2026-06-03 10:12:31"
 ---
 
 > Source: https://open.dingtalk.com/document/development/official-authorized-preview-approval-attachment
 > Path: 应用开发 / 服务端API / OA 审批 > 官方 OA 审批 > 审批钉盘空间&附件 > 授权预览审批附件
-> Updated: 2025-12-08 12:34:11
+> Updated: 2026-06-03 10:12:31
 
 # 授权预览审批附件
 

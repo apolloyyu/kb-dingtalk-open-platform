@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "专属钉钉 > 企业内部群 > 企业内部群禁言或解除禁言"
 doc_id: "Nl0I6BexfV"
-updated_at: "2025-09-23 19:20:08"
+updated_at: "2026-06-02 19:18:37"
 ---
 
 > Source: https://open.dingtalk.com/document/development/exclusive-dingtalk-group-ban
 > Path: 应用开发 / 服务端API / 专属钉钉 > 企业内部群 > 企业内部群禁言或解除禁言
-> Updated: 2025-09-23 19:20:08
+> Updated: 2026-06-02 19:18:37
 
 # 企业内部群禁言或解除禁言
 

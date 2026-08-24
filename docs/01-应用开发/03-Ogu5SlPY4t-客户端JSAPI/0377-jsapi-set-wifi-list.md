@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > Wi-Fi > setWifiList"
 doc_id: "5ari1RSeQg"
-updated_at: "2023-10-12"
+updated_at: "2025-08-27 18:07:41"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-set-wifi-list
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > Wi-Fi > setWifiList
-> Updated: 2023-10-12
+> Updated: 2025-08-27 18:07:41
 
 # setWifiList
 
@@ -43,13 +43,20 @@ Wi-Fi 设置。
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `wifiList`（array，必填）：提供预设的 Wi-Fi 信息列表。
+- `wifiList[].SSID`（string）：设备 SSID。
+- `wifiList[].BSSID`（string）：设备 BSSID。
+- `wifiList[].password`（string）：设备密码。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+（object）
 
 ## **错误码**
 

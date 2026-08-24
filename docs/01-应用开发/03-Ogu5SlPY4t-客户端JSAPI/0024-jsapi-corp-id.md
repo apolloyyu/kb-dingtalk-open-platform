@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 基础 > corpId"
 doc_id: "A8htI0mtN7"
-updated_at: "2025-06-20"
+updated_at: "2025-08-27 18:04:54"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-corp-id
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 基础 > corpId
-> Updated: 2025-06-20
+> Updated: 2025-08-27 18:04:54
 
 # corpId
 

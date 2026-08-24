@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "会话管理 > openChatByChatId"
 doc_id: "dYj1nFhkUn"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:08:54"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-open-chat-by-chat-id
 > Path: 应用开发 / 客户端JSAPI / 会话管理 > openChatByChatId
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:08:54
 
 # openChatByChatId
 
@@ -43,7 +43,12 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `chatId`（string，必填）：群会话chatId。
+- `corpId`（string）：企业corpId。  
+    
+  > 在H5应用中必填。
 
 ## **返回结果**
 

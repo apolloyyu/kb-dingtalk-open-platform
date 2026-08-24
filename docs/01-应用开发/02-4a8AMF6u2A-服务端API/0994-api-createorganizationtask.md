@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "钉钉快办 > 创建自由任务"
 doc_id: "F5BpXQdBIL"
-updated_at: "2025-10-09 18:07:09"
+updated_at: "2026-06-04 14:24:31"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-createorganizationtask
 > Path: 应用开发 / 服务端API / 钉钉快办 > 创建自由任务
-> Updated: 2025-10-09 18:07:09
+> Updated: 2026-06-04 14:24:31
 
 # 创建自由任务
 

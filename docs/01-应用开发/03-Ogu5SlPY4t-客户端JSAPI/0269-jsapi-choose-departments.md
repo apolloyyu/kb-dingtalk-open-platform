@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "通讯录 > chooseDepartments"
 doc_id: "TbUM4hl1mg"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:08:44"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-choose-departments
 > Path: 应用开发 / 客户端JSAPI / 通讯录 > chooseDepartments
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:08:44
 
 # chooseDepartments
 
@@ -43,13 +43,39 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `title`（string）：选择页面的标题。
+- `multiple`（boolean）：是否可多选：  
+    
+  \* true: 可多选  
+  \* false：仅单选  
+    
+  > 默认仅单选（false）。
+- `limitTips`（string）：超过限定数量返回的提示内容。
+- `maxDepartments`（number）：最大可选部门数。
+- `pickedDepartments`（array）：已选的部门id。
+- `disabledDepartments`（array）：不可选的部门id。
+- `requiredDepartments`（array）：必选部门 (不可取消选中状态)。
+- `appId`（string）：微应用agentId。  
+    
+  > H5应用必填。
+- `corpId`（string）：企业的corpId。  
+    
+  > H5应用必填。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `userCount`（number，必填）：所选部门下所有员工的数量。
+- `departments`（array，必填）
+- `departments[].id`（string，必填）：部门id。
+- `departments[].number`（number，必填）：部门人数。
+- `departments[].name`（string，必填）：部门名称。
+- `departmentsCount`（number，必填）：所选部门的数量。
 
 ## **示例****代码**
 

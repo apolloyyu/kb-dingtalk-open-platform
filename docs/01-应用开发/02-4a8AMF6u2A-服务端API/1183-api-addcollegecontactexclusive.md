@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 行业开放 > 新教育 > 高校通迅录 > 创建高校账号用户"
 doc_id: "LUJy1oUhaC"
-updated_at: "2025-09-23 19:23:24"
+updated_at: "2026-06-04 19:11:30"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-addcollegecontactexclusive
 > Path: 应用开发 / 服务端API / 行业与生态 > 行业开放 > 新教育 > 高校通迅录 > 创建高校账号用户
-> Updated: 2025-09-23 19:23:24
+> Updated: 2026-06-04 19:11:30
 
 # 创建高校账号用户
 

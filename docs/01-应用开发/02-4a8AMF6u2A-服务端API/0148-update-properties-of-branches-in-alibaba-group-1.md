@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "通讯录管理 > 上下游组织（原合作空间） > 更新伙伴组织在上下游组织内的属性信息"
 doc_id: "XqJTg56oR9"
-updated_at: "2025-09-11 21:02:09"
+updated_at: "2026-06-01 16:31:54"
 ---
 
 > Source: https://open.dingtalk.com/document/development/update-properties-of-branches-in-alibaba-group-1
 > Path: 应用开发 / 服务端API / 通讯录管理 > 上下游组织（原合作空间） > 更新伙伴组织在上下游组织内的属性信息
-> Updated: 2025-09-11 21:02:09
+> Updated: 2026-06-01 16:31:54
 
 # 更新伙伴组织在上下游组织内的属性信息
 

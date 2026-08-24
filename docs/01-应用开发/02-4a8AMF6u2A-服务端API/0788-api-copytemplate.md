@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "即时通信 > 互动卡片 > 卡片平台模板复制"
 doc_id: "913BwWz1vf"
-updated_at: "2025-11-11 14:09:24"
+updated_at: "2026-07-14 09:22:15"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-copytemplate
 > Path: 应用开发 / 服务端API / 即时通信 > 互动卡片 > 卡片平台模板复制
-> Updated: 2025-11-11 14:09:24
+> Updated: 2026-07-14 09:22:15
 
 # 卡片平台模板复制
 

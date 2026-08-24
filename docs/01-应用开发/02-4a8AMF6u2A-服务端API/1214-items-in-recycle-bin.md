@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "Teambition 项目管理 > 项目 > 项目放入回收站"
 doc_id: "vmRAGqE8P5"
-updated_at: "2025-10-09 18:06:32"
+updated_at: "2026-06-08 11:45:39"
 ---
 
 > Source: https://open.dingtalk.com/document/development/items-in-recycle-bin
 > Path: 应用开发 / 服务端API / Teambition 项目管理 > 项目 > 项目放入回收站
-> Updated: 2025-10-09 18:06:32
+> Updated: 2026-06-08 11:45:39
 
 # 项目放入回收站
 

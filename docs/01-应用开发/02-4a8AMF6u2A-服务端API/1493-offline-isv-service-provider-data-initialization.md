@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > e签宝 1.0 > 鉴权 > ISV服务商数据初始化"
 doc_id: "75pQ3ufnaI"
-updated_at: "2025-09-23 19:21:15"
+updated_at: "2026-06-23 18:10:29"
 ---
 
 > Source: https://open.dingtalk.com/document/development/offline-isv-service-provider-data-initialization
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > e签宝 1.0 > 鉴权 > ISV服务商数据初始化
-> Updated: 2025-09-23 19:21:15
+> Updated: 2026-06-23 18:10:29
 
 # ISV服务商数据初始化
 

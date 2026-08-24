@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "宜搭 > 表单 > 通过高级查询条件获取表单实例数据（不包括子表单组件数据）"
 doc_id: "xdvMGafHOW"
-updated_at: "2026-04-24 14:14:32"
+updated_at: "2026-06-03 10:11:50"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-form-instance-data-using-advanced-query-conditions-excluding-subform
 > Path: 应用开发 / 服务端API / 宜搭 > 表单 > 通过高级查询条件获取表单实例数据（不包括子表单组件数据）
-> Updated: 2026-04-24 14:14:32
+> Updated: 2026-06-03 10:11:50
 
 # 通过高级查询条件获取表单实例数据（不包括子表单组件数据）
 

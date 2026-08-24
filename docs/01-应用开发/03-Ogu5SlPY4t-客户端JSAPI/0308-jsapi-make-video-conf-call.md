@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "音频会议 > makeVideoConfCall"
 doc_id: "2ZXKv0QLBp"
-updated_at: "2023-10-12"
+updated_at: "2025-08-27 18:08:39"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-make-video-conf-call
 > Path: 应用开发 / 客户端JSAPI / 音频会议 > makeVideoConfCall
-> Updated: 2023-10-12
+> Updated: 2025-08-27 18:08:39
 
 # makeVideoConfCall
 
@@ -45,7 +45,11 @@ updated_at: "2023-10-12"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `title`（string，必填）：通话主题，建议传入有实际意义的简短描述，便于之后查看通话记录时快速筛选。
+- `calleeStaffIds`（array，必填）：参会人的userId列表。
+- `calleeCorpId`（string，必填）：参会人所在的企业corpId。
 
 ## **返回结果**
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "通讯录管理 > 企业账号 > 授权其他组织查看本组织的企业账号信息"
 doc_id: "Yj2lhCCjlN"
-updated_at: "2025-09-11 21:01:51"
+updated_at: "2026-06-01 16:06:13"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-orgaccountmobilevisibleinotherorg
 > Path: 应用开发 / 服务端API / 通讯录管理 > 企业账号 > 授权其他组织查看本组织的企业账号信息
-> Updated: 2025-09-11 21:01:51
+> Updated: 2026-06-01 16:06:13
 
 # 授权其他组织查看本组织的企业账号信息
 

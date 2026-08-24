@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "专属钉钉 > 企业内部群 > 查询企业内部群信息"
 doc_id: "q4yli4JERG"
-updated_at: "2025-09-23 19:20:04"
+updated_at: "2026-06-04 19:09:59"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-group-info
 > Path: 应用开发 / 服务端API / 专属钉钉 > 企业内部群 > 查询企业内部群信息
-> Updated: 2025-09-23 19:20:04
+> Updated: 2026-06-04 19:09:59
 
 # 查询企业内部群信息
 

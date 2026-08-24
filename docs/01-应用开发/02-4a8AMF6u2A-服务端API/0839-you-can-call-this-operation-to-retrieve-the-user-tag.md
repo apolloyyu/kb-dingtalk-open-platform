@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "专属钉钉 > 产业互联 > 根据userId查询人员的标签信息"
 doc_id: "Tb3f21vNkJ"
-updated_at: "2025-09-23 19:19:59"
+updated_at: "2026-06-04 19:09:57"
 ---
 
 > Source: https://open.dingtalk.com/document/development/you-can-call-this-operation-to-retrieve-the-user-tag
 > Path: 应用开发 / 服务端API / 专属钉钉 > 产业互联 > 根据userId查询人员的标签信息
-> Updated: 2025-09-23 19:19:59
+> Updated: 2026-06-04 19:09:57
 
 # 根据userId查询人员的标签信息
 

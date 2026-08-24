@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 高级版专享接口 > 数据表单 > 表单实例 > 更新数据表单实例"
 doc_id: "BN5XCNmHRL"
-updated_at: "2025-09-11 21:04:45"
+updated_at: "2026-06-03 10:13:04"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-premiumupdateforminstance
 > Path: 应用开发 / 服务端API / OA 审批 > 高级版专享接口 > 数据表单 > 表单实例 > 更新数据表单实例
-> Updated: 2025-09-11 21:04:45
+> Updated: 2026-06-03 10:13:04
 
 # 更新数据表单实例
 

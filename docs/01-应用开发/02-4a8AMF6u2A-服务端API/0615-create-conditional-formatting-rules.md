@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 表格 > 条件格式 > 创建条件格式规则"
 doc_id: "yHyPSVrRgg"
-updated_at: "2026-04-10 10:45:29"
+updated_at: "2026-06-04 19:09:17"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-conditional-formatting-rules
 > Path: 应用开发 / 服务端API / 文档/文件 > 表格 > 条件格式 > 创建条件格式规则
-> Updated: 2026-04-10 10:45:29
+> Updated: 2026-06-04 19:09:17
 
 # 创建条件格式规则
 

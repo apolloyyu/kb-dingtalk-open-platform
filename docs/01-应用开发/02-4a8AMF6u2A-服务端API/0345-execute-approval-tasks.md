@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "宜搭 > 任务 > 同意或拒绝宜搭审批任务"
 doc_id: "WlO9Fl3DzP"
-updated_at: "2026-04-22 18:23:47"
+updated_at: "2026-06-03 10:11:52"
 ---
 
 > Source: https://open.dingtalk.com/document/development/execute-approval-tasks
 > Path: 应用开发 / 服务端API / 宜搭 > 任务 > 同意或拒绝宜搭审批任务
-> Updated: 2026-04-22 18:23:47
+> Updated: 2026-06-03 10:11:52
 
 # 同意或拒绝宜搭审批任务
 

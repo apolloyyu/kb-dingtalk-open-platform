@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "办公 > OA审批 > 审批任务开始，结束，转交"
 doc_id: "UVpm3LGZsj"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-10-15 15:59:04"
 ---
 
 > Source: https://open.dingtalk.com/document/development/event-bpms-task-change
 > Path: 应用开发 / 事件订阅 / 办公 > OA审批 > 审批任务开始，结束，转交
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-10-15 15:59:04
 
 # 审批任务开始，结束，转交
 
@@ -36,6 +36,38 @@ updated_at: "2022-01-19 19:29:22"
 ## 事件体描述
 
 Stream模式推送
+
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.processInstanceId`（string）：审批实例id。
+- `data.finishTime`（long）：结束任务的时间。时间戳，单位毫秒。  
+  > 审批开始无该数据。
+- `data.createTime`（long）：创建任务的时间。时间戳，单位毫秒。
+- `data.processCode`（string）：审批模板的唯一码。
+- `data.bizCategoryId`（string）：业务类目。
+- `data.businessId`（string）：流程实例业务标识
+- `data.remark`（string）：操作时写的评论内容。
+- `data.type`（string）：任务状态变更类型：  
+  - start：审批任务开始  
+  - finish：审批任务正常结束（完成或转交）  
+  - cancel：说明当前节点有多个审批人并且是或签，其中一个人执行了审批，其他审批人会推送cancel类型事件  
+  - comment：审批任务评论。
+- `data.title`（string）：实例标题。
+- `data.taskId`（long）：任务id。
+- `data.staffId`（string）：用户userId：  
+  - 当前任务的审批人userId  
+  - 操作转交动作的用户userId
+- `data.result`（string）：审批结果：  
+  - agree：同意  
+  - refuse：拒绝  
+  - redirect：表示审批任务转交  
+  - audit：表示当前节点为办理人节点，audit为办理结果
 
 ### **事件体示例**
 
@@ -64,6 +96,37 @@ Stream模式推送
 ```
 
 HTTP推送
+
+### 字段说明
+
+- `EventType`（String）：事件英文名称。
+- `EventTime`（Long）：事件发生的时间。
+- `CorpId`（String）：企业corpId。
+- `BizId`（String）：无业务意义，幂等。
+- `eventId`（String）：事件的唯一Id。
+- `processInstanceId`（string）：审批实例id。
+- `finishTime`（long）：结束任务的时间。时间戳，单位毫秒。  
+  > 审批开始无该数据。
+- `createTime`（long）：创建任务的时间。时间戳，单位毫秒。
+- `processCode`（string）：审批模板的唯一码。
+- `bizCategoryId`（string）：业务类目。
+- `businessId`（string）：流程实例业务标识
+- `remark`（string）：操作时写的评论内容。
+- `type`（string）：任务状态变更类型：  
+  - start：审批任务开始  
+  - finish：审批任务正常结束（完成或转交）  
+  - cancel：说明当前节点有多个审批人并且是或签，其中一个人执行了审批，其他审批人会推送cancel类型事件  
+  - comment：审批任务评论。
+- `title`（string）：实例标题。
+- `taskId`（long）：任务id。
+- `staffId`（string）：用户userId：  
+  - 当前任务的审批人userId  
+  - 操作转交动作的用户userId
+- `result`（string，必填）：审批结果：  
+  - agree：同意  
+  - refuse：拒绝  
+  - redirect：表示审批任务转交  
+  - audit：表示当前节点为办理人节点，audit为办理结果
 
 ### **事件体示例**
 

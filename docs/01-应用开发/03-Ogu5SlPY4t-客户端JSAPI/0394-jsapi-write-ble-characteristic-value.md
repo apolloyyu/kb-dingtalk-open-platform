@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > 蓝牙 > 低功耗蓝牙 > writeBLECharacteristicValue"
 doc_id: "ebGZYu2haj"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:07:53"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-write-ble-characteristic-value
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > 蓝牙 > 低功耗蓝牙 > writeBLECharacteristicValue
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:07:53
 
 # writeBLECharacteristicValue
 
@@ -44,7 +44,15 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `deviceId`（string，必填）：蓝牙设备 ID。  
+    
+  > \* Android 上为设备 MAC 地址。  
+  > \* iOS 上为设备 UUID。
+- `serviceId`（string，必填）：蓝牙特征值对应 service 的 uuid。
+- `characteristicId`（string，必填）：蓝牙特征值的 uuid。
+- `value`（string，必填）：蓝牙设备特征值对应的值，16进制字符串，限制在20字节内。
 
 ## **返回结果**
 

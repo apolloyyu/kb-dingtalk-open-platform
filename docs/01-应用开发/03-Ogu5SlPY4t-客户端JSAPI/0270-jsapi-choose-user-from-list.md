@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "通讯录 > chooseUserFromList"
 doc_id: "hTQWGLKeUw"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:08:45"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-choose-user-from-list
 > Path: 应用开发 / 客户端JSAPI / 通讯录 > chooseUserFromList
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:08:45
 
 # chooseUserFromList
 
@@ -43,7 +43,15 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `title`（string）：选择页面的标题。
+- `users`（array，必填）：自定义可以选择对的用户的userId列表。
+- `isShowCompanyName`（boolean）：是否显示公司名称。
+- `disabledUsers`（array）：不可选用户的userId列表。
+- `corpId`（string）：企业corpId。  
+    
+  > 在H5应用中必填。
 
 ## **返回结果**
 

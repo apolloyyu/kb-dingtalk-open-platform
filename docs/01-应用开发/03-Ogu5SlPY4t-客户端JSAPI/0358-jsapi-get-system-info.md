@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > 系统信息 > getSystemInfo"
 doc_id: "BtGMGTHova"
-updated_at: "2025-09-18"
+updated_at: "2025-10-21 16:36:10"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-get-system-info
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > 系统信息 > getSystemInfo
-> Updated: 2025-09-18
+> Updated: 2025-10-21 16:36:10
 
 # getSystemInfo
 
@@ -45,7 +45,42 @@ updated_at: "2025-09-18"
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `model`（string）：手机型号。  
+    
+  > 桌面端不支持该字段。
+- `app`（string，必填）：应用名。
+- `brand`（string，必填）：手机品牌。  
+    
+  > 桌面端不支持该字段。
+- `pixelRatio`（number）：设备像素比。
+- `windowWidth`（number）：窗口宽度。
+- `windowHeight`（number）：窗口高度。
+- `language`（string）：钉钉设置的语言。  
+  > 仅小程序应用返回。
+- `version`（string）：系统版本号。  
+    
+  > 小程序全局 API 调用时为钉钉版本号
+- `storage`（string）：设备磁盘容量。
+- `currentBattery`（string）：当前电量百分比。  
+    
+  > 桌面端不支持该字段。
+- `system`（string）：系统版本。
+- `platform`（string）：系统名。
+- `screenWidth`（number）：屏幕宽度。
+- `screenHeight`（number）：屏幕高度。
+- `fontSizeSetting`（number）：用户设置字体大小。
+- `orientation`（number，必填）：\* 0：竖屏  
+  \* 1： 横屏  
+    
+  > 桌面端不支持该字段。
+- `titleBarHeight`（number，必填）：标题栏高度。  
+    
+  > 桌面端不支持该字段。
+- `statusBarHeight`（number，必填）：状态栏高度。  
+    
+  > 桌面端不支持该字段。
 
 ## **示例****代码**
 

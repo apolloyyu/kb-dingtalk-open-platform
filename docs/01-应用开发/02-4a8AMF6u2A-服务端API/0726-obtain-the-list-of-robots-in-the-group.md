@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "即时通信 > 机器人 > 机器人管理 > 获取群内机器人列表"
 doc_id: "aWHs68krUU"
-updated_at: "2025-09-12 17:18:48"
+updated_at: "2026-06-05 13:49:07"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-the-list-of-robots-in-the-group
 > Path: 应用开发 / 服务端API / 即时通信 > 机器人 > 机器人管理 > 获取群内机器人列表
-> Updated: 2025-09-12 17:18:48
+> Updated: 2026-06-05 13:49:07
 
 # 获取群内机器人列表
 

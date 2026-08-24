@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "文件存储 > 文件 > FileSystemManager.readdir"
 doc_id: "eCSOe6dDCb"
-updated_at: "2023-08-11"
+updated_at: "2025-08-27 18:08:29"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-file-system-manager-readdir
 > Path: 应用开发 / 客户端JSAPI / 文件存储 > 文件 > FileSystemManager.readdir
-> Updated: 2023-08-11
+> Updated: 2025-08-27 18:08:29
 
 # FileSystemManager.readdir
 
@@ -41,13 +41,18 @@ updated_at: "2023-08-11"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `dirPath`（string，必填）：本地用户文件目录，调用创建本地用户目录接口获取。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `files`（array，必填）：本地用户目录下的文件或目录列表。
+- `success`（boolean，必填）：成功获取本地用户文件和目录列表时，返回true。
 
 ## **示例****代码**
 

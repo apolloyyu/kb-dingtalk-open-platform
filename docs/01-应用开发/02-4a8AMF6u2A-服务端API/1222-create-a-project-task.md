@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "Teambition 项目管理 > 任务 > 项目任务 > 创建项目任务"
 doc_id: "42SwEyXX6I"
-updated_at: "2025-10-09 18:06:38"
+updated_at: "2026-06-03 09:26:02"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-a-project-task
 > Path: 应用开发 / 服务端API / Teambition 项目管理 > 任务 > 项目任务 > 创建项目任务
-> Updated: 2025-10-09 18:06:38
+> Updated: 2026-06-03 09:26:02
 
 # 创建项目任务
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 行业开放 > 服务群 > 升级云客服服务群为钉钉智能服务群"
 doc_id: "dziN2HABvr"
-updated_at: "2025-09-23 19:22:36"
+updated_at: "2026-06-03 09:11:05"
 ---
 
 > Source: https://open.dingtalk.com/document/development/upgraded-the-cloud-customer-service-group-to-the-dingtalk-intelligent
 > Path: 应用开发 / 服务端API / 行业与生态 > 行业开放 > 服务群 > 升级云客服服务群为钉钉智能服务群
-> Updated: 2025-09-23 19:22:36
+> Updated: 2026-06-03 09:11:05
 
 # 升级云客服服务群为钉钉智能服务群
 

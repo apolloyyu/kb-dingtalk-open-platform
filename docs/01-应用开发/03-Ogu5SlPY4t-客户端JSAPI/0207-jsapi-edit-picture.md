@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "多媒体 > 图片 > editPicture"
 doc_id: "0U90mvOn2j"
-updated_at: "2023-08-11"
+updated_at: "2025-08-27 18:06:33"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-edit-picture
 > Path: 应用开发 / 客户端JSAPI / 多媒体 > 图片 > editPicture
-> Updated: 2023-08-11
+> Updated: 2025-08-27 18:06:33
 
 # editPicture
 
@@ -43,13 +43,17 @@ updated_at: "2023-08-11"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `url`（string，必填）：图片的远端路径或者本地路径。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `path`（string，必填）：编辑后的本地文件路径。
 
 ## **错误码**
 

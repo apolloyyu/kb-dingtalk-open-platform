@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "文件存储 > 文件 > FileSystemManager.mkdir"
 doc_id: "lVxmIDUIoi"
-updated_at: "2023-08-11"
+updated_at: "2025-08-27 18:08:27"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-file-system-manager-mkdir
 > Path: 应用开发 / 客户端JSAPI / 文件存储 > 文件 > FileSystemManager.mkdir
-> Updated: 2023-08-11
+> Updated: 2025-08-27 18:08:27
 
 # FileSystemManager.mkdir
 
@@ -41,13 +41,18 @@ updated_at: "2023-08-11"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `dirPath`（string，必填）：创建的目录路径。
+- `recursive`（boolean）：例如，dirPath值为：/a/b/c。 如果recursive传true，创建目录时会先创建a，再创建b，最后再创建c。 如果recursive传false，a、b、c只要有一个目录不存在，接口会提示父级目录不存在。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### success
+
+（boolean）目录创建成功时，返回true。 示例：`true`
 
 ## **示例****代码**
 

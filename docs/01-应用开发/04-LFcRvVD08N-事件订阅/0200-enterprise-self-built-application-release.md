@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "应用管理 > 企业内部应用发布"
 doc_id: "8BLaWwtlNJ"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-08-28 19:47:28"
 ---
 
 > Source: https://open.dingtalk.com/document/development/enterprise-self-built-application-release
 > Path: 应用开发 / 事件订阅 / 应用管理 > 企业内部应用发布
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-08-28 19:47:28
 
 # 企业内部应用发布
 
@@ -37,6 +37,21 @@ updated_at: "2022-01-19 19:29:22"
 
 Stream模式推送
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.eventId`（string）：事件的唯一 ID。
+- `data.operatorUnionId`（string）：操作人 unionId。
+- `data.unifiedAppId`（string）：应用唯一标识。
+- `data.name`（string）：应用名称。
+- `data.desc`（string）：应用描述。
+- `data.icon`（string）：应用图标（Media ID）。
+
 ### **事件体示例**
 
 ```
@@ -58,6 +73,19 @@ Stream模式推送
 ```
 
 HTTP推送
+
+### 字段说明
+
+- `EventType`（String）：事件英文名称。
+- `EventTime`（Long）：事件发生的时间。
+- `CorpId`（String）：企业corpId。
+- `BizId`（String）：无业务意义，幂等。
+- `eventId`（string，必填）：事件的唯一 ID。
+- `operatorUnionId`（string，必填）：操作人 unionId。
+- `unifiedAppId`（string，必填）：应用唯一标识。
+- `name`（string，必填）：应用名称。
+- `desc`（string，必填）：应用描述。
+- `icon`（string，必填）：应用图标（Media ID）。
 
 ### **事件体示例**
 

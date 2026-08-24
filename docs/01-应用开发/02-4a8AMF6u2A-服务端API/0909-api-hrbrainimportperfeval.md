@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "组织大脑 > 数据集成 > 绩效与奖惩 > 数据集成绩效记录同步"
 doc_id: "jlVDRSSfa6"
-updated_at: "2025-09-12 17:19:19"
+updated_at: "2026-06-04 19:10:13"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-hrbrainimportperfeval
 > Path: 应用开发 / 服务端API / 组织大脑 > 数据集成 > 绩效与奖惩 > 数据集成绩效记录同步
-> Updated: 2025-09-12 17:19:19
+> Updated: 2026-06-04 19:10:13
 
 # 数据集成绩效记录同步
 

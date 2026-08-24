@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "AI 表格 > 记录 > 获取记录"
 doc_id: "4gPMs3s3wk"
-updated_at: "2025-09-12 17:20:59"
+updated_at: "2026-08-19 09:07:53"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-getrecord
 > Path: 应用开发 / 服务端API / AI 表格 > 记录 > 获取记录
-> Updated: 2025-09-12 17:20:59
+> Updated: 2026-08-19 09:07:53
 
 # 获取记录
 

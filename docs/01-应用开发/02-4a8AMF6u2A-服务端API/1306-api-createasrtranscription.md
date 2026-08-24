@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "更多开放 > 视听智能服务 > 创建ASR离线转写任务"
 doc_id: "QnZ6onQ89w"
-updated_at: "2026-05-28 17:05:30"
+updated_at: "2026-06-03 09:33:02"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-createasrtranscription
 > Path: 应用开发 / 服务端API / 更多开放 > 视听智能服务 > 创建ASR离线转写任务
-> Updated: 2026-05-28 17:05:30
+> Updated: 2026-06-03 09:33:02
 
 # 创建ASR离线转写任务
 

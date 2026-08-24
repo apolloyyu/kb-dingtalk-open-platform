@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "历史文档（不推荐） > Stream推送 > 通讯录事件 > 企业删除员工"
 doc_id: "sWW12Ab3UY"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-12-08 14:26:26"
 ---
 
 > Source: https://open.dingtalk.com/document/development/enterprise-deletes-the-employee
 > Path: 应用开发 / 事件订阅 / 历史文档（不推荐） > Stream推送 > 通讯录事件 > 企业删除员工
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-12-08 14:26:26
 
 # 企业删除员工
 
@@ -38,7 +38,20 @@ updated_at: "2022-01-19 19:29:22"
 
 ### header部分
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+
 ### data部分(事件业务信息)
+
+### 字段说明
+
+- `unionid`（string）：删除员工unionId。
+- `dingId`（string）：删除员工dingId。
 
 ### **事件体数据示例如下:**
 

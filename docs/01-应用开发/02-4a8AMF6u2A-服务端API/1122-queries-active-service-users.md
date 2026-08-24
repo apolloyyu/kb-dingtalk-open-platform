@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 行业开放 > 服务群 > 查询服务群活跃用户"
 doc_id: "AjrbM8o2jX"
-updated_at: "2025-09-23 19:22:34"
+updated_at: "2026-06-04 19:11:23"
 ---
 
 > Source: https://open.dingtalk.com/document/development/queries-active-service-users
 > Path: 应用开发 / 服务端API / 行业与生态 > 行业开放 > 服务群 > 查询服务群活跃用户
-> Updated: 2025-09-23 19:22:34
+> Updated: 2026-06-04 19:11:23
 
 # 查询服务群活跃用户
 

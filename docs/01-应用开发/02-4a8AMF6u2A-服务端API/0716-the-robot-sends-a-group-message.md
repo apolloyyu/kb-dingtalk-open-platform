@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "即时通信 > 机器人 > 发送普通消息 > 机器人发送群聊消息"
 doc_id: "D0ciWlxnVB"
-updated_at: "2025-10-21 13:59:19"
+updated_at: "2026-07-14 09:29:38"
 ---
 
 > Source: https://open.dingtalk.com/document/development/the-robot-sends-a-group-message
 > Path: 应用开发 / 服务端API / 即时通信 > 机器人 > 发送普通消息 > 机器人发送群聊消息
-> Updated: 2025-10-21 13:59:19
+> Updated: 2026-07-14 09:29:38
 
 # 机器人发送群聊消息
 

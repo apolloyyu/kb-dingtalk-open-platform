@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "专属钉钉 > 产业互联 > 发送邀请函"
 doc_id: "OH12M9flPX"
-updated_at: "2025-09-23 19:19:58"
+updated_at: "2026-06-02 19:14:52"
 ---
 
 > Source: https://open.dingtalk.com/document/development/send-invitations
 > Path: 应用开发 / 服务端API / 专属钉钉 > 产业互联 > 发送邀请函
-> Updated: 2025-09-23 19:19:58
+> Updated: 2026-06-02 19:14:52
 
 # 发送邀请函
 

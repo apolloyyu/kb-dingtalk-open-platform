@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "智能人事 > 考勤 > 假期消费记录变更"
 doc_id: "oW5jioMFep"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-08-28 19:46:55"
 ---
 
 > Source: https://open.dingtalk.com/document/development/holiday-consumption-record-change
 > Path: 应用开发 / 事件订阅 / 智能人事 > 考勤 > 假期消费记录变更
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-08-28 19:46:55
 
 # 假期消费记录变更
 
@@ -36,6 +36,39 @@ updated_at: "2022-01-19 19:29:22"
 ## 事件体描述
 
 Stream模式推送
+
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.processIdList`（array）：消费记录相关审批单。
+- `data.recordId`（string）：假期消费记录唯一标识。
+- `data.corpid`（string）：组织ID。
+- `data.leaveViewUnit`（string）：显示单位：  
+  - day：天  
+  - hour：小时
+- `data.leaveStatus`（string）：请假状态：  
+  - init：请假申请  
+  - success：请假通过  
+  - refuse：请假被拒  
+  - abort：请假终止  
+  - revoke：撤销已同意的请假单
+- `data.syncAction`（string）：同步行为。
+- `data.endTime`（long）：额度有效期结束时间，毫秒级时间戳。
+- `data.recordNumPerHour`（long）：以小时计算的消费额度。
+- `data.userid`（string）：员工的userid。
+- `data.startTime`（long）：额度有效期开始时间，毫秒级时间戳。
+- `data.param0434`（double）：以天计算的消费额度。
+- `data.leaveRecordType`（string）：假期记录类型：  
+  - leave：请假  
+  - update：新配额
+- `data.leaveCode`（string）：假期类型唯一标识。
+- `data.leaveReason`（string）：原因。
+- `data.sourceType`（string）：事件来源。
 
 ### **事件体示例**
 
@@ -71,6 +104,38 @@ Stream模式推送
 SyncHTTP/RDS推送
 
 为RDS推送方式时，数据插入表open\_sync\_biz\_data\_medium中。
+
+### root
+
+- `corp_id`（String）：企业corp\_id。
+- `biz_id`（String）：biz\_id无业务意义，幂等。
+- `biz_type`（Integer）：事件bizType。
+- `biz_data`（object）：事件bizData介绍。
+- `biz_data.eventId`（String）：事件的唯一Id。
+- `biz_data.processIdList`（array）：消费记录相关审批单。
+- `biz_data.record_id`（string）：假期消费记录唯一标识。
+- `biz_data.corpid`（string）：组织ID。
+- `biz_data.leave_view_unit`（string）：显示单位：  
+  - day：天  
+  - hour：小时
+- `biz_data.leave_status`（string）：请假状态：  
+  - init：请假申请  
+  - success：请假通过  
+  - refuse：请假被拒  
+  - abort：请假终止  
+  - revoke：撤销已同意的请假单
+- `biz_data.syncAction`（string）：同步行为。
+- `biz_data.end_time`（long）：额度有效期结束时间，毫秒级时间戳。
+- `biz_data.record_num_per_hour`（long）：以小时计算的消费额度。
+- `biz_data.userid`（string）：员工的userid。
+- `biz_data.start_time`（long）：额度有效期开始时间，毫秒级时间戳。
+- `biz_data.param0434`（double）：以天计算的消费额度。
+- `biz_data.leave_record_type`（string）：假期记录类型：  
+  - leave：请假  
+  - update：新配额
+- `biz_data.leave_code`（string）：假期类型唯一标识。
+- `biz_data.leave_reason`（string）：原因。
+- `biz_data.sourceType`（string）：事件来源。
 
 ### **biz\_data数据示例(biz\_type=154)**
 

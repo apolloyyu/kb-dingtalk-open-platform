@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "音视频 > 智能会议室 > 会议室分组 > 更新会议室分组信息"
 doc_id: "F1GTLfppmk"
-updated_at: "2025-09-11 21:03:18"
+updated_at: "2026-06-03 10:12:11"
 ---
 
 > Source: https://open.dingtalk.com/document/development/update-meeting-room-groups
 > Path: 应用开发 / 服务端API / 音视频 > 智能会议室 > 会议室分组 > 更新会议室分组信息
-> Updated: 2025-09-11 21:03:18
+> Updated: 2026-06-03 10:12:11
 
 # 更新会议室分组信息
 

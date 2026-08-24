@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 生态开放 > 阿里商旅 > 账单管理 > 查询用车结算记账记录"
 doc_id: "t9useW0Cqi"
-updated_at: "2026-01-29 14:31:12"
+updated_at: "2026-06-22 14:00:41"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-interface-for-vehicle-settlement-and-bookkeeping
 > Path: 应用开发 / 服务端API / 行业与生态 > 生态开放 > 阿里商旅 > 账单管理 > 查询用车结算记账记录
-> Updated: 2026-01-29 14:31:12
+> Updated: 2026-06-22 14:00:41
 
 # 查询用车结算记账记录
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "专属钉钉 > 企业内部群 > 获取群活跃明细列表"
 doc_id: "IBfZki7Bzv"
-updated_at: "2025-09-23 19:20:04"
+updated_at: "2026-06-04 19:10:00"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtains-the-group-activity-details-list
 > Path: 应用开发 / 服务端API / 专属钉钉 > 企业内部群 > 获取群活跃明细列表
-> Updated: 2025-09-23 19:20:04
+> Updated: 2026-06-04 19:10:00
 
 # 获取群活跃明细列表
 

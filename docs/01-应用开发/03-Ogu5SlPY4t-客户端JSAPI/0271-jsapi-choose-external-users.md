@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "通讯录 > chooseExternalUsers"
 doc_id: "33PPoot2WX"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:08:45"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-choose-external-users
 > Path: 应用开发 / 客户端JSAPI / 通讯录 > chooseExternalUsers
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:08:45
 
 # chooseExternalUsers
 
@@ -43,13 +43,33 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `title`（string）：选择页面的标题。
+- `multiple`（boolean）：是否可多选：  
+    
+  \* true: 可多选  
+  \* false：仅单选  
+    
+  > 默认仅单选。
+- `limitTips`（string）：超过限定人数返回的提示内容。
+- `maxUsers`（number）：最大可选人数，最大值为10000。
+- `pickedUsers`（array）：已选用户的userId列表。
+- `disabledUsers`（array）：不可选用户的userId列表。
+- `requiredUsers`（array）：必选用户。  
+    
+  > 不可取消选中状态。
+- `corpId`（string）：企业corpId。  
+    
+  > H5应用必填。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+（array）
 
 ## **示例****代码**
 

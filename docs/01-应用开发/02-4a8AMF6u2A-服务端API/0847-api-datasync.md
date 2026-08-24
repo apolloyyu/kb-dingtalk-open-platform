@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "专属钉钉 > 同步存储数据"
 doc_id: "CKait4oTVw"
-updated_at: "2025-09-23 19:20:00"
+updated_at: "2026-06-02 19:19:55"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-datasync
 > Path: 应用开发 / 服务端API / 专属钉钉 > 同步存储数据
-> Updated: 2025-09-23 19:20:00
+> Updated: 2026-06-02 19:19:55
 
 # 同步存储数据
 

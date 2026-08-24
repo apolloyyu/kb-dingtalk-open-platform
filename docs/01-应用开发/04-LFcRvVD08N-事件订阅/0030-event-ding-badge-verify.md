@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "办公 > 钉工牌 > 钉工牌核验事件"
 doc_id: "xPstROsVes"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-08-27 16:11:08"
 ---
 
 > Source: https://open.dingtalk.com/document/development/event-ding-badge-verify
 > Path: 应用开发 / 事件订阅 / 办公 > 钉工牌 > 钉工牌核验事件
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-08-27 16:11:08
 
 # 钉工牌核验事件
 
@@ -36,6 +36,26 @@ updated_at: "2022-01-19 19:29:22"
 ## 事件体描述
 
 Stream模式推送
+
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.corpId`（string）：企业ID
+- `data.userCorpRelationType`（string）：用户企业关系
+- `data.userIdentity`（string）：用户标识
+- `data.codeIdentity`（string）：码标识
+- `data.codeId`（string）：码ID
+- `data.verifyNo`（string）：核验号
+- `data.verifyResult`（string）：核验结果
+- `data.verifyAmount`（string）：核验金额
+- `data.verifyTime`（string）：核验时间
+- `data.verifyLocation`（string）：核验地点
+- `data.verifyEvent`（string）：核验事件
 
 ### **事件体示例**
 
@@ -65,6 +85,26 @@ Stream模式推送
 SyncHTTP/RDS推送
 
 为RDS推送方式时，数据插入表open\_sync\_biz\_data\_medium中。
+
+### root
+
+- `corp_id`（String）：企业corp\_id。
+- `biz_id`（String）：biz\_id无业务意义，幂等。
+- `biz_type`（Integer）：事件bizType。
+- `biz_data`（object）：事件bizData介绍。
+- `biz_data.syncAction`（String）：事件英文名。
+- `biz_data.eventId`（String）：事件的唯一Id。
+- `biz_data.corpId`（string）：企业ID
+- `biz_data.userCorpRelationType`（string）：用户企业关系
+- `biz_data.userIdentity`（string）：用户标识
+- `biz_data.codeIdentity`（string）：码标识
+- `biz_data.codeId`（string）：码ID
+- `biz_data.verifyNo`（string）：核验号
+- `biz_data.verifyResult`（string）：核验结果
+- `biz_data.verifyAmount`（string）：核验金额
+- `biz_data.verifyTime`（string）：核验时间
+- `biz_data.verifyLocation`（string）：核验地点
+- `biz_data.verifyEvent`（string）：核验事件
 
 ### **biz\_data数据示例(biz\_type=174)**
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "企业文化 > 荣誉 > 撤销员工获得的荣誉勋章"
 doc_id: "kRiSh4F7nX"
-updated_at: "2025-09-23 19:19:22"
+updated_at: "2026-06-02 19:43:43"
 ---
 
 > Source: https://open.dingtalk.com/document/development/revoke-an-employee-s-medal-of-honor
 > Path: 应用开发 / 服务端API / 企业文化 > 荣誉 > 撤销员工获得的荣誉勋章
-> Updated: 2025-09-23 19:19:22
+> Updated: 2026-06-02 19:43:43
 
 # 撤销员工获得的荣誉勋章
 

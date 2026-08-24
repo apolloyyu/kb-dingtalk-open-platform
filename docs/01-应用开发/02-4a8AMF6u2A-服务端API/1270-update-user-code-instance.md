@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "更多开放 > 钉工牌 > 使用SuiteAccessToken调用 > 更新钉工牌电子码"
 doc_id: "4YtV2Y1e5O"
-updated_at: "2025-09-11 21:03:39"
+updated_at: "2026-06-04 19:11:56"
 ---
 
 > Source: https://open.dingtalk.com/document/development/update-user-code-instance
 > Path: 应用开发 / 服务端API / 更多开放 > 钉工牌 > 使用SuiteAccessToken调用 > 更新钉工牌电子码
-> Updated: 2025-09-11 21:03:39
+> Updated: 2026-06-04 19:11:56
 
 # 更新钉工牌电子码
 

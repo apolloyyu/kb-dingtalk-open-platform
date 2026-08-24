@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "服务群 > 服务群工单申领"
 doc_id: "5EvzTzUyLK"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-08-28 19:46:18"
 ---
 
 > Source: https://open.dingtalk.com/document/development/service-group-work-order-application
 > Path: 应用开发 / 事件订阅 / 服务群 > 服务群工单申领
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-08-28 19:46:18
 
 # 服务群工单申领
 
@@ -37,6 +37,24 @@ updated_at: "2022-01-19 19:29:22"
 ## 事件体描述
 
 Stream模式推送
+
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.spiTicketModel`（object）：工单事件。
+- `data.spiTicketModel.openTicketId`（string）：工单ID。
+- `data.spiTicketModel.operateData`（object）
+- `data.spiTicketModel.operateData.originTakers`（array）：原始可申领人数据集。
+- `data.spiTicketModel.operateData.originTakers[].nickName`（string，必填）：可申领人昵称。
+- `data.spiTicketModel.operateData.originTakers[].unionId`（string，必填）：可申领人ID。
+- `data.spiTicketModel.operatorNickName`（string）：申领人昵称。
+- `data.spiTicketModel.operatorUnionId`（string）：申领人ID。
+- `data.spiTicketModel.operateType`（string）：操作类型。
 
 ### **事件体示例**
 
@@ -68,6 +86,23 @@ Stream模式推送
 
 HTTP推送
 
+### root
+
+- `EventType`（String）：事件英文名称。
+- `EventTime`（Long）：事件发生的时间。
+- `CorpId`（String）：企业corpId。
+- `BizId`（String）：无业务意义，幂等。
+- `eventId`（String）：事件的唯一Id。
+- `spiTicketModel`（object）：工单事件。
+- `spiTicketModel.openTicketId`（string）：工单ID。
+- `spiTicketModel.operateData`（object）
+- `spiTicketModel.operateData.originTakers`（array）：原始可申领人数据集。
+- `spiTicketModel.operateData.originTakers[].nickName`（string，必填）：可申领人昵称。
+- `spiTicketModel.operateData.originTakers[].unionId`（string，必填）：可申领人ID。
+- `spiTicketModel.operatorNickName`（string）：申领人昵称。
+- `spiTicketModel.operatorUnionId`（string）：申领人ID。
+- `spiTicketModel.operateType`（string）：操作类型。
+
 ### **事件体示例**
 
 ```
@@ -97,6 +132,24 @@ HTTP推送
 SyncHTTP/RDS推送
 
 为RDS推送方式时，数据插入表open\_sync\_biz\_data\_medium中。
+
+### root
+
+- `corp_id`（String）：企业corp\_id。
+- `biz_id`（String）：biz\_id无业务意义，幂等。
+- `biz_type`（Integer）：事件bizType。
+- `biz_data`（object）：事件bizData介绍。
+- `biz_data.syncAction`（String）：事件英文名。
+- `biz_data.eventId`（String）：事件的唯一Id。
+- `biz_data.spiTicketModel`（object）：工单事件。
+- `biz_data.spiTicketModel.openTicketId`（string）：工单ID。
+- `biz_data.spiTicketModel.operateData`（object）
+- `biz_data.spiTicketModel.operateData.originTakers`（array）：原始可申领人数据集。
+- `biz_data.spiTicketModel.operateData.originTakers[].nickName`（string，必填）：可申领人昵称。
+- `biz_data.spiTicketModel.operateData.originTakers[].unionId`（string，必填）：可申领人ID。
+- `biz_data.spiTicketModel.operatorNickName`（string）：申领人昵称。
+- `biz_data.spiTicketModel.operatorUnionId`（string）：申领人ID。
+- `biz_data.spiTicketModel.operateType`（string）：操作类型。
 
 ### **biz\_data数据示例(biz\_type=116)**
 

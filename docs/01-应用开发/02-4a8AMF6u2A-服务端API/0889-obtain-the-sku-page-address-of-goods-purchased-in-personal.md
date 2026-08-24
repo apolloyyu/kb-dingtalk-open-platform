@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "应用市场 > 获取个人应用内购商品SKU页面地址"
 doc_id: "A54sYJQ764"
-updated_at: "2026-02-27 09:08:21"
+updated_at: "2026-07-08 14:13:52"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-the-sku-page-address-of-goods-purchased-in-personal
 > Path: 应用开发 / 服务端API / 应用市场 > 获取个人应用内购商品SKU页面地址
-> Updated: 2026-02-27 09:08:21
+> Updated: 2026-07-08 14:13:52
 
 # 获取个人应用内购商品SKU页面地址
 

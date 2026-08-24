@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "通讯录管理 > 通讯录可见性管理 > 删除限制查看通讯录设置"
 doc_id: "rEsbmgUTBh"
-updated_at: "2025-09-11 21:02:05"
+updated_at: "2026-06-01 16:21:35"
 ---
 
 > Source: https://open.dingtalk.com/document/development/delete-visible-restrictions
 > Path: 应用开发 / 服务端API / 通讯录管理 > 通讯录可见性管理 > 删除限制查看通讯录设置
-> Updated: 2025-09-11 21:02:05
+> Updated: 2026-06-01 16:21:35
 
 # 删除限制查看通讯录设置
 

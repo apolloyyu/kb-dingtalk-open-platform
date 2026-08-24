@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "历史文档（不推荐） > Stream推送 > 家校通讯录事件 > 家校通讯录人员变更(人员身份新增)"
 doc_id: "drDyHNb6P7"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-10-16 15:06:50"
 ---
 
 > Source: https://open.dingtalk.com/document/development/home-school-address-book-personnel-change-personnel-identity-added-stream
 > Path: 应用开发 / 事件订阅 / 历史文档（不推荐） > Stream推送 > 家校通讯录事件 > 家校通讯录人员变更(人员身份新增)
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-10-16 15:06:50
 
 # 家校通讯录人员变更(人员身份新增)
 
@@ -38,7 +38,29 @@ updated_at: "2022-01-19 19:29:22"
 
 ### header部分
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+
 ### data部分(事件业务信息)
+
+### 字段说明
+
+- `classId`（long）：班级ID。
+- `role`（string）：此人在家校的角色类型：  
+  - teacher：老师角色  
+  - guardian：监护人角色  
+  - student：学生角色
+- `unionid`（string）：unionid, 无手机号的学生为""。
+- `feature`（string）：各个角色下存在不同属性，JSON格式。
+- `name`（string）：此人在此班级的名字。
+- `errcode`（integer，必填）：返回码。
+- `errmsg`（string）：返回码说明。
+- `userid`（string）：用户的userid。
 
 ### **事件体数据示例如下:**
 

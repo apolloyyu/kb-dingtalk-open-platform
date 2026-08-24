@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > e签宝 1.0 > 鉴权 > 获取企业e签宝微应用状态"
 doc_id: "eVdak4TwLb"
-updated_at: "2025-09-23 19:21:17"
+updated_at: "2026-06-23 18:10:32"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-the-status-of-enterprise-e-sign-treasure-micro-application
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > e签宝 1.0 > 鉴权 > 获取企业e签宝微应用状态
-> Updated: 2025-09-23 19:21:17
+> Updated: 2026-06-23 18:10:32
 
 # 获取企业e签宝微应用状态
 

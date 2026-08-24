@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "专属钉钉 > 可信设备 > 新增可信设备信息"
 doc_id: "aCpQpr13IR"
-updated_at: "2025-10-13 11:39:07"
+updated_at: "2026-06-02 19:10:59"
 ---
 
 > Source: https://open.dingtalk.com/document/development/add-information-about-a-trusted-device
 > Path: 应用开发 / 服务端API / 专属钉钉 > 可信设备 > 新增可信设备信息
-> Updated: 2025-10-13 11:39:07
+> Updated: 2026-06-02 19:10:59
 
 # 新增可信设备信息
 

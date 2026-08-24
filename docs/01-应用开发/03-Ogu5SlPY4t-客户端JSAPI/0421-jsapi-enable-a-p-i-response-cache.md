@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > 内存不足处理 > enableAPIResponseCache"
 doc_id: "fMONr2mW0V"
-updated_at: "2025-10-16"
+updated_at: "2025-10-16 15:45:36"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-enable-a-p-i-response-cache
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > 内存不足处理 > enableAPIResponseCache
-> Updated: 2025-10-16
+> Updated: 2025-10-16 15:45:36
 
 # enableAPIResponseCache
 
@@ -46,7 +46,9 @@ updated_at: "2025-10-16"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `enable`（boolean，必填）：true 开启，false 关闭
 
 ## **返回结果**
 

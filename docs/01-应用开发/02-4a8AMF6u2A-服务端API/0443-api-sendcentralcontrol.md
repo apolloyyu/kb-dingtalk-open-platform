@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "音视频 > 智能会议室 > 会议室 > 发送Rooms中控API信令"
 doc_id: "sbQF2AGf9U"
-updated_at: "2025-11-25 16:51:25"
+updated_at: "2026-06-01 14:27:50"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-sendcentralcontrol
 > Path: 应用开发 / 服务端API / 音视频 > 智能会议室 > 会议室 > 发送Rooms中控API信令
-> Updated: 2025-11-25 16:51:25
+> Updated: 2026-06-01 14:27:50
 
 # 发送Rooms中控API信令
 

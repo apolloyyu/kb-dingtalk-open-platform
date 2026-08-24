@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 跳转 > navigateBackPage"
 doc_id: "G55cT5sgPU"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:06:27"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-navigate-back-page
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 跳转 > navigateBackPage
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:06:27
 
 # navigateBackPage
 
@@ -41,7 +41,9 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `extraData`（object）：返回上一个应用携带的参数，返回的目标H5微应用可在[页面resume事件的回调监听](https://open.dingtalk.com/document/orgapp/page-event-monitoring#title-3eu-h6b-5g0)中获取携带的参数。
 
 ## **返回结果**
 

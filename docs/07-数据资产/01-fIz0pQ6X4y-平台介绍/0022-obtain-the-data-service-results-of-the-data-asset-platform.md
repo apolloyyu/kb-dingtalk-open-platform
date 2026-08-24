@@ -7,12 +7,12 @@ group: "数据资产"
 tab: "平台介绍"
 breadcrumb: "API 参考 > 获取数据资产平台的数据服务结果"
 doc_id: "KVn7YnKBfT"
-updated_at: "2023-02-09 09:18:08"
+updated_at: "2026-06-15 10:33:45"
 ---
 
 > Source: https://open.dingtalk.com/document/dataopen/obtain-the-data-service-results-of-the-data-asset-platform
 > Path: 数据资产 / 平台介绍 / API 参考 > 获取数据资产平台的数据服务结果
-> Updated: 2023-02-09 09:18:08
+> Updated: 2026-06-15 10:33:45
 
 # 获取数据资产平台的数据服务结果
 

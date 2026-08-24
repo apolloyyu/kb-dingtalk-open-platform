@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 官方 OA 审批 > 审批任务 > 获取用户待审批数量"
 doc_id: "qXRYtE7dlo"
-updated_at: "2025-09-11 21:04:08"
+updated_at: "2026-06-03 10:12:35"
 ---
 
 > Source: https://open.dingtalk.com/document/development/queries-the-number-of-requests-to-be-approved-by-users
 > Path: 应用开发 / 服务端API / OA 审批 > 官方 OA 审批 > 审批任务 > 获取用户待审批数量
-> Updated: 2025-09-11 21:04:08
+> Updated: 2026-06-03 10:12:35
 
 # 获取用户待审批数量
 

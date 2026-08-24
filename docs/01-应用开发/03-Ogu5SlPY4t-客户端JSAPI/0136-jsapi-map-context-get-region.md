@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 地图 > MapContext.getRegion"
 doc_id: "5O60Zv74MZ"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:05:55"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-map-context-get-region
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 地图 > MapContext.getRegion
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:05:55
 
 # MapContext.getRegion
 
@@ -51,7 +51,14 @@ IDE 模拟器暂不支持模拟，请以真机调试效果为准。
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `northeast`（object，必填）：地图的东北角经纬度。
+- `northeast.latitude`（number，必填）：经度
+- `northeast.longitude`（number，必填）：纬度
+- `southwest`（object，必填）：地图的西南角经纬度。
+- `southwest.latitude`（number，必填）：经度
+- `southwest.longitude`（number，必填）：纬度
 
 ## **示例****代码**
 

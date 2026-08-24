@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "多媒体 > 图片 > getImageInfo"
 doc_id: "Qo4D5i1xCI"
-updated_at: "2024-12-13"
+updated_at: "2025-08-27 18:06:34"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-get-image-info
 > Path: 应用开发 / 客户端JSAPI / 多媒体 > 图片 > getImageInfo
-> Updated: 2024-12-13
+> Updated: 2025-08-27 18:06:34
 
 # getImageInfo
 
@@ -41,13 +41,19 @@ updated_at: "2024-12-13"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `src`（string，必填）：图片路径，目前仅支持网络图片路径。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `width`（number，必填）：图片宽度，单位是px。
+- `height`（number，必填）：图片高度，单位是px。
+- `path`（string，必填）：图片在手机中的路径。
 
 ## **示例****代码**
 

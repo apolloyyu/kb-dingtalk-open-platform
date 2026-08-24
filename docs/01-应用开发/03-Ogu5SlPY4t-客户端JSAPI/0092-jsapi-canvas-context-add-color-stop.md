@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 画布 > CanvasContext.addColorStop"
 doc_id: "1MktoBUVKm"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:05:28"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-canvas-context-add-color-stop
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 画布 > CanvasContext.addColorStop
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:05:28
 
 # CanvasContext.addColorStop
 
@@ -44,7 +44,10 @@ updated_at: "2023-08-08"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `stop`（number，必填）：表示渐变点在起点和终点中的位置，范围 0 ～ 1。
+- `color`（string，必填）：渐变点颜色。
 
 ## **返回结果**
 

@@ -7,12 +7,12 @@ group: "数据资产"
 tab: "平台介绍"
 breadcrumb: "API 参考 > 获取数据流通中心数据"
 doc_id: "b3RF1JZ7hG"
-updated_at: "2025-09-23 19:20:52"
+updated_at: "2026-06-15 10:33:50"
 ---
 
 > Source: https://open.dingtalk.com/document/dataopen/api-datamarketservice
 > Path: 数据资产 / 平台介绍 / API 参考 > 获取数据流通中心数据
-> Updated: 2025-09-23 19:20:52
+> Updated: 2026-06-15 10:33:50
 
 # 数据流通中心获取数据服务
 

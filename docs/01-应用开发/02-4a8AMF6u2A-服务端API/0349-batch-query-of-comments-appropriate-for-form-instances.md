@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "宜搭 > 任务 > 批量查询宜搭表单实例的评论"
 doc_id: "zwACwM0nkS"
-updated_at: "2026-04-22 20:33:27"
+updated_at: "2026-06-03 10:11:57"
 ---
 
 > Source: https://open.dingtalk.com/document/development/batch-query-of-comments-appropriate-for-form-instances
 > Path: 应用开发 / 服务端API / 宜搭 > 任务 > 批量查询宜搭表单实例的评论
-> Updated: 2026-04-22 20:33:27
+> Updated: 2026-06-03 10:11:57
 
 # 批量查询宜搭表单实例的评论
 

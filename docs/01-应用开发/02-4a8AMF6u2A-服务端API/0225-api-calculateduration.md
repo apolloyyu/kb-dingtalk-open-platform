@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "考勤 > 假勤审批 > 预计算时长"
 doc_id: "aK9WEUzrWH"
-updated_at: "2025-09-11 21:02:18"
+updated_at: "2026-06-01 16:53:34"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-calculateduration
 > Path: 应用开发 / 服务端API / 考勤 > 假勤审批 > 预计算时长
-> Updated: 2025-09-11 21:02:18
+> Updated: 2026-06-01 16:53:34
 
 # 预计算时长
 

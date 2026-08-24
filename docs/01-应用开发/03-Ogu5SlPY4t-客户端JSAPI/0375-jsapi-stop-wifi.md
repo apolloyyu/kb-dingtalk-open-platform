@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > Wi-Fi > stopWifi"
 doc_id: "yWymIyYAD5"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:07:40"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-stop-wifi
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > Wi-Fi > stopWifi
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:07:40
 
 # stopWifi
 
@@ -45,7 +45,9 @@ updated_at: "2024-12-04"
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+（object）
 
 ## **错误码**
 

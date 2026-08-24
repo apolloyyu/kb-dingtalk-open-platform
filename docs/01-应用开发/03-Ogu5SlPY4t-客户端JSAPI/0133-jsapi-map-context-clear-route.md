@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 地图 > MapContext.clearRoute"
 doc_id: "qfpoUI8RVW"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:05:53"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-map-context-clear-route
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 地图 > MapContext.clearRoute
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:05:53
 
 # MapContext.clearRoute
 

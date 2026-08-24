@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "AI 表格 > 记录 > 删除多行记录"
 doc_id: "tnaSfNEw2M"
-updated_at: "2025-09-12 17:21:01"
+updated_at: "2026-08-19 09:07:57"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-noatable-deleterecords
 > Path: 应用开发 / 服务端API / AI 表格 > 记录 > 删除多行记录
-> Updated: 2025-09-12 17:21:01
+> Updated: 2026-08-19 09:07:57
 
 # 删除多行记录
 

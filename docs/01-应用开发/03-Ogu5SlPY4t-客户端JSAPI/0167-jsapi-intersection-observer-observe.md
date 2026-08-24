@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 节点查询 > IntersectionObserver.observe"
 doc_id: "CZSYZwwors"
-updated_at: "2023-08-11"
+updated_at: "2025-08-27 18:06:14"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-intersection-observer-observe
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 节点查询 > IntersectionObserver.observe
-> Updated: 2023-08-11
+> Updated: 2025-08-27 18:06:14
 
 # IntersectionObserver.observe
 
@@ -41,13 +41,33 @@ updated_at: "2023-08-11"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `targetSelector`（string，必填）：选择器。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `time`（number，必填）：相交检测时的时间戳。
+- `relativeRect`（object，必填）：参照区域的边界。
+- `relativeRect.left`（number，必填）：左边界。
+- `relativeRect.right`（number，必填）：右边界。
+- `relativeRect.top`（number，必填）：上边界。
+- `relativeRect.bottom`（number，必填）：下边界。
+- `intersectionRect`（object，必填）：相交区域的边界。
+- `intersectionRect.left`（number，必填）：左边界。
+- `intersectionRect.right`（number，必填）：右边界。
+- `intersectionRect.top`（number，必填）：上边界。
+- `intersectionRect.bottom`（number，必填）：下边界。
+- `intersectionRatio`（number，必填）：相交比例。
+- `boundingClientRect`（object，必填）：目标边界。
+- `boundingClientRect.left`（number，必填）：左边界。
+- `boundingClientRect.right`（number，必填）：右边界。
+- `boundingClientRect.top`（number，必填）：上边界。
+- `boundingClientRect.bottom`（number，必填）：下边界。
 
 ## **示例****代码**
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "历史文档（不推荐） > Stream推送 > 智能硬件事件 > 智能硬件绑定"
 doc_id: "vjX6bJXbX2"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-10-16 14:32:43"
 ---
 
 > Source: https://open.dingtalk.com/document/development/smart-hardware-binding-stream
 > Path: 应用开发 / 事件订阅 / 历史文档（不推荐） > Stream推送 > 智能硬件事件 > 智能硬件绑定
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-10-16 14:32:43
 
 # 智能硬件绑定
 
@@ -38,7 +38,32 @@ eventType为device\_bind\_update，表示企业发生硬件设备绑定变更时
 
 ### header部分
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+
 ### data部分(事件业务信息)
+
+### 字段说明
+
+- `actionType`（string）：- bind：绑定  
+  - unbind：解绑
+- `corpId`（string）：企业的corpid。
+- `outBindStatus`（string）：外部的绑定状态， ok 表示成功，其他表示失败
+- `dn`（string）：设备序列号。
+- `pk`（string）：productKey，产品类型编码。
+- `sn`（string）：设备序列号。
+- `nodeType`（integer）：节点类型：  
+  - 0： 节点  
+  - 1：网关
+- `serviceId`（integer）：服务serviceId。
+- `userId`（string）：操作人userId。
+- `deviceId`（integer）：设备ID。
+- `eventTimestamp`（long）：操作时间。
 
 ### **事件体数据示例如下:**
 

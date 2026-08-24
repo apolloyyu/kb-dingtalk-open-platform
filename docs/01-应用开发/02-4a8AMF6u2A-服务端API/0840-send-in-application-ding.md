@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "专属钉钉 > DING > DING服务"
 doc_id: "rQ0CAeBIdF"
-updated_at: "2025-09-23 19:20:00"
+updated_at: "2026-06-04 19:09:57"
 ---
 
 > Source: https://open.dingtalk.com/document/development/send-in-application-ding
 > Path: 应用开发 / 服务端API / 专属钉钉 > DING > DING服务
-> Updated: 2025-09-23 19:20:00
+> Updated: 2026-06-04 19:09:57
 
 # DING服务
 

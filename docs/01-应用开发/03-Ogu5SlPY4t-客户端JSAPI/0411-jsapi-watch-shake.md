@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > 摇一摇 > watchShake"
 doc_id: "PnmnKiKza1"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:08:05"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-watch-shake
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > 摇一摇 > watchShake
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:08:05
 
 # watchShake
 
@@ -41,7 +41,11 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `frequency`（number，必填）：采样间隔(毫秒)，指每隔多长时间对加速度进行一次采样， 然后对比前后变化，判断是否触发shake。
+- `sensitivity`（number，必填）：振动幅度，加速度变化超过这个值后触发shake。
+- `callbackDelay`（number，必填）：触发『摇一摇』后的等待时间(毫秒)，防止频繁调用。
 
 ## **返回结果**
 

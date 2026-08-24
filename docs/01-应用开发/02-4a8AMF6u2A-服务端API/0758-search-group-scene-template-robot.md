@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "即时通信 > 会话管理 > 场景群 > 群管理 > 查询场景群内群模板机器人"
 doc_id: "AC6kVRH98Y"
-updated_at: "2025-09-12 17:18:35"
+updated_at: "2026-08-14 09:42:01"
 ---
 
 > Source: https://open.dingtalk.com/document/development/search-group-scene-template-robot
 > Path: 应用开发 / 服务端API / 即时通信 > 会话管理 > 场景群 > 群管理 > 查询场景群内群模板机器人
-> Updated: 2025-09-12 17:18:35
+> Updated: 2026-08-14 09:42:01
 
 # 查询场景群内群模板机器人
 

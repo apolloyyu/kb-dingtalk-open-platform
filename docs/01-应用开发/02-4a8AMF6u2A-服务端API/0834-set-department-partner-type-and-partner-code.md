@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "专属钉钉 > 产业互联 > 设置部门伙伴类型和伙伴编码"
 doc_id: "lj2WVTysYg"
-updated_at: "2025-09-23 19:19:56"
+updated_at: "2026-06-02 19:14:51"
 ---
 
 > Source: https://open.dingtalk.com/document/development/set-department-partner-type-and-partner-code
 > Path: 应用开发 / 服务端API / 专属钉钉 > 产业互联 > 设置部门伙伴类型和伙伴编码
-> Updated: 2025-09-23 19:19:56
+> Updated: 2026-06-02 19:14:51
 
 # 设置部门伙伴类型和伙伴编码
 

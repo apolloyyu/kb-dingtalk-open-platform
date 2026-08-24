@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "组织大脑 > 数据集成 > 经历与档案 > 数据集成培训学习记录同步"
 doc_id: "Jat6FXihhT"
-updated_at: "2025-09-12 17:19:39"
+updated_at: "2026-06-02 19:28:36"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-hrbrainimporttraining
 > Path: 应用开发 / 服务端API / 组织大脑 > 数据集成 > 经历与档案 > 数据集成培训学习记录同步
-> Updated: 2025-09-12 17:19:39
+> Updated: 2026-06-02 19:28:36
 
 # 数据集成培训学习记录同步
 

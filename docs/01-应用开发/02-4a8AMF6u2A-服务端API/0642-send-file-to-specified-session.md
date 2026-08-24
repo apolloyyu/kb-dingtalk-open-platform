@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 群文件 > 发送文件到指定会话"
 doc_id: "qt6XJ3BkdB"
-updated_at: "2025-09-12 17:20:11"
+updated_at: "2026-06-04 10:16:41"
 ---
 
 > Source: https://open.dingtalk.com/document/development/send-file-to-specified-session
 > Path: 应用开发 / 服务端API / 文档/文件 > 群文件 > 发送文件到指定会话
-> Updated: 2025-09-12 17:20:11
+> Updated: 2026-06-04 10:16:41
 
 # 发送文件到指定会话
 

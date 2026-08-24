@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 暗黑模式 > getColorSchemeSync"
 doc_id: "3tX3NqQAiN"
-updated_at: "2023-10-11"
+updated_at: "2025-08-27 18:06:20"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-get-color-scheme-sync
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 暗黑模式 > getColorSchemeSync
-> Updated: 2023-10-11
+> Updated: 2025-08-27 18:06:20
 
 # getColorSchemeSync
 

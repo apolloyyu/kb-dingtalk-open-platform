@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "AI 表格 > 字段 > 更新字段"
 doc_id: "8qrDyKmnpE"
-updated_at: "2025-09-12 17:20:55"
+updated_at: "2026-08-19 09:07:47"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-noatable-updatefield
 > Path: 应用开发 / 服务端API / AI 表格 > 字段 > 更新字段
-> Updated: 2025-09-12 17:20:55
+> Updated: 2026-08-19 09:07:47
 
 # 更新字段
 

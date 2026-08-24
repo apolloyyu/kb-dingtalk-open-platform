@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 行业开放 > 新教育 > 高校通迅录 > 获取组织单元详情"
 doc_id: "fhIjVnofI3"
-updated_at: "2025-09-23 19:23:29"
+updated_at: "2026-06-04 14:18:34"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-getcollegecontactdeptdetail
 > Path: 应用开发 / 服务端API / 行业与生态 > 行业开放 > 新教育 > 高校通迅录 > 获取组织单元详情
-> Updated: 2025-09-23 19:23:29
+> Updated: 2026-06-04 14:18:34
 
 # 获取组织单元详情
 

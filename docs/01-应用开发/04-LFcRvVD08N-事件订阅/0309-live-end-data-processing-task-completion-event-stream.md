@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "历史文档（不推荐） > Stream推送 > 直播事件 > 直播结束数据处理完成事件"
 doc_id: "iCG531OjBt"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-10-16 14:32:25"
 ---
 
 > Source: https://open.dingtalk.com/document/development/live-end-data-processing-task-completion-event-stream
 > Path: 应用开发 / 事件订阅 / 历史文档（不推荐） > Stream推送 > 直播事件 > 直播结束数据处理完成事件
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-10-16 14:32:25
 
 # 直播结束数据处理完成事件
 
@@ -38,7 +38,20 @@ eventType为live\_statistic\_done\_event，表示直播结束数据处理任务�
 
 ### header部分
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+
 ### data部分(事件业务信息)
+
+### 字段说明
+
+- `finishTime`（long）：数据处理完成时间。
+- `liveId`（string）：直播id。
 
 ### **事件体数据示例如下:**
 

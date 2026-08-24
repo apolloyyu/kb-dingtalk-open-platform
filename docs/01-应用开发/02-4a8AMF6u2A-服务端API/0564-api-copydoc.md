@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 知识库 > 知识库目录树管理 > 复制文档"
 doc_id: "Cb7CJKB51v"
-updated_at: "2025-09-24 20:27:50"
+updated_at: "2026-06-03 10:13:07"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-copydoc
 > Path: 应用开发 / 服务端API / 文档/文件 > 知识库 > 知识库目录树管理 > 复制文档
-> Updated: 2025-09-24 20:27:50
+> Updated: 2026-06-03 10:13:07
 
 # 复制文档
 

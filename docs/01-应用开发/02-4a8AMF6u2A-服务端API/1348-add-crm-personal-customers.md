@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "更多开放 > 客户管理（官方CRM） > 客户 > 创建个人或企业客户数据"
 doc_id: "fia6DqmBDd"
-updated_at: "2025-10-09 18:06:03"
+updated_at: "2026-06-04 19:12:05"
 ---
 
 > Source: https://open.dingtalk.com/document/development/add-crm-personal-customers
 > Path: 应用开发 / 服务端API / 更多开放 > 客户管理（官方CRM） > 客户 > 创建个人或企业客户数据
-> Updated: 2025-10-09 18:06:03
+> Updated: 2026-06-04 19:12:05
 
 # 创建个人或企业客户数据
 

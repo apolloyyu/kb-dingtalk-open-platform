@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "Teambition 项目管理 > 任务 > 项目任务 > 获取任务详情"
 doc_id: "63nyYsLGSB"
-updated_at: "2025-10-09 18:06:40"
+updated_at: "2026-06-03 09:26:03"
 ---
 
 > Source: https://open.dingtalk.com/document/development/get-task-details
 > Path: 应用开发 / 服务端API / Teambition 项目管理 > 任务 > 项目任务 > 获取任务详情
-> Updated: 2025-10-09 18:06:40
+> Updated: 2026-06-03 09:26:03
 
 # 获取任务详情
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 画布 > CanvasContext.moveTo"
 doc_id: "hnddE1lP1Y"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:05:37"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-canvas-context-move-to
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 画布 > CanvasContext.moveTo
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:05:37
 
 # CanvasContext.moveTo
 
@@ -43,13 +43,18 @@ updated_at: "2023-08-08"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `x`（number，必填）：目标位置 x 坐标。
+- `y`（number，必填）：目标位置 y 坐标。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+（object）
 
 ## **示例****代码**
 

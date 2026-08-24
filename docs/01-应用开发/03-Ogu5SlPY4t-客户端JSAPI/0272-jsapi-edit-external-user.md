@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "通讯录 > editExternalUser"
 doc_id: "ERs7pY9hM1"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:08:46"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-edit-external-user
 > Path: 应用开发 / 客户端JSAPI / 通讯录 > editExternalUser
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:08:46
 
 # editExternalUser
 
@@ -43,13 +43,33 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `title`（string）：编辑页面的标题。
+- `emplId`（string）：需要编辑的外部联系人的userId；不填，则为新增外部联系人。
+- `name`（string）：需要新增的外部联系人的名字。
+- `mobile`（string）：需要预填的手机号。
+- `companyName`（string）：需要预填的公司名。
+- `deptName`（string）：预填部门名字。
+- `job`（string）：预填职位。
+- `remark`（string）：备注信息。
+- `corpId`（string）：企业corpId。  
+    
+  > H5应用必填。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `userId`（string）：外部联系人的userId。
+- `name`（string）：外部联系人的姓名。
+- `mobile`（string）：外部联系人的电话。
+- `companyName`（string）：外部联系人的的公司名。
+- `deptName`（string）：外部联系人的部门。
+- `job`（string）：外部联系人的职位。
+- `remark`（string）：外部联系人的备注信息。
 
 ## **示例****代码**
 

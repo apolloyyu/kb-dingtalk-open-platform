@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "宜搭 > 流程 > 批量获取流程实例列表"
 doc_id: "ZvYdvVNCFR"
-updated_at: "2026-04-24 14:14:22"
+updated_at: "2026-06-03 10:11:41"
 ---
 
 > Source: https://open.dingtalk.com/document/development/queries-multiple-process-instances
 > Path: 应用开发 / 服务端API / 宜搭 > 流程 > 批量获取流程实例列表
-> Updated: 2026-04-24 14:14:22
+> Updated: 2026-06-03 10:11:41
 
 # 批量获取流程实例列表
 

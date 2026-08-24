@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 高级版专享接口 > 数据表单 > 表单模板 > 创建或更新数据表单模板"
 doc_id: "3SXrx7U5DH"
-updated_at: "2025-09-11 21:04:43"
+updated_at: "2026-06-03 10:13:02"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-premiumsaveform
 > Path: 应用开发 / 服务端API / OA 审批 > 高级版专享接口 > 数据表单 > 表单模板 > 创建或更新数据表单模板
-> Updated: 2025-09-11 21:04:43
+> Updated: 2026-06-03 10:13:02
 
 # 创建或更新数据表单模板
 

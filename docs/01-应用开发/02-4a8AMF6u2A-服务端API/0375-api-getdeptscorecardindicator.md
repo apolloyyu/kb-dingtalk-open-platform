@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "Agoal > 计分卡 > 获取Agoal指定部门下的计分卡维度和指标id"
 doc_id: "APsgxI3p3U"
-updated_at: "2025-11-06 14:21:10"
+updated_at: "2026-06-04 19:09:00"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-getdeptscorecardindicator
 > Path: 应用开发 / 服务端API / Agoal > 计分卡 > 获取Agoal指定部门下的计分卡维度和指标id
-> Updated: 2025-11-06 14:21:10
+> Updated: 2026-06-04 19:09:00
 
 # 获取Agoal指定部门下的计分卡维度和指标id
 

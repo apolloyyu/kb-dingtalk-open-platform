@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 画布 > CanvasContext.closePath"
 doc_id: "NSgFaxzJsj"
-updated_at: "2023-10-11"
+updated_at: "2025-08-27 18:05:31"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-canvas-context-close-path
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 画布 > CanvasContext.closePath
-> Updated: 2023-10-11
+> Updated: 2025-08-27 18:05:31
 
 # CanvasContext.closePath
 
@@ -48,7 +48,9 @@ updated_at: "2023-10-11"
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+（object）
 
 ## **示例****代码**
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "历史文档（不推荐） > Stream推送 > 应用市场事件 > 应用开通记录的回调信息"
 doc_id: "ALxuTSUYHa"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-12-08 15:14:14"
 ---
 
 > Source: https://open.dingtalk.com/document/development/callback-information-activation-record-event-subscription-application
 > Path: 应用开发 / 事件订阅 / 历史文档（不推荐） > Stream推送 > 应用市场事件 > 应用开通记录的回调信息
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-12-08 15:14:14
 
 # 应用开通记录的回调信息
 
@@ -52,7 +52,33 @@ eventType为goods\_tryout，表示商品操作事件，具体数据是应用开�
 
 ### header部分
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+
 ### data部分(事件业务信息)
+
+### 字段说明
+
+- `suiteId`（long）：第三方企业应用的ID。
+- `itemType`（string）：开通的规格类型：  
+  - charge\_goods\_free\_item：付费商品的免费规格  
+  - charge\_item: 付费规格  
+  >当开通付费商品的免费规格/付费规格时会返回该字段。
+- `corpId`（string）：开通第三方企业应用的企业corpid。
+- `endDate`（string）：结束时间。
+- `userid`（string）：下单人userid。
+- `fromDate`（string）：开始时间。
+- `buyerUnionId`（string）：系统生成，固定值不会改变，可用来识别下单人。
+- `appId`（long）：应用ID。
+- `tryoutType`（string）：开通类型：  
+  - personal\_tryout：个人开通  
+  - enterprise\_tryout：企业开通（管理员）
+- `goodsCode`（string）：商品码。
 
 ### **事件体数据示例如下:**
 

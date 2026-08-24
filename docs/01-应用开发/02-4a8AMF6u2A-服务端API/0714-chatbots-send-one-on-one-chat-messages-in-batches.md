@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "即时通信 > 机器人 > 发送普通消息 > 批量发送人与机器人会话中机器人消息"
 doc_id: "yeB1dR8qqc"
-updated_at: "2026-04-22 20:36:59"
+updated_at: "2026-07-14 09:29:36"
 ---
 
 > Source: https://open.dingtalk.com/document/development/chatbots-send-one-on-one-chat-messages-in-batches
 > Path: 应用开发 / 服务端API / 即时通信 > 机器人 > 发送普通消息 > 批量发送人与机器人会话中机器人消息
-> Updated: 2026-04-22 20:36:59
+> Updated: 2026-07-14 09:29:36
 
 # 批量发送人与机器人会话中机器人消息
 

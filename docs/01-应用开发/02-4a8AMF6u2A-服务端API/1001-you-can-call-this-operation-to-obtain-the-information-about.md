@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "钉钉工作台 > 获取工作台插件检验的规则信息"
 doc_id: "zoOzSNcfEX"
-updated_at: "2025-09-11 21:03:45"
+updated_at: "2026-06-02 19:48:42"
 ---
 
 > Source: https://open.dingtalk.com/document/development/you-can-call-this-operation-to-obtain-the-information-about
 > Path: 应用开发 / 服务端API / 钉钉工作台 > 获取工作台插件检验的规则信息
-> Updated: 2025-09-11 21:03:45
+> Updated: 2026-06-02 19:48:42
 
 # 获取工作台插件检验的规则信息
 

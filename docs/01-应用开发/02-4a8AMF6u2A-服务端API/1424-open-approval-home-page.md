@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "更多开放 > AppLink协议 > 已支持的协议 > 打开审批首页"
 doc_id: "DfXOy5syb6"
-updated_at: "2022-12-28"
+updated_at: "2026-07-21 09:26:26"
 ---
 
 > Source: https://open.dingtalk.com/document/development/open-approval-home-page
 > Path: 应用开发 / 服务端API / 更多开放 > AppLink协议 > 已支持的协议 > 打开审批首页
-> Updated: 2022-12-28
+> Updated: 2026-07-21 09:26:26
 
 # 打开审批首页
 

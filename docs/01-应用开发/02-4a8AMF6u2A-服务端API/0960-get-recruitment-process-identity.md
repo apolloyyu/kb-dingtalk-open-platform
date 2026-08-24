@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "智能招聘 > 获取招聘流程标识"
 doc_id: "juUM4rHhHy"
-updated_at: "2025-09-12 17:19:05"
+updated_at: "2026-06-04 19:10:35"
 ---
 
 > Source: https://open.dingtalk.com/document/development/get-recruitment-process-identity
 > Path: 应用开发 / 服务端API / 智能招聘 > 获取招聘流程标识
-> Updated: 2025-09-12 17:19:05
+> Updated: 2026-06-04 19:10:35
 
 # 获取招聘流程标识
 

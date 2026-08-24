@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > 网络状态 > getWifiHotspotStatus"
 doc_id: "ZAGYMoCENJ"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:07:34"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-get-wifi-hotspot-status
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > 网络状态 > getWifiHotspotStatus
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:07:34
 
 # getWifiHotspotStatus
 
@@ -47,7 +47,10 @@ updated_at: "2024-12-04"
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `ssid`（string，必填）：热点ssid。
+- `macIp`（string，必填）：热点mac地址。
 
 ## **示例****代码**
 

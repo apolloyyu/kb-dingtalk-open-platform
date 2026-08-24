@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "更多开放 > 客户管理（官方CRM） > 客户 > 批量获取个人或企业客户数据"
 doc_id: "BcJ5GXur9r"
-updated_at: "2025-10-09 18:06:07"
+updated_at: "2026-06-04 19:12:08"
 ---
 
 > Source: https://open.dingtalk.com/document/development/acquire-crm-individual-customers-in-batches
 > Path: 应用开发 / 服务端API / 更多开放 > 客户管理（官方CRM） > 客户 > 批量获取个人或企业客户数据
-> Updated: 2025-10-09 18:06:07
+> Updated: 2026-06-04 19:12:08
 
 # 批量获取个人或企业客户数据
 

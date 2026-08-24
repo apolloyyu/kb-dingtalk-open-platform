@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "音视频 > 智能会议室 > 自定义屏幕模板 > 查询自定义屏幕模板列表"
 doc_id: "shEdk9nDa7"
-updated_at: "2025-12-05 17:54:13"
+updated_at: "2026-06-02 13:18:24"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-querylistdevicecustomscreentemplate
 > Path: 应用开发 / 服务端API / 音视频 > 智能会议室 > 自定义屏幕模板 > 查询自定义屏幕模板列表
-> Updated: 2025-12-05 17:54:13
+> Updated: 2026-06-02 13:18:24
 
 # 查询自定义屏幕模板列表
 

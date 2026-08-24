@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 存储管理 > 文件管理 > 获取文件或文件夹列表"
 doc_id: "SDdLWa7D1P"
-updated_at: "2025-12-08 12:59:03"
+updated_at: "2026-06-02 18:49:01"
 ---
 
 > Source: https://open.dingtalk.com/document/development/get-a-list-of-files-or-folders
 > Path: 应用开发 / 服务端API / 文档/文件 > 存储管理 > 文件管理 > 获取文件或文件夹列表
-> Updated: 2025-12-08 12:59:03
+> Updated: 2026-06-02 18:49:01
 
 # 获取文件或文件夹列表
 

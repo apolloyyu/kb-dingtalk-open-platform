@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "宜搭 > 表单 > 批量获取表单实例数据"
 doc_id: "YZ9lfkiMvC"
-updated_at: "2026-04-24 14:14:28"
+updated_at: "2026-06-03 10:11:48"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-multiple-form-instance-data
 > Path: 应用开发 / 服务端API / 宜搭 > 表单 > 批量获取表单实例数据
-> Updated: 2026-04-24 14:14:28
+> Updated: 2026-06-03 10:11:48
 
 # 批量获取表单实例数据
 

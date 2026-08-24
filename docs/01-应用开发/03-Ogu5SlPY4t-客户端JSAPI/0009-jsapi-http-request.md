@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 网络 > 发网络请求 > httpRequest"
 doc_id: "zptTnxvzKn"
-updated_at: "2023-08-11"
+updated_at: "2025-08-27 18:07:18"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-http-request
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 网络 > 发网络请求 > httpRequest
-> Updated: 2023-08-11
+> Updated: 2025-08-27 18:07:18
 
 # httpRequest
 
@@ -41,13 +41,24 @@ updated_at: "2023-08-11"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `url`（string，必填）：目标服务器url。
+- `data`（object）：请求参数。
+- `timeout`（number）：超时时间，单位ms，默认30000。
+- `dataType`（string）：期望返回的数据格式，默认json，支持json、text、base64。
+- `headers`（object）：设置请求的 HTTP 头，默认 {'Content-Type': 'application/x-www-form-urlencoded'}。
+- `method`（string）：默认GET，目前支持GET和POST。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `data`（string，必填）：响应数据，格式取决于请求时的 dataType 参数。
+- `status`（number，必填）：响应码。
+- `headers`（object，必填）：响应头。
 
 ## **错误码**
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > 拨打电话 > addPhoneContact"
 doc_id: "8WgOnPD1e6"
-updated_at: "2023-08-16"
+updated_at: "2025-08-27 18:08:10"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-add-phone-contact
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > 拨打电话 > addPhoneContact
-> Updated: 2023-08-16
+> Updated: 2025-08-27 18:08:10
 
 # addPhoneContact
 
@@ -43,13 +43,22 @@ updated_at: "2023-08-16"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `name`（string，必填）：姓名。
+- `email`（string）：电子邮件。
+- `remark`（string）：备注。
+- `address`（string）：联系地址。
+- `phoneNumber`（string，必填）：手机号。
+- `photoFilePath`（string）：头像本地文件路径。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `success`（boolean，必填）：是否添加成功。
 
 ## **示例****代码**
 

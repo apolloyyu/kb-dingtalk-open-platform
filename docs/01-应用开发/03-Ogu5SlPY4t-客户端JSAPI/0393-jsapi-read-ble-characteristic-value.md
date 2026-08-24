@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > 蓝牙 > 低功耗蓝牙 > readBLECharacteristicValue"
 doc_id: "VfyFug0Uss"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:07:52"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-read-ble-characteristic-value
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > 蓝牙 > 低功耗蓝牙 > readBLECharacteristicValue
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:07:52
 
 # readBLECharacteristicValue
 
@@ -45,13 +45,21 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `deviceId`（string，必填）：蓝牙设备 ID。Android 上为设备 MAC 地址，iOS 上为设备 UUID。
+- `serviceId`（string，必填）：蓝牙特征值对应 service 的 uuid。
+- `characteristicId`（string，必填）：蓝牙特征值的 uuid。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `characteristicId`（string，必填）：蓝牙设备特征值的 uuid。
+- `serviceId`（string，必填）：蓝牙设备特征值对应服务的 uuid。
+- `value`（string，必填）：蓝牙设备特征值的value。
 
 ## **示例****代码**
 

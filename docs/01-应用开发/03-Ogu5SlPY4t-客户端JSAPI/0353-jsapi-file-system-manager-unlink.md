@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "文件存储 > 文件 > FileSystemManager.unlink"
 doc_id: "nrpMd78ztT"
-updated_at: "2023-08-11"
+updated_at: "2025-08-27 18:08:32"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-file-system-manager-unlink
 > Path: 应用开发 / 客户端JSAPI / 文件存储 > 文件 > FileSystemManager.unlink
-> Updated: 2023-08-11
+> Updated: 2025-08-27 18:08:32
 
 # FileSystemManager.unlink
 
@@ -41,13 +41,17 @@ updated_at: "2023-08-11"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `filePath`（string，必填）：本地用户文件路径。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `success`（boolean，必填）：成功删除本地用户文件时，返回true。
 
 ## **示例****代码**
 

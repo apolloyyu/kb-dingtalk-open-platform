@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "多媒体 > 视频 > VideoContext.requestFullScreen"
 doc_id: "azGt3ylcjN"
-updated_at: "2023-08-11"
+updated_at: "2025-08-27 18:06:52"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-video-context-request-full-screen
 > Path: 应用开发 / 客户端JSAPI / 多媒体 > 视频 > VideoContext.requestFullScreen
-> Updated: 2023-08-11
+> Updated: 2025-08-27 18:06:52
 
 # VideoContext.requestFullScreen
 

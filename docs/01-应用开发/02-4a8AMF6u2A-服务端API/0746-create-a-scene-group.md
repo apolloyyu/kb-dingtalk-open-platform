@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "即时通信 > 会话管理 > 场景群 > 群管理 > 创建场景群"
 doc_id: "BxFNKyJ1tp"
-updated_at: "2026-05-10 01:00:53"
+updated_at: "2026-06-10 18:24:18"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-a-scene-group
 > Path: 应用开发 / 服务端API / 即时通信 > 会话管理 > 场景群 > 群管理 > 创建场景群
-> Updated: 2026-05-10 01:00:53
+> Updated: 2026-06-10 18:24:18
 
 # 创建场景群
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 高级版专享接口 > 官方 OA 审批 > 审批实例 > 获取审批表单控件字段内容修改记录"
 doc_id: "Kccyup3xPu"
-updated_at: "2025-09-11 21:04:27"
+updated_at: "2026-06-03 10:12:48"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-premiumgetfieldmodifiedhistory
 > Path: 应用开发 / 服务端API / OA 审批 > 高级版专享接口 > 官方 OA 审批 > 审批实例 > 获取审批表单控件字段内容修改记录
-> Updated: 2025-09-11 21:04:27
+> Updated: 2026-06-03 10:12:48
 
 # 获取审批表单控件字段内容修改记录
 

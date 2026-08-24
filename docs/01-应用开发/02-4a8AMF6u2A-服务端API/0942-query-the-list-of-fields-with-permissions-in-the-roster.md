@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "智能人事 > 花名册 > 查询花名册中有权限的字段列表"
 doc_id: "ShGePqnuem"
-updated_at: "2025-09-12 17:18:55"
+updated_at: "2026-06-04 19:10:25"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-the-list-of-fields-with-permissions-in-the-roster
 > Path: 应用开发 / 服务端API / 智能人事 > 花名册 > 查询花名册中有权限的字段列表
-> Updated: 2025-09-12 17:18:55
+> Updated: 2026-06-04 19:10:25
 
 # 查询花名册中有权限的字段列表
 

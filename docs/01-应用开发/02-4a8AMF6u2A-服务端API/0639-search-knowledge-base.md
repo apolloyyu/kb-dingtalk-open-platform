@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 搜索 > 搜索知识库"
 doc_id: "yjjlgU4F9Q"
-updated_at: "2025-09-12 17:20:32"
+updated_at: "2026-06-04 19:09:28"
 ---
 
 > Source: https://open.dingtalk.com/document/development/search-knowledge-base
 > Path: 应用开发 / 服务端API / 文档/文件 > 搜索 > 搜索知识库
-> Updated: 2025-09-12 17:20:32
+> Updated: 2026-06-04 19:09:28
 
 # 搜索知识库
 

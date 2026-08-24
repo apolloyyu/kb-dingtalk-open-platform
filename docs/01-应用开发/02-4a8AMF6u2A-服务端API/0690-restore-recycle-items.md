@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 存储管理 > 回收站管理 > 还原回收项"
 doc_id: "PBBQAjKjRP"
-updated_at: "2025-09-23 19:17:46"
+updated_at: "2026-06-04 19:09:44"
 ---
 
 > Source: https://open.dingtalk.com/document/development/restore-recycle-items
 > Path: 应用开发 / 服务端API / 文档/文件 > 存储管理 > 回收站管理 > 还原回收项
-> Updated: 2025-09-23 19:17:46
+> Updated: 2026-06-04 19:09:44
 
 # 还原回收项
 

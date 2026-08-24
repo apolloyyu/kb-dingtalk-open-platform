@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "音视频 > 会议 > 查询预约会议"
 doc_id: "eK8zwHThXa"
-updated_at: "2025-09-11 21:03:04"
+updated_at: "2026-06-02 12:08:30"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-meeting-reservation
 > Path: 应用开发 / 服务端API / 音视频 > 会议 > 查询预约会议
-> Updated: 2025-09-11 21:03:04
+> Updated: 2026-06-02 12:08:30
 
 # 查询预约会议
 

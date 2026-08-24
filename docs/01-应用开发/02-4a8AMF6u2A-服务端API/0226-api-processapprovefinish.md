@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "考勤 > 假勤审批 > 通知审批通过"
 doc_id: "Cyq6WFJlau"
-updated_at: "2026-04-15 11:41:32"
+updated_at: "2026-06-02 09:24:51"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-processapprovefinish
 > Path: 应用开发 / 服务端API / 考勤 > 假勤审批 > 通知审批通过
-> Updated: 2026-04-15 11:41:32
+> Updated: 2026-06-02 09:24:51
 
 # 通知审批通过
 

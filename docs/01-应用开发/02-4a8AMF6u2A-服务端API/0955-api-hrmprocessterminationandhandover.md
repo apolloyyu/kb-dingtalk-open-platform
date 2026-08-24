@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "智能人事 > 员工关系 > 确认员工离职并删除"
 doc_id: "I90rGNabkk"
-updated_at: "2025-09-12 17:19:02"
+updated_at: "2026-06-04 19:10:31"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-hrmprocessterminationandhandover
 > Path: 应用开发 / 服务端API / 智能人事 > 员工关系 > 确认员工离职并删除
-> Updated: 2025-09-12 17:19:02
+> Updated: 2026-06-04 19:10:31
 
 # 确认员工离职并删除
 

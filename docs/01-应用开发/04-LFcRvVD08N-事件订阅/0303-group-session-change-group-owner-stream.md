@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "历史文档（不推荐） > Stream推送 > 群会话变更事件 > 群会话更换群主"
 doc_id: "RlJvcGyK4b"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-10-16 14:32:21"
 ---
 
 > Source: https://open.dingtalk.com/document/development/group-session-change-group-owner-stream
 > Path: 应用开发 / 事件订阅 / 历史文档（不推荐） > Stream推送 > 群会话变更事件 > 群会话更换群主
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-10-16 14:32:21
 
 # 群会话更换群主
 
@@ -38,7 +38,23 @@ updated_at: "2022-01-19 19:29:22"
 
 ### header部分
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+
 ### data部分(事件业务信息)
+
+### 字段说明
+
+- `owner`（string）：已经更新的新的群主的userid。
+- `timeStamp`（long）：时间戳。
+- `corpId`（string）：发生群会话变更的企业。
+- `operatorUnionId`（string）：操作者unionId。
+- `openConversationId`（string）：群会话ID。
 
 ### **事件体数据示例如下:**
 

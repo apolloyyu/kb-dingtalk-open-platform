@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 存储管理 > 应用管理 > 获取应用信息"
 doc_id: "i3ZTw2pyx7"
-updated_at: "2025-09-12 17:20:33"
+updated_at: "2026-06-04 19:09:30"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtains-the-information-about-the-current-application
 > Path: 应用开发 / 服务端API / 文档/文件 > 存储管理 > 应用管理 > 获取应用信息
-> Updated: 2025-09-12 17:20:33
+> Updated: 2026-06-04 19:09:30
 
 # 获取应用信息
 

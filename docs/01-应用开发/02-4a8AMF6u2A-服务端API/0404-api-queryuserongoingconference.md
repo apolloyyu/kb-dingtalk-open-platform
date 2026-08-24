@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "音视频 > 会议 > 查询用户进行中会议列表"
 doc_id: "VZDoUqoA3d"
-updated_at: "2025-09-11 21:02:54"
+updated_at: "2026-06-02 12:02:37"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-queryuserongoingconference
 > Path: 应用开发 / 服务端API / 音视频 > 会议 > 查询用户进行中会议列表
-> Updated: 2025-09-11 21:02:54
+> Updated: 2026-06-02 12:02:37
 
 # 查询用户进行中会议列表
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 自有 OA 审批 > 流程中心任务 > 清理OA审批数据"
 doc_id: "8HoNK9SKMc"
-updated_at: "2025-09-11 21:04:18"
+updated_at: "2026-06-03 10:12:41"
 ---
 
 > Source: https://open.dingtalk.com/document/development/clear-oa-approval-data
 > Path: 应用开发 / 服务端API / OA 审批 > 自有 OA 审批 > 流程中心任务 > 清理OA审批数据
-> Updated: 2025-09-11 21:04:18
+> Updated: 2026-06-03 10:12:41
 
 # 清理OA审批数据
 

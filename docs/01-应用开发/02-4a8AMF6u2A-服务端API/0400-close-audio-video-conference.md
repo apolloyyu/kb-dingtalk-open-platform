@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "音视频 > 会议 > 关闭视频会议"
 doc_id: "7I1McLjThf"
-updated_at: "2025-09-11 21:02:51"
+updated_at: "2026-06-02 09:18:04"
 ---
 
 > Source: https://open.dingtalk.com/document/development/close-audio-video-conference
 > Path: 应用开发 / 服务端API / 音视频 > 会议 > 关闭视频会议
-> Updated: 2025-09-11 21:02:51
+> Updated: 2026-06-02 09:18:04
 
 # 关闭视频会议
 

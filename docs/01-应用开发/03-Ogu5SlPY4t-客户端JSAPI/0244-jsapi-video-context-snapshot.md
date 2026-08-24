@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "多媒体 > 视频 > VideoContext.snapshot"
 doc_id: "q0orbQ6WKA"
-updated_at: "2023-08-11"
+updated_at: "2025-08-27 18:06:54"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-video-context-snapshot
 > Path: 应用开发 / 客户端JSAPI / 多媒体 > 视频 > VideoContext.snapshot
-> Updated: 2023-08-11
+> Updated: 2025-08-27 18:06:54
 
 # VideoContext.snapshot
 
@@ -41,7 +41,9 @@ updated_at: "2023-08-11"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `quality`（string，必填）：截图，可选值 raw compressed。
 
 ## **返回结果**
 

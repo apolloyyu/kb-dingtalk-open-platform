@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "音视频 > 会议 > 全员静音或全员取消静音"
 doc_id: "566cBBu1OD"
-updated_at: "2025-09-11 21:03:01"
+updated_at: "2026-06-02 12:08:27"
 ---
 
 > Source: https://open.dingtalk.com/document/development/mute-all-staff-or-unmute-all-staff
 > Path: 应用开发 / 服务端API / 音视频 > 会议 > 全员静音或全员取消静音
-> Updated: 2025-09-11 21:03:01
+> Updated: 2026-06-02 12:08:27
 
 # 全员静音或全员取消静音
 

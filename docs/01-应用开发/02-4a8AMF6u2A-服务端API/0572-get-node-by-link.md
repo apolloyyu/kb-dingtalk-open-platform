@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 知识库 > 知识库目录树管理 > 通过链接获取节点"
 doc_id: "YOtlTX1EEa"
-updated_at: "2026-04-24 14:14:31"
+updated_at: "2026-07-15 09:29:39"
 ---
 
 > Source: https://open.dingtalk.com/document/development/get-node-by-link
 > Path: 应用开发 / 服务端API / 文档/文件 > 知识库 > 知识库目录树管理 > 通过链接获取节点
-> Updated: 2026-04-24 14:14:31
+> Updated: 2026-07-15 09:29:39
 
 # 通过链接获取节点
 

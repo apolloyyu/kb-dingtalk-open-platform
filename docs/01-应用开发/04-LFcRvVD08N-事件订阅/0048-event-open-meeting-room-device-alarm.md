@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "音视频 > 视频/音频会议 > 设备告警事件"
 doc_id: "Z6FpggqFBO"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-08-27 16:11:16"
 ---
 
 > Source: https://open.dingtalk.com/document/development/event-open-meeting-room-device-alarm
 > Path: 应用开发 / 事件订阅 / 音视频 > 视频/音频会议 > 设备告警事件
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-08-27 16:11:16
 
 # 设备告警事件
 
@@ -37,6 +37,32 @@ updated_at: "2022-01-19 19:29:22"
 
 Stream模式推送
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.ruleLevel`（integer）：告警规则等级：  
+  \* 0：普通  
+  \* 1：严重
+- `data.alarmTime`（long）：告警发生时间。
+- `data.eventStatus`（integer）：告警状态：  
+  \* 0：未处理  
+  \* 1：处理中  
+  \* 2：已解除
+- `data.eventDescription`（string）：告警说明。
+- `data.deviceUnionId`（string）：设备unionId。
+- `data.ruleKey`（string）：告警规则Key：  
+  \* device\_offline\_lwp：设备离线  
+  \* dev\_hdmi\_offline：显示器已断开连  
+  \* dev\_mic\_offline：麦克风已断开连接：  
+  \* dev\_voice\_offline：扬声器已断开连接：  
+  \* dev\_camera\_offline：摄像头已断开连接
+- `data.deviceId`（string）：设备id。
+
 ### **事件体示例**
 
 ```
@@ -59,6 +85,31 @@ Stream模式推送
 ```
 
 HTTP推送
+
+### 字段说明
+
+- `EventType`（String）：事件英文名称。
+- `EventTime`（Long）：事件发生的时间。
+- `CorpId`（String）：企业corpId。
+- `BizId`（String）：无业务意义，幂等。
+- `eventId`（String）：事件的唯一Id。
+- `ruleLevel`（integer）：告警规则等级：  
+  \* 0：普通  
+  \* 1：严重
+- `alarmTime`（long）：告警发生时间。
+- `eventStatus`（integer）：告警状态：  
+  \* 0：未处理  
+  \* 1：处理中  
+  \* 2：已解除
+- `eventDescription`（string）：告警说明。
+- `deviceUnionId`（string）：设备unionId。
+- `ruleKey`（string）：告警规则Key：  
+  \* device\_offline\_lwp：设备离线  
+  \* dev\_hdmi\_offline：显示器已断开连  
+  \* dev\_mic\_offline：麦克风已断开连接：  
+  \* dev\_voice\_offline：扬声器已断开连接：  
+  \* dev\_camera\_offline：摄像头已断开连接
+- `deviceId`（string）：设备id。
 
 ### **事件体示例**
 

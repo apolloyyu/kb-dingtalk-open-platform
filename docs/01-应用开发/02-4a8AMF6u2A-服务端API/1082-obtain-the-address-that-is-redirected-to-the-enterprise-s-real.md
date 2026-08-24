@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 生态开放 > e签宝 2.0 > 用户 > 获取跳转到企业实名的地址"
 doc_id: "rwk2w54Puq"
-updated_at: "2025-09-23 19:21:40"
+updated_at: "2026-06-04 19:11:10"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-the-address-that-is-redirected-to-the-enterprise-s-real
 > Path: 应用开发 / 服务端API / 行业与生态 > 生态开放 > e签宝 2.0 > 用户 > 获取跳转到企业实名的地址
-> Updated: 2025-09-23 19:21:40
+> Updated: 2026-06-04 19:11:10
 
 # 获取跳转到企业实名的地址
 

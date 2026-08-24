@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 生态开放 > 金智CRM > 库存 > 入库单"
 doc_id: "0BPjkr1HE4"
-updated_at: "2026-01-29 14:19:39"
+updated_at: "2026-06-02 20:01:03"
 ---
 
 > Source: https://open.dingtalk.com/document/development/add-or-edit-a-shipment-record
 > Path: 应用开发 / 服务端API / 行业与生态 > 生态开放 > 金智CRM > 库存 > 入库单
-> Updated: 2026-01-29 14:19:39
+> Updated: 2026-06-02 20:01:03
 
 # 入库单
 

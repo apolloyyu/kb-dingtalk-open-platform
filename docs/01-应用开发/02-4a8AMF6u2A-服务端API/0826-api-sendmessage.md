@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "专属钉钉 > 互动服务窗 > 消息群发 > 消息群发"
 doc_id: "xlEvnGhHPD"
-updated_at: "2025-10-29 17:04:50"
+updated_at: "2026-06-04 19:09:55"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-sendmessage
 > Path: 应用开发 / 服务端API / 专属钉钉 > 互动服务窗 > 消息群发 > 消息群发
-> Updated: 2025-10-29 17:04:50
+> Updated: 2026-06-04 19:09:55
 
 # 消息群发
 

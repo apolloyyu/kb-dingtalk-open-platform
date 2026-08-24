@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "即时通信 > 会话管理 > 场景群 > 群管理 > 更新场景群管理员"
 doc_id: "a9nGMwKy69"
-updated_at: "2026-05-10 01:06:15"
+updated_at: "2026-08-14 09:41:54"
 ---
 
 > Source: https://open.dingtalk.com/document/development/update-group-administrators
 > Path: 应用开发 / 服务端API / 即时通信 > 会话管理 > 场景群 > 群管理 > 更新场景群管理员
-> Updated: 2026-05-10 01:06:15
+> Updated: 2026-08-14 09:41:54
 
 # 更新场景群管理员
 

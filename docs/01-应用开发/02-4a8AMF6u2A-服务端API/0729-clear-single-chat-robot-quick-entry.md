@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "即时通信 > 机器人 > 快捷入口管理 > 清空单聊机器人快捷入口"
 doc_id: "7k9sc5c3fa"
-updated_at: "2025-09-12 17:18:50"
+updated_at: "2026-06-04 10:57:43"
 ---
 
 > Source: https://open.dingtalk.com/document/development/clear-single-chat-robot-quick-entry
 > Path: 应用开发 / 服务端API / 即时通信 > 机器人 > 快捷入口管理 > 清空单聊机器人快捷入口
-> Updated: 2025-09-12 17:18:50
+> Updated: 2026-06-04 10:57:43
 
 # 清空单聊机器人快捷入口
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "历史文档（不推荐） > RDS推送/SyncHTTP推送 > Teambition项目事件 > Teambiton工时变更事件"
 doc_id: "i0XQrtD6vo"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-10-16 15:06:39"
 ---
 
 > Source: https://open.dingtalk.com/document/development/teambiton-work-change-event
 > Path: 应用开发 / 事件订阅 / 历史文档（不推荐） > RDS推送/SyncHTTP推送 > Teambition项目事件 > Teambiton工时变更事件
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-10-16 15:06:39
 
 # Teambiton工时变更事件
 
@@ -38,6 +38,29 @@ updated_at: "2022-01-19 19:29:22"
 ## **事件体描述**
 
 ### 企业内部应用
+
+### data
+
+- `EventType`（String）：事件英文名称
+- `EventTime`（Long）：事件发生的时间
+- `CorpId`（String）：企业corpId
+- `BizId`（String）：无业务意义，幂等
+- `eventSubType`（string，必填）：事件子类型：  
+  \* \*\*worktime.create\*\*：工时创建  
+  \* \*\*worktime.approve\*\*：工时审批
+- `executorId`（string，必填）：工时执行人。
+- `userId`（string，必填）：操作人。
+- `taskId`（string，必填）：tb任务id。
+- `workTimeIds`（array，必填）：工时id集合。
+- `workTime`（integer，必填）：实际工时数，单位：ms。
+- `dates`（string，必填）：填报日期。
+- `approveOpenId`（string，必填）：tb侧关联ID，回写状态时入参。
+- `action`（string，必填）：触发动作：  
+    
+  \* \*\*create\*\*：创建时触发  
+  \* \*\*re-submit\*\*：再次提交
+- `created`（string，必填）：创建时间。
+- `updated`（string，必填）：更新时间。
 
 ### **事件体示例**
 
@@ -66,6 +89,30 @@ updated_at: "2022-01-19 19:29:22"
 ### 第三方企业应用(biz\_type=297)
 
 数据为RDS和SyncHTTP推送的事件体，当为RDS推送方式时，数据插入表open\_sync\_biz\_data\_medium中。
+
+### data
+
+- `corp_id`（String）：企业corp\_id
+- `biz_id`（String）：biz\_id无业务意义，幂等
+- `biz_type`（Integer）：事件bizType
+- `biz_data`（object）：事件bizData介绍
+- `biz_data.syncAction`（String）：事件英文名
+- `biz_data.eventSubType`（string）：事件子类型：  
+  \* \*\*worktime.create\*\*：工时创建  
+  \* \*\*worktime.approve\*\*：工时审批
+- `biz_data.executorId`（string）：工时执行人。
+- `biz_data.userId`（string）：操作人。
+- `biz_data.taskId`（string）：tb任务id。
+- `biz_data.workTimeIds`（array）：工时id集合。
+- `biz_data.workTime`（integer）：实际工时数，单位：ms。
+- `biz_data.dates`（string）：填报日期。
+- `biz_data.approveOpenId`（string）：tb侧关联ID，回写状态时入参。
+- `biz_data.action`（string）：触发动作：  
+    
+  \* \*\*create\*\*：创建时触发  
+  \* \*\*re-submit\*\*：再次提交
+- `biz_data.created`（string）：创建时间。
+- `biz_data.updated`（string）：更新时间。
 
 ### **biz\_data数据示例如下:**
 

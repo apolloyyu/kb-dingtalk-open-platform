@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "协同 > 日程 > 日程变更"
 doc_id: "sDgVZU4Kpa"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-08-27 16:11:01"
 ---
 
 > Source: https://open.dingtalk.com/document/development/event-calendar-event-change
 > Path: 应用开发 / 事件订阅 / 协同 > 日程 > 日程变更
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-08-27 16:11:01
 
 # 日程变更
 
@@ -37,6 +37,27 @@ updated_at: "2022-01-19 19:29:22"
 ## 事件体描述
 
 Stream模式推送
+
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.calendarEventId`（string）：发生变更的日程id。
+- `data.calendarEventUpdateTime`（long）：日程更新时间戳。
+- `data.calendarId`（string）：日历Id。
+- `data.unionIdList`（array）：本次日程变更影响的用户unionId列表。
+- `data.changeType`（string）：业务类型：  
+  \* created：创建  
+  \* updated：更新  
+  \* cancelled：取消  
+  \* deleteView：用户在自己本地删除日程
+- `data.operator`（object）：操作类型。
+- `data.operator.type`（string）：日程操作者类型。
+- `data.legacyCalendarEventId`（string）：遗留日程id。
 
 ### **事件体示例**
 
@@ -65,6 +86,26 @@ Stream模式推送
 
 HTTP推送
 
+### 字段说明
+
+- `EventType`（String）：事件英文名称。
+- `EventTime`（Long）：事件发生的时间。
+- `CorpId`（String）：企业corpId。
+- `BizId`（String）：无业务意义，幂等。
+- `eventId`（String）：事件的唯一Id。
+- `calendarEventId`（string）：发生变更的日程id。
+- `calendarEventUpdateTime`（long）：日程更新时间戳。
+- `calendarId`（string）：日历Id。
+- `unionIdList`（array）：本次日程变更影响的用户unionId列表。
+- `changeType`（string）：业务类型：  
+  \* created：创建  
+  \* updated：更新  
+  \* cancelled：取消  
+  \* deleteView：用户在自己本地删除日程
+- `operator`（object）：操作类型。
+- `operator.type`（string）：日程操作者类型。
+- `legacyCalendarEventId`（string）：遗留日程id。
+
 ### **事件体示例**
 
 ```
@@ -91,6 +132,27 @@ HTTP推送
 SyncHTTP/RDS推送
 
 为RDS推送方式时，数据插入表open\_sync\_biz\_data\_medium中。
+
+### 字段说明
+
+- `corp_id`（String）：企业corp\_id。
+- `biz_id`（String）：biz\_id无业务意义，幂等。
+- `biz_type`（Integer）：事件bizType。
+- `biz_data`（object）：事件bizData介绍。
+- `biz_data.syncAction`（String）：事件英文名。
+- `biz_data.eventId`（String）：事件的唯一Id。
+- `biz_data.calendarEventId`（string）：发生变更的日程id。
+- `biz_data.calendarEventUpdateTime`（long）：日程更新时间戳。
+- `biz_data.calendarId`（string）：日历Id。
+- `biz_data.unionIdList`（array）：本次日程变更影响的用户unionId列表。
+- `biz_data.changeType`（string）：业务类型：  
+  \* created：创建  
+  \* updated：更新  
+  \* cancelled：取消  
+  \* deleteView：用户在自己本地删除日程
+- `biz_data.operator`（object）：操作类型。
+- `biz_data.operator.type`（string）：日程操作者类型。
+- `biz_data.legacyCalendarEventId`（string）：遗留日程id。
 
 ### **biz\_data数据示例(biz\_type=100)**
 

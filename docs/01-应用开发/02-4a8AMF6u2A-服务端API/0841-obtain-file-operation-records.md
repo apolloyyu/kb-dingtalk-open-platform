@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "专属钉钉 > 文件 > 获取文件操作记录"
 doc_id: "nsckkWsAxA"
-updated_at: "2025-09-23 19:20:02"
+updated_at: "2026-06-04 19:09:58"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-file-operation-records
 > Path: 应用开发 / 服务端API / 专属钉钉 > 文件 > 获取文件操作记录
-> Updated: 2025-09-23 19:20:02
+> Updated: 2026-06-04 19:09:58
 
 # 获取文件操作记录
 

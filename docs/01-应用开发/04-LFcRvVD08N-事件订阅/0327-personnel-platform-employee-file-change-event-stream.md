@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "历史文档（不推荐） > Stream推送 > 智能人事事件 > 人事平台员工档案变动事件"
 doc_id: "V9SBaW4IOq"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-10-30 21:20:19"
 ---
 
 > Source: https://open.dingtalk.com/document/development/personnel-platform-employee-file-change-event-stream
 > Path: 应用开发 / 事件订阅 / 历史文档（不推荐） > Stream推送 > 智能人事事件 > 人事平台员工档案变动事件
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-10-30 21:20:19
 
 # 人事平台员工档案变动事件
 
@@ -38,7 +38,19 @@ eventType为hrm\_mdm\_user\_info\_change，表示人事平台员工档案变动�
 
 ### header部分
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+
 ### data部分(事件业务信息)
+
+### 字段说明
+
+- `staffId`（string）：档案发生变动的员工userId。
 
 ### **事件体数据示例如下:**
 

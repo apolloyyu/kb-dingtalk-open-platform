@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 表格 > 单元格区域 > 更新单元格区域"
 doc_id: "3nr9isYFnd"
-updated_at: "2026-04-14 09:45:31"
+updated_at: "2026-06-04 19:09:15"
 ---
 
 > Source: https://open.dingtalk.com/document/development/update-cell-properties
 > Path: 应用开发 / 服务端API / 文档/文件 > 表格 > 单元格区域 > 更新单元格区域
-> Updated: 2026-04-14 09:45:31
+> Updated: 2026-06-04 19:09:15
 
 # 更新单元格区域
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > e签宝 1.0 > 鉴权 > 取消企业授权"
 doc_id: "v4BLi13s2Y"
-updated_at: "2025-12-05 18:53:48"
+updated_at: "2026-06-23 18:10:31"
 ---
 
 > Source: https://open.dingtalk.com/document/development/e-sign-has-revoked-the-enterprise-authorization
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > e签宝 1.0 > 鉴权 > 取消企业授权
-> Updated: 2025-12-05 18:53:48
+> Updated: 2026-06-23 18:10:31
 
 # 取消企业授权
 

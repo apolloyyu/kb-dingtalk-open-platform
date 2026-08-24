@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 官方 OA 审批 > 审批表单 > 获取指定用户可见的审批表单列表"
 doc_id: "UNCZI46dqz"
-updated_at: "2025-09-11 21:03:55"
+updated_at: "2026-06-03 10:12:23"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtains-a-list-of-approval-forms-visible-to-the-specified
 > Path: 应用开发 / 服务端API / OA 审批 > 官方 OA 审批 > 审批表单 > 获取指定用户可见的审批表单列表
-> Updated: 2025-09-11 21:03:55
+> Updated: 2026-06-03 10:12:23
 
 # 获取指定用户可见的审批表单列表
 

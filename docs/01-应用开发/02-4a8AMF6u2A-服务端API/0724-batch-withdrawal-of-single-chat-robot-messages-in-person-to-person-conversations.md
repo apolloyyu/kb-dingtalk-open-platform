@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "即时通信 > 机器人 > 消息撤回 > 批量撤回人与人会话中机器人消息"
 doc_id: "4sQMa1PPDS"
-updated_at: "2025-09-12 17:18:46"
+updated_at: "2026-06-05 13:49:04"
 ---
 
 > Source: https://open.dingtalk.com/document/development/batch-withdrawal-of-single-chat-robot-messages-in-person-to-person-conversations
 > Path: 应用开发 / 服务端API / 即时通信 > 机器人 > 消息撤回 > 批量撤回人与人会话中机器人消息
-> Updated: 2025-09-12 17:18:46
+> Updated: 2026-06-05 13:49:04
 
 # 批量撤回人与人会话中机器人消息
 

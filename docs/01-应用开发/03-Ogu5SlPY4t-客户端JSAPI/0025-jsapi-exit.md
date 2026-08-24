@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 基础 > exit"
 doc_id: "P9pny0F7Qa"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:04:55"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-exit
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 基础 > exit
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:04:55
 
 # exit
 

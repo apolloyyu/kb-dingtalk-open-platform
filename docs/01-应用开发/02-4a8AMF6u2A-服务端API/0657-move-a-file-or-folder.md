@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 存储管理 > 文件管理 > 移动文件或文件夹"
 doc_id: "aoESZtXJwW"
-updated_at: "2026-03-27 18:54:28"
+updated_at: "2026-06-02 18:48:55"
 ---
 
 > Source: https://open.dingtalk.com/document/development/move-a-file-or-folder
 > Path: 应用开发 / 服务端API / 文档/文件 > 存储管理 > 文件管理 > 移动文件或文件夹
-> Updated: 2026-03-27 18:54:28
+> Updated: 2026-06-02 18:48:55
 
 # 移动文件或文件夹
 

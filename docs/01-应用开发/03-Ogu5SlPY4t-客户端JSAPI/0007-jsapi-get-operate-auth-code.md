@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "获取凭证 > getOperateAuthCode"
 doc_id: "W74JUsfTgo"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:08:51"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-get-operate-auth-code
 > Path: 应用开发 / 客户端JSAPI / 获取凭证 > getOperateAuthCode
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:08:51
 
 # getOperateAuthCode
 
@@ -43,13 +43,20 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `corpId`（string，必填）：企业的corpid。  
+    
+  > 第三方企业应用可以在微应用的首页URL中使用$CORPID$做为参数占位符，钉钉容器会将$CORPID$替换为当前访问用户的企业corpId。
+- `agentId`（string，必填）：企业内部微应用ID，可以从授权信息中获取到。必须与dd.config的agentId一致。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `code`（string，必填）：微应用反馈式操作的临时授权码，有效期5分钟，且只能使用一次，使用后会失效。
 
 ## **示例****代码**
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "钉钉快办 > 更新协作空间"
 doc_id: "brhEiS0ZvF"
-updated_at: "2025-10-09 18:07:07"
+updated_at: "2026-06-02 19:46:13"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-updateprojectv3
 > Path: 应用开发 / 服务端API / 钉钉快办 > 更新协作空间
-> Updated: 2025-10-09 18:07:07
+> Updated: 2026-06-02 19:46:13
 
 # 更新协作空间
 

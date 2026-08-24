@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > e签宝 1.0 > 签署流程 > 获取签署人签署地址"
 doc_id: "OJEMk6staq"
-updated_at: "2025-09-23 19:21:28"
+updated_at: "2026-06-23 18:10:43"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-signing-address-of-signatory-1
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > e签宝 1.0 > 签署流程 > 获取签署人签署地址
-> Updated: 2025-09-23 19:21:28
+> Updated: 2026-06-23 18:10:43
 
 # 获取签署人签署地址
 

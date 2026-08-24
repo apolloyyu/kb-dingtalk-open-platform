@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 存储管理 > 文件传输 > 获取文件下载信息"
 doc_id: "gzy5lYxgyM"
-updated_at: "2026-03-27 19:00:42"
+updated_at: "2026-06-08 12:02:08"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtains-the-download-information-about-a-file
 > Path: 应用开发 / 服务端API / 文档/文件 > 存储管理 > 文件传输 > 获取文件下载信息
-> Updated: 2026-03-27 19:00:42
+> Updated: 2026-06-08 12:02:08
 
 # 获取文件下载信息
 

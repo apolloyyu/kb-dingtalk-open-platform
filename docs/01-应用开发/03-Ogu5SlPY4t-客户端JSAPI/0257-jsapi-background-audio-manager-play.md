@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "多媒体 > 音频 > BackgroundAudioManager.play"
 doc_id: "KIFYvO117g"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:07:01"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-background-audio-manager-play
 > Path: 应用开发 / 客户端JSAPI / 多媒体 > 音频 > BackgroundAudioManager.play
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:07:01
 
 # BackgroundAudioManager.play
 

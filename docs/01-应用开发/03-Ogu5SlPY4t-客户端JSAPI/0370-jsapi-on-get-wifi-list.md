@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > Wi-Fi > onGetWifiList"
 doc_id: "E0Ekuzyvta"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:07:37"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-on-get-wifi-list
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > Wi-Fi > onGetWifiList
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:07:37
 
 # onGetWifiList
 
@@ -45,7 +45,18 @@ updated_at: "2024-12-04"
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `wifiList`（array，必填）：Wi-Fi 列表数据。
+- `wifiList[].SSID`（string，必填）：设备的 SSID。
+- `wifiList[].secure`（boolean，必填）：Wi-Fi 是否安全：  
+    
+  \* true：安全  
+    
+  \* false：不安全
+- `wifiList[].signalStrength`（number，必填）：Wi-Fi 信号强度，取值 0 ～ 100。  
+    
+  > 值越大强度越大。
 
 ## **错误码**
 

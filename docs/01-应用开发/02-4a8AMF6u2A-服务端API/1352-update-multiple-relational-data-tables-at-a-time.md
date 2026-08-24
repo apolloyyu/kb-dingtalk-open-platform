@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "更多开放 > 客户管理（官方CRM） > 客户 > 批量更新个人或企业客户数据"
 doc_id: "ToGj8sC5Uo"
-updated_at: "2025-10-09 18:06:06"
+updated_at: "2026-07-21 09:26:18"
 ---
 
 > Source: https://open.dingtalk.com/document/development/update-multiple-relational-data-tables-at-a-time
 > Path: 应用开发 / 服务端API / 更多开放 > 客户管理（官方CRM） > 客户 > 批量更新个人或企业客户数据
-> Updated: 2025-10-09 18:06:06
+> Updated: 2026-07-21 09:26:18
 
 # 批量更新个人或企业客户数据
 

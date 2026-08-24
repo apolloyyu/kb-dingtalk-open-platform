@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "多媒体 > 录音 > stopRecord"
 doc_id: "06gn7YtdFE"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:06:39"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-stop-record
 > Path: 应用开发 / 客户端JSAPI / 多媒体 > 录音 > stopRecord
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:06:39
 
 # stopRecord
 

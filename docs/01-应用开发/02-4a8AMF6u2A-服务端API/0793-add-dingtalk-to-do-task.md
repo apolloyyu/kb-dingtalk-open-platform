@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "待办任务 > 创建钉钉待办任务"
 doc_id: "H0z1RaakhS"
-updated_at: "2025-09-12 17:19:45"
+updated_at: "2026-06-04 19:09:50"
 ---
 
 > Source: https://open.dingtalk.com/document/development/add-dingtalk-to-do-task
 > Path: 应用开发 / 服务端API / 待办任务 > 创建钉钉待办任务
-> Updated: 2025-09-12 17:19:45
+> Updated: 2026-06-04 19:09:50
 
 # 创建钉钉待办任务
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 分享 > onShareAppMessage"
 doc_id: "RJXuSrJiv7"
-updated_at: "2023-11-13"
+updated_at: "2025-08-27 18:08:12"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-on-share-app-message
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 分享 > onShareAppMessage
-> Updated: 2023-11-13
+> Updated: 2025-08-27 18:08:12
 
 # onShareAppMessage
 
@@ -49,7 +49,13 @@ updated_at: "2023-11-13"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `desc`（string）：自定义分享描述。
+- `path`（string，必填）：自定义分享页面的路径，path中的自定义参数可在小程序生命周期的onLoad方法中获取（参数传递遵循http get的传参规则）。
+- `imageUrl`（string）：自定义分享图片(只支持网络图片路径)。
+- `fallbackUrl`（string）：可降级 H5 URL，仅适用于企业应用。当前钉钉桌面客户端不支持打开企业类小程序，配置此设置后，在桌面端访问此企业应用时，会打开fallbackUrl配置的H5 URL。
+- `desktopContainerType`（string）：当前只支持 "side\_panel" ，表示在 桌面端使用 side\_panel 钉钉容器打开 fallbackUrl 。需要和 fallbackUrl 配合使用。
 
 ## **返回结果**
 

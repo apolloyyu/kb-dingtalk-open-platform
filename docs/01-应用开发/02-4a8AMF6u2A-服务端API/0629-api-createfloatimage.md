@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 表格 > 浮动图片 > 创建浮动图片"
 doc_id: "mFciIl2alg"
-updated_at: "2026-04-17 15:05:09"
+updated_at: "2026-06-02 18:43:00"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-createfloatimage
 > Path: 应用开发 / 服务端API / 文档/文件 > 表格 > 浮动图片 > 创建浮动图片
-> Updated: 2026-04-17 15:05:09
+> Updated: 2026-06-02 18:43:00
 
 # 创建浮动图片
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "钉钉应用 > 版本管理 > 发布企业内部小程序版本"
 doc_id: "6fsp57hl7j"
-updated_at: "2025-09-23 19:18:55"
+updated_at: "2026-06-04 19:10:07"
 ---
 
 > Source: https://open.dingtalk.com/document/development/release-internal-applet-version
 > Path: 应用开发 / 服务端API / 钉钉应用 > 版本管理 > 发布企业内部小程序版本
-> Updated: 2025-09-23 19:18:55
+> Updated: 2026-06-04 19:10:07
 
 # 发布企业内部小程序版本
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "组织关系 > 通讯录 > 企业信息发生变更"
 doc_id: "8rihHUQZXg"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-08-28 19:46:37"
 ---
 
 > Source: https://open.dingtalk.com/document/development/enterprise-information-changes
 > Path: 应用开发 / 事件订阅 / 组织关系 > 通讯录 > 企业信息发生变更
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-08-28 19:46:37
 
 # 企业信息发生变更
 
@@ -37,6 +37,15 @@ updated_at: "2022-01-19 19:29:22"
 
 Stream模式推送
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+
 ### **事件体示例**
 
 ```
@@ -51,6 +60,14 @@ Stream模式推送
 ```
 
 HTTP推送
+
+### 字段说明
+
+- `EventType`（String）：事件英文名称。
+- `EventTime`（Long）：事件发生的时间。
+- `CorpId`（String）：企业corpId。
+- `BizId`（String）：无业务意义，幂等。
+- `eventId`（String）：事件的唯一Id。
 
 ### **事件体示例**
 

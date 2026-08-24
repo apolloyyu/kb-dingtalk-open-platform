@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > 系统信息 > isScreenReaderEnabled"
 doc_id: "5sRHpjCBdT"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:07:31"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-is-screen-reader-enabled
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > 系统信息 > isScreenReaderEnabled
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:07:31
 
 # isScreenReaderEnabled
 
@@ -45,7 +45,9 @@ updated_at: "2024-12-04"
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `screenReaderEnabled`（boolean，必填）：是否开启无障碍模式。
 
 ## **示例****代码**
 

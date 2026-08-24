@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "钉钉应用 > 版本管理 > 获取企业内部小程序的版本列表"
 doc_id: "LobzbfESdO"
-updated_at: "2026-01-22 21:31:21"
+updated_at: "2026-07-14 09:22:21"
 ---
 
 > Source: https://open.dingtalk.com/document/development/get-the-version-list-of-the-enterprise-internal-applet
 > Path: 应用开发 / 服务端API / 钉钉应用 > 版本管理 > 获取企业内部小程序的版本列表
-> Updated: 2026-01-22 21:31:21
+> Updated: 2026-07-14 09:22:21
 
 # 获取企业内部小程序的版本列表
 

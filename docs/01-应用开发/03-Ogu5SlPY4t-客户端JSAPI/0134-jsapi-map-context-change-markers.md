@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 地图 > MapContext.changeMarkers"
 doc_id: "MFlXqkWusT"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:05:53"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-map-context-change-markers
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 地图 > MapContext.changeMarkers
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:05:53
 
 # MapContext.changeMarkers
 
@@ -45,7 +45,29 @@ updated_at: "2023-08-08"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `add`（array）：需要添加的 marker 数组。
+- `add[].id`（number，必填）：标记id
+- `add[].width`（number，必填）：宽度
+- `add[].height`（number，必填）：高度
+- `add[].iconPath`（string，必填）：图标文件路径
+- `add[].latitude`（number，必填）：经度
+- `add[].longitude`（number，必填）：纬度
+- `remove`（array）：需要删除的 marker 数组。
+- `remove[].id`（number，必填）：标记id
+- `remove[].width`（number，必填）：宽度
+- `remove[].height`（number，必填）：高度
+- `remove[].iconPath`（string，必填）：图标文件路径
+- `remove[].latitude`（number，必填）：经度
+- `remove[].longitude`（number，必填）：纬度
+- `update`（array）：需要更新的 marker 数组。
+- `update[].id`（number，必填）：标记id
+- `update[].width`（number，必填）：宽度
+- `update[].height`（number，必填）：高度
+- `update[].iconPath`（string，必填）：图标文件路径
+- `update[].latitude`（number，必填）：经度
+- `update[].longitude`（number，必填）：纬度
 
 ## **返回结果**
 

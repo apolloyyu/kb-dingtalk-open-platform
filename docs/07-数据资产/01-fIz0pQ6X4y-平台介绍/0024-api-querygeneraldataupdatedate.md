@@ -7,12 +7,12 @@ group: "数据资产"
 tab: "平台介绍"
 breadcrumb: "API 参考 > 查询数据资产平台服务最新数据日期"
 doc_id: "cdr56xbXLM"
-updated_at: "2025-09-23 19:20:51"
+updated_at: "2026-06-15 10:33:48"
 ---
 
 > Source: https://open.dingtalk.com/document/dataopen/api-querygeneraldataupdatedate
 > Path: 数据资产 / 平台介绍 / API 参考 > 查询数据资产平台服务最新数据日期
-> Updated: 2025-09-23 19:20:51
+> Updated: 2026-06-15 10:33:48
 
 # 查询数据资产平台服务最新数据日期
 

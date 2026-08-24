@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 自有 OA 审批 > 审批表单 > 删除模板"
 doc_id: "Zaxj7b8xmW"
-updated_at: "2025-12-08 12:36:37"
+updated_at: "2026-06-03 10:12:37"
 ---
 
 > Source: https://open.dingtalk.com/document/development/self-owned-approval-deletion-template
 > Path: 应用开发 / 服务端API / OA 审批 > 自有 OA 审批 > 审批表单 > 删除模板
-> Updated: 2025-12-08 12:36:37
+> Updated: 2026-06-03 10:12:37
 
 # 删除模板
 

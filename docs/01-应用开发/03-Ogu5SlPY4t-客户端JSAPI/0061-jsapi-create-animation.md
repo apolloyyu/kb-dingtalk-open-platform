@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 动画 > createAnimation"
 doc_id: "AQjXHqfkcz"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:05:11"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-create-animation
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 动画 > createAnimation
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:05:11
 
 # createAnimation
 
@@ -58,7 +58,16 @@ updated_at: "2023-08-08"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `duration`（number，必填）：动画的持续时间，单位 ms。   
+  \*\*默认值\*\*：400。
+- `timeFunction`（string，必填）：定义动画的效果，有效值："linear"，"ease"，"ease-in"，"ease-in-out"，ease-out"，"step-start"，"step-end"。   
+  \*\*默认值\*\*："linear"。
+- `delay`（number，必填）：动画延迟时间，单位 ms。   
+  \*\*默认值\*\*：0。
+- `transformOrigin`（string，必填）：设置transform-origin。   
+  \*\*默认值\*\*："50"。
 
 ## **返回结果**
 

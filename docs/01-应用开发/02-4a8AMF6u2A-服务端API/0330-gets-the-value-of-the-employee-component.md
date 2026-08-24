@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "宜搭 > 表单 > 获取员工组件的值"
 doc_id: "kA3xuz0GXv"
-updated_at: "2025-10-09 18:05:38"
+updated_at: "2026-06-02 10:10:47"
 ---
 
 > Source: https://open.dingtalk.com/document/development/gets-the-value-of-the-employee-component
 > Path: 应用开发 / 服务端API / 宜搭 > 表单 > 获取员工组件的值
-> Updated: 2025-10-09 18:05:38
+> Updated: 2026-06-02 10:10:47
 
 # 获取员工组件的值
 

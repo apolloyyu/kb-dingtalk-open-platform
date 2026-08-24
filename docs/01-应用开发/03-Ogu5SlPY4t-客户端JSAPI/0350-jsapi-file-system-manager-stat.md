@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "文件存储 > 文件 > FileSystemManager.stat"
 doc_id: "HviYu1bEAu"
-updated_at: "2023-08-11"
+updated_at: "2025-08-27 18:08:31"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-file-system-manager-stat
 > Path: 应用开发 / 客户端JSAPI / 文件存储 > 文件 > FileSystemManager.stat
-> Updated: 2023-08-11
+> Updated: 2025-08-27 18:08:31
 
 # FileSystemManager.stat
 
@@ -41,13 +41,31 @@ updated_at: "2023-08-11"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `path`（string，必填）：源文件路径，可以是文件路径，也可以是目录路径。
+- `recursive`（boolean）：是否递归获取目录或文件的status对象：  
+    
+  \* true：是  
+  \* false：否
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `stats`（object，必填）：返回的stats信息。  
+    
+  > 如果path是个目录路径：   
+  > \* recursive值为false，返回的是path当前目录的status对象。   
+  > \* recursive值为true，返回的是path当前目录下所有子目录和文件的status对象。  
+    
+  > 如果path是个文件路径，recursive值为false或true，返回的都是当前文件的status对象。
+- `mode`（number，必填）：文件的类型和存储的权限。
+- `size`（number，必填）：文件大小，单位Byte。
+- `lastAccessedTime`（number，必填）：上次访问的时间戳，单位秒。
+- `lastModifiedTime`（number，必填）：上次修改时间戳，单位秒。
 
 ## **示例****代码**
 

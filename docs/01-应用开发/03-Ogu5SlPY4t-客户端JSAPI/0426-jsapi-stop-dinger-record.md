@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "DingTalk A1 > stopDingerRecord"
 doc_id: "1mcVtht3gZ"
-updated_at: "2026-02-05"
+updated_at: "2026-02-05 20:56:37"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-stop-dinger-record
 > Path: 应用开发 / 客户端JSAPI / DingTalk A1 > stopDingerRecord
-> Updated: 2026-02-05
+> Updated: 2026-02-05 20:56:37
 
 # stopDingerRecord
 
@@ -47,7 +47,9 @@ DingTalk A1 停止录音
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### fid
+
+（number）录音记录ID 示例：`12345`
 
 ## **示例****代码**
 

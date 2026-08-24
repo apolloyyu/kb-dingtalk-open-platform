@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "钉钉应用 > 应用管理 > 创建企业内部应用"
 doc_id: "OPYhzodKBE"
-updated_at: "2025-09-23 19:18:53"
+updated_at: "2026-06-03 11:44:57"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-an-h5-application-for-your-enterprise
 > Path: 应用开发 / 服务端API / 钉钉应用 > 应用管理 > 创建企业内部应用
-> Updated: 2025-09-23 19:18:53
+> Updated: 2026-06-03 11:44:57
 
 # 创建企业内部应用
 

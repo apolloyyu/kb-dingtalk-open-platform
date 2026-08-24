@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "移动支付 > pay"
 doc_id: "BQDNAbyK6Q"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:08:22"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-pay
 > Path: 应用开发 / 客户端JSAPI / 移动支付 > pay
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:08:22
 
 # pay
 
@@ -43,13 +43,20 @@ updated_at: "2023-08-08"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `info`（string，必填）：需要构建的订单信息，参考[支付宝文档](https://doc.open.alipay.com/doc2/detail.htm?spm=a219a.7629140.0.0.CKTNjZ&treeId=59&articleId=103663&docType=1)。
+- `has_alipay`（string，必填）：true表示支付串中指定了支付账号，不需要走绑定支付宝流程。 默认值：false。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `memo`（string，必填）：保留参数，一般无内容。
+- `result`（string，必填）：本次操作返回的结果数据。
+- `resultStatus`（string，必填）：本次操作的状态返回值，标识本次调用的结果，详见[客户端返回码](https://doc.open.alipay.com/doc2/detail.htm?spm=a219a.7629140.0.0.MMxZUF&treeId=59&articleId=103671&docType=1)。
 
 ## **示例****代码**
 

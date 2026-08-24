@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "钉钉应用 > 使用范围 > 更新企业内部应用的可使用范围"
 doc_id: "XiNPty8ODR"
-updated_at: "2026-01-22 21:31:53"
+updated_at: "2026-07-14 09:22:23"
 ---
 
 > Source: https://open.dingtalk.com/document/development/update-the-visible-range-of-micro-applications
 > Path: 应用开发 / 服务端API / 钉钉应用 > 使用范围 > 更新企业内部应用的可使用范围
-> Updated: 2026-01-22 21:31:53
+> Updated: 2026-07-14 09:22:23
 
 # 更新企业内部应用的可使用范围
 

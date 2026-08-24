@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 知识库 > 知识库目录树管理 > 获取节点"
 doc_id: "LrK8HLB8nZ"
-updated_at: "2025-12-08 17:28:24"
+updated_at: "2026-07-15 09:31:02"
 ---
 
 > Source: https://open.dingtalk.com/document/development/get-knowledge-base-acquisition-node
 > Path: 应用开发 / 服务端API / 文档/文件 > 知识库 > 知识库目录树管理 > 获取节点
-> Updated: 2025-12-08 17:28:24
+> Updated: 2026-07-15 09:31:02
 
 # 获取节点
 

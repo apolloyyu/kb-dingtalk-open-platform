@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "更多开放 > 服务窗 > 批量获取关注服务窗用户信息"
 doc_id: "0c7AwuWE6I"
-updated_at: "2025-09-11 21:03:48"
+updated_at: "2026-06-03 17:51:19"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtains-the-follower-information-from-the-service-window
 > Path: 应用开发 / 服务端API / 更多开放 > 服务窗 > 批量获取关注服务窗用户信息
-> Updated: 2025-09-11 21:03:48
+> Updated: 2026-06-03 17:51:19
 
 # 批量获取关注服务窗用户信息
 

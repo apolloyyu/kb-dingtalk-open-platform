@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 存储管理 > 文件管理 > 批量移动文件或文件夹"
 doc_id: "KV0JFgTIoH"
-updated_at: "2026-03-27 18:52:28"
+updated_at: "2026-06-02 18:48:56"
 ---
 
 > Source: https://open.dingtalk.com/document/development/bulk-move-files-or-folders
 > Path: 应用开发 / 服务端API / 文档/文件 > 存储管理 > 文件管理 > 批量移动文件或文件夹
-> Updated: 2026-03-27 18:52:28
+> Updated: 2026-06-02 18:48:56
 
 # 批量移动文件或文件夹
 

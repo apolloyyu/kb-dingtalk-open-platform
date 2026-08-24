@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 自有 OA 审批 > 流程中心任务 > 查询通过流程中心集成的OA审批任务"
 doc_id: "C8Qb22xkQL"
-updated_at: "2026-04-24 14:10:47"
+updated_at: "2026-06-03 10:12:40"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-oa-approval-tasks-integrated-through-process-center
 > Path: 应用开发 / 服务端API / OA 审批 > 自有 OA 审批 > 流程中心任务 > 查询通过流程中心集成的OA审批任务
-> Updated: 2026-04-24 14:10:47
+> Updated: 2026-06-03 10:12:40
 
 # 查询通过流程中心集成的OA审批任务
 

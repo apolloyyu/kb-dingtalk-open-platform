@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 行业开放 > 新教育 > 家校通讯录2.0 > 创建自定义部门下的班级"
 doc_id: "jvdqtkm8pq"
-updated_at: "2025-09-23 19:23:21"
+updated_at: "2026-06-04 19:11:29"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-classes-in-a-custom-department
 > Path: 应用开发 / 服务端API / 行业与生态 > 行业开放 > 新教育 > 家校通讯录2.0 > 创建自定义部门下的班级
-> Updated: 2025-09-23 19:23:21
+> Updated: 2026-06-04 19:11:29
 
 # 创建自定义部门下的班级
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "音视频 > 智能会议室 > 会议室分组 > 删除会议室分组"
 doc_id: "0M0jKI9Z3T"
-updated_at: "2025-09-11 21:03:18"
+updated_at: "2026-06-03 10:12:10"
 ---
 
 > Source: https://open.dingtalk.com/document/development/delete-a-conference-room-group
 > Path: 应用开发 / 服务端API / 音视频 > 智能会议室 > 会议室分组 > 删除会议室分组
-> Updated: 2025-09-11 21:03:18
+> Updated: 2026-06-03 10:12:10
 
 # 删除会议室分组
 

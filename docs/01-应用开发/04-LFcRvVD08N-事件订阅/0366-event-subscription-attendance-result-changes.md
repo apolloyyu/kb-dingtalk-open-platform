@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "历史文档（不推荐） > RDS推送/SyncHTTP推送 > 考勤事件 > 考勤结果变更"
 doc_id: "O7a8rNmPhv"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-12-08 15:00:11"
 ---
 
 > Source: https://open.dingtalk.com/document/development/event-subscription-attendance-result-changes
 > Path: 应用开发 / 事件订阅 / 历史文档（不推荐） > RDS推送/SyncHTTP推送 > 考勤事件 > 考勤结果变更
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-12-08 15:00:11
 
 # 考勤结果变更
 
@@ -39,6 +39,17 @@ updated_at: "2022-01-19 19:29:22"
 
 ### 企业内部应用
 
+### 入参
+
+- `EventType`（String）：事件英文名称
+- `EventTime`（Long）：事件发生的时间
+- `CorpId`（String）：企业corpId
+- `BizId`（String）：无业务意义，幂等
+- `planId`（integer，必填）：排班Id。
+- `userId`（string，必填）：用户userId。
+- `workDate`（string，必填）：工作日。
+- `action`（string，必填）：推送类型。
+
 ### **事件体示例**
 
 ```
@@ -57,6 +68,18 @@ updated_at: "2022-01-19 19:29:22"
 ### 第三方企业应用(biz\_type=298)
 
 数据为RDS和SyncHTTP推送的事件体，当为RDS推送方式时，数据插入表open\_sync\_biz\_data\_medium中。
+
+### 入参
+
+- `corp_id`（String）：企业corp\_id
+- `biz_id`（String）：biz\_id无业务意义，幂等
+- `biz_type`（Integer）：事件bizType
+- `biz_data`（object）：事件bizData介绍
+- `biz_data.syncAction`（String）：事件英文名
+- `biz_data.planId`（integer）：排班Id。
+- `biz_data.userId`（string）：用户userId。
+- `biz_data.workDate`（string）：工作日。
+- `biz_data.action`（string）：推送类型。
 
 ### **biz\_data数据示例如下:**
 

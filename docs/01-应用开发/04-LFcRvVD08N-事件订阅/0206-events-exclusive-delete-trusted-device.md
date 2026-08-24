@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "专属开放 > 专属可信设备删除推送事件"
 doc_id: "f0FYuC0aqR"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2026-04-08 16:50:38"
 ---
 
 > Source: https://open.dingtalk.com/document/development/events-exclusive-delete-trusted-device
 > Path: 应用开发 / 事件订阅 / 专属开放 > 专属可信设备删除推送事件
-> Updated: 2022-01-19 19:29:22
+> Updated: 2026-04-08 16:50:38
 
 # 专属可信设备删除推送事件
 
@@ -38,6 +38,22 @@ updated_at: "2022-01-19 19:29:22"
 
 Stream模式推送
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.macAddress`（string）：设备mac地址。
+- `data.id`（string）：设备编号。
+- `data.title`（string）：设备名称。
+- `data.staffId`（string）：员工id。
+- `data.platform`（string）：设备平台。
+- `data.status`（string）：设备状态。
+- `data.serialNumber`（string）：设备号。
+
 ### **事件体示例**
 
 ```
@@ -61,6 +77,21 @@ Stream模式推送
 
 HTTP推送
 
+### 字段说明
+
+- `EventType`（String）：事件英文名称。
+- `EventTime`（Long）：事件发生的时间。
+- `CorpId`（String）：企业corpId。
+- `BizId`（String）：无业务意义，幂等。
+- `eventId`（String）：事件的唯一Id。
+- `macAddress`（string）：设备mac地址。
+- `id`（string，必填）：设备编号。
+- `title`（string，必填）：设备名称。
+- `staffId`（string，必填）：员工id。
+- `platform`（string，必填）：设备平台。
+- `status`（string，必填）：设备状态。
+- `serialNumber`（string）：设备号。
+
 ### **事件体示例**
 
 ```
@@ -83,6 +114,22 @@ HTTP推送
 SyncHTTP/RDS推送
 
 为RDS推送方式时，数据插入表open\_sync\_biz\_data\_medium中。
+
+### 字段说明
+
+- `corp_id`（String）：企业corp\_id。
+- `biz_id`（String）：biz\_id无业务意义，幂等。
+- `biz_type`（Integer）：事件bizType。
+- `biz_data`（object）：事件bizData介绍。
+- `biz_data.syncAction`（String）：事件英文名。
+- `biz_data.eventId`（String）：事件的唯一Id。
+- `biz_data.macAddress`（string）：设备mac地址。
+- `biz_data.id`（string）：设备编号。
+- `biz_data.title`（string）：设备名称。
+- `biz_data.staffId`（string）：员工id。
+- `biz_data.platform`（string）：设备平台。
+- `biz_data.status`（string）：设备状态。
+- `biz_data.serialNumber`（string）：设备号。
 
 ### **biz\_data数据示例(biz\_type=492)**
 

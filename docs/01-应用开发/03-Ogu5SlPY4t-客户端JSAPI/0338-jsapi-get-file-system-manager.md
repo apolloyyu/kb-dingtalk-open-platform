@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "文件存储 > 文件 > getFileSystemManager"
 doc_id: "HyEscCn7sH"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:08:24"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-get-file-system-manager
 > Path: 应用开发 / 客户端JSAPI / 文件存储 > 文件 > getFileSystemManager
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:08:24
 
 # getFileSystemManager
 

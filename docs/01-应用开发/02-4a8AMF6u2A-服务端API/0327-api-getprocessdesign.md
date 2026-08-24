@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "宜搭 > 表单 > 获取流程设计结构"
 doc_id: "c7QjkQlmDB"
-updated_at: "2025-10-09 18:05:35"
+updated_at: "2026-06-02 18:09:08"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-getprocessdesign
 > Path: 应用开发 / 服务端API / 宜搭 > 表单 > 获取流程设计结构
-> Updated: 2025-10-09 18:05:35
+> Updated: 2026-06-02 18:09:08
 
 # 获取流程设计结构
 

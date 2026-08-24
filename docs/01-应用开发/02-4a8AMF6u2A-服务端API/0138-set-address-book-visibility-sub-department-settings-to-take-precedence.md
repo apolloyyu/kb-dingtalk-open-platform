@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "通讯录管理 > 通讯录可见性管理 > 设置部门可见性优先级"
 doc_id: "M06hZydSSh"
-updated_at: "2025-09-11 21:02:03"
+updated_at: "2026-06-01 16:21:33"
 ---
 
 > Source: https://open.dingtalk.com/document/development/set-address-book-visibility-sub-department-settings-to-take-precedence
 > Path: 应用开发 / 服务端API / 通讯录管理 > 通讯录可见性管理 > 设置部门可见性优先级
-> Updated: 2025-09-11 21:02:03
+> Updated: 2026-06-01 16:21:33
 
 # 设置部门可见性优先级
 

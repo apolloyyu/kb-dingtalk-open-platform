@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 高级版专享接口 > 数据表单 > 表单实例 > 获取单个数据表单实例详情"
 doc_id: "F6TbhSuFme"
-updated_at: "2025-12-08 09:49:48"
+updated_at: "2026-06-03 10:13:06"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-details-of-a-single-data-form-instance
 > Path: 应用开发 / 服务端API / OA 审批 > 高级版专享接口 > 数据表单 > 表单实例 > 获取单个数据表单实例详情
-> Updated: 2025-12-08 09:49:48
+> Updated: 2026-06-03 10:13:06
 
 # 获取单个数据表单实例详情
 

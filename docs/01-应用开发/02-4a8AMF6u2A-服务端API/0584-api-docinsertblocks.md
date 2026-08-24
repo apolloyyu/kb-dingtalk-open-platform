@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 文档 > 文档 > 插入块元素"
 doc_id: "Q1IznizkP3"
-updated_at: "2026-04-10 11:06:53"
+updated_at: "2026-06-04 19:09:02"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-docinsertblocks
 > Path: 应用开发 / 服务端API / 文档/文件 > 文档 > 文档 > 插入块元素
-> Updated: 2026-04-10 11:06:53
+> Updated: 2026-06-04 19:09:02
 
 # 插入块元素
 

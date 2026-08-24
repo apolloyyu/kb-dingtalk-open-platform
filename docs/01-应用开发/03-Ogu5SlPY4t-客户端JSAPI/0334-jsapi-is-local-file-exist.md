@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "文件存储 > 文件 > isLocalFileExist"
 doc_id: "taCmp1FPQP"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:07:11"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-is-local-file-exist
 > Path: 应用开发 / 客户端JSAPI / 文件存储 > 文件 > isLocalFileExist
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:07:11
 
 # isLocalFileExist
 
@@ -43,13 +43,17 @@ PC端使用downLoadFile接口下载后的URL在本地是否存在来判断。
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `url`（string，必填）：url是缓存文件的key。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 字段说明
+
+（array）
 
 ## **示例****代码**
 

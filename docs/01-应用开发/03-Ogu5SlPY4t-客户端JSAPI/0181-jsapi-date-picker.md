@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 选择日期 > datePicker"
 doc_id: "VDaxXACBCk"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:06:23"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-date-picker
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 选择日期 > datePicker
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:06:23
 
 # datePicker
 
@@ -41,13 +41,23 @@ updated_at: "2023-08-08"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `format`（string）：返回的日期格式。  
+    
+  \* yyyy-MM-dd（默认）  
+  \* HH:mm  
+  \* yyyy-MM-dd HH:mm  
+  \* yyyy-MM
+- `currentDate`（string）：初始选择的日期时间。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 字段说明
+
+- `date`（string，必填）：选择的日期。
 
 ## **示例****代码**
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "办公电话 > showCallMenu"
 doc_id: "iZq0MOfCA5"
-updated_at: "2023-06-05"
+updated_at: "2025-08-27 18:08:38"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-show-call-menu
 > Path: 应用开发 / 客户端JSAPI / 办公电话 > showCallMenu
-> Updated: 2023-06-05
+> Updated: 2025-08-27 18:08:38
 
 # showCallMenu
 
@@ -47,7 +47,11 @@ updated_at: "2023-06-05"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `phoneNumber`（string，必填）：期望拨打的电话号码。
+- `showDingCall`（boolean）：是否显示钉钉电话。
+- `code`（string）：国家代号，中国是+86。
 
 ## **返回结果**
 

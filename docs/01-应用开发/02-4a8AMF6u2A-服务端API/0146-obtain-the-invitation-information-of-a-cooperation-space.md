@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "通讯录管理 > 上下游组织（原合作空间） > 获取上下游组织的邀请信息"
 doc_id: "eZ38uiRoM8"
-updated_at: "2025-09-11 21:02:08"
+updated_at: "2026-06-01 16:31:53"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-the-invitation-information-of-a-cooperation-space
 > Path: 应用开发 / 服务端API / 通讯录管理 > 上下游组织（原合作空间） > 获取上下游组织的邀请信息
-> Updated: 2025-09-11 21:02:08
+> Updated: 2026-06-01 16:31:53
 
 # 获取上下游组织的邀请信息
 

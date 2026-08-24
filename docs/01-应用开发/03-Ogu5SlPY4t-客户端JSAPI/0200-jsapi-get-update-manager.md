@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 更新管理 > getUpdateManager"
 doc_id: "rSg6OywsBo"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:08:15"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-get-update-manager
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 更新管理 > getUpdateManager
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:08:15
 
 # getUpdateManager
 

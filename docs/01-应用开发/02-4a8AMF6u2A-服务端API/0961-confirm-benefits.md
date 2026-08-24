@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "智能招聘 > 确认完成权益的更新"
 doc_id: "1hlR7qkqSL"
-updated_at: "2025-09-12 17:19:06"
+updated_at: "2026-06-04 19:10:35"
 ---
 
 > Source: https://open.dingtalk.com/document/development/confirm-benefits
 > Path: 应用开发 / 服务端API / 智能招聘 > 确认完成权益的更新
-> Updated: 2025-09-12 17:19:06
+> Updated: 2026-06-04 19:10:35
 
 # 确认完成权益的更新
 

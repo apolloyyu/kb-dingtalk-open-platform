@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "多媒体 > 图片 > compressImage"
 doc_id: "6AKplxmF3T"
-updated_at: "2023-05-19"
+updated_at: "2025-08-27 18:06:33"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-compress-image
 > Path: 应用开发 / 客户端JSAPI / 多媒体 > 图片 > compressImage
-> Updated: 2023-05-19
+> Updated: 2025-08-27 18:06:33
 
 # compressImage
 
@@ -41,13 +41,18 @@ updated_at: "2023-05-19"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `filePaths`（array）：要压缩的图片地址数组。
+- `compressLevel`（number）：压缩级别，支持 0 ~ 4 的整数，默认 4。 \* 0：低质量。 \* 1：中等质量。 \* 2：高质量。 \* 3：不压缩。 \* 4：根据网络适应。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `filePaths`（array）：压缩后的路径数组。
 
 ## **示例****代码**
 

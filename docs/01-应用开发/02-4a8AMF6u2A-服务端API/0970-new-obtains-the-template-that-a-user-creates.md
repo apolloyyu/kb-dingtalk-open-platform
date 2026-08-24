@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "智能填表 > 获取用户创建的填表模板列表"
 doc_id: "F6MybUWUYe"
-updated_at: "2025-09-12 17:19:08"
+updated_at: "2026-06-04 19:10:37"
 ---
 
 > Source: https://open.dingtalk.com/document/development/new-obtains-the-template-that-a-user-creates
 > Path: 应用开发 / 服务端API / 智能填表 > 获取用户创建的填表模板列表
-> Updated: 2025-09-12 17:19:08
+> Updated: 2026-06-04 19:10:37
 
 # 获取用户创建的填表模板列表
 

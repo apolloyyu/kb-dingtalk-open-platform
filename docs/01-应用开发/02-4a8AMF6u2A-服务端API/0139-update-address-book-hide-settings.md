@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "通讯录管理 > 通讯录可见性管理 > 新增或更新通讯录隐藏设置"
 doc_id: "tm0L0laGVe"
-updated_at: "2025-09-11 21:02:00"
+updated_at: "2026-06-02 09:24:43"
 ---
 
 > Source: https://open.dingtalk.com/document/development/update-address-book-hide-settings
 > Path: 应用开发 / 服务端API / 通讯录管理 > 通讯录可见性管理 > 新增或更新通讯录隐藏设置
-> Updated: 2025-09-11 21:02:00
+> Updated: 2026-06-02 09:24:43
 
 # 新增或更新通讯录隐藏设置
 

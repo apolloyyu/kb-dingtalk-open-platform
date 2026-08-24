@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "日程 > 日程参与者 > 获取日程参与者"
 doc_id: "v5L4i13nrO"
-updated_at: "2025-09-11 21:02:35"
+updated_at: "2026-06-02 09:25:05"
 ---
 
 > Source: https://open.dingtalk.com/document/development/get-the-participants-of-a-schedule
 > Path: 应用开发 / 服务端API / 日程 > 日程参与者 > 获取日程参与者
-> Updated: 2025-09-11 21:02:35
+> Updated: 2026-06-02 09:25:05
 
 # 获取日程参与者
 

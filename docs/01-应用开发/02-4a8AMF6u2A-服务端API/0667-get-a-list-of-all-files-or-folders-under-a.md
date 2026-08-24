@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 存储管理 > 文件管理 > 获取空间下所有文件或文件夹列表"
 doc_id: "suWY8tbJ4a"
-updated_at: "2025-09-12 17:20:47"
+updated_at: "2026-06-04 10:03:15"
 ---
 
 > Source: https://open.dingtalk.com/document/development/get-a-list-of-all-files-or-folders-under-a
 > Path: 应用开发 / 服务端API / 文档/文件 > 存储管理 > 文件管理 > 获取空间下所有文件或文件夹列表
-> Updated: 2025-09-12 17:20:47
+> Updated: 2026-06-04 10:03:15
 
 # 获取空间下所有文件或文件夹列表
 

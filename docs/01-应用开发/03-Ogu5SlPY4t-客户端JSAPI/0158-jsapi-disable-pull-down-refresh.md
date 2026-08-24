@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 下拉刷新 > disablePullDownRefresh"
 doc_id: "CdhqjeiWK9"
-updated_at: "2025-08-07"
+updated_at: "2025-08-27 18:06:08"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-disable-pull-down-refresh
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 下拉刷新 > disablePullDownRefresh
-> Updated: 2025-08-07
+> Updated: 2025-08-27 18:06:08
 
 # disablePullDownRefresh
 

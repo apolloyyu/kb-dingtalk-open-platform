@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 地图 > MapContext.getMapProperties"
 doc_id: "F6OVSSIGav"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:05:56"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-map-context-get-map-properties
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 地图 > MapContext.getMapProperties
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:05:56
 
 # MapContext.getMapProperties
 
@@ -49,7 +49,29 @@ updated_at: "2023-08-08"
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `is3d`（boolean，必填）：是否是 3D 地图引擎。  
+    
+  更多信息可参见：[高德开放平台-3D 地图。](https://lbs.amap.com/api/javascript-api/guide/map/3d-map/?spm=ding\_open\_doc.document.0.0.11d21e7bDQP5PA&sug\_index=0)
+- `sdkName`（string，必填）：地图中使用的 SDK 名称。  
+    
+  更多信息可参见 ：  
+    
+  \* [高德地图 Android SDK简介](https://lbs.amap.com/api/android-sdk/summary/?spm=ding\_open\_doc.document.0.0.11d21e7bDQP5PA)  
+  \* [高德地图 iOS SDK简介](https://lbs.amap.com/api/ios-sdk/summary?spm=ding\_open\_doc.document.0.0.11d21e7bDQP5PA)
+- `sdkVersion`（string，必填）：地图中使用的 SDK 版本号。  
+    
+  更多信息可参见 ：  
+  \* [高德地图 Android SDK简介](https://lbs.amap.com/api/android-sdk/summary/)  
+  \* [高德地图 iOS SDK简介](https://lbs.amap.com/api/ios-sdk/summary)
+- `needStyleV7`（boolean，必填）：是否需要 7.x 版本自定义地图样式配置文件。  
+    
+  更多信息可参见 ：  
+  \* [高德地图 Android 自定义地图](https://lbs.amap.com/api/android-sdk/guide/create-map/custom/?spm=ding\_open\_doc.document.0.0.11d21e7bDQP5PA&sug\_index=2)  
+  \* [高德地图 iOS 自定义地图](https://lbs.amap.com/api/ios-sdk/guide/create-map/custom/?spm=ding\_open\_doc.document.0.0.11d21e7bDQP5PA&sug\_index=1)
+- `isSupportAnim`（boolean，必填）：是否支持动画。
+- `isSupportOversea`（boolean，必填）：是否支持海外地图。
 
 ## **示例****代码**
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > 摇一摇 > clearShake"
 doc_id: "n9Joh9I7FH"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:08:04"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-clear-shake
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > 摇一摇 > clearShake
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:08:04
 
 # clearShake
 

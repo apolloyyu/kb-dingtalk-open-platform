@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 交互反馈 > showActionSheet"
 doc_id: "P2RkXyfqAl"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:06:07"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-show-action-sheet
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 交互反馈 > showActionSheet
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:06:07
 
 # showActionSheet
 
@@ -41,13 +41,24 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `items`（array，必填）：菜单按钮文字数组。
+- `title`（string，必填）：菜单标题。
+- `cancelButtonText`（string，必填）：取消按钮文案。  
+    
+    
+  > Android平台此字段无效，不会显示取消按钮。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `index`（number，必填）：被点击的按钮的索引，从0开始。  
+    
+  点击取消或蒙层时返回 -1。
 
 ## **示例****代码**
 

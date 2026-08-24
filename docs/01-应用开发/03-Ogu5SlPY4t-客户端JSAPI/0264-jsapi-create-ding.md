@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "DING > createDing"
 doc_id: "H4xMePjdmM"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:08:56"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-create-ding
 > Path: 应用开发 / 客户端JSAPI / DING > createDing
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:08:56
 
 # createDing
 
@@ -47,7 +47,66 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `taskInfo`（object）：任务信息。
+- `taskInfo.ccUsers`（array）：抄送用户列表。
+- `taskInfo.taskRemind`（number）：任务提醒时间：  
+    
+  \* 0：不提醒；  
+  \* 15：提前15分钟；  
+  \* 60：提前1个小时；  
+  \* 180：提前3个小时；  
+  \* 1440：提前一天
+- `taskInfo.deadlineTime`（object）：任务截止时间。
+- `taskInfo.deadlineTime.format`（string）：日期格式
+- `taskInfo.deadlineTime.value`（string）：日期时间和格式要对应
+- `users`（array，必填）：需要发送到的用户的userid列表。
+- `type`（number）：附件类型：  
+    
+  \* 1：图片  
+  \* 2：链接
+- `alertType`（number）：钉提醒类型：  
+    
+  \* 0：电话  
+  \* 1：短信  
+  \* 2：应用内
+- `alertDate`（object）：钉提醒时间
+- `alertDate.format`（string）：日期格式
+- `alertDate.value`（string）：日期时间和格式要对应
+- `attachment`（object）：附件信息。
+- `attachment.images`（array）：图片附件列表
+- `text`（string）：消息体。
+- `confInfo`（object）：会议信息。
+- `confInfo.bizSubType`（number）：会议类型  
+    
+  \* 0：预约会议；  
+  \* 1：预约电话会议；  
+  \* 2：预约视频会议；
+- `confInfo.remindType`（number）：会议提前提醒方式。  
+    
+  \* 0:电话  
+  \* 1:短信  
+  \* 2:应用内
+- `confInfo.location`（string）：会议地点
+- `confInfo.startTime`（object）：会议开始时间
+- `confInfo.startTime.format`（string）：日期格式
+- `confInfo.startTime.value`（string）：日期时间和格式要对应
+- `confInfo.endTime`（object）：会议结束时间
+- `confInfo.endTime.format`（string）：日期格式
+- `confInfo.endTime.value`（string）：日期时间和格式要对应
+- `confInfo.remindMinutes`（number）：会前提醒  
+    
+  \*1：不提醒；  
+  \* 0：事件发生时提醒；  
+  \* 5：提前5分钟；  
+  \* 15：提前15分钟；  
+  \* 30：提前30分钟；  
+  \* 60：提前1个小时；  
+  \* 1440：提前一天；
+- `corpId`（string）：企业corpId。  
+    
+  > H5微应用必填。
 
 ## **返回结果**
 

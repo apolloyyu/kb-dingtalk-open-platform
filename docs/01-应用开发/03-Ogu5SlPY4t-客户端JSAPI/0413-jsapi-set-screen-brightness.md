@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > 屏幕亮度 > setScreenBrightness"
 doc_id: "RD2oIM7XrM"
-updated_at: "2025-08-06"
+updated_at: "2025-10-21 16:38:39"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-set-screen-brightness
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > 屏幕亮度 > setScreenBrightness
-> Updated: 2025-08-06
+> Updated: 2025-10-21 16:38:39
 
 # setScreenBrightness
 
@@ -43,13 +43,17 @@ updated_at: "2025-08-06"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `brightness`（number，必填）：屏幕亮度，取值范围0-1.0。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+（object）
 
 ## **示例****代码**
 

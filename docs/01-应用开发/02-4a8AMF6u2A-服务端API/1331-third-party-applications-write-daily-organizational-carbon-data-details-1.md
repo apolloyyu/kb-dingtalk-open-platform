@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "更多开放 > 钉钉碳中和 > 写入每日组织碳数据明细信息"
 doc_id: "3rrWiWMZ5X"
-updated_at: "2026-01-29 14:20:20"
+updated_at: "2026-06-05 15:15:10"
 ---
 
 > Source: https://open.dingtalk.com/document/development/third-party-applications-write-daily-organizational-carbon-data-details-1
 > Path: 应用开发 / 服务端API / 更多开放 > 钉钉碳中和 > 写入每日组织碳数据明细信息
-> Updated: 2026-01-29 14:20:20
+> Updated: 2026-06-05 15:15:10
 
 # 写入每日组织碳数据明细信息
 

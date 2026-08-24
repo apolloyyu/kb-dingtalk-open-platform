@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 存储管理 > 文件管理 > 获取文件预览或编辑信息"
 doc_id: "wMBLkN5SHV"
-updated_at: "2026-03-27 18:56:23"
+updated_at: "2026-06-02 18:49:01"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtains-the-object-preview-or-editing-information
 > Path: 应用开发 / 服务端API / 文档/文件 > 存储管理 > 文件管理 > 获取文件预览或编辑信息
-> Updated: 2026-03-27 18:56:23
+> Updated: 2026-06-02 18:49:01
 
 # 获取文件预览或编辑信息
 

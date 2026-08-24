@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 官方 OA 审批 > 审批表单 > 查询已设置为条件的表单组件"
 doc_id: "uB6xY2eYXw"
-updated_at: "2025-09-11 21:03:56"
+updated_at: "2026-06-03 10:12:24"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-form-components-that-have-been-set-as-criteria-1
 > Path: 应用开发 / 服务端API / OA 审批 > 官方 OA 审批 > 审批表单 > 查询已设置为条件的表单组件
-> Updated: 2025-09-11 21:03:56
+> Updated: 2026-06-03 10:12:24
 
 # 查询已设置为条件的表单组件
 

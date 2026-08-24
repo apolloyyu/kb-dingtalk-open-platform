@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "专属钉钉 > 审计 > 获取审计协议签署人员信息"
 doc_id: "RzM5mV9uY8"
-updated_at: "2025-09-23 19:19:35"
+updated_at: "2026-06-04 19:09:53"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtains-the-information-about-the-persons-who-sign-the-audit-1
 > Path: 应用开发 / 服务端API / 专属钉钉 > 审计 > 获取审计协议签署人员信息
-> Updated: 2025-09-23 19:19:35
+> Updated: 2026-06-04 19:09:53
 
 # 获取审计协议签署人员信息
 

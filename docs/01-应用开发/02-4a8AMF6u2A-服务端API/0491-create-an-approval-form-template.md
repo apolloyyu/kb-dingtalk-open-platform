@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 官方 OA 审批 > 审批表单 > 创建或更新审批表单模板"
 doc_id: "rjHpOgnBJs"
-updated_at: "2026-04-24 14:10:39"
+updated_at: "2026-06-03 10:12:21"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-an-approval-form-template
 > Path: 应用开发 / 服务端API / OA 审批 > 官方 OA 审批 > 审批表单 > 创建或更新审批表单模板
-> Updated: 2026-04-24 14:10:39
+> Updated: 2026-06-03 10:12:21
 
 # 创建或更新审批表单模板
 

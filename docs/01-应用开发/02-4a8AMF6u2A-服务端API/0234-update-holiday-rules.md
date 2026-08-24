@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "考勤 > 假期管理 > 更新假期规则"
 doc_id: "srZ9Fyuwom"
-updated_at: "2025-09-11 21:02:20"
+updated_at: "2026-06-02 09:24:53"
 ---
 
 > Source: https://open.dingtalk.com/document/development/update-holiday-rules
 > Path: 应用开发 / 服务端API / 考勤 > 假期管理 > 更新假期规则
-> Updated: 2025-09-11 21:02:20
+> Updated: 2026-06-02 09:24:53
 
 # 更新假期规则
 

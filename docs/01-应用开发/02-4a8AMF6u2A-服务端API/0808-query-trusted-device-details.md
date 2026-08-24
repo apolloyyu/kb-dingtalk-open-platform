@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "专属钉钉 > 可信设备 > 查询可信设备详细信息"
 doc_id: "b5ViWzhSvi"
-updated_at: "2025-10-09 18:05:20"
+updated_at: "2026-06-04 19:09:55"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-trusted-device-details
 > Path: 应用开发 / 服务端API / 专属钉钉 > 可信设备 > 查询可信设备详细信息
-> Updated: 2025-10-09 18:05:20
+> Updated: 2026-06-04 19:09:55
 
 # 查询可信设备详细信息
 

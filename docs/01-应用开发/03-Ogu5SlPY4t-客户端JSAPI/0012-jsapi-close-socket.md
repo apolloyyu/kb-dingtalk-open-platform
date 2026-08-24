@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 网络 > WebSocket > closeSocket"
 doc_id: "QdeE1IeS88"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:07:20"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-close-socket
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 网络 > WebSocket > closeSocket
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:07:20
 
 # closeSocket
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 行业开放 > 行业角色管理 > 获取行业角色下的用户列表"
 doc_id: "5hUYgHoy0a"
-updated_at: "2025-09-23 19:23:35"
+updated_at: "2026-06-04 19:11:31"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtains-a-list-of-users-under-an-industry-role
 > Path: 应用开发 / 服务端API / 行业与生态 > 行业开放 > 行业角色管理 > 获取行业角色下的用户列表
-> Updated: 2025-09-23 19:23:35
+> Updated: 2026-06-04 19:11:31
 
 # 获取行业角色下的用户列表
 

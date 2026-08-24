@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "Teambition 项目管理 > 工时 > 创建计划工时"
 doc_id: "eXvOPA0xrF"
-updated_at: "2025-10-09 18:07:03"
+updated_at: "2026-06-03 09:29:38"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-planned-work
 > Path: 应用开发 / 服务端API / Teambition 项目管理 > 工时 > 创建计划工时
-> Updated: 2025-10-09 18:07:03
+> Updated: 2026-06-03 09:29:38
 
 # 创建计划工时
 

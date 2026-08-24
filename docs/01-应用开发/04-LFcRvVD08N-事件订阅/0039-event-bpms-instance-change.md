@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "办公 > OA审批 > 审批实例开始、结束、终止、删除"
 doc_id: "Fy4Neg0dZn"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2026-07-22 16:25:35"
 ---
 
 > Source: https://open.dingtalk.com/document/development/event-bpms-instance-change
 > Path: 应用开发 / 事件订阅 / 办公 > OA审批 > 审批实例开始、结束、终止、删除
-> Updated: 2022-01-19 19:29:22
+> Updated: 2026-07-22 16:25:35
 
 # 审批实例开始、结束、终止、删除
 
@@ -90,6 +90,33 @@ updated_at: "2022-01-19 19:29:22"
 
 Stream模式推送
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.processInstanceId`（string）：审批实例id。
+- `data.finishTime`（long）：结束审批实例时间。时间戳，单位毫秒。
+- `data.createTime`（long）：创建审批实例时间。时间戳，单位毫秒。
+- `data.processCode`（string）：审批模板的唯一码。
+- `data.bizCategoryId`（string）：业务分类标识。
+- `data.businessId`（string）：流程实例业务标识。
+- `data.type`（string）：实例状态变更类型：  
+  - start：审批实例开始  
+  - finish：审批正常结束（同意或拒绝）  
+  - terminate：审批终止（发起人撤销审批单）  
+  - delete：审批实例删除
+- `data.title`（string）：审批实例标题。
+- `data.businessType`（string）：业务身份。
+- `data.url`（string）：审批实例url，可在钉钉内跳转到审批页面。
+- `data.staffId`（string）：发起审批实例的员工userId。
+- `data.result`（string）：审批结果(审批终止时无此参数)：  
+  - agree： 同意  
+  - refuse：拒绝
+
 ### **事件体示例**
 
 ```
@@ -117,6 +144,32 @@ Stream模式推送
 ```
 
 HTTP推送
+
+### 字段说明
+
+- `EventType`（String）：事件英文名称。
+- `EventTime`（Long）：事件发生的时间。
+- `CorpId`（String）：企业corpId。
+- `BizId`（String）：无业务意义，幂等。
+- `eventId`（String）：事件的唯一Id。
+- `processInstanceId`（string）：审批实例id。
+- `finishTime`（long）：结束审批实例时间。时间戳，单位毫秒。
+- `createTime`（long）：创建审批实例时间。时间戳，单位毫秒。
+- `processCode`（string）：审批模板的唯一码。
+- `bizCategoryId`（string）：业务分类标识。
+- `businessId`（string）：流程实例业务标识。
+- `type`（string）：实例状态变更类型：  
+  - start：审批实例开始  
+  - finish：审批正常结束（同意或拒绝）  
+  - terminate：审批终止（发起人撤销审批单）  
+  - delete：审批实例删除
+- `title`（string）：审批实例标题。
+- `businessType`（string）：业务身份。
+- `url`（string）：审批实例url，可在钉钉内跳转到审批页面。
+- `staffId`（string）：发起审批实例的员工userId。
+- `result`（string，必填）：审批结果(审批终止时无此参数)：  
+  - agree： 同意  
+  - refuse：拒绝
 
 ### **事件体示例**
 

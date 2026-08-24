@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > TabBar > removeTabBarItem"
 doc_id: "FgmvH7HaGI"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:05:04"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-remove-tab-bar-item
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > TabBar > removeTabBarItem
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:05:04
 
 # removeTabBarItem
 
@@ -47,7 +47,9 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `index`（number，必填）：要删除的 item 对应的位置，从 0 开始。
 
 ## **返回结果**
 

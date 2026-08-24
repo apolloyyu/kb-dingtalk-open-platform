@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "位置服务 > openLocation"
 doc_id: "bzhJe7uxkT"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:07:15"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-open-location
 > Path: 应用开发 / 客户端JSAPI / 位置服务 > openLocation
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:07:15
 
 # openLocation
 
@@ -43,7 +43,12 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `address`（string，必填）：位置描述。
+- `latitude`（string，必填）：纬度，范围为 -90~90，负数表示南纬。
+- `longitude`（string，必填）：经度，范围为 -180~180，负数表示西经。
+- `title`（string，必填）：在地图锚点气泡显示的文案。
 
 ## **返回结果**
 

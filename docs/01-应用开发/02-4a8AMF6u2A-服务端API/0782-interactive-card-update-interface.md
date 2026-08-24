@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "即时通信 > 互动卡片 > 更新卡片"
 doc_id: "IUu2CZbgZs"
-updated_at: "2025-09-23 19:18:41"
+updated_at: "2026-06-04 10:49:19"
 ---
 
 > Source: https://open.dingtalk.com/document/development/interactive-card-update-interface
 > Path: 应用开发 / 服务端API / 即时通信 > 互动卡片 > 更新卡片
-> Updated: 2025-09-23 19:18:41
+> Updated: 2026-06-04 10:49:19
 
 # 更新卡片
 

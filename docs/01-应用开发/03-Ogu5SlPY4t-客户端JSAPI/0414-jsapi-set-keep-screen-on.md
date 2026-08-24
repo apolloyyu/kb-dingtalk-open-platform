@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > 屏幕亮度 > setKeepScreenOn"
 doc_id: "sFRYiX3Zf3"
-updated_at: "2025-06-30"
+updated_at: "2025-08-27 18:08:07"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-set-keep-screen-on
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > 屏幕亮度 > setKeepScreenOn
-> Updated: 2025-06-30
+> Updated: 2025-08-27 18:08:07
 
 # setKeepScreenOn
 
@@ -45,7 +45,9 @@ updated_at: "2025-06-30"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `isKeep`（boolean，必填）：是否保持常亮，默认值false。
 
 ## **返回结果**
 

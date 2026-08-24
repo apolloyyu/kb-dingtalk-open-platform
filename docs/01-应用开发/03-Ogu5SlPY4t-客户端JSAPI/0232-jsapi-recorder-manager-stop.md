@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "多媒体 > 录音 > RecorderManager.stop"
 doc_id: "1rLfp6nfkS"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:06:46"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-recorder-manager-stop
 > Path: 应用开发 / 客户端JSAPI / 多媒体 > 录音 > RecorderManager.stop
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:06:46
 
 # RecorderManager.stop
 

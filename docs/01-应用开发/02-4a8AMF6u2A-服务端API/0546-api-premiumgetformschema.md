@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 高级版专享接口 > 数据表单 > 表单模板 > 获取数据表单schema"
 doc_id: "iNfpZrGv9d"
-updated_at: "2025-09-11 21:04:44"
+updated_at: "2026-06-03 10:13:03"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-premiumgetformschema
 > Path: 应用开发 / 服务端API / OA 审批 > 高级版专享接口 > 数据表单 > 表单模板 > 获取数据表单schema
-> Updated: 2025-09-11 21:04:44
+> Updated: 2026-06-03 10:13:03
 
 # 获取数据表单schema
 

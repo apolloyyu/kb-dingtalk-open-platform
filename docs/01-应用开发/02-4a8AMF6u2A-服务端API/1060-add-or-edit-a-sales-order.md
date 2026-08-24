@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 生态开放 > 金智CRM > 合同 > 销售换货单"
 doc_id: "OhKCRb6tEN"
-updated_at: "2026-01-29 14:19:35"
+updated_at: "2026-06-02 20:01:01"
 ---
 
 > Source: https://open.dingtalk.com/document/development/add-or-edit-a-sales-order
 > Path: 应用开发 / 服务端API / 行业与生态 > 生态开放 > 金智CRM > 合同 > 销售换货单
-> Updated: 2026-01-29 14:19:35
+> Updated: 2026-06-02 20:01:01
 
 # 销售换货单
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "多媒体 > 录音 > onRecordEnd"
 doc_id: "22oZMOwmi7"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:06:37"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-on-record-end
 > Path: 应用开发 / 客户端JSAPI / 多媒体 > 录音 > onRecordEnd
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:06:37
 
 # onRecordEnd
 
@@ -47,7 +47,10 @@ updated_at: "2024-12-04"
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `mediaId`（string，必填）：停止播放音频MediaId。
+- `duration`（string，必填）：返回音频的时长，单位：秒。
 
 ## **示例****代码**
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 存储管理 > 权限管理 > 设置权限继承模式"
 doc_id: "4SBiv7k5J6"
-updated_at: "2026-03-27 19:02:15"
+updated_at: "2026-06-08 11:40:28"
 ---
 
 > Source: https://open.dingtalk.com/document/development/set-permission-inheritance-mode
 > Path: 应用开发 / 服务端API / 文档/文件 > 存储管理 > 权限管理 > 设置权限继承模式
-> Updated: 2026-03-27 19:02:15
+> Updated: 2026-06-08 11:40:28
 
 # 设置权限继承模式
 

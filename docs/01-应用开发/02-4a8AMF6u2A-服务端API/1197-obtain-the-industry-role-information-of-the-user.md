@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 行业开放 > 行业角色管理 > 获取用户所在的行业角色信息"
 doc_id: "xQoGxEOxs7"
-updated_at: "2025-09-23 19:23:34"
+updated_at: "2026-06-05 15:32:42"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-the-industry-role-information-of-the-user
 > Path: 应用开发 / 服务端API / 行业与生态 > 行业开放 > 行业角色管理 > 获取用户所在的行业角色信息
-> Updated: 2025-09-23 19:23:34
+> Updated: 2026-06-05 15:32:42
 
 # 获取用户所在的行业角色信息
 

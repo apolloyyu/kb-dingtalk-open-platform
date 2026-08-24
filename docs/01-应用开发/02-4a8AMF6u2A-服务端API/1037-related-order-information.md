@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 生态开放 > 阿里商旅 > 订单管理 > 关联单号查询相关订单信息列表"
 doc_id: "4ssTACVSx8"
-updated_at: "2026-01-29 14:31:13"
+updated_at: "2026-06-02 19:53:11"
 ---
 
 > Source: https://open.dingtalk.com/document/development/related-order-information
 > Path: 应用开发 / 服务端API / 行业与生态 > 生态开放 > 阿里商旅 > 订单管理 > 关联单号查询相关订单信息列表
-> Updated: 2026-01-29 14:31:13
+> Updated: 2026-06-02 19:53:11
 
 # 关联单号查询相关订单信息列表
 

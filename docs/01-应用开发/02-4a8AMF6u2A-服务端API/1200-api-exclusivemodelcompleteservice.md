@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "炼丹炉（模型服务） > 大模型推理服务（文生文模型）"
 doc_id: "7h1JMtQnLk"
-updated_at: "2025-10-09 18:07:13"
+updated_at: "2026-06-03 09:16:29"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-exclusivemodelcompleteservice
 > Path: 应用开发 / 服务端API / 炼丹炉（模型服务） > 大模型推理服务（文生文模型）
-> Updated: 2025-10-09 18:07:13
+> Updated: 2026-06-03 09:16:29
 
 # 大模型推理服务（文生文模型）
 

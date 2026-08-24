@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "宜搭 > 流程 > 终止流程实例"
 doc_id: "dDXOJYFU6e"
-updated_at: "2025-09-23 19:25:22"
+updated_at: "2026-06-03 10:11:40"
 ---
 
 > Source: https://open.dingtalk.com/document/development/terminate-a-process-instance
 > Path: 应用开发 / 服务端API / 宜搭 > 流程 > 终止流程实例
-> Updated: 2025-09-23 19:25:22
+> Updated: 2026-06-03 10:11:40
 
 # 终止流程实例
 

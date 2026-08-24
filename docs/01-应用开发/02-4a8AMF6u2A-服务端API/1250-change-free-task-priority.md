@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "Teambition 项目管理 > 任务 > 自由任务 > 更新自由任务的优先级"
 doc_id: "xcNqutf2y9"
-updated_at: "2025-10-09 18:07:00"
+updated_at: "2026-06-04 19:11:48"
 ---
 
 > Source: https://open.dingtalk.com/document/development/change-free-task-priority
 > Path: 应用开发 / 服务端API / Teambition 项目管理 > 任务 > 自由任务 > 更新自由任务的优先级
-> Updated: 2025-10-09 18:07:00
+> Updated: 2026-06-04 19:11:48
 
 # 更新自由任务的优先级
 

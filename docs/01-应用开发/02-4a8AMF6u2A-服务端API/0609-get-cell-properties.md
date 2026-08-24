@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 表格 > 单元格区域 > 获取单元格区域"
 doc_id: "x4dqwU9M4D"
-updated_at: "2025-09-12 17:20:26"
+updated_at: "2026-06-04 19:09:14"
 ---
 
 > Source: https://open.dingtalk.com/document/development/get-cell-properties
 > Path: 应用开发 / 服务端API / 文档/文件 > 表格 > 单元格区域 > 获取单元格区域
-> Updated: 2025-09-12 17:20:26
+> Updated: 2026-06-04 19:09:14
 
 # 获取单元格区域
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "历史文档（不推荐） > Stream推送 > 智能人事事件 > 人事解决方案变更事件"
 doc_id: "TfLyyuV2zg"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-12-08 15:01:54"
 ---
 
 > Source: https://open.dingtalk.com/document/development/subscribe-to-the-personnel-solution-change-event
 > Path: 应用开发 / 事件订阅 / 历史文档（不推荐） > Stream推送 > 智能人事事件 > 人事解决方案变更事件
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-12-08 15:01:54
 
 # 人事解决方案变更事件
 
@@ -39,7 +39,25 @@ updated_at: "2022-01-19 19:29:22"
 
 ### header部分
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+
 ### data部分(事件业务信息)
+
+### 字段说明
+
+- `corpId`（string）：企业corpId。
+- `solutionType`（string）：人事解决方案类型：   
+  \* onboarding：新人流程
+- `staffId2SolutionInstanceIdMap`（string）：用户userId和解决方案id的映射map。
+- `solutionStatus`（string）：事解决方案状态：   
+  \* init：初始化解决方案   
+  \* start：发起解决方案
 
 ### **事件体数据示例如下:**
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "文件存储 > 钉盘 > previewImagesInDingTalkBatch"
 doc_id: "6D5A0G3trO"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:08:20"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-preview-images-in-ding-talk-batch
 > Path: 应用开发 / 客户端JSAPI / 文件存储 > 钉盘 > previewImagesInDingTalkBatch
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:08:20
 
 # previewImagesInDingTalkBatch
 
@@ -53,7 +53,14 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `images`（array，必填）：图片信息。
+- `images[].spaceId`（string，必填）：图片所在的钉盘空间ID，调用[获取文件或文件夹列表](https://open.dingtalk.com/document/orgapp/obtain-the-file-list-storage?spm=ding\_open\_doc.document.0.0.7d53722fl9fKSv)接口获取spaceId参数值。
+- `images[].dentryId`（string，必填）：图片在钉盘空间内的节点ID，可调用[获取文件或文件夹列表](https://open.dingtalk.com/document/orgapp/obtain-the-file-list-storage?spm=ding\_open\_doc.document.0.0.7d53722fl9fKSv)接口获取id参数值。
+- `index`（number）：从第几张开始预览。第一张index等于0，依次类推。  
+    
+  > 如果index超出images中图片的数量，默认从第一张开始预览。
 
 ## **返回结果**
 

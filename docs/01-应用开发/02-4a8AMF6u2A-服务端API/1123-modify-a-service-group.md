@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 行业开放 > 服务群 > 更换服务群所在的群分组"
 doc_id: "UnMHc8jGkU"
-updated_at: "2025-09-23 19:22:34"
+updated_at: "2026-06-04 19:11:24"
 ---
 
 > Source: https://open.dingtalk.com/document/development/modify-a-service-group
 > Path: 应用开发 / 服务端API / 行业与生态 > 行业开放 > 服务群 > 更换服务群所在的群分组
-> Updated: 2025-09-23 19:22:34
+> Updated: 2026-06-04 19:11:24
 
 # 更换服务群所在的群分组
 

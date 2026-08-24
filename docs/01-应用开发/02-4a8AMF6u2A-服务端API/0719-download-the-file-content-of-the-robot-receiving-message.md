@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "即时通信 > 机器人 > 消息接收 > 下载机器人接收消息的文件内容"
 doc_id: "RFt9sbk5s9"
-updated_at: "2025-09-12 17:18:42"
+updated_at: "2026-06-05 13:41:57"
 ---
 
 > Source: https://open.dingtalk.com/document/development/download-the-file-content-of-the-robot-receiving-message
 > Path: 应用开发 / 服务端API / 即时通信 > 机器人 > 消息接收 > 下载机器人接收消息的文件内容
-> Updated: 2025-09-12 17:18:42
+> Updated: 2026-06-05 13:41:57
 
 # 下载机器人接收消息的文件内容
 

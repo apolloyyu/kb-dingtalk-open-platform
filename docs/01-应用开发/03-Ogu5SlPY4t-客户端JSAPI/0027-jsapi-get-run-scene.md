@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 基础 > getRunScene"
 doc_id: "ncN1DJEi8Q"
-updated_at: "2023-10-11"
+updated_at: "2025-08-27 18:04:56"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-get-run-scene
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 基础 > getRunScene
-> Updated: 2023-10-11
+> Updated: 2025-08-27 18:04:56
 
 # getRunScene
 
@@ -45,7 +45,13 @@ updated_at: "2023-10-11"
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 字段说明
+
+- `envVersion`（string，必填）：小程序当前运行的版本，小程序版本说明请查看[版本管理与发布](https://open.dingtalk.com/document/org/publish-orgapp?spm=ding\_open\_doc.document.0.0.5755722fyMtHci#topic-2024351)：  
+    
+  \* debug：开发版  
+  \* trial：体验版  
+  \* release：线上版
 
 ## **示例****代码**
 

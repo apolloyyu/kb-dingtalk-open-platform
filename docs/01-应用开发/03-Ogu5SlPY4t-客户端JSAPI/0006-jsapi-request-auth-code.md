@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "获取凭证 > requestAuthCode"
 doc_id: "KwA4BOphrD"
-updated_at: "2025-06-13"
+updated_at: "2025-08-27 18:08:50"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-request-auth-code
 > Path: 应用开发 / 客户端JSAPI / 获取凭证 > requestAuthCode
-> Updated: 2025-06-13
+> Updated: 2025-08-27 18:08:50
 
 # requestAuthCode
 
@@ -55,13 +55,24 @@ updated_at: "2025-06-13"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `corpId`（string，必填）：企业的CorpId。  
+    
+  > 你可以在应用首页地址/PC端首页地址添加参数`corpid=$CORPID$`，例如：https://example.com?corpid=$CORPID$，当从工作台访问该应用时，会将 corpid 自动解析为当前访问用户所在的组织 ID。  
+  ![网页应用于配置信息](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/5704119471/p963703.png)
+- `clientId`（string，必填）：应用的Client ID。  
+  > Client ID 说明  
+  > \* 原企业内部应用的 AppKey。   
+  > \* 原第三方企业应用的 SuiteKey。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `code`（string，必填）：authCode
 
 ## **示例****代码**
 

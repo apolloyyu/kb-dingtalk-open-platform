@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "应用市场 > 商品操作"
 doc_id: "AD5xmOmX3y"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-08-28 19:47:20"
 ---
 
 > Source: https://open.dingtalk.com/document/development/commodity-operation
 > Path: 应用开发 / 事件订阅 / 应用市场 > 商品操作
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-08-28 19:47:20
 
 # 商品操作
 
@@ -50,6 +50,30 @@ updated_at: "2022-01-19 19:29:22"
 
 Stream模式推送
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.suiteId`（long）：第三方企业应用的ID。
+- `data.itemType`（string）：开通的规格类型：  
+  - charge\_goods\_free\_item：付费商品的免费规格  
+  - charge\_item: 付费规格  
+  >当开通付费商品的免费规格/付费规格时会返回该字段。
+- `data.corpId`（string）：开通第三方企业应用的企业corpid。
+- `data.endDate`（string）：结束时间。
+- `data.userid`（string）：下单人userid。
+- `data.fromDate`（string）：开始时间。
+- `data.buyerUnionId`（string）：系统生成，固定值不会改变，可用来识别下单人。
+- `data.appId`（long）：应用ID。
+- `data.tryoutType`（string）：开通类型：  
+  - personal\_tryout：个人开通  
+  - enterprise\_tryout：企业开通（管理员）
+- `data.goodsCode`（string）：商品码。
+
 ### **事件体示例**
 
 ```
@@ -77,6 +101,30 @@ Stream模式推送
 SyncHTTP/RDS推送
 
 高优先级事件，为RDS推送方式时，数据插入表open\_sync\_biz\_data中。SyncHTTP推送方式时EventType为SYNC\_HTTP\_PUSH\_HIGH。
+
+### 字段说明
+
+- `corp_id`（String）：企业corp\_id。
+- `biz_id`（String）：biz\_id无业务意义，幂等。
+- `biz_type`（Integer）：事件bizType。
+- `biz_data`（object）：事件bizData介绍。
+- `biz_data.syncAction`（String）：事件英文名。
+- `biz_data.eventId`（String）：事件的唯一Id。
+- `biz_data.suiteId`（long）：第三方企业应用的ID。
+- `biz_data.itemType`（string）：开通的规格类型：  
+  - charge\_goods\_free\_item：付费商品的免费规格  
+  - charge\_item: 付费规格  
+  >当开通付费商品的免费规格/付费规格时会返回该字段。
+- `biz_data.corpId`（string）：开通第三方企业应用的企业corpid。
+- `biz_data.endDate`（string）：结束时间。
+- `biz_data.userid`（string）：下单人userid。
+- `biz_data.fromDate`（string）：开始时间。
+- `biz_data.buyerUnionId`（string）：系统生成，固定值不会改变，可用来识别下单人。
+- `biz_data.appId`（long）：应用ID。
+- `biz_data.tryoutType`（string）：开通类型：  
+  - personal\_tryout：个人开通  
+  - enterprise\_tryout：企业开通（管理员）
+- `biz_data.goodsCode`（string）：商品码。
 
 ### **biz\_data数据示例(biz\_type=63)**
 

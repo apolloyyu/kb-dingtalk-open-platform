@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 节点查询 > createIntersectionObserver"
 doc_id: "FiKu8nUf08"
-updated_at: "2023-08-11"
+updated_at: "2025-08-27 18:06:13"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-create-intersection-observer
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 节点查询 > createIntersectionObserver
-> Updated: 2023-08-11
+> Updated: 2025-08-27 18:06:13
 
 # createIntersectionObserver
 
@@ -43,7 +43,20 @@ updated_at: "2023-08-11"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `selectAll`（boolean，必填）：是否同时观测多个目标节点（而非一个），如果设为 true ，observe 的 targetSelector 将选中多个节点。  
+    
+  \*\*默认值：\*\* false。  
+    
+    
+  > 同时选中过多节点将影响渲染性能。
+- `thresholds`（array，必填）：一个数值数组，包含所有阈值。  
+    
+  默认值：[0]。
+- `initialRatio`（number，必填）：初始的相交比例，如果调用时检测到的相交比例与这个值不相等且达到阈值，则会触发一次监听器的回调函数。  
+    
+  \*\*默认值：\*\* 0。
 
 ## **返回结果**
 

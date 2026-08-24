@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "位置服务 > stopLocating"
 doc_id: "EvgOTARmkb"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:07:16"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-stop-locating
 > Path: 应用开发 / 客户端JSAPI / 位置服务 > stopLocating
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:07:16
 
 # stopLocating
 
@@ -43,13 +43,17 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `sceneId`（string，必填）：停止的定位场景id。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `sceneId`（string，必填）：停止的定位场景id，或者null。
 
 ## **示例****代码**
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "会话管理 > openChatByConversationId"
 doc_id: "Kcc8ugdj4E"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:08:55"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-open-chat-by-conversation-id
 > Path: 应用开发 / 客户端JSAPI / 会话管理 > openChatByConversationId
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:08:55
 
 # openChatByConversationId
 
@@ -43,7 +43,13 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `openConversationId`（string，必填）：会话的openConversationId：  
+    
+  \* 企业内部应用，可调用[创建群会话](https://open.dingtalk.com/document/orgapp-server/create-group-session?spm=ding\_open\_doc.document.0.0.5ef1722f62bcax)接口获取openConversationId参数值。  
+    
+  \* 第三方企业应用，可调用[创建场景群](https://open.dingtalk.com/document/group/create-a-scene-group-v2?spm=ding\_open\_doc.document.0.0.5ef1722f62bcax)接口获取open\_conversation\_id参数值。
 
 ## **返回结果**
 

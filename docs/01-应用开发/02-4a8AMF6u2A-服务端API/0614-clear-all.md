@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 表格 > 单元格区域 > 清除单元格区域内所有内容"
 doc_id: "ExuD5OAVJr"
-updated_at: "2025-09-12 17:20:29"
+updated_at: "2026-06-08 09:36:03"
 ---
 
 > Source: https://open.dingtalk.com/document/development/clear-all
 > Path: 应用开发 / 服务端API / 文档/文件 > 表格 > 单元格区域 > 清除单元格区域内所有内容
-> Updated: 2025-09-12 17:20:29
+> Updated: 2026-06-08 09:36:03
 
 # 清除单元格区域内所有内容
 

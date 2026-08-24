@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "文件存储 > 文件 > FileSystemManager.copyFile"
 doc_id: "NY0J6wwMyd"
-updated_at: "2023-08-11"
+updated_at: "2025-08-27 18:08:25"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-file-system-manager-copy-file
 > Path: 应用开发 / 客户端JSAPI / 文件存储 > 文件 > FileSystemManager.copyFile
-> Updated: 2023-08-11
+> Updated: 2025-08-27 18:08:25
 
 # FileSystemManager.copyFile
 
@@ -41,7 +41,10 @@ updated_at: "2023-08-11"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `srcPath`（string，必填）：源文件路径。
+- `destPath`（string，必填）：需要复制存储的目标本地用户目录，该参数值建议指定复制文件名称和后缀。
 
 ## **返回结果**
 

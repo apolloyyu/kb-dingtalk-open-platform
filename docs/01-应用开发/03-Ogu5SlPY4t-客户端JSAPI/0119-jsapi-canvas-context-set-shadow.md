@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 画布 > CanvasContext.setShadow"
 doc_id: "NmOUPodi2k"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:05:44"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-canvas-context-set-shadow
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 画布 > CanvasContext.setShadow
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:05:44
 
 # CanvasContext.setShadow
 
@@ -43,7 +43,12 @@ updated_at: "2023-08-08"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `offsetX`（number）：阴影相对于形状水平方向的偏移。
+- `offsetY`（number）：阴影相对于形状竖直方向的偏移。
+- `blur`（number）：阴影的模糊级别，值越大越模糊，范围 0~100。
+- `color`（string）：阴影颜色。
 
 ## **返回结果**
 

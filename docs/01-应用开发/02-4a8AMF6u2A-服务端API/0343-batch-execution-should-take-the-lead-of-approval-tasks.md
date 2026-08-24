@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "宜搭 > 任务 > 批量执行宜搭审批任务"
 doc_id: "WPDQntD2PZ"
-updated_at: "2025-10-09 18:05:54"
+updated_at: "2026-06-03 10:11:56"
 ---
 
 > Source: https://open.dingtalk.com/document/development/batch-execution-should-take-the-lead-of-approval-tasks
 > Path: 应用开发 / 服务端API / 宜搭 > 任务 > 批量执行宜搭审批任务
-> Updated: 2025-10-09 18:05:54
+> Updated: 2026-06-03 10:11:56
 
 # 批量执行宜搭审批任务
 

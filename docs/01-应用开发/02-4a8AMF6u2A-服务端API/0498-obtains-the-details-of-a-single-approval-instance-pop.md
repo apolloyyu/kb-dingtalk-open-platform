@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 官方 OA 审批 > 审批实例 > 获取单个审批实例详情"
 doc_id: "DuRiZXutk0"
-updated_at: "2025-09-11 21:03:59"
+updated_at: "2026-08-19 09:09:34"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtains-the-details-of-a-single-approval-instance-pop
 > Path: 应用开发 / 服务端API / OA 审批 > 官方 OA 审批 > 审批实例 > 获取单个审批实例详情
-> Updated: 2025-09-11 21:03:59
+> Updated: 2026-08-19 09:09:34
 
 # 获取单个审批实例详情
 

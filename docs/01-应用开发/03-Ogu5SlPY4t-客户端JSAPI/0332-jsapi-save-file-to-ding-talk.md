@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "文件存储 > 钉盘 > saveFileToDingTalk"
 doc_id: "09eHyTI9aq"
-updated_at: "2025-07-01"
+updated_at: "2025-08-27 18:08:21"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-save-file-to-ding-talk
 > Path: 应用开发 / 客户端JSAPI / 文件存储 > 钉盘 > saveFileToDingTalk
-> Updated: 2025-07-01
+> Updated: 2025-08-27 18:08:21
 
 # saveFileToDingTalk
 
@@ -43,13 +43,25 @@ updated_at: "2025-07-01"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `url`（string，必填）：文件在第三方服务器上的url地址或通过单步文件上传获取到的media\_id。  
+    
+  > 如果是url地址，要求资源请求返回消息头中需要包含Content-Length字段，且>0。
+- `name`（string，必填）：文件保存的名字。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `data`（array，必填）：文件数据。
+- `data[].spaceId`（string，必填）：钉盘空间id。
+- `data[].fileId`（string，必填）：钉盘文件id。
+- `data[].fileName`（string，必填）：文件名。
+- `data[].fileSize`（string，必填）：文件大小，单位比特。
+- `data[].fileType`（string，必填）：文件类型。
 
 ## **示例****代码**
 

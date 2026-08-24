@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 选择日期 > dateRangePicker"
 doc_id: "D53K8O2ynN"
-updated_at: "2024-12-13"
+updated_at: "2025-08-27 18:06:23"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-date-range-picker
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 选择日期 > dateRangePicker
-> Updated: 2024-12-13
+> Updated: 2025-08-27 18:06:23
 
 # dateRangePicker
 
@@ -43,13 +43,20 @@ updated_at: "2024-12-13"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `defaultEnd`（number，必填）：时间戳，默认选中的截止时间，单位为毫秒。
+- `defaultStart`（number）：时间戳，默认选中的开始时间，单位为毫秒。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 字段说明
+
+- `end`（number，必填）：时间戳，为截止当日0点的时间，单位为毫秒。
+- `start`（number，必填）：时间戳，为起始当日0点的时间，单位为毫秒。
+- `timezone`（number，必填）：整型，用户当前所在时区，例如8为第八时区。
 
 ## **示例****代码**
 

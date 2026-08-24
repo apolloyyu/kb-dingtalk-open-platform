@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "协同 > 文档 > 文档知识库中创建小组"
 doc_id: "itrCTSjBJH"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-08-27 16:10:51"
 ---
 
 > Source: https://open.dingtalk.com/document/development/event-doc-spaces-create-team
 > Path: 应用开发 / 事件订阅 / 协同 > 文档 > 文档知识库中创建小组
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-08-27 16:10:51
 
 # 文档知识库中创建小组
 
@@ -37,6 +37,19 @@ updated_at: "2022-01-19 19:29:22"
 
 Stream模式推送
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.unionId`（string）：事件操作人unionId。
+- `data.teamId`（string）：创建的小组id。
+- `data.type`（string）：类型：  
+  - TEAM\_CREATE：创建小组
+
 ### **事件体示例**
 
 ```
@@ -55,6 +68,18 @@ Stream模式推送
 ```
 
 HTTP推送
+
+### 字段说明
+
+- `EventType`（String）：事件英文名称。
+- `EventTime`（Long）：事件发生的时间。
+- `CorpId`（String）：企业corpId。
+- `BizId`（String）：无业务意义，幂等。
+- `eventId`（String）：事件的唯一Id。
+- `unionId`（string）：事件操作人unionId。
+- `teamId`（string）：创建的小组id。
+- `type`（string）：类型：  
+  - TEAM\_CREATE：创建小组
 
 ### **事件体示例**
 

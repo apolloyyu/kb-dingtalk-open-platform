@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 存储管理 > 回收站管理 > 获取回收项信息"
 doc_id: "80QCeWYMI9"
-updated_at: "2025-09-23 19:17:45"
+updated_at: "2026-06-04 19:09:43"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-recycling-item-information
 > Path: 应用开发 / 服务端API / 文档/文件 > 存储管理 > 回收站管理 > 获取回收项信息
-> Updated: 2025-09-23 19:17:45
+> Updated: 2026-06-04 19:09:43
 
 # 获取回收项信息
 

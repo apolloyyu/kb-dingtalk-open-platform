@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "历史文档（不推荐） > Stream推送 > 客户管理事件 > CRM元数据"
 doc_id: "BpIT25y42H"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-12-08 15:53:36"
 ---
 
 > Source: https://open.dingtalk.com/document/development/event-subscription-old-crm-metadata
 > Path: 应用开发 / 事件订阅 / 历史文档（不推荐） > Stream推送 > 客户管理事件 > CRM元数据
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-12-08 15:53:36
 
 # CRM元数据
 
@@ -39,7 +39,144 @@ updated_at: "2022-01-19 19:29:22"
 
 ### header部分
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+
 ### data部分(事件业务信息)
+
+### 入参
+
+- `type`（string，必填）：元数据事件类型：  
+  \* ding\_paas\_object\_create：创建元数据  
+  \* ding\_paas\_object\_update：更新元数据  
+  \* ding\_paas\_object\_delete：删除元数据
+- `objectName`（string，必填）：元数据标识：  
+  \* crm\_customer：企业客户  
+  \* crm\_customer\_personal：个人客户  
+  \* crm\_contact：联系人  
+  \* crm\_follow\_record：跟进记录
+- `name`（string，必填）：元数据名称。
+- `customized`（boolean，必填）：是否自定义元数据：  
+  \* true：自定义  
+  \* false：标准
+- `status`（string，必填）：元数据状态：  
+  \* PUBLISHED：已发布  
+  \* INVALID：已停用
+- `fields`（array，必填）：元数据字段列表。
+- `fields[].name`（string，必填）：字段bizAlias。
+- `fields[].customized`（boolean，必填）：是否自定义字段：  
+  \* true：自定义字段，可删除  
+  \* false：系统字段，不可删除
+- `fields[].id`（string，必填）：字段id。
+- `fields[].label`（string，必填）：字段名称。
+- `fields[].type`（string，必填）：字段类型：  
+  \* Text：单行输入框  
+  \* Textarea：多行输入框  
+  \* TextNote：说明文字  
+  \* Select：单选  
+  \* MultiSelect：多选  
+  \* Date：日期  
+  \* DateRange：日期区间  
+  \* Number：数字  
+  \* Money：金额  
+  \* Photo：图片  
+  \* Attachment：附件  
+  \* Calculate：计算  
+  \* InnerContact：联系人  
+  \* Department：部门  
+  \* TimeAndLocation：定位  
+  \* Invoice：发票  
+  \* RecipientAccount：收款账户  
+  \* Tag：标签  
+  \* MasterDetail：明细  
+  \* Lookup：关联表单字段
+- `fields[].nillable`（boolean，必填）：字段是否必填：   
+  \* true：非必填   
+  \* false：必填
+- `fields[].format`（string，必填）：Date日期字段的格式。
+- `fields[].quote`（boolean，必填）：Lookup关联表单字段的关联模式：  
+  \* true：引用模式  
+  \* false：拷贝模式
+- `fields[].referenceToCode`（string，必填）：关联的表单Code。
+- `fields[].invisible`（boolean，必填）：字段是否可见：  
+  \* true：不可见  
+  \* false：可见
+- `fields[].rollUpSummaryFields`（array，必填）：MasterDetail明细字段的汇总字段。
+- `fields[].rollUpSummaryFields[].name`（string，必填）：要汇总的字段id。
+- `fields[].rollUpSummaryFields[].aggregator`（string，必填）：汇总方法：  
+  \* SUM：表示求和
+- `fields[].referenceFields`（array，必填）：关联表单信息（关联单表单）。
+- `fields[].referenceFields[].name`（string，必填）：字段bizAlias。
+- `fields[].referenceFields[].customized`（boolean，必填）：是否自定义字段：  
+  \* true：自定义字段，可删除  
+  \* false：系统字段，不可删除
+- `fields[].referenceFields[].id`（string，必填）：字段id。
+- `fields[].referenceFields[].label`（string，必填）：字段名称。
+- `fields[].referenceFields[].type`（string，必填）：字段类型：  
+  \* Text：单行输入框  
+  \* Textarea：多行输入框  
+  \* TextNote：说明文字  
+  \* Select：单选  
+  \* MultiSelect：多选  
+  \* Date：日期  
+  \* DateRange：日期区间  
+  \* Number：数字  
+  \* Money：金额  
+  \* Photo：图片  
+  \* Attachment：附件  
+  \* Calculate：计算  
+  \* InnerContact：联系人  
+  \* Department：部门  
+  \* TimeAndLocation：定位  
+  \* Invoice：发票  
+  \* RecipientAccount：收款账户  
+  \* Tag：标签  
+  \* MasterDetail：明细  
+  \* Lookup：关联表单字段
+- `fields[].referenceFields[].nillable`（string，必填）：字段是否必填：  
+  \* true：非必填  
+  \* false：必填
+- `fields[].relatedFormFields`（array，必填）：关联表单信息（关联多表单）。
+- `fields[].relatedFormFields[].relatedFields`（array，必填）：关联表单字段列表。
+- `fields[].relatedFormFields[].relatedFields[].name`（string，必填）：字段bizAlias。
+- `fields[].relatedFormFields[].relatedFields[].customized`（boolean，必填）：是否自定义字段：  
+  \* true：自定义字段，可删除  
+  \* false：系统字段，不可删除
+- `fields[].relatedFormFields[].relatedFields[].id`（string，必填）：字段id。
+- `fields[].relatedFormFields[].relatedFields[].label`（string，必填）：字段名称。
+- `fields[].relatedFormFields[].relatedFields[].type`（string，必填）：字段类型：  
+  \* Text：单行输入框  
+  \* Textarea：多行输入框  
+  \* TextNote：说明文字  
+  \* Select：单选  
+  \* MultiSelect：多选  
+  \* Date：日期  
+  \* DateRange：日期区间  
+  \* Number：数字  
+  \* Money：金额  
+  \* Photo：图片  
+  \* Attachment：附件  
+  \* Calculate：计算  
+  \* InnerContact：联系人  
+  \* Department：部门  
+  \* TimeAndLocation：定位  
+  \* Invoice：发票  
+  \* RecipientAccount：收款账户  
+  \* Tag：标签  
+  \* MasterDetail：明细  
+  \* Lookup：关联表单字段
+- `fields[].relatedFormFields[].relatedFields[].nillable`（boolean，必填）：字段是否必填：   
+  \* true：非必填   
+  \* false：必填
+- `fields[].relatedFormFields[].formName`（string，必填）：关联表单的formCode。
+- `fields[].selectOptions`（array，必填）：选项列表。
+- `fields[].selectOptions[].key`（string，必填）：选项key。
+- `fields[].selectOptions[].value`（string，必填）：选项显示名。
 
 ### **事件体数据示例如下:**
 

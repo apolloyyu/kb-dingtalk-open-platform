@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "客户管理 > 主数据实例删除事件"
 doc_id: "mKy056M0xh"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-08-28 19:47:15"
 ---
 
 > Source: https://open.dingtalk.com/document/development/event-ding-paas-object-data-delete
 > Path: 应用开发 / 事件订阅 / 客户管理 > 主数据实例删除事件
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-08-28 19:47:15
 
 # 主数据实例删除事件
 
@@ -37,6 +37,22 @@ paas主数据实例删除事件数据。
 
 Stream模式推送
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.dataId`（string）：变更的数据ID。
+- `data.dataType`（string）：数据类型master。
+- `data.objectType`（string）：主数据类型：  
+  - crm\_customer：企业客户  
+  - crm\_customer\_personal：个人客户  
+  - crm\_contanct：联系人  
+  - crm\_follow\_record：跟进记录
+
 ### **事件体示例**
 
 ```
@@ -55,6 +71,21 @@ Stream模式推送
 ```
 
 HTTP推送
+
+### 字段说明
+
+- `EventType`（String）：事件英文名称。
+- `EventTime`（Long）：事件发生的时间。
+- `CorpId`（String）：企业corpId。
+- `BizId`（String）：无业务意义，幂等。
+- `eventId`（String）：事件的唯一Id。
+- `ObjectType`（string，必填）：主数据类型：  
+  - crm\_customer：企业客户  
+  - crm\_customer\_personal：个人客户  
+  - crm\_contanct：联系人  
+  - crm\_follow\_record：跟进记录
+- `DataId`（string，必填）：变更的数据ID。
+- `DataType`（string，必填）：数据类型master。
 
 ### **事件体示例**
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 行业开放 > 医疗 > 保存人员扩展属性"
 doc_id: "KedOSpXqUy"
-updated_at: "2025-09-23 19:22:18"
+updated_at: "2026-06-04 19:11:18"
 ---
 
 > Source: https://open.dingtalk.com/document/development/personnel-extension-property-error
 > Path: 应用开发 / 服务端API / 行业与生态 > 行业开放 > 医疗 > 保存人员扩展属性
-> Updated: 2025-09-23 19:22:18
+> Updated: 2026-06-04 19:11:18
 
 # 保存人员扩展属性
 

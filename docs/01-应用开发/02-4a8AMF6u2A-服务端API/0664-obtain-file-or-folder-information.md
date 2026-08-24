@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 存储管理 > 文件管理 > 获取文件或文件夹信息"
 doc_id: "EJ3viBi5oJ"
-updated_at: "2026-03-27 18:55:02"
+updated_at: "2026-06-04 19:09:33"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-file-or-folder-information
 > Path: 应用开发 / 服务端API / 文档/文件 > 存储管理 > 文件管理 > 获取文件或文件夹信息
-> Updated: 2026-03-27 18:55:02
+> Updated: 2026-06-04 19:09:33
 
 # 获取文件或文件夹信息
 

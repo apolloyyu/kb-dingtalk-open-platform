@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "宜搭 > 表单 > 查询表单的变更记录"
 doc_id: "tEooXo9scE"
-updated_at: "2025-10-09 18:05:40"
+updated_at: "2026-06-03 10:11:47"
 ---
 
 > Source: https://open.dingtalk.com/document/development/change-records-of-query-forms
 > Path: 应用开发 / 服务端API / 宜搭 > 表单 > 查询表单的变更记录
-> Updated: 2025-10-09 18:05:40
+> Updated: 2026-06-03 10:11:47
 
 # 查询表单的变更记录
 

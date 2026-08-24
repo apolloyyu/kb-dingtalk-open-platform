@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 画布 > CanvasContext.quadraticCurveTo"
 doc_id: "pXYCsiL1TJ"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:05:38"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-canvas-context-quadratic-curve-to
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 画布 > CanvasContext.quadraticCurveTo
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:05:38
 
 # CanvasContext.quadraticCurveTo
 
@@ -49,13 +49,20 @@ updated_at: "2023-08-08"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `x`（number，必填）：结束点 x 坐标。
+- `y`（number，必填）：结束点 y坐标。
+- `cpx`（number，必填）：贝塞尔控制点 x 坐标。
+- `cpy`（number，必填）：贝塞尔控制点 y 坐标。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+（object）
 
 ## **示例****代码**
 

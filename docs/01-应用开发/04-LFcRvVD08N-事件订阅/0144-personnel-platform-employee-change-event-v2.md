@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "智能人事 > 智能人事 > 人事平台员工异动事件v2"
 doc_id: "oPN9R3rzip"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-08-28 19:47:03"
 ---
 
 > Source: https://open.dingtalk.com/document/development/personnel-platform-employee-change-event-v2
 > Path: 应用开发 / 事件订阅 / 智能人事 > 智能人事 > 人事平台员工异动事件v2
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-08-28 19:47:03
 
 # 人事平台员工异动事件v2
 
@@ -38,6 +38,22 @@ eventType为hrm\_mdm\_user\_change，表示人事平台员工异动事件v2数�
 
 Stream模式推送
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.changeType`（integer）：人事平台员工异动类型：  
+  - 1：入职  
+  - 2：转正  
+  - 3：调岗  
+  - 4：离职  
+  - 8：晋升
+- `data.staffId`（string）：用户userId。
+
 ### **事件体示例**
 
 ```
@@ -56,6 +72,21 @@ Stream模式推送
 
 HTTP推送
 
+### 字段说明
+
+- `EventType`（String）：事件英文名称。
+- `EventTime`（Long）：事件发生的时间。
+- `CorpId`（String）：企业corpId。
+- `BizId`（String）：无业务意义，幂等。
+- `eventId`（String）：事件的唯一Id。
+- `changeType`（integer）：人事平台员工异动类型：  
+  - 1：入职  
+  - 2：转正  
+  - 3：调岗  
+  - 4：离职  
+  - 8：晋升
+- `staffId`（string）：用户userId。
+
 ### **事件体示例**
 
 ```
@@ -73,6 +104,22 @@ HTTP推送
 SyncHTTP/RDS推送
 
 为RDS推送方式时，数据插入表open\_sync\_biz\_data\_medium中。
+
+### 字段说明
+
+- `corp_id`（String）：企业corp\_id。
+- `biz_id`（String）：biz\_id无业务意义，幂等。
+- `biz_type`（Integer）：事件bizType。
+- `biz_data`（object）：事件bizData介绍。
+- `biz_data.syncAction`（String）：事件英文名。
+- `biz_data.eventId`（String）：事件的唯一Id。
+- `biz_data.changeType`（integer）：人事平台员工异动类型：  
+  - 1：入职  
+  - 2：转正  
+  - 3：调岗  
+  - 4：离职  
+  - 8：晋升
+- `biz_data.staffId`（string）：用户userId。
 
 ### **biz\_data数据示例(biz\_type=137)**
 

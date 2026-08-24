@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "日程 > 签到 > 针对单个日程进行签退"
 doc_id: "tMf8uY0B9D"
-updated_at: "2025-09-11 21:02:45"
+updated_at: "2026-06-02 09:25:13"
 ---
 
 > Source: https://open.dingtalk.com/document/development/sign-off-for-a-single-schedule
 > Path: 应用开发 / 服务端API / 日程 > 签到 > 针对单个日程进行签退
-> Updated: 2025-09-11 21:02:45
+> Updated: 2026-06-02 09:25:13
 
 # 针对单个日程进行签退
 

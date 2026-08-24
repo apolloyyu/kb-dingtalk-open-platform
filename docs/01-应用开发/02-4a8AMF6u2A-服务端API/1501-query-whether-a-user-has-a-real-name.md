@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > e签宝 1.0 > 用户 > 查询用户是否实名"
 doc_id: "vlLM8wfOBz"
-updated_at: "2025-09-23 19:21:21"
+updated_at: "2026-06-23 18:10:36"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-whether-a-user-has-a-real-name
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > e签宝 1.0 > 用户 > 查询用户是否实名
-> Updated: 2025-09-23 19:21:21
+> Updated: 2026-06-23 18:10:36
 
 # 查询用户是否实名
 

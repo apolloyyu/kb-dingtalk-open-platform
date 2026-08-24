@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 画布 > CanvasContext.fillText"
 doc_id: "mj1ZEpYs9U"
-updated_at: "2023-08-22"
+updated_at: "2025-08-27 18:05:35"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-canvas-context-fill-text
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 画布 > CanvasContext.fillText
-> Updated: 2023-08-22
+> Updated: 2025-08-27 18:05:35
 
 # CanvasContext.fillText
 
@@ -55,7 +55,11 @@ ctx.draw();
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `text`（string，必填）：文本。
+- `x`（number，必填）：绘制文本的左上角 x 坐标。
+- `y`（number，必填）：绘制文本的左上角 y 坐标。
 
 ## **返回结果**
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "日程 > 日历 > 删除订阅日历"
 doc_id: "3d4BGD1PNJ"
-updated_at: "2025-09-11 21:02:43"
+updated_at: "2026-06-02 09:25:10"
 ---
 
 > Source: https://open.dingtalk.com/document/development/delete-subscription-calendar
 > Path: 应用开发 / 服务端API / 日程 > 日历 > 删除订阅日历
-> Updated: 2025-09-11 21:02:43
+> Updated: 2026-06-02 09:25:10
 
 # 删除订阅日历
 

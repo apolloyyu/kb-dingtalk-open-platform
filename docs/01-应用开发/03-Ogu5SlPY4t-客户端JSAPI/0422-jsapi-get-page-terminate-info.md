@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > 内存不足处理 > getPageTerminateInfo"
 doc_id: "Gv3415gtWI"
-updated_at: "2025-10-16"
+updated_at: "2025-10-16 15:45:36"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-get-page-terminate-info
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > 内存不足处理 > getPageTerminateInfo
-> Updated: 2025-10-16
+> Updated: 2025-10-16 15:45:36
 
 # getPageTerminateInfo
 
@@ -47,7 +47,9 @@ updated_at: "2025-10-16"
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `terminateTimes`（number，必填）：WebView 崩溃次数，注意：页面跳转后次数不会重置
 
 ## **示例****代码**
 

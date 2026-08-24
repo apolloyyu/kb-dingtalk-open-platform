@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "通讯录管理 > 部门管理 > 搜索部门ID"
 doc_id: "7o2IbLavWP"
-updated_at: "2025-09-11 21:01:53"
+updated_at: "2026-06-01 16:07:06"
 ---
 
 > Source: https://open.dingtalk.com/document/development/address-book-search-department-id
 > Path: 应用开发 / 服务端API / 通讯录管理 > 部门管理 > 搜索部门ID
-> Updated: 2025-09-11 21:01:53
+> Updated: 2026-06-01 16:07:06
 
 # 搜索部门ID
 

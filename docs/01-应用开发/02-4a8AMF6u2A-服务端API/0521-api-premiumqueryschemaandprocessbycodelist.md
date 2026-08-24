@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 高级版专享接口 > 官方 OA 审批 > 审批表单 > 批量获取表单模板schema（包含表单和流程配置信息）"
 doc_id: "lBZGzTMZie"
-updated_at: "2025-09-11 21:04:20"
+updated_at: "2026-06-03 10:12:42"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-premiumqueryschemaandprocessbycodelist
 > Path: 应用开发 / 服务端API / OA 审批 > 高级版专享接口 > 官方 OA 审批 > 审批表单 > 批量获取表单模板schema（包含表单和流程配置信息）
-> Updated: 2025-09-11 21:04:20
+> Updated: 2026-06-03 10:12:42
 
 # 批量获取表单模板schema（包含表单和流程配置信息）
 

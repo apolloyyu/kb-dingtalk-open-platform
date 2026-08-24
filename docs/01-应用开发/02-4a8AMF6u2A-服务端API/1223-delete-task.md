@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "Teambition 项目管理 > 任务 > 项目任务 > 删除任务"
 doc_id: "9dhiHrqqJ2"
-updated_at: "2025-10-09 18:06:39"
+updated_at: "2026-06-04 19:11:38"
 ---
 
 > Source: https://open.dingtalk.com/document/development/delete-task
 > Path: 应用开发 / 服务端API / Teambition 项目管理 > 任务 > 项目任务 > 删除任务
-> Updated: 2025-10-09 18:06:39
+> Updated: 2026-06-04 19:11:38
 
 # 删除任务
 

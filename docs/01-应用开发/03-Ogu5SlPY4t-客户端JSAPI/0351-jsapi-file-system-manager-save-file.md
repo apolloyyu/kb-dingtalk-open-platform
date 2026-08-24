@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "文件存储 > 文件 > FileSystemManager.saveFile"
 doc_id: "bFKx8jMFbA"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:08:31"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-file-system-manager-save-file
 > Path: 应用开发 / 客户端JSAPI / 文件存储 > 文件 > FileSystemManager.saveFile
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:08:31
 
 # FileSystemManager.saveFile
 
@@ -43,13 +43,20 @@ updated_at: "2023-08-08"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `tempFilePath`（string，必填）：本地临时文件路径。
+- `filePath`（string）：指定该参数存储为本地用户文件时，该参数需要指定存储后文件的名称和后缀。  
+    
+  > 例如${dd.env.USER\_DATA\_PATH}/newDir/img.png。 filePath指定的目录如果不存在，该接口会按照指定的路径创建目录并保存文件。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `savedFilePath`（string，必填）：文件保存的路径。
 
 ## **错误码**
 

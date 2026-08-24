@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "历史文档（不推荐） > Stream推送 > 群会话变更事件 > 群会话添加人员"
 doc_id: "11agIHxo4g"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-12-08 14:50:47"
 ---
 
 > Source: https://open.dingtalk.com/document/development/add-personnel-event-subscription-group-session
 > Path: 应用开发 / 事件订阅 / 历史文档（不推荐） > Stream推送 > 群会话变更事件 > 群会话添加人员
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-12-08 14:50:47
 
 # 群会话添加人员
 
@@ -38,7 +38,27 @@ updated_at: "2022-01-19 19:29:22"
 
 ### header部分
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+
 ### data部分(事件业务信息)
+
+### 字段说明
+
+- `unionId`（array）：用户发生变更的unionId列表。
+- `chatId`（string）：会话的ID。
+- `corpId`（string）：发生群会话变更的企业。
+- `operatorUnionId`（string）：操作人员的UnionId。
+- `eventType`（string）：事件类型。
+- `userId`（array）：用户发生变更的userId列表。
+- `openConversationId`（string）：群ID。
+- `operator`（string）：操作人员的userId。
+- `timeStamp`（long）：时间戳。
 
 ### **事件体数据示例如下:**
 

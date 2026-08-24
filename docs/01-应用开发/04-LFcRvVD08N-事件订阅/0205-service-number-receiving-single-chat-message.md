@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "专属开放 > 服务号接收单聊消息"
 doc_id: "6NrHBhXxWK"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-08-28 19:47:31"
 ---
 
 > Source: https://open.dingtalk.com/document/development/service-number-receiving-single-chat-message
 > Path: 应用开发 / 事件订阅 / 专属开放 > 服务号接收单聊消息
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-08-28 19:47:31
 
 # 服务号接收单聊消息
 
@@ -36,6 +36,29 @@ updated_at: "2022-01-19 19:29:22"
 ## 事件体描述
 
 Stream模式推送
+
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.toUser`（string）：接收方账号unionid，即服务号的unionid。
+- `data.msgType`（string）：消息类型：  
+  - text：文本  
+  - image：图片  
+  - voice：语音
+- `data.fromUser`（string）：发送方帐号unionid。
+- `data.createTime`（long）：创建时间，long型时间戳。
+- `data.fromUserId`（string）：发送方帐号unionid。
+- `data.sessionWebhook`（string）：会话sessionWebhook。
+- `data.msgId`（string）：消息id。
+- `data.tmpPicUrl`（string）：临时图片下载链接，消息类型为image时，此字段有效。
+- `data.senderNick`（string）：发送者昵称。
+- `data.sessionWebhookExpiredTime`（long）：sessionWebhook的过期时间。
+- `data.content`（string）：文本消息内容，当消息类型为语音时，此处自动识别成文字。
 
 ### **事件体示例**
 
@@ -63,6 +86,28 @@ Stream模式推送
 ```
 
 HTTP推送
+
+### 字段说明
+
+- `EventType`（String）：事件英文名称。
+- `EventTime`（Long）：事件发生的时间。
+- `CorpId`（String）：企业corpId。
+- `BizId`（String）：无业务意义，幂等。
+- `eventId`（String）：事件的唯一Id。
+- `toUser`（string）：接收方账号unionid，即服务号的unionid。
+- `msgType`（string）：消息类型：  
+  - text：文本  
+  - image：图片  
+  - voice：语音
+- `fromUser`（string）：发送方帐号unionid。
+- `createTime`（long）：创建时间，long型时间戳。
+- `fromUserId`（string）：发送方帐号unionid。
+- `sessionWebhook`（string）：会话sessionWebhook。
+- `msgId`（string）：消息id。
+- `tmpPicUrl`（string）：临时图片下载链接，消息类型为image时，此字段有效。
+- `senderNick`（string）：发送者昵称。
+- `sessionWebhookExpiredTime`（long）：sessionWebhook的过期时间。
+- `content`（string）：文本消息内容，当消息类型为语音时，此处自动识别成文字。
 
 ### **事件体示例**
 

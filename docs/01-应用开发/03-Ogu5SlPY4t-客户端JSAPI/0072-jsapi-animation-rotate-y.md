@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 动画 > Animation.rotateY"
 doc_id: "ALoA57lnJA"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:05:17"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-animation-rotate-y
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 动画 > Animation.rotateY
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:05:17
 
 # Animation.rotateY
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 知识库 > 知识库目录树管理 > 删除知识库文档"
 doc_id: "f6ye3xso8A"
-updated_at: "2026-03-27 19:04:52"
+updated_at: "2026-06-03 10:13:09"
 ---
 
 > Source: https://open.dingtalk.com/document/development/delete-team-space-documents
 > Path: 应用开发 / 服务端API / 文档/文件 > 知识库 > 知识库目录树管理 > 删除知识库文档
-> Updated: 2026-03-27 19:04:52
+> Updated: 2026-06-03 10:13:09
 
 # 删除知识库文档
 

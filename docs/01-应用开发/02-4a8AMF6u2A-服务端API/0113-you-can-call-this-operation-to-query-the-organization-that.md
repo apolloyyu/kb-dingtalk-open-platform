@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "通讯录管理 > 企业账号 > 查询企业账号拥有的组织"
 doc_id: "tHgE7msEgx"
-updated_at: "2025-09-11 21:01:50"
+updated_at: "2026-06-02 09:18:17"
 ---
 
 > Source: https://open.dingtalk.com/document/development/you-can-call-this-operation-to-query-the-organization-that
 > Path: 应用开发 / 服务端API / 通讯录管理 > 企业账号 > 查询企业账号拥有的组织
-> Updated: 2025-09-11 21:01:50
+> Updated: 2026-06-02 09:18:17
 
 # 查询企业账号拥有的组织
 

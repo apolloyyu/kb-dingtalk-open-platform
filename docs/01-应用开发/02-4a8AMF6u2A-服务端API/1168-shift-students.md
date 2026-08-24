@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 行业开放 > 新教育 > 家校通讯录2.0 > 学生调班"
 doc_id: "E8iTXAgn6A"
-updated_at: "2025-09-23 19:23:13"
+updated_at: "2026-06-04 19:11:25"
 ---
 
 > Source: https://open.dingtalk.com/document/development/shift-students
 > Path: 应用开发 / 服务端API / 行业与生态 > 行业开放 > 新教育 > 家校通讯录2.0 > 学生调班
-> Updated: 2025-09-23 19:23:13
+> Updated: 2026-06-04 19:11:25
 
 # 学生调班
 

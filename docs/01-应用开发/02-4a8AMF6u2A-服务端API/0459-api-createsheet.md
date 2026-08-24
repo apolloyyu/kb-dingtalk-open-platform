@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "AI 表格 > 数据表 > 创建数据表"
 doc_id: "W19bw76wx8"
-updated_at: "2025-09-12 17:21:02"
+updated_at: "2026-08-19 09:07:39"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-createsheet
 > Path: 应用开发 / 服务端API / AI 表格 > 数据表 > 创建数据表
-> Updated: 2025-09-12 17:21:02
+> Updated: 2026-08-19 09:07:39
 
 # 创建数据表
 

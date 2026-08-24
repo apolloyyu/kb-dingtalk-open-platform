@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "应用管理 > 小程序版本发布事件"
 doc_id: "QyxuKfsvAL"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-08-28 19:47:27"
 ---
 
 > Source: https://open.dingtalk.com/document/development/enterprise-self-built-application-version-release-events
 > Path: 应用开发 / 事件订阅 / 应用管理 > 小程序版本发布事件
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-08-28 19:47:27
 
 # 小程序版本发布事件
 
@@ -37,6 +37,26 @@ updated_at: "2022-01-19 19:29:22"
 
 Stream模式推送
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.appVersionId`（integer）：小程序版本号id。  
+  注：唯一标识小程序版本号，可用于小程序的发布和回滚等操作。
+- `data.agentId`（integer）：应用AgentId。
+- `data.appVersion`（string）：小程序版本号。
+- `data.eventSubType`（string）：事件子类型：  
+  \* experience：发布体验版本事件  
+  \* online：发布线上版本事件
+- `data.miniAppId`（string）：小程序id。
+- `data.miniAppOnPc`（boolean）：是否发布PC端：  
+  - false：表示不发布PC端，只发布移动端。  
+  - true：表示既发布移动端又发布PC端。
+
 ### **事件体示例**
 
 ```
@@ -58,6 +78,25 @@ Stream模式推送
 ```
 
 HTTP推送
+
+### 字段说明
+
+- `EventType`（String）：事件英文名称。
+- `EventTime`（Long）：事件发生的时间。
+- `CorpId`（String）：企业corpId。
+- `BizId`（String）：无业务意义，幂等。
+- `eventId`（String）：事件的唯一Id。
+- `appVersionId`（integer）：小程序版本号id。  
+  注：唯一标识小程序版本号，可用于小程序的发布和回滚等操作。
+- `agentId`（integer）：应用AgentId。
+- `appVersion`（string）：小程序版本号。
+- `eventSubType`（string）：事件子类型：  
+  \* experience：发布体验版本事件  
+  \* online：发布线上版本事件
+- `miniAppId`（string）：小程序id。
+- `miniAppOnPc`（boolean）：是否发布PC端：  
+  - false：表示不发布PC端，只发布移动端。  
+  - true：表示既发布移动端又发布PC端。
 
 ### **事件体示例**
 

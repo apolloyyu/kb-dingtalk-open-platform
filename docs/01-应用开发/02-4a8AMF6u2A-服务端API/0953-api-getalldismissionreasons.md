@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "智能人事 > 员工管理 > 获取企业已有的所有离职原因"
 doc_id: "KiUPpPz5Ni"
-updated_at: "2025-09-12 17:19:00"
+updated_at: "2026-06-04 19:10:30"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-getalldismissionreasons
 > Path: 应用开发 / 服务端API / 智能人事 > 员工管理 > 获取企业已有的所有离职原因
-> Updated: 2025-09-12 17:19:00
+> Updated: 2026-06-04 19:10:30
 
 # 获取企业已有的所有离职原因
 

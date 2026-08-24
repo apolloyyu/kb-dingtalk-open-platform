@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 生态开放 > 金智CRM > 客户 > 客户公共池"
 doc_id: "ABhAjPrGVr"
-updated_at: "2026-01-29 14:19:32"
+updated_at: "2026-06-02 20:00:58"
 ---
 
 > Source: https://open.dingtalk.com/document/development/add-or-edit-customer-public-pools
 > Path: 应用开发 / 服务端API / 行业与生态 > 生态开放 > 金智CRM > 客户 > 客户公共池
-> Updated: 2026-01-29 14:19:32
+> Updated: 2026-06-02 20:00:58
 
 # 客户公共池
 

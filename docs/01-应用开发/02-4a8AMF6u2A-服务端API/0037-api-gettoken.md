@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "认证与授权 > 访问凭证 > 应用身份凭证 > 获取应用的 Access Token"
 doc_id: "Py2b80tmOx"
-updated_at: "2026-04-29 22:27:41"
+updated_at: "2026-06-08 12:02:05"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-gettoken
 > Path: 应用开发 / 服务端API / 认证与授权 > 访问凭证 > 应用身份凭证 > 获取应用的 Access Token
-> Updated: 2026-04-29 22:27:41
+> Updated: 2026-06-08 12:02:05
 
 # 获取应用的 Access Token
 

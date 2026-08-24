@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "获取凭证 > getAuthCode"
 doc_id: "g8rSsXuydW"
-updated_at: "2025-06-13"
+updated_at: "2025-08-27 18:08:50"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-get-auth-code
 > Path: 应用开发 / 客户端JSAPI / 获取凭证 > getAuthCode
-> Updated: 2025-06-13
+> Updated: 2025-08-27 18:08:50
 
 # getAuthCode
 
@@ -53,13 +53,17 @@ updated_at: "2025-06-13"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `corpId`（string，必填）：企业 CorpID。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `authCode`（string，必填）：授权码。有效期5分钟，且只能使用一次，使用后会失效。
 
 ## **错误码**
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 表格 > 筛选 > 获取筛选"
 doc_id: "uo7JbFYiNL"
-updated_at: "2026-04-17 15:01:51"
+updated_at: "2026-06-08 12:02:07"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-getfilter
 > Path: 应用开发 / 服务端API / 文档/文件 > 表格 > 筛选 > 获取筛选
-> Updated: 2026-04-17 15:01:51
+> Updated: 2026-06-08 12:02:07
 
 # 获取筛选
 

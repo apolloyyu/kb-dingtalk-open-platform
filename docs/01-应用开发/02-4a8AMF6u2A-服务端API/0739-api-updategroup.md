@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "即时通信 > 会话管理 > 群管理 > 更新群会话"
 doc_id: "f6IWfELX1j"
-updated_at: "2026-05-10 00:49:58"
+updated_at: "2026-06-02 19:00:12"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-updategroup
 > Path: 应用开发 / 服务端API / 即时通信 > 会话管理 > 群管理 > 更新群会话
-> Updated: 2026-05-10 00:49:58
+> Updated: 2026-06-02 19:00:12
 
 # 更新群会话
 

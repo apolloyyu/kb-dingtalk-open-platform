@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "宜搭 > 任务 > 转交任务"
 doc_id: "b0wUeb2Aic"
-updated_at: "2025-10-09 18:05:50"
+updated_at: "2026-06-02 11:19:41"
 ---
 
 > Source: https://open.dingtalk.com/document/development/transfer-tasks
 > Path: 应用开发 / 服务端API / 宜搭 > 任务 > 转交任务
-> Updated: 2025-10-09 18:05:50
+> Updated: 2026-06-02 11:19:41
 
 # 转交任务
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > 蓝牙 > 低功耗蓝牙 > connectBLEDevice"
 doc_id: "F2qjaywfEd"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:07:47"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-connect-bledevice
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > 蓝牙 > 低功耗蓝牙 > connectBLEDevice
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:07:47
 
 # connectBLEDevice
 
@@ -44,7 +44,9 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `deviceId`（string，必填）：蓝牙设备ID，可通过[获取所有已发现的蓝牙设备](https://open.dingtalk.com/document/orgapp/dd-getbluetoothdevices)或[监听发现新设备事件](https://open.dingtalk.com/document/orgapp/dd-onbluetoothdevicefound)接口中获取。
 
 ## **返回结果**
 

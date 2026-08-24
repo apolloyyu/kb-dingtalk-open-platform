@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 知识库 > 知识库管理 > 获取知识库"
 doc_id: "vJoDFTplgD"
-updated_at: "2025-12-08 10:27:26"
+updated_at: "2026-06-02 17:37:09"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-the-knowledge-base
 > Path: 应用开发 / 服务端API / 文档/文件 > 知识库 > 知识库管理 > 获取知识库
-> Updated: 2025-12-08 10:27:26
+> Updated: 2026-06-02 17:37:09
 
 # 获取知识库
 

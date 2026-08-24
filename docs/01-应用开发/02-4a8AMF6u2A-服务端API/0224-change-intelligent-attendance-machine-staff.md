@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "考勤 > 考勤机管理 > 变更智能考勤机员工"
 doc_id: "lgUVvNL13m"
-updated_at: "2026-04-24 14:10:38"
+updated_at: "2026-06-01 16:50:45"
 ---
 
 > Source: https://open.dingtalk.com/document/development/change-intelligent-attendance-machine-staff
 > Path: 应用开发 / 服务端API / 考勤 > 考勤机管理 > 变更智能考勤机员工
-> Updated: 2026-04-24 14:10:38
+> Updated: 2026-06-01 16:50:45
 
 # 变更智能考勤机员工
 

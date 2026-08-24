@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 存储管理 > 文件传输 > 获取文件上传信息"
 doc_id: "oIb09idwKx"
-updated_at: "2026-03-27 18:58:50"
+updated_at: "2026-06-04 19:09:36"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-file-upload-informations
 > Path: 应用开发 / 服务端API / 文档/文件 > 存储管理 > 文件传输 > 获取文件上传信息
-> Updated: 2026-03-27 18:58:50
+> Updated: 2026-06-04 19:09:36
 
 # 获取文件上传信息
 

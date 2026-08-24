@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "即时通信 > 会话管理 > 场景群 > 群吊顶 > 关闭互动卡片吊顶"
 doc_id: "QtNY01jfis"
-updated_at: "2026-04-22 18:25:35"
+updated_at: "2026-07-14 09:29:44"
 ---
 
 > Source: https://open.dingtalk.com/document/development/close-interactive-card-ceiling
 > Path: 应用开发 / 服务端API / 即时通信 > 会话管理 > 场景群 > 群吊顶 > 关闭互动卡片吊顶
-> Updated: 2026-04-22 18:25:35
+> Updated: 2026-07-14 09:29:44
 
 # 关闭互动卡片吊顶
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "Teambition 项目管理 > 任务 > 项目任务 > 查询用户任务信息列表"
 doc_id: "CU2N8OF8ec"
-updated_at: "2025-10-09 18:06:43"
+updated_at: "2026-06-03 09:26:07"
 ---
 
 > Source: https://open.dingtalk.com/document/development/querying-user-tasks
 > Path: 应用开发 / 服务端API / Teambition 项目管理 > 任务 > 项目任务 > 查询用户任务信息列表
-> Updated: 2025-10-09 18:06:43
+> Updated: 2026-06-03 09:26:07
 
 # 查询用户任务信息列表
 

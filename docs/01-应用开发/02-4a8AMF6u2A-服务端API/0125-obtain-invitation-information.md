@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "通讯录管理 > 企业管理 > 获取企业邀请信息"
 doc_id: "CgoTAndO6S"
-updated_at: "2025-09-11 21:01:54"
+updated_at: "2026-06-01 16:08:01"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-invitation-information
 > Path: 应用开发 / 服务端API / 通讯录管理 > 企业管理 > 获取企业邀请信息
-> Updated: 2025-09-11 21:01:54
+> Updated: 2026-06-01 16:08:01
 
 # 获取企业邀请信息
 

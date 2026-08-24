@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "企业文化 > 企业百科 > 分页获取企业词条信息"
 doc_id: "BNlhFh2wJg"
-updated_at: "2025-09-23 19:19:30"
+updated_at: "2026-06-04 19:10:44"
 ---
 
 > Source: https://open.dingtalk.com/document/development/entry-search
 > Path: 应用开发 / 服务端API / 企业文化 > 企业百科 > 分页获取企业词条信息
-> Updated: 2025-09-23 19:19:30
+> Updated: 2026-06-04 19:10:44
 
 # 分页获取企业词条信息
 

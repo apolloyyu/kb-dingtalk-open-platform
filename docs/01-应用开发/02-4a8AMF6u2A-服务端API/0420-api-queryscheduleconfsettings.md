@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "音视频 > 会议 > 查询预约会议设置"
 doc_id: "rpa11SQ6W2"
-updated_at: "2025-09-11 21:03:05"
+updated_at: "2026-06-02 09:18:00"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-queryscheduleconfsettings
 > Path: 应用开发 / 服务端API / 音视频 > 会议 > 查询预约会议设置
-> Updated: 2025-09-11 21:03:05
+> Updated: 2026-06-02 09:18:00
 
 # 查询预约会议设置
 

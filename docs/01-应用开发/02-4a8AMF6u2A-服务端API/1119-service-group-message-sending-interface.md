@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 行业开放 > 服务群 > 发送服务群消息"
 doc_id: "oMZLOhjdmK"
-updated_at: "2026-04-22 18:21:53"
+updated_at: "2026-06-04 19:11:22"
 ---
 
 > Source: https://open.dingtalk.com/document/development/service-group-message-sending-interface
 > Path: 应用开发 / 服务端API / 行业与生态 > 行业开放 > 服务群 > 发送服务群消息
-> Updated: 2026-04-22 18:21:53
+> Updated: 2026-06-04 19:11:22
 
 # 发送服务群消息
 

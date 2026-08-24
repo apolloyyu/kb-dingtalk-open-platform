@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > 蓝牙 > 传统蓝牙 > getBluetoothAdapterState"
 doc_id: "NMubDhqOzk"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:07:55"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-get-bluetooth-adapter-state
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > 蓝牙 > 传统蓝牙 > getBluetoothAdapterState
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:07:55
 
 # getBluetoothAdapterState
 
@@ -45,7 +45,12 @@ updated_at: "2024-12-04"
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `available`（boolean，必填）：蓝牙模块是否可用。  
+    
+  > 需支持 BLE 并且蓝牙是打开状态。
+- `discovering`（boolean，必填）：是否正在搜索设备。
 
 ## **示例****代码**
 

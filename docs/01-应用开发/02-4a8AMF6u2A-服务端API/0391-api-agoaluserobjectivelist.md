@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "Agoal > 目标与关键行动 > 获取Agoal指定规则周期下负责人的目标列表"
 doc_id: "pLK7cw9fVy"
-updated_at: "2025-11-10 13:51:20"
+updated_at: "2026-06-04 14:22:58"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-agoaluserobjectivelist
 > Path: 应用开发 / 服务端API / Agoal > 目标与关键行动 > 获取Agoal指定规则周期下负责人的目标列表
-> Updated: 2025-11-10 13:51:20
+> Updated: 2026-06-04 14:22:58
 
 # 获取Agoal指定规则周期下负责人的目标列表
 

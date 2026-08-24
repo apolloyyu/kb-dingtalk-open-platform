@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 行业开放 > 制造业 > 计件报工"
 doc_id: "KHKkxuXOo3"
-updated_at: "2025-09-23 19:22:22"
+updated_at: "2026-06-04 19:11:18"
 ---
 
 > Source: https://open.dingtalk.com/document/development/riqing-monthly-settlement-piece-rate-reporting-interface
 > Path: 应用开发 / 服务端API / 行业与生态 > 行业开放 > 制造业 > 计件报工
-> Updated: 2025-09-23 19:22:22
+> Updated: 2026-06-04 19:11:18
 
 # 计件报工
 

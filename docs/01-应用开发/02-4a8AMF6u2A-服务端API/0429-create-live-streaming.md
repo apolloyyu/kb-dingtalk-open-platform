@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "音视频 > 直播 > 创建直播"
 doc_id: "UkIjWpkYOL"
-updated_at: "2025-09-11 21:03:12"
+updated_at: "2026-06-01 14:35:23"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-live-streaming
 > Path: 应用开发 / 服务端API / 音视频 > 直播 > 创建直播
-> Updated: 2025-09-11 21:03:12
+> Updated: 2026-06-01 14:35:23
 
 # 创建直播
 

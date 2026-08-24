@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "Teambition 项目管理 > 项目 > 查询员工可见的项目分组"
 doc_id: "LRMTzXezWy"
-updated_at: "2025-10-09 18:06:35"
+updated_at: "2026-06-04 19:11:36"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-available-project-groups
 > Path: 应用开发 / 服务端API / Teambition 项目管理 > 项目 > 查询员工可见的项目分组
-> Updated: 2025-10-09 18:06:35
+> Updated: 2026-06-04 19:11:36
 
 # 查询员工可见的项目分组
 

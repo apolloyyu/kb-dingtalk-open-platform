@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 表格 > 筛选视图 > 删除筛选视图"
 doc_id: "z4w6by0Ujh"
-updated_at: "2026-04-17 15:04:04"
+updated_at: "2026-06-04 19:09:23"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-deletefilterview
 > Path: 应用开发 / 服务端API / 文档/文件 > 表格 > 筛选视图 > 删除筛选视图
-> Updated: 2026-04-17 15:04:04
+> Updated: 2026-06-04 19:09:23
 
 # 删除筛选视图
 

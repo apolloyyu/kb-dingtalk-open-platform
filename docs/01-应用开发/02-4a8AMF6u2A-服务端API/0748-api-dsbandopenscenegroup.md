@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "即时通信 > 会话管理 > 场景群 > 群管理 > 解散场景群"
 doc_id: "MfTls3182y"
-updated_at: "2026-05-10 01:10:50"
+updated_at: "2026-08-14 09:41:50"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-dsbandopenscenegroup
 > Path: 应用开发 / 服务端API / 即时通信 > 会话管理 > 场景群 > 群管理 > 解散场景群
-> Updated: 2026-05-10 01:10:50
+> Updated: 2026-08-14 09:41:50
 
 # 解散场景群
 

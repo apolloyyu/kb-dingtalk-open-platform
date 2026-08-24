@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "日程 > 日程 > 查询日程列表"
 doc_id: "6CtAUmz22W"
-updated_at: "2025-09-11 21:02:30"
+updated_at: "2026-06-02 09:25:01"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-an-event-list
 > Path: 应用开发 / 服务端API / 日程 > 日程 > 查询日程列表
-> Updated: 2025-09-11 21:02:30
+> Updated: 2026-06-02 09:25:01
 
 # 查询日程列表
 

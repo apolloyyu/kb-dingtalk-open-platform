@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 画布 > CanvasContext.drawImage"
 doc_id: "4qU8ugp9su"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:05:34"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-canvas-context-draw-image
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 画布 > CanvasContext.drawImage
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:05:34
 
 # CanvasContext.drawImage
 
@@ -47,7 +47,13 @@ ctx.draw();
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `imageResource`（string，必填）：图片资源, 只支持线上 cdn 地址或离线包地址，线上 cdn 需返回头 Access-Control-Allow-Origin: \*
+- `x`（number，必填）：图像左上角 x 坐标。
+- `y`（number，必填）：图像左上角 x 坐标。
+- `width`（number，必填）：图像宽度。
+- `height`（number，必填）：图像高度。
 
 ## **返回结果**
 

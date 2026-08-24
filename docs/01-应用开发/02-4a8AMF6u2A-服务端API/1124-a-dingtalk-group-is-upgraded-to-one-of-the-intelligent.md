@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 行业开放 > 服务群 > 升级普通群为服务群"
 doc_id: "KrDMBfRdXr"
-updated_at: "2025-09-23 19:22:35"
+updated_at: "2026-06-04 19:11:24"
 ---
 
 > Source: https://open.dingtalk.com/document/development/a-dingtalk-group-is-upgraded-to-one-of-the-intelligent
 > Path: 应用开发 / 服务端API / 行业与生态 > 行业开放 > 服务群 > 升级普通群为服务群
-> Updated: 2025-09-23 19:22:35
+> Updated: 2026-06-04 19:11:24
 
 # 升级普通群为服务群
 

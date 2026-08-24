@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 存储管理 > 文件管理 > 根据 dentryUuid 获取 spaceId"
 doc_id: "4o9hysjHAu"
-updated_at: "2026-03-19 19:22:32"
+updated_at: "2026-06-02 18:49:03"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-getdentryidbyuuid
 > Path: 应用开发 / 服务端API / 文档/文件 > 存储管理 > 文件管理 > 根据 dentryUuid 获取 spaceId
-> Updated: 2026-03-19 19:22:32
+> Updated: 2026-06-02 18:49:03
 
 # 根据 dentryUuid 获取 spaceId
 

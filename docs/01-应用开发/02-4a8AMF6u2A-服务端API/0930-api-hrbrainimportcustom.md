@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "组织大脑 > 自定义模型 > 自定义模型数据同步"
 doc_id: "fiAUmQS7rR"
-updated_at: "2025-09-12 17:19:43"
+updated_at: "2026-06-02 19:34:58"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-hrbrainimportcustom
 > Path: 应用开发 / 服务端API / 组织大脑 > 自定义模型 > 自定义模型数据同步
-> Updated: 2025-09-12 17:19:43
+> Updated: 2026-06-02 19:34:58
 
 # 自定义模型数据同步
 

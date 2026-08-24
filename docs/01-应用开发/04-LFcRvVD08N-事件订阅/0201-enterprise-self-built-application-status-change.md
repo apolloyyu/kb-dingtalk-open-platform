@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "应用管理 > 企业内部应用状态变更"
 doc_id: "3fdwVacPFm"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-08-28 19:47:29"
 ---
 
 > Source: https://open.dingtalk.com/document/development/enterprise-self-built-application-status-change
 > Path: 应用开发 / 事件订阅 / 应用管理 > 企业内部应用状态变更
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-08-28 19:47:29
 
 # 企业内部应用状态变更
 
@@ -37,6 +37,23 @@ updated_at: "2022-01-19 19:29:22"
 
 Stream模式推送
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.eventId`（string）：事件的唯一 ID。
+- `data.operatorUnionId`（string）：操作人 unionId。
+- `data.unifiedAppId`（string）：应用唯一标识。
+- `data.status`（string）：事件当前状态：   
+    
+  - disable：停用  
+  - enable：启用  
+  - delete：删除
+
 ### **事件体示例**
 
 ```
@@ -56,6 +73,21 @@ Stream模式推送
 ```
 
 HTTP推送
+
+### 字段说明
+
+- `EventType`（String）：事件英文名称。
+- `EventTime`（Long）：事件发生的时间。
+- `CorpId`（String）：企业corpId。
+- `BizId`（String）：无业务意义，幂等。
+- `eventId`（string，必填）：事件的唯一 ID。
+- `operatorUnionId`（string，必填）：操作人 unionId。
+- `unifiedAppId`（string，必填）：应用唯一标识。
+- `status`（string，必填）：事件当前状态：   
+    
+  - disable：停用  
+  - enable：启用  
+  - delete：删除
 
 ### **事件体示例**
 

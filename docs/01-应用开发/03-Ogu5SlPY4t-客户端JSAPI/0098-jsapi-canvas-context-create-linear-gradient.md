@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 画布 > CanvasContext.createLinearGradient"
 doc_id: "Bgoxbbds3H"
-updated_at: "2023-10-11"
+updated_at: "2025-08-27 18:05:32"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-canvas-context-create-linear-gradient
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 画布 > CanvasContext.createLinearGradient
-> Updated: 2023-10-11
+> Updated: 2025-08-27 18:05:32
 
 # CanvasContext.createLinearGradient
 
@@ -43,13 +43,20 @@ updated_at: "2023-10-11"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `x0`（number，必填）：起点 x 坐标。
+- `x1`（number，必填）：起点 y 坐标。
+- `y0`（number，必填）：终点 x 坐标。
+- `y1`（number，必填）：终点 y 坐标。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+（object）
 
 ## **示例****代码**
 

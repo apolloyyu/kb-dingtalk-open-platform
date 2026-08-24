@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 高级版专享接口 > 自有 OA 审批 > 审批表单 > 保存流程中心外部集成审批模板"
 doc_id: "dJVZyAf6ss"
-updated_at: "2026-01-23 10:46:02"
+updated_at: "2026-06-03 10:12:59"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-premiumsaveintegratedprocess
 > Path: 应用开发 / 服务端API / OA 审批 > 高级版专享接口 > 自有 OA 审批 > 审批表单 > 保存流程中心外部集成审批模板
-> Updated: 2026-01-23 10:46:02
+> Updated: 2026-06-03 10:12:59
 
 # 保存流程中心外部集成审批模板
 

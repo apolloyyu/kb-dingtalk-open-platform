@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 交互反馈 > prompt"
 doc_id: "3t9U40Zkkx"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:06:05"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-prompt
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 交互反馈 > prompt
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:06:05
 
 # prompt
 
@@ -41,13 +41,22 @@ updated_at: "2024-12-04"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `message`（string，必填）：消息内容
+- `title`（string，必填）：消息标题
+- `placeholder`（string，必填）：提示输入内容占位字符
+- `okButtonText`（string，必填）：确认按钮文案
+- `cancelButtonText`（string，必填）：取消按钮文案
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `buttonIndex`（number，必填）：被点击按钮的索引值，Number类型，从0开始。
+- `value`（string，必填）：输入的值
 
 ## **示例****代码**
 

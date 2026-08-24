@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "设备能力 > Wi-Fi > getWifiList"
 doc_id: "wsCiACSlAZ"
-updated_at: "2024-12-04"
+updated_at: "2025-08-27 18:07:36"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-get-wifi-list
 > Path: 应用开发 / 客户端JSAPI / 设备能力 > Wi-Fi > getWifiList
-> Updated: 2024-12-04
+> Updated: 2025-08-27 18:07:36
 
 # getWifiList
 

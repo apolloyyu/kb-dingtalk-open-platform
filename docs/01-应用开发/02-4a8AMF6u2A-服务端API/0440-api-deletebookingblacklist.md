@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "音视频 > 智能会议室 > 会议室 > 删除会议室预定黑名单"
 doc_id: "39lRhgioQU"
-updated_at: "2025-09-11 21:03:26"
+updated_at: "2026-06-02 13:04:57"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-deletebookingblacklist
 > Path: 应用开发 / 服务端API / 音视频 > 智能会议室 > 会议室 > 删除会议室预定黑名单
-> Updated: 2025-09-11 21:03:26
+> Updated: 2026-06-02 13:04:57
 
 # 删除会议室预定黑名单
 

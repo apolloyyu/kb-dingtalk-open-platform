@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 地图 > MapContext.smoothMoveMarker"
 doc_id: "6VPahmYeFJ"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:05:59"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-map-context-smooth-move-marker
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 地图 > MapContext.smoothMoveMarker
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:05:59
 
 # MapContext.smoothMoveMarker
 
@@ -45,7 +45,16 @@ updated_at: "2023-08-08"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `duration`（number）：动画执行时间。 默认值： 5000 毫秒（ms）。
+- `markerId`（number，必填）：执行动画的 markerId，确保此时 marker 已经在地图上。
+- `targetDistances`（array）：指定需要 callback 的目标距离数组。
+- `markerData`（object）：对未在地图上的 marker 做动画，传入 marker 对象。
+- `points`（array，必填）：动画路线的经纬度集合。
+- `points[].latitude`（number，必填）：纬度。
+- `points[].longitude`（string，必填）：经度。
+- `action`（string）：指定操作动画。
 
 ## **返回结果**
 

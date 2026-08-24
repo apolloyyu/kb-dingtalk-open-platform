@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 行业开放 > 服务群 > 创建场景服务群"
 doc_id: "UdNVgTsFMk"
-updated_at: "2025-09-23 19:22:32"
+updated_at: "2026-06-04 19:11:22"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-a-scenario-service-group
 > Path: 应用开发 / 服务端API / 行业与生态 > 行业开放 > 服务群 > 创建场景服务群
-> Updated: 2025-09-23 19:22:32
+> Updated: 2026-06-04 19:11:22
 
 # 创建场景服务群
 

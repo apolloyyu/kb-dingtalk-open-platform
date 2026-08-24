@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "日程 > 日程参与者 > 设置日程响应邀请状态"
 doc_id: "RkDLcojJmU"
-updated_at: "2025-09-11 21:02:34"
+updated_at: "2026-06-02 09:25:04"
 ---
 
 > Source: https://open.dingtalk.com/document/development/configure-response-status
 > Path: 应用开发 / 服务端API / 日程 > 日程参与者 > 设置日程响应邀请状态
-> Updated: 2025-09-11 21:02:34
+> Updated: 2026-06-02 09:25:04
 
 # 设置日程响应邀请状态
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "行业与生态 > 生态开放 > 智能客服 > 执行工单活动"
 doc_id: "HXpx8kz2Xb"
-updated_at: "2025-09-23 19:20:14"
+updated_at: "2026-06-02 19:50:17"
 ---
 
 > Source: https://open.dingtalk.com/document/development/intelligent-customer-service-execute-work-order-activities
 > Path: 应用开发 / 服务端API / 行业与生态 > 生态开放 > 智能客服 > 执行工单活动
-> Updated: 2025-09-23 19:20:14
+> Updated: 2026-06-02 19:50:17
 
 # 执行工单活动
 

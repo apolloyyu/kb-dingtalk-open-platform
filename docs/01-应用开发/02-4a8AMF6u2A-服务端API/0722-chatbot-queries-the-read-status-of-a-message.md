@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "即时通信 > 机器人 > 消息查询 > 查询企业机器人群聊消息用户已读状态"
 doc_id: "wLxSK5YifM"
-updated_at: "2025-09-12 17:18:44"
+updated_at: "2026-06-05 13:49:01"
 ---
 
 > Source: https://open.dingtalk.com/document/development/chatbot-queries-the-read-status-of-a-message
 > Path: 应用开发 / 服务端API / 即时通信 > 机器人 > 消息查询 > 查询企业机器人群聊消息用户已读状态
-> Updated: 2025-09-12 17:18:44
+> Updated: 2026-06-05 13:49:01
 
 # 查询企业机器人群聊消息用户已读状态
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "通讯录 > choosePhonebook"
 doc_id: "ds7lLxhVGE"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:08:44"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-choose-phonebook
 > Path: 应用开发 / 客户端JSAPI / 通讯录 > choosePhonebook
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:08:44
 
 # choosePhonebook
 
@@ -43,13 +43,27 @@ updated_at: "2023-08-08"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `title`（string）：选择页面的标题。
+- `multiple`（boolean）：是否可多选：  
+    
+  \* true: 可多选  
+  \* false：仅单选  
+    
+  > 默认仅单选（false）。
+- `maxUsers`（number）：最大可选人数。
+- `limitTips`（string）：超过限定人数返回的提示内容。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `name`（string，必填）：联系人名称。
+- `mobile`（string，必填）：联系人手机号。
+- `mediaId`（string，必填）：联系人头像图片的mediaId。
 
 ## **示例****代码**
 

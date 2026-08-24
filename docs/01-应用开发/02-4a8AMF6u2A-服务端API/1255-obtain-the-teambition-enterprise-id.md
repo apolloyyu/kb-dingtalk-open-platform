@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "Teambition 项目管理 > 企业和用户 > 获取Teambition项目企业ID"
 doc_id: "92YBLm9XzG"
-updated_at: "2025-10-09 18:07:05"
+updated_at: "2026-06-04 19:11:49"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-the-teambition-enterprise-id
 > Path: 应用开发 / 服务端API / Teambition 项目管理 > 企业和用户 > 获取Teambition项目企业ID
-> Updated: 2025-10-09 18:07:05
+> Updated: 2026-06-04 19:11:49
 
 # 获取Teambition项目企业ID
 

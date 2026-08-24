@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "音视频 > 智能会议室 > 自定义屏幕模板 > 更新自定义屏幕模板"
 doc_id: "u6kpLHkXcy"
-updated_at: "2025-09-11 21:03:30"
+updated_at: "2026-06-02 13:18:22"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-updatedevicecustomtemplate
 > Path: 应用开发 / 服务端API / 音视频 > 智能会议室 > 自定义屏幕模板 > 更新自定义屏幕模板
-> Updated: 2025-09-11 21:03:30
+> Updated: 2026-06-02 13:18:22
 
 # 更新自定义屏幕模板
 

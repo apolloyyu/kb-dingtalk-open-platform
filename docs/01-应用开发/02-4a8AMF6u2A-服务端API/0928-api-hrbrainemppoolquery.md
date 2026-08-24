@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "组织大脑 > 人才池 > 人才池信息查询"
 doc_id: "F6VA2yKJZv"
-updated_at: "2026-03-24 10:41:22"
+updated_at: "2026-06-02 19:34:57"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-hrbrainemppoolquery
 > Path: 应用开发 / 服务端API / 组织大脑 > 人才池 > 人才池信息查询
-> Updated: 2026-03-24 10:41:22
+> Updated: 2026-06-02 19:34:57
 
 # 人才池信息查询
 

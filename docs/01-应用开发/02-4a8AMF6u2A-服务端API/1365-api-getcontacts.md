@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "更多开放 > 客户管理（官方CRM） > 联系人管理 > 根据指定条件查询联系人数据"
 doc_id: "hVuAIe3Pdt"
-updated_at: "2025-10-09 18:06:16"
+updated_at: "2026-06-04 19:12:12"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-getcontacts
 > Path: 应用开发 / 服务端API / 更多开放 > 客户管理（官方CRM） > 联系人管理 > 根据指定条件查询联系人数据
-> Updated: 2025-10-09 18:06:16
+> Updated: 2026-06-04 19:12:12
 
 # 根据指定条件查询联系人数据
 

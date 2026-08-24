@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "更多开放 > 客户管理（官方CRM） > 客户群 > 获取单个客户群详情"
 doc_id: "KkD2HzjBXY"
-updated_at: "2025-10-09 18:06:22"
+updated_at: "2026-06-04 19:12:18"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-a-single-customer-group
 > Path: 应用开发 / 服务端API / 更多开放 > 客户管理（官方CRM） > 客户群 > 获取单个客户群详情
-> Updated: 2025-10-09 18:06:22
+> Updated: 2026-06-04 19:12:18
 
 # 获取单个客户群详情
 

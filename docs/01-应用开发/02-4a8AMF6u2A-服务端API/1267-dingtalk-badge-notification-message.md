@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "更多开放 > 钉工牌 > 钉工牌通知消息"
 doc_id: "oNh5Q8FhiJ"
-updated_at: "2025-09-11 21:03:36"
+updated_at: "2026-06-04 19:11:54"
 ---
 
 > Source: https://open.dingtalk.com/document/development/dingtalk-badge-notification-message
 > Path: 应用开发 / 服务端API / 更多开放 > 钉工牌 > 钉工牌通知消息
-> Updated: 2025-09-11 21:03:36
+> Updated: 2026-06-04 19:11:54
 
 # 钉工牌通知消息
 

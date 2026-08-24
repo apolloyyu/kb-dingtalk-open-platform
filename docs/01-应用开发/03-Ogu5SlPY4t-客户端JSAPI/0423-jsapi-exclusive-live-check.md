@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "专属开放 > exclusiveLiveCheck"
 doc_id: "9MdZZuRsQD"
-updated_at: "2024-12-13"
+updated_at: "2025-08-27 18:08:47"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-exclusive-live-check
 > Path: 应用开发 / 客户端JSAPI / 专属开放 > exclusiveLiveCheck
-> Updated: 2024-12-13
+> Updated: 2025-08-27 18:08:47
 
 # exclusiveLiveCheck
 
@@ -43,13 +43,21 @@ updated_at: "2024-12-13"
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `agentId`（string，必填）：钉钉应用agentId。
+- `corpId`（string，必填）：当前企业的corpId。
 
 ## **返回结果**
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `photoStatus`（number，必填）：是否对比成功：  
+    
+  \* 1：对比验证成功   
+  \* 2：对比验证失败
 
 ## **错误码**
 

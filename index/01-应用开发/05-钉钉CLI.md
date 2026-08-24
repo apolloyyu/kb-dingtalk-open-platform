@@ -26,4 +26,4 @@
 - [阿里云轻量服务器部署](../../docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0022-deployment-of-alibaba-cloud-light-server.md) · 高级集成 › OpenClaw 常用部署方式 · 2026-07-14
 - [阿里云ECS服务器部署](../../docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0023-deployment-alibaba-cloud-ecs-server.md) · 高级集成 › OpenClaw 常用部署方式 · 2026-07-14
 - [常见问题](../../docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0024-dws-cli-frequently-asked-questions.md) · 2026-08-12
-- [更新日志](../../docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0025-dws-cli-log.md) · 2026-08-17
+- [更新日志](../../docs/01-应用开发/05-QzuirX2lH7-钉钉CLI/0025-dws-cli-log.md) · 2026-08-24

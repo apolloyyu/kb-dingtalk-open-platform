@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "文件存储 > 文件 > FileSystemManager.getSavedFileList"
 doc_id: "f59RsSuZHN"
-updated_at: "2023-08-11"
+updated_at: "2025-08-27 18:08:27"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-file-system-manager-get-saved-file-list
 > Path: 应用开发 / 客户端JSAPI / 文件存储 > 文件 > FileSystemManager.getSavedFileList
-> Updated: 2023-08-11
+> Updated: 2025-08-27 18:08:27
 
 # FileSystemManager.getSavedFileList
 
@@ -47,7 +47,13 @@ updated_at: "2023-08-11"
 
 继承[通用输出对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 出参
+
+- `success`（boolean，必填）：成功获取本地缓存文件列表时，返回true。
+- `fileList`（array，必填）：本地缓存的文件列表。
+- `fileList[].filePath`（string，必填）：本地缓存文件的路径。
+- `fileList[].size`（number，必填）：文件大小，单位Byte。
+- `fileList[].createTime`（number，必填）：文件保存的时间戳，单位毫秒。
 
 ## **示例****代码**
 

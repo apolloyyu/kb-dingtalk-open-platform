@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "基础交互 > 界面 > 画布 > CanvasContext.draw"
 doc_id: "tbBIROKT7M"
-updated_at: "2023-08-08"
+updated_at: "2025-08-27 18:05:33"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jsapi-canvas-context-draw
 > Path: 应用开发 / 客户端JSAPI / 基础交互 > 界面 > 画布 > CanvasContext.draw
-> Updated: 2023-08-08
+> Updated: 2025-08-27 18:05:33
 
 # CanvasContext.draw
 
@@ -53,7 +53,12 @@ ctx.draw(true);
 
 继承[通用输入对象](https://open.dingtalk.com/document/direction/jsapi-standard-input-output-object)，扩展属性描述：
 
-参数占位区域
+### 入参
+
+- `reserve`（boolean，必填）：本次绘制是否接着上一次绘制，默认为false：  
+    
+  \* 参数为 false 时，则在本次调用 drawCanvas绘制之前 native 层应先清空画布再继续绘制。  
+  \* 参数为true 时，则保留当前画布上的内容，本次调用drawCanvas绘制的内容覆盖在上面。
 
 ## **返回结果**
 

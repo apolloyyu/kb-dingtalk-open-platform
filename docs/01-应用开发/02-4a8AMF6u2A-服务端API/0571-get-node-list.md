@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "文档/文件 > 知识库 > 知识库目录树管理 > 获取节点列表"
 doc_id: "UYvCTqiO42"
-updated_at: "2025-09-12 17:20:02"
+updated_at: "2026-07-15 09:29:06"
 ---
 
 > Source: https://open.dingtalk.com/document/development/get-node-list
 > Path: 应用开发 / 服务端API / 文档/文件 > 知识库 > 知识库目录树管理 > 获取节点列表
-> Updated: 2025-09-12 17:20:02
+> Updated: 2026-07-15 09:29:06
 
 # 获取节点列表
 

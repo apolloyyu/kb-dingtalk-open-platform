@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "智能财务 > 智能财务企业信息变更"
 doc_id: "qY7awzb49g"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-08-28 19:47:06"
 ---
 
 > Source: https://open.dingtalk.com/document/development/intelligent-financial-enterprise-information-change
 > Path: 应用开发 / 事件订阅 / 智能财务 > 智能财务企业信息变更
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-08-28 19:47:06
 
 # 智能财务企业信息变更
 
@@ -37,6 +37,21 @@ updated_at: "2022-01-19 19:29:22"
 
 Stream模式推送
 
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.companyInfo`（object）：企业信息数据。
+- `data.companyInfo.taxNo`（string，必填）：纳税人识别号。
+- `data.companyInfo.companyName`（string，必填）：企业名称。
+- `data.companyInfo.taxNature`（string，必填）：纳税人性质。
+- `data.changeType`（string）：变更类型：  
+  - update：更新
+
 ### **事件体示例**
 
 ```
@@ -60,6 +75,21 @@ Stream模式推送
 SyncHTTP/RDS推送
 
 为RDS推送方式时，数据插入表open\_sync\_biz\_data\_medium中。
+
+### 字段说明
+
+- `corp_id`（String）：企业corp\_id。
+- `biz_id`（String）：biz\_id无业务意义，幂等。
+- `biz_type`（Integer）：事件bizType。
+- `biz_data`（object）：事件bizData介绍。
+- `biz_data.syncAction`（String）：事件英文名。
+- `biz_data.eventId`（String）：事件的唯一Id。
+- `biz_data.companyInfo`（object）：企业信息数据。
+- `biz_data.companyInfo.taxNo`（string，必填）：纳税人识别号。
+- `biz_data.companyInfo.companyName`（string，必填）：企业名称。
+- `biz_data.companyInfo.taxNature`（string，必填）：纳税人性质。
+- `biz_data.changeType`（string）：变更类型：  
+  - update：更新
 
 ### **biz\_data数据示例(biz\_type=228)**
 

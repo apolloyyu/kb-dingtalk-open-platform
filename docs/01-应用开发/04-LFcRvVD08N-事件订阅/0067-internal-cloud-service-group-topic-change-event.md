@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "服务群 > 弹内服务群话题变更事件"
 doc_id: "tOgsblGrS8"
-updated_at: "2022-01-19 19:29:22"
+updated_at: "2025-08-28 19:46:16"
 ---
 
 > Source: https://open.dingtalk.com/document/development/internal-cloud-service-group-topic-change-event
 > Path: 应用开发 / 事件订阅 / 服务群 > 弹内服务群话题变更事件
-> Updated: 2022-01-19 19:29:22
+> Updated: 2025-08-28 19:46:16
 
 # 弹内服务群话题变更事件
 
@@ -36,6 +36,38 @@ updated_at: "2022-01-19 19:29:22"
 ## 事件体描述
 
 Stream模式推送
+
+### 字段说明
+
+- `eventUnifiedAppId`（String，必填）：统一应用身份Id。
+- `eventCorpId`（String）：事件所属的corpId。
+- `eventType`（String）：事件类型。
+- `eventId`（String）：事件的唯一Id。
+- `eventBornTime`（Long）：事件生成时间。
+- `data`（object）：事件体data。
+- `data.body`（object）：事件主体。
+- `data.body.bizData`（object）：业务数据。
+- `data.body.bizData.titleSenderNick`（string）：标题发送人昵称。
+- `data.body.bizData.uniqueId`（string）：唯一ID。
+- `data.body.bizData.groupName`（string）：群名称。
+- `data.body.bizData.openConversationId`（string）：会话ID。
+- `data.body.bizData.channel`（string）：渠道。
+- `data.body.bizData.teamId`（string）：团队ID。
+- `data.body.bizData.source`（string）：渠道。
+- `data.body.bizData.title`（string）：标题。
+- `data.body.bizData.labels`（string）：标签。
+- `data.body.bizData.participantsNum`（string）：参与人数。
+- `data.body.bizData.chatContext`（string）：聊天上下文。
+- `data.body.bizData.titleSenderRole`（string）：标题发送人角色。
+- `data.body.bizData.titleSenderUuid`（string）：标题发送人UID。
+- `data.body.bizData.openTeamId`（string）：开放团队ID。
+- `data.body.bizData.titleCreateAt`（string）：标题创建事件。
+- `data.body.bizData.groupId`（string）：群ID。
+- `data.body.bizData.orgId`（string）：组织ID。
+- `data.body.bizData.topic`（string）：话题。
+- `data.body.bizData.bizTopic`（string）：业务话题。
+- `data.body.bizData.corpId`（string）：组织CORP\_ID。
+- `data.body.bizData.msgCount`（string）：消息条数。
 
 ### **事件体示例**
 
@@ -77,6 +109,37 @@ Stream模式推送
 ```
 
 HTTP推送
+
+### root
+
+- `EventType`（String）：事件英文名称。
+- `EventTime`（Long）：事件发生的时间。
+- `CorpId`（String）：企业corpId。
+- `BizId`（String）：无业务意义，幂等。
+- `eventId`（String）：事件的唯一Id。
+- `body`（object）：事件主体。
+- `body.bizData`（object）：业务数据。
+- `body.bizData.title_sender_nick`（string）：标题发送人昵称。
+- `body.bizData.unique_id`（string）：唯一ID。
+- `body.bizData.group_name`（string）：群名称。
+- `body.bizData.open_conversation_id`（string）：会话ID。
+- `body.bizData.channel`（string）：渠道。
+- `body.bizData.team_id`（string）：团队ID。
+- `body.bizData.source`（string）：渠道。
+- `body.bizData.title`（string）：标题。
+- `body.bizData.labels`（string）：标签。
+- `body.bizData.participants_num`（string）：参与人数。
+- `body.bizData.chat_context`（string）：聊天上下文。
+- `body.bizData.title_sender_role`（string）：标题发送人角色。
+- `body.bizData.title_sender_uuid`（string）：标题发送人UID。
+- `body.bizData.open_team_id`（string）：开放团队ID。
+- `body.bizData.title_create_at`（string）：标题创建事件。
+- `body.bizData.group_id`（string）：群ID。
+- `body.bizData.org_id`（string）：组织ID。
+- `body.bizData.topic`（string）：话题。
+- `body.bizData.biz_topic`（string）：业务话题。
+- `body.bizData.corp_id`（string）：组织CORP\_ID。
+- `body.bizData.msg_count`（string）：消息条数。
 
 ### **事件体示例**
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "更多开放 > AppLink协议 > 已支持的协议 > 发起审批"
 doc_id: "QR4Lx8ue6s"
-updated_at: "2022-12-28"
+updated_at: "2026-07-21 09:26:25"
 ---
 
 > Source: https://open.dingtalk.com/document/development/initiate-approval
 > Path: 应用开发 / 服务端API / 更多开放 > AppLink协议 > 已支持的协议 > 发起审批
-> Updated: 2022-12-28
+> Updated: 2026-07-21 09:26:25
 
 # 发起审批
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "OA 审批 > 自有 OA 审批 > 审批实例 > 批量更新实例状态"
 doc_id: "iFg0bctLyX"
-updated_at: "2025-12-08 12:39:27"
+updated_at: "2026-06-03 10:12:39"
 ---
 
 > Source: https://open.dingtalk.com/document/development/self-owned-batch-update-of-instance-status
 > Path: 应用开发 / 服务端API / OA 审批 > 自有 OA 审批 > 审批实例 > 批量更新实例状态
-> Updated: 2025-12-08 12:39:27
+> Updated: 2026-06-03 10:12:39
 
 # 批量更新实例状态
 

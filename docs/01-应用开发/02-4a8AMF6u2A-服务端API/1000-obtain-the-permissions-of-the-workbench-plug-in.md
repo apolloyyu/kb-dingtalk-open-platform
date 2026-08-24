@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "钉钉工作台 > 获取工作台插件权限点"
 doc_id: "ME725ZfY5b"
-updated_at: "2025-09-11 21:03:44"
+updated_at: "2026-06-02 19:48:41"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-the-permissions-of-the-workbench-plug-in
 > Path: 应用开发 / 服务端API / 钉钉工作台 > 获取工作台插件权限点
-> Updated: 2025-09-11 21:03:44
+> Updated: 2026-06-02 19:48:41
 
 # 获取工作台插件权限点
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > 获取访问凭证 > 获取jsapi_ticket"
 doc_id: "Qh8agr9w1x"
-updated_at: "2025-09-08 19:07:41"
+updated_at: "2026-08-25 09:36:28"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-jsapi-ticket
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > 获取访问凭证 > 获取jsapi_ticket
-> Updated: 2025-09-08 19:07:41
+> Updated: 2026-08-25 09:36:28
 
 # 获取jsapi\_ticket
 
@@ -20,14 +20,8 @@ updated_at: "2025-09-08 19:07:41"
 
 > **[!IMPORTANT]**
 >
-> 为提升接口使用体验，针对**获取访问凭证**相关接口规范进行升级，从[旧版升级到新版](https://open.dingtalk.com/document/orgapp/differences-between-server-apis-and-new-server-apis)。本文旧版规范接口文档已于2023年8月17日迁移至历史文档（不推荐）目录，且本接口仅保持现有功能，不再新增支持其他能力。
->
-> - 如果未使用本接口，推荐使用[获取jsapiTicket](https://open.dingtalk.com/document/orgapp/create-a-jsapi-ticket)新版规范接口。
-> - 如果已使用本接口，建议您根据自身实际情况评估是否切换至推荐接口。
-
-> **[!NOTE]**
->
-> 企业内部应用是以应用维度获取jsapi\_ticket的，所以在使用的时候需要将jsapi\_ticket以appKey为维度进行缓存下来（设置缓存过期时间2小时），并不需要每次都通过接口拉取。
+> - 本接口已完成升级，后续将维持现有功能且不再新增能力。
+> - 未接入的开发者建议使用新版 [获取jsapiTicket](0039-create-a-jsapi-ticket.md)接口，已接入用户不受影响。
 
 ## 权限
 
@@ -49,14 +43,14 @@ updated_at: "2025-09-08 19:07:41"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | 6adfxxxx | 调用该接口的应用凭证。   - 企业内部应用，通过[获取企业内部应用的access\_token](https://open.dingtalk.com/document/orgapp/obtain-orgapp-token)接口获取。 - 第三方企业应用，通过[获取第三方企业应用的access\_token](https://open.dingtalk.com/document/isvapp/obtains-the-enterprise-authorized-credential)接口获取。 |
+| access\_token | String | 是 | 6adfxxxx | 调用该接口的应用凭证。   - 企业内部应用，通过[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)接口获取。 - 第三方企业应用，通过[服务商获取第三方应用授权企业的access\_token](1446-obtain-isvapp-token.md)接口获取。 |
 
 ## 返回参数
 
 | 名称 | 类型 | 示例值 | 描述 |
 | --- | --- | --- | --- |
 | expires\_in | Number | 7200 | ticket过期时间，单位秒。 |
-| ticket | String | dWk81eLxxxx | 生成的临时jsapi\_ticket。 |
+| ticket | String | dWk81eLxxxx | 生成的临时jsapi\_ticket。  **[!NOTE]**  企业内部应用是以应用维度获取jsapi\_ticket的，所以在使用的时候需要将jsapi\_ticket以appKey为维度进行缓存下来（设置缓存过期时间2小时），并不需要每次都通过接口拉取。 |
 | errmsg | String | ok | 返回码描述。 |
 | errcode | Number | 0 | 返回码。 |
 

@@ -7,31 +7,30 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > e签宝 1.0 > 套餐 > 套餐转售（底价结算模式）"
 doc_id: "EKeL2OPTky"
-updated_at: "2026-06-23 18:10:34"
+updated_at: "2026-08-25 09:37:28"
 ---
 
 > Source: https://open.dingtalk.com/document/development/package-resale-base-price-settlement-mode-1
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > e签宝 1.0 > 套餐 > 套餐转售（底价结算模式）
-> Updated: 2026-06-23 18:10:34
+> Updated: 2026-08-25 09:37:28
 
 # 套餐转售（底价结算模式）
 
 调用本接口在e签宝下转售订单给最终真正使用电子合同的用户。该模式需要提前和商务同学对接，确定每份电子合同的底价，并签订商务合同后，可使用该模式给用户下单。
 
-## **接口调用说明**
-
-当前接口已完成升级迭代且不再支持新应用申请，存量应用调用不受影响，建议未接入的开发者使用[套餐转售—底价结算模式](1075-package-resale-2-reserve-price-settlement-mode.md)接口，已接入的开发者结合实际尽快完成迁移。
+> **[!IMPORTANT]**
+>
+> - 本接口已完成升级，后续将维持现有功能且不再新增能力。
+> - 未接入的开发者建议使用新版[套餐转售—底价结算模式](1075-package-resale-2-reserve-price-settlement-mode.md)接口，已接入用户不受影响。
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/esign/orders/resale |
 | HTTP Method | POST |
 | 支持的应用类型 | appType-第三方企业应用 |
-| 权限要求 | 不支持新增申请 |
+| 权限要求 | 不支持新增 |
 
 ### 请求头
 

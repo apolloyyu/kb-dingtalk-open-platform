@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > 音视频 > 查询直播的观看数据"
 doc_id: "T4AAS8PCuq"
-updated_at: "2025-09-08 19:03:24"
+updated_at: "2026-08-25 09:37:23"
 ---
 
 > Source: https://open.dingtalk.com/document/development/queries-the-playback-data-of-a-live-stream
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > 音视频 > 查询直播的观看数据
-> Updated: 2025-09-08 19:03:24
+> Updated: 2026-08-25 09:37:23
 
 # 查询直播的观看数据
 
@@ -20,14 +20,12 @@ updated_at: "2025-09-08 19:03:24"
 
 > **[!IMPORTANT]**
 >
-> 1. 为了更好支持组织对钉钉数据分析和管理的需求，钉钉数据资产平台将统一所有数据资产相关的产品和服务，从数据层、功能层、业务层做升级，提供更好的服务体验。为此，我们将数据资产类 OpenAPI 接口的使用路径和产品定位做了调整，本开发者文档中所述 OpenAPI 接口及 60 个其他的[数据资产类OpenAPI](https://open.dingtalk.com/document/dataservice/data-asset-interface-adjustment-description)接口，已于 2023 年 9 月 1 日**关闭开发者后台应用开发的权限申请入口**，客户可以通过[钉钉数据资产平台](https://open.dingtalk.com/document/dataservice/overview)获取相应的数据服务。
-> 2. 本文档已于 2023 年 9 月 1 日迁移至历史文档（不推荐）目录，且本接口仅保持现有功能，不再新增支持其他能力，说明如下：
+> 为统一数据资产管理体验，钉钉数据资产平台已整合原分散的数据服务。本接口及另外 60 个[数据资产类OpenAPI](https://open.dingtalk.com/document/dataservice/data-asset-interface-adjustment-description) 已停止新权限申请，本文档同步迁入「历史文档」目录。
 >
->    - 如果未使用本接口，推荐使用[钉钉数据资产平台](https://open.dingtalk.com/document/dataservice/overview)。
->    - 如果已使用本接口，建议您根据自身实际情况评估是否切换至[钉钉数据资产平台](https://open.dingtalk.com/document/dataservice/overview)。
-
-调用本接口，可以根据直播ID，查询直播的观看数据详情。查询的部分信息如下图所示。
-![](https://img.alicdn.com/imgextra/i1/O1CN01FLBDfJ26IFvOftzTo_!!6000000007638-2-tps-1378-788.png)
+> 本接口仅保持现有功能，不再新增支持其他能力，说明如下：
+>
+> - **未接入用户**：请直接使用[钉钉数据资产平台](https://open.dingtalk.com/document/dataservice/overview)获取数据服务。
+> - **已接入用户**：请评估业务情况，逐步切换至钉钉数据资产平台。
 
 ## 权限
 
@@ -35,9 +33,9 @@ updated_at: "2025-09-08 19:03:24"
 
 | 应用类型 | 是否支持 | 权限 | API Explorer调试 |
 | --- | --- | --- | --- |
-| 企业内部应用 | 支持 | 钉钉直播获取数据读权限 | **[!IMPORTANT]**  暂不支持新增申请。 |
-| 第三方企业应用 | 支持 | 钉钉直播获取数据读权限 | **[!IMPORTANT]**  暂不支持新增申请。 |
-| 第三方个人应用 | 暂不支持 | 钉钉直播获取数据读权限 | 暂不支持 |
+| 企业内部应用 | 支持 | **[!NOTE]**  不支持新增 | — |
+| 第三方企业应用 | 支持 | — |
+| 第三方个人应用 | 暂不支持 | — |
 
 ## 请求方法
 
@@ -52,14 +50,14 @@ Content-Type:application/json
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证。   - 企业内部应用，调用[获取企业内部应用的accessToken](https://open.dingtalk.com/document/orgapp/obtain-the-access_token-of-an-internal-app)接口获取。 - 第三方企业应用，调用[获取第三方应用授权企业的accessToken](https://open.dingtalk.com/document/isvapp/obtain-the-access_token-of-the-authorized-enterprise)接口获取。 |
+| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证。   - 企业内部应用，调用[获取企业内部应用的accessToken](0033-obtain-the-access-token-of-an-internal-app.md)接口获取。 - 第三方企业应用，调用[获取第三方应用授权企业的accessToken](0034-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口获取。 |
 
 ## Query参数
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| liveId | String | 是 | 直播ID。   - 企业内部应用，调用[创建直播](https://open.dingtalk.com/document/orgapp/create-live-streaming)接口获取liveId参数值。 - 第三方企业应用，调用[创建直播](https://open.dingtalk.com/document/isvapp/create-live-streaming)接口获取liveId参数值。 |
-| unionId | String | 是 | 用户unionId。   - 企业内部应用，调用[查询用户详情](https://open.dingtalk.com/document/orgapp/query-user-details)接口获取unionid参数值。 - 第三方企业应用，调用[查询用户详情](https://open.dingtalk.com/document/isvapp/query-user-details)接口获取unionid参数值。 |
+| liveId | String | 是 | 直播ID，可调用[创建直播](0429-create-live-streaming.md)接口获取liveId参数值。 |
+| unionId | String | 是 | 用户unionId，可调用[查询用户详情](0056-query-user-details.md)接口获取unionid参数值。 |
 
 ## 返回参数
 

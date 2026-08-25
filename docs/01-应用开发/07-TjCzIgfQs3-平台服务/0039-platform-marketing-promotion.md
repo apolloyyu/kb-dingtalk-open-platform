@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "平台服务"
 breadcrumb: "合作指南 > 产品方案商 > 应用市场的合作指引 > 基础概念 > 营销活动"
 doc_id: "isKMDh73RL"
-updated_at: "2025-09-23 19:22:03"
+updated_at: "2026-08-25 09:45:12"
 ---
 
 > Source: https://open.dingtalk.com/document/services/platform-marketing-promotion
 > Path: 应用开发 / 平台服务 / 合作指南 > 产品方案商 > 应用市场的合作指引 > 基础概念 > 营销活动
-> Updated: 2025-09-23 19:22:03
+> Updated: 2026-08-25 09:45:12
 
 # 营销活动
 
@@ -26,7 +26,9 @@ updated_at: "2025-09-23 19:22:03"
 
 ## 买赠
 
-1. 在钉钉**工作台**进入**自运营平台**，依次单击**应用管理 > 优惠活动 > 无券 > 创建活动**。![1111](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0052088561/p469489.png)
+1. 在钉钉**工作台**进入**自运营平台**，依次单击**应用管理 > 优惠活动 > 无券 > 创建活动**。
+
+   ![1111](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0052088561/p469489.png)
 2. 在**创建活动**页面，依照下列要求填写信息后，单击**提交审核**。
 
    - **活动名称：**请填写活动名称。14字内，建议：xx活动满x年送x个月。
@@ -40,11 +42,15 @@ updated_at: "2025-09-23 19:22:03"
        - **用户：**请根据实际情况选择用户。
      - **上传清单：**系统暂不支持。
    - **生效平台：**请勾选生效平台。
-   - **活动周期：**请设置活动周期。建议时间在一个月范围内。![iShot2022-07-22_15](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/1052088561/p469502.png)
+   - **活动周期：**请设置活动周期。建议时间在一个月范围内。
+
+     ![iShot2022-07-22_15](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/1052088561/p469502.png)
 
 ## 优惠券
 
-1. 在钉钉**工作台**进入**自运营平台**，依次单击**应用管理 > 优惠活动 > 优惠券 > 创建优惠券**。![33334](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0052088561/p469496.png)
+1. 在钉钉**工作台**进入**自运营平台**，依次单击**应用管理 > 优惠活动 > 优惠券 > 创建优惠券**。
+
+   ![33334](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0052088561/p469496.png)
 2. 在**创建优惠券**页面，依照下列要求填写信息后，单击**提交审核**。
 
    - **优惠名称：**请填写优惠名称。
@@ -78,13 +84,17 @@ updated_at: "2025-09-23 19:22:03"
      > **[!NOTE]**
      >
      > 多个优惠将推荐数字最大的优惠，最大值为100。
-   - **优惠说明：**请输入优惠说明，20字内。![44444](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0052088561/p469501.png)
+   - **优惠说明：**请输入优惠说明，20字内。
+
+     ![44444](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0052088561/p469501.png)
 
 ## 特价审批单
 
 一般订单优惠金额低于7折。如果有特殊订单需要修改订单金额，可以填写特价审批单，由类目小二修改订单金额，客户再去支付。
 
-1. 在钉钉**工作台**进入**自运营平台**，依次单击**应用管理 > 运营申请**，在发起申请页面，单击**订单特价审批**的**申请**按钮，填写申请信息。![55555](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/1052088561/p469508.png)
+1. 在钉钉**工作台**进入**自运营平台**，依次单击**应用管理 > 运营申请**，在发起申请页面，单击**订单特价审批**的**申请**按钮，填写申请信息。
+
+   ![55555](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/1052088561/p469508.png)
 2. 在**订单特价审批**页面，依照下列要求填写信息后，单击**提交**。
 
    - **企业名称：**系统已默认输入企业名称。
@@ -95,4 +105,6 @@ updated_at: "2025-09-23 19:22:03"
    - **订单初始信息：**请描述背景和订单原价格情况。
    - **订单修改内容：**请输入订单修改后的价格。
    - **订单特批理由**：请输入订单特批原因。
-   - **其他信息补充：**请添加合同等补充信息的附件。![66667](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/1052088561/p469515.png)
+   - **其他信息补充：**请添加合同等补充信息的附件。
+
+     ![66667](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2132267871/p469515.png)

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "钉钉工作台 > 获取工作台API访问凭证"
 doc_id: "t7dOryppF7"
-updated_at: "2025-09-08 19:07:43"
+updated_at: "2026-08-25 09:36:37"
 ---
 
 > Source: https://open.dingtalk.com/document/development/used-to-obtain-the-application-authorization-without-api-token
 > Path: 应用开发 / 服务端API / 钉钉工作台 > 获取工作台API访问凭证
-> Updated: 2025-09-08 19:07:43
+> Updated: 2026-08-25 09:36:37
 
 # 获取工作台API访问凭证
 
@@ -22,8 +22,9 @@ API Token是由钉钉开放平台颁发，用来调用钉钉开放平台提供�
 
 在调用DingTalk OpenAPI中的工作台相关接口前，必须从开放平台获取访问凭证API Token，这个访问凭证包含你的企业信息以及可调用的接口权限，目前可调用工作台相关的接口如下：
 
-- [获取工作台插件检验的规则信息](https://open.dingtalk.com/document/dashboard/you-can-call-this-operation-to-obtain-the-information-about#doc-api-dingtalk-GetPluginRuleCheckInfo)
-- [获取工作台插件权限点](https://open.dingtalk.com/document/dashboard/obtain-the-permissions-of-the-workbench-plug-in#doc-api-dingtalk-GetPluginPermissionPoint)
+- [获取工作台插件权限点](1000-obtain-the-permissions-of-the-workbench-plug-in.md)
+- [批量添加最近使用应用](0999-add-recently-used-apps-in-bulk.md)
+- [获取工作台插件检验的规则信息](1001-you-can-call-this-operation-to-obtain-the-information-about.md)
 
 ## 获取访问凭证API Token
 

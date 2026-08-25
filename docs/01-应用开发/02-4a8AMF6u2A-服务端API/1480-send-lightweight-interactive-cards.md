@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > 即时通信 > 机器人 > 发送轻量级互动卡片"
 doc_id: "7uDeAL5eRQ"
-updated_at: "2026-04-29 13:23:57"
+updated_at: "2026-08-25 09:37:11"
 ---
 
 > Source: https://open.dingtalk.com/document/development/send-lightweight-interactive-cards
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > 即时通信 > 机器人 > 发送轻量级互动卡片
-> Updated: 2026-04-29 13:23:57
+> Updated: 2026-08-25 09:37:11
 
 # 发送轻量级互动卡片
 
@@ -20,10 +20,8 @@ updated_at: "2026-04-29 13:23:57"
 
 > **[!IMPORTANT]**
 >
-> 为提升接口使用体验，本文档于 2024 年 12 月 31 日迁移至历史文档（不推荐）目录，不再支持新应用接入，已接入的应用不受影响。如果未使用本接口，请使用[创建并投放卡片](https://open.dingtalk.com/document/orgapp/create-and-deliver-cards)接口。
-
-调用本接口，实现发送轻量级互动卡片，具体示例，如下图。
-![](https://img.alicdn.com/imgextra/i2/O1CN01TOnlRF1mJoxUdYo0N_!!6000000004934-2-tps-2496-1404.png)
+> - 本接口已完成升级，后续将维持现有功能且不再新增能力。
+> - 未接入的开发者建议使用新版[创建并投放卡片](0783-create-and-deliver-cards.md)接口，已接入用户不受影响。
 
 ## 权限
 
@@ -31,9 +29,9 @@ updated_at: "2026-04-29 13:23:57"
 
 | 应用类型 | 是否支持 | 权限 | API Explorer调试 |
 | --- | --- | --- | --- |
-| 企业内部应用 | 支持 | **[!IMPORTANT]**  不支持新增申请 | — |
-| 第三方企业应用 | 支持 | **[!IMPORTANT]**  不支持新增申请 | — |
-| 第三方个人应用 | 暂不支持 | 暂不支持 | 暂不支持 |
+| 企业内部应用 | 支持 | **[!NOTE]**  不支持新增 | — |
+| 第三方企业应用 | 支持 | — |
+| 第三方个人应用 | 暂不支持 | — |
 
 ## 请求方法
 
@@ -64,24 +62,24 @@ Content-Type:application/json
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证。   - 企业内部应用，调用[获取企业内部应用的accessToken](https://open.dingtalk.com/document/orgapp/obtain-the-access_token-of-an-internal-app)接口获取。 - 第三方企业应用，调用[获取第三方应用授权企业的accessToken](https://open.dingtalk.com/document/isvapp/obtain-the-access_token-of-the-authorized-enterprise)接口获取。 |
+| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证。   - 企业内部应用，调用[获取企业内部应用的accessToken](0033-obtain-the-access-token-of-an-internal-app.md)接口获取。 - 第三方企业应用，调用[获取第三方应用授权企业的accessToken](0034-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口获取。 |
 
 ## Body参数
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| cardTemplateId | String | 是 | 卡片内容模板ID，响应模板目前有：   - **TuWenCard01** - **TuWenCard02** - **TuWenCard03** - **TuWenCard04**   **[!NOTE]**    模板内容详情请参考：   - 企业内部应用，请参考[轻量级互动消息卡片](https://open.dingtalk.com/document/orgapp/lightweight-access-document-of-interactive-cards)。 - 第三方企业应用，请参考[轻量级互动消息卡片](https://open.dingtalk.com/document/isvapp/lightweight-access-document-of-interactive-cards)。 |
-| openConversationId | String | 否 | 接收卡片的加密群ID，特指多人群会话（非单聊）。  **[!NOTE]**    **openConversationId**和**singleChatReceiver**二选一必填。 |
-| singleChatReceiver | String | 否 | 单聊会话接收者json字符串。  群模板机器人暂不支持单聊，其他企业内部机器人和企业三方机器人有勾选支持单聊选项的可支持单聊。  **[!NOTE]**    **openConversationId**和**singleChatReceiver**二选一必填。 |
-| outTrackId | String | 是 | 唯一标识一张卡片的外部ID。  **[!NOTE]**    卡片幂等ID，可用于更新或重复发送同一卡片到多个群会话，如果同一个**outTrackId**重复创建，卡片数据不覆盖更新。 |
-| robotCode | String | 是 | 机器人代码。  群模板机器人暂不支持单聊，其他企业内部机器人和企业三方机器人有勾选支持单聊选项的可支持单聊。  **[!NOTE]**    企业内部机器人取机器人appKey值，第三方企业机器人或群模板机器人取robotCode值。 |
-| callbackUrl | String | 否 | 可控制卡片回调的URL。  **[!NOTE]**    如果不填则默认为无需回调。 |
-| cardData | String | 是 | 卡片模板，文本内容参数、  **[!NOTE]**    卡片模板内容请参考：   - 企业内部应用，请参考[轻量级互动消息卡片](https://open.dingtalk.com/document/orgapp/lightweight-access-document-of-interactive-cards)。 - 第三方企业应用，请参考[轻量级互动消息卡片](https://open.dingtalk.com/document/isvapp/lightweight-access-document-of-interactive-cards)。 |
+| cardTemplateId | String | 是 | 卡片内容模板ID，响应模板目前有：   - **TuWenCard01** - **TuWenCard02** - **TuWenCard03** - **TuWenCard04**   **[!NOTE]**  模板内容详情请参考：[轻量级互动卡片消息](../01-XOnnmGCTbn-开发指南/0095-lightweight-interactive-card-messages.md)。 |
+| openConversationId | String | 否 | 接收卡片的加密群ID，特指多人群会话（非单聊）。  **[!NOTE]**  `openConversationId`和`singleChatReceiver`二选一必填。 |
+| singleChatReceiver | String | 否 | 单聊会话接收者json字符串。群模板机器人暂不支持单聊，其他企业内部机器人和企业三方机器人有勾选支持单聊选项的可支持单聊。  **[!NOTE]**  `openConversationId`和`singleChatReceiver`二选一必填。 |
+| outTrackId | String | 是 | 唯一标识一张卡片的外部ID。  **[!NOTE]**  卡片幂等ID，可用于更新或重复发送同一卡片到多个群会话，如果同一个**outTrackId**重复创建，卡片数据不覆盖更新。 |
+| robotCode | String | 是 | 机器人代码。群模板机器人暂不支持单聊，其他企业内部机器人和企业三方机器人有勾选支持单聊选项的可支持单聊。  **[!NOTE]**  企业内部机器人取机器人appKey值，第三方企业机器人或群模板机器人取robotCode值。 |
+| callbackUrl | String | 否 | 可控制卡片回调的URL。  **[!NOTE]**  如果不填则默认为无需回调。 |
+| cardData | String | 是 | 卡片模板，文本内容参数、  **[!NOTE]**  卡片模板内容请参考：[轻量级互动卡片消息](../01-XOnnmGCTbn-开发指南/0095-lightweight-interactive-card-messages.md)。 |
 | sendOptions | Object | 否 | 互动卡片发送选项。 |
-| atUserListJson | String | 否 | 消息@人。  JSON格式：   ``` [     {         "nickName": "张三",         "userId": "userId0001"     },     {         "nickName": "李四",         "unionId": "unionId001"     } ] ``` |
-| atAll | Boolean | 否 | 是否@所有人 |
-| receiverListJson | String | 否 | 消息仅部分人可见的接收人列表。  JSON格式：   ``` [     {         "userId": "userId0001"     },     {         "unionId": "unionId001"     } ] ```   **[!NOTE]**    为空则群所有人可见。 |
-| cardPropertyJson | String | 否 | 互动卡片发送选项，  **[!NOTE]**     - 会话列表最新提示：`key： "sys_lastMessageI18n"，value："{\"zh_CN\":\"测试中文\",\"en_US\":\"test english\"}"` - 关屏消息提示：`key："sys_xpnContent"，value："XX消息请查收"；` |
+| atUserListJson | String | 否 | 消息@人，JSON格式：   ``` [     {         "nickName": "张三",         "userId": "userId0001"     },     {         "nickName": "李四",         "unionId": "unionId001"     } ] ``` |
+| atAll | Boolean | 否 | 是否@所有人。 |
+| receiverListJson | String | 否 | 消息仅部分人可见的接收人列表，JSON格式：   ``` [     {         "userId": "userId0001"     },     {         "unionId": "unionId001"     } ] ```   **[!NOTE]**  为空则群所有人可见。 |
+| cardPropertyJson | String | 否 | 互动卡片发送选项。  **[!NOTE]**   - 会话列表最新提示：`key： "sys_lastMessageI18n"，value："{\"zh_CN\":\"测试中文\",\"en_US\":\"test english\"}"` - 关屏消息提示：`key："sys_xpnContent"，value："XX消息请查收"；` |
 
 ## 返回参数
 

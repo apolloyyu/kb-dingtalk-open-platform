@@ -7,31 +7,30 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > e签宝 1.0 > 文件 > 获取文件详情"
 doc_id: "iekB8uM9ae"
-updated_at: "2026-06-23 18:10:41"
+updated_at: "2026-08-25 09:37:35"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-file-details
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > e签宝 1.0 > 文件 > 获取文件详情
-> Updated: 2026-06-23 18:10:41
+> Updated: 2026-08-25 09:37:35
 
 # 获取文件详情
 
 调用本接口查询文件详情，包括文件名称、大小、下载地址等。
 
-## **接口调用说明**
-
-当前接口已完成升级迭代且不再支持新应用申请，存量应用调用不受影响，建议未接入的开发者使用[获取文件详情](1084-gets-the-file-details.md)接口，已接入的开发者结合实际尽快完成迁移。
+> **[!IMPORTANT]**
+>
+> - 本接口已完成升级，后续将维持现有功能且不再新增能力。
+> - 未接入的开发者建议使用新版[获取文件详情](1084-gets-the-file-details.md)接口，已接入用户不受影响。
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/esign/files/{fileId} |
 | HTTP Method | GET |
 | 支持的应用类型 | appType-第三方企业应用 |
-| 权限要求 | 不支持新增申请 |
+| 权限要求 | 不支持新增 |
 
 ### 请求头
 
@@ -43,7 +42,7 @@ updated_at: "2026-06-23 18:10:41"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| fileId | String | 否 | 调用[获取文件上传地址](1085-obtain-the-upload-url-of-a-file-1.md)返回的fileId。 |
+| fileId | String | 否 | 调用[获取文件上传地址](1506-obtain-the-file-upload-address-1.md)返回的fileId。 |
 
 ### 请求示例
 

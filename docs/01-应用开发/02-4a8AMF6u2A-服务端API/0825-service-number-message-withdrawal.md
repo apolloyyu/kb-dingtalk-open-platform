@@ -42,7 +42,7 @@ updated_at: "2026-06-01 09:15:37"
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
 | unionid | String | 是 | jYdrxxxxTo0iE | 服务号的unionid，可以通过[查询服务号详情](0813-inquire-about-service-number-details.md)接口获取。 |
-| task\_id | String | 是 | pushWxxxx2rjeI2SswiEiE | 消息发送任务id，可以通过[消息群发](1624-interactive-service-window-group-message-sending-interface.md)接口获取。 |
+| task\_id | String | 是 | pushWxxxx2rjeI2SswiEiE | 消息发送任务id，可以通过[消息群发](1623-interactive-service-window-group-message-sending-interface.md)接口获取。 |
 
 ### **请求示例**
 

@@ -7,31 +7,30 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > e签宝 1.0 > 用户 > 查询用户是否实名"
 doc_id: "vlLM8wfOBz"
-updated_at: "2026-06-23 18:10:36"
+updated_at: "2026-08-25 09:37:30"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-whether-a-user-has-a-real-name
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > e签宝 1.0 > 用户 > 查询用户是否实名
-> Updated: 2026-06-23 18:10:36
+> Updated: 2026-08-25 09:37:30
 
 # 查询用户是否实名
 
 调用本接口查询当前用户是否已在e签宝实名（完成实名后才能签署）。已实名则会返回个人实名名称，应用服务商ISV可根据需要在应用内展示给用户实名状态。未实名则可在应用内提醒用户进行实名。
 
-## **接口调用说明**
-
-当前接口已完成升级迭代且不再支持新应用申请，存量应用调用不受影响，建议未接入的开发者使用[查询个人是否实名认证](1080-query-personal-information.md)接口，已接入的开发者结合实际尽快完成迁移。
+> **[!IMPORTANT]**
+>
+> - 本接口已完成升级，后续将维持现有功能且不再新增能力。
+> - 未接入的开发者建议使用新版[查询个人是否实名认证](1080-query-personal-information.md)接口，已接入用户不受影响。
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/esign/users/{userId} |
 | HTTP Method | GET |
 | 支持的应用类型 | appType-第三方企业应用 |
-| 权限要求 | 不支持新增申请 |
+| 权限要求 | 不支持新增 |
 
 ### 请求头
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > 获取访问凭证 > 获取企业内部应用的access_token"
 doc_id: "FRuKfO9tOP"
-updated_at: "2026-07-22 16:25:42"
+updated_at: "2026-08-25 09:36:29"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-orgapp-token
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > 获取访问凭证 > 获取企业内部应用的access_token
-> Updated: 2026-07-22 16:25:42
+> Updated: 2026-08-25 09:36:29
 
 # 获取企业内部应用的access\_token
 
@@ -20,10 +20,8 @@ updated_at: "2026-07-22 16:25:42"
 
 > **[!IMPORTANT]**
 >
-> 为提升使用体验，相关接口规范已完成升级：
->
-> - 新用户请直接使用[获取企业内部应用的accessToken](0033-obtain-the-access-token-of-an-internal-app.md)新版接口；
-> - 存量用户建议评估后按需切换至新版，以获得更好的服务体验。
+> - 本接口已完成升级，后续将维持现有功能且不再新增能力。
+> - 未接入的开发者建议使用新版 [获取企业内部应用的accessToken](0033-obtain-the-access-token-of-an-internal-app.md)接口，已接入用户不受影响。
 
 ## **请求**
 

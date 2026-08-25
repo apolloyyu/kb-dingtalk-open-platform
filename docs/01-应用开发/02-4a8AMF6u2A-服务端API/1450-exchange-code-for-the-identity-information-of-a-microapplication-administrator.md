@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > 身份验证（免登） > 获取应用管理后台免登的用户信息"
 doc_id: "mtvC5AWzKo"
-updated_at: "2025-09-08 19:07:44"
+updated_at: "2026-08-25 09:36:34"
 ---
 
 > Source: https://open.dingtalk.com/document/development/exchange-code-for-the-identity-information-of-a-microapplication-administrator
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > 身份验证（免登） > 获取应用管理后台免登的用户信息
-> Updated: 2025-09-08 19:07:44
+> Updated: 2026-08-25 09:36:34
 
 # 获取应用管理后台免登的用户信息
 
@@ -20,10 +20,8 @@ updated_at: "2025-09-08 19:07:44"
 
 > **[!IMPORTANT]**
 >
-> 为提升接口使用体验，针对获取访问凭证相关接口规范进行升级，从[旧版升级到新版](https://open.dingtalk.com/document/orgapp/differences-between-server-apis-and-new-server-apis)。本文旧版规范接口文档已于2023年8月30日迁移至历史文档（不推荐）目录，且本接口仅保持现有功能，不再新增支持其他能力。
->
-> - 如果未使用本接口，推荐使用[获取应用管理后台免登的用户信息](https://open.dingtalk.com/document/isvapp/obtains-the-identity-of-an-application-administrator)新版规范接口。
-> - 如果已使用本接口，建议您根据自身实际情况评估是否切换至推荐接口。
+> - 本接口已完成升级，后续将维持现有功能且不再新增能力。
+> - 未接入的开发者建议使用新版 [获取应用管理后台免登的用户信息](0026-obtains-the-identity-of-an-application-administrator.md)接口，已接入用户不受影响。
 
 ![iShot2021-12-29 19](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/7091380461/p378309.png)
 
@@ -48,7 +46,7 @@ updated_at: "2025-09-08 19:07:44"
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
 | code | String | 是 | 123 | 通过Oauth认证给URL带上的code。 |
-| access\_token | String | 是 | 6ed1bxxx | 调用该API的应用凭证。   - 企业内部应用，调用[获取微应用后台免登的access\_token](https://open.dingtalk.com/document/orgapp/obtain-the-ssotoken-for-micro-application-background-logon-free)接口获取。 - 第三方企业应用，调用[获取微应用后台免登的access\_token](https://open.dingtalk.com/document/isvapp/obtain-the-ssotoken-for-micro-application-background-logon-free)接口获取。 |
+| access\_token | String | 是 | 6ed1bxxx | 调用该API的应用凭证，可调用[获取微应用后台免登的accessToken](0025-obtain-the-access-token-of-the-micro-application-background-without-log-on.md)接口获取。 |
 
 **code参数说明**
 
@@ -111,5 +109,4 @@ System.out.println(rsp.getBody());
 
 ## 相关文档
 
-- 企业内部应用，请参考[应用管理后台免登](https://open.dingtalk.com/document/orgapp/log-on-site-application-management-backend)。
-- 第三方企业应用，请参考[应用管理后台免登](https://open.dingtalk.com/document/isvapp/log-on-site-application-management-backend)。
+- [应用管理后台免登](0022-log-on-site-application-management-backend.md)

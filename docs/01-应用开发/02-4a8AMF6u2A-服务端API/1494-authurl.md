@@ -7,20 +7,21 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > e签宝 1.0 > 鉴权 > 获取授权的页面地址"
 doc_id: "IQ4NPdJxy5"
-updated_at: "2026-06-23 18:10:30"
+updated_at: "2026-08-25 09:37:25"
 ---
 
 > Source: https://open.dingtalk.com/document/development/authurl
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > e签宝 1.0 > 鉴权 > 获取授权的页面地址
-> Updated: 2026-06-23 18:10:30
+> Updated: 2026-08-25 09:37:25
 
 # 获取授权的页面地址
 
 获取企业授权的页面地址，企业授权使用e签宝提供的功能。
 
-## **接口调用说明**
-
-当前接口已完成升级迭代且不再支持新应用申请，存量应用调用不受影响，建议未接入的开发者使用[获取授权的页面地址](1072-obtain-the-address-of-the-authorized-page.md)接口，已接入的开发者结合实际尽快完成迁移。
+> **[!IMPORTANT]**
+>
+> - 本接口已完成升级，后续将维持现有功能且不再新增能力。
+> - 未接入的开发者建议使用新版[获取授权的页面地址](1072-obtain-the-address-of-the-authorized-page.md)接口，已接入用户不受影响。
 
 ## **请求**
 
@@ -29,7 +30,7 @@ updated_at: "2026-06-23 18:10:30"
 | HTTP URL | https://api.dingtalk.com/v1.0/esign/auths/url |
 | HTTP Method | POST |
 | 支持的应用类型 | appType-第三方企业应用 |
-| 权限要求 | 不支持新增申请 |
+| 权限要求 | 不支持新增 |
 
 ### **请求头**
 
@@ -41,7 +42,7 @@ updated_at: "2026-06-23 18:10:30"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| redirectUrl | String | 否 | 获取到的重定向地址。  地址后会携带授权结果，例如：status=SUCCESS&taskid=AUTH-AB312C2CA3EC4876BAC10FB112C22348  其中：   - **status**表示状态，SUCCESS为成功，FAIL为失败。 - **taskid**表示任务id。 |
+| redirectUrl | String | 否 | 获取到的重定向地址。  地址后会携带授权结果，例如：`status=SUCCESS&taskid=AUTH-AB312C2CA3EC4876BAC10FB112C22348`其中：   - **status**：表示状态，`SUCCESS`为成功，`FAIL`为失败。 - **taskid**：表示任务id。 |
 
 ### **请求示例**
 

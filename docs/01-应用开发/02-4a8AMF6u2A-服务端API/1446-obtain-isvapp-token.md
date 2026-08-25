@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > 获取访问凭证 > 服务商获取第三方应用授权企业的access_token"
 doc_id: "NrZCOOaMBH"
-updated_at: "2026-07-22 16:25:44"
+updated_at: "2026-08-25 09:36:30"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-isvapp-token
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > 获取访问凭证 > 服务商获取第三方应用授权企业的access_token
-> Updated: 2026-07-22 16:25:44
+> Updated: 2026-08-25 09:36:30
 
 # 服务商获取第三方应用授权企业的access\_token
 
@@ -22,18 +22,14 @@ updated_at: "2026-07-22 16:25:44"
 
 > **[!IMPORTANT]**
 >
-> 为提升接口使用体验，针对**获取访问凭证**相关接口规范进行升级，本接口仅保持现有功能，不再新增支持其他能力。
->
-> - 如果未使用本接口，推荐使用[获取第三方应用授权企业的accessToken](0034-obtain-the-access-token-of-the-authorized-enterprise-1.md)新版规范接口。
-> - 如果已使用本接口，建议您根据自身实际情况评估是否切换至推荐接口。
+> - 本接口已完成升级，后续将维持现有功能且不再新增能力。
+> - 未接入的开发者建议使用新版 [获取第三方应用授权企业的accessToken](0034-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口，已接入用户不受影响。
 
-> **[!NOTE]**
->
-> 在使用access\_token时，请注意：
->
-> - access\_token的有效期为7200秒（2小时），有效期内重复获取会返回新的access\_token。
-> - 开发者需要缓存access\_token，用于后续接口的调用。因为每个应用的access\_token是彼此独立的，所以进行缓存时需要区分应用来进行存储。
-> - 不能频繁调用gettoken接口，否则会受到频率拦截。
+在使用access\_token时，请注意：
+
+- access\_token的有效期为7200秒（2小时），有效期内重复获取会返回新的access\_token。
+- 开发者需要缓存access\_token，用于后续接口的调用。因为每个应用的access\_token是彼此独立的，所以进行缓存时需要区分应用来进行存储。
+- 不能频繁调用gettoken接口，否则会受到频率拦截。
 
 推荐使用SDK调用本接口：
 

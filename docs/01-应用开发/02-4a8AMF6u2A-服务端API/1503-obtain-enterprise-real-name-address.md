@@ -7,31 +7,30 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > e签宝 1.0 > 用户 > 获取企业实名地址"
 doc_id: "Qo5Xke5urp"
-updated_at: "2026-06-23 18:10:38"
+updated_at: "2026-08-25 09:37:32"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-enterprise-real-name-address
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > e签宝 1.0 > 用户 > 获取企业实名地址
-> Updated: 2026-06-23 18:10:38
+> Updated: 2026-08-25 09:37:32
 
 # 获取企业实名地址
 
 调用本接口获取企业实名地址。当企业未实名时，可通过该接口获取实名地址，在应用内展示给企业实名入口。
 
-## **接口调用说明**
-
-当前接口已完成升级迭代且不再支持新应用申请，存量应用调用不受影响，建议未接入的开发者使用[获取跳转到企业实名的地址](1082-obtain-the-address-that-is-redirected-to-the-enterprise-s-real.md)接口，已接入的开发者结合实际尽快完成迁移。
+> **[!IMPORTANT]**
+>
+> - 本接口已完成升级，后续将维持现有功能且不再新增能力。
+> - 未接入的开发者建议使用新版[获取跳转到企业实名的地址](1082-obtain-the-address-that-is-redirected-to-the-enterprise-s-real.md)接口，已接入用户不受影响。
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/esign/corps/realname |
 | HTTP Method | POST |
 | 支持的应用类型 | appType-第三方企业应用 |
-| 权限要求 | 不支持新增申请 |
+| 权限要求 | 不支持新增 |
 
 ### 请求头
 

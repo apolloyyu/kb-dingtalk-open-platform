@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "应用市场 > 概述"
 doc_id: "DwUDxQwzGB"
-updated_at: "2026-07-14 09:10:22"
+updated_at: "2026-08-25 09:36:38"
 ---
 
 > Source: https://open.dingtalk.com/document/development/application-market-overview
 > Path: 应用开发 / 服务端API / 应用市场 > 概述
-> Updated: 2026-07-14 09:10:22
+> Updated: 2026-08-25 09:36:38
 
 # 概述
 
@@ -134,8 +134,12 @@ updated_at: "2026-07-14 09:10:22"
 
 消耗型商品，支持固定规格和非固定规格。
 
-- **固定规格**：即每个规格的价格固定，如下图所示。![iShot2022-09-20 10](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2241993871/p492538.png)
-- **非固定规格**：即无固定价格，可自定义数值，使用流程请参考下文**非固定规格实现流程。**![iShot2022-09-20 10](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2241993871/p492544.png)
+- **固定规格**：即每个规格的价格固定，如下图所示。
+
+  ![iShot2022-09-20 10](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2241993871/p492538.png)
+- **非固定规格**：即无固定价格，可自定义数值，使用流程请参考下文**非固定规格实现流程。**
+
+  ![iShot2022-09-20 10](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2241993871/p492544.png)
 
 #### **非固定规格实现流程**
 
@@ -147,7 +151,9 @@ updated_at: "2026-07-14 09:10:22"
 
    ![iShot2022-09-20 10](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2241993871/p492544.png)
 2. 内购商品审核上架后，调用[获取内购商品SKU页面地址](0883-obtain-the-address-of-the-product-sku-details-page.md)接口，使用参数extend\_param指定商品价格。
-3. 调用接口指定商品价格后，用户侧下单界面如下图所示。![iShot2022-09-20 10](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2241993871/p492578.png)
+3. 调用接口指定商品价格后，用户侧下单界面如下图所示。
+
+   ![iShot2022-09-20 10](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2241993871/p492578.png)
 
 ## 开放概览
 

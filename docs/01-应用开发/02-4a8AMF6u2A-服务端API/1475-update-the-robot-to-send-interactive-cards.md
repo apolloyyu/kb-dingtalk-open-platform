@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > 即时通信 > 机器人 > 更新机器人发送互动卡片（普通版）"
 doc_id: "MjvbWTjG4V"
-updated_at: "2026-04-29 13:23:51"
+updated_at: "2026-08-25 09:37:12"
 ---
 
 > Source: https://open.dingtalk.com/document/development/update-the-robot-to-send-interactive-cards
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > 即时通信 > 机器人 > 更新机器人发送互动卡片（普通版）
-> Updated: 2026-04-29 13:23:51
+> Updated: 2026-08-25 09:37:12
 
 # 更新机器人发送互动卡片（普通版）
 
@@ -20,15 +20,18 @@ updated_at: "2026-04-29 13:23:51"
 
 > **[!IMPORTANT]**
 >
-> 为提升接口使用体验，本文档于 2024 年 12 月 31 日迁移至历史文档（不推荐）目录，不再支持新应用接入，已接入的应用不受影响。如果未使用本接口，请使用[更新卡片](https://open.dingtalk.com/document/orgapp/interactive-card-update-interface)接口。
+> - 本接口已完成升级，后续将维持现有功能且不再新增能力。
+> - 未接入的开发者建议使用新版[更新卡片](0782-interactive-card-update-interface.md)接口，已接入用户不受影响。
 
-如何发送互动卡片普通版流程，详情参见[互动卡片普通版接入流程](https://open.dingtalk.com/document/resourcedownload/ding-card-interactive-card-operation-process)。
+如何发送互动卡片普通版流程，详情参见[互动卡片普通版接入流程](../../05-互动卡片/02-ukxqoQhFaf-搭建平台/0010-ding-card-interactive-card-operation-process.md)。
 
 互动卡片示例一：
-![](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/a/RV0Dej1grUlPeWgb/75ad94a182234c9f8005acabebf20c070521.png)
 
-互动卡片示例二:
-![](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/a/RV0Dej1grUlPeWgb/bff9c42284374f74b47d5171f221d4d90521.png)
+![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2381267871/p1096273.png)
+
+互动卡片示例二：
+
+![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2381267871/p1096274.png)
 
 ## 权限
 
@@ -36,9 +39,9 @@ updated_at: "2026-04-29 13:23:51"
 
 | 应用类型 | 是否支持 | 权限 | API Explorer调试 |
 | --- | --- | --- | --- |
-| 企业内部应用 | 支持 | **[!IMPORTANT]**  暂不支持新增申请 | — |
-| 第三方企业应用 | 支持 | **[!IMPORTANT]**  暂不支持新增申请 | — |
-| 第三方个人应用 | 暂不支持 | 暂不支持 | 暂不支持 |
+| 企业内部应用 | 支持 | **[!NOTE]**  不支持新增 | — |
+| 第三方企业应用 | 支持 | — |
+| 第三方个人应用 | 暂不支持 | — |
 
 ## 请求方法
 
@@ -64,13 +67,13 @@ Content-Type:application/json
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证。   - 企业内部应用，调用[获取企业内部应用的accessToken](https://open.dingtalk.com/document/orgapp/obtain-the-access_token-of-an-internal-app)接口获取。 - 企业内部开发-机器人应用，调用[获取企业内部应用的accessToken](https://open.dingtalk.com/document/orgapp/obtain-the-access_token-of-an-internal-app)接口获取。 - 第三方企业应用，调用[获取第三方应用授权企业的accessToken](https://open.dingtalk.com/document/isvapp/obtain-the-access_token-of-the-authorized-enterprise)接口获取。 |
+| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证。   - 企业内部应用，调用[获取企业内部应用的accessToken](0033-obtain-the-access-token-of-an-internal-app.md)接口获取。 - 第三方企业应用，调用[获取第三方应用授权企业的accessToken](0034-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口获取。 |
 
 ## Body参数
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| cardBizId | String | 是 | 唯一标识一张卡片的外部ID（卡片幂等ID，可用于更新或重复发送同一卡片到多个群会话）。需与机器人发送互动卡片（普通版）接口Body参数中cardBizId保持一致。   - 企业内部应用，请参见[机器人发送互动卡片（普通版）](https://open.dingtalk.com/document/orgapp/robots-send-interactive-cards)接口。 - 第三方企业应用，请参见[机器人发送互动卡片（普通版）](https://open.dingtalk.com/document/isvapp/robots-send-interactive-cards)接口。 |
+| cardBizId | String | 是 | 唯一标识一张卡片的外部ID（卡片幂等ID，可用于更新或重复发送同一卡片到多个群会话）。需与机器人发送互动卡片（普通版）接口Body参数中cardBizId保持一致，请参见[机器人发送互动卡片（普通版）](1474-robots-send-interactive-cards.md)接口。 |
 | cardData | String | 否 | 卡片模板文本内容，在[卡片搭建平台](https://card.dingtalk.com/card-builder)设计模板后，复制右侧示例代码信息即为该参数值。a6bdd5ba-48bb-4697-8e59-8d4639a97324 |
 | userIdPrivateDataMap | String | 否 | 卡片模板userId差异用户参数，json结构体，表示特殊消息接收人接收卡片的具体内容信息。  例如：群主为userId为userId0001，需要展示不同与普通群员cardData的数据内容信息，可以使用userIdPrivateDataMap实现数据差异化。  参数格式为：`"{"userId值":{卡片消息cardData参数值}}"`。 |
 | unionIdPrivateDataMap | String | 否 | 卡片模板unionId差异用户参数，json结构体，表示特殊消息接收人接收卡片的具体内容信息。  例如：群主为unionId为unionId0001，需要展示不同与普通群员cardData的数据内容信息，可以使用**unionIdPrivateDataMap**实现数据差异化。  参数格式为：`"{"unionId值":{卡片消息cardData参数值}}"`。 |
@@ -82,7 +85,7 @@ Content-Type:application/json
 
 | 名称 | 类型 | 描述 |
 | --- | --- | --- |
-| processQueryKey | String | 加密消息id，根据此id可查询消息已读状态和撤回消息。   - 企业内部应用，请参考[查询企业机器人群聊消息用户已读状态](https://open.dingtalk.com/document/orgapp/chatbot-queries-the-read-status-of-a-message)和[企业机器人撤回内部群消息](https://open.dingtalk.com/document/orgapp/enterprise-chatbot-withdraws-internal-group-messages)。 - 第三方企业应用，请参考[查询企业机器人群聊消息用户已读状态](https://open.dingtalk.com/document/isvapp/querying-the-user-read-status-of-group-chat-messages-in)和[企业机器人撤回内部群消息](https://open.dingtalk.com/document/isvapp/enterprise-robot-withdraws-internal-group-messages)。 |
+| processQueryKey | String | 加密消息id，根据此id可查询消息已读状态和撤回消息，请参考[查询企业机器人群聊消息用户已读状态](0722-chatbot-queries-the-read-status-of-a-message.md)和[企业机器人撤回内部群消息](0725-enterprise-chatbot-withdraws-internal-group-messages.md)。 |
 
 ## 示例
 

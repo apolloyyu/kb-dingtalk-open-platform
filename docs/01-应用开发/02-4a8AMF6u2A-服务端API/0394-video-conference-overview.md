@@ -129,10 +129,10 @@ updated_at: "2026-07-10 10:05:13"
 
 直播支持状态变化、修改信息和观看回放信息回调事件。
 
-- [直播状态变更](../04-LFcRvVD08N-事件订阅/0041-event-live-status-change-event.md)
-- [直播信息修改](../04-LFcRvVD08N-事件订阅/0042-event-live-update-event.md)
-- [直播回放观看数据推送](../04-LFcRvVD08N-事件订阅/0043-event-live-watch-playback-event.md)
-- [直播结束数据处理完成事件](../04-LFcRvVD08N-事件订阅/0044-event-live-statistic-done-event.md)
+- [直播状态变更](../04-LFcRvVD08N-事件订阅/0074-event-live-status-change-event.md)
+- [直播信息修改](../04-LFcRvVD08N-事件订阅/0075-event-live-update-event.md)
+- [直播回放观看数据推送](../04-LFcRvVD08N-事件订阅/0076-event-live-watch-playback-event.md)
+- [直播结束数据处理完成事件](../04-LFcRvVD08N-事件订阅/0077-event-live-statistic-done-event.md)
 
 ### **名词解释**
 
@@ -230,8 +230,8 @@ updated_at: "2026-07-10 10:05:13"
 
 会议室支持预定等事件，包括预定成功、取消等。
 
-- [设备中控事件](../04-LFcRvVD08N-事件订阅/0046-events-open-meeting-room-central-control.md)
-- [会议室事件](../04-LFcRvVD08N-事件订阅/0045-nqrbp8.md)
+- [设备中控事件](../04-LFcRvVD08N-事件订阅/0079-events-open-meeting-room-central-control.md)
+- [会议室事件](../04-LFcRvVD08N-事件订阅/0078-nqrbp8.md)
 
 ### **名词解释**
 

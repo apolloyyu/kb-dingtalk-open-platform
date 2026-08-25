@@ -7,22 +7,20 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "钉钉工作台 > 获取工作台插件权限点"
 doc_id: "ME725ZfY5b"
-updated_at: "2026-06-02 19:48:41"
+updated_at: "2026-08-25 09:36:25"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-the-permissions-of-the-workbench-plug-in
 > Path: 应用开发 / 服务端API / 钉钉工作台 > 获取工作台插件权限点
-> Updated: 2026-06-02 19:48:41
+> Updated: 2026-08-25 09:36:25
 
 # 获取工作台插件权限点
 
-调用本接口可以获取工作台插件对应的权限点。
+调用本接口，获取工作台插件对应的权限点。
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/workbench/plugins/permissions |
 | HTTP Method | GET |
@@ -33,7 +31,7 @@ updated_at: "2026-06-02 19:48:41"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，请参考[调用工作台 API](https://open.dingtalk.com/document/dingstart/workbench)。 |
+| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，请参考[调用工作台 API](../../08-工作台/02-Qzb8Lpee2t-使用教程/0013-call-the-workbench-api.md#a1b8677ca7pih)。 |
 
 ### 查询参数
 

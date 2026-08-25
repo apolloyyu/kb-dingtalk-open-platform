@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > 即时通信 > 机器人 > 更新钉钉互动卡片"
 doc_id: "k74gkdAjXD"
-updated_at: "2026-04-29 13:23:53"
+updated_at: "2026-08-25 09:37:07"
 ---
 
 > Source: https://open.dingtalk.com/document/development/update-dingtalk-interactive-cards
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > 即时通信 > 机器人 > 更新钉钉互动卡片
-> Updated: 2026-04-29 13:23:53
+> Updated: 2026-08-25 09:37:07
 
 # 更新钉钉互动卡片
 
@@ -20,10 +20,8 @@ updated_at: "2026-04-29 13:23:53"
 
 > **[!IMPORTANT]**
 >
-> 为提升接口使用体验，本文档于 2024 年 12 月 31 日迁移至历史文档（不推荐）目录，不再支持新应用接入，已接入的应用不受影响。如果未使用本接口，请使用[创建并投放卡片](https://open.dingtalk.com/document/orgapp/create-and-deliver-cards)接口。
-
-调用本接口，实现更新互动卡片，具体示例，如下图。
-![](https://img.alicdn.com/imgextra/i3/O1CN01EHCFjY1RDlkKKUSDy_!!6000000002078-2-tps-2876-964.png)
+> - 本接口已完成升级，后续将维持现有功能且不再新增能力。
+> - 未接入的开发者建议使用新版[创建并投放卡片](0783-create-and-deliver-cards.md)接口，已接入用户不受影响。
 
 ## 权限
 
@@ -31,9 +29,9 @@ updated_at: "2026-04-29 13:23:53"
 
 | 应用类型 | 是否支持 | 权限 | API Explorer调试 |
 | --- | --- | --- | --- |
-| 企业内部应用 | 支持 | **[!IMPORTANT]**  不支持新增申请 | — |
-| 第三方企业应用 | 支持 | **[!IMPORTANT]**  不支持新增申请 | — |
-| 第三方个人应用 | 暂不支持 | 暂不支持 | 暂不支持 |
+| 企业内部应用 | 支持 | **[!NOTE]**  不支持新增 | — |
+| 第三方企业应用 | 支持 | — |
+| 第三方个人应用 | 暂不支持 | — |
 
 ## 请求方法
 
@@ -75,19 +73,19 @@ Content-Type:application/json
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证。   - 企业内部应用，调用[获取企业内部应用的accessToken](https://open.dingtalk.com/document/orgapp/obtain-the-access_token-of-an-internal-app)接口获取。 - 第三方企业应用，调用[获取第三方应用授权企业的accessToken](https://open.dingtalk.com/document/isvapp/obtain-the-access_token-of-the-authorized-enterprise)接口获取。 |
+| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证。   - 企业内部应用，调用[获取企业内部应用的accessToken](0033-obtain-the-access-token-of-an-internal-app.md)接口获取。 - 第三方企业应用，调用[获取第三方应用授权企业的accessToken](0034-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口获取。 |
 
 ## Body参数
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| outTrackId | String | 否 | 卡片的唯一标识编码。  **[!NOTE]**    是由开发者自己生成并作为入参传递给钉钉的，钉钉只在对应使用到**outTrackId**的场景，帮助开发者对TrackId进行记录。 |
+| outTrackId | String | 否 | 卡片的唯一标识编码。  **[!NOTE]**  是由开发者自己生成并作为入参传递给钉钉的，钉钉只在对应使用到**outTrackId**的场景，帮助开发者对TrackId进行记录。 |
 | cardData | Object | 否 | 卡片数据。 |
-| cardParamMap | Map<String, String> | 否 | 卡片模板内容替换参数，普通文本类型。  **[!NOTE]**     - 属性字段只支持 String 类型，非 String 类型的属性填写请参考文档：[常见问题](https://open.dingtalk.com/document/orgapp/faq-card) 文档中“设置卡片数据时，如何处理非 String 类型的参数”小节。 - 务必确保属性值的类型与卡片搭建器中所配置的变量类型相匹配，否则可能出现属性不生效，或者在移动端无法显示等问题。 |
+| cardParamMap | Map<String, String> | 否 | 卡片模板内容替换参数，普通文本类型。  **[!NOTE]**   - 属性字段只支持 String 类型，非 String 类型的属性填写请参考文档：[常见问题](0790-faq-card.md)中“设置卡片数据时，如何处理非 String 类型的参数”小节。 - 务必确保属性值的类型与卡片搭建器中所配置的变量类型相匹配，否则可能出现属性不生效，或者在移动端无法显示等问题。 |
 | cardMediaIdParamMap | Map<String, String> | 否 | 卡片模板内容替换参数，多媒体类型。 |
 | privateData | Map<String, Object> | 否 | 指定用户可见的按钮列表。   - **key**：用户userId - **value**：用户数据 |
 |  | Object | 否 | 指定用户可见的按钮列表。   - **key**：用户userId - **value**：用户数据 |
-| cardParamMap | Map<String, String> | 否 | 卡片模板内容替换参数，普通文本类型。  **[!NOTE]**     - 属性字段只支持 String 类型，非 String 类型的属性填写请参考文档：[常见问题](https://open.dingtalk.com/document/orgapp/faq-card) 文档中“设置卡片数据时，如何处理非 String 类型的参数”小节。 - 务必确保属性值的类型与卡片搭建器中所配置的变量类型相匹配，否则可能出现属性不生效，或者在移动端无法显示等问题。 |
+| cardParamMap | Map<String, String> | 否 | 卡片模板内容替换参数，普通文本类型。  **[!NOTE]**     - 属性字段只支持 String 类型，非 String 类型的属性填写请参考文档：[常见问题](0790-faq-card.md)中“设置卡片数据时，如何处理非 String 类型的参数”小节。 - 务必确保属性值的类型与卡片搭建器中所配置的变量类型相匹配，否则可能出现属性不生效，或者在移动端无法显示等问题。 |
 | cardMediaIdParamMap | Map<String, String> | 否 | 卡片模板内容替换参数，多媒体类型。 |
 | userIdType | Integer | 否 | 用户ID类型：   - **1**：userid模式（默认值） - **2**：unionId模式   对应receiverUserIdList、privateData字段关于用户id的值填写方式。 |
 | cardOptions | Object | 否 | 发送可交互卡片的功能选项。 |

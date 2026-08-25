@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > 通讯录管理 > 用户管理1.0(不推荐) > 获取员工人数"
 doc_id: "bcTJZWhDZr"
-updated_at: "2025-09-08 19:07:30"
+updated_at: "2026-08-25 09:36:54"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-the-number-of-employees
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > 通讯录管理 > 用户管理1.0(不推荐) > 获取员工人数
-> Updated: 2025-09-08 19:07:30
+> Updated: 2026-08-25 09:36:54
 
 # 获取员工人数
 
@@ -20,10 +20,8 @@ updated_at: "2025-09-08 19:07:30"
 
 > **[!IMPORTANT]**
 >
-> 为提升接口的使用体验，提供更加规范的接口，钉钉针对通讯录**用户管理**和**部门管理**接口进行了升级，**用户管理1.0**、**部门管理1.0**的接口文档已于2021年10月21日迁移至**历史文档（不推荐）**目录下，且**用户管理1.0和部门管理1.0接口将不再添加新的能力，仅保持原有功能。**
->
-> - 如果未接入1.0版接口，推荐使用新的[用户管理](https://open.dingtalk.com/document/orgapp/user-information-creation)、[部门管理](https://open.dingtalk.com/document/orgapp/create-a-department-v2)接口。
-> - 如果已接入1.0版接口，建议您根据自身实际情况评估是否切换至新接口。
+> - 本接口已完成升级，后续将维持现有功能且不再新增能力。
+> - 未接入的开发者建议使用新版[获取员工人数](0059-user-management-acquires-number-employees.md)接口，已接入用户不受影响。
 
 ## 权限
 
@@ -31,9 +29,9 @@ updated_at: "2025-09-08 19:07:30"
 
 | 应用类型 | 是否支持调用 | 权限申请方式 | API Explorer调试 |
 | --- | --- | --- | --- |
-| 企业内部应用 | 是 | **[!IMPORTANT]**  暂不支持新增申请。 | — |
-| 第三方企业应用 | 是 | **[!IMPORTANT]**  暂不支持新增申请。 | — |
-| 第三方个人应用 | 否 | — | — |
+| 企业内部应用 | 是 | **[!NOTE]**  不支持新增 | — |
+| 第三方企业应用 | 是 | — |
+| 第三方个人应用 | 否 | — |
 
 ## 基本信息
 
@@ -45,7 +43,7 @@ updated_at: "2025-09-08 19:07:30"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | 6ed1bxxx | 调用服务端API的应用凭证。   - 企业内部应用可通过[获取企业内部应用的access\_token](https://open.dingtalk.com/document/orgapp/obtain-orgapp-token)接口获取。 - 第三方企业应用可通过[获取第三方应用授权企业的access\_token](https://open.dingtalk.com/document/isvapp/obtains-the-enterprise-authorized-credential)接口获取。 |
+| access\_token | String | 是 | 6ed1bxxx | 调用服务端API的应用凭证。   - 企业内部应用可通过[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)接口获取。 - 第三方企业应用可通过[服务商获取第三方应用授权企业的access\_token](1446-obtain-isvapp-token.md)接口获取。 |
 | onlyActive | Number | 是 | 0 | 是否包含激活人数：   - **0**：包含未激活钉钉的人员数量 - **1**：不包含未激活钉钉的人员数量 |
 
 ## 返回参数

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > 即时通信 > 消息通知 > 企业群消息 > 查询群消息已读人员列表"
 doc_id: "75uq9mkCvk"
-updated_at: "2025-09-08 19:05:02"
+updated_at: "2026-08-25 09:37:20"
 ---
 
 > Source: https://open.dingtalk.com/document/development/queries-the-list-of-people-who-have-read-a-group
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > 即时通信 > 消息通知 > 企业群消息 > 查询群消息已读人员列表
-> Updated: 2025-09-08 19:05:02
+> Updated: 2026-08-25 09:37:20
 
 # 查询群消息已读人员列表
 
@@ -20,12 +20,8 @@ updated_at: "2025-09-08 19:05:02"
 
 > **[!IMPORTANT]**
 >
-> 为提升接口的使用体验，查询群消息已读人员列表接口计划升级，后续完善更多功能，重新开放时间请关注文档更新日志。
->
-> - 查询群消息已读人员列表接口相关文档，已于2022年09月23日迁移至历史文档（不推荐）目录。
-> - 不再支持新应用接入，已接入的应用可以正常调用。
-
-![已读列表](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/6948735561/p450187.png)
+> - 为提升接口的使用体验，当前接口计划升级，重新开放时间请[开放概览](0764-message-corpconversation-overview.md#section-rtj-q87-8ea)。
+> - 不再支持新应用接入，已接入用户不受影响。
 
 ## 权限
 
@@ -33,9 +29,9 @@ updated_at: "2025-09-08 19:05:02"
 
 | 应用类型 | 是否支持调用 | 权限申请方式 | API Explorer调试 |
 | --- | --- | --- | --- |
-| 企业内部应用 | 是 | 默认开通，无需申请 | — |
-| 第三方企业应用 | 否 | — | — |
-| 第三方个人应用 | 否 | — | — |
+| 企业内部应用 | 是 | **[!NOTE]**  不支持新增 | — |
+| 第三方企业应用 | 否 | — |
+| 第三方个人应用 | 否 | — |
 
 ## 基本信息
 
@@ -47,8 +43,8 @@ updated_at: "2025-09-08 19:05:02"
 
 | 参数 | 类型 | 是否必填 | 说明 |
 | --- | --- | --- | --- |
-| access\_token | String | 是 | 调用服务端API的应用凭证。   - 企业内部应用可通过[获取企业内部应用的access\_token](https://open.dingtalk.com/document/orgapp/obtain-orgapp-token)接口获取。 |
-| messageId | String | 是 | [发送消息到企业群](https://open.dingtalk.com/document/orgapp/send-group-messages)接口返回的加密消息id。  **[!IMPORTANT]**  消息id中包含url特殊字符时需要encode后再使用。 |
+| access\_token | String | 是 | 调用服务端API的应用凭证，可通过[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)接口获取。 |
+| messageId | String | 是 | [发送消息到企业群](1488-send-group-messages.md)接口返回的加密消息id。  **[!IMPORTANT]**  消息id中包含url特殊字符时需要encode后再使用。 |
 | cursor | Number | 是 | 分页查询的游标，第一次可以传0，后续传返回结果中的next\_cursor的值。  当返回结果中，没有next\_cursor时，表示没有后续的数据了，可以结束调用。 |
 | size | Number | 是 | 分页查询的大小，最大可以传100，且不能超过群的总人数。 |
 

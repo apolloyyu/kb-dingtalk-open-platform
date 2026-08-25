@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > 即时通信 > 机器人 > 人与人会话中机器人发送互动卡片"
 doc_id: "t1PQsi1bR6"
-updated_at: "2026-04-29 13:23:56"
+updated_at: "2026-08-25 09:37:10"
 ---
 
 > Source: https://open.dingtalk.com/document/development/send-dingtalk-interactive-cards-to-person-to-person-chat-sessions
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > 即时通信 > 机器人 > 人与人会话中机器人发送互动卡片
-> Updated: 2026-04-29 13:23:56
+> Updated: 2026-08-25 09:37:10
 
 # 人与人会话中机器人发送互动卡片
 
@@ -20,22 +20,19 @@ updated_at: "2026-04-29 13:23:56"
 
 > **[!IMPORTANT]**
 >
-> 为提升接口使用体验，本文档于 2024 年 12 月 31 日迁移至历史文档（不推荐）目录，不再支持新应用接入，已接入的应用不受影响。如果未使用本接口，请使用[创建并投放卡片](https://open.dingtalk.com/document/orgapp/create-and-deliver-cards)接口。
+> - 本接口已完成升级，后续将维持现有功能且不再新增能力。
+> - 未接入的开发者建议使用新版[创建并投放卡片](0783-create-and-deliver-cards.md)接口，已接入用户不受影响。
 
 ### 接口功能介绍
 
-调用本接口，开通实现发送互动卡片。具体示例如下图所示。
-![](https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20230220/zfnc/单聊互动卡片.png)
-
-### 卡片特殊能力用法
-
 - 循环组件用法：内容塞入
-  ![](https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20230220/vjrq/循环组件用法.png)
+
+  ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0381267871/p1096183.png)
 - 会话列表lastMessage显示：
 
-  - 什么是lastmessage
-    指的是在会话列表页面透出的消息
-    ![](https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20230220/ztlu/LastMessage测试.png)
+  - 什么是lastmessage，指的是在会话列表页面透出的消息。
+
+    ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0381267871/p1096184.png)
   - 设置特殊key：`sys_lastMessageI18n`。
   - value值：
     `{\"zh_CN\":\"蚂蚁分工\",\"zh_TW\":\"螞蟻分工\",\"zh_HK\":\"螞蟻分工\",\"ja_JP\":\"アリの分業\",\"en_US\":\"Ant division of labor\"}"`
@@ -48,9 +45,9 @@ updated_at: "2026-04-29 13:23:56"
 
 | 应用类型 | 是否支持 | 权限 | API Explorer调试 |
 | --- | --- | --- | --- |
-| 企业内部应用 | 支持 | **[!IMPORTANT]**  不支持新增申请 | — |
-| 第三方企业应用 | 支持 | **[!IMPORTANT]**  不支持新增申请 | — |
-| 第三方个人应用 | 暂不支持 | 暂不支持 | 暂不支持 |
+| 企业内部应用 | 支持 | **[!NOTE]**  不支持新增 | — |
+| 第三方企业应用 | 支持 | — |
+| 第三方个人应用 | 暂不支持 | — |
 
 ## 请求方法
 
@@ -94,22 +91,22 @@ Content-Type:application/json
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证。   - 企业内部应用可调用[获取企业内部应用的accessToken](https://open.dingtalk.com/document/orgapp/obtain-the-access_token-of-an-internal-app)接口获取。 - 第三方企业应用可调用[获取第三方应用授权企业的accessToken](https://open.dingtalk.com/document/isvapp/obtain-the-access_token-of-the-authorized-enterprise)接口获取。 |
+| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证。   - 企业内部应用，调用[获取企业内部应用的accessToken](0033-obtain-the-access-token-of-an-internal-app.md)接口获取。 - 第三方企业应用，调用[获取第三方应用授权企业的accessToken](0034-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口获取。 |
 
 ## Body参数
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| cardTemplateId | String | 是 | 卡片模板ID，可通过[卡片平台](https://open-dev.dingtalk.com/fe/card)创建消息卡片，参见[创建消息模板](https://open.dingtalk.com/document/orgapp/create-message-template)。 |
-| openConversationId | String | 否 | 会话ID。   - 企业内部应用，可通过[批量安装酷应用到单聊会话](https://open.dingtalk.com/document/orgapp/install-cool-apps-to-a-single-chat-session-in-batches)或监听[单聊酷应用事件](https://open.dingtalk.com/document/orgapp/one-on-one-chat-cool-application-extension-event)获取OpenConversationId参数值。 - 第三方企业应用，可通过[批量安装酷应用到单聊会话](https://open.dingtalk.com/document/isvapp/install-cool-apps-to-a-single-chat-session-in-batches)并监听[单聊酷应用事件](https://open.dingtalk.com/document/isvapp/one-on-one-chat-cool-application-extension-event)获取OpenConversationId参数值。 |
+| cardTemplateId | String | 是 | 卡片模板ID，可通过[卡片平台](https://open-dev.dingtalk.com/fe/card)创建消息卡片，参见[管理消息模板](0765-manage-message-templates.md)介绍。 |
+| openConversationId | String | 否 | 会话ID，可通过[批量安装酷应用到单聊会话](../03-Ogu5SlPY4t-客户端JSAPI/0276-batch-chat-session.md)或监听[单聊酷应用事件](../04-LFcRvVD08N-事件订阅/0372-one-on-one-chat-cool-application-extension-event.md)获取`OpenConversationId`参数值。 |
 | receiverUserIdList | Array of String | 否 | 用户ID列表。 |
-| outTrackId | String | 是 | 唯一标示卡片的外部编码。  **[!NOTE]**    是由开发者自己生成并作为入参传递给钉钉的，钉钉只在对应使用到outTrackId的场景，帮助开发者对TrackId进行记录。 |
-| robotCode | String | 否 | 机器人编码。   - 企业内部应用，参见[机器人名词表-robotCode](https://open.dingtalk.com/document/orgapp/robot-overview)内容，获取`robotCode`。 - 第三方企业应用，参见[机器人名词表-robotCode](https://open.dingtalk.com/document/isvapp/robot-overview-1)内容，获取`robotCode`。 |
-| callbackRouteKey | String | 否 | 卡片回调时的路由Key，用于查询注册的callbackUrl。  **[!NOTE]**    可以为空，不填写默认无需回调。 |
+| outTrackId | String | 是 | 唯一标示卡片的外部编码。  **[!NOTE]**  是由开发者自己生成并作为入参传递给钉钉的，钉钉只在对应使用到outTrackId的场景，帮助开发者对TrackId进行记录。 |
+| robotCode | String | 否 | 机器人编码，参见[机器人名词表-robotCode](0698-development-robot-overview.md)内容，获取`robotCode`。 |
+| callbackRouteKey | String | 否 | 卡片回调时的路由Key，用于查询注册的callbackUrl。  **[!NOTE]**  不填写默认无需回调。 |
 | cardData | Object | 是 | 卡片模板内容。 |
 | cardParamMap | Map<String, String> | 否 | 卡片公有数据。 |
-| privateData | Map<String, Object> | 否 | 指定用户可见的按钮列表：   - key：用户userId。 - value：用户数据。   **[!NOTE]**    对应receiverUserIdList、userIdType字段关于用户ID的值填写方式：   - **userId模式**：key填写用户userId。 - **unionId模式**：key填写用户unionId。 |
-|  | Object | 否 | 指定用户可见的按钮列表：   - key：用户userId。 - value：用户数据。 |
+| privateData | Map<String, Object> | 否 | 指定用户可见的按钮列表：   - key：用户userId。 - value：用户数据。   **[!NOTE]**  对应receiverUserIdList、userIdType字段关于用户ID的值填写方式：   - **userId模式**：key填写用户userId。 - **unionId模式**：key填写用户unionId。 |
+|  | Object | 否 | 指定用户可见的按钮列表：   - **key**：用户userId。 - **value**：用户数据。 |
 | cardParamMap | Map<String, String> | 否 | 卡片私有数据。 |
 | userIdType | Integer | 否 | 用户ID类型：   - **1**（默认）：userid模式。 - **2**：unionId模式。 |
 | atOpenIds | Map<String, String> | 否 | 消息@人。格式：`{"key":"value"}`。   - key：用户ID，根据userIdType设置。 - value：用户名。例如：`{123456:"钉三多"}`。   **[!NOTE]**    如果key、value都为\*\*@ALL\*\*则判断@所有人。 |

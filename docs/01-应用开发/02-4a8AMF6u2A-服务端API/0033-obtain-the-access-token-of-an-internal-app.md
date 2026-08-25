@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "认证与授权 > 访问凭证 > 应用身份凭证 > 获取企业内部应用的accessToken"
 doc_id: "yCG0X9Q1im"
-updated_at: "2026-08-19 09:07:38"
+updated_at: "2026-08-25 09:36:27"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-the-access-token-of-an-internal-app
 > Path: 应用开发 / 服务端API / 认证与授权 > 访问凭证 > 应用身份凭证 > 获取企业内部应用的accessToken
-> Updated: 2026-08-19 09:07:38
+> Updated: 2026-08-25 09:36:27
 
 # 获取企业内部应用的accessToken
 
@@ -59,39 +59,38 @@ import com.aliyun.tea.*;
 
 public class Sample {
 
-    /**
+  /**
      * 使用 Token 初始化账号Client
      * @return Client
      * @throws Exception
      */
-    public static com.aliyun.dingtalkoauth2_1_0.Client createClient() throws Exception {
-        com.aliyun.teaopenapi.models.Config config = new com.aliyun.teaopenapi.models.Config();
-        config.protocol = "https";
-        config.regionId = "central";
-        return new com.aliyun.dingtalkoauth2_1_0.Client(config);
-    }
+  public static com.aliyun.dingtalkoauth2_1_0.Client createClient() throws Exception {
+    com.aliyun.teaopenapi.models.Config config = new com.aliyun.teaopenapi.models.Config();
+    config.protocol = "https";
+    config.regionId = "central";
+    return new com.aliyun.dingtalkoauth2_1_0.Client(config);
+  }
 
-    public static void main(String[] args_) throws Exception {
-        java.util.List<String> args = java.util.Arrays.asList(args_);
-        com.aliyun.dingtalkoauth2_1_0.Client client = Sample.createClient();
-        com.aliyun.dingtalkoauth2_1_0.models.GetAccessTokenRequest getAccessTokenRequest = new com.aliyun.dingtalkoauth2_1_0.models.GetAccessTokenRequest()
-                .setAppKey("dingeqqpkv3xxxxxx")
-                .setAppSecret("GT-lsu-taDAxxxsTsxxxx");
-        try {
-            client.getAccessToken(getAccessTokenRequest);
-        } catch (TeaException err) {
-            if (!com.aliyun.teautil.Common.empty(err.code) && !com.aliyun.teautil.Common.empty(err.message)) {
-                // err 中含有 code 和 message 属性，可帮助开发定位问题
-            }
+  public static void main(String[] args_) throws Exception {
+    java.util.List<String> args = java.util.Arrays.asList(args_);
+    com.aliyun.dingtalkoauth2_1_0.Client client = Sample.createClient();
+    com.aliyun.dingtalkoauth2_1_0.models.GetAccessTokenRequest getAccessTokenRequest = new com.aliyun.dingtalkoauth2_1_0.models.GetAccessTokenRequest()
+      .setAppKey("dingeqqpkv3xxxxxx")
+      .setAppSecret("GT-lsu-taDAxxxsTsxxxx");
+    try {
+      client.getAccessToken(getAccessTokenRequest);
+    } catch (TeaException err) {
+      if (!com.aliyun.teautil.Common.empty(err.code) && !com.aliyun.teautil.Common.empty(err.message)) {
+        // err 中含有 code 和 message 属性，可帮助开发定位问题
+      }
 
-        } catch (Exception _err) {
-            TeaException err = new TeaException(_err.getMessage(), _err);
-            if (!com.aliyun.teautil.Common.empty(err.code) && !com.aliyun.teautil.Common.empty(err.message)) {
-                // err 中含有 code 和 message 属性，可帮助开发定位问题
-            }
-
-        }        
-    }
+    } catch (Exception _err) {
+      TeaException err = new TeaException(_err.getMessage(), _err);
+      if (!com.aliyun.teautil.Common.empty(err.code) && !com.aliyun.teautil.Common.empty(err.message)) {
+        // err 中含有 code 和 message 属性，可帮助开发定位问题
+      }
+    }        
+  }
 }
 ```
 
@@ -110,55 +109,55 @@ from alibabacloud_dingtalk.oauth2_1_0 import models as dingtalkoauth_2__1__0_mod
 from alibabacloud_tea_util.client import Client as UtilClient
 
 class Sample:
-    def __init__(self):
-        pass
+  def __init__(self):
+    pass
 
-    @staticmethod
-    def create_client() -> dingtalkoauth2_1_0Client:
-        """
+  @staticmethod
+  def create_client() -> dingtalkoauth2_1_0Client:
+    """
         使用 Token 初始化账号Client
         @return: Client
         @throws Exception
         """
-        config = open_api_models.Config()
-        config.protocol = 'https'
-        config.region_id = 'central'
-        return dingtalkoauth2_1_0Client(config)
+    config = open_api_models.Config()
+    config.protocol = 'https'
+    config.region_id = 'central'
+    return dingtalkoauth2_1_0Client(config)
 
-    @staticmethod
-    def main(
-        args: List[str],
-    ) -> None:
-        client = Sample.create_client()
-        get_access_token_request = dingtalkoauth_2__1__0_models.GetAccessTokenRequest(
-            app_key='dingeqqpkv3xxxxxx',
-            app_secret='GT-lsu-taDAxxxsTsxxxx'
-        )
-        try:
-            client.get_access_token(get_access_token_request)
-        except Exception as err:
-            if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
-                # err 中含有 code 和 message 属性，可帮助开发定位问题
-                pass
+  @staticmethod
+  def main(
+    args: List[str],
+  ) -> None:
+    client = Sample.create_client()
+    get_access_token_request = dingtalkoauth_2__1__0_models.GetAccessTokenRequest(
+      app_key='dingeqqpkv3xxxxxx',
+      app_secret='GT-lsu-taDAxxxsTsxxxx'
+    )
+    try:
+      client.get_access_token(get_access_token_request)
+    except Exception as err:
+      if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
+        # err 中含有 code 和 message 属性，可帮助开发定位问题
+        pass
 
-    @staticmethod
-    async def main_async(
-        args: List[str],
-    ) -> None:
-        client = Sample.create_client()
-        get_access_token_request = dingtalkoauth_2__1__0_models.GetAccessTokenRequest(
-            app_key='dingeqqpkv3xxxxxx',
-            app_secret='GT-lsu-taDAxxxsTsxxxx'
-        )
-        try:
-            await client.get_access_token_async(get_access_token_request)
-        except Exception as err:
-            if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
-                # err 中含有 code 和 message 属性，可帮助开发定位问题
-                pass
+  @staticmethod
+  async def main_async(
+    args: List[str],
+  ) -> None:
+    client = Sample.create_client()
+    get_access_token_request = dingtalkoauth_2__1__0_models.GetAccessTokenRequest(
+      app_key='dingeqqpkv3xxxxxx',
+      app_secret='GT-lsu-taDAxxxsTsxxxx'
+    )
+    try:
+      await client.get_access_token_async(get_access_token_request)
+    except Exception as err:
+      if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
+        # err 中含有 code 和 message 属性，可帮助开发定位问题
+        pass
 
 if __name__ == '__main__':
-    Sample.main(sys.argv[1:])
+  Sample.main(sys.argv[1:])
 ```
 
 PHP

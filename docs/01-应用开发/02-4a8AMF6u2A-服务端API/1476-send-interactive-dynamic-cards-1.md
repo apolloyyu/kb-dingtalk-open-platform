@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > 即时通信 > 机器人 > 发送钉钉互动卡片（高级版）"
 doc_id: "PUyAQbbw90"
-updated_at: "2026-04-29 13:23:52"
+updated_at: "2026-08-25 09:37:06"
 ---
 
 > Source: https://open.dingtalk.com/document/development/send-interactive-dynamic-cards-1
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > 即时通信 > 机器人 > 发送钉钉互动卡片（高级版）
-> Updated: 2026-04-29 13:23:52
+> Updated: 2026-08-25 09:37:06
 
 # 发送钉钉互动卡片（高级版）
 
@@ -20,28 +20,33 @@ updated_at: "2026-04-29 13:23:52"
 
 > **[!IMPORTANT]**
 >
-> 为提升接口使用体验，本文档于 2024 年 12 月 31 日迁移至历史文档（不推荐）目录，不再支持新应用接入，已接入的应用不受影响。如果未使用本接口，请使用[创建并投放卡片](https://open.dingtalk.com/document/orgapp/create-and-deliver-cards)接口。
+> - 本接口已完成升级，后续将维持现有功能且不再新增能力。
+> - 未接入的开发者建议使用新版[创建并投放卡片](0783-create-and-deliver-cards.md)接口，已接入用户不受影响。
 
-调用本接口，开通实现发送互动卡片。具体示例如下图所示：
-
-![](https://img.alicdn.com/imgextra/i1/O1CN01ZBDejv1VzBDpM4cza_!!6000000002723-2-tps-670-321.png)
+## **接口调用说明**
 
 ### 卡片特殊能力用法
 
 - 循环组件用法：内容塞入
-  ![](https://img.alicdn.com/imgextra/i4/O1CN016HXLtW1wI7c2BuZcF_!!6000000006284-2-tps-600-328.png)
+
+  ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/6281267871/p1096181.png)
 - 会话列表最后一条信息显示：
 
   - 什么是最后一条信息
+
     指的是在会话列表页面透出的消息
-    ![](https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20221208/bpfi/lastmessage.jpg)
+
+    ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/6281267871/p1096182.png)
   - 设置特殊key：`sys_lastMessageI18n`。
   - value值：
+
     `{\"zh_CN\":\"蚂蚁分工\",\"zh_TW\":\"螞蟻分工\",\"zh_HK\":\"螞蟻分工\",\"ja_JP\":\"アリの分業\",\"en_US\":\"Ant division of labor\"}"`
   - 举例说明：
+
     `"cardData": { "cardParamMap": { "sys_lastMessageI18n": "{\"zh_CN\":\"蚂蚁分工\",\"zh_TW\":\"螞蟻分工\",\"zh_HK\":\"螞蟻分工\",\"ja_JP\":\"アリの分業\",\"en_US\":\"Ant division of labor\"}"}}`
 
-  ### 特殊使用场景说明
+### 特殊使用场景说明
+
 - 场景群机器人发送：场景群使用**robotCode**来发送，**chatBotId**不填写。
 - 非场景群企业机器人发送：填写**robotCode**来发送，**chatBotId**不填写。
 - 非场景群机器人单聊发送：**chatBotId**和**robotCode**都不填写，直接用支持单聊的机器人应用来发送。
@@ -52,9 +57,9 @@ updated_at: "2026-04-29 13:23:52"
 
 | 应用类型 | 是否支持 | 权限 | API Explorer调试 |
 | --- | --- | --- | --- |
-| 企业内部应用 | 支持 | **[!IMPORTANT]**  暂不支持新增申请 | — |
-| 第三方企业应用 | 支持 | **[!IMPORTANT]**  暂不支持新增申请 | — |
-| 第三方个人应用 | 暂不支持 | 暂不支持 | 暂不支持 |
+| 企业内部应用 | 支持 | **[!NOTE]**  不支持新增 | — |
+| 第三方企业应用 | 支持 | — |
+| 第三方个人应用 | 暂不支持 | — |
 
 ## 请求方法
 
@@ -106,32 +111,32 @@ Content-Type:application/json
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证。   - 企业内部应用，调用[获取企业内部应用的accessToken](https://open.dingtalk.com/document/orgapp/obtain-the-access_token-of-an-internal-app)接口获取。 - 第三方企业应用，调用[获取第三方应用授权企业的accessToken](https://open.dingtalk.com/document/isvapp/obtain-the-access_token-of-the-authorized-enterprise)接口获取。 |
+| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证。   - 企业内部应用，调用[获取企业内部应用的accessToken](0033-obtain-the-access-token-of-an-internal-app.md)接口获取。 - 第三方企业应用，调用[获取第三方应用授权企业的accessToken](0034-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口获取。 |
 
 ## Body参数
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| cardTemplateId | String | 是 | 互动卡片的消息模板ID：   - 企业内部应用，调用[创建消息模板](https://open.dingtalk.com/document/orgapp/create-message-template)接口获取模板ID。 - 第三方企业应用，调用[创建消息模板](https://open.dingtalk.com/document/isvapp/create-message-template)接口获取模板ID。 |
-| openConversationId | String | 否 | 群ID：   - 基于群模板创建的群。    - 企业内部应用，调用[创建群](https://open.dingtalk.com/document/orgapp/create-a-scene-group-v2)接口获取`open_conversation_id`参数值。   - 第三方企业应用，调用[创建群](https://open.dingtalk.com/document/isvapp/create-a-scene-group-v2)接口获取`open_conversation_id`参数值。 - 安装群聊酷应用的群。    - 企业内部应用，通过[群内安装酷应用事件](https://open.dingtalk.com/document/orgapp/group-change-awareness-event-subscription)获取回调参数`OpenConversationId`参数值。 |
-| receiverUserIdList | Array of String | 否 | 接收人userId列表。  **[!NOTE]**     - receiverUserIdList参数填写分为以下情况：    - 单聊：      - **receiverUserIdList**填写用户ID，最大值20。   - 群聊：      - **receiverUserIdList**填写用户ID，表示当前对应ID的群内用户可见。     - **receiverUserIdList**参数不填写，表示当前群内所有用户可见。 - 对应privateData、userIdType字段关于用户ID的值填写方式。    - **userId模式**：key填写用户userId。   - **unionId模式**：key填写用户unionId。 |
-| outTrackId | String | 是 | 唯一标示卡片的外部编码。  **[!NOTE]**     - 最长不超过100字符，建议长度在64字符以内。 - 是由开发者自己生成并作为入参传递给钉钉的，钉钉只在对应使用到**outTrackId**的场景，帮助开发者对TrackId进行记录。   一般情况下，如果使用了新的 cardTemplateId 或 cardData 等参数，则需要生成一个全新的 outTrackId，否则更改不会生效。 |
-| robotCode | String | 否 | 机器人的编码。   - 企业内部应用，参见[机器人名词表-robotCode](https://open.dingtalk.com/document/orgapp/robot-overview)内容，获取`robotCode`。 - 第三方企业应用，参见[机器人名词表-robotCode](https://open.dingtalk.com/document/isvapp/robot-overview)内容，获取`robotCode`。   **[!NOTE]**     - 场景群机器人发送群聊：场景群使用**robotCode**来发送，**chatBotId**不填写。 - 非场景群的企业内部开发-机器人发送群聊：填写**robotCode**来发送，**chatBotId**不填写。 - 非场景群的企业内部开发-机器人发送单聊：**chatBotId**和**robotCode**都不填写，直接用支持单聊的机器人应用来发送。 |
-| conversationType | Integer | 是 | 发送的会话类型：   - **0**：单聊 - **1**：群聊   **[!NOTE]**    单聊：   - **openConversationId**不用填写。 - **receiverUserIdList**填写用户ID，最大值20。 |
-| callbackRouteKey | String | 否 | 卡片回调时的路由Key，用于查询注册的**callbackUrl**。  **[!NOTE]**    可以为空，不填写默认无需回调。 |
-| cardData | Object | 是 | 卡片公有数据。  **[!NOTE]**     - `cardData`数据长度和`privateData`数据长度总和不能超过100KB。 - 若因指定私有数据的人数太多导致的数据过长，可参见[绑定卡片变量](https://open.dingtalk.com/document/orgapp/relationship-between-variables-and-cards)目录节点下内容的相关特性来缩短长度。 |
-| cardParamMap | Map<String, String> | 否 | 卡片模板内容替换参数，普通文本类型。  **[!NOTE]**     - 属性字段只支持 String 类型，非 String 类型的属性填写请参考文档：[常见问题](https://open.dingtalk.com/document/orgapp/faq-card) 文档中“设置卡片数据时，如何处理非 String 类型的参数”小节。 - 务必确保属性值的类型与卡片搭建器中所配置的变量类型相匹配，否则可能出现属性不生效，或者在移动端无法显示等问题。 |
+| cardTemplateId | String | 是 | 互动卡片的消息模板ID，获取方式请参考[管理消息模板](0765-manage-message-templates.md)介绍。 |
+| openConversationId | String | 否 | 群ID：   - 基于群模板创建的群，请参考[创建群](1484-create-a-scene-group-v2.md)。 - 安装群聊酷应用的群，通过[群内安装酷应用事件](../04-LFcRvVD08N-事件订阅/0341-install-group-extension-event-in-the-group-stream.md)获取回调参数`OpenConversationId`参数值。 |
+| receiverUserIdList | Array of String | 否 | 接收人userId列表。   - receiverUserIdList填写分为以下情况：    - 单聊：      - 填写用户ID，最大值20。   - 群聊：      - 填写用户ID，表示群内指定用户可见。     - 不填写，表示群内所有用户可见。 - 对应privateData、userIdType字段关于用户ID的值填写方式：    - **userId模式**：key填写用户userId。   - **unionId模式**：key填写用户unionId。 |
+| outTrackId | String | 是 | 唯一标示卡片的外部编码。  **[!NOTE]**   - 不超过100字符，建议64字符以内。 - 是由开发者自己生成并作为入参传递给钉钉的，钉钉只在对应使用到**outTrackId**的场景，帮助开发者对TrackId进行记录。   若使用新的 `cardTemplateId` 或 `cardData` 等参数，则需要生成一个全新的 outTrackId，否则更改不会生效。 |
+| robotCode | String | 否 | 机器人的编码，参见[机器人名词表-robotCode](0698-development-robot-overview.md)内容，获取`robotCode`。  **[!NOTE]**   - 场景群机器人发送群聊：场景群使用**robotCode**来发送，**chatBotId**不填写。 - 非场景群的企业内部开发-机器人发送群聊：填写**robotCode**来发送，**chatBotId**不填写。 - 非场景群的企业内部开发-机器人发送单聊：**chatBotId**和**robotCode**都不填写，直接用支持单聊的机器人应用来发送。 |
+| conversationType | Integer | 是 | 发送的会话类型：   - **0**：单聊    - **openConversationId**不用填写。   - **receiverUserIdList**填写用户ID，最大值20。 - **1**：群聊 |
+| callbackRouteKey | String | 否 | 卡片回调时的路由Key，用于查询注册的**callbackUrl**。  **[!NOTE]**  不填写默认无需回调。 |
+| cardData | Object | 是 | 卡片公有数据。  **[!NOTE]**   - `cardData`数据长度和`privateData`数据长度总和不能超过100KB。 - 若因指定私有数据的人数太多导致的数据过长，可参见[变量与卡片的关系](../../05-互动卡片/03-MhNX42mFB1-模板搭建器/0003-relationship-between-variables-and-cards.md)目录节点下内容的相关特性来缩短长度。 |
+| cardParamMap | Map<String, String> | 否 | 卡片模板内容替换参数，普通文本类型。  **[!NOTE]**   - 属性字段只支持 String 类型，非 String 类型的属性填写请参考文档：[常见问题](0790-faq-card.md)中“设置卡片数据时，如何处理非 String 类型的参数”小节。 - 务必确保属性值的类型与卡片搭建器中所配置的变量类型相匹配，否则可能出现属性不生效，或者在移动端无法显示等问题。 |
 | cardMediaIdParamMap | Map<String, String> | 否 | 卡片模板内容替换参数，多媒体类型。 |
-| privateData | Map<String, Object> | 否 | 卡片私有数据。   - **key**：用户userId。 - **value**：用户数据。   卡片公有数据。  **[!NOTE]**     - `cardData`数据长度和`privateData`数据长度总和不能超过100KB。 - 若因指定私有数据的人数太多导致的数据过长，可参见[绑定卡片变量](https://open.dingtalk.com/document/orgapp/relationship-between-variables-and-cards)目录节点下内容的相关特性来缩短长度。 - 对应receiverUserIdList、userIdType字段关于用户ID的值填写方式：    - **userId模式**：key填写用户userId。   - **unionId模式**：key填写用户unionId。 |
+| privateData | Map<String, Object> | 否 | 卡片私有数据。   - **key**：用户userId。 - **value**：用户数据。   卡片公有数据。  **[!NOTE]**   - `cardData`数据长度和`privateData`数据长度总和不能超过100KB。 - 若因指定私有数据的人数太多导致的数据过长，可参见[变量与卡片的关系](../../05-互动卡片/03-MhNX42mFB1-模板搭建器/0003-relationship-between-variables-and-cards.md)目录节点下内容的相关特性来缩短长度。 - 对应receiverUserIdList、userIdType字段关于用户ID的值填写方式：    - **userId模式**：key填写用户userId。   - **unionId模式**：key填写用户unionId。 |
 |  | Object | 否 | 指定用户可见的按钮列表。   - **key**：用户userId。 - **value**：用户数据。 |
-| cardParamMap | Map<String, String> | 否 | 卡片模板的文本内容参数。  **[!NOTE]**     - 属性字段只支持 String 类型，非 String 类型的属性填写请参考文档：[常见问题](https://open.dingtalk.com/document/orgapp/faq-card) 文档中“设置卡片数据时，如何处理非 String 类型的参数”小节。 - 务必确保属性值的类型与卡片搭建器中所配置的变量类型相匹配，否则可能出现属性不生效，或者在移动端无法显示等问题。 |
-| cardMediaIdParamMap | Map<String, String> | 否 | 卡片模板的图片内容参数。  **[!NOTE]**    仅支持开放平台文件存储的mediaId。 |
-| chatBotId | String | 否 | 企业机器人ID，填写企业内部开发-机器人的AppKey。    **[!NOTE]**     - 场景群机器人发送群聊：场景群使用**robotCode**来发送，**chatBotId**不填写。 - 非场景群的企业内部开发-机器人发送群聊：填写**robotCode**来发送，**chatBotId**不填写。 - 非场景群的企业内部开发-机器人发送单聊：**chatBotId**和**robotCode**都不填写，直接用支持单聊的机器人应用来发送。 |
+| cardParamMap | Map<String, String> | 否 | 卡片模板的文本内容参数。  **[!NOTE]**   - 属性字段只支持 String 类型，非 String 类型的属性填写请参考文档：[常见问题](0790-faq-card.md)中“设置卡片数据时，如何处理非 String 类型的参数”小节。 - 务必确保属性值的类型与卡片搭建器中所配置的变量类型相匹配，否则可能出现属性不生效，或者在移动端无法显示等问题。 |
+| cardMediaIdParamMap | Map<String, String> | 否 | 卡片模板的图片内容参数。  **[!NOTE]**  仅支持开放平台文件存储的mediaId。 |
+| chatBotId | String | 否 | 企业机器人ID，填写企业内部开发-机器人的AppKey。    **[!NOTE]**   - 场景群机器人发送群聊：场景群使用**robotCode**来发送，**chatBotId**不填写。 - 非场景群的企业内部开发-机器人发送群聊：填写**robotCode**来发送，**chatBotId**不填写。 - 非场景群的企业内部开发-机器人发送单聊：**chatBotId**和**robotCode**都不填写，直接用支持单聊的机器人应用来发送。 |
 | userIdType | Integer | 否 | 用户ID类型：   - **1**（默认）：userid模式 - **2**：unionId模式   **[!NOTE]**    对应receiverUserIdList、privateData字段关于用户id的值填写方式。 |
-| atOpenIds | Map<String, String> | 否 | 消息@人。格式：`{"key":"value"}`。   - **key**：用户ID，根据userIdType设置。 - **value**：用户名。   例如：{123456:"钉三多"}  **[!NOTE]**    如果key、value都为\*\*@ALL\*\*则判断@所有人。 |
+| atOpenIds | Map<String, String> | 否 | 消息@人。格式：`{"key":"value"}`。   - **key**：用户ID，根据userIdType设置。 - **value**：用户名。   例如：{123456:"钉三多"}  **[!NOTE]**  如果key、value都为\*\*@ALL\*\*则判断@所有人。 |
 | cardOptions | Object | 否 | 卡片操作。 |
 | supportForward | Boolean | 否 | 是否支持转发。   - **true**：支持 - **false**：不支持 |
-| pullStrategy | Boolean | 否 | 是否开启卡片纯拉模式。   - true：开启卡片纯拉模式 - false：不开启卡片纯拉模式   **[!NOTE]**     - 企业内部应用，参见[纯拉模式接入流程](https://open.dingtalk.com/document/orgapp/guide-to-pull-mode-process)。 - 第三方企业应用，参见[纯拉模式接入流程](https://open.dingtalk.com/document/isvapp/guide-to-pull-mode-process)。 |
+| pullStrategy | Boolean | 否 | 是否开启卡片纯拉模式，   - true：开启卡片纯拉模式 - false：不开启卡片纯拉模式   **[!NOTE]**  纯拉模式，参见[实现置顶卡片纯拉模式](0736-pure-pull-mode-process-guide.md)。 |
 
 ## 返回参数
 

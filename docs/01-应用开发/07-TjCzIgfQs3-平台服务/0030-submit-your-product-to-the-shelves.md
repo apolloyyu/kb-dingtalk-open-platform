@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "平台服务"
 breadcrumb: "合作指南 > 产品方案商 > 应用市场的合作指引 > 步骤三：提交应用商品上架"
 doc_id: "rs5UcPd9v0"
-updated_at: "2025-10-22 18:05:45"
+updated_at: "2026-08-25 09:45:08"
 ---
 
 > Source: https://open.dingtalk.com/document/services/submit-your-product-to-the-shelves
 > Path: 应用开发 / 平台服务 / 合作指南 > 产品方案商 > 应用市场的合作指引 > 步骤三：提交应用商品上架
-> Updated: 2025-10-22 18:05:45
+> Updated: 2026-08-25 09:45:08
 
 # 步骤三：提交应用商品上架
 
@@ -21,13 +21,15 @@ updated_at: "2025-10-22 18:05:45"
 ## 一、提交商品上架申请
 
 1. 将**钉钉切换至对应组织**，单击**工作台** > **自运营平台**。
-2. 在**伙伴自运营平台**页面，依次单击**应用管理 > 商品上架 > 未上架应用**，选择开发完毕的应用单击**提交审核**。![3332332](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/6995188561/p470475.png)
+2. 在**伙伴自运营平台**页面，依次单击**应用管理 > 商品上架 > 未上架应用**，选择已开发应用，并单击**提交审核**。
+
+   ![3332332](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8032267871/p470475.png)
 
 ## 二、填写应用详细信息
 
 1. 根据以下内容，**填写应用信息**。
 
-   ![](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/5352977161/p261217.png)
+   ![](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8032267871/p261217.png)
 
    - **应用名称、应用图标**：此处自动读取了创建应用时填写的应用信息，如需修改，请**点击修改。**
 
@@ -38,7 +40,7 @@ updated_at: "2025-10-22 18:05:45"
 
      - **免费使用**：即客户无需付费即可使用该应用，此项选择多为纯免费应用或免费+内购应用。
 
-       例如：该应用设计为基础版本免费使用，升级版或其他增值服务需要付费使用的，则可配置为**免费使用**，对升级版或增值服务，可在**应用运营**-**应用内购**这里配置内购商品，更多详情请参考[应用内购概述](https://open.dingtalk.com/document/development/application-purchase-overview)。
+       例如：该应用设计为基础版本免费使用，升级版或其他增值服务需要付费使用的，则可配置为**免费使用**，对升级版或增值服务，可在**应用运营**-**应用内购**这里配置内购商品，更多详情请参考[应用内购概述](../02-4a8AMF6u2A-服务端API/0876-application-market-overview.md)。
      - **开通付费**：即客户开通应用需要付费（免费试用期除外）。
    - **收费规则**：一共有3种收费模式可以选择，分别为**按使用人数收费**、**按企业通讯录人数收费**和**按单个使用人数收费**，请充分思考后再做配置，提交申请后收费规则无法修改。
 
@@ -123,7 +125,7 @@ updated_at: "2025-10-22 18:05:45"
    - **目标客户规模**：建议根据自行承接能力设置。
    - **商机每日上限**：即每日最大试用数和咨询客户数，请根据自行承接能力设置即可，若具备一定的承接能力，建议不设限。
 
-   ![](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/5352977161/p261319.png)
+     ![](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8032267871/p261319.png)
 6. 单击**应用内未授权试用地址**后方的**编辑**，输入应用内未授权试用地址（即在应用内用户未授权时可查看的页面）。
 
    ![](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/5352977161/p261320.png)
@@ -142,9 +144,11 @@ updated_at: "2025-10-22 18:05:45"
 
 应用的信息配置完成后，单击下方**提交审核**。
 
-钉钉运营小二会在1~2个工作日内完成审核。
+> **[!NOTE]**
+>
+> 钉钉运营小二会在1~2个工作日内完成审核，审核通过后，即可在**已上架的应用**中查看应用信息。
 
-审核通过后，即可在**已上架的应用**中查看应用信息。![43fvre](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/6995188561/p470476.png)
+![43fvre](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/6995188561/p470476.png)
 
 ## 四、应用上架前置准备工作
 
@@ -152,7 +156,9 @@ updated_at: "2025-10-22 18:05:45"
 
 应用审核通过后，为了产品方案商便于使用钉钉开放平台常用工具、后台，及时接收平台重要政策通知等，需要完成以下准备工作，即可生成推广二维码，在自有渠道或钉钉端外渠道推广应用商品。
 
-- 完成钉钉合作伙伴组织关联，便于后续了解并接收钉钉开放平台重要政策信息、使用常见工具、后台。操作路径：[合作伙伴平台](https://partner.dingtalk.com/) > **产品方案商 > 人员管理**页面进行关联。![ervfb](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/6995188561/p470477.png)
+完成钉钉合作伙伴组织关联，便于后续了解并接收钉钉开放平台重要政策信息、使用常见工具、后台。操作路径：[合作伙伴平台](https://partner.dingtalk.com/) > **产品方案商 > 人员管理**页面进行关联。
+
+![ervfb](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/6995188561/p470477.png)
 
 ### 应用广场渠道推广
 
@@ -181,16 +187,20 @@ updated_at: "2025-10-22 18:05:45"
      > **[!NOTE]**
      >
      > 打款账号需与服务商入驻主体保持一致（**括号格式为英文括号**），否则保证金审核无法通过。提交凭证后，钉钉开放平台会在1个工作日完成审核。
-- 通过安全审核，安全审核材料提交请参考[安全准入评估指南](https://open.dingtalk.com/document/services/security-access-evaluation-guide)。![](https://aone.alibaba-inc.com/v2/api/workitem/adapter/file/url?fileIdentifier=workitem%2Falibaba%2Fdefault%2F1669685766814image.png)
+- 通过安全审核，安全审核材料提交请参考[安全准入评估指南](https://open.dingtalk.com/document/services/security-access-evaluation-guide)。
+
+  ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8032267871/p1095887.png)
 - 通过稳定性校验，稳定性校验标准如下图。
 
-  ![](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/6352977161/p261370.png)
+  ![](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8032267871/p261370.png)
 - 完成正逆向交易测试，即测试完成一笔下单、退款交易。查看了解[操作流程](https://alidocs.dingtalk.com/i/p/KrwmPQ5g4OEAG79n/docs/6LeBq413JAzx24dLS4KNXywA8DOnGvpb)。
 - 通过服务商入门考试。了解学习应用上架钉钉应用广场后的基础运营内容，并完成[入门考试](https://alidocs.dingtalk.com/i/p/KrwmPQ5g4OEAG79n/docs/KrwmPNdavjZo0z79?dontjump=true# 「服务商入门考试指引」)。
 
 ## 五、内购商品配置
 
-1. 将**钉钉切换至对应组织**，单击**工作台**，选择**自运营平台**，依次单击**应用管理 > 应用内购 > 新建商品**。![测试](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2482088561/p467842.png)
+1. 将**钉钉切换至对应组织**，单击**工作台**，选择**自运营平台**，依次单击**应用管理 > 应用内购 > 新建商品**。
+
+   ![测试](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8032267871/p467842.png)
 2. 填写商品信息，单击**下一步**。
 
    - **商品名称：**请输入商品名称，最多不超过10个字符。
@@ -206,12 +216,11 @@ updated_at: "2025-10-22 18:05:45"
    - **支持个人购买：**请选择是否支持个人购买。
    - **规格关系：**请选择规格关系。
 
-![测试444](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2482088561/p470207.png)
-
+     ![测试444](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8032267871/p470207.png)
 3. 设置商品规格，然后单击**提交审核**。
 
-> **[!IMPORTANT]**
->
-> - 提交完内购申请后，请钉钉联系对应的类目运营小二审核并上架。（由于内购商品无法确认是否测试，故钉钉类目小二不会主动审核内购商品，请务必主动联系确认需要上架）。
-> - 应用商品上架前，若有内购商品的，需要先上架内购商品，否则会被驳回处理。
-> - 内购商品规格分为周期型和消耗型，计费时间为**月（半年以内）**、**半年**、**年**，最长不能超过2年，且定价不能与市场价格偏差太大。
+   > **[!IMPORTANT]**
+   >
+   > - 提交完内购申请后，请钉钉联系对应的类目运营小二审核并上架。（由于内购商品无法确认是否测试，故钉钉类目小二不会主动审核内购商品，请务必主动联系确认需要上架）。
+   > - 应用商品上架前，若有内购商品的，需要先上架内购商品，否则会被驳回处理。
+   > - 内购商品规格分为周期型和消耗型，计费时间为**月（半年以内）**、**半年**、**年**，最长不能超过2年，且定价不能与市场价格偏差太大。

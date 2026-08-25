@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > 通讯录管理 > 部门管理1.0(不推荐) > 创建部门"
 doc_id: "JBVy4AWFMM"
-updated_at: "2025-09-08 19:07:38"
+updated_at: "2026-08-25 09:37:02"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-a-department
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > 通讯录管理 > 部门管理1.0(不推荐) > 创建部门
-> Updated: 2025-09-08 19:07:38
+> Updated: 2026-08-25 09:37:02
 
 # 创建部门
 
@@ -20,10 +20,8 @@ updated_at: "2025-09-08 19:07:38"
 
 > **[!IMPORTANT]**
 >
-> 为提升接口的使用体验，提供更加规范的接口，钉钉针对通讯录**用户管理**和**部门管理**接口进行了升级，**用户管理1.0**、**部门管理1.0**的接口文档已于2021年10月21日迁移至**历史文档（不推荐）**目录下，且**用户管理1.0和部门管理1.0接口将不再添加新的能力，仅保持原有功能。**
->
-> - 如果未接入1.0版接口，推荐使用新的[用户管理](https://open.dingtalk.com/document/orgapp/user-information-creation)、[部门管理](https://open.dingtalk.com/document/orgapp/create-a-department-v2)接口。
-> - 如果已接入1.0版接口，建议您根据自身实际情况评估是否切换至新接口。
+> - 本接口已完成升级，后续将维持现有功能且不再新增能力。
+> - 未接入的开发者建议使用新版[创建部门](0077-address-book-creation-department-established-department.md)接口，已接入用户不受影响。
 
 ## 权限
 
@@ -31,9 +29,9 @@ updated_at: "2025-09-08 19:07:38"
 
 | 应用类型 | 是否支持调用 | 权限申请方式 | API Explorer调试 |
 | --- | --- | --- | --- |
-| 企业内部应用 | 是 | **[!IMPORTANT]**  暂不支持新增申请。 | — |
-| 第三方企业应用 | 否 | — | — |
-| 第三方个人应用 | 否 | — | — |
+| 企业内部应用 | 是 | **[!NOTE]**  不支持新增 | — |
+| 第三方企业应用 | 否 | — |
+| 第三方个人应用 | 否 | — |
 
 ## 基本信息
 
@@ -45,7 +43,7 @@ updated_at: "2025-09-08 19:07:38"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | 6d1bxxxx | 调用服务端API的应用凭证。   - 企业内部应用可通过[获取企业内部应用的access\_token](https://open.dingtalk.com/document/orgapp/obtain-orgapp-token)接口获取。 |
+| access\_token | String | 是 | 6d1bxxxx | 调用服务端API的应用凭证，可通过[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)接口获取。 |
 
 ## Body参数
 
@@ -88,11 +86,11 @@ POST https://oapi.dingtalk.com/department/create?access_token=ACCESS_TOKEN
 
 ```
 {
-    "name": "管理3部",
-    "parentid": "1",
-    "outerDept": "true",
-    "outerPermitUsers": "manager4220|user123",
-    "ext": "{\"职能\":\"总裁办\"}"
+  "name": "管理3部",
+  "parentid": "1",
+  "outerDept": "true",
+  "outerPermitUsers": "manager4220|user123",
+  "ext": "{\"职能\":\"总裁办\"}"
 
 }
 ```
@@ -100,32 +98,32 @@ POST https://oapi.dingtalk.com/department/create?access_token=ACCESS_TOKEN
 **请求示例（JAVA SDK）**
 
 ```
-   DingTalkClient client = new DefaultDingTalkClient("https://oapi.dingtalk.com/department/create");
-   OapiDepartmentCreateRequest req = new OapiDepartmentCreateRequest();
-   req.setParentid("1");
-   req.setParentBalanceFirst(false);
-   req.setShareBalance(false);
-   req.setOuterPermitUsers("manager4220|user123");
-   req.setOuterPermitDepts("12|13");
-   req.setOuterDept(true);
-   req.setDeptHiding(false);
-   req.setCreateDeptGroup(false);
-   req.setOrder("1");
-   req.setName("管理3部");
-   req.setSourceIdentifier("111");
-   req.setDeptPermits("12|13");
-   req.setUserPermits("111|222");
-   req.setOuterDeptOnlySelf(false);
-   OapiDepartmentCreateResponse rsp = client.execute(req, access_token);
-   System.out.println(rsp.getBody());
+DingTalkClient client = new DefaultDingTalkClient("https://oapi.dingtalk.com/department/create");
+OapiDepartmentCreateRequest req = new OapiDepartmentCreateRequest();
+req.setParentid("1");
+req.setParentBalanceFirst(false);
+req.setShareBalance(false);
+req.setOuterPermitUsers("manager4220|user123");
+req.setOuterPermitDepts("12|13");
+req.setOuterDept(true);
+req.setDeptHiding(false);
+req.setCreateDeptGroup(false);
+req.setOrder("1");
+req.setName("管理3部");
+req.setSourceIdentifier("111");
+req.setDeptPermits("12|13");
+req.setUserPermits("111|222");
+req.setOuterDeptOnlySelf(false);
+OapiDepartmentCreateResponse rsp = client.execute(req, access_token);
+System.out.println(rsp.getBody());
 ```
 
 **返回示例**
 
 ```
 {
-        "errcode":0,
-        "errmsg":"ok",
-        "id":400887483
+  "errcode":0,
+  "errmsg":"ok",
+  "id":400887483
 }
 ```

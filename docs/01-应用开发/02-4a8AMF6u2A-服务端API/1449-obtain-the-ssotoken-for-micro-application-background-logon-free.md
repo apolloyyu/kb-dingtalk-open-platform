@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > 获取访问凭证 > 获取微应用后台免登的access_token"
 doc_id: "Sjl74e7iGA"
-updated_at: "2025-09-08 19:07:42"
+updated_at: "2026-08-25 09:36:33"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-the-ssotoken-for-micro-application-background-logon-free
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > 获取访问凭证 > 获取微应用后台免登的access_token
-> Updated: 2025-09-08 19:07:42
+> Updated: 2026-08-25 09:36:33
 
 # 获取微应用后台免登的access\_token
 
@@ -20,10 +20,8 @@ updated_at: "2025-09-08 19:07:42"
 
 > **[!IMPORTANT]**
 >
-> 为提升接口使用体验，针对**获取访问凭证**相关接口规范进行升级，从[旧版升级到新版](https://open.dingtalk.com/document/orgapp/differences-between-server-apis-and-new-server-apis)。本文旧版规范接口文档已于2023年8月17日迁移至历史文档（不推荐）目录，且本接口仅保持现有功能，不再新增支持其他能力。
->
-> - 如果未使用本接口，推荐使用[获取微应用后台免登的accessToken](https://open.dingtalk.com/document/orgapp/obtain-the-access_token-of-the-micro-application-background-without-log-on)新版规范接口。
-> - 如果已使用本接口，建议您根据自身实际情况评估是否切换至推荐接口。
+> - 本接口已完成升级，后续将维持现有功能且不再新增能力。
+> - 未接入的开发者建议使用新版 [获取微应用后台免登的accessToken](0025-obtain-the-access-token-of-the-micro-application-background-without-log-on.md)接口，已接入用户不受影响。
 
 > **[!NOTE]**
 >
@@ -56,7 +54,7 @@ updated_at: "2025-09-08 19:07:42"
 
 | 名称 | 类型 | 示例值 | 描述 |
 | --- | --- | --- | --- |
-| access\_token | String | 67477fed82e63563a320xxxx | 获取到的凭证。 |
+| access\_token | String | 674xxxx6356 | 获取到的凭证。 |
 | errmsg | String | ok | 错误信息。 |
 | errcode | Number | 0 | 错误码。 |
 
@@ -92,5 +90,4 @@ System.out.println(rsp.getBody());
 
 ## 相关文档
 
-- 企业内部应用，请参考[企业管理后台应用免登](https://open.dingtalk.com/document/orgapp/exchange-code-for-the-identity-information-of-a-microapplication-administrator)
-- 第三方企业应用，请参考[企业管理后台应用免登](https://open.dingtalk.com/document/isvapp/exchange-code-for-the-identity-information-of-a-microapplication-administrator)
+- [应用管理后台免登](0022-log-on-site-application-management-backend.md)

@@ -7,20 +7,21 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > 身份验证（免登） > 通过免登码获取用户信息（不推荐）"
 doc_id: "n1Al2zCrny"
-updated_at: "2025-09-08 19:07:45"
+updated_at: "2026-08-25 09:36:35"
 ---
 
 > Source: https://open.dingtalk.com/document/development/get-user-userid-through-login-free-code
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > 身份验证（免登） > 通过免登码获取用户信息（不推荐）
-> Updated: 2025-09-08 19:07:45
+> Updated: 2026-08-25 09:36:35
 
 # 通过免登码获取用户信息（不推荐）
 
 在第三方企业应用免登和企业内部应用免登场景中，开发者需要使用本接口通过access\_token和免登接口中获取的code来获取用户userid。
 
-> **[!NOTE]**
+> **[!IMPORTANT]**
 >
-> 接口升级，接口文档已于2021年10月27日移动至**历史文档（不推荐）**目录。已经接入的用户可继续使用，正在准备接入的用户请参考[通过免登码获取用户信息](https://open.dingtalk.com/document/orgapp/obtain-the-userid-of-a-user-by-using-the-log-free)。
+> - 本接口已完成升级，后续将维持现有功能且不再新增能力。
+> - 未接入的开发者建议使用新版 [通过免登码获取用户信息](0024-obtain-the-userid-of-a-user-by-using-the-log-free.md)接口，已接入用户不受影响。
 
 ## 权限
 
@@ -42,7 +43,7 @@ updated_at: "2025-09-08 19:07:45"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | 6ed1bxxx | 调用服务端API的应用凭证。   - 企业内部应用可通过[获取企业内部应用的access\_token](https://open.dingtalk.com/document/orgapp/obtain-orgapp-token)接口获取 - 第三方企业应用可通过[获取第三方应用授权企业的access\_token](https://open.dingtalk.com/document/isvapp/obtains-the-enterprise-authorized-credential)接口获取。 |
+| access\_token | String | 是 | 6ed1bxxx | 调用服务端API的应用凭证。   - 企业内部应用，通过[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)接口获取。 - 第三方企业应用，通过[服务商获取第三方应用授权企业的access\_token](1446-obtain-isvapp-token.md)接口获取。 |
 | code | String | 是 | 677e73b724edxxxx | 免登授权码。 |
 
 ## 返回参数

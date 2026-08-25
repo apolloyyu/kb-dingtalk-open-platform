@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "API 调用指南 > 服务端SDK下载"
 doc_id: "5sZqhSBh98"
-updated_at: "2026-08-12 09:20:56"
+updated_at: "2026-08-25 09:36:28"
 ---
 
 > Source: https://open.dingtalk.com/document/development/download-the-server-side-sdk
 > Path: 应用开发 / 服务端API / API 调用指南 > 服务端SDK下载
-> Updated: 2026-08-12 09:20:56
+> Updated: 2026-08-25 09:36:28
 
 # 服务端SDK下载
 
@@ -23,7 +23,7 @@ updated_at: "2026-08-12 09:20:56"
 > 在使用钉钉接口前，请先确认接口版本（新版或旧版），然后下载对应版本的 SDK 或引入对应的 Maven 依赖进行调用：**注意：新旧两个版本的 SDK 不可混用。**
 >
 > - **旧版接口**：请参考本文「[旧版服务端SDK](#section-q8u-97x-mxu)」说明，使用[旧版工具包](#sectiondiv-d1x-qb4-rrq)，**Maven 版本固定为**`2.0.0`。
-> - **新版接口**：请参考本文「[新版服务端SDK](#section-3uc-c2m-3no) 」说明，使用[新版工具包](#e2287636e4q62)，**Maven 最新版本为**`2.2.61`。
+> - **新版接口**：请参考本文「[新版服务端SDK](#section-3uc-c2m-3no) 」说明，使用[新版工具包](#e2287636e4q62)，**Maven 最新版本为**`2.2.62`。
 
 ## 新版API VS 旧版API
 
@@ -163,15 +163,11 @@ updated_at: "2026-08-12 09:20:56"
 
   添加依赖项到`pom.xml`的文件中，建议始终使用最新版本以获得功能更新与安全修复。
 
-  > **[!NOTE]**
-  >
-  > 并请替换下方代码中的`{version}`，并填写最新Maven版本**2.2.61**，最新版本可前往[Maven库](https://central.sonatype.com/artifact/com.aliyun/dingtalk)查看。
-
   ```
   <dependency>
    <groupId>com.aliyun</groupId>
    <artifactId>dingtalk</artifactId>
-   <version>{version}</version>
+   <version>2.2.62</version>
   </dependency>
   ```
 

@@ -137,10 +137,10 @@ updated_at: "2026-05-19 20:32:26"
 
 服务窗支持服务窗关注、服务窗取关、用户信息授权结果和接收用户交互回调事件。
 
-- [服务窗关注事件](../04-LFcRvVD08N-事件订阅/0100-service-window-event.md)
-- [服务窗取关事件](../04-LFcRvVD08N-事件订阅/0101-service-window-close-event.md)
-- [用户信息授权结果](../04-LFcRvVD08N-事件订阅/0102-user-information-authorization-result.md)
-- [服务号接收用户交互](../04-LFcRvVD08N-事件订阅/0103-service-number-receive-user-interaction.md)
+- [服务窗关注事件](../04-LFcRvVD08N-事件订阅/0070-service-window-event.md)
+- [服务窗取关事件](../04-LFcRvVD08N-事件订阅/0071-service-window-close-event.md)
+- [用户信息授权结果](../04-LFcRvVD08N-事件订阅/0072-user-information-authorization-result.md)
+- [服务号接收用户交互](../04-LFcRvVD08N-事件订阅/0073-service-number-receive-user-interaction.md)
 
 ## **使用教程**
 

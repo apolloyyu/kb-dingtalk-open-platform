@@ -7,31 +7,30 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > e签宝 1.0 > 用户 > 查询企业是否实名"
 doc_id: "W8ankZjVD2"
-updated_at: "2026-06-23 18:10:35"
+updated_at: "2026-08-25 09:37:29"
 ---
 
 > Source: https://open.dingtalk.com/document/development/check-whether-enterprise-registered-realname-e-sign-treasure
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > e签宝 1.0 > 用户 > 查询企业是否实名
-> Updated: 2026-06-23 18:10:35
+> Updated: 2026-08-25 09:37:29
 
 # 查询企业是否实名
 
 调用本接口查询企业是否已在e签宝实名（企业实名后才会生成印章）。已实名则会返回实名企业名称，ISV可在应用内展示给用户关联的e签宝企业名称。未实名则可在应用内提醒用户进行实名。
 
-## **接口调用说明**
-
-当前接口已完成升级迭代且不再支持新应用申请，存量应用调用不受影响，建议未接入的开发者使用[查询企业是否实名认证](1078-query-enterprise-information.md)接口，已接入的开发者结合实际尽快完成迁移。
+> **[!IMPORTANT]**
+>
+> - 本接口已完成升级，后续将维持现有功能且不再新增能力。
+> - 未接入的开发者建议使用新版[查询企业是否实名认证](1078-query-enterprise-information.md)接口，已接入用户不受影响。
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/esign/corps/info |
 | HTTP Method | GET |
 | 支持的应用类型 | appType-第三方企业应用 |
-| 权限要求 | 不支持新增申请 |
+| 权限要求 | 不支持新增 |
 
 ### 请求头
 

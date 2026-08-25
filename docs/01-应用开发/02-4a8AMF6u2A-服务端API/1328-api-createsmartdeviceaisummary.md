@@ -37,8 +37,8 @@ updated_at: "2026-07-03 09:40:40"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| agentId | String | 否 | 小助理id，可接入[DingTalkA1小助理总结完成事件](../04-LFcRvVD08N-事件订阅/0118-events-aone-assistant-summary-change.md)获取agentId。 |
-| openFileId | String | 否 | 录音文件id，可接入[DingTalkA1小助理总结完成事件](../04-LFcRvVD08N-事件订阅/0118-events-aone-assistant-summary-change.md)获取fileId。 |
+| agentId | String | 否 | 小助理id，可接入[DingTalkA1小助理总结完成事件](../04-LFcRvVD08N-事件订阅/0119-events-aone-assistant-summary-change.md)获取agentId。 |
+| openFileId | String | 否 | 录音文件id，可接入[DingTalkA1小助理总结完成事件](../04-LFcRvVD08N-事件订阅/0119-events-aone-assistant-summary-change.md)获取fileId。 |
 | isvContext | String | 否 | 生成小助理分析的自定义上下文。 |
 | instanceId | String | 否 | 小助理实例id。 |
 

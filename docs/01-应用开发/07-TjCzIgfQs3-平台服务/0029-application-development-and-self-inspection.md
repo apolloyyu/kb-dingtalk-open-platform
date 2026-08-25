@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "平台服务"
 breadcrumb: "合作指南 > 产品方案商 > 应用市场的合作指引 > 步骤二：完成应用开发和自检"
 doc_id: "gkxMCj7Yo0"
-updated_at: "2025-12-18 20:31:46"
+updated_at: "2026-08-25 09:45:07"
 ---
 
 > Source: https://open.dingtalk.com/document/services/application-development-and-self-inspection
 > Path: 应用开发 / 平台服务 / 合作指南 > 产品方案商 > 应用市场的合作指引 > 步骤二：完成应用开发和自检
-> Updated: 2025-12-18 20:31:46
+> Updated: 2026-08-25 09:45:07
 
 # 步骤二：完成应用开发和自检
 
@@ -29,7 +29,7 @@ updated_at: "2025-12-18 20:31:46"
    > 为避免后续审核不通过，请仔细阅读[钉钉开放设计规范](https://open.dingtalk.com/document/design)。
 2. **接入监控中心**
 
-   配置日志上报路径与监控指标，启用性能追踪和异常告警功能。建议设置关键业务埋点，便于后续问题定位。详细步骤请参考[监控应用](https://open.dingtalk.com/document/dingstart/monitor-miniapp-and-webapp)。
+   配置日志上报路径与监控指标，启用性能追踪和异常告警功能。建议设置关键业务埋点，便于后续问题定位。详细步骤请参考[监控应用](../01-XOnnmGCTbn-开发指南/0008-dingstart-development-application.md#5bebc838f3d4q)。
 3. **配置安全域名**
 
    在管理后台添加可信域名列表，确保前端请求来源合法。详细步骤请参考[钉钉安全域名](../01-XOnnmGCTbn-开发指南/0015-config-domain-name.md)。
@@ -38,7 +38,7 @@ updated_at: "2025-12-18 20:31:46"
    将应用代码部署至稳定运行环境，推荐使用容器化方案提升部署效率与一致性。详细步骤请参考[部署方式介绍](../01-XOnnmGCTbn-开发指南/0009-introduction-to-deployment-methods.md)。
 5. **执行上线前自检**
 
-   检查接口连通性、权限配置、安全策略是否生效，并验证监控数据是否正常回传。详细步骤请参考[自检应用](../01-XOnnmGCTbn-开发指南/0019-selfcheck-dingtalk-app.md)。
+   检查接口连通性、权限配置、安全策略是否生效，并验证监控数据是否正常回传。详细步骤请参考[应用自检与分发](../01-XOnnmGCTbn-开发指南/0019-selfcheck-dingtalk-app.md)。
 
 ## 技术答疑
 

@@ -7,31 +7,30 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > e签宝 1.0 > 鉴权 > ISV服务商数据初始化"
 doc_id: "75pQ3ufnaI"
-updated_at: "2026-06-23 18:10:29"
+updated_at: "2026-08-25 09:37:24"
 ---
 
 > Source: https://open.dingtalk.com/document/development/offline-isv-service-provider-data-initialization
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > e签宝 1.0 > 鉴权 > ISV服务商数据初始化
-> Updated: 2026-06-23 18:10:29
+> Updated: 2026-08-25 09:37:24
 
 # ISV服务商数据初始化
 
 调用本接口帮助钉钉ISV服务商进行e签宝开放平台的数据初始化。所有e签宝接口在调用前，都需要成为e签宝的开发者，基于ISV服务商数据已完成初始化。
 
-## **接口调用说明**
-
-当前接口已完成升级迭代且不再支持新应用申请，存量应用调用不受影响，建议未接入的开发者使用[e签宝数据初始化](1071-isv-service-provider-data-initialization.md)接口，已接入的开发者结合实际尽快完成迁移。
+> **[!IMPORTANT]**
+>
+> - 本接口已完成升级，后续将维持现有功能且不再新增能力。
+> - 未接入的开发者建议使用新版[e签宝数据初始化](1071-isv-service-provider-data-initialization.md)接口，已接入用户不受影响。
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/esign/developers/create |
 | HTTP Method | GET |
 | 支持的应用类型 | appType-第三方企业应用 |
-| 权限要求 | 不支持新增申请 |
+| 权限要求 | 不支持新增 |
 
 ### 请求头
 

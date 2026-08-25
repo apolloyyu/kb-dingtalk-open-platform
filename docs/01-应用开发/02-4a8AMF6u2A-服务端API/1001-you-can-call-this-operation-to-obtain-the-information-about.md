@@ -7,22 +7,20 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "钉钉工作台 > 获取工作台插件检验的规则信息"
 doc_id: "zoOzSNcfEX"
-updated_at: "2026-06-02 19:48:42"
+updated_at: "2026-08-25 09:36:26"
 ---
 
 > Source: https://open.dingtalk.com/document/development/you-can-call-this-operation-to-obtain-the-information-about
 > Path: 应用开发 / 服务端API / 钉钉工作台 > 获取工作台插件检验的规则信息
-> Updated: 2026-06-02 19:48:42
+> Updated: 2026-08-25 09:36:26
 
 # 获取工作台插件检验的规则信息
 
-获取插件的校验规则
+调用本接口，获取插件的校验的规则信息。
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/workbench/plugins/validationRules |
 | HTTP Method | GET |
@@ -33,7 +31,7 @@ updated_at: "2026-06-02 19:48:42"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，请参考[调用工作台 API](https://open.dingtalk.com/document/dingstart/workbench)。 |
+| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，请参考[调用工作台 API](../../08-工作台/02-Qzb8Lpee2t-使用教程/0013-call-the-workbench-api.md#a1b8677ca7pih)。 |
 
 ### 查询参数
 

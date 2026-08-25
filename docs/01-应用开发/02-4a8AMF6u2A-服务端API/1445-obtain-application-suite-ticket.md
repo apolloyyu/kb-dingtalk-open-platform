@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > 获取访问凭证 > 获取第三方企业应用的suite_access_token"
 doc_id: "pEN2VC7PiA"
-updated_at: "2026-07-22 16:25:43"
+updated_at: "2026-08-25 09:36:31"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-application-suite-ticket
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > 获取访问凭证 > 获取第三方企业应用的suite_access_token
-> Updated: 2026-07-22 16:25:43
+> Updated: 2026-08-25 09:36:31
 
 # **获取第三方企业应用的suite\_access\_token**
 
@@ -22,10 +22,8 @@ updated_at: "2026-07-22 16:25:43"
 
 > **[!IMPORTANT]**
 >
-> 为提升接口使用体验，针对**获取访问凭证**相关接口规范进行升级，本接口仅保持现有功能，不再新增支持其他能力：
->
-> - 如果未使用本接口，推荐使用[获取第三方企业应用的suiteAccessToken](0036-obtains-the-suite-acess-token-of-third-party-enterprise-applications.md)新版规范接口。
-> - 如果已使用本接口，建议您根据自身实际情况评估是否切换至推荐接口。
+> - 本接口已完成升级，后续将维持现有功能且不再新增能力。
+> - 未接入的开发者建议使用新版 [获取第三方企业应用的suiteAccessToken](0036-obtains-the-suite-acess-token-of-third-party-enterprise-applications.md)接口，已接入用户不受影响。
 
 该suite\_access\_token主要用于获取第三方企业应用的信息，在调用以下接口时会使用第三方企业应用的suite\_access\_token：
 

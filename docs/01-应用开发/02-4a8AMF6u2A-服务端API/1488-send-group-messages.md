@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > 即时通信 > 消息通知 > 企业群消息 > 发送消息到企业群"
 doc_id: "rHnemLx0Rn"
-updated_at: "2025-09-08 19:05:01"
+updated_at: "2026-08-25 09:37:19"
 ---
 
 > Source: https://open.dingtalk.com/document/development/send-group-messages
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > 即时通信 > 消息通知 > 企业群消息 > 发送消息到企业群
-> Updated: 2025-09-08 19:05:01
+> Updated: 2026-08-25 09:37:19
 
 # 发送消息到企业群
 
@@ -20,10 +20,8 @@ updated_at: "2025-09-08 19:05:01"
 
 > **[!IMPORTANT]**
 >
-> 为提升接口的使用体验，发送消息到企业群接口计划升级，后续完善更多功能，重新开放时间请关注文档更新日志。
->
-> - 发送消息到企业群接口相关文档，已于2022年09月23日迁移至历史文档（不推荐）目录。
-> - 不再支持新应用接入，已接入的应用可以正常调用。
+> - 为提升接口的使用体验，当前接口计划升级，重新开放时间请[开放概览](0764-message-corpconversation-overview.md#section-rtj-q87-8ea)。
+> - 不再支持新应用接入，已接入用户不受影响。
 
 发送消息到企业群会话是指可以调用接口创建企业群会话，会以**企业名义**向企业群会话里推送消息。目前钉钉群共有5类，发送消息到企业群支持的钉钉群类型如下：
 
@@ -35,17 +33,15 @@ updated_at: "2025-09-08 19:05:01"
 | 普通群 | 否 |
 | 合作群 | 否 |
 
-![iShot2021-12-17 13](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/7952279361/p371136.png)
-
 ## 权限
 
 服务端API是以应用维度授权的，在调用接口前，确保已经为应用添加了接口权限。
 
 | 应用类型 | 是否支持调用 | 权限申请方式 | API Explorer调试 |
 | --- | --- | --- | --- |
-| 企业内部应用 | 是 | 开发者后台申请 | — |
-| 第三方企业应用 | 否 | — | — |
-| 第三方个人应用 | 否 | — | — |
+| 企业内部应用 | 是 | **[!NOTE]**  不支持新增 | — |
+| 第三方企业应用 | 否 | — |
+| 第三方个人应用 | 否 | — |
 
 ## 基本信息
 
@@ -57,14 +53,14 @@ updated_at: "2025-09-08 19:05:01"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | 6d1bxxxx | 调用服务端API的应用凭证。   - 企业内部应用可通过[获取企业内部应用的access\_token](https://open.dingtalk.com/document/orgapp/obtain-orgapp-token)接口获取。 |
+| access\_token | String | 是 | 6d1bxxxx | 调用服务端API的应用凭证，可通过[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)接口获取。 |
 
 ## Body参数
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| chatid | String | 是 | chate39f5xxxxxx335 | 群会话的ID。   - 企业内部应用    - 调用服务端API获取，调用[创建群会话](https://open.dingtalk.com/document/orgapp/create-group-session)接口的返回chatid字段。   - 调用前端API获取，小程序调用[选择会话](https://open.dingtalk.com/document/orgapp/select-session)，微应用调用[根据corpid选择会话](https://open.dingtalk.com/document/orgapp/select-session-based-on-corpid) |
-| msg | JSON Object | 是 | {"msgtype":"text","text":{"content":"请提交日报。"}} | 消息内容，最长不超过2048个字节。   - 企业内部应用消息类型和样例参考[消息类型与数据格式](https://open.dingtalk.com/document/orgapp/message-types-and-data-format)。 |
+| chatid | String | 是 | chate39f5xxxxxx335 | 群会话的ID。   - 服务端API获取，调用[创建群](1481-session-management-creates-groups.md)接口的返回chatid字段。 - 前端API获取，小程序调用[选择会话](../03-Ogu5SlPY4t-客户端JSAPI/0744-select-session.md)，微应用调用[根据corpid选择会话](../03-Ogu5SlPY4t-客户端JSAPI/0803-select-session-based-on-corpid.md)。 |
+| msg | JSON Object | 是 | {"msgtype":"text","text":{"content":"请提交日报。"}} | 消息内容，最长不超过2048个字节，消息类型和样例参考[消息通知类型](0775-message-types-and-data-format.md)。 |
 
 ## 返回参数
 

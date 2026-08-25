@@ -31,7 +31,7 @@ updated_at: "2026-07-02 10:36:10"
 步骤四：相关调用流程：
 
 1. 调用考勤服务端API-[批量获取考勤组详情](0179-batch-obtain-attendance-group-details.md)接口，获取企业考勤组内的排班上下班时间。
-2. 获取员工考勤打卡情况，需要注册企业考勤事件回调，参考文档[配置 Stream 推送（推荐）](../04-LFcRvVD08N-事件订阅/0003-configure-stream-push.md#151be9e66238j)，并订阅[考勤事件](../04-LFcRvVD08N-事件订阅/0125-employee-clock-in-event.md)。
+2. 获取员工考勤打卡情况，需要注册企业考勤事件回调，参考文档[配置 Stream 推送（推荐）](../04-LFcRvVD08N-事件订阅/0003-configure-stream-push.md#151be9e66238j)，并订阅[考勤事件](../04-LFcRvVD08N-事件订阅/0126-employee-clock-in-event.md)。
 3. 成功注册企业考勤事件回调后，企业内员工上班执行打卡即可实时产生回调。
 4. 根据实时推送的打卡信息userId、groupId、checkTime值跟获取的考勤组内排班打卡时间对比即可得到该员工打卡是正常打卡还是迟到打卡。
 
@@ -82,7 +82,7 @@ public void getAccessToken() throws ApiException {
            System.out.println(rsp.getBody());
        }
    ```
-2. 获取员工考勤打卡情况，需要注册企业考勤事件回调，参考文档[配置 Stream 推送（推荐）](../04-LFcRvVD08N-事件订阅/0003-configure-stream-push.md#151be9e66238j)，并订阅[考勤事件](../04-LFcRvVD08N-事件订阅/0125-employee-clock-in-event.md)。
+2. 获取员工考勤打卡情况，需要注册企业考勤事件回调，参考文档[配置 Stream 推送（推荐）](../04-LFcRvVD08N-事件订阅/0003-configure-stream-push.md#151be9e66238j)，并订阅[考勤事件](../04-LFcRvVD08N-事件订阅/0126-employee-clock-in-event.md)。
 3. 成功注册企业考勤事件回调后，企业内员工上班执行打卡即可实时产生回调，接收到的回调信息如下。
 
    ```

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > 通讯录管理 > 用户管理1.0(不推荐) > 更新用户信息"
 doc_id: "zP8p6VMbMO"
-updated_at: "2025-09-08 19:07:25"
+updated_at: "2026-08-25 09:36:49"
 ---
 
 > Source: https://open.dingtalk.com/document/development/update-user-details
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > 通讯录管理 > 用户管理1.0(不推荐) > 更新用户信息
-> Updated: 2025-09-08 19:07:25
+> Updated: 2026-08-25 09:36:49
 
 # 更新用户信息
 
@@ -20,10 +20,8 @@ updated_at: "2025-09-08 19:07:25"
 
 > **[!IMPORTANT]**
 >
-> 为提升接口的使用体验，提供更加规范的接口，钉钉针对通讯录**用户管理**和**部门管理**接口进行了升级，**用户管理1.0**、**部门管理1.0**的接口文档已于2021年10月21日迁移至**历史文档（不推荐）**目录下，且**用户管理1.0和部门管理1.0接口将不再添加新的能力，仅保持原有功能。**
->
-> - 如果未接入1.0版接口，推荐使用新的[用户管理](https://open.dingtalk.com/document/orgapp/user-information-creation)、[部门管理](https://open.dingtalk.com/document/orgapp/create-a-department-v2)接口。
-> - 如果已接入1.0版接口，建议您根据自身实际情况评估是否切换至新接口。
+> - 本接口已完成升级，后续将维持现有功能且不再新增能力。
+> - 未接入的开发者建议使用新版 [更新用户信息](0057-user-information-update.md)接口，已接入用户不受影响。
 
 ## 权限
 
@@ -31,9 +29,9 @@ updated_at: "2025-09-08 19:07:25"
 
 | 应用类型 | 是否支持调用 | 权限申请方式 | API Explorer调试 |
 | --- | --- | --- | --- |
-| 企业内部应用 | 是 | **[!IMPORTANT]**  暂不支持新增申请。 | — |
-| 第三方企业应用 | 否 | — | — |
-| 第三方个人应用 | 否 | — | — |
+| 企业内部应用 | 是 | **[!NOTE]**  不支持新增 | — |
+| 第三方企业应用 | 否 | — |
+| 第三方个人应用 | 否 | — |
 
 ## 基本信息
 
@@ -45,13 +43,13 @@ updated_at: "2025-09-08 19:07:25"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | 6d1bxxxx | 调用服务端API授权凭证，可通过[获取企业内部应用的access\_token](https://open.dingtalk.com/document/orgapp/obtain-orgapp-token)接口获取。 |
+| access\_token | String | 是 | 6d1bxxxx | 调用服务端API授权凭证，通过[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)接口获取。 |
 
 ## Body参数
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| userid | String | 是 | 1001 | 员工userid，不可修改，长度为1~64个字符，可通过[根据手机号查询用户](https://open.dingtalk.com/document/orgapp/query-users-by-phone-number)接口获取。 |
+| userid | String | 是 | 1001 | 员工userid，不可修改，长度为1~64个字符，可通过[根据手机号查询用户](1463-retrieve-userid-from-mobile-phone-number.md)接口获取。 |
 | name | String | 否 | 赵xx | 员工姓名，长度为1~64个字符。 |
 | managerUserid | String | 否 | user01 | 员工直属主管的userid。 |
 | workPlace | String | 否 | 杭州 | 办公地点，长度为0~50个字符。 |

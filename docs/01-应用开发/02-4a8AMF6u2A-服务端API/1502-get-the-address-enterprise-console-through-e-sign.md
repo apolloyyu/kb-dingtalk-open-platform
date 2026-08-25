@@ -7,20 +7,21 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > e签宝 1.0 > 用户 > 获取企业控制台地址"
 doc_id: "ahaWj3L9f1"
-updated_at: "2026-06-23 18:10:37"
+updated_at: "2026-08-25 09:37:31"
 ---
 
 > Source: https://open.dingtalk.com/document/development/get-the-address-enterprise-console-through-e-sign
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > e签宝 1.0 > 用户 > 获取企业控制台地址
-> Updated: 2026-06-23 18:10:37
+> Updated: 2026-08-25 09:37:31
 
 # 获取企业控制台地址
 
 调用本接口获取e签宝的企业控制台地址。企业控制台内可以创建企业印章，管理企业成员权限等企业设置。
 
-## **接口调用说明**
-
-当前接口已完成升级迭代且不再支持新应用申请，存量应用调用不受影响，建议未接入的开发者使用[获取企业控制台地址](1079-get-enterprise-console-address.md)接口，已接入的开发者结合实际尽快完成迁移。
+> **[!IMPORTANT]**
+>
+> - 本接口已完成升级，后续将维持现有功能且不再新增能力。
+> - 未接入的开发者建议使用新版[获取企业控制台地址](1079-get-enterprise-console-address.md)接口，已接入用户不受影响。
 
 ## **请求**
 
@@ -29,13 +30,13 @@ updated_at: "2026-06-23 18:10:37"
 | HTTP URL | https://api.dingtalk.com/v1.0/esign/corps/console |
 | HTTP Method | GET |
 | 支持的应用类型 | appType-第三方企业应用 |
-| 权限要求 | 不支持新增申请 |
+| 权限要求 | 不支持新增 |
 
 ### **请求头**
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，可调用[获取第三方应用授权企业的accessToken](https://open.dingtalk.com/document/isvapp/obtain-the-access_token-of-the-authorized-enterprise)接口获取。 |
+| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，通过调用[获取第三方应用授权企业的accessToken](0034-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口获取。 |
 
 ### **请求示例**
 

@@ -7,16 +7,16 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "概述"
 doc_id: "RMrRiwGarI"
-updated_at: "2026-05-08 16:45:22"
+updated_at: "2026-08-25 09:36:39"
 ---
 
 > Source: https://open.dingtalk.com/document/development/overview-of-event-subscription
 > Path: 应用开发 / 事件订阅 / 概述
-> Updated: 2026-05-08 16:45:22
+> Updated: 2026-08-25 09:36:39
 
 # 概述
 
-## 什么是事件订阅。
+## 什么是事件订阅
 
 钉钉事件订阅功能，是钉钉开放平台推出的一项服务。这项服务允许开发者在自己开发的应用程序中，实时接收到钉钉平台产生的各类重要通知。通过设置事件订阅，你的应用能够监听到钉钉中发生的诸如部门架构调整、员工签到、打卡等事件，并据此在你的应用中进行及时响应和处理。利用这一功能，你的企业应用将能够更深度地与钉钉平台集成，实现信息共享和业务协同。
 
@@ -32,7 +32,7 @@ updated_at: "2026-05-08 16:45:22"
 
 ## **订阅流程**
 
-![image.png](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/4752280071/p741471.png)
+![image.png](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/3179592871/p741471.png)
 
 ## **订阅方式**
 
@@ -64,8 +64,7 @@ HTTP推送方式适用于本地部署的情况，以HTTP POST请求方式以加�
 
 - **一个星号**`*`
 
-匹配任意个数的字符，包括空。不包括路径边界`/`或 `\`。例如： `/path/*/abc`可以匹配`/path/a/abc`和`/path/b/abc`等。
-
+  匹配任意个数的字符，包括空。不包括路径边界`/`或 `\`。例如： `/path/*/abc`可以匹配`/path/a/abc`和`/path/b/abc`等。
 - **两个星号**`**`
 
   和一个星号类似，区别是可以跨路径边界，一般用来匹配多级目录。例如：`/path/**/abc`可以用来匹配`/eventkey/a/abc`、`/eventkey/b/abc`、`/eventkey/a/b/abc`、`/eventkey/a/b/c/abc`等。

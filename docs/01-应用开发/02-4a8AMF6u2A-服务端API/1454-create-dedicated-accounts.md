@@ -7,23 +7,21 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > 通讯录管理 > 用户管理1.0(不推荐) > 创建专属帐号用户"
 doc_id: "4GyKRTViVq"
-updated_at: "2025-09-08 19:07:24"
+updated_at: "2026-08-25 09:36:48"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-dedicated-accounts
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > 通讯录管理 > 用户管理1.0(不推荐) > 创建专属帐号用户
-> Updated: 2025-09-08 19:07:24
+> Updated: 2026-08-25 09:36:48
 
 # 创建专属帐号用户
 
-调用本接口创建专属帐号新用户。
+调用本接口创建专属账号新用户。
 
 > **[!IMPORTANT]**
 >
-> 为提升接口的使用体验，提供更加规范的接口，钉钉针对通讯录**专属****帐号**接口进行了升级，文档已于2022年8月19日迁移至**历史文档（不推荐）**目录下，且**本接口仅保持现有功能，不再新增支持其他能力。**
->
-> - 如果未使用本接口，推荐根据帐号类型选择使用[创建SSO专属帐号](https://open.dingtalk.com/document/orgapp/create-an-sso-account)或者[创建钉钉自建专属帐号](https://open.dingtalk.com/document/orgapp/create-dingtalk-user-created-dedicated-account)或者[邀请其他组织专属帐号加入](https://open.dingtalk.com/document/orgapp/invite-other-organization-specific-accounts-to-join)接口。
-> - 如果已使用本接口，建议您根据自身实际情况评估是否切换至推荐接口。
+> - 本接口已完成升级，后续将维持现有功能且不再新增能力。
+> - 未接入的开发者推荐根据帐号类型选择使用[创建SSO企业账号](0104-create-an-sso-account.md)或者[创建钉钉自建企业账号](0106-create-dingtalk-user-created-dedicated-account.md)或者[邀请其他组织企业账号加入](0115-invite-other-organization-specific-accounts-to-join.md)接口，已接入用户不受影响。
 
 ## 使用说明
 
@@ -35,9 +33,9 @@ updated_at: "2025-09-08 19:07:24"
 
 | 应用类型 | 是否支持调用 | 权限申请方式 | API Explorer调试 |
 | --- | --- | --- | --- |
-| 企业内部应用 | 是 | **[!NOTE]**  暂不支持新增申请。 | — |
-| 第三方企业应用 | 否 | — | — |
-| 第三方个人应用 | 否 | — | — |
+| 企业内部应用 | 是 | **[!NOTE]**  不支持新增 | — |
+| 第三方企业应用 | 否 | — |
+| 第三方个人应用 | 否 | — |
 
 ## 基本信息
 
@@ -49,7 +47,7 @@ updated_at: "2025-09-08 19:07:24"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | BE3xxxx | 调用该接口的访问凭证。   - 企业内部应用，调用[获取企业内部应用的access\_token](https://open.dingtalk.com/document/orgapp/obtain-orgapp-token)接口获取。 |
+| access\_token | String | 是 | BE3xxxx | 调用该接口的访问凭证，通过[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)接口获取。 |
 
 ## Body参数
 

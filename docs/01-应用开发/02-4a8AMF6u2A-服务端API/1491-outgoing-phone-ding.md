@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > 即时通信 > DING > 发送电话DING"
 doc_id: "yipD1SpZtj"
-updated_at: "2026-08-20 15:35:39"
+updated_at: "2026-08-25 09:37:22"
 ---
 
 > Source: https://open.dingtalk.com/document/development/outgoing-phone-ding
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > 即时通信 > DING > 发送电话DING
-> Updated: 2026-08-20 15:35:39
+> Updated: 2026-08-25 09:37:22
 
 # 发送电话DING
 
@@ -20,7 +20,8 @@ updated_at: "2026-08-20 15:35:39"
 
 > **[!IMPORTANT]**
 >
-> 为提升接口使用体验，本文档于 2025 年 04 月 28 日迁移至历史文档（不推荐）目录，不再支持新应用接入，已接入的应用不受影响。如果未使用本接口，请使用[发送DING消息](0712-robot-sends-nail-message.md)接口。
+> - 本接口已完成升级，后续将维持现有功能且不再新增能力。
+> - 未接入的开发者建议使用新版[发送DING消息](0712-robot-sends-nail-message.md)接口，已接入用户不受影响。
 
 ### 接口调用流程
 
@@ -42,9 +43,9 @@ updated_at: "2026-08-20 15:35:39"
 
 | 应用类型 | 是否支持 | 权限 | API Explorer调试 |
 | --- | --- | --- | --- |
-| 企业内部应用 | 支持 | **[!IMPORTANT]**  不支持新增申请 | — |
-| 第三方企业应用 | 暂不支持 | 暂不支持 | 暂不支持 |
-| 第三方个人应用 | 暂不支持 | 暂不支持 | 暂不支持 |
+| 企业内部应用 | 支持 | **[!IMPORTANT]**  不支持新增 | — |
+| 第三方企业应用 | 暂不支持 | 暂不支持 |
+| 第三方个人应用 | 暂不支持 | 暂不支持 |
 
 ## 请求方法
 
@@ -64,7 +65,7 @@ Content-Type:application/json
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，通过调用[获取企业内部应用的accessToken](0033-obtain-the-access-token-of-an-internal-app.md)接口获取。 |
+| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，调用[获取企业内部应用的accessToken](0033-obtain-the-access-token-of-an-internal-app.md)接口获取。 |
 
 ## Body参数
 

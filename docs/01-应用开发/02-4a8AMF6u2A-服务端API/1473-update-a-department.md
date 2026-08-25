@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > 通讯录管理 > 部门管理1.0(不推荐) > 更新部门"
 doc_id: "D1kZuS555D"
-updated_at: "2025-09-08 19:07:39"
+updated_at: "2026-08-25 09:37:04"
 ---
 
 > Source: https://open.dingtalk.com/document/development/update-a-department
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > 通讯录管理 > 部门管理1.0(不推荐) > 更新部门
-> Updated: 2025-09-08 19:07:39
+> Updated: 2026-08-25 09:37:04
 
 # 更新部门
 
@@ -20,10 +20,8 @@ updated_at: "2025-09-08 19:07:39"
 
 > **[!IMPORTANT]**
 >
-> 为提升接口的使用体验，提供更加规范的接口，钉钉针对通讯录**用户管理**和**部门管理**接口进行了升级，**用户管理1.0**、**部门管理1.0**的接口文档已于2021年10月21日迁移至**历史文档（不推荐）**目录下，且**用户管理1.0和部门管理1.0接口将不再添加新的能力，仅保持原有功能。**
->
-> - 如果未接入1.0版接口，推荐使用新的[用户管理](https://open.dingtalk.com/document/orgapp/user-information-creation)、[部门管理](https://open.dingtalk.com/document/orgapp/create-a-department-v2)接口。
-> - 如果已接入1.0版接口，建议您根据自身实际情况评估是否切换至新接口。
+> - 本接口已完成升级，后续将维持现有功能且不再新增能力。
+> - 未接入的开发者建议使用新版[更新部门](0078-address-book-update-department.md)接口，已接入用户不受影响。
 
 ## 权限
 
@@ -31,9 +29,9 @@ updated_at: "2025-09-08 19:07:39"
 
 | 应用类型 | 是否支持调用 | 权限申请方式 | API Explorer调试 |
 | --- | --- | --- | --- |
-| 企业内部应用 | 是 | **[!IMPORTANT]**  暂不支持新增申请。 | — |
-| 第三方企业应用 | 否 | — | — |
-| 第三方个人应用 | 否 | — | — |
+| 企业内部应用 | 是 | **[!NOTE]**  不支持新增 | — |
+| 第三方企业应用 | 否 | — |
+| 第三方个人应用 | 否 | — |
 
 ## 基本信息
 
@@ -45,13 +43,13 @@ updated_at: "2025-09-08 19:07:39"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | 6d1bxxxx | 调用服务端API的应用凭证。   - 企业内部应用可通过[获取企业内部应用的access\_token](https://open.dingtalk.com/document/orgapp/obtain-orgapp-token)接口获取。 |
+| access\_token | String | 是 | 6d1bxxxx | 调用服务端API的应用凭证，可通过[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)接口获取。 |
 
 ## Body参数
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| id | Number | 是 | 420727358 | 部门ID，可通过调用[获取部门列表](https://open.dingtalk.com/document/orgapp/obtain-the-department-list)接口获取。 |
+| id | Number | 是 | 420727358 | 部门ID，可调用[获取部门列表](1467-obtain-the-department-list.md)接口获取。 |
 | orgDeptOwner | String | 否 | manager420 | 企业群群主的userid。 |
 | outerPermitUsers | String | 否 | 111|222 | **outerDept**为**true**时，可以配置额外可见人，值为userid组成的的字符串，使用“|”符号进行分隔，总数不能超过200。 |
 | outerPermitDepts | String | 否 | 12|13 | **outerDept**为**true**时，可以配置额外可见部门，值为部门id组成的的字符串，使用“|”符号进行分隔，总数不能超过200。 |
@@ -94,68 +92,68 @@ POST https://oapi.dingtalk.com/department/update?access_token=ACCESS_TOKEN
 
 ```
 {
- "sourceIdentifier":"1",
- "userPermits":"1|1",
- "userPerimits":"1",
- "orgDeptOwner":"0115074162",
- "outerDept":"true",
- "deptManagerUseridList":"0115074162|01150741646",
- "parentid":"1",
- "groupContainSubDept":"false",
- "outerPermitUsers":"1",
- "outerDeptOnlySelf":"false",
- "outerPermitDepts":"1",
- "deptPerimits":"1",
- "groupContainHiddenDept":"false",
- "createDeptGroup":"true",
- "groupContainOuterDept":"false",
- "name":"接口测试",
- "id":420727358,
- "lang":"zh_CN",
- "autoAddUser":"true",
- "deptHiding":"true",
- "deptPermits":"1|2",
- "order":"1"
+  "sourceIdentifier":"1",
+  "userPermits":"1|1",
+  "userPerimits":"1",
+  "orgDeptOwner":"0115074162",
+  "outerDept":"true",
+  "deptManagerUseridList":"0115074162|01150741646",
+  "parentid":"1",
+  "groupContainSubDept":"false",
+  "outerPermitUsers":"1",
+  "outerDeptOnlySelf":"false",
+  "outerPermitDepts":"1",
+  "deptPerimits":"1",
+  "groupContainHiddenDept":"false",
+  "createDeptGroup":"true",
+  "groupContainOuterDept":"false",
+  "name":"接口测试",
+  "id":420727358,
+  "lang":"zh_CN",
+  "autoAddUser":"true",
+  "deptHiding":"true",
+  "deptPermits":"1|2",
+  "order":"1"
 }
 ```
 
 **请求示例（JAVA SDK）**
 
 ```
-   DingTalkClient client = new DefaultDingTalkClient("https://oapi.dingtalk.com/department/update");
-   OapiDepartmentUpdateRequest req = new OapiDepartmentUpdateRequest();
-   req.setId(420727358L);
-   req.setOrgDeptOwner("0115074162");
-   req.setOuterPermitUsers("1");
-   req.setOuterPermitDepts("1");
-   req.setOuterDept(true);
-   req.setUserPerimits("1");
-   req.setDeptPerimits("1");
-   req.setDeptHiding(true);
-   req.setDeptManagerUseridList("0115074162|01150741646");
-   req.setAutoAddUser(true);
-   req.setCreateDeptGroup(true);
-   req.setOrder("1");
-   req.setParentid("1");
-   req.setLang("zh_CN");
-   req.setName("接口测试");
-   req.setSourceIdentifier("1");
-   req.setUserPermits("1|1");
-   req.setDeptPermits("1|2");
-   req.setOuterDeptOnlySelf(false);
-   req.setGroupContainSubDept(false);
-   req.setGroupContainOuterDept(false);
-   req.setGroupContainHiddenDept(false);
-   OapiDepartmentUpdateResponse rsp = client.execute(req, access_token);
-   System.out.println(rsp.getBody());
+DingTalkClient client = new DefaultDingTalkClient("https://oapi.dingtalk.com/department/update");
+OapiDepartmentUpdateRequest req = new OapiDepartmentUpdateRequest();
+req.setId(420727358L);
+req.setOrgDeptOwner("0115074162");
+req.setOuterPermitUsers("1");
+req.setOuterPermitDepts("1");
+req.setOuterDept(true);
+req.setUserPerimits("1");
+req.setDeptPerimits("1");
+req.setDeptHiding(true);
+req.setDeptManagerUseridList("0115074162|01150741646");
+req.setAutoAddUser(true);
+req.setCreateDeptGroup(true);
+req.setOrder("1");
+req.setParentid("1");
+req.setLang("zh_CN");
+req.setName("接口测试");
+req.setSourceIdentifier("1");
+req.setUserPermits("1|1");
+req.setDeptPermits("1|2");
+req.setOuterDeptOnlySelf(false);
+req.setGroupContainSubDept(false);
+req.setGroupContainOuterDept(false);
+req.setGroupContainHiddenDept(false);
+OapiDepartmentUpdateResponse rsp = client.execute(req, access_token);
+System.out.println(rsp.getBody());
 ```
 
 **返回示例**
 
 ```
 {
-        "errcode":0,
-        "errmsg":"ok",
-        "id":420727358
+  "errcode":0,
+  "errmsg":"ok",
+  "id":420727358
 }
 ```

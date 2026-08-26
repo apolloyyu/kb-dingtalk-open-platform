@@ -120,12 +120,12 @@ Content-Type:application/json
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| openConversationIds | Array of String | 是 | 群会话openConversationId，可调用[创建钉钉客联普通互通群](1853-create-common-group-new-version.md) / [创建钉钉客联两人互通群](1854-creating-two-groups-of-people.md)接口获取，长度限制为1～32个字符，例如：14da\*\*\*\*2760。 |
+| openConversationIds | Array of String | 是 | 群会话openConversationId，可调用[创建钉钉客联普通互通群](1845-create-common-group-new-version.md) / [创建钉钉客联两人互通群](1846-creating-two-groups-of-people.md)接口获取，长度限制为1～32个字符，例如：14da\*\*\*\*2760。 |
 | robotCode | String | 否 | 机器人robotId即robotCode，在客联应用的机器人管理中获取robotCode。 |
 | msgType | String | 是 | 消息类型，取值:   - **text**：文本消息 - **photo**：图片信息 - **markdown**：markdown消息 - **actionCard**：卡片消息 |
 | msgContent | String | 是 | 消息体内容，请参考本文消息格式说明。 |
 | atDingUserId | String | 否 | 钉内账号userId，长度限制为1～64个字符，例如：1745\*\*\*\*8777。 |
-| atAppUserId | String | 否 | 钉外账号在业务系统内的唯一标志，可调用[创建钉钉客联钉外账号](1852-create-bc-account-association.md)接口获取，长度限制为1～64个字符，例如：1107\*\*\*\*2120。 |
+| atAppUserId | String | 否 | 钉外账号在业务系统内的唯一标志，可调用[创建钉钉客联钉外账号](1844-create-bc-account-association.md)接口获取，长度限制为1～64个字符，例如：1107\*\*\*\*2120。 |
 | atAll | Boolean | 否 | 是否@群所有人：   - **true**：是 - **false**：否 |
 
 ## 返回参数

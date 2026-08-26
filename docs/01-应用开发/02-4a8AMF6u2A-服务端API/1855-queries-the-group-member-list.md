@@ -1,29 +1,32 @@
 ---
-title: "查询钉钉客联钉外账号未读消息数"
-source_url: "https://open.dingtalk.com/document/development/querying-the-number-of-unread-messages-of-the-user"
+title: "查询钉钉客联互通群成员列表"
+source_url: "https://open.dingtalk.com/document/development/queries-the-group-member-list"
 namespace: "development"
-slug: "querying-the-number-of-unread-messages-of-the-user"
+slug: "queries-the-group-member-list"
 group: "应用开发"
 tab: "服务端API"
-breadcrumb: "历史文档（不推荐） > 钉钉客联 > 查询钉钉客联钉外账号未读消息数"
-doc_id: "RshzjSg0ev"
-updated_at: "2026-07-21 10:02:37"
+breadcrumb: "历史文档（不推荐） > 钉钉客联 > 查询钉钉客联互通群成员列表"
+doc_id: "6kjA8cbsjB"
+updated_at: "2026-07-22 16:48:02"
 ---
 
-> Source: https://open.dingtalk.com/document/development/querying-the-number-of-unread-messages-of-the-user
-> Path: 应用开发 / 服务端API / 历史文档（不推荐） > 钉钉客联 > 查询钉钉客联钉外账号未读消息数
-> Updated: 2026-07-21 10:02:37
+> Source: https://open.dingtalk.com/document/development/queries-the-group-member-list
+> Path: 应用开发 / 服务端API / 历史文档（不推荐） > 钉钉客联 > 查询钉钉客联互通群成员列表
+> Updated: 2026-07-22 16:48:02
 
-# 查询钉钉客联钉外账号未读消息数
+# 查询钉钉客联互通群成员列表
 
-调用该接口，查询钉外账号未读消息的数量。
+调用本接口，查询互通群成员列表，用户类型包括钉内成员、钉外成员、群机器人；内容包括成员名称、头像地址、用户类型等。
 
 ### 接口使用说明
 
-- 该接口**已经暂停新客户支持**，进入EOL（end of life）阶段，敬请期待新的开放能力支持。
-- 调用本接口之前，需要开通钉钉互联应用。
-- 可指定钉外账号标识查询所有该钉外账号所在群的未读消息数量。
-- 可指定钉外账号标识和群会话openConversationId查询钉外账号在指定的群内未读消息数量。
+> **[!NOTE]**
+>
+> - 该接口**已经暂停新客户支持**，进入EOL（end of life）阶段，敬请期待新的开放能力支持。
+> - 调用本接口之前，需要开通钉钉互联应用。
+
+例如，名为**普通群**的互通群，成员信息如下图所示。
+![](https://img.alicdn.com/imgextra/i4/O1CN01xlL05c1hHSqNYZdBe_!!6000000004252-2-tps-2270-1162.png)
 
 ## 权限
 
@@ -31,22 +34,17 @@ updated_at: "2026-07-21 10:02:37"
 
 | 应用类型 | 是否支持 | 权限 | API Explorer调试 |
 | --- | --- | --- | --- |
-| 企业内部应用 | 支持 | 钉钉客联基础数据读写权限 | [API Explorer](https://open-dev.dingtalk.com/apiExplorer#/?devType=org&api=im_1.0%23QueryUnReadMessage) |
-| 第三方企业应用 | 支持 | 钉钉客联基础数据读写权限 | [API Explorer](https://open-dev.dingtalk.com/apiExplorer#/?devType=isv&api=im_1.0%23QueryUnReadMessage) |
+| 企业内部应用 | 支持 | 钉钉客联基础数据读写权限 | [API Explorer](https://open-dev.dingtalk.com/apiExplorer#/?devType=org&api=im_1.0%23QueryGroupMember) |
+| 第三方企业应用 | 支持 | 钉钉客联基础数据读写权限 | [API Explorer](https://open-dev.dingtalk.com/apiExplorer#/?devType=isv&api=im_1.0%23QueryGroupMember) |
 | 第三方个人应用 | 暂不支持 | 暂不支持 | 暂不支持 |
 
 ## 请求方法
 
 ```
-POST /v1.0/im/interconnections/unReadMsgs/query HTTP/1.1
+GET /v1.0/im/interconnections/conversations/members?openConversationId=String HTTP/1.1
 Host:api.dingtalk.com
 x-acs-dingtalk-access-token:String
 Content-Type:application/json
-
-{
-  "appUserId" : "String",
-  "openConversationIds" : [ "String" ]
-}
 ```
 
 ## Header参数
@@ -55,21 +53,26 @@ Content-Type:application/json
 | --- | --- | --- | --- |
 | x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，通过以下获取：   - 企业内部应用，调用[获取企业内部应用的accessToken](0033-obtain-the-access-token-of-an-internal-app.md)接口获取。 - 第三方企业应用，调用[获取第三方应用授权企业的accessToken](0034-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口获取。 |
 
-## Body参数
+## Query参数
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| appUserId | String | 是 | 钉外账号在业务系统内的唯一标志，调用[创建钉钉客联帐号关联关系](https://open.dingtalk.com/document/orgapp/create-bc-account-association)接口获取，长度限制为1～64个字符，例如：1107\*\*\*\*2120。 |
-| openConversationIds | Array of String | 否 | 群会话openConversationId，可调用[创建钉钉客联普通互通群](1853-create-common-group-new-version.md) / [创建钉钉客联两人互通群](1854-creating-two-groups-of-people.md)接口获取，长度限制为1～32个字符，例如：14da\*\*\*\*2760。 |
+| openConversationId | String | 是 | 群会话openConversationId，可调用[创建钉钉客联普通互通群](1845-create-common-group-new-version.md) / [创建钉钉客联两人互通群](1846-creating-two-groups-of-people.md)接口获取，长度限制为1～32个字符，例如：14da\*\*\*\*2760。 |
 
 ## 返回参数
 
 | 名称 | 类型 | 描述 |
 | --- | --- | --- |
-| unReadCount | Long | 钉外账号有未读消息的群会话总数。 |
-| unReadItems | Array | 钉外账号未读消息列表。 |
 | openConversationId | String | 群会话openConversationId。  **[!NOTE]**    客联的群会话id与钉钉IM的群会话ID不同，客联的群会话ID是随机生成的，在使用时不可混用。 |
-| unReadCount | Long | 钉外账号对应群会话未读消息数。 |
+| groupMembers | Array | 群成员列表。 |
+| groupMemberId | String | 群成员Id。   - 如果是钉内用户，该字段值为userId。 - 如果是钉外用户，该字段值为业务标识。 |
+| groupMemberName | String | 群成员名称。 |
+| groupMemberType | Integer | 群成员类型，取值：   - **1**：群主(属于钉内成员) - **2**：钉内成员 - **3**：钉外成员 - **4**：群机器人 |
+| groupMemberAvatar | String | 群成员头像地址。 |
+| groupMemberAvatarMediaId | String | 群成员头像mediaId，可通过调用[查询钉钉客联互通群成员列表](1855-queries-the-group-member-list.md)接口获取返回的groupMemberAvatarMediaId值。 |
+| groupMemberDynamics | String | 群成员头像mediaId，可通过调用[查询钉钉客联互通群成员列表](1855-queries-the-group-member-list.md)接口获取返回的groupMemberDynamics值。 |
+| groupMemberTypeV2 | Integer | 群成员类型V2 当groupMemberType类型为群主时，通过这个字段判断成员的实际类型如钉内群成员。 2 钉内群成员 3 钉外群成员 |
+| appUid | Long | 客联租户内IM唯一id |
 
 ## 示例
 
@@ -78,15 +81,10 @@ Content-Type:application/json
 HTTP
 
 ```
-POST /v1.0/im/interconnections/unReadMsgs/query HTTP/1.1
+GET /v1.0/im/interconnections/conversations/members?openConversationId=14da****2760 HTTP/1.1
 Host:api.dingtalk.com
 x-acs-dingtalk-access-token:xxxxx
 Content-Type:application/json
-
-{
-  "appUserId" : "1107****2120",
-  "openConversationIds" : [ "14da****2760" ]
-}
 ```
 
 Java
@@ -116,15 +114,12 @@ public class Sample {
     public static void main(String[] args_) throws Exception {
         
         com.aliyun.dingtalkim_1_0.Client client = Sample.createClient();
-        com.aliyun.dingtalkim_1_0.models.QueryUnReadMessageHeaders queryUnReadMessageHeaders = new com.aliyun.dingtalkim_1_0.models.QueryUnReadMessageHeaders();
-        queryUnReadMessageHeaders.xAcsDingtalkAccessToken = "<your access token>";
-        com.aliyun.dingtalkim_1_0.models.QueryUnReadMessageRequest queryUnReadMessageRequest = new com.aliyun.dingtalkim_1_0.models.QueryUnReadMessageRequest()
-                .setAppUserId("1107****2120")
-                .setOpenConversationIds(java.util.Arrays.asList(
-                    "14da****2760"
-                ));
+        com.aliyun.dingtalkim_1_0.models.QueryGroupMemberHeaders queryGroupMemberHeaders = new com.aliyun.dingtalkim_1_0.models.QueryGroupMemberHeaders();
+        queryGroupMemberHeaders.xAcsDingtalkAccessToken = "<your access token>";
+        com.aliyun.dingtalkim_1_0.models.QueryGroupMemberRequest queryGroupMemberRequest = new com.aliyun.dingtalkim_1_0.models.QueryGroupMemberRequest()
+                .setOpenConversationId("14da****2760");
         try {
-            client.queryUnReadMessageWithOptions(queryUnReadMessageRequest, queryUnReadMessageHeaders, new com.aliyun.teautil.models.RuntimeOptions());
+            client.queryGroupMemberWithOptions(queryGroupMemberRequest, queryGroupMemberHeaders, new com.aliyun.teautil.models.RuntimeOptions());
         } catch (TeaException err) {
             if (!com.aliyun.teautil.Common.empty(err.code) && !com.aliyun.teautil.Common.empty(err.message)) {
                 // err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -178,16 +173,13 @@ class Sample:
         args: List[str],
     ) -> None:
         client = Sample.create_client()
-        query_un_read_message_headers = dingtalkim__1__0_models.QueryUnReadMessageHeaders()
-        query_un_read_message_headers.x_acs_dingtalk_access_token = '<your access token>'
-        query_un_read_message_request = dingtalkim__1__0_models.QueryUnReadMessageRequest(
-            app_user_id='1107****2120',
-            open_conversation_ids=[
-                '14da****2760'
-            ]
+        query_group_member_headers = dingtalkim__1__0_models.QueryGroupMemberHeaders()
+        query_group_member_headers.x_acs_dingtalk_access_token = '<your access token>'
+        query_group_member_request = dingtalkim__1__0_models.QueryGroupMemberRequest(
+            open_conversation_id='14da****2760'
         )
         try:
-            client.query_un_read_message_with_options(query_un_read_message_request, query_un_read_message_headers, util_models.RuntimeOptions())
+            client.query_group_member_with_options(query_group_member_request, query_group_member_headers, util_models.RuntimeOptions())
         except Exception as err:
             if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
                 # err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -198,16 +190,13 @@ class Sample:
         args: List[str],
     ) -> None:
         client = Sample.create_client()
-        query_un_read_message_headers = dingtalkim__1__0_models.QueryUnReadMessageHeaders()
-        query_un_read_message_headers.x_acs_dingtalk_access_token = '<your access token>'
-        query_un_read_message_request = dingtalkim__1__0_models.QueryUnReadMessageRequest(
-            app_user_id='1107****2120',
-            open_conversation_ids=[
-                '14da****2760'
-            ]
+        query_group_member_headers = dingtalkim__1__0_models.QueryGroupMemberHeaders()
+        query_group_member_headers.x_acs_dingtalk_access_token = '<your access token>'
+        query_group_member_request = dingtalkim__1__0_models.QueryGroupMemberRequest(
+            open_conversation_id='14da****2760'
         )
         try:
-            await client.query_un_read_message_with_options_async(query_un_read_message_request, query_un_read_message_headers, util_models.RuntimeOptions())
+            await client.query_group_member_with_options_async(query_group_member_request, query_group_member_headers, util_models.RuntimeOptions())
         except Exception as err:
             if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
                 # err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -231,8 +220,8 @@ use AlibabaCloud\Tea\Exception\TeaError;
 use AlibabaCloud\Tea\Utils\Utils;
 
 use Darabonba\OpenApi\Models\Config;
-use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\QueryUnReadMessageHeaders;
-use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\QueryUnReadMessageRequest;
+use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\QueryGroupMemberHeaders;
+use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\QueryGroupMemberRequest;
 use AlibabaCloud\Tea\Utils\Utils\RuntimeOptions;
 
 class Sample {
@@ -254,16 +243,13 @@ class Sample {
      */
     public static function main($args){
         $client = self::createClient();
-        $queryUnReadMessageHeaders = new QueryUnReadMessageHeaders([]);
-        $queryUnReadMessageHeaders->xAcsDingtalkAccessToken = "<your access token>";
-        $queryUnReadMessageRequest = new QueryUnReadMessageRequest([
-            "appUserId" => "1107****2120",
-            "openConversationIds" => [
-                "14da****2760"
-            ]
+        $queryGroupMemberHeaders = new QueryGroupMemberHeaders([]);
+        $queryGroupMemberHeaders->xAcsDingtalkAccessToken = "<your access token>";
+        $queryGroupMemberRequest = new QueryGroupMemberRequest([
+            "openConversationId" => "14da****2760"
         ]);
         try {
-            $client->queryUnReadMessageWithOptions($queryUnReadMessageRequest, $queryUnReadMessageHeaders, new RuntimeOptions([]));
+            $client->queryGroupMemberWithOptions($queryGroupMemberRequest, $queryGroupMemberHeaders, new RuntimeOptions([]));
         }
         catch (Exception $err) {
             if (!($err instanceof TeaError)) {
@@ -321,11 +307,10 @@ func _main (args []*string) (_err error) {
     return _err
   }
 
-  queryUnReadMessageHeaders := &dingtalkim_1_0.QueryUnReadMessageHeaders{}
-  queryUnReadMessageHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
-  queryUnReadMessageRequest := &dingtalkim_1_0.QueryUnReadMessageRequest{
-    AppUserId: tea.String("1107****2120"),
-    OpenConversationIds: []*string{tea.String("14da****2760")},
+  queryGroupMemberHeaders := &dingtalkim_1_0.QueryGroupMemberHeaders{}
+  queryGroupMemberHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
+  queryGroupMemberRequest := &dingtalkim_1_0.QueryGroupMemberRequest{
+    OpenConversationId: tea.String("14da****2760"),
   }
   tryErr := func()(_e error) {
     defer func() {
@@ -333,7 +318,7 @@ func _main (args []*string) (_err error) {
         _e = r
       }
     }()
-    _, _err = client.QueryUnReadMessageWithOptions(queryUnReadMessageRequest, queryUnReadMessageHeaders, &util.RuntimeOptions{})
+    _, _err = client.QueryGroupMemberWithOptions(queryGroupMemberRequest, queryGroupMemberHeaders, &util.RuntimeOptions{})
     if _err != nil {
       return _err
     }
@@ -390,16 +375,13 @@ class Client {
 
   static async main(args) {
     let client = Client.createClient();
-    let queryUnReadMessageHeaders = new dingtalkim_1_0.QueryUnReadMessageHeaders({ });
-    queryUnReadMessageHeaders.xAcsDingtalkAccessToken = '<your access token>';
-    let queryUnReadMessageRequest = new dingtalkim_1_0.QueryUnReadMessageRequest({
-      appUserId: '1107****2120',
-      openConversationIds: [
-        '14da****2760'
-      ],
+    let queryGroupMemberHeaders = new dingtalkim_1_0.QueryGroupMemberHeaders({ });
+    queryGroupMemberHeaders.xAcsDingtalkAccessToken = '<your access token>';
+    let queryGroupMemberRequest = new dingtalkim_1_0.QueryGroupMemberRequest({
+      openConversationId: '14da****2760',
     });
     try {
-      await client.queryUnReadMessageWithOptions(queryUnReadMessageRequest, queryUnReadMessageHeaders, new Util.RuntimeOptions({ }));
+      await client.queryGroupMemberWithOptions(queryGroupMemberRequest, queryGroupMemberHeaders, new Util.RuntimeOptions({ }));
     } catch (err) {
       if (!Util.default.empty(err.code) && !Util.default.empty(err.message)) {
         // err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -455,19 +437,15 @@ namespace AlibabaCloud.SDK.Sample
         public static void Main(string[] args)
         {
             AlibabaCloud.SDK.Dingtalkim_1_0.Client client = CreateClient();
-            AlibabaCloud.SDK.Dingtalkim_1_0.Models.QueryUnReadMessageHeaders queryUnReadMessageHeaders = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.QueryUnReadMessageHeaders();
-            queryUnReadMessageHeaders.XAcsDingtalkAccessToken = "<your access token>";
-            AlibabaCloud.SDK.Dingtalkim_1_0.Models.QueryUnReadMessageRequest queryUnReadMessageRequest = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.QueryUnReadMessageRequest
+            AlibabaCloud.SDK.Dingtalkim_1_0.Models.QueryGroupMemberHeaders queryGroupMemberHeaders = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.QueryGroupMemberHeaders();
+            queryGroupMemberHeaders.XAcsDingtalkAccessToken = "<your access token>";
+            AlibabaCloud.SDK.Dingtalkim_1_0.Models.QueryGroupMemberRequest queryGroupMemberRequest = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.QueryGroupMemberRequest
             {
-                AppUserId = "1107****2120",
-                OpenConversationIds = new List<string>
-                {
-                    "14da****2760"
-                },
+                OpenConversationId = "14da****2760",
             };
             try
             {
-                client.QueryUnReadMessageWithOptions(queryUnReadMessageRequest, queryUnReadMessageHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
+                client.QueryGroupMemberWithOptions(queryGroupMemberRequest, queryGroupMemberHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
             }
             catch (TeaException err)
             {
@@ -500,10 +478,16 @@ HTTP/1.1 200 OK
 Content-Type:application/json
 
 {
-  "unReadCount" : 10,
-  "unReadItems" : [ {
-    "openConversationId" : "14da****2760",
-    "unReadCount" : 10
+  "openConversationId" : "14da****2760",
+  "groupMembers" : [ {
+    "groupMemberId" : "1107****2120",
+    "groupMemberName" : "Foo",
+    "groupMemberType" : 1,
+    "groupMemberAvatar" : "http://****.png",
+    "groupMemberAvatarMediaId" : "abc",
+    "groupMemberDynamics" : "认真工作,快乐生活",
+    "groupMemberTypeV2" : 2,
+    "appUid" : 1000000
   } ]
 }
 ```
@@ -512,7 +496,6 @@ Content-Type:application/json
 
 | HttpCode | 错误码 | 错误信息 | 说明 |
 | --- | --- | --- | --- |
-| 400 | general.parameterError | 输入参数有误，请检查是否缺少必要参数或内容不正确 | 输入参数有误，请检查是否缺少必要参数或内容不正确 |
 | 400 | group.nonexist | 群不存在，请检查 | 群不存在，请检查 |
-| 400 | group.notReady | 群会话仍在创建中，请稍后重试 | 群会话仍在创建中，请稍后重试 |
+| 400 | template.nonexist | 群模板不存在，请检查 | 群模板不存在，请检查 |
 | 500 | system.error | 系统异常 | 系统异常 |

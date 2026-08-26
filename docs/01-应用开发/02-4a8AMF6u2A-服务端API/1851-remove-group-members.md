@@ -1,22 +1,22 @@
 ---
-title: "解散钉钉客联互通群"
-source_url: "https://open.dingtalk.com/document/development/disband-bc-interconnection-group"
+title: "移除钉钉客联互通群成员"
+source_url: "https://open.dingtalk.com/document/development/remove-group-members"
 namespace: "development"
-slug: "disband-bc-interconnection-group"
+slug: "remove-group-members"
 group: "应用开发"
 tab: "服务端API"
-breadcrumb: "历史文档（不推荐） > 钉钉客联 > 解散钉钉客联互通群"
-doc_id: "1h0v9LiboZ"
-updated_at: "2026-07-21 10:10:09"
+breadcrumb: "历史文档（不推荐） > 钉钉客联 > 移除钉钉客联互通群成员"
+doc_id: "2o6pZf0Jiz"
+updated_at: "2026-07-21 10:04:29"
 ---
 
-> Source: https://open.dingtalk.com/document/development/disband-bc-interconnection-group
-> Path: 应用开发 / 服务端API / 历史文档（不推荐） > 钉钉客联 > 解散钉钉客联互通群
-> Updated: 2026-07-21 10:10:09
+> Source: https://open.dingtalk.com/document/development/remove-group-members
+> Path: 应用开发 / 服务端API / 历史文档（不推荐） > 钉钉客联 > 移除钉钉客联互通群成员
+> Updated: 2026-07-21 10:04:29
 
-# 解散钉钉客联互通群
+# 移除钉钉客联互通群成员
 
-调用本接口，解散互通群。
+调用本接口，移除互通群成员。
 
 ### 接口使用说明
 
@@ -25,8 +25,10 @@ updated_at: "2026-07-21 10:10:09"
 > - 该接口**已经暂停新客户支持**，进入EOL（end of life）阶段，敬请期待新的开放能力支持。
 > - 调用本接口之前，需要开通钉钉互联应用。
 
-例如，有一个互通群名为**测试群**，调用本接口可解散该群会话。接口调用成功后，效果如下图所示。
-![](https://img.alicdn.com/imgextra/i1/O1CN01P3LPvE1w0GCjCdVJY_!!6000000006245-2-tps-2266-1058.png)
+例如，有一个互通群名为**普通群**，群成员信息如下图所示。
+![](https://img.alicdn.com/imgextra/i1/O1CN01GOTrzs1mWBeZVsuo6_!!6000000004961-2-tps-2764-1242.png)
+调用本接口移除**钉客通用户1**，接口调用成功后，效果如下图所示。
+![](https://img.alicdn.com/imgextra/i3/O1CN01O60xxA1MCmrs8bEBt_!!6000000001399-2-tps-2760-1214.png)
 
 ## 权限
 
@@ -34,20 +36,23 @@ updated_at: "2026-07-21 10:10:09"
 
 | 应用类型 | 是否支持 | 权限 | API Explorer调试 |
 | --- | --- | --- | --- |
-| 企业内部应用 | 支持 | 钉钉客联基础数据读写权限 | [API Explorer](https://open-dev.dingtalk.com/apiExplorer#/?devType=org&api=im_1.0%23DismissGroupConversation) |
-| 第三方企业应用 | 支持 | 钉钉客联基础数据读写权限 | [API Explorer](https://open-dev.dingtalk.com/apiExplorer#/?devType=isv&api=im_1.0%23DismissGroupConversation) |
+| 企业内部应用 | 支持 | 钉钉客联基础数据读写权限 | [API Explorer](https://open-dev.dingtalk.com/apiExplorer#/?devType=org&api=im_1.0%23removeGroupMember) |
+| 第三方企业应用 | 支持 | 钉钉客联基础数据读写权限 | [API Explorer](https://open-dev.dingtalk.com/apiExplorer#/?devType=isv&api=im_1.0%23removeGroupMember) |
 | 第三方个人应用 | 暂不支持 | 暂不支持 | 暂不支持 |
 
 ## 请求方法
 
 ```
-POST /v1.0/im/interconnections/groups/dismiss HTTP/1.1
+POST /v1.0/im/interconnections/groups/members/remove HTTP/1.1
 Host:api.dingtalk.com
 x-acs-dingtalk-access-token:String
 Content-Type:application/json
 
 {
-  "openConversationId" : "String"
+  "openConversationId" : "String",
+  "appUserIds" : [ "String" ],
+  "userIds" : [ "String" ],
+  "operatorId" : "String"
 }
 ```
 
@@ -61,13 +66,16 @@ Content-Type:application/json
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| openConversationId | String | 是 | 群会话openConversationId，可调用[创建钉钉客联普通互通群](1853-create-common-group-new-version.md) / [创建钉钉客联两人互通群](1854-creating-two-groups-of-people.md)接口获取，长度限制为1～32个字符，例如：14da\*\*\*\*2760。 |
+| openConversationId | String | 是 | 群会话openConversationId，可调用[创建钉钉客联普通互通群](1845-create-common-group-new-version.md) / [创建钉钉客联两人互通群](1846-creating-two-groups-of-people.md)接口获取，长度限制为1～32个字符，例如：14da\*\*\*\*2760。 |
+| appUserIds | Array of String | 否 | 钉外账号在业务系统内的唯一标志，调用[创建钉钉客联钉外账号](1844-create-bc-account-association.md)接口获取，长度限制为1～64个字符，例如：1107\*\*\*\*2120。  **[!NOTE]**    被移除的钉外账号和钉内账号总和不能超过10个。 |
+| userIds | Array of String | 否 | 钉内账号userId，长度限制为1～64个字符，例如：1745\*\*\*\*8777。  **[!NOTE]**    被移除的钉外账号和钉内账号总和不能超过10个。 |
+| operatorId | String | 是 | 操作者在业务系统内的唯一标识，可调用[创建钉钉客联钉外账号](1844-create-bc-account-association.md)接口获取。  **[!NOTE]**    支持指定钉内账号或钉外账号为操作者：   - 若是钉内账号userId，长度限制为1～64个字符。例如：1745\*\*\*\*8777 - 若是钉外账号在业务系统内的唯一标志，长度限制为1～64个字符。例如：1107\*\*\*\*2120 |
 
 ## 返回参数
 
 | 名称 | 类型 | 描述 |
 | --- | --- | --- |
-| openConversationId | String | 被解散的群会话openConversationId。 |
+| message | String | 操作结果。 |
 
 ## 示例
 
@@ -76,13 +84,16 @@ Content-Type:application/json
 HTTP
 
 ```
-POST /v1.0/im/interconnections/groups/dismiss HTTP/1.1
+POST /v1.0/im/interconnections/groups/members/remove HTTP/1.1
 Host:api.dingtalk.com
 x-acs-dingtalk-access-token:xxxxx
 Content-Type:application/json
 
 {
-  "openConversationId" : "14da****2760"
+  "openConversationId" : "14da****2760",
+  "appUserIds" : [ "1107****2120" ],
+  "userIds" : [ "1745****8777" ],
+  "operatorId" : "1745****8777"
 }
 ```
 
@@ -113,12 +124,19 @@ public class Sample {
     public static void main(String[] args_) throws Exception {
         
         com.aliyun.dingtalkim_1_0.Client client = Sample.createClient();
-        com.aliyun.dingtalkim_1_0.models.DismissGroupConversationHeaders dismissGroupConversationHeaders = new com.aliyun.dingtalkim_1_0.models.DismissGroupConversationHeaders();
-        dismissGroupConversationHeaders.xAcsDingtalkAccessToken = "<your access token>";
-        com.aliyun.dingtalkim_1_0.models.DismissGroupConversationRequest dismissGroupConversationRequest = new com.aliyun.dingtalkim_1_0.models.DismissGroupConversationRequest()
-                .setOpenConversationId("14da****2760");
+        com.aliyun.dingtalkim_1_0.models.RemoveGroupMemberHeaders removeGroupMemberHeaders = new com.aliyun.dingtalkim_1_0.models.RemoveGroupMemberHeaders();
+        removeGroupMemberHeaders.xAcsDingtalkAccessToken = "<your access token>";
+        com.aliyun.dingtalkim_1_0.models.RemoveGroupMemberRequest removeGroupMemberRequest = new com.aliyun.dingtalkim_1_0.models.RemoveGroupMemberRequest()
+                .setOpenConversationId("14da****2760")
+                .setAppUserIds(java.util.Arrays.asList(
+                    "1107****2120"
+                ))
+                .setUserIds(java.util.Arrays.asList(
+                    "1745****8777"
+                ))
+                .setOperatorId("1745****8777");
         try {
-            client.dismissGroupConversationWithOptions(dismissGroupConversationRequest, dismissGroupConversationHeaders, new com.aliyun.teautil.models.RuntimeOptions());
+            client.removeGroupMemberWithOptions(removeGroupMemberRequest, removeGroupMemberHeaders, new com.aliyun.teautil.models.RuntimeOptions());
         } catch (TeaException err) {
             if (!com.aliyun.teautil.Common.empty(err.code) && !com.aliyun.teautil.Common.empty(err.message)) {
                 // err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -172,13 +190,20 @@ class Sample:
         args: List[str],
     ) -> None:
         client = Sample.create_client()
-        dismiss_group_conversation_headers = dingtalkim__1__0_models.DismissGroupConversationHeaders()
-        dismiss_group_conversation_headers.x_acs_dingtalk_access_token = '<your access token>'
-        dismiss_group_conversation_request = dingtalkim__1__0_models.DismissGroupConversationRequest(
-            open_conversation_id='14da****2760'
+        remove_group_member_headers = dingtalkim__1__0_models.RemoveGroupMemberHeaders()
+        remove_group_member_headers.x_acs_dingtalk_access_token = '<your access token>'
+        remove_group_member_request = dingtalkim__1__0_models.RemoveGroupMemberRequest(
+            open_conversation_id='14da****2760',
+            app_user_ids=[
+                '1107****2120'
+            ],
+            user_ids=[
+                '1745****8777'
+            ],
+            operator_id='1745****8777'
         )
         try:
-            client.dismiss_group_conversation_with_options(dismiss_group_conversation_request, dismiss_group_conversation_headers, util_models.RuntimeOptions())
+            client.remove_group_member_with_options(remove_group_member_request, remove_group_member_headers, util_models.RuntimeOptions())
         except Exception as err:
             if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
                 # err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -189,13 +214,20 @@ class Sample:
         args: List[str],
     ) -> None:
         client = Sample.create_client()
-        dismiss_group_conversation_headers = dingtalkim__1__0_models.DismissGroupConversationHeaders()
-        dismiss_group_conversation_headers.x_acs_dingtalk_access_token = '<your access token>'
-        dismiss_group_conversation_request = dingtalkim__1__0_models.DismissGroupConversationRequest(
-            open_conversation_id='14da****2760'
+        remove_group_member_headers = dingtalkim__1__0_models.RemoveGroupMemberHeaders()
+        remove_group_member_headers.x_acs_dingtalk_access_token = '<your access token>'
+        remove_group_member_request = dingtalkim__1__0_models.RemoveGroupMemberRequest(
+            open_conversation_id='14da****2760',
+            app_user_ids=[
+                '1107****2120'
+            ],
+            user_ids=[
+                '1745****8777'
+            ],
+            operator_id='1745****8777'
         )
         try:
-            await client.dismiss_group_conversation_with_options_async(dismiss_group_conversation_request, dismiss_group_conversation_headers, util_models.RuntimeOptions())
+            await client.remove_group_member_with_options_async(remove_group_member_request, remove_group_member_headers, util_models.RuntimeOptions())
         except Exception as err:
             if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
                 # err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -219,8 +251,8 @@ use AlibabaCloud\Tea\Exception\TeaError;
 use AlibabaCloud\Tea\Utils\Utils;
 
 use Darabonba\OpenApi\Models\Config;
-use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\DismissGroupConversationHeaders;
-use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\DismissGroupConversationRequest;
+use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\RemoveGroupMemberHeaders;
+use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\RemoveGroupMemberRequest;
 use AlibabaCloud\Tea\Utils\Utils\RuntimeOptions;
 
 class Sample {
@@ -242,13 +274,20 @@ class Sample {
      */
     public static function main($args){
         $client = self::createClient();
-        $dismissGroupConversationHeaders = new DismissGroupConversationHeaders([]);
-        $dismissGroupConversationHeaders->xAcsDingtalkAccessToken = "<your access token>";
-        $dismissGroupConversationRequest = new DismissGroupConversationRequest([
-            "openConversationId" => "14da****2760"
+        $removeGroupMemberHeaders = new RemoveGroupMemberHeaders([]);
+        $removeGroupMemberHeaders->xAcsDingtalkAccessToken = "<your access token>";
+        $removeGroupMemberRequest = new RemoveGroupMemberRequest([
+            "openConversationId" => "14da****2760",
+            "appUserIds" => [
+                "1107****2120"
+            ],
+            "userIds" => [
+                "1745****8777"
+            ],
+            "operatorId" => "1745****8777"
         ]);
         try {
-            $client->dismissGroupConversationWithOptions($dismissGroupConversationRequest, $dismissGroupConversationHeaders, new RuntimeOptions([]));
+            $client->removeGroupMemberWithOptions($removeGroupMemberRequest, $removeGroupMemberHeaders, new RuntimeOptions([]));
         }
         catch (Exception $err) {
             if (!($err instanceof TeaError)) {
@@ -306,10 +345,13 @@ func _main (args []*string) (_err error) {
     return _err
   }
 
-  dismissGroupConversationHeaders := &dingtalkim_1_0.DismissGroupConversationHeaders{}
-  dismissGroupConversationHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
-  dismissGroupConversationRequest := &dingtalkim_1_0.DismissGroupConversationRequest{
+  removeGroupMemberHeaders := &dingtalkim_1_0.RemoveGroupMemberHeaders{}
+  removeGroupMemberHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
+  removeGroupMemberRequest := &dingtalkim_1_0.RemoveGroupMemberRequest{
     OpenConversationId: tea.String("14da****2760"),
+    AppUserIds: []*string{tea.String("1107****2120")},
+    UserIds: []*string{tea.String("1745****8777")},
+    OperatorId: tea.String("1745****8777"),
   }
   tryErr := func()(_e error) {
     defer func() {
@@ -317,7 +359,7 @@ func _main (args []*string) (_err error) {
         _e = r
       }
     }()
-    _, _err = client.DismissGroupConversationWithOptions(dismissGroupConversationRequest, dismissGroupConversationHeaders, &util.RuntimeOptions{})
+    _, _err = client.RemoveGroupMemberWithOptions(removeGroupMemberRequest, removeGroupMemberHeaders, &util.RuntimeOptions{})
     if _err != nil {
       return _err
     }
@@ -374,13 +416,20 @@ class Client {
 
   static async main(args) {
     let client = Client.createClient();
-    let dismissGroupConversationHeaders = new dingtalkim_1_0.DismissGroupConversationHeaders({ });
-    dismissGroupConversationHeaders.xAcsDingtalkAccessToken = '<your access token>';
-    let dismissGroupConversationRequest = new dingtalkim_1_0.DismissGroupConversationRequest({
+    let removeGroupMemberHeaders = new dingtalkim_1_0.RemoveGroupMemberHeaders({ });
+    removeGroupMemberHeaders.xAcsDingtalkAccessToken = '<your access token>';
+    let removeGroupMemberRequest = new dingtalkim_1_0.RemoveGroupMemberRequest({
       openConversationId: '14da****2760',
+      appUserIds: [
+        '1107****2120'
+      ],
+      userIds: [
+        '1745****8777'
+      ],
+      operatorId: '1745****8777',
     });
     try {
-      await client.dismissGroupConversationWithOptions(dismissGroupConversationRequest, dismissGroupConversationHeaders, new Util.RuntimeOptions({ }));
+      await client.removeGroupMemberWithOptions(removeGroupMemberRequest, removeGroupMemberHeaders, new Util.RuntimeOptions({ }));
     } catch (err) {
       if (!Util.default.empty(err.code) && !Util.default.empty(err.message)) {
         // err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -436,15 +485,24 @@ namespace AlibabaCloud.SDK.Sample
         public static void Main(string[] args)
         {
             AlibabaCloud.SDK.Dingtalkim_1_0.Client client = CreateClient();
-            AlibabaCloud.SDK.Dingtalkim_1_0.Models.DismissGroupConversationHeaders dismissGroupConversationHeaders = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.DismissGroupConversationHeaders();
-            dismissGroupConversationHeaders.XAcsDingtalkAccessToken = "<your access token>";
-            AlibabaCloud.SDK.Dingtalkim_1_0.Models.DismissGroupConversationRequest dismissGroupConversationRequest = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.DismissGroupConversationRequest
+            AlibabaCloud.SDK.Dingtalkim_1_0.Models.RemoveGroupMemberHeaders removeGroupMemberHeaders = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.RemoveGroupMemberHeaders();
+            removeGroupMemberHeaders.XAcsDingtalkAccessToken = "<your access token>";
+            AlibabaCloud.SDK.Dingtalkim_1_0.Models.RemoveGroupMemberRequest removeGroupMemberRequest = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.RemoveGroupMemberRequest
             {
                 OpenConversationId = "14da****2760",
+                AppUserIds = new List<string>
+                {
+                    "1107****2120"
+                },
+                UserIds = new List<string>
+                {
+                    "1745****8777"
+                },
+                OperatorId = "1745****8777",
             };
             try
             {
-                client.DismissGroupConversationWithOptions(dismissGroupConversationRequest, dismissGroupConversationHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
+                client.RemoveGroupMemberWithOptions(removeGroupMemberRequest, removeGroupMemberHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
             }
             catch (TeaException err)
             {
@@ -477,7 +535,7 @@ HTTP/1.1 200 OK
 Content-Type:application/json
 
 {
-  "openConversationId" : "14da****2760"
+  "message" : "移除成功"
 }
 ```
 
@@ -485,7 +543,11 @@ Content-Type:application/json
 
 | HttpCode | 错误码 | 错误信息 | 说明 |
 | --- | --- | --- | --- |
+| 400 | general.parameterError | 输入参数有误，请检查是否超出最大值或传参规则不正确 | 输入参数有误，请检查是否超出最大值或传参规则不正确 |
+| 400 | aim.nonexist | 租户不存在，请检查 | 租户不存在，请检查 |
+| 400 | client.nonexist | 钉外账号不存在，请检查 | 钉外账号不存在，请检查 |
+| 400 | service.nonexist | 钉内账号不存在，请检查 | 钉内账号不存在，请检查 |
 | 400 | group.nonexist | 群不存在，请检查 | 群不存在，请检查 |
-| 400 | group.creating | 群会话仍在创建中，请稍后重试 | 群会话仍在创建中，请稍后重试 |
-| 500 | group.dismissError | 解散群失败 | 解散群失败 |
+| 400 | member.notEmpty | 移除的群成员列表不能为空，请检查 | 移除的群成员列表不能为空，请检查 |
+| 500 | member.remove.error | 移除群成员失败 | 移除群成员失败 |
 | 500 | system.error | 系统异常 | 系统异常 |

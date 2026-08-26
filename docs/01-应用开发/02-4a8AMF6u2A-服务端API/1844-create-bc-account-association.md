@@ -76,7 +76,7 @@ Content-Type:application/json
 | appUserDynamics | String | 否 | 钉外账号动态信息，长度限制为1～64个字符。 例如：认真工作,快乐生活 |
 | appUserMobile | String | 是 | 钉外账号手机号，长度限制为11位号码。例如：188\*\*\*\*8655 |
 | userId | String | 否 | 钉内账号userId，长度限制为1～64个字符。 例如：1745\*\*\*\*8777 |
-| channelCode | String | 是 | 渠道code。例如：M0U+\*\*\*\*8Ep=  **[!NOTE]**    该参数在创建渠道后获取，如何创建可参考[渠道配置](1847-interconnections-channel.md)文档。 |
+| channelCode | String | 是 | 渠道code。例如：M0U+\*\*\*\*8Ep=  **[!NOTE]**    该参数在创建渠道后获取，如何创建可参考[渠道配置](1839-interconnections-channel.md)文档。 |
 
 ## 返回参数
 

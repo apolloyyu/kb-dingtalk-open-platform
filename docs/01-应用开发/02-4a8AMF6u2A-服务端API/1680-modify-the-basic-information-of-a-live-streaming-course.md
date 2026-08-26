@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > 培训 > 修改培训课程"
 doc_id: "MDIVml2x2Z"
-updated_at: "2025-10-17 17:00:37"
+updated_at: "2026-08-26 09:31:23"
 ---
 
 > Source: https://open.dingtalk.com/document/development/modify-the-basic-information-of-a-live-streaming-course
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > 培训 > 修改培训课程
-> Updated: 2025-10-17 17:00:37
+> Updated: 2026-08-26 09:31:23
 
 # 修改培训课程
 
@@ -48,7 +48,7 @@ Content-Type:application/json
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证。   - 第三方企业应用可调用[获取第三方应用授权企业的accessToken](https://open.dingtalk.com/document/isvapp/obtain-the-access_token-of-the-authorized-enterprise)接口获取。 |
+| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证。   - 第三方企业应用可调用[获取第三方应用授权企业的accessToken](https://open.dingtalk.com/document/isvapp/obtain-the-access-token-of-the-third-party-application-authorization-enterprise)接口获取。 |
 
 ## Path参数
 

@@ -1,30 +1,30 @@
 ---
-title: "修改直播课程的可观看白名单"
-source_url: "https://open.dingtalk.com/document/development/modify-the-whitelist-for-live-streaming-courses"
+title: "剪辑直播课程回放"
+source_url: "https://open.dingtalk.com/document/development/clip-live-course-playback"
 namespace: "development"
-slug: "modify-the-whitelist-for-live-streaming-courses"
+slug: "clip-live-course-playback"
 group: "应用开发"
 tab: "服务端API"
-breadcrumb: "历史文档（不推荐） > 培训 > 修改直播课程的可观看白名单"
-doc_id: "FD5ghtvP2x"
-updated_at: "2025-10-17 17:01:18"
+breadcrumb: "历史文档（不推荐） > 培训 > 剪辑直播课程回放"
+doc_id: "vO5Rc1qh94"
+updated_at: "2026-08-26 09:31:30"
 ---
 
-> Source: https://open.dingtalk.com/document/development/modify-the-whitelist-for-live-streaming-courses
-> Path: 应用开发 / 服务端API / 历史文档（不推荐） > 培训 > 修改直播课程的可观看白名单
-> Updated: 2025-10-17 17:01:18
+> Source: https://open.dingtalk.com/document/development/clip-live-course-playback
+> Path: 应用开发 / 服务端API / 历史文档（不推荐） > 培训 > 剪辑直播课程回放
+> Updated: 2026-08-26 09:31:30
 
-# 修改直播课程的可观看白名单
+# 剪辑直播课程回放
 
-调用本接口修改直播课程的可观看白名单。
+调用本接口剪辑课程直播的回放。
 
 > **[!IMPORTANT]**
 >
-> 为提升接口的使用体验，修改直播课程的可观看白名单接口正在升级，本API文档已于2022年9月23日移动至历史文档（不推荐）目录，接口不再支持新应用接入，已接入的应用可继续调用。新产品开放上线时间请关注文档更新日志。
+> 为提升接口的使用体验，剪辑直播课程回放接口正在升级，本API文档已于2022年9月23日移动至历史文档（不推荐）目录，接口不再支持新应用接入，已接入的应用可继续调用。新产品开放上线时间请关注文档更新日志。
 
 > **[!NOTE]**
 >
-> - 设置白名单后，只有白名单内的用户可观看直播。
+> - 剪辑回放会保存需要的片段，不会影响原有直播回放。
 
 ## 权限
 
@@ -39,37 +39,43 @@ updated_at: "2025-10-17 17:01:18"
 ## 请求方法
 
 ```
-POST /v1.0/live/openFeeds/{feedId}/whiteList?userId=String&action=Long&modifyUserList=["String"] HTTP/1.1
+POST /v1.0/live/openFeeds/{feedId}/cutReplay HTTP/1.1
 Host:api.dingtalk.com
 x-acs-dingtalk-access-token:String
 Content-Type:application/json
+
+{
+  "userId" : "String",
+  "editStartTime" : Long,
+  "editEndTime" : Long
+}
 ```
 
 ## Header参数
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证。   - 第三方企业应用可调用[获取第三方应用授权企业的accessToken](https://open.dingtalk.com/document/isvapp/obtain-the-access_token-of-the-authorized-enterprise)接口获取。 |
+| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证。   - 第三方企业应用可调用[获取第三方应用授权企业的accessToken](https://open.dingtalk.com/document/isvapp/obtain-the-access-token-of-the-third-party-application-authorization-enterprise)接口获取。 |
 
 ## Path参数
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| feedId | String | 是 | 直播课程id，可通过[创建培训课程](https://open.dingtalk.com/document/isvapp/create-live-courses)接口获取。 |
+| feedId | String | 是 | 直播课程ID，可通过[创建培训课程](https://open.dingtalk.com/document/isvapp/create-live-courses)接口获取。 |
 
-## Query参数
+## Body参数
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| userId | String | 是 | 操作者在组织内的userid。 |
-| action | Long | 是 | 操作类型：   - **1**：添加白名单 - **2**：删除白名单 |
-| modifyUserList | Array of String | 否 | 组织内用户的userid。 |
+| userId | String | 是 | 剪辑者在组织内的userid。 |
+| editStartTime | Long | 是 | 剪辑的起始位置的时间戳（在原开始结束的时间戳之内）。 |
+| editEndTime | Long | 是 | 剪辑的结束位置的时间戳（在原开始结束的时间戳之内）。 |
 
 ## 返回参数
 
 | 名称 | 类型 | 描述 |
 | --- | --- | --- |
-| result | Boolean | 是否修改成功。 |
+| result | String | 剪辑后的视频地址（含authkey）。 |
 
 ## 示例
 
@@ -78,10 +84,16 @@ Content-Type:application/json
 HTTP
 
 ```
-POST /v1.0/live/openFeeds/8c0ed3c3-e125-4a9d-aa4/whiteList?userId=12061863517&action=1&modifyUserList=["user01"] HTTP/1.1
+POST /v1.0/live/openFeeds/8c0ed3c3-e125-4a9d-aa40-18ad999398d4/cutReplay HTTP/1.1
 Host:api.dingtalk.com
-x-acs-dingtalk-access-token:bf360b06a0663cd0a09af
+x-acs-dingtalk-access-token:bf360b06a0663cd0a09afb5xxxx
 Content-Type:application/json
+
+{
+  "userId" : "12061863",
+  "editStartTime" : 1617336058000,
+  "editEndTime" : 1617356058000
+}
 ```
 
 Java
@@ -115,16 +127,14 @@ public class Sample {
     public static void main(String[] args_) throws Exception {
         java.util.List<String> args = java.util.Arrays.asList(args_);
         com.aliyun.dingtalklive_1_0.Client client = Sample.createClient();
-        ModifyFeedWhiteListHeaders modifyFeedWhiteListHeaders = new ModifyFeedWhiteListHeaders();
-        modifyFeedWhiteListHeaders.xAcsDingtalkAccessToken = "<your access token>";
-        ModifyFeedWhiteListRequest modifyFeedWhiteListRequest = new ModifyFeedWhiteListRequest()
-                .setUserId("12061863517")
-                .setAction(1L)
-                .setModifyUserList(java.util.Arrays.asList(
-                    "user01"
-                ));
+        EditFeedReplayHeaders editFeedReplayHeaders = new EditFeedReplayHeaders();
+        editFeedReplayHeaders.xAcsDingtalkAccessToken = "<your access token>";
+        EditFeedReplayRequest editFeedReplayRequest = new EditFeedReplayRequest()
+                .setUserId("12061863")
+                .setEditStartTime(1617336058000L)
+                .setEditEndTime(1617356058000L);
         try {
-            client.modifyFeedWhiteListWithOptions("8c0ed3c3-e125-4a9d-aa4", modifyFeedWhiteListRequest, modifyFeedWhiteListHeaders, new RuntimeOptions());
+            client.editFeedReplayWithOptions("8c0ed3c3-e125-4a9d-aa40-18ad999398d4", editFeedReplayRequest, editFeedReplayHeaders, new RuntimeOptions());
         } catch (TeaException err) {
             if (!com.aliyun.teautil.Common.empty(err.code) && !com.aliyun.teautil.Common.empty(err.message)) {
                 // err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -177,17 +187,15 @@ class Sample:
         args: List[str],
     ) -> None:
         client = Sample.create_client()
-        modify_feed_white_list_headers = dingtalklive__1__0_models.ModifyFeedWhiteListHeaders()
-        modify_feed_white_list_headers.x_acs_dingtalk_access_token = '<your access token>'
-        modify_feed_white_list_request = dingtalklive__1__0_models.ModifyFeedWhiteListRequest(
-            user_id='12061863517',
-            action=1,
-            modify_user_list=[
-                'user01'
-            ]
+        edit_feed_replay_headers = dingtalklive__1__0_models.EditFeedReplayHeaders()
+        edit_feed_replay_headers.x_acs_dingtalk_access_token = '<your access token>'
+        edit_feed_replay_request = dingtalklive__1__0_models.EditFeedReplayRequest(
+            user_id='12061863',
+            edit_start_time=1617336058000,
+            edit_end_time=1617356058000
         )
         try:
-            client.modify_feed_white_list_with_options('8c0ed3c3-e125-4a9d-aa4', modify_feed_white_list_request, modify_feed_white_list_headers, util_models.RuntimeOptions())
+            client.edit_feed_replay_with_options('8c0ed3c3-e125-4a9d-aa40-18ad999398d4', edit_feed_replay_request, edit_feed_replay_headers, util_models.RuntimeOptions())
         except Exception as err:
             if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
                 # err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -198,17 +206,15 @@ class Sample:
         args: List[str],
     ) -> None:
         client = Sample.create_client()
-        modify_feed_white_list_headers = dingtalklive__1__0_models.ModifyFeedWhiteListHeaders()
-        modify_feed_white_list_headers.x_acs_dingtalk_access_token = '<your access token>'
-        modify_feed_white_list_request = dingtalklive__1__0_models.ModifyFeedWhiteListRequest(
-            user_id='12061863517',
-            action=1,
-            modify_user_list=[
-                'user01'
-            ]
+        edit_feed_replay_headers = dingtalklive__1__0_models.EditFeedReplayHeaders()
+        edit_feed_replay_headers.x_acs_dingtalk_access_token = '<your access token>'
+        edit_feed_replay_request = dingtalklive__1__0_models.EditFeedReplayRequest(
+            user_id='12061863',
+            edit_start_time=1617336058000,
+            edit_end_time=1617356058000
         )
         try:
-            await client.modify_feed_white_list_with_options_async('8c0ed3c3-e125-4a9d-aa4', modify_feed_white_list_request, modify_feed_white_list_headers, util_models.RuntimeOptions())
+            await client.edit_feed_replay_with_options_async('8c0ed3c3-e125-4a9d-aa40-18ad999398d4', edit_feed_replay_request, edit_feed_replay_headers, util_models.RuntimeOptions())
         except Exception as err:
             if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
                 # err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -232,8 +238,8 @@ use AlibabaCloud\Tea\Exception\TeaError;
 use AlibabaCloud\Tea\Utils\Utils;
 
 use Darabonba\OpenApi\Models\Config;
-use AlibabaCloud\SDK\Dingtalk\Vlive_1_0\Models\ModifyFeedWhiteListHeaders;
-use AlibabaCloud\SDK\Dingtalk\Vlive_1_0\Models\ModifyFeedWhiteListRequest;
+use AlibabaCloud\SDK\Dingtalk\Vlive_1_0\Models\EditFeedReplayHeaders;
+use AlibabaCloud\SDK\Dingtalk\Vlive_1_0\Models\EditFeedReplayRequest;
 use AlibabaCloud\Tea\Utils\Utils\RuntimeOptions;
 
 class Sample {
@@ -255,17 +261,15 @@ class Sample {
      */
     public static function main($args){
         $client = self::createClient();
-        $modifyFeedWhiteListHeaders = new ModifyFeedWhiteListHeaders([]);
-        $modifyFeedWhiteListHeaders->xAcsDingtalkAccessToken = "<your access token>";
-        $modifyFeedWhiteListRequest = new ModifyFeedWhiteListRequest([
-            "userId" => "12061863517",
-            "action" => 1,
-            "modifyUserList" => [
-                "user01"
-            ]
+        $editFeedReplayHeaders = new EditFeedReplayHeaders([]);
+        $editFeedReplayHeaders->xAcsDingtalkAccessToken = "<your access token>";
+        $editFeedReplayRequest = new EditFeedReplayRequest([
+            "userId" => "12061863",
+            "editStartTime" => 1617336058000,
+            "editEndTime" => 1617356058000
         ]);
         try {
-            $client->modifyFeedWhiteListWithOptions("8c0ed3c3-e125-4a9d-aa4", $modifyFeedWhiteListRequest, $modifyFeedWhiteListHeaders, new RuntimeOptions([]));
+            $client->editFeedReplayWithOptions("8c0ed3c3-e125-4a9d-aa40-18ad999398d4", $editFeedReplayRequest, $editFeedReplayHeaders, new RuntimeOptions([]));
         }
         catch (Exception $err) {
             if (!($err instanceof TeaError)) {
@@ -318,12 +322,12 @@ func _main (args []*string) (_err error) {
     return _err
   }
 
-  modifyFeedWhiteListHeaders := &dingtalklive_1_0.ModifyFeedWhiteListHeaders{}
-  modifyFeedWhiteListHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
-  modifyFeedWhiteListRequest := &dingtalklive_1_0.ModifyFeedWhiteListRequest{
-    UserId: tea.String("12061863517"),
-    Action: tea.Int64(1),
-    ModifyUserList: []*string{tea.String("user01")},
+  editFeedReplayHeaders := &dingtalklive_1_0.EditFeedReplayHeaders{}
+  editFeedReplayHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
+  editFeedReplayRequest := &dingtalklive_1_0.EditFeedReplayRequest{
+    UserId: tea.String("12061863"),
+    EditStartTime: tea.Int64(1617336058000),
+    EditEndTime: tea.Int64(1617356058000),
   }
   tryErr := func()(_e error) {
     defer func() {
@@ -331,7 +335,7 @@ func _main (args []*string) (_err error) {
         _e = r
       }
     }()
-    _, _err = client.ModifyFeedWhiteListWithOptions(tea.String("8c0ed3c3-e125-4a9d-aa4"), modifyFeedWhiteListRequest, modifyFeedWhiteListHeaders, &util.RuntimeOptions{})
+    _, _err = client.EditFeedReplayWithOptions(tea.String("8c0ed3c3-e125-4a9d-aa40-18ad999398d4"), editFeedReplayRequest, editFeedReplayHeaders, &util.RuntimeOptions{})
     if _err != nil {
       return _err
     }
@@ -387,17 +391,15 @@ export default class Client {
 
   static async main(args: string[]): Promise<void> {
     let client = Client.createClient();
-    let modifyFeedWhiteListHeaders = new $dingtalklive_1_0.ModifyFeedWhiteListHeaders({ });
-    modifyFeedWhiteListHeaders.xAcsDingtalkAccessToken = "<your access token>";
-    let modifyFeedWhiteListRequest = new $dingtalklive_1_0.ModifyFeedWhiteListRequest({
-      userId: "12061863517",
-      action: 1,
-      modifyUserList: [
-        "user01"
-      ],
+    let editFeedReplayHeaders = new $dingtalklive_1_0.EditFeedReplayHeaders({ });
+    editFeedReplayHeaders.xAcsDingtalkAccessToken = "<your access token>";
+    let editFeedReplayRequest = new $dingtalklive_1_0.EditFeedReplayRequest({
+      userId: "12061863",
+      editStartTime: 1617336058000,
+      editEndTime: 1617356058000,
     });
     try {
-      await client.modifyFeedWhiteListWithOptions("8c0ed3c3-e125-4a9d-aa4", modifyFeedWhiteListRequest, modifyFeedWhiteListHeaders, new $Util.RuntimeOptions({ }));
+      await client.editFeedReplayWithOptions("8c0ed3c3-e125-4a9d-aa40-18ad999398d4", editFeedReplayRequest, editFeedReplayHeaders, new $Util.RuntimeOptions({ }));
     } catch (err) {
       if (!Util.empty(err.code) && !Util.empty(err.message)) {
         // err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -446,20 +448,17 @@ namespace AlibabaCloud.SDK.Sample
         public static void Main(string[] args)
         {
             AlibabaCloud.SDK.Dingtalklive_1_0.Client client = CreateClient();
-            AlibabaCloud.SDK.Dingtalklive_1_0.Models.ModifyFeedWhiteListHeaders modifyFeedWhiteListHeaders = new AlibabaCloud.SDK.Dingtalklive_1_0.Models.ModifyFeedWhiteListHeaders();
-            modifyFeedWhiteListHeaders.XAcsDingtalkAccessToken = "<your access token>";
-            AlibabaCloud.SDK.Dingtalklive_1_0.Models.ModifyFeedWhiteListRequest modifyFeedWhiteListRequest = new AlibabaCloud.SDK.Dingtalklive_1_0.Models.ModifyFeedWhiteListRequest
+            AlibabaCloud.SDK.Dingtalklive_1_0.Models.EditFeedReplayHeaders editFeedReplayHeaders = new AlibabaCloud.SDK.Dingtalklive_1_0.Models.EditFeedReplayHeaders();
+            editFeedReplayHeaders.XAcsDingtalkAccessToken = "<your access token>";
+            AlibabaCloud.SDK.Dingtalklive_1_0.Models.EditFeedReplayRequest editFeedReplayRequest = new AlibabaCloud.SDK.Dingtalklive_1_0.Models.EditFeedReplayRequest
             {
-                UserId = "12061863517",
-                Action = 1,
-                ModifyUserList = new List<string>
-                {
-                    "user01"
-                },
+                UserId = "12061863",
+                EditStartTime = 1617336058000,
+                EditEndTime = 1617356058000,
             };
             try
             {
-                client.ModifyFeedWhiteListWithOptions("8c0ed3c3-e125-4a9d-aa4", modifyFeedWhiteListRequest, modifyFeedWhiteListHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
+                client.EditFeedReplayWithOptions("8c0ed3c3-e125-4a9d-aa40-18ad999398d4", editFeedReplayRequest, editFeedReplayHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
             }
             catch (TeaException err)
             {
@@ -510,17 +509,15 @@ Alibabacloud_Dingtalklive_1_0::Client createClient() {
 int main(int argc, char *args[]) {
   args++;
   shared_ptr<Alibabacloud_Dingtalklive_1_0::Client> client = make_shared<Alibabacloud_Dingtalklive_1_0::Client>(createClient());
-  shared_ptr<Alibabacloud_Dingtalklive_1_0::ModifyFeedWhiteListHeaders> modifyFeedWhiteListHeaders = make_shared<Alibabacloud_Dingtalklive_1_0::ModifyFeedWhiteListHeaders>();
-  modifyFeedWhiteListHeaders->xAcsDingtalkAccessToken = make_shared<string>("<your access token>");
-  shared_ptr<Alibabacloud_Dingtalklive_1_0::ModifyFeedWhiteListRequest> modifyFeedWhiteListRequest = make_shared<Alibabacloud_Dingtalklive_1_0::ModifyFeedWhiteListRequest>(map<string, boost::any>({
-    {"userId", boost::any(string("12061863517"))},
-    {"action", boost::any(1)},
-    {"modifyUserList", boost::any(vector<string>({
-      "user01"
-    }))}
+  shared_ptr<Alibabacloud_Dingtalklive_1_0::EditFeedReplayHeaders> editFeedReplayHeaders = make_shared<Alibabacloud_Dingtalklive_1_0::EditFeedReplayHeaders>();
+  editFeedReplayHeaders->xAcsDingtalkAccessToken = make_shared<string>("<your access token>");
+  shared_ptr<Alibabacloud_Dingtalklive_1_0::EditFeedReplayRequest> editFeedReplayRequest = make_shared<Alibabacloud_Dingtalklive_1_0::EditFeedReplayRequest>(map<string, boost::any>({
+    {"userId", boost::any(string("12061863"))},
+    {"editStartTime", boost::any(1617336058000)},
+    {"editEndTime", boost::any(1617356058000)}
   }));
   try {
-    client->modifyFeedWhiteListWithOptions(make_shared<string>("8c0ed3c3-e125-4a9d-aa4"), modifyFeedWhiteListRequest, modifyFeedWhiteListHeaders, make_shared<Darabonba_Util::RuntimeOptions>(Darabonba_Util::RuntimeOptions()));
+    client->editFeedReplayWithOptions(make_shared<string>("8c0ed3c3-e125-4a9d-aa40-18ad999398d4"), editFeedReplayRequest, editFeedReplayHeaders, make_shared<Darabonba_Util::RuntimeOptions>(Darabonba_Util::RuntimeOptions()));
   }
   catch (std::exception &err) {
     if (!Darabonba_Util::Client::empty(err.code) && !Darabonba_Util::Client::empty(err.message)) {
@@ -537,7 +534,7 @@ HTTP/1.1 200 OK
 Content-Type:application/json
 
 {
-  "result" : true
+  "result" : "http://aliliving.alicdn.com/live_hpaxxxx"
 }
 ```
 
@@ -545,6 +542,8 @@ Content-Type:application/json
 
 | HttpCode | 错误码 | 错误信息 | 说明 |
 | --- | --- | --- | --- |
-| 400 | orgSuiteAuthNotExit | access forbidden | 组织无权限访问 |
-| 400 | invalidParam | invalid params | 参数错误 |
-| 500 | systemError | error:%s | 系统错误 |
+| 400 | orgAccessForbidden | orgAccessForbidden | 组织访问受限 |
+| 400 | paramsError | error:%s | 参数错误 |
+| 400 | feedNotExist | feedNotExist | 课程不存在 |
+| 400 | staffChangeError | staffChangeError | staffId转化失败 |
+| 500 | systemError | systemError:%s | 系统错误 |

@@ -48,7 +48,7 @@ updated_at: "2026-01-26 19:59:03"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| msg | Msg | 是 | { "msgtype": "text", "text": { "content": "请提交日报。" } } | 消息内容，最长不超过2048个字节。  消息类型和样例参考[消息类型与数据格式](1832-service-desk-message-types-and-data-formats.md)。 |
+| msg | Msg | 是 | { "msgtype": "text", "text": { "content": "请提交日报。" } } | 消息内容，最长不超过2048个字节。  消息类型和样例参考[消息类型与数据格式](1824-service-desk-message-types-and-data-formats.md)。 |
 | msgtype | String | 是 |  | 消息类型，支持如下消息类型。   - **text**：文本消息。 - **markdown**：Markdown消息。 - **action\_card**：卡片消息。 |
 | text | Text | 否 |  | 文本消息。 |
 | content | String | 否 | 请提交日报。 | 文本消息内容，建议500字符以内。 |
@@ -60,7 +60,7 @@ updated_at: "2026-01-26 19:59:03"
 | action\_url | String | 否 | https://www.tmall.com/ | 使用独立跳转**ActionCard**样式时的跳转链接，最长500个字符。 |
 | title | String | 否 | 这是一个按钮 | 使用独立跳转**ActionCard**样式时的按钮的标题，最长20个字符。 |
 | btn\_orientation | String | 否 | 0 | 使用独立跳转**ActionCard**样式时的按钮排列方式。   - **0**：竖直排列 - **1**：横向排列   必须与**btn\_json\_list**同时设置。 |
-| single\_url | String | 否 | https://open.dingtalk.com | 消息点击链接地址，当发送消息为小程序时支持小程序跳转链接，最长500个字符。  消息链接跳转，请参考[消息链接说明](1833-message-description-service-desk.md)。 |
+| single\_url | String | 否 | https://open.dingtalk.com | 消息点击链接地址，当发送消息为小程序时支持小程序跳转链接，最长500个字符。  消息链接跳转，请参考[消息链接说明](1825-message-description-service-desk.md)。 |
 | single\_title | String | 否 | 查看详情 | 使用整体跳转ActionCard样式时的标题。必须与single\_url同时设置，最长20个字符。  **[!NOTE]**  如果是整体跳转的ActionCard样式，则**single\_title**和**single\_url**必须设置。 |
 | markdown | String | 否 | # 这是支持markdown的文本 | 消息内容，支持markdown，语法参考标准markdown语法。建议1000个字符以内。 |
 | title | String | 否 |  | 透出到会话列表和通知的文案，最长64个字符 |

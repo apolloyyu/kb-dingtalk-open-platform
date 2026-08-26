@@ -1,0 +1,218 @@
+# 快照对账 2026-08-27
+
+- 旧：3656 篇（本库 meta/documents.jsonl）
+- 新：3648 篇（/home/yuweilun.ywl/Documents/工作/开放平台/wiki/dingtalk-open-platform-docs-20260827-0700）
+- 新增 0 / 更新 8 / 移动 187 / 删除 8
+
+## 内容更新
+- [创建培训课程](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1679-create-live-courses.md) · 2025-10-17 → 2026-08-26
+- [修改培训课程](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1680-modify-the-basic-information-of-a-live-streaming-course.md) · 2025-10-17 → 2026-08-26
+- [删除培训课程](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1681-delete-live-training-courses.md) · 2025-10-17 → 2026-08-26
+- [获取培训观看数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1682-obtains-the-playback-data-of-a-live-stream.md) · 2025-10-17 → 2026-08-26
+- [剪辑直播课程回放](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1683-clip-live-course-playback.md) · 2025-10-17 → 2026-08-26
+- [获取培训课程的基本信息](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1684-get-basic-information-about-the-course.md) · 2025-10-17 → 2026-08-26
+- [查询直播课程的可观看白名单](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1685-query-the-whitelist-of-live-courses.md) · 2025-10-17 → 2026-08-26
+- [修改直播课程的可观看白名单](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1686-modify-the-whitelist-for-live-streaming-courses.md) · 2025-10-17 → 2026-08-26
+
+## 目录位置移动（内容未变）
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1690-access-required.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1687-access-required.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1691-dingtalk-cloud-2.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1688-dingtalk-cloud-2.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1692-security-restrictions-of-dingtalk-cloud.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1689-security-restrictions-of-dingtalk-cloud.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1693-apply-for-a-dingtalk-cloud-account-1.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1690-apply-for-a-dingtalk-cloud-account-1.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1694-hosted-as-dingtalk-alibaba-cloud-account.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1691-hosted-as-dingtalk-alibaba-cloud-account.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1695-dingtalk-cloud-solution.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1692-dingtalk-cloud-solution.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1696-activate-alibaba-cloud-products.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1693-activate-alibaba-cloud-products.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1697-apply-for-dingtalk-security-group-whitelist.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1694-apply-for-dingtalk-security-group-whitelist.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1698-dingtalk-push-service.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1695-dingtalk-push-service.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1699-configure-the-inbound-dingtalk-for-an-rds-instance.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1696-configure-the-inbound-dingtalk-for-an-rds-instance.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1700-view-the-data-pushed-by-dingtalk-in-rds.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1697-view-the-data-pushed-by-dingtalk-in-rds.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1701-deprecated-dingtalk-cloud-push-data-format.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1698-deprecated-dingtalk-cloud-push-data-format.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1703-application-trial-offline-record-callback-information.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1699-application-trial-offline-record-callback-information.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1704-home-school-address-book-2-0-data-push.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1700-home-school-address-book-2-0-data-push.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1705-release-dingtalk-cloud-products.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1701-release-dingtalk-cloud-products.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1706-migrate-data-from-dingtalk-to-alibaba-cloud-1.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1702-migrate-data-from-dingtalk-to-alibaba-cloud-1.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1707-migrate-data-on-an-ecs-instance-with-ebs-disks.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1703-migrate-data-on-an-ecs-instance-with-ebs-disks.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1708-log-service-data-migration.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1704-log-service-data-migration.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1709-access-common-problems.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1705-access-common-problems.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1710-dingtalk-prices-of-cloud-products.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1706-dingtalk-prices-of-cloud-products.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1711-financial-problems-such-as-recharge-refund.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1707-financial-problems-such-as-recharge-refund.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1712-purchase-resources.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1708-purchase-resources.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1713-assistantapi-call-process.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1709-assistantapi-call-process.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1714-api-assistantresponse.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1710-api-assistantresponse.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1715-api-assistantmeresponse.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1711-api-assistantmeresponse.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1716-api-createassistantthread.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1712-api-createassistantthread.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1717-api-deleteassistantthread.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1713-api-deleteassistantthread.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1718-api-retrieveassistantthread.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1714-api-retrieveassistantthread.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1719-api-createassistantmessage.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1715-api-createassistantmessage.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1720-api-deleteassistantmessage.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1716-api-deleteassistantmessage.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1721-api-listassistantmessage.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1717-api-listassistantmessage.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1722-api-retrieveassistantmessage.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1718-api-retrieveassistantmessage.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1723-api-createassistantrun.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1719-api-createassistantrun.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1724-api-retrieveassistantrun.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1720-api-retrieveassistantrun.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1725-api-listassistantrun.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1721-api-listassistantrun.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1726-assistant-management-create-an-ai-assistant.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1722-assistant-management-create-an-ai-assistant.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1727-assistant-management-deletes-ai-assistants.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1723-assistant-management-deletes-ai-assistants.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1728-api-updateassistantbasicinfo.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1724-api-updateassistantbasicinfo.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1729-api-retrieveassistantbasicinfo.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1725-api-retrieveassistantbasicinfo.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1730-api-updateassistantscope.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1726-api-updateassistantscope.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1731-assistant-acquires-list-assistants-created-by-users.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1727-assistant-acquires-list-assistants-created-by-users.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1732-api-retrieveassistantscope.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1728-api-retrieveassistantscope.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1733-api-loglist.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1729-api-loglist.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1734-api-listvisibleassistant.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1730-api-listvisibleassistant.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1735-api-getassistantactioninfo.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1731-api-getassistantactioninfo.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1736-api-addtoorgskillrepository.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1732-api-addtoorgskillrepository.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1737-api-removefromorgskillrepository.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1733-api-removefromorgskillrepository.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1738-api-learnknowledge.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1734-api-learnknowledge.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1739-api-deleteknowledge.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1735-api-deleteknowledge.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1740-api-relearnknowledge.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1736-api-relearnknowledge.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1741-api-getaskdetail.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1737-api-getaskdetail.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1742-api-getknowledgelist.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1738-api-getknowledgelist.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1743-create-an-interactive-card-instance-2.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1739-create-an-interactive-card-instance-2.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1744-enable-the-interactive-card-setting.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1740-enable-the-interactive-card-setting.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1745-disable-the-sticky-card-setting.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1741-disable-the-sticky-card-setting.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1746-cool-app-faq.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1742-cool-app-faq.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1751-queries-the-number-of-dingtalk-movement-steps-of-multiple-users.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1743-queries-the-number-of-dingtalk-movement-steps-of-multiple-users.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1752-queries-individual-or-department-dingtalk-exercise-steps.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1744-queries-individual-or-department-dingtalk-exercise-steps.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1753-queries-the-details-list-of-apsaravideo-live.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1745-queries-the-details-list-of-apsaravideo-live.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1754-query-users-of-apsaravideo-live.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1746-query-users-of-apsaravideo-live.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1755-live-broadcast-summary-statistics-of-key-account-departments.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1747-live-broadcast-summary-statistics-of-key-account-departments.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1756-query-live-streaming-statistics.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1748-query-live-streaming-statistics.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1757-video-conferencing-statistics-query-v2-for-key-accounts.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1749-video-conferencing-statistics-query-v2-for-key-accounts.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1758-video-conferencing-statistics-list-for-key-accounts-and-departments.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1750-video-conferencing-statistics-list-for-key-accounts-and-departments.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1759-video-conference-details-for-key-accounts.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1751-video-conference-details-for-key-accounts.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1760-get-details-of-the-video-conference.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1752-get-details-of-the-video-conference.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1761-major-customer-department-dimension-teleconference-statistics.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1753-major-customer-department-dimension-teleconference-statistics.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1762-major-account-conference-call-details-list.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1754-major-account-conference-call-details-list.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1763-major-customer-teleconference-statistics-interface.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1755-major-customer-teleconference-statistics-interface.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1764-api-for-obtaining-the-creation-status-of-various-groups.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1756-api-for-obtaining-the-creation-status-of-various-groups.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1765-chat-data-statistics-query-for-key-accounts.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1757-chat-data-statistics-query-for-key-accounts.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1766-dingtalk-chat-information-in-key-accounts.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1758-dingtalk-chat-information-in-key-accounts.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1767-queries-the-daily-usage-summary-of-microapplications-in-an-enterprise.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1759-queries-the-daily-usage-summary-of-microapplications-in-an-enterprise.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1768-query-for-dau-statistics.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1760-query-for-dau-statistics.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1769-query-the-statistics-of-active-users-in-a-department-of.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1761-query-the-statistics-of-active-users-in-a-department-of.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1770-queries-the-list-of-inactive-accounts-in-the-key-account.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1762-queries-the-list-of-inactive-accounts-in-the-key-account.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1771-enterprise-ding-quantity-statistics.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1763-enterprise-ding-quantity-statistics.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1772-query-the-departmental-transmission-status-of-key-clients.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1764-query-the-departmental-transmission-status-of-key-clients.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1773-queries-the-number-of-people-who-have-created-an-event.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1765-queries-the-number-of-people-who-have-created-an-event.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1774-obtains-information-about-a-created-enterprise-log-from-the-department.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1766-obtains-information-about-a-created-enterprise-log-from-the-department.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1775-obtains-information-about-a-created-enterprise-log-from-the-organization.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1767-obtains-information-about-a-created-enterprise-log-from-the-organization.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1776-obtain-departmental-dimensions-documents-created-people-creating.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1768-obtain-departmental-dimensions-documents-created-people-creating.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1777-queries-the-number-dingtalk-documents-created-per-day-in-an.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1769-queries-the-number-dingtalk-documents-created-per-day-in-an.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1778-obtains-the-number-of-tables-published-by-the-enterprise-from.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1770-obtains-the-number-of-tables-published-by-the-enterprise-from.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1779-queries-the-number-of-tables-published-in-an-organization.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1771-queries-the-number-of-tables-published-in-an-organization.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1780-queries-the-data-about-the-interactive-service-window.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1772-queries-the-data-about-the-interactive-service-window.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1781-obtain-annual-report-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1773-obtain-annual-report-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1782-retrieves-the-user-s-monthly-active-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1774-retrieves-the-user-s-monthly-active-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1783-obtains-the-logon-details-of-inactive-users.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1775-obtains-the-logon-details-of-inactive-users.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1784-queries-the-distribution-of-user-versions.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1776-queries-the-distribution-of-user-versions.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1785-obtains-the-to-do-statistics-of-an-enterprise.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1777-obtains-the-to-do-statistics-of-an-enterprise.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1786-queries-enterprise-schedule-statistics.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1778-queries-enterprise-schedule-statistics.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1787-obtains-the-statistics-on-enterprise-dingtalk-trays.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1779-obtains-the-statistics-on-enterprise-dingtalk-trays.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1788-querydigitaldistrictorginfo-api-reference.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1780-querydigitaldistrictorginfo-api-reference.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1789-queries-the-statistics-on-one-time-enterprise-chats.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1781-queries-the-statistics-on-one-time-enterprise-chats.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1790-obtain-enterprise-group-chat-statistics.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1782-obtain-enterprise-group-chat-statistics.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1791-obtain-enterprise-log-statistics.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1783-obtain-enterprise-log-statistics.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1792-queries-enterprise-email-statistics.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1784-queries-enterprise-email-statistics.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1793-get-enterprise-document-statistics.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1785-get-enterprise-document-statistics.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1794-queries-enterprise-check-in-statistics.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1786-queries-enterprise-check-in-statistics.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1795-queries-corporate-announcement-statistics.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1787-queries-corporate-announcement-statistics.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1796-queries-enterprise-attendance-statistics.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1788-queries-enterprise-attendance-statistics.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1797-obtains-enterprise-approval-statistics.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1789-obtains-enterprise-approval-statistics.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1798-obtains-the-statistics-on-red-packets-issued-by-enterprises.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1790-obtains-the-statistics-on-red-packets-issued-by-enterprises.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1799-obtains-the-live-stream-statistics-for-an-enterprise-group.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1791-obtains-the-live-stream-statistics-for-an-enterprise-group.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1800-obtains-the-statistical-data-of-all-employees-of-an-enterprise.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1792-obtains-the-statistical-data-of-all-employees-of-an-enterprise.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1801-retrieve-online-statistics-of-enterprise-users.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1793-retrieve-online-statistics-of-enterprise-users.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1802-get-enterprise-teleconference-statistics.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1794-get-enterprise-teleconference-statistics.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1803-get-enterprise-video-conference-statistics.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1795-get-enterprise-video-conference-statistics.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1804-queries-the-red-envelope-receiving-statistics-of-an-enterprise.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1796-queries-the-red-envelope-receiving-statistics-of-an-enterprise.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1805-queries-dingtalk-movement-statistics.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1797-queries-dingtalk-movement-statistics.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1806-obtains-statistics-on-employee-types.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1798-obtains-statistics-on-employee-types.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1807-obtain-sending-statistics-of-an-enterprise-ding.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1799-obtain-sending-statistics-of-an-enterprise-ding.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1808-obtains-statistics-on-user-activation-status.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1800-obtains-statistics-on-user-activation-status.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1809-obtain-statistics-on-receiving-and-comments-of-enterprise-ding.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1801-obtain-statistics-on-receiving-and-comments-of-enterprise-ding.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1810-asr-short-sentence-recognition.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1802-asr-short-sentence-recognition.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1811-queries-applications.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1803-queries-applications.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1812-queries-the-application-feature-nodes.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1804-queries-the-application-feature-nodes.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1813-queries-organization-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1805-queries-organization-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1814-obtain-user-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1806-obtain-user-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1815-obtain-role-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1807-obtain-role-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1816-historical-acquisition-of-role-user-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1808-historical-acquisition-of-role-user-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1817-gets-the-form-object-structure.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1809-gets-the-form-object-structure.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1818-create-form-business-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1810-create-form-business-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1819-querying-form-business-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1811-querying-form-business-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1820-modify-form-business-object-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1812-modify-form-business-object-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1821-batch-add-form-business-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1813-batch-add-form-business-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1822-delete-a-business-object.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1814-delete-a-business-object.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1823-queries-business-instance-information.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1815-queries-business-instance-information.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1824-create-a-process-instance.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1816-create-a-process-instance.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1825-delete-process-instance-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1817-delete-process-instance-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1826-cancel-a-process-instance.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1818-cancel-a-process-instance.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1827-query-flow-instances.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1819-query-flow-instances.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1828-query-flow-instance-node-work-items.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1820-query-flow-instance-node-work-items.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1829-obtain-the-temporary-attachment-free-address.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1821-obtain-the-temporary-attachment-free-address.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1830-obtain-the-upload-url-of-a-file-2.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1822-obtain-the-upload-url-of-a-file-2.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1831-the-message-pushing-interface-of-the-assistant.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1823-the-message-pushing-interface-of-the-assistant.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1832-service-desk-message-types-and-data-formats.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1824-service-desk-message-types-and-data-formats.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1833-message-description-service-desk.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1825-message-description-service-desk.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1834-alimebot-intelligent-q-a-interface.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1826-alimebot-intelligent-q-a-interface.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1835-obtains-the-user-login-credential-of-the-third-party-system-of.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1827-obtains-the-user-login-credential-of-the-third-party-system-of.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1836-push-xiaomi-customer-service-robot-single-chat-message.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1828-push-xiaomi-customer-service-robot-single-chat-message.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1837-xiaomi-customer-service-robot-message-reply.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1829-xiaomi-customer-service-robot-message-reply.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1838-query-robot-data-indicators.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1830-query-robot-data-indicators.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1839-register-devices.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1831-register-devices.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1840-batchregister-devices.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1832-batchregister-devices.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1841-batch-modify-devices.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1833-batch-modify-devices.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1842-delete-a-device.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1834-delete-a-device.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1843-registration-event-type.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1835-registration-event-type.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1844-equipment-membership.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1836-equipment-membership.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1845-dingtalk-iot-push-events.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1837-dingtalk-iot-push-events.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1846-interconnections-model.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1838-interconnections-model.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1847-interconnections-channel.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1839-interconnections-channel.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1848-interconnections-page.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1840-interconnections-page.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1849-create-a-store-group.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1841-create-a-store-group.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1850-create-two-people-outside-the-nail.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1842-create-two-people-outside-the-nail.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1851-create-an-intercommunication-group.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1843-create-an-intercommunication-group.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1852-create-bc-account-association.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1844-create-bc-account-association.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1853-create-common-group-new-version.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1845-create-common-group-new-version.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1854-creating-two-groups-of-people.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1846-creating-two-groups-of-people.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1855-get-the-dingtalk-guest-group-session-address.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1847-get-the-dingtalk-guest-group-session-address.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1856-queries-the-session-information-of-two-population-groups.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1848-queries-the-session-information-of-two-population-groups.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1857-querying-the-number-of-unread-messages-of-the-user.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1849-querying-the-number-of-unread-messages-of-the-user.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1858-add-a-group-member-1.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1850-add-a-group-member-1.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1859-remove-group-members.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1851-remove-group-members.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1860-modify-the-avatar-of-a-communication-group.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1852-modify-the-avatar-of-a-communication-group.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1861-modify-the-group-name.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1853-modify-the-group-name.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1862-change-group-owner.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1854-change-group-owner.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1863-queries-the-group-member-list.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1855-queries-the-group-member-list.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1864-disband-bc-interconnection-group.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1856-disband-bc-interconnection-group.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1865-group-robots-send-messages.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1857-group-robots-send-messages.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1866-send-c2b-messages.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1858-send-c2b-messages.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1867-send-b2c-messages.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1859-send-b2c-messages.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1868-dingtalk-paas-master-data-create-crm-contact-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1860-dingtalk-paas-master-data-create-crm-contact-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1869-dingtalk-paas-master-data-update-crm-contact-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1861-dingtalk-paas-master-data-update-crm-contact-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1870-dingtalk-paas-master-data-create-crm-customer-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1862-dingtalk-paas-master-data-create-crm-customer-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1871-dingtalk-paas-master-data-update-crm-customer-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1863-dingtalk-paas-master-data-update-crm-customer-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1872-delete-crm-customer.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1864-delete-crm-customer.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1873-dingtalk-paas-master-data-customer-data-search-and-query-interface.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1865-dingtalk-paas-master-data-customer-data-search-and-query-interface.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1874-obtains-customer-data-in-batches-based-on-the-id-list.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1866-obtains-customer-data-in-batches-based-on-the-id-list.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1875-get-metadata-description-of-crm-customer-object.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1867-get-metadata-description-of-crm-customer-object.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1876-dingtalk-the-contact-data-query-api.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1868-dingtalk-the-contact-data-query-api.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1877-retrieve-custom-crm-object-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1869-retrieve-custom-crm-object-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1878-service-window-contact-management.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1870-service-window-contact-management.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1879-obtains-the-contact-information-of-the-service-window.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1871-obtains-the-contact-information-of-the-service-window.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1880-obtain-contact-data-from-the-service-window.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1872-obtain-contact-data-from-the-service-window.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1881-callback-event-for-service-window-following-and-cancellation.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1873-callback-event-for-service-window-following-and-cancellation.md
+
+## 删除（已写 tombstone，源站已下线或移出目录树）
+- 获取部门的扩展字段定义 · https://open.dingtalk.com/document/development/gets-the-extended-field-definition-of-a-department · 最后见于 docs/01-应用开发/02-4a8AMF6u2A-服务端API/1687-gets-the-extended-field-definition-of-a-department.md
+- 获取部门扩展信息 · https://open.dingtalk.com/document/development/obtain-department-extension-information · 最后见于 docs/01-应用开发/02-4a8AMF6u2A-服务端API/1688-obtain-department-extension-information.md
+- 更新部门扩展信息 · https://open.dingtalk.com/document/development/department-update-extension-information · 最后见于 docs/01-应用开发/02-4a8AMF6u2A-服务端API/1689-department-update-extension-information.md
+- 数据格式 · https://open.dingtalk.com/document/development/data-format-history · 最后见于 docs/01-应用开发/02-4a8AMF6u2A-服务端API/1702-data-format-history.md
+- 创建部门 · https://open.dingtalk.com/document/development/industry-connection-department-creation · 最后见于 docs/01-应用开发/02-4a8AMF6u2A-服务端API/1747-industry-connection-department-creation.md
+- 注册单个设备 · https://open.dingtalk.com/document/development/industry-connection-single-device-registration · 最后见于 docs/01-应用开发/02-4a8AMF6u2A-服务端API/1748-industry-connection-single-device-registration.md
+- 批量注册设备 · https://open.dingtalk.com/document/development/industry-connection-device-batch-registration · 最后见于 docs/01-应用开发/02-4a8AMF6u2A-服务端API/1749-industry-connection-device-batch-registration.md
+- 设备账号向目标用户发送DING消息 · https://open.dingtalk.com/document/development/device-publishing · 最后见于 docs/01-应用开发/02-4a8AMF6u2A-服务端API/1750-device-publishing.md
+
+## 后续动作
+- 结构层（index/ graph/ meta/kb_manifest）：--apply 已全量重建；未 --apply 则本报告仅供预览。
+- 认知层（index/TOPICS.md）：对照上面清单，凡命中 TOPICS 引用的文档（可用 `rg <path> index/TOPICS.md` 与 `graph/links.jsonl` 反查），由 LLM 复核该主题条目是否要改写。

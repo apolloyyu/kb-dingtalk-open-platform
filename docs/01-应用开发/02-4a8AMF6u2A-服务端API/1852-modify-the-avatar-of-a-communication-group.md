@@ -1,22 +1,22 @@
 ---
-title: "查询钉钉客联互通群成员列表"
-source_url: "https://open.dingtalk.com/document/development/queries-the-group-member-list"
+title: "修改钉钉客联互通群头像"
+source_url: "https://open.dingtalk.com/document/development/modify-the-avatar-of-a-communication-group"
 namespace: "development"
-slug: "queries-the-group-member-list"
+slug: "modify-the-avatar-of-a-communication-group"
 group: "应用开发"
 tab: "服务端API"
-breadcrumb: "历史文档（不推荐） > 钉钉客联 > 查询钉钉客联互通群成员列表"
-doc_id: "6kjA8cbsjB"
-updated_at: "2026-07-22 16:48:02"
+breadcrumb: "历史文档（不推荐） > 钉钉客联 > 修改钉钉客联互通群头像"
+doc_id: "0Zm8aN8MoZ"
+updated_at: "2026-07-21 10:05:50"
 ---
 
-> Source: https://open.dingtalk.com/document/development/queries-the-group-member-list
-> Path: 应用开发 / 服务端API / 历史文档（不推荐） > 钉钉客联 > 查询钉钉客联互通群成员列表
-> Updated: 2026-07-22 16:48:02
+> Source: https://open.dingtalk.com/document/development/modify-the-avatar-of-a-communication-group
+> Path: 应用开发 / 服务端API / 历史文档（不推荐） > 钉钉客联 > 修改钉钉客联互通群头像
+> Updated: 2026-07-21 10:05:50
 
-# 查询钉钉客联互通群成员列表
+# 修改钉钉客联互通群头像
 
-调用本接口，查询互通群成员列表，用户类型包括钉内成员、钉外成员、群机器人；内容包括成员名称、头像地址、用户类型等。
+调用本接口，修改互通群头像。
 
 ### 接口使用说明
 
@@ -25,8 +25,10 @@ updated_at: "2026-07-22 16:48:02"
 > - 该接口**已经暂停新客户支持**，进入EOL（end of life）阶段，敬请期待新的开放能力支持。
 > - 调用本接口之前，需要开通钉钉互联应用。
 
-例如，名为**普通群**的互通群，成员信息如下图所示。
-![](https://img.alicdn.com/imgextra/i4/O1CN01xlL05c1hHSqNYZdBe_!!6000000004252-2-tps-2270-1162.png)
+例如，有一个互通群名为**跨钉两人群**，群头像如下图所示。
+![](https://img.alicdn.com/imgextra/i3/O1CN01sEP9VX1fa7kUGvX4d_!!6000000004022-2-tps-2268-958.png)
+调用本接口修改群头像，接口调用成功后，效果如下图所示。
+![](https://img.alicdn.com/imgextra/i2/O1CN013IA59e1kzq45no112_!!6000000004755-2-tps-2274-1012.png)
 
 ## 权限
 
@@ -34,17 +36,22 @@ updated_at: "2026-07-22 16:48:02"
 
 | 应用类型 | 是否支持 | 权限 | API Explorer调试 |
 | --- | --- | --- | --- |
-| 企业内部应用 | 支持 | 钉钉客联基础数据读写权限 | [API Explorer](https://open-dev.dingtalk.com/apiExplorer#/?devType=org&api=im_1.0%23QueryGroupMember) |
-| 第三方企业应用 | 支持 | 钉钉客联基础数据读写权限 | [API Explorer](https://open-dev.dingtalk.com/apiExplorer#/?devType=isv&api=im_1.0%23QueryGroupMember) |
+| 企业内部应用 | 支持 | 钉钉客联基础数据读写权限 | [API Explorer](https://open-dev.dingtalk.com/apiExplorer#/?devType=org&api=im_1.0%23UpdateGroupAvatar) |
+| 第三方企业应用 | 支持 | 钉钉客联基础数据读写权限 | [API Explorer](https://open-dev.dingtalk.com/apiExplorer#/?devType=isv&api=im_1.0%23UpdateGroupAvatar) |
 | 第三方个人应用 | 暂不支持 | 暂不支持 | 暂不支持 |
 
 ## 请求方法
 
 ```
-GET /v1.0/im/interconnections/conversations/members?openConversationId=String HTTP/1.1
+PUT /v1.0/im/interconnections/groups/avatars HTTP/1.1
 Host:api.dingtalk.com
 x-acs-dingtalk-access-token:String
 Content-Type:application/json
+
+{
+  "openConversationId" : "String",
+  "groupAvatar" : "String"
+}
 ```
 
 ## Header参数
@@ -53,26 +60,18 @@ Content-Type:application/json
 | --- | --- | --- | --- |
 | x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，通过以下获取：   - 企业内部应用，调用[获取企业内部应用的accessToken](0033-obtain-the-access-token-of-an-internal-app.md)接口获取。 - 第三方企业应用，调用[获取第三方应用授权企业的accessToken](0034-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口获取。 |
 
-## Query参数
+## Body参数
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| openConversationId | String | 是 | 群会话openConversationId，可调用[创建钉钉客联普通互通群](1853-create-common-group-new-version.md) / [创建钉钉客联两人互通群](1854-creating-two-groups-of-people.md)接口获取，长度限制为1～32个字符，例如：14da\*\*\*\*2760。 |
+| openConversationId | String | 是 | 群会话openConversationId，调用[创建钉钉客联钉外账号](1844-create-bc-account-association.md)接口获取，长度限制为1～32个字符，例如：14da\*\*\*\*2760。 |
+| groupAvatar | String | 是 | 新的群头像地址，长度限制为1～1024个字符，例如：http://\*\*\*.png。 |
 
 ## 返回参数
 
 | 名称 | 类型 | 描述 |
 | --- | --- | --- |
-| openConversationId | String | 群会话openConversationId。  **[!NOTE]**    客联的群会话id与钉钉IM的群会话ID不同，客联的群会话ID是随机生成的，在使用时不可混用。 |
-| groupMembers | Array | 群成员列表。 |
-| groupMemberId | String | 群成员Id。   - 如果是钉内用户，该字段值为userId。 - 如果是钉外用户，该字段值为业务标识。 |
-| groupMemberName | String | 群成员名称。 |
-| groupMemberType | Integer | 群成员类型，取值：   - **1**：群主(属于钉内成员) - **2**：钉内成员 - **3**：钉外成员 - **4**：群机器人 |
-| groupMemberAvatar | String | 群成员头像地址。 |
-| groupMemberAvatarMediaId | String | 群成员头像mediaId，可通过调用[查询钉钉客联互通群成员列表](1863-queries-the-group-member-list.md)接口获取返回的groupMemberAvatarMediaId值。 |
-| groupMemberDynamics | String | 群成员头像mediaId，可通过调用[查询钉钉客联互通群成员列表](1863-queries-the-group-member-list.md)接口获取返回的groupMemberDynamics值。 |
-| groupMemberTypeV2 | Integer | 群成员类型V2 当groupMemberType类型为群主时，通过这个字段判断成员的实际类型如钉内群成员。 2 钉内群成员 3 钉外群成员 |
-| appUid | Long | 客联租户内IM唯一id |
+| newGroupAvatar | String | 新头像的mediaId。 |
 
 ## 示例
 
@@ -81,10 +80,15 @@ Content-Type:application/json
 HTTP
 
 ```
-GET /v1.0/im/interconnections/conversations/members?openConversationId=14da****2760 HTTP/1.1
+PUT /v1.0/im/interconnections/groups/avatars HTTP/1.1
 Host:api.dingtalk.com
 x-acs-dingtalk-access-token:xxxxx
 Content-Type:application/json
+
+{
+  "openConversationId" : "14da****2760",
+  "groupAvatar" : "https://**.oss-cn-beijing.aliyuncs.com/xx.jpg"
+}
 ```
 
 Java
@@ -114,12 +118,13 @@ public class Sample {
     public static void main(String[] args_) throws Exception {
         
         com.aliyun.dingtalkim_1_0.Client client = Sample.createClient();
-        com.aliyun.dingtalkim_1_0.models.QueryGroupMemberHeaders queryGroupMemberHeaders = new com.aliyun.dingtalkim_1_0.models.QueryGroupMemberHeaders();
-        queryGroupMemberHeaders.xAcsDingtalkAccessToken = "<your access token>";
-        com.aliyun.dingtalkim_1_0.models.QueryGroupMemberRequest queryGroupMemberRequest = new com.aliyun.dingtalkim_1_0.models.QueryGroupMemberRequest()
-                .setOpenConversationId("14da****2760");
+        com.aliyun.dingtalkim_1_0.models.UpdateGroupAvatarHeaders updateGroupAvatarHeaders = new com.aliyun.dingtalkim_1_0.models.UpdateGroupAvatarHeaders();
+        updateGroupAvatarHeaders.xAcsDingtalkAccessToken = "<your access token>";
+        com.aliyun.dingtalkim_1_0.models.UpdateGroupAvatarRequest updateGroupAvatarRequest = new com.aliyun.dingtalkim_1_0.models.UpdateGroupAvatarRequest()
+                .setOpenConversationId("14da****2760")
+                .setGroupAvatar("https://**.oss-cn-beijing.aliyuncs.com/xx.jpg");
         try {
-            client.queryGroupMemberWithOptions(queryGroupMemberRequest, queryGroupMemberHeaders, new com.aliyun.teautil.models.RuntimeOptions());
+            client.updateGroupAvatarWithOptions(updateGroupAvatarRequest, updateGroupAvatarHeaders, new com.aliyun.teautil.models.RuntimeOptions());
         } catch (TeaException err) {
             if (!com.aliyun.teautil.Common.empty(err.code) && !com.aliyun.teautil.Common.empty(err.message)) {
                 // err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -173,13 +178,14 @@ class Sample:
         args: List[str],
     ) -> None:
         client = Sample.create_client()
-        query_group_member_headers = dingtalkim__1__0_models.QueryGroupMemberHeaders()
-        query_group_member_headers.x_acs_dingtalk_access_token = '<your access token>'
-        query_group_member_request = dingtalkim__1__0_models.QueryGroupMemberRequest(
-            open_conversation_id='14da****2760'
+        update_group_avatar_headers = dingtalkim__1__0_models.UpdateGroupAvatarHeaders()
+        update_group_avatar_headers.x_acs_dingtalk_access_token = '<your access token>'
+        update_group_avatar_request = dingtalkim__1__0_models.UpdateGroupAvatarRequest(
+            open_conversation_id='14da****2760',
+            group_avatar='https://**.oss-cn-beijing.aliyuncs.com/xx.jpg'
         )
         try:
-            client.query_group_member_with_options(query_group_member_request, query_group_member_headers, util_models.RuntimeOptions())
+            client.update_group_avatar_with_options(update_group_avatar_request, update_group_avatar_headers, util_models.RuntimeOptions())
         except Exception as err:
             if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
                 # err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -190,13 +196,14 @@ class Sample:
         args: List[str],
     ) -> None:
         client = Sample.create_client()
-        query_group_member_headers = dingtalkim__1__0_models.QueryGroupMemberHeaders()
-        query_group_member_headers.x_acs_dingtalk_access_token = '<your access token>'
-        query_group_member_request = dingtalkim__1__0_models.QueryGroupMemberRequest(
-            open_conversation_id='14da****2760'
+        update_group_avatar_headers = dingtalkim__1__0_models.UpdateGroupAvatarHeaders()
+        update_group_avatar_headers.x_acs_dingtalk_access_token = '<your access token>'
+        update_group_avatar_request = dingtalkim__1__0_models.UpdateGroupAvatarRequest(
+            open_conversation_id='14da****2760',
+            group_avatar='https://**.oss-cn-beijing.aliyuncs.com/xx.jpg'
         )
         try:
-            await client.query_group_member_with_options_async(query_group_member_request, query_group_member_headers, util_models.RuntimeOptions())
+            await client.update_group_avatar_with_options_async(update_group_avatar_request, update_group_avatar_headers, util_models.RuntimeOptions())
         except Exception as err:
             if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
                 # err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -220,8 +227,8 @@ use AlibabaCloud\Tea\Exception\TeaError;
 use AlibabaCloud\Tea\Utils\Utils;
 
 use Darabonba\OpenApi\Models\Config;
-use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\QueryGroupMemberHeaders;
-use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\QueryGroupMemberRequest;
+use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\UpdateGroupAvatarHeaders;
+use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\UpdateGroupAvatarRequest;
 use AlibabaCloud\Tea\Utils\Utils\RuntimeOptions;
 
 class Sample {
@@ -243,13 +250,14 @@ class Sample {
      */
     public static function main($args){
         $client = self::createClient();
-        $queryGroupMemberHeaders = new QueryGroupMemberHeaders([]);
-        $queryGroupMemberHeaders->xAcsDingtalkAccessToken = "<your access token>";
-        $queryGroupMemberRequest = new QueryGroupMemberRequest([
-            "openConversationId" => "14da****2760"
+        $updateGroupAvatarHeaders = new UpdateGroupAvatarHeaders([]);
+        $updateGroupAvatarHeaders->xAcsDingtalkAccessToken = "<your access token>";
+        $updateGroupAvatarRequest = new UpdateGroupAvatarRequest([
+            "openConversationId" => "14da****2760",
+            "groupAvatar" => "https://**.oss-cn-beijing.aliyuncs.com/xx.jpg"
         ]);
         try {
-            $client->queryGroupMemberWithOptions($queryGroupMemberRequest, $queryGroupMemberHeaders, new RuntimeOptions([]));
+            $client->updateGroupAvatarWithOptions($updateGroupAvatarRequest, $updateGroupAvatarHeaders, new RuntimeOptions([]));
         }
         catch (Exception $err) {
             if (!($err instanceof TeaError)) {
@@ -307,10 +315,11 @@ func _main (args []*string) (_err error) {
     return _err
   }
 
-  queryGroupMemberHeaders := &dingtalkim_1_0.QueryGroupMemberHeaders{}
-  queryGroupMemberHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
-  queryGroupMemberRequest := &dingtalkim_1_0.QueryGroupMemberRequest{
+  updateGroupAvatarHeaders := &dingtalkim_1_0.UpdateGroupAvatarHeaders{}
+  updateGroupAvatarHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
+  updateGroupAvatarRequest := &dingtalkim_1_0.UpdateGroupAvatarRequest{
     OpenConversationId: tea.String("14da****2760"),
+    GroupAvatar: tea.String("https://**.oss-cn-beijing.aliyuncs.com/xx.jpg"),
   }
   tryErr := func()(_e error) {
     defer func() {
@@ -318,7 +327,7 @@ func _main (args []*string) (_err error) {
         _e = r
       }
     }()
-    _, _err = client.QueryGroupMemberWithOptions(queryGroupMemberRequest, queryGroupMemberHeaders, &util.RuntimeOptions{})
+    _, _err = client.UpdateGroupAvatarWithOptions(updateGroupAvatarRequest, updateGroupAvatarHeaders, &util.RuntimeOptions{})
     if _err != nil {
       return _err
     }
@@ -375,13 +384,14 @@ class Client {
 
   static async main(args) {
     let client = Client.createClient();
-    let queryGroupMemberHeaders = new dingtalkim_1_0.QueryGroupMemberHeaders({ });
-    queryGroupMemberHeaders.xAcsDingtalkAccessToken = '<your access token>';
-    let queryGroupMemberRequest = new dingtalkim_1_0.QueryGroupMemberRequest({
+    let updateGroupAvatarHeaders = new dingtalkim_1_0.UpdateGroupAvatarHeaders({ });
+    updateGroupAvatarHeaders.xAcsDingtalkAccessToken = '<your access token>';
+    let updateGroupAvatarRequest = new dingtalkim_1_0.UpdateGroupAvatarRequest({
       openConversationId: '14da****2760',
+      groupAvatar: 'https://**.oss-cn-beijing.aliyuncs.com/xx.jpg',
     });
     try {
-      await client.queryGroupMemberWithOptions(queryGroupMemberRequest, queryGroupMemberHeaders, new Util.RuntimeOptions({ }));
+      await client.updateGroupAvatarWithOptions(updateGroupAvatarRequest, updateGroupAvatarHeaders, new Util.RuntimeOptions({ }));
     } catch (err) {
       if (!Util.default.empty(err.code) && !Util.default.empty(err.message)) {
         // err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -437,15 +447,16 @@ namespace AlibabaCloud.SDK.Sample
         public static void Main(string[] args)
         {
             AlibabaCloud.SDK.Dingtalkim_1_0.Client client = CreateClient();
-            AlibabaCloud.SDK.Dingtalkim_1_0.Models.QueryGroupMemberHeaders queryGroupMemberHeaders = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.QueryGroupMemberHeaders();
-            queryGroupMemberHeaders.XAcsDingtalkAccessToken = "<your access token>";
-            AlibabaCloud.SDK.Dingtalkim_1_0.Models.QueryGroupMemberRequest queryGroupMemberRequest = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.QueryGroupMemberRequest
+            AlibabaCloud.SDK.Dingtalkim_1_0.Models.UpdateGroupAvatarHeaders updateGroupAvatarHeaders = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.UpdateGroupAvatarHeaders();
+            updateGroupAvatarHeaders.XAcsDingtalkAccessToken = "<your access token>";
+            AlibabaCloud.SDK.Dingtalkim_1_0.Models.UpdateGroupAvatarRequest updateGroupAvatarRequest = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.UpdateGroupAvatarRequest
             {
                 OpenConversationId = "14da****2760",
+                GroupAvatar = "https://**.oss-cn-beijing.aliyuncs.com/xx.jpg",
             };
             try
             {
-                client.QueryGroupMemberWithOptions(queryGroupMemberRequest, queryGroupMemberHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
+                client.UpdateGroupAvatarWithOptions(updateGroupAvatarRequest, updateGroupAvatarHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
             }
             catch (TeaException err)
             {
@@ -478,17 +489,7 @@ HTTP/1.1 200 OK
 Content-Type:application/json
 
 {
-  "openConversationId" : "14da****2760",
-  "groupMembers" : [ {
-    "groupMemberId" : "1107****2120",
-    "groupMemberName" : "Foo",
-    "groupMemberType" : 1,
-    "groupMemberAvatar" : "http://****.png",
-    "groupMemberAvatarMediaId" : "abc",
-    "groupMemberDynamics" : "认真工作,快乐生活",
-    "groupMemberTypeV2" : 2,
-    "appUid" : 1000000
-  } ]
+  "newGroupAvatar" : "**la*****=="
 }
 ```
 
@@ -497,5 +498,8 @@ Content-Type:application/json
 | HttpCode | 错误码 | 错误信息 | 说明 |
 | --- | --- | --- | --- |
 | 400 | group.nonexist | 群不存在，请检查 | 群不存在，请检查 |
-| 400 | template.nonexist | 群模板不存在，请检查 | 群模板不存在，请检查 |
+| 400 | singlegroup.notsupport | 二人群无法修改群信息 | 二人群无法修改群信息 |
+| 400 | couplegroup.notsupport | 二人群无法修改群信息 | 二人群无法修改群信息 |
+| 400 | image.urlError | 上传图片失败，请检查图片url是否可用或者图片大小超过1M | 上传图片失败，请检查图片url是否可用或者图片大小超过1M |
+| 500 | group.updatefail | 更新群信息失败 | 更新群信息失败 |
 | 500 | system.error | 系统异常 | 系统异常 |

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端API"
 breadcrumb: "历史文档（不推荐） > 培训 > 获取培训观看数据"
 doc_id: "1ZeVfjqfdx"
-updated_at: "2025-10-17 16:59:23"
+updated_at: "2026-08-26 09:31:28"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtains-the-playback-data-of-a-live-stream
 > Path: 应用开发 / 服务端API / 历史文档（不推荐） > 培训 > 获取培训观看数据
-> Updated: 2025-10-17 16:59:23
+> Updated: 2026-08-26 09:31:28
 
 # 获取培训观看数据
 
@@ -51,7 +51,7 @@ updated_at: "2025-10-17 16:59:23"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | dc73axxxx | 调用服务端API的应用凭证，可通过[获取第三方应用授权企业的accessToken](https://open.dingtalk.com/document/isvapp/obtain-the-access_token-of-the-authorized-enterprise)接口获取。 |
+| access\_token | String | 是 | dc73axxxx | 调用服务端API的应用凭证，可通过[获取第三方应用授权企业的accessToken](https://open.dingtalk.com/document/isvapp/obtain-the-access-token-of-the-third-party-application-authorization-enterprise)接口获取。 |
 
 ## Body参数
 

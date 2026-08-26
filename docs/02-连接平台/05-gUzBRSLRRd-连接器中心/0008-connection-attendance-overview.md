@@ -634,58 +634,58 @@ OA审批常用组件包含基础控件、增强控件和套件：
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 单聊统计 | 沟通互动率、聊天消息数、聊天用户数、单聊消息数、单聊用户数、人均发送消息数。更多信息查看[获取企业单聊统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1789-queries-the-statistics-on-one-time-enterprise-chats.md)接口介绍。 |
-| 群聊统计 | 群聊用户数、群聊消息数、活跃群数、新增群数、内部群数量、部门群数量。更多信息查看[获取企业群聊统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1790-obtain-enterprise-group-chat-statistics.md)接口介绍。 |
-| DING 发送统计 | 发送 DING 次数、发送应用/短信/电话 DING 次数及人数。更多信息查看[获取企业DING发送统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1807-obtain-sending-statistics-of-an-enterprise-ding.md)接口介绍。 |
-| DING 接收及评论统计 | 接收 DING 次数、接收应用/短信/电话 DING 次数。更多信息查看[获取企业DING接收及评论统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1809-obtain-statistics-on-receiving-and-comments-of-enterprise-ding.md)接口介绍。 |
+| 单聊统计 | 沟通互动率、聊天消息数、聊天用户数、单聊消息数、单聊用户数、人均发送消息数。更多信息查看[获取企业单聊统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1781-queries-the-statistics-on-one-time-enterprise-chats.md)接口介绍。 |
+| 群聊统计 | 群聊用户数、群聊消息数、活跃群数、新增群数、内部群数量、部门群数量。更多信息查看[获取企业群聊统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1782-obtain-enterprise-group-chat-statistics.md)接口介绍。 |
+| DING 发送统计 | 发送 DING 次数、发送应用/短信/电话 DING 次数及人数。更多信息查看[获取企业DING发送统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1799-obtain-sending-statistics-of-an-enterprise-ding.md)接口介绍。 |
+| DING 接收及评论统计 | 接收 DING 次数、接收应用/短信/电话 DING 次数。更多信息查看[获取企业DING接收及评论统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1801-obtain-statistics-on-receiving-and-comments-of-enterprise-ding.md)接口介绍。 |
 
 #### 会议与直播数据
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 电话会议统计 | 发起次数、成功发起次数、发起用户数、成功参与人数、会议时长（分钟）。  更多信息查看[获取企业电话会议统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1802-get-enterprise-teleconference-statistics.md)相关接口介绍。 |
-| 视频会议统计 | 发起次数、发起用户数、成功发起次数、参与用户数、成功参与用户数、参与人次、会议时长（分钟）。更多信息查看[获取企业视频会议统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1803-get-enterprise-video-conference-statistics.md)接口介绍。 |
-| 群直播统计 | 成功发起次数、观看次数、观看人数、直播时长（分钟）、看直播人数、回看次数、回看人数。更多信息查看[获取企业群直播统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1799-obtains-the-live-stream-statistics-for-an-enterprise-group.md)接口介绍。 |
+| 电话会议统计 | 发起次数、成功发起次数、发起用户数、成功参与人数、会议时长（分钟）。  更多信息查看[获取企业电话会议统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1794-get-enterprise-teleconference-statistics.md)相关接口介绍。 |
+| 视频会议统计 | 发起次数、发起用户数、成功发起次数、参与用户数、成功参与用户数、参与人次、会议时长（分钟）。更多信息查看[获取企业视频会议统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1795-get-enterprise-video-conference-statistics.md)接口介绍。 |
+| 群直播统计 | 成功发起次数、观看次数、观看人数、直播时长（分钟）、看直播人数、回看次数、回看人数。更多信息查看[获取企业群直播统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1791-obtains-the-live-stream-statistics-for-an-enterprise-group.md)接口介绍。 |
 
 #### 考勤与人事数据
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 考勤统计 | 应出勤人数、实际出勤人数、出勤率。更多信息查看[获取企业考勤统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1796-queries-enterprise-attendance-statistics.md)相关接口介绍。 |
-| 签到统计 | 签到次数、签到用户数。更多信息查看[获取企业签到统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1794-queries-enterprise-check-in-statistics.md)接口介绍。 |
-| 员工类型统计 | 全职人数、正式/试用/兼职/劳务外包/待离职/实习/劳务派遣/退休返聘/离职/试岗人数、资料不完整人数。更多信息查看[获取企业员工类型统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1806-obtains-statistics-on-employee-types.md)接口介绍。 |
-| 用户激活状态统计 | 累计激活人数、激活率。更多信息查看[获取企业用户激活状态统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1808-obtains-statistics-on-user-activation-status.md)接口介绍。 |
+| 考勤统计 | 应出勤人数、实际出勤人数、出勤率。更多信息查看[获取企业考勤统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1788-queries-enterprise-attendance-statistics.md)相关接口介绍。 |
+| 签到统计 | 签到次数、签到用户数。更多信息查看[获取企业签到统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1786-queries-enterprise-check-in-statistics.md)接口介绍。 |
+| 员工类型统计 | 全职人数、正式/试用/兼职/劳务外包/待离职/实习/劳务派遣/退休返聘/离职/试岗人数、资料不完整人数。更多信息查看[获取企业员工类型统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1798-obtains-statistics-on-employee-types.md)接口介绍。 |
+| 用户激活状态统计 | 累计激活人数、激活率。更多信息查看[获取企业用户激活状态统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1800-obtains-statistics-on-user-activation-status.md)接口介绍。 |
 
 #### 审批与待办数据
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 审批统计 | 累计审批模板数、累计自定义审批模板数、新建自定义模板数、提交审批单数、提交审批用户数、活跃审批模板数、操作审批次数和用户数。更多信息查看[获取企业审批统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1797-obtains-enterprise-approval-statistics.md)相关接口介绍。 |
-| 待办统计 | 待办用户数。更多信息查看[获取企业待办统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1785-obtains-the-to-do-statistics-of-an-enterprise.md)接口介绍。 |
+| 审批统计 | 累计审批模板数、累计自定义审批模板数、新建自定义模板数、提交审批单数、提交审批用户数、活跃审批模板数、操作审批次数和用户数。更多信息查看[获取企业审批统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1789-obtains-enterprise-approval-statistics.md)相关接口介绍。 |
+| 待办统计 | 待办用户数。更多信息查看[获取企业待办统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1777-obtains-the-to-do-statistics-of-an-enterprise.md)接口介绍。 |
 
 #### 内容与文档数据
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 文档统计 | 创建文档数、编辑文档数、分享文档数、阅读文档数。更多信息查看[获取企业文档统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1793-get-enterprise-document-statistics.md)相关接口介绍。 |
-| 公告统计 | 公告已读人数、公告已接收人数、发布公告数。更多信息查看[获取企业公告统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1795-queries-corporate-announcement-statistics.md)接口介绍。 |
-| 日志统计 | 发送日志数、发送日志用户数、评论日志用户数。更多信息查看[获取企业日志统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1791-obtain-enterprise-log-statistics.md)接口介绍。 |
-| 钉盘统计 | 钉盘用户数、钉盘上传文件数、钉盘预览文件数。更多信息查看[获取企业钉盘统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1787-obtains-the-statistics-on-enterprise-dingtalk-trays.md)接口介绍。 |
+| 文档统计 | 创建文档数、编辑文档数、分享文档数、阅读文档数。更多信息查看[获取企业文档统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1785-get-enterprise-document-statistics.md)相关接口介绍。 |
+| 公告统计 | 公告已读人数、公告已接收人数、发布公告数。更多信息查看[获取企业公告统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1787-queries-corporate-announcement-statistics.md)接口介绍。 |
+| 日志统计 | 发送日志数、发送日志用户数、评论日志用户数。更多信息查看[获取企业日志统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1783-obtain-enterprise-log-statistics.md)接口介绍。 |
+| 钉盘统计 | 钉盘用户数、钉盘上传文件数、钉盘预览文件数。更多信息查看[获取企业钉盘统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1779-obtains-the-statistics-on-enterprise-dingtalk-trays.md)接口介绍。 |
 
 #### 邮件与红包数据
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 邮箱统计 | 钉邮操作次数、发送/转发/回复操作次数及用户数。更多信息查看[获取企业邮箱统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1792-queries-enterprise-email-statistics.md)相关接口介绍。 |
-| 发送红包统计 | 发送红包数、发送拼手气/专享红包数、发送红包用户数、发送拼手气/专享红包用户数。更多信息查看[获取企业发红包统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1798-obtains-the-statistics-on-red-packets-issued-by-enterprises.md)接口介绍。 |
-| 接收红包统计 | 接收红包数、接收拼手气/专享红包数、接收红包用户数、接收拼手气/专享红包用户数。更多信息查看[获取企业接收红包统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1804-queries-the-red-envelope-receiving-statistics-of-an-enterprise.md)接口介绍。 |
+| 邮箱统计 | 钉邮操作次数、发送/转发/回复操作次数及用户数。更多信息查看[获取企业邮箱统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1784-queries-enterprise-email-statistics.md)相关接口介绍。 |
+| 发送红包统计 | 发送红包数、发送拼手气/专享红包数、发送红包用户数、发送拼手气/专享红包用户数。更多信息查看[获取企业发红包统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1790-obtains-the-statistics-on-red-packets-issued-by-enterprises.md)接口介绍。 |
+| 接收红包统计 | 接收红包数、接收拼手气/专享红包数、接收红包用户数、接收拼手气/专享红包用户数。更多信息查看[获取企业接收红包统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1796-queries-the-red-envelope-receiving-statistics-of-an-enterprise.md)接口介绍。 |
 
 #### 日程与组织数据
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 日程统计 | 日程用户数、发起日程用户数、接收日程用户数。更多信息查看[获取企业日程统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1786-queries-enterprise-schedule-statistics.md)相关接口介绍。 |
-| 数字区县组织信息 | 通讯录录入手机人数、通讯录人数、激活人数、激活率、活跃人数、户数、一户一钉户数、一户至少激活一人率。更多信息查看[获取数字区县组织信息](../../01-应用开发/02-4a8AMF6u2A-服务端API/1788-querydigitaldistrictorginfo-api-reference.md)接口介绍。 |
+| 日程统计 | 日程用户数、发起日程用户数、接收日程用户数。更多信息查看[获取企业日程统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1778-queries-enterprise-schedule-statistics.md)相关接口介绍。 |
+| 数字区县组织信息 | 通讯录录入手机人数、通讯录人数、激活人数、激活率、活跃人数、户数、一户一钉户数、一户至少激活一人率。更多信息查看[获取数字区县组织信息](../../01-应用开发/02-4a8AMF6u2A-服务端API/1780-querydigitaldistrictorginfo-api-reference.md)接口介绍。 |
 
 ## **会话管理**
 

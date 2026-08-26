@@ -1,54 +1,34 @@
 ---
-title: "在钉钉客联互通群中使用钉内账号发送消息"
-source_url: "https://open.dingtalk.com/document/development/send-b2c-messages"
+title: "修改钉钉客联互通群名称"
+source_url: "https://open.dingtalk.com/document/development/modify-the-group-name"
 namespace: "development"
-slug: "send-b2c-messages"
+slug: "modify-the-group-name"
 group: "应用开发"
 tab: "服务端API"
-breadcrumb: "历史文档（不推荐） > 钉钉客联 > 在钉钉客联互通群中使用钉内账号发送消息"
-doc_id: "QsuyJ7hnEy"
-updated_at: "2026-07-21 10:13:06"
+breadcrumb: "历史文档（不推荐） > 钉钉客联 > 修改钉钉客联互通群名称"
+doc_id: "lOiGbaPNPS"
+updated_at: "2026-07-21 10:06:45"
 ---
 
-> Source: https://open.dingtalk.com/document/development/send-b2c-messages
-> Path: 应用开发 / 服务端API / 历史文档（不推荐） > 钉钉客联 > 在钉钉客联互通群中使用钉内账号发送消息
-> Updated: 2026-07-21 10:13:06
+> Source: https://open.dingtalk.com/document/development/modify-the-group-name
+> Path: 应用开发 / 服务端API / 历史文档（不推荐） > 钉钉客联 > 修改钉钉客联互通群名称
+> Updated: 2026-07-21 10:06:45
 
-# 在钉钉客联互通群中使用钉内账号发送消息
+# 修改钉钉客联互通群名称
 
-调用本接口，实现钉内账号给钉外账号或者互通群发送消息。
+调用本接口，修改互通群名称。
 
 ### 接口使用说明
 
-- 该接口**已经暂停新客户支持**，进入EOL（end of life）阶段，敬请期待新的开放能力支持。
-- 调用本接口之前，需要开通钉钉互联应用。
+> **[!NOTE]**
+>
+> - 该接口**已经暂停新客户支持**，进入EOL（end of life）阶段，敬请期待新的开放能力支持。
+> - 调用本接口之前，需要开通钉钉互联应用。
 
-### 消息格式说明
-
-本接口发送消息，只支持文本和链接类型消息，消息格式参考如下：
-
-- **文本消息**
-
-```
-{
-     "text": {
-         "content": "hello world"
-     }
-}
-```
-
-- **链接消息**
-
-```
-{
-    "link":{
-      "messageUrl":"http://dingtalk.com",
-      "picUrl":"http://****.png",
-      "title":"钉钉",
-      "text":"钉钉客联"
-    }
-}
-```
+例如，有一个互通群名为**跨钉两人群**，如下图所示。
+![](https://img.alicdn.com/imgextra/i2/O1CN013IA59e1kzq45no112_!!6000000004755-2-tps-2274-1012.png)
+调用本接口，将该群的名称修改为**新跨钉两人群**。接口调用成功后，效果如下图所示。
+![](https://img.alicdn.com/imgextra/i1/O1CN01xBA2t326yOML13NO8_!!6000000007730-2-tps-2268-1018.png)
 
 ## 权限
 
@@ -56,25 +36,21 @@ updated_at: "2026-07-21 10:13:06"
 
 | 应用类型 | 是否支持 | 权限 | API Explorer调试 |
 | --- | --- | --- | --- |
-| 企业内部应用 | 支持 | 钉钉客联基础数据读写权限 | [API Explorer](https://open-dev.dingtalk.com/apiExplorer#/?devType=org&api=im_1.0%23sendDingMessage) |
-| 第三方企业应用 | 支持 | 钉钉客联基础数据读写权限 | [API Explorer](https://open-dev.dingtalk.com/apiExplorer#/?devType=isv&api=im_1.0%23sendDingMessage) |
+| 企业内部应用 | 支持 | 钉钉客联基础数据读写权限 | [API Explorer](https://open-dev.dingtalk.com/apiExplorer#/?devType=org&api=im_1.0%23UpdateGroupName) |
+| 第三方企业应用 | 支持 | 钉钉客联基础数据读写权限 | [API Explorer](https://open-dev.dingtalk.com/apiExplorer#/?devType=isv&api=im_1.0%23UpdateGroupName) |
 | 第三方个人应用 | 暂不支持 | 暂不支持 | 暂不支持 |
 
 ## 请求方法
 
 ```
-POST /v1.0/im/interconnections/dingMessages/send HTTP/1.1
+PUT /v1.0/im/interconnections/groups/names HTTP/1.1
 Host:api.dingtalk.com
 x-acs-dingtalk-access-token:String
 Content-Type:application/json
 
 {
-  "senderId" : "String",
-  "receiverId" : "String",
   "openConversationId" : "String",
-  "messageType" : "String",
-  "message" : "String",
-  "code" : "String"
+  "groupName" : "String"
 }
 ```
 
@@ -88,18 +64,14 @@ Content-Type:application/json
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| senderId | String | 是 | 消息发送者，钉内账号userId，长度限制为1～64个字符，例如：1745\*\*\*\*8777。 |
-| receiverId | String | 否 | 钉外账号在业务系统内的唯一标志，调用[创建钉钉客联钉外账号](1852-create-bc-account-association.md)接口获取，长度限制为1～64个字符，例如：1107\*\*\*\*2120。  **[!NOTE]**    单聊场景必填，可实现钉内账号向钉外账号发送单聊消息。 |
-| openConversationId | String | 否 | 群会话openConversationId，可调用[创建钉钉客联普通互通群](1853-create-common-group-new-version.md) / [创建钉钉客联两人互通群](1854-creating-two-groups-of-people.md)接口获取，长度限制为1～32个字符，例如：14da\*\*\*\*2760。  **[!NOTE]**    群聊场景必填，可实现钉内账号向互通群内发送群聊信息。 |
-| messageType | String | 是 | 消息类型，取值：   - **text**：文本类型 - **link**：链接类型 |
-| message | String | 是 | 消息内容。  **[!NOTE]**    请参考本文**消息格式说明**。 |
-| code | String | 是 | 发送者在钉钉客联应用内的个人授权码，获取方式：https://login.dingtalk.com/oauth2/auth?redirect\_uri=https%3A%2F%2Fexample.org%2Fa%2Fb&response\_type=code&client\_id=suitezl\*\*\*pimsjn&scope=openid corpid&state=dddd&prompt=consent&corpId=ding3xxx   - **redirect\_uri**地址传企业目标页面地址，必须UrlEncode处理。 - **response\_type**为固定值code。 - **client\_id**为固定值，是钉钉客联应用的suiteKey。 - **scope**可以固定为openid corpid。（中间有空格） - **corpId**传发送者所在企业的corpId值。   **[!NOTE]**    \*\* 每发送一条消息后，都需要重新获取一个新的授权码\*\*。 |
+| openConversationId | String | 是 | 群会话openConversationId，可调用[创建钉钉客联普通互通群](1845-create-common-group-new-version.md) / [创建钉钉客联两人互通群](1846-creating-two-groups-of-people.md)接口获取，长度限制为1～32个字符，例如：14da\*\*\*\*2760。 |
+| groupName | String | 是 | 新的群名称，长度限制为1～64个字符，例如：客户群。 |
 
 ## 返回参数
 
 | 名称 | 类型 | 描述 |
 | --- | --- | --- |
-| requestId | String | 本次发送的请求消息Id。 |
+| newGroupName | String | 新的群名称。 |
 
 ## 示例
 
@@ -108,18 +80,14 @@ Content-Type:application/json
 HTTP
 
 ```
-POST /v1.0/im/interconnections/dingMessages/send HTTP/1.1
+PUT /v1.0/im/interconnections/groups/names HTTP/1.1
 Host:api.dingtalk.com
 x-acs-dingtalk-access-token:xxxxx
 Content-Type:application/json
 
 {
-  "senderId" : "1745****8777",
-  "receiverId" : "1107****2120",
   "openConversationId" : "14da****2760",
-  "messageType" : "text",
-  "message" : "{      \"text\": {          \"content\": \"hello world\"      } }",
-  "code" : "06f4****d1ec"
+  "groupName" : "新群名称"
 }
 ```
 
@@ -150,17 +118,13 @@ public class Sample {
     public static void main(String[] args_) throws Exception {
         
         com.aliyun.dingtalkim_1_0.Client client = Sample.createClient();
-        com.aliyun.dingtalkim_1_0.models.SendDingMessageHeaders sendDingMessageHeaders = new com.aliyun.dingtalkim_1_0.models.SendDingMessageHeaders();
-        sendDingMessageHeaders.xAcsDingtalkAccessToken = "<your access token>";
-        com.aliyun.dingtalkim_1_0.models.SendDingMessageRequest sendDingMessageRequest = new com.aliyun.dingtalkim_1_0.models.SendDingMessageRequest()
-                .setSenderId("1745****8777")
-                .setReceiverId("1107****2120")
+        com.aliyun.dingtalkim_1_0.models.UpdateGroupNameHeaders updateGroupNameHeaders = new com.aliyun.dingtalkim_1_0.models.UpdateGroupNameHeaders();
+        updateGroupNameHeaders.xAcsDingtalkAccessToken = "<your access token>";
+        com.aliyun.dingtalkim_1_0.models.UpdateGroupNameRequest updateGroupNameRequest = new com.aliyun.dingtalkim_1_0.models.UpdateGroupNameRequest()
                 .setOpenConversationId("14da****2760")
-                .setMessageType("text")
-                .setMessage("{      \"text\": {          \"content\": \"hello world\"      } }")
-                .setCode("06f4****d1ec");
+                .setGroupName("新群名称");
         try {
-            client.sendDingMessageWithOptions(sendDingMessageRequest, sendDingMessageHeaders, new com.aliyun.teautil.models.RuntimeOptions());
+            client.updateGroupNameWithOptions(updateGroupNameRequest, updateGroupNameHeaders, new com.aliyun.teautil.models.RuntimeOptions());
         } catch (TeaException err) {
             if (!com.aliyun.teautil.Common.empty(err.code) && !com.aliyun.teautil.Common.empty(err.message)) {
                 // err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -214,18 +178,14 @@ class Sample:
         args: List[str],
     ) -> None:
         client = Sample.create_client()
-        send_ding_message_headers = dingtalkim__1__0_models.SendDingMessageHeaders()
-        send_ding_message_headers.x_acs_dingtalk_access_token = '<your access token>'
-        send_ding_message_request = dingtalkim__1__0_models.SendDingMessageRequest(
-            sender_id='1745****8777',
-            receiver_id='1107****2120',
+        update_group_name_headers = dingtalkim__1__0_models.UpdateGroupNameHeaders()
+        update_group_name_headers.x_acs_dingtalk_access_token = '<your access token>'
+        update_group_name_request = dingtalkim__1__0_models.UpdateGroupNameRequest(
             open_conversation_id='14da****2760',
-            message_type='text',
-            message='{      "text": {          "content": "hello world"      } }',
-            code='06f4****d1ec'
+            group_name='新群名称'
         )
         try:
-            client.send_ding_message_with_options(send_ding_message_request, send_ding_message_headers, util_models.RuntimeOptions())
+            client.update_group_name_with_options(update_group_name_request, update_group_name_headers, util_models.RuntimeOptions())
         except Exception as err:
             if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
                 # err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -236,18 +196,14 @@ class Sample:
         args: List[str],
     ) -> None:
         client = Sample.create_client()
-        send_ding_message_headers = dingtalkim__1__0_models.SendDingMessageHeaders()
-        send_ding_message_headers.x_acs_dingtalk_access_token = '<your access token>'
-        send_ding_message_request = dingtalkim__1__0_models.SendDingMessageRequest(
-            sender_id='1745****8777',
-            receiver_id='1107****2120',
+        update_group_name_headers = dingtalkim__1__0_models.UpdateGroupNameHeaders()
+        update_group_name_headers.x_acs_dingtalk_access_token = '<your access token>'
+        update_group_name_request = dingtalkim__1__0_models.UpdateGroupNameRequest(
             open_conversation_id='14da****2760',
-            message_type='text',
-            message='{      "text": {          "content": "hello world"      } }',
-            code='06f4****d1ec'
+            group_name='新群名称'
         )
         try:
-            await client.send_ding_message_with_options_async(send_ding_message_request, send_ding_message_headers, util_models.RuntimeOptions())
+            await client.update_group_name_with_options_async(update_group_name_request, update_group_name_headers, util_models.RuntimeOptions())
         except Exception as err:
             if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
                 # err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -271,8 +227,8 @@ use AlibabaCloud\Tea\Exception\TeaError;
 use AlibabaCloud\Tea\Utils\Utils;
 
 use Darabonba\OpenApi\Models\Config;
-use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\SendDingMessageHeaders;
-use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\SendDingMessageRequest;
+use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\UpdateGroupNameHeaders;
+use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\UpdateGroupNameRequest;
 use AlibabaCloud\Tea\Utils\Utils\RuntimeOptions;
 
 class Sample {
@@ -294,18 +250,14 @@ class Sample {
      */
     public static function main($args){
         $client = self::createClient();
-        $sendDingMessageHeaders = new SendDingMessageHeaders([]);
-        $sendDingMessageHeaders->xAcsDingtalkAccessToken = "<your access token>";
-        $sendDingMessageRequest = new SendDingMessageRequest([
-            "senderId" => "1745****8777",
-            "receiverId" => "1107****2120",
+        $updateGroupNameHeaders = new UpdateGroupNameHeaders([]);
+        $updateGroupNameHeaders->xAcsDingtalkAccessToken = "<your access token>";
+        $updateGroupNameRequest = new UpdateGroupNameRequest([
             "openConversationId" => "14da****2760",
-            "messageType" => "text",
-            "message" => "{      \"text\": {          \"content\": \"hello world\"      } }",
-            "code" => "06f4****d1ec"
+            "groupName" => "新群名称"
         ]);
         try {
-            $client->sendDingMessageWithOptions($sendDingMessageRequest, $sendDingMessageHeaders, new RuntimeOptions([]));
+            $client->updateGroupNameWithOptions($updateGroupNameRequest, $updateGroupNameHeaders, new RuntimeOptions([]));
         }
         catch (Exception $err) {
             if (!($err instanceof TeaError)) {
@@ -363,15 +315,11 @@ func _main (args []*string) (_err error) {
     return _err
   }
 
-  sendDingMessageHeaders := &dingtalkim_1_0.SendDingMessageHeaders{}
-  sendDingMessageHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
-  sendDingMessageRequest := &dingtalkim_1_0.SendDingMessageRequest{
-    SenderId: tea.String("1745****8777"),
-    ReceiverId: tea.String("1107****2120"),
+  updateGroupNameHeaders := &dingtalkim_1_0.UpdateGroupNameHeaders{}
+  updateGroupNameHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
+  updateGroupNameRequest := &dingtalkim_1_0.UpdateGroupNameRequest{
     OpenConversationId: tea.String("14da****2760"),
-    MessageType: tea.String("text"),
-    Message: tea.String("{      \"text\": {          \"content\": \"hello world\"      } }"),
-    Code: tea.String("06f4****d1ec"),
+    GroupName: tea.String("新群名称"),
   }
   tryErr := func()(_e error) {
     defer func() {
@@ -379,7 +327,7 @@ func _main (args []*string) (_err error) {
         _e = r
       }
     }()
-    _, _err = client.SendDingMessageWithOptions(sendDingMessageRequest, sendDingMessageHeaders, &util.RuntimeOptions{})
+    _, _err = client.UpdateGroupNameWithOptions(updateGroupNameRequest, updateGroupNameHeaders, &util.RuntimeOptions{})
     if _err != nil {
       return _err
     }
@@ -436,18 +384,14 @@ class Client {
 
   static async main(args) {
     let client = Client.createClient();
-    let sendDingMessageHeaders = new dingtalkim_1_0.SendDingMessageHeaders({ });
-    sendDingMessageHeaders.xAcsDingtalkAccessToken = '<your access token>';
-    let sendDingMessageRequest = new dingtalkim_1_0.SendDingMessageRequest({
-      senderId: '1745****8777',
-      receiverId: '1107****2120',
+    let updateGroupNameHeaders = new dingtalkim_1_0.UpdateGroupNameHeaders({ });
+    updateGroupNameHeaders.xAcsDingtalkAccessToken = '<your access token>';
+    let updateGroupNameRequest = new dingtalkim_1_0.UpdateGroupNameRequest({
       openConversationId: '14da****2760',
-      messageType: 'text',
-      message: '{      "text": {          "content": "hello world"      } }',
-      code: '06f4****d1ec',
+      groupName: '新群名称',
     });
     try {
-      await client.sendDingMessageWithOptions(sendDingMessageRequest, sendDingMessageHeaders, new Util.RuntimeOptions({ }));
+      await client.updateGroupNameWithOptions(updateGroupNameRequest, updateGroupNameHeaders, new Util.RuntimeOptions({ }));
     } catch (err) {
       if (!Util.default.empty(err.code) && !Util.default.empty(err.message)) {
         // err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -503,20 +447,16 @@ namespace AlibabaCloud.SDK.Sample
         public static void Main(string[] args)
         {
             AlibabaCloud.SDK.Dingtalkim_1_0.Client client = CreateClient();
-            AlibabaCloud.SDK.Dingtalkim_1_0.Models.SendDingMessageHeaders sendDingMessageHeaders = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.SendDingMessageHeaders();
-            sendDingMessageHeaders.XAcsDingtalkAccessToken = "<your access token>";
-            AlibabaCloud.SDK.Dingtalkim_1_0.Models.SendDingMessageRequest sendDingMessageRequest = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.SendDingMessageRequest
+            AlibabaCloud.SDK.Dingtalkim_1_0.Models.UpdateGroupNameHeaders updateGroupNameHeaders = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.UpdateGroupNameHeaders();
+            updateGroupNameHeaders.XAcsDingtalkAccessToken = "<your access token>";
+            AlibabaCloud.SDK.Dingtalkim_1_0.Models.UpdateGroupNameRequest updateGroupNameRequest = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.UpdateGroupNameRequest
             {
-                SenderId = "1745****8777",
-                ReceiverId = "1107****2120",
                 OpenConversationId = "14da****2760",
-                MessageType = "text",
-                Message = "{      \"text\": {          \"content\": \"hello world\"      } }",
-                Code = "06f4****d1ec",
+                GroupName = "新群名称",
             };
             try
             {
-                client.SendDingMessageWithOptions(sendDingMessageRequest, sendDingMessageHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
+                client.UpdateGroupNameWithOptions(updateGroupNameRequest, updateGroupNameHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
             }
             catch (TeaException err)
             {
@@ -549,7 +489,7 @@ HTTP/1.1 200 OK
 Content-Type:application/json
 
 {
-  "requestId" : "437B****7DB7"
+  "newGroupName" : "新群名称"
 }
 ```
 
@@ -557,13 +497,9 @@ Content-Type:application/json
 
 | HttpCode | 错误码 | 错误信息 | 说明 |
 | --- | --- | --- | --- |
-| 400 | general.parameterError | 输入参数有误，请检查是否同时传了会话id和接收者id或都没传 | 输入参数有误，请检查是否同时传了会话id和接收者id或都没传 |
-| 400 | aim.nonexist | 您尚未开通钉钉客联服务，请联系钉钉官方客服咨询开通 | 您尚未开通钉钉客联服务，请联系钉钉官方客服咨询开通 |
-| 400 | client.nonexist | 钉外账号不存在，请检查 | 钉外账号不存在，请检查 |
-| 400 | service.nonexist | 钉内账号不存在，请检查 | 钉内账号不存在，请检查 |
 | 400 | group.nonexist | 群不存在，请检查 | 群不存在，请检查 |
-| 400 | accesstoken.expired | 用户accessToken过期 | 用户accessToken过期 |
-| 400 | group.notReady | 群会话仍在创建中，请稍后重试 | 群会话仍在创建中，请稍后重试 |
-| 400 | member.nonexist | 发送者不在群里，请检查 | 发送者不在群里，请检查 |
-| 500 | message.send.error | 发送消息失败 | 发送消息失败 |
+| 400 | singlegroup.notsupport | 二人群无法修改群信息 | 二人群无法修改群信息 |
+| 400 | couplegroup.notsupport | 二人群无法修改群信息 | 二人群无法修改群信息 |
+| 400 | group.nameIllegal | 群名称中包含不合规内容，请检查 | 群名称中包含不合规内容，请检查 |
+| 500 | group.updatefail | 更新群信息失败 | 更新群信息失败 |
 | 500 | system.error | 系统异常 | 系统异常 |

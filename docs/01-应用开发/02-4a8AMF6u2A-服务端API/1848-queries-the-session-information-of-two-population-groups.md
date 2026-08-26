@@ -1,22 +1,22 @@
 ---
-title: "获取钉钉客联H5页面地址"
-source_url: "https://open.dingtalk.com/document/development/get-the-dingtalk-guest-group-session-address"
+title: "批量查询跨钉两人互通群列表"
+source_url: "https://open.dingtalk.com/document/development/queries-the-session-information-of-two-population-groups"
 namespace: "development"
-slug: "get-the-dingtalk-guest-group-session-address"
+slug: "queries-the-session-information-of-two-population-groups"
 group: "应用开发"
 tab: "服务端API"
-breadcrumb: "历史文档（不推荐） > 钉钉客联 > 获取钉钉客联H5页面地址"
-doc_id: "SLWFoAuUux"
-updated_at: "2026-07-21 10:00:21"
+breadcrumb: "历史文档（不推荐） > 钉钉客联 > 批量查询跨钉两人互通群列表"
+doc_id: "x1Vvskg84R"
+updated_at: "2026-07-21 10:01:40"
 ---
 
-> Source: https://open.dingtalk.com/document/development/get-the-dingtalk-guest-group-session-address
-> Path: 应用开发 / 服务端API / 历史文档（不推荐） > 钉钉客联 > 获取钉钉客联H5页面地址
-> Updated: 2026-07-21 10:00:21
+> Source: https://open.dingtalk.com/document/development/queries-the-session-information-of-two-population-groups
+> Path: 应用开发 / 服务端API / 历史文档（不推荐） > 钉钉客联 > 批量查询跨钉两人互通群列表
+> Updated: 2026-07-21 10:01:40
 
-# 获取钉钉客联H5页面地址
+# 批量查询跨钉两人互通群列表
 
-创建钉钉客联互通群后，可以调用本接口获取钉钉客联H5会话地址，钉外账号通过H5页面地址打开对应的群会话。
+调用本接口，可根据钉内成员userId和钉外成员标识，查询两者共同存在的互通群列表。
 
 ### 接口使用说明
 
@@ -29,24 +29,24 @@ updated_at: "2026-07-21 10:00:21"
 
 | 应用类型 | 是否支持 | 权限 | API Explorer调试 |
 | --- | --- | --- | --- |
-| 企业内部应用 | 支持 | 钉钉客联基础数据读写权限 | [API Explorer](https://open-dev.dingtalk.com/apiExplorer#/?devType=org&api=im_1.0%23GetConversationUrl) |
-| 第三方企业应用 | 支持 | 钉钉客联基础数据读写权限 | [API Explorer](https://open-dev.dingtalk.com/apiExplorer#/?devType=isv&api=im_1.0%23GetConversationUrl) |
+| 企业内部应用 | 支持 | 钉钉客联基础数据读写权限 | [API Explorer](https://open-dev.dingtalk.com/apiExplorer#/?devType=org&api=im_1.0%23QuerySingleGroup) |
+| 第三方企业应用 | 支持 | 钉钉客联基础数据读写权限 | [API Explorer](https://open-dev.dingtalk.com/apiExplorer#/?devType=isv&api=im_1.0%23QuerySingleGroup) |
 | 第三方个人应用 | 暂不支持 | 暂不支持 | 暂不支持 |
 
 ## 请求方法
 
 ```
-POST /v1.0/im/conversations/urls HTTP/1.1
+POST /v1.0/im/interconnections/doubleGroups/query HTTP/1.1
 Host:api.dingtalk.com
 x-acs-dingtalk-access-token:String
 Content-Type:application/json
 
 {
-  "appUserId" : "String",
-  "userId" : "String",
-  "openConversationId" : "String",
-  "channelCode" : "String",
-  "deviceId" : "String"
+  "groupTemplateId" : "String",
+  "groupMembers" : [ {
+    "appUserId" : "String",
+    "userId" : "String"
+  } ]
 }
 ```
 
@@ -60,17 +60,19 @@ Content-Type:application/json
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| appUserId | String | 是 | 钉外账号在业务系统内的标识，通过调用[创建钉钉客联钉外账号](1852-create-bc-account-association.md)接口获取，长度限制为1~64个字符。例如：1107\*\*\*\*2120。 |
-| userId | String | 否 | 钉内账号userId，长度限制为1～64个字符。 例如：1745\*\*\*\*8777  **[!NOTE]**     - 如果传该参数，返回的地址是与当前钉内userId用户的会话地址。 - 如果不传该参数，返回的地址是与当前钉外用户所有相关的会话列表页面地址。 |
-| openConversationId | String | 否 | 群会话openConversationId，可调用[创建钉钉客联普通互通群](1853-create-common-group-new-version.md) / [创建钉钉客联两人互通群](1854-creating-two-groups-of-people.md)接口获取，长度限制为1～32个字符，例如：14da\*\*\*\*2760。 |
-| channelCode | String | 是 | 渠道code，获取方式可查看[渠道配置](1847-interconnections-channel.md)文档，示例如：M0U+\*\*\*\*8Ep=。  **[!NOTE]**     - 如果当前code是移动端的渠道code，则返回值结果为移动端H5页面地址；若果是PC端的渠道code，则返回PC端H5页面。 - 不同渠道的code只会影响渲染效果，不会影响群列表的返回结果。 |
-| deviceId | String | 否 | 设备id，用于支持多端登录。长度限制为1~20个字符   - 若不传该参数，多次生成同一个钉外账号的url，访问url会互踢会话。 - 若传了该参数，多次生成同一个钉外账号的url，访问url会同时在线。 - 最多支持5个设备同时在线，超过5个会互踢。 |
+| groupTemplateId | String | 是 | 群模板Id，获取方式请参考[群模板配置](1838-interconnections-model.md)文档， 长度限制为1～32个字符，例如：8d42\*\*\*\*nkld。  **[!NOTE]**    本接口查询的是跨钉两人群，模板ID需要传群类型为**跨钉两人群**的模板。 |
+| groupMembers | Array | 是 | 群成员列表，最大值20。 |
+| appUserId | String | 是 | 钉外账号在业务系统内的唯一标志，调用[创建钉钉客联钉外账号](1844-create-bc-account-association.md)接口获取，长度限制为1～64个字符，例如：1107\*\*\*\*2120。 |
+| userId | String | 是 | 钉内账号userId，长度限制为1～64个字符，例如：1745\*\*\*\*8777。 |
 
 ## 返回参数
 
 | 名称 | 类型 | 描述 |
 | --- | --- | --- |
-| url | String | H5页面URL。 |
+| openConversations | Array | 群列表。 |
+| openConversationId | String | 钉钉客联群会话openConversationId。  **[!NOTE]**    客联的群会话id与钉钉IM的群会话ID不同，客联的群会话ID是随机生成的，在使用时不可混用。 |
+| appUserId | String | 钉外账号在业务系统内的唯一标志，长度限制为1～64个字符。 |
+| userId | String | 钉内账号userId，长度限制为1～64个字符。 |
 
 ## 示例
 
@@ -79,16 +81,17 @@ Content-Type:application/json
 HTTP
 
 ```
-POST /v1.0/im/conversations/urls HTTP/1.1
+POST /v1.0/im/interconnections/doubleGroups/query HTTP/1.1
 Host:api.dingtalk.com
 x-acs-dingtalk-access-token:xxxxx
 Content-Type:application/json
 
 {
-  "appUserId" : "1107****2120",
-  "userId" : "1745****8777",
-  "openConversationId" : "14da****2760",
-  "channelCode" : "M0U+****8Ep="
+  "groupTemplateId" : "14da****2760",
+  "groupMembers" : [ {
+    "appUserId" : "1107****2120",
+    "userId" : "1745****8778"
+  } ]
 }
 ```
 
@@ -117,15 +120,18 @@ public class Sample {
     public static void main(String[] args_) throws Exception {
         java.util.List<String> args = java.util.Arrays.asList(args_);
         com.aliyun.dingtalkim_1_0.Client client = Sample.createClient();
-        com.aliyun.dingtalkim_1_0.models.GetConversationUrlHeaders getConversationUrlHeaders = new com.aliyun.dingtalkim_1_0.models.GetConversationUrlHeaders();
-        getConversationUrlHeaders.xAcsDingtalkAccessToken = "<your access token>";
-        com.aliyun.dingtalkim_1_0.models.GetConversationUrlRequest getConversationUrlRequest = new com.aliyun.dingtalkim_1_0.models.GetConversationUrlRequest()
+        com.aliyun.dingtalkim_1_0.models.QuerySingleGroupHeaders querySingleGroupHeaders = new com.aliyun.dingtalkim_1_0.models.QuerySingleGroupHeaders();
+        querySingleGroupHeaders.xAcsDingtalkAccessToken = "<your access token>";
+        com.aliyun.dingtalkim_1_0.models.QuerySingleGroupRequest.QuerySingleGroupRequestGroupMembers groupMembers0 = new com.aliyun.dingtalkim_1_0.models.QuerySingleGroupRequest.QuerySingleGroupRequestGroupMembers()
                 .setAppUserId("1107****2120")
-                .setUserId("1745****8777")
-                .setOpenConversationId("14da****2760")
-                .setChannelCode("M0U+****8Ep=");
+                .setUserId("1745****8778");
+        com.aliyun.dingtalkim_1_0.models.QuerySingleGroupRequest querySingleGroupRequest = new com.aliyun.dingtalkim_1_0.models.QuerySingleGroupRequest()
+                .setGroupTemplateId("14da****2760")
+                .setGroupMembers(java.util.Arrays.asList(
+                    groupMembers0
+                ));
         try {
-            client.getConversationUrlWithOptions(getConversationUrlRequest, getConversationUrlHeaders, new com.aliyun.teautil.models.RuntimeOptions());
+            client.querySingleGroupWithOptions(querySingleGroupRequest, querySingleGroupHeaders, new com.aliyun.teautil.models.RuntimeOptions());
         } catch (TeaException err) {
             if (!com.aliyun.teautil.Common.empty(err.code) && !com.aliyun.teautil.Common.empty(err.message)) {
                 // err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -178,16 +184,20 @@ class Sample:
         args: List[str],
     ) -> None:
         client = Sample.create_client()
-        get_conversation_url_headers = dingtalkim__1__0_models.GetConversationUrlHeaders()
-        get_conversation_url_headers.x_acs_dingtalk_access_token = '<your access token>'
-        get_conversation_url_request = dingtalkim__1__0_models.GetConversationUrlRequest(
+        query_single_group_headers = dingtalkim__1__0_models.QuerySingleGroupHeaders()
+        query_single_group_headers.x_acs_dingtalk_access_token = '<your access token>'
+        group_members_0 = dingtalkim__1__0_models.QuerySingleGroupRequestGroupMembers(
             app_user_id='1107****2120',
-            user_id='1745****8777',
-            open_conversation_id='14da****2760',
-            channel_code='M0U+****8Ep='
+            user_id='1745****8778'
+        )
+        query_single_group_request = dingtalkim__1__0_models.QuerySingleGroupRequest(
+            group_template_id='14da****2760',
+            group_members=[
+                group_members_0
+            ]
         )
         try:
-            client.get_conversation_url_with_options(get_conversation_url_request, get_conversation_url_headers, util_models.RuntimeOptions())
+            client.query_single_group_with_options(query_single_group_request, query_single_group_headers, util_models.RuntimeOptions())
         except Exception as err:
             if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
                 # err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -198,16 +208,20 @@ class Sample:
         args: List[str],
     ) -> None:
         client = Sample.create_client()
-        get_conversation_url_headers = dingtalkim__1__0_models.GetConversationUrlHeaders()
-        get_conversation_url_headers.x_acs_dingtalk_access_token = '<your access token>'
-        get_conversation_url_request = dingtalkim__1__0_models.GetConversationUrlRequest(
+        query_single_group_headers = dingtalkim__1__0_models.QuerySingleGroupHeaders()
+        query_single_group_headers.x_acs_dingtalk_access_token = '<your access token>'
+        group_members_0 = dingtalkim__1__0_models.QuerySingleGroupRequestGroupMembers(
             app_user_id='1107****2120',
-            user_id='1745****8777',
-            open_conversation_id='14da****2760',
-            channel_code='M0U+****8Ep='
+            user_id='1745****8778'
+        )
+        query_single_group_request = dingtalkim__1__0_models.QuerySingleGroupRequest(
+            group_template_id='14da****2760',
+            group_members=[
+                group_members_0
+            ]
         )
         try:
-            await client.get_conversation_url_with_options_async(get_conversation_url_request, get_conversation_url_headers, util_models.RuntimeOptions())
+            await client.query_single_group_with_options_async(query_single_group_request, query_single_group_headers, util_models.RuntimeOptions())
         except Exception as err:
             if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
                 # err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -231,8 +245,9 @@ use AlibabaCloud\Tea\Exception\TeaError;
 use AlibabaCloud\Tea\Utils\Utils;
 
 use Darabonba\OpenApi\Models\Config;
-use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\GetConversationUrlHeaders;
-use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\GetConversationUrlRequest;
+use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\QuerySingleGroupHeaders;
+use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\QuerySingleGroupRequest\groupMembers;
+use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\QuerySingleGroupRequest;
 use AlibabaCloud\Tea\Utils\Utils\RuntimeOptions;
 
 class Sample {
@@ -254,16 +269,20 @@ class Sample {
      */
     public static function main($args){
         $client = self::createClient();
-        $getConversationUrlHeaders = new GetConversationUrlHeaders([]);
-        $getConversationUrlHeaders->xAcsDingtalkAccessToken = "<your access token>";
-        $getConversationUrlRequest = new GetConversationUrlRequest([
+        $querySingleGroupHeaders = new QuerySingleGroupHeaders([]);
+        $querySingleGroupHeaders->xAcsDingtalkAccessToken = "<your access token>";
+        $groupMembers0 = new groupMembers([
             "appUserId" => "1107****2120",
-            "userId" => "1745****8777",
-            "openConversationId" => "14da****2760",
-            "channelCode" => "M0U+****8Ep="
+            "userId" => "1745****8778"
+        ]);
+        $querySingleGroupRequest = new QuerySingleGroupRequest([
+            "groupTemplateId" => "14da****2760",
+            "groupMembers" => [
+                $groupMembers0
+            ]
         ]);
         try {
-            $client->getConversationUrlWithOptions($getConversationUrlRequest, $getConversationUrlHeaders, new RuntimeOptions([]));
+            $client->querySingleGroupWithOptions($querySingleGroupRequest, $querySingleGroupHeaders, new RuntimeOptions([]));
         }
         catch (Exception $err) {
             if (!($err instanceof TeaError)) {
@@ -316,13 +335,15 @@ func _main (args []*string) (_err error) {
     return _err
   }
 
-  getConversationUrlHeaders := &dingtalkim_1_0.GetConversationUrlHeaders{}
-  getConversationUrlHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
-  getConversationUrlRequest := &dingtalkim_1_0.GetConversationUrlRequest{
+  querySingleGroupHeaders := &dingtalkim_1_0.QuerySingleGroupHeaders{}
+  querySingleGroupHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
+  groupMembers0 := &dingtalkim_1_0.QuerySingleGroupRequestGroupMembers{
     AppUserId: tea.String("1107****2120"),
-    UserId: tea.String("1745****8777"),
-    OpenConversationId: tea.String("14da****2760"),
-    ChannelCode: tea.String("M0U+****8Ep="),
+    UserId: tea.String("1745****8778"),
+  }
+  querySingleGroupRequest := &dingtalkim_1_0.QuerySingleGroupRequest{
+    GroupTemplateId: tea.String("14da****2760"),
+    GroupMembers: []*dingtalkim_1_0.QuerySingleGroupRequestGroupMembers{groupMembers0},
   }
   tryErr := func()(_e error) {
     defer func() {
@@ -330,7 +351,7 @@ func _main (args []*string) (_err error) {
         _e = r
       }
     }()
-    _, _err = client.GetConversationUrlWithOptions(getConversationUrlRequest, getConversationUrlHeaders, &util.RuntimeOptions{})
+    _, _err = client.QuerySingleGroupWithOptions(querySingleGroupRequest, querySingleGroupHeaders, &util.RuntimeOptions{})
     if _err != nil {
       return _err
     }
@@ -386,16 +407,20 @@ export default class Client {
 
   static async main(args: string[]): Promise<void> {
     let client = Client.createClient();
-    let getConversationUrlHeaders = new $dingtalkim_1_0.GetConversationUrlHeaders({ });
-    getConversationUrlHeaders.xAcsDingtalkAccessToken = "<your access token>";
-    let getConversationUrlRequest = new $dingtalkim_1_0.GetConversationUrlRequest({
+    let querySingleGroupHeaders = new $dingtalkim_1_0.QuerySingleGroupHeaders({ });
+    querySingleGroupHeaders.xAcsDingtalkAccessToken = "<your access token>";
+    let groupMembers0 = new $dingtalkim_1_0.QuerySingleGroupRequestGroupMembers({
       appUserId: "1107****2120",
-      userId: "1745****8777",
-      openConversationId: "14da****2760",
-      channelCode: "M0U+****8Ep=",
+      userId: "1745****8778",
+    });
+    let querySingleGroupRequest = new $dingtalkim_1_0.QuerySingleGroupRequest({
+      groupTemplateId: "14da****2760",
+      groupMembers: [
+        groupMembers0
+      ],
     });
     try {
-      await client.getConversationUrlWithOptions(getConversationUrlRequest, getConversationUrlHeaders, new $Util.RuntimeOptions({ }));
+      await client.querySingleGroupWithOptions(querySingleGroupRequest, querySingleGroupHeaders, new $Util.RuntimeOptions({ }));
     } catch (err) {
       if (!Util.empty(err.code) && !Util.empty(err.message)) {
         // err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -444,18 +469,24 @@ namespace AlibabaCloud.SDK.Sample
         public static void Main(string[] args)
         {
             AlibabaCloud.SDK.Dingtalkim_1_0.Client client = CreateClient();
-            AlibabaCloud.SDK.Dingtalkim_1_0.Models.GetConversationUrlHeaders getConversationUrlHeaders = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.GetConversationUrlHeaders();
-            getConversationUrlHeaders.XAcsDingtalkAccessToken = "<your access token>";
-            AlibabaCloud.SDK.Dingtalkim_1_0.Models.GetConversationUrlRequest getConversationUrlRequest = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.GetConversationUrlRequest
+            AlibabaCloud.SDK.Dingtalkim_1_0.Models.QuerySingleGroupHeaders querySingleGroupHeaders = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.QuerySingleGroupHeaders();
+            querySingleGroupHeaders.XAcsDingtalkAccessToken = "<your access token>";
+            AlibabaCloud.SDK.Dingtalkim_1_0.Models.QuerySingleGroupRequest.QuerySingleGroupRequestGroupMembers groupMembers0 = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.QuerySingleGroupRequest.QuerySingleGroupRequestGroupMembers
             {
                 AppUserId = "1107****2120",
-                UserId = "1745****8777",
-                OpenConversationId = "14da****2760",
-                ChannelCode = "M0U+****8Ep=",
+                UserId = "1745****8778",
+            };
+            AlibabaCloud.SDK.Dingtalkim_1_0.Models.QuerySingleGroupRequest querySingleGroupRequest = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.QuerySingleGroupRequest
+            {
+                GroupTemplateId = "14da****2760",
+                GroupMembers = new List<AlibabaCloud.SDK.Dingtalkim_1_0.Models.QuerySingleGroupRequest.QuerySingleGroupRequestGroupMembers>
+                {
+                    groupMembers0
+                },
             };
             try
             {
-                client.GetConversationUrlWithOptions(getConversationUrlRequest, getConversationUrlHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
+                client.QuerySingleGroupWithOptions(querySingleGroupRequest, querySingleGroupHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
             }
             catch (TeaException err)
             {
@@ -488,7 +519,11 @@ HTTP/1.1 200 OK
 Content-Type:application/json
 
 {
-  "url" : "https://****"
+  "openConversations" : [ {
+    "openConversationId" : "14da****2760",
+    "appUserId" : "1107****2120",
+    "userId" : "1745****8778"
+  } ]
 }
 ```
 
@@ -496,9 +531,8 @@ Content-Type:application/json
 
 | HttpCode | 错误码 | 错误信息 | 说明 |
 | --- | --- | --- | --- |
-| 400 | aim.nonexist | 您尚未开通钉钉客联服务，请联系钉钉官方客服咨询开通 | 您尚未开通钉钉客联服务，请联系钉钉官方客服咨询开通 |
-| 400 | client.nonexist | 钉外账号不存在，请检查 | 钉外账号不存在，请检查 |
-| 400 | service.nonexist | 钉内账号不存在，请检查 | 钉内账号不存在，请检查 |
-| 400 | channel.nonexist | 渠道不存在，请检查 | 渠道不存在，请检查 |
-| 400 | group.qrcode.nonexist | 群会话不存在，请检查 | 群会话不存在，请检查 |
+| 400 | group.num.overlimit | 查询群个群超出阈值，请检查 | 查询群个群超出阈值，请检查 |
+| 400 | aim.nonexist | 租户不存在，请检查 | 租户不存在，请检查 |
+| 400 | template.nonexist | 群模板不存在，请检查 | 群模板不存在，请检查 |
+| 400 | template.mismatch | 群模板类型不匹配 | 群模板类型不匹配 |
 | 500 | system.error | 系统异常 | 系统异常 |

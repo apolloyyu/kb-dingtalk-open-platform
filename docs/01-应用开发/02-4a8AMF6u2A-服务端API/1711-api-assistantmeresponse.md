@@ -1,22 +1,22 @@
 ---
-title: "AI助理响应接口-应用权限"
-source_url: "https://open.dingtalk.com/document/development/api-assistantresponse"
+title: "AI助理响应接口-个人权限"
+source_url: "https://open.dingtalk.com/document/development/api-assistantmeresponse"
 namespace: "development"
-slug: "api-assistantresponse"
+slug: "api-assistantmeresponse"
 group: "应用开发"
 tab: "服务端API"
-breadcrumb: "历史文档（不推荐） > AI 助理 > 响应 > AI助理响应接口-应用权限"
-doc_id: "DhOAuQlJT8"
-updated_at: "2026-03-06 09:22:40"
+breadcrumb: "历史文档（不推荐） > AI 助理 > 响应 > AI助理响应接口-个人权限"
+doc_id: "o61tsQEhWK"
+updated_at: "2026-03-06 09:22:41"
 ---
 
-> Source: https://open.dingtalk.com/document/development/api-assistantresponse
-> Path: 应用开发 / 服务端API / 历史文档（不推荐） > AI 助理 > 响应 > AI助理响应接口-应用权限
-> Updated: 2026-03-06 09:22:40
+> Source: https://open.dingtalk.com/document/development/api-assistantmeresponse
+> Path: 应用开发 / 服务端API / 历史文档（不推荐） > AI 助理 > 响应 > AI助理响应接口-个人权限
+> Updated: 2026-03-06 09:22:41
 
-# AI助理响应接口-应用权限
+# AI助理响应接口-个人权限
 
-调用本接口，通过应用权限token和助理相关参数，直接与助理直接对话，并获取大模型返回结果。
+调用本接口，通过个人权限token和助理相关参数，直接与助理直接对话，并获取大模型返回结果。
 
 > **[!IMPORTANT]**
 >
@@ -35,7 +35,7 @@ updated_at: "2026-03-06 09:22:40"
 ## 请求方法
 
 ```
-POST /v1.0/assistant/{assistantId}/compatible-mode/responses HTTP/1.1
+POST /v1.0/assistant/{assistantId}/me/compatible-mode/responses HTTP/1.1
 Host:api.dingtalk.com
 x-acs-dingtalk-access-token:String
 Content-Type:application/json
@@ -57,15 +57,15 @@ Content-Type:application/json
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| assistantId | String | 否 | 助理 ID，可调用[获取用户创建的AI助理列表](1731-assistant-acquires-list-assistants-created-by-users.md)接口，获取助理 ID 信息。 |
+| assistantId | String | 否 | 助理 ID，可调用[获取用户创建的AI助理列表](1727-assistant-acquires-list-assistants-created-by-users.md)接口获取助理 ID。 |
 
 ## Body参数
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| input | String | 是 | 用户输入。最多支持输入4000个字符。 |
+| input | String | 是 | 用户输入，最多支持输入4000个字符。 |
 | instructions | String | 否 | 开发者显式指定的角色设定，如果当前角色设定有值且有效，则会在大模型推理时使用当前传入的角色设定，否则默认使用助理创建时填写的角色设定。 |
-| stream | Boolean | 否 | 是否是流式输出：   - true：流式输出 - false：非流式输出   **[!NOTE]**  默认为非流式。 |
+| stream | Boolean | 否 | 是否是流式输出：   - true：流式输出 - false：非流式输出   **[!NOTE]**    默认为非流式。 |
 | metadata | Map | 否 | 保留字段，用于扩展使用，暂无内容。 |
 
 ## 返回参数
@@ -82,9 +82,9 @@ Content-Type:application/json
 | id | String | 标识当前消息的唯一ID。 |
 | role | String | 消息角色：   - **user**：用户 - **assistant**：助理 - **tool**：技能 |
 | content | Array | 存放具体的消息内容。 |
-| type | String | 消息的类型，一般默认为 output\_text。 |
-| text | String | user 或者 assistant，tool 角色的文本内容。 |
-| annotations | Array of Any | 消息的其他扩展信息。 |
+| type | String | 消息的类型，一般默认为：output\_text。 |
+| text | String | 返回的文本内容。 |
+| annotations | Array of Any | 具体消息扩展信息。 |
 | metadata | Map | 保留字段，用于扩展使用，暂无内容。 |
 | object | String | 对象类型，一直为 response。 |
 
@@ -95,9 +95,9 @@ Content-Type:application/json
 HTTP
 
 ```
-POST /v1.0/assistant/d748***965/compatible-mode/responses HTTP/1.1
+POST /v1.0/assistant/d748***965/me/compatible-mode/responses HTTP/1.1
 Host:api.dingtalk.com
-x-acs-dingtalk-access-token:656***11b
+x-acs-dingtalk-access-token:f2a6d208b64432df8eea4a9a937
 Content-Type:application/json
 
 {
@@ -134,14 +134,14 @@ public class Sample {
     public static void main(String[] args_) throws Exception {
         
         com.aliyun.dingtalkassistant_1_0.Client client = Sample.createClient();
-        com.aliyun.dingtalkassistant_1_0.models.AssistantResponseHeaders assistantResponseHeaders = new com.aliyun.dingtalkassistant_1_0.models.AssistantResponseHeaders();
-        assistantResponseHeaders.xAcsDingtalkAccessToken = "<your access token>";
-        com.aliyun.dingtalkassistant_1_0.models.AssistantResponseRequest assistantResponseRequest = new com.aliyun.dingtalkassistant_1_0.models.AssistantResponseRequest()
+        com.aliyun.dingtalkassistant_1_0.models.AssistantMeResponseHeaders assistantMeResponseHeaders = new com.aliyun.dingtalkassistant_1_0.models.AssistantMeResponseHeaders();
+        assistantMeResponseHeaders.xAcsDingtalkAccessToken = "<your access token>";
+        com.aliyun.dingtalkassistant_1_0.models.AssistantMeResponseRequest assistantMeResponseRequest = new com.aliyun.dingtalkassistant_1_0.models.AssistantMeResponseRequest()
                 .setInput("你好")
                 .setInstructions("你是一个聪明的小助理")
                 .setStream(false);
         try {
-            client.assistantResponseWithOptions("d748***965", assistantResponseRequest, assistantResponseHeaders, new com.aliyun.teautil.models.RuntimeOptions());
+            client.assistantMeResponseWithOptions("d748***965", assistantMeResponseRequest, assistantMeResponseHeaders, new com.aliyun.teautil.models.RuntimeOptions());
         } catch (TeaException err) {
             if (!com.aliyun.teautil.Common.empty(err.code) && !com.aliyun.teautil.Common.empty(err.message)) {
                 // err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -195,15 +195,15 @@ class Sample:
         args: List[str],
     ) -> None:
         client = Sample.create_client()
-        assistant_response_headers = dingtalkassistant__1__0_models.AssistantResponseHeaders()
-        assistant_response_headers.x_acs_dingtalk_access_token = '<your access token>'
-        assistant_response_request = dingtalkassistant__1__0_models.AssistantResponseRequest(
+        assistant_me_response_headers = dingtalkassistant__1__0_models.AssistantMeResponseHeaders()
+        assistant_me_response_headers.x_acs_dingtalk_access_token = '<your access token>'
+        assistant_me_response_request = dingtalkassistant__1__0_models.AssistantMeResponseRequest(
             input='你好',
             instructions='你是一个聪明的小助理',
             stream=False
         )
         try:
-            client.assistant_response_with_options('d748***965', assistant_response_request, assistant_response_headers, util_models.RuntimeOptions())
+            client.assistant_me_response_with_options('d748***965', assistant_me_response_request, assistant_me_response_headers, util_models.RuntimeOptions())
         except Exception as err:
             if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
                 # err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -214,15 +214,15 @@ class Sample:
         args: List[str],
     ) -> None:
         client = Sample.create_client()
-        assistant_response_headers = dingtalkassistant__1__0_models.AssistantResponseHeaders()
-        assistant_response_headers.x_acs_dingtalk_access_token = '<your access token>'
-        assistant_response_request = dingtalkassistant__1__0_models.AssistantResponseRequest(
+        assistant_me_response_headers = dingtalkassistant__1__0_models.AssistantMeResponseHeaders()
+        assistant_me_response_headers.x_acs_dingtalk_access_token = '<your access token>'
+        assistant_me_response_request = dingtalkassistant__1__0_models.AssistantMeResponseRequest(
             input='你好',
             instructions='你是一个聪明的小助理',
             stream=False
         )
         try:
-            await client.assistant_response_with_options_async('d748***965', assistant_response_request, assistant_response_headers, util_models.RuntimeOptions())
+            await client.assistant_me_response_with_options_async('d748***965', assistant_me_response_request, assistant_me_response_headers, util_models.RuntimeOptions())
         except Exception as err:
             if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
                 # err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -246,8 +246,8 @@ use AlibabaCloud\Tea\Exception\TeaError;
 use AlibabaCloud\Tea\Utils\Utils;
 
 use Darabonba\OpenApi\Models\Config;
-use AlibabaCloud\SDK\Dingtalk\Vassistant_1_0\Models\AssistantResponseHeaders;
-use AlibabaCloud\SDK\Dingtalk\Vassistant_1_0\Models\AssistantResponseRequest;
+use AlibabaCloud\SDK\Dingtalk\Vassistant_1_0\Models\AssistantMeResponseHeaders;
+use AlibabaCloud\SDK\Dingtalk\Vassistant_1_0\Models\AssistantMeResponseRequest;
 use AlibabaCloud\Tea\Utils\Utils\RuntimeOptions;
 
 class Sample {
@@ -269,15 +269,15 @@ class Sample {
      */
     public static function main($args){
         $client = self::createClient();
-        $assistantResponseHeaders = new AssistantResponseHeaders([]);
-        $assistantResponseHeaders->xAcsDingtalkAccessToken = "<your access token>";
-        $assistantResponseRequest = new AssistantResponseRequest([
+        $assistantMeResponseHeaders = new AssistantMeResponseHeaders([]);
+        $assistantMeResponseHeaders->xAcsDingtalkAccessToken = "<your access token>";
+        $assistantMeResponseRequest = new AssistantMeResponseRequest([
             "input" => "你好",
             "instructions" => "你是一个聪明的小助理",
             "stream" => false
         ]);
         try {
-            $client->assistantResponseWithOptions("d748***965", $assistantResponseRequest, $assistantResponseHeaders, new RuntimeOptions([]));
+            $client->assistantMeResponseWithOptions("d748***965", $assistantMeResponseRequest, $assistantMeResponseHeaders, new RuntimeOptions([]));
         }
         catch (Exception $err) {
             if (!($err instanceof TeaError)) {
@@ -335,9 +335,9 @@ func _main (args []*string) (_err error) {
     return _err
   }
 
-  assistantResponseHeaders := &dingtalkassistant_1_0.AssistantResponseHeaders{}
-  assistantResponseHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
-  assistantResponseRequest := &dingtalkassistant_1_0.AssistantResponseRequest{
+  assistantMeResponseHeaders := &dingtalkassistant_1_0.AssistantMeResponseHeaders{}
+  assistantMeResponseHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
+  assistantMeResponseRequest := &dingtalkassistant_1_0.AssistantMeResponseRequest{
     Input: tea.String("你好"),
     Instructions: tea.String("你是一个聪明的小助理"),
     Stream: tea.Bool(false),
@@ -348,7 +348,7 @@ func _main (args []*string) (_err error) {
         _e = r
       }
     }()
-    _, _err = client.AssistantResponseWithOptions(tea.String("d748***965"), assistantResponseRequest, assistantResponseHeaders, &util.RuntimeOptions{})
+    _, _err = client.AssistantMeResponseWithOptions(tea.String("d748***965"), assistantMeResponseRequest, assistantMeResponseHeaders, &util.RuntimeOptions{})
     if _err != nil {
       return _err
     }
@@ -405,15 +405,15 @@ class Client {
 
   static async main(args) {
     let client = Client.createClient();
-    let assistantResponseHeaders = new dingtalkassistant_1_0.AssistantResponseHeaders({ });
-    assistantResponseHeaders.xAcsDingtalkAccessToken = '<your access token>';
-    let assistantResponseRequest = new dingtalkassistant_1_0.AssistantResponseRequest({
+    let assistantMeResponseHeaders = new dingtalkassistant_1_0.AssistantMeResponseHeaders({ });
+    assistantMeResponseHeaders.xAcsDingtalkAccessToken = '<your access token>';
+    let assistantMeResponseRequest = new dingtalkassistant_1_0.AssistantMeResponseRequest({
       input: '你好',
       instructions: '你是一个聪明的小助理',
       stream: false,
     });
     try {
-      await client.assistantResponseWithOptions('d748***965', assistantResponseRequest, assistantResponseHeaders, new Util.RuntimeOptions({ }));
+      await client.assistantMeResponseWithOptions('d748***965', assistantMeResponseRequest, assistantMeResponseHeaders, new Util.RuntimeOptions({ }));
     } catch (err) {
       if (!Util.default.empty(err.code) && !Util.default.empty(err.message)) {
         // err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -469,9 +469,9 @@ namespace AlibabaCloud.SDK.Sample
         public static void Main(string[] args)
         {
             AlibabaCloud.SDK.Dingtalkassistant_1_0.Client client = CreateClient();
-            AlibabaCloud.SDK.Dingtalkassistant_1_0.Models.AssistantResponseHeaders assistantResponseHeaders = new AlibabaCloud.SDK.Dingtalkassistant_1_0.Models.AssistantResponseHeaders();
-            assistantResponseHeaders.XAcsDingtalkAccessToken = "<your access token>";
-            AlibabaCloud.SDK.Dingtalkassistant_1_0.Models.AssistantResponseRequest assistantResponseRequest = new AlibabaCloud.SDK.Dingtalkassistant_1_0.Models.AssistantResponseRequest
+            AlibabaCloud.SDK.Dingtalkassistant_1_0.Models.AssistantMeResponseHeaders assistantMeResponseHeaders = new AlibabaCloud.SDK.Dingtalkassistant_1_0.Models.AssistantMeResponseHeaders();
+            assistantMeResponseHeaders.XAcsDingtalkAccessToken = "<your access token>";
+            AlibabaCloud.SDK.Dingtalkassistant_1_0.Models.AssistantMeResponseRequest assistantMeResponseRequest = new AlibabaCloud.SDK.Dingtalkassistant_1_0.Models.AssistantMeResponseRequest
             {
                 Input = "你好",
                 Instructions = "你是一个聪明的小助理",
@@ -479,7 +479,7 @@ namespace AlibabaCloud.SDK.Sample
             };
             try
             {
-                client.AssistantResponseWithOptions("d748***965", assistantResponseRequest, assistantResponseHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
+                client.AssistantMeResponseWithOptions("d748***965", assistantMeResponseRequest, assistantMeResponseHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
             }
             catch (TeaException err)
             {
@@ -547,7 +547,7 @@ Content-Type:application/json
 | 500 | message.retrieve.exception | %s | 系统异常，请稍后重试(E000188) |
 | 500 | message.retrieve.throwable | %s | 系统异常，请稍后重试(E000130) |
 | 500 | run.create.error | %s | AI助理创建运行实例失败(E000019) |
-| 500 | run.accesstoken.error | %s | 校验AccessToken失败，请检查AccessToken是否有效，并检查“AI.Assistant.Run”该权限点已经授权 |
+| 500 | run.accesstoken.error | %s | 校验AccessToken失败，请检查AccessToken是否有效，并检查“AI.Assistant.Run.Me”该权限点已经授权 |
 | 500 | run.authuser.error | %s | 系统繁忙，请稍后重试（E000084） |
 | 500 | run.create.throwable | %s | 系统繁忙，请稍后重试（E000121） |
 | 500 | run.retrieve.throwable | %s | 系统异常，请稍后重试(E000130) |

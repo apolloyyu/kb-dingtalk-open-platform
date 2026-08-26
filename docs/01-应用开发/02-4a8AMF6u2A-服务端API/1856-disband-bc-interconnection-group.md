@@ -1,22 +1,22 @@
 ---
-title: "修改钉钉客联互通群头像"
-source_url: "https://open.dingtalk.com/document/development/modify-the-avatar-of-a-communication-group"
+title: "解散钉钉客联互通群"
+source_url: "https://open.dingtalk.com/document/development/disband-bc-interconnection-group"
 namespace: "development"
-slug: "modify-the-avatar-of-a-communication-group"
+slug: "disband-bc-interconnection-group"
 group: "应用开发"
 tab: "服务端API"
-breadcrumb: "历史文档（不推荐） > 钉钉客联 > 修改钉钉客联互通群头像"
-doc_id: "0Zm8aN8MoZ"
-updated_at: "2026-07-21 10:05:50"
+breadcrumb: "历史文档（不推荐） > 钉钉客联 > 解散钉钉客联互通群"
+doc_id: "1h0v9LiboZ"
+updated_at: "2026-07-21 10:10:09"
 ---
 
-> Source: https://open.dingtalk.com/document/development/modify-the-avatar-of-a-communication-group
-> Path: 应用开发 / 服务端API / 历史文档（不推荐） > 钉钉客联 > 修改钉钉客联互通群头像
-> Updated: 2026-07-21 10:05:50
+> Source: https://open.dingtalk.com/document/development/disband-bc-interconnection-group
+> Path: 应用开发 / 服务端API / 历史文档（不推荐） > 钉钉客联 > 解散钉钉客联互通群
+> Updated: 2026-07-21 10:10:09
 
-# 修改钉钉客联互通群头像
+# 解散钉钉客联互通群
 
-调用本接口，修改互通群头像。
+调用本接口，解散互通群。
 
 ### 接口使用说明
 
@@ -25,10 +25,8 @@ updated_at: "2026-07-21 10:05:50"
 > - 该接口**已经暂停新客户支持**，进入EOL（end of life）阶段，敬请期待新的开放能力支持。
 > - 调用本接口之前，需要开通钉钉互联应用。
 
-例如，有一个互通群名为**跨钉两人群**，群头像如下图所示。
-![](https://img.alicdn.com/imgextra/i3/O1CN01sEP9VX1fa7kUGvX4d_!!6000000004022-2-tps-2268-958.png)
-调用本接口修改群头像，接口调用成功后，效果如下图所示。
-![](https://img.alicdn.com/imgextra/i2/O1CN013IA59e1kzq45no112_!!6000000004755-2-tps-2274-1012.png)
+例如，有一个互通群名为**测试群**，调用本接口可解散该群会话。接口调用成功后，效果如下图所示。
+![](https://img.alicdn.com/imgextra/i1/O1CN01P3LPvE1w0GCjCdVJY_!!6000000006245-2-tps-2266-1058.png)
 
 ## 权限
 
@@ -36,21 +34,20 @@ updated_at: "2026-07-21 10:05:50"
 
 | 应用类型 | 是否支持 | 权限 | API Explorer调试 |
 | --- | --- | --- | --- |
-| 企业内部应用 | 支持 | 钉钉客联基础数据读写权限 | [API Explorer](https://open-dev.dingtalk.com/apiExplorer#/?devType=org&api=im_1.0%23UpdateGroupAvatar) |
-| 第三方企业应用 | 支持 | 钉钉客联基础数据读写权限 | [API Explorer](https://open-dev.dingtalk.com/apiExplorer#/?devType=isv&api=im_1.0%23UpdateGroupAvatar) |
+| 企业内部应用 | 支持 | 钉钉客联基础数据读写权限 | [API Explorer](https://open-dev.dingtalk.com/apiExplorer#/?devType=org&api=im_1.0%23DismissGroupConversation) |
+| 第三方企业应用 | 支持 | 钉钉客联基础数据读写权限 | [API Explorer](https://open-dev.dingtalk.com/apiExplorer#/?devType=isv&api=im_1.0%23DismissGroupConversation) |
 | 第三方个人应用 | 暂不支持 | 暂不支持 | 暂不支持 |
 
 ## 请求方法
 
 ```
-PUT /v1.0/im/interconnections/groups/avatars HTTP/1.1
+POST /v1.0/im/interconnections/groups/dismiss HTTP/1.1
 Host:api.dingtalk.com
 x-acs-dingtalk-access-token:String
 Content-Type:application/json
 
 {
-  "openConversationId" : "String",
-  "groupAvatar" : "String"
+  "openConversationId" : "String"
 }
 ```
 
@@ -64,14 +61,13 @@ Content-Type:application/json
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| openConversationId | String | 是 | 群会话openConversationId，调用[创建钉钉客联钉外账号](1852-create-bc-account-association.md)接口获取，长度限制为1～32个字符，例如：14da\*\*\*\*2760。 |
-| groupAvatar | String | 是 | 新的群头像地址，长度限制为1～1024个字符，例如：http://\*\*\*.png。 |
+| openConversationId | String | 是 | 群会话openConversationId，可调用[创建钉钉客联普通互通群](1845-create-common-group-new-version.md) / [创建钉钉客联两人互通群](1846-creating-two-groups-of-people.md)接口获取，长度限制为1～32个字符，例如：14da\*\*\*\*2760。 |
 
 ## 返回参数
 
 | 名称 | 类型 | 描述 |
 | --- | --- | --- |
-| newGroupAvatar | String | 新头像的mediaId。 |
+| openConversationId | String | 被解散的群会话openConversationId。 |
 
 ## 示例
 
@@ -80,14 +76,13 @@ Content-Type:application/json
 HTTP
 
 ```
-PUT /v1.0/im/interconnections/groups/avatars HTTP/1.1
+POST /v1.0/im/interconnections/groups/dismiss HTTP/1.1
 Host:api.dingtalk.com
 x-acs-dingtalk-access-token:xxxxx
 Content-Type:application/json
 
 {
-  "openConversationId" : "14da****2760",
-  "groupAvatar" : "https://**.oss-cn-beijing.aliyuncs.com/xx.jpg"
+  "openConversationId" : "14da****2760"
 }
 ```
 
@@ -118,13 +113,12 @@ public class Sample {
     public static void main(String[] args_) throws Exception {
         
         com.aliyun.dingtalkim_1_0.Client client = Sample.createClient();
-        com.aliyun.dingtalkim_1_0.models.UpdateGroupAvatarHeaders updateGroupAvatarHeaders = new com.aliyun.dingtalkim_1_0.models.UpdateGroupAvatarHeaders();
-        updateGroupAvatarHeaders.xAcsDingtalkAccessToken = "<your access token>";
-        com.aliyun.dingtalkim_1_0.models.UpdateGroupAvatarRequest updateGroupAvatarRequest = new com.aliyun.dingtalkim_1_0.models.UpdateGroupAvatarRequest()
-                .setOpenConversationId("14da****2760")
-                .setGroupAvatar("https://**.oss-cn-beijing.aliyuncs.com/xx.jpg");
+        com.aliyun.dingtalkim_1_0.models.DismissGroupConversationHeaders dismissGroupConversationHeaders = new com.aliyun.dingtalkim_1_0.models.DismissGroupConversationHeaders();
+        dismissGroupConversationHeaders.xAcsDingtalkAccessToken = "<your access token>";
+        com.aliyun.dingtalkim_1_0.models.DismissGroupConversationRequest dismissGroupConversationRequest = new com.aliyun.dingtalkim_1_0.models.DismissGroupConversationRequest()
+                .setOpenConversationId("14da****2760");
         try {
-            client.updateGroupAvatarWithOptions(updateGroupAvatarRequest, updateGroupAvatarHeaders, new com.aliyun.teautil.models.RuntimeOptions());
+            client.dismissGroupConversationWithOptions(dismissGroupConversationRequest, dismissGroupConversationHeaders, new com.aliyun.teautil.models.RuntimeOptions());
         } catch (TeaException err) {
             if (!com.aliyun.teautil.Common.empty(err.code) && !com.aliyun.teautil.Common.empty(err.message)) {
                 // err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -178,14 +172,13 @@ class Sample:
         args: List[str],
     ) -> None:
         client = Sample.create_client()
-        update_group_avatar_headers = dingtalkim__1__0_models.UpdateGroupAvatarHeaders()
-        update_group_avatar_headers.x_acs_dingtalk_access_token = '<your access token>'
-        update_group_avatar_request = dingtalkim__1__0_models.UpdateGroupAvatarRequest(
-            open_conversation_id='14da****2760',
-            group_avatar='https://**.oss-cn-beijing.aliyuncs.com/xx.jpg'
+        dismiss_group_conversation_headers = dingtalkim__1__0_models.DismissGroupConversationHeaders()
+        dismiss_group_conversation_headers.x_acs_dingtalk_access_token = '<your access token>'
+        dismiss_group_conversation_request = dingtalkim__1__0_models.DismissGroupConversationRequest(
+            open_conversation_id='14da****2760'
         )
         try:
-            client.update_group_avatar_with_options(update_group_avatar_request, update_group_avatar_headers, util_models.RuntimeOptions())
+            client.dismiss_group_conversation_with_options(dismiss_group_conversation_request, dismiss_group_conversation_headers, util_models.RuntimeOptions())
         except Exception as err:
             if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
                 # err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -196,14 +189,13 @@ class Sample:
         args: List[str],
     ) -> None:
         client = Sample.create_client()
-        update_group_avatar_headers = dingtalkim__1__0_models.UpdateGroupAvatarHeaders()
-        update_group_avatar_headers.x_acs_dingtalk_access_token = '<your access token>'
-        update_group_avatar_request = dingtalkim__1__0_models.UpdateGroupAvatarRequest(
-            open_conversation_id='14da****2760',
-            group_avatar='https://**.oss-cn-beijing.aliyuncs.com/xx.jpg'
+        dismiss_group_conversation_headers = dingtalkim__1__0_models.DismissGroupConversationHeaders()
+        dismiss_group_conversation_headers.x_acs_dingtalk_access_token = '<your access token>'
+        dismiss_group_conversation_request = dingtalkim__1__0_models.DismissGroupConversationRequest(
+            open_conversation_id='14da****2760'
         )
         try:
-            await client.update_group_avatar_with_options_async(update_group_avatar_request, update_group_avatar_headers, util_models.RuntimeOptions())
+            await client.dismiss_group_conversation_with_options_async(dismiss_group_conversation_request, dismiss_group_conversation_headers, util_models.RuntimeOptions())
         except Exception as err:
             if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
                 # err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -227,8 +219,8 @@ use AlibabaCloud\Tea\Exception\TeaError;
 use AlibabaCloud\Tea\Utils\Utils;
 
 use Darabonba\OpenApi\Models\Config;
-use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\UpdateGroupAvatarHeaders;
-use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\UpdateGroupAvatarRequest;
+use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\DismissGroupConversationHeaders;
+use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\DismissGroupConversationRequest;
 use AlibabaCloud\Tea\Utils\Utils\RuntimeOptions;
 
 class Sample {
@@ -250,14 +242,13 @@ class Sample {
      */
     public static function main($args){
         $client = self::createClient();
-        $updateGroupAvatarHeaders = new UpdateGroupAvatarHeaders([]);
-        $updateGroupAvatarHeaders->xAcsDingtalkAccessToken = "<your access token>";
-        $updateGroupAvatarRequest = new UpdateGroupAvatarRequest([
-            "openConversationId" => "14da****2760",
-            "groupAvatar" => "https://**.oss-cn-beijing.aliyuncs.com/xx.jpg"
+        $dismissGroupConversationHeaders = new DismissGroupConversationHeaders([]);
+        $dismissGroupConversationHeaders->xAcsDingtalkAccessToken = "<your access token>";
+        $dismissGroupConversationRequest = new DismissGroupConversationRequest([
+            "openConversationId" => "14da****2760"
         ]);
         try {
-            $client->updateGroupAvatarWithOptions($updateGroupAvatarRequest, $updateGroupAvatarHeaders, new RuntimeOptions([]));
+            $client->dismissGroupConversationWithOptions($dismissGroupConversationRequest, $dismissGroupConversationHeaders, new RuntimeOptions([]));
         }
         catch (Exception $err) {
             if (!($err instanceof TeaError)) {
@@ -315,11 +306,10 @@ func _main (args []*string) (_err error) {
     return _err
   }
 
-  updateGroupAvatarHeaders := &dingtalkim_1_0.UpdateGroupAvatarHeaders{}
-  updateGroupAvatarHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
-  updateGroupAvatarRequest := &dingtalkim_1_0.UpdateGroupAvatarRequest{
+  dismissGroupConversationHeaders := &dingtalkim_1_0.DismissGroupConversationHeaders{}
+  dismissGroupConversationHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
+  dismissGroupConversationRequest := &dingtalkim_1_0.DismissGroupConversationRequest{
     OpenConversationId: tea.String("14da****2760"),
-    GroupAvatar: tea.String("https://**.oss-cn-beijing.aliyuncs.com/xx.jpg"),
   }
   tryErr := func()(_e error) {
     defer func() {
@@ -327,7 +317,7 @@ func _main (args []*string) (_err error) {
         _e = r
       }
     }()
-    _, _err = client.UpdateGroupAvatarWithOptions(updateGroupAvatarRequest, updateGroupAvatarHeaders, &util.RuntimeOptions{})
+    _, _err = client.DismissGroupConversationWithOptions(dismissGroupConversationRequest, dismissGroupConversationHeaders, &util.RuntimeOptions{})
     if _err != nil {
       return _err
     }
@@ -384,14 +374,13 @@ class Client {
 
   static async main(args) {
     let client = Client.createClient();
-    let updateGroupAvatarHeaders = new dingtalkim_1_0.UpdateGroupAvatarHeaders({ });
-    updateGroupAvatarHeaders.xAcsDingtalkAccessToken = '<your access token>';
-    let updateGroupAvatarRequest = new dingtalkim_1_0.UpdateGroupAvatarRequest({
+    let dismissGroupConversationHeaders = new dingtalkim_1_0.DismissGroupConversationHeaders({ });
+    dismissGroupConversationHeaders.xAcsDingtalkAccessToken = '<your access token>';
+    let dismissGroupConversationRequest = new dingtalkim_1_0.DismissGroupConversationRequest({
       openConversationId: '14da****2760',
-      groupAvatar: 'https://**.oss-cn-beijing.aliyuncs.com/xx.jpg',
     });
     try {
-      await client.updateGroupAvatarWithOptions(updateGroupAvatarRequest, updateGroupAvatarHeaders, new Util.RuntimeOptions({ }));
+      await client.dismissGroupConversationWithOptions(dismissGroupConversationRequest, dismissGroupConversationHeaders, new Util.RuntimeOptions({ }));
     } catch (err) {
       if (!Util.default.empty(err.code) && !Util.default.empty(err.message)) {
         // err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -447,16 +436,15 @@ namespace AlibabaCloud.SDK.Sample
         public static void Main(string[] args)
         {
             AlibabaCloud.SDK.Dingtalkim_1_0.Client client = CreateClient();
-            AlibabaCloud.SDK.Dingtalkim_1_0.Models.UpdateGroupAvatarHeaders updateGroupAvatarHeaders = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.UpdateGroupAvatarHeaders();
-            updateGroupAvatarHeaders.XAcsDingtalkAccessToken = "<your access token>";
-            AlibabaCloud.SDK.Dingtalkim_1_0.Models.UpdateGroupAvatarRequest updateGroupAvatarRequest = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.UpdateGroupAvatarRequest
+            AlibabaCloud.SDK.Dingtalkim_1_0.Models.DismissGroupConversationHeaders dismissGroupConversationHeaders = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.DismissGroupConversationHeaders();
+            dismissGroupConversationHeaders.XAcsDingtalkAccessToken = "<your access token>";
+            AlibabaCloud.SDK.Dingtalkim_1_0.Models.DismissGroupConversationRequest dismissGroupConversationRequest = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.DismissGroupConversationRequest
             {
                 OpenConversationId = "14da****2760",
-                GroupAvatar = "https://**.oss-cn-beijing.aliyuncs.com/xx.jpg",
             };
             try
             {
-                client.UpdateGroupAvatarWithOptions(updateGroupAvatarRequest, updateGroupAvatarHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
+                client.DismissGroupConversationWithOptions(dismissGroupConversationRequest, dismissGroupConversationHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
             }
             catch (TeaException err)
             {
@@ -489,7 +477,7 @@ HTTP/1.1 200 OK
 Content-Type:application/json
 
 {
-  "newGroupAvatar" : "**la*****=="
+  "openConversationId" : "14da****2760"
 }
 ```
 
@@ -498,8 +486,6 @@ Content-Type:application/json
 | HttpCode | 错误码 | 错误信息 | 说明 |
 | --- | --- | --- | --- |
 | 400 | group.nonexist | 群不存在，请检查 | 群不存在，请检查 |
-| 400 | singlegroup.notsupport | 二人群无法修改群信息 | 二人群无法修改群信息 |
-| 400 | couplegroup.notsupport | 二人群无法修改群信息 | 二人群无法修改群信息 |
-| 400 | image.urlError | 上传图片失败，请检查图片url是否可用或者图片大小超过1M | 上传图片失败，请检查图片url是否可用或者图片大小超过1M |
-| 500 | group.updatefail | 更新群信息失败 | 更新群信息失败 |
+| 400 | group.creating | 群会话仍在创建中，请稍后重试 | 群会话仍在创建中，请稍后重试 |
+| 500 | group.dismissError | 解散群失败 | 解散群失败 |
 | 500 | system.error | 系统异常 | 系统异常 |

@@ -1,7 +1,7 @@
 {
   "name": "钉钉开放平台文档中心知识库",
   "source_entry": "https://open.dingtalk.com/document/dingstart/basic-concepts-beta",
-  "crawl_time": "2026-08-26T07:04:09+08:00",
+  "crawl_time": "2026-08-27T07:04:14+08:00",
   "source_apis": [
     "https://open.dingtalk.com/api/docCenter/getDocPageGroupList",
     "https://open.dingtalk.com/api/docCenter/getDocInfoList",
@@ -9,11 +9,11 @@
   ],
   "groups": 8,
   "tabs": 33,
-  "documents_discovered": 3657,
-  "documents_written": 3656,
+  "documents_discovered": 3649,
+  "documents_written": 3648,
   "failures": 1,
   "counts_by_group": {
-    "应用开发": 3344,
+    "应用开发": 3336,
     "连接平台": 102,
     "AI PaaS": 25,
     "硬件开发": 15,
@@ -24,7 +24,7 @@
   },
   "counts_by_tab": {
     "应用开发 / 开发指南": 109,
-    "应用开发 / 服务端API": 1881,
+    "应用开发 / 服务端API": 1873,
     "应用开发 / 客户端JSAPI": 886,
     "应用开发 / 事件订阅": 372,
     "应用开发 / 钉钉CLI": 26,

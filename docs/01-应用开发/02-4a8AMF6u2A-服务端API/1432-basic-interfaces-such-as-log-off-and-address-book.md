@@ -141,23 +141,23 @@ updated_at: "2026-07-22 16:24:53"
 
 | **API** | **接口说明** |
 | --- | --- |
-| [创建钉钉客联钉外账号](1852-create-bc-account-association.md) | 创建钉外用户账号，并建立与钉内用户的账号关联关系。 |
-| [创建互通群](1851-create-an-intercommunication-group.md) | 创建钉钉客联互通群，群类型为普通群或跨钉两人群。 |
-| [创建钉外两人群](1850-create-two-people-outside-the-nail.md) | 创建钉外两人群。 |
-| [创建店铺群](1849-create-a-store-group.md) | 创建店铺群。 |
-| [获取钉钉客联H5页面地址](1855-get-the-dingtalk-guest-group-session-address.md) | 获取钉钉客联群会话地址，钉外用户可通过该地址进入对应群内。 |
-| [添加钉钉客联互通群成员](1858-add-a-group-member-1.md) | 向互通群内添加群成员。 |
-| [查询钉钉客联互通群成员列表](1863-queries-the-group-member-list.md) | 查询互通群成员列表，包括普通群、跨钉两人群、钉外两人群和店铺群。 |
-| [移除钉钉客联互通群成员](1859-remove-group-members.md) | 移除互通群成员。 |
-| [修改钉钉客联互通群头像](1860-modify-the-avatar-of-a-communication-group.md) | 修改互通群头像，包括普通群、跨钉两人群、钉外两人群和商铺群。 |
-| [修改钉钉客联互通群名称](1861-modify-the-group-name.md) | 修改群名称，包括普通群、跨钉两人群、钉外两人群和店铺群。 |
-| [更换钉钉客联互通群群主](1862-change-group-owner.md) | 更换互通群的群主。 |
-| [在钉钉客联互通群中使用钉外账号发送消息](1866-send-c2b-messages.md) | 实现钉外用户向钉内用户或互通群发送消息。 |
-| [在钉钉客联互通群中使用钉内账号发送消息](1867-send-b2c-messages.md) | 实现钉内用户给钉外用户或者互通群发送消息。 |
-| [在钉钉客联互通群中使用机器人发送消息](1865-group-robots-send-messages.md) | 通过互通群内机器人向群内发送消息。 |
-| [查询钉钉客联钉外账号未读消息数](1857-querying-the-number-of-unread-messages-of-the-user.md) | 查询钉外用户未读消息的数量。 |
-| [批量查询跨钉两人互通群列表](1856-queries-the-session-information-of-two-population-groups.md) | 根据群成员批量查询跨钉两人群列表。 |
-| [解散钉钉客联互通群](1864-disband-bc-interconnection-group.md) | 解散互通群，包括普通群、跨钉两人群、钉外两人群和店铺群。 |
+| [创建钉钉客联钉外账号](1844-create-bc-account-association.md) | 创建钉外用户账号，并建立与钉内用户的账号关联关系。 |
+| [创建互通群](1843-create-an-intercommunication-group.md) | 创建钉钉客联互通群，群类型为普通群或跨钉两人群。 |
+| [创建钉外两人群](1842-create-two-people-outside-the-nail.md) | 创建钉外两人群。 |
+| [创建店铺群](1841-create-a-store-group.md) | 创建店铺群。 |
+| [获取钉钉客联H5页面地址](1847-get-the-dingtalk-guest-group-session-address.md) | 获取钉钉客联群会话地址，钉外用户可通过该地址进入对应群内。 |
+| [添加钉钉客联互通群成员](1850-add-a-group-member-1.md) | 向互通群内添加群成员。 |
+| [查询钉钉客联互通群成员列表](1855-queries-the-group-member-list.md) | 查询互通群成员列表，包括普通群、跨钉两人群、钉外两人群和店铺群。 |
+| [移除钉钉客联互通群成员](1851-remove-group-members.md) | 移除互通群成员。 |
+| [修改钉钉客联互通群头像](1852-modify-the-avatar-of-a-communication-group.md) | 修改互通群头像，包括普通群、跨钉两人群、钉外两人群和商铺群。 |
+| [修改钉钉客联互通群名称](1853-modify-the-group-name.md) | 修改群名称，包括普通群、跨钉两人群、钉外两人群和店铺群。 |
+| [更换钉钉客联互通群群主](1854-change-group-owner.md) | 更换互通群的群主。 |
+| [在钉钉客联互通群中使用钉外账号发送消息](1858-send-c2b-messages.md) | 实现钉外用户向钉内用户或互通群发送消息。 |
+| [在钉钉客联互通群中使用钉内账号发送消息](1859-send-b2c-messages.md) | 实现钉内用户给钉外用户或者互通群发送消息。 |
+| [在钉钉客联互通群中使用机器人发送消息](1857-group-robots-send-messages.md) | 通过互通群内机器人向群内发送消息。 |
+| [查询钉钉客联钉外账号未读消息数](1849-querying-the-number-of-unread-messages-of-the-user.md) | 查询钉外用户未读消息的数量。 |
+| [批量查询跨钉两人互通群列表](1848-queries-the-session-information-of-two-population-groups.md) | 根据群成员批量查询跨钉两人群列表。 |
+| [解散钉钉客联互通群](1856-disband-bc-interconnection-group.md) | 解散互通群，包括普通群、跨钉两人群、钉外两人群和店铺群。 |
 
 ## 生态**清单**
 
@@ -211,11 +211,11 @@ updated_at: "2026-07-22 16:24:53"
 
 | **API** | **接口说明** |
 | --- | --- |
-| [智能问答](1834-alimebot-intelligent-q-a-interface.md) | 使用小蜜客服机器人的能力进行智能问答。 |
-| [推送小蜜机器人单聊O2O消息](1836-push-xiaomi-customer-service-robot-single-chat-message.md) | 通过小蜜客服机器人发送O2O（即Online To Offline）线上线下消息。 |
-| [小蜜客服机器人消息回复](1837-xiaomi-customer-service-robot-message-reply.md) | 根据小蜜客服机器人sessionId进行异步消息回复。 |
-| [查询机器人基础指标数据](1838-query-robot-data-indicators.md) | 根据机器人ID查询某时间段机器人的基础指标数据。 |
-| [获取用户登录凭证](1835-obtains-the-user-login-credential-of-the-third-party-system-of.md) | 获取用户的登录凭证。 |
+| [智能问答](1826-alimebot-intelligent-q-a-interface.md) | 使用小蜜客服机器人的能力进行智能问答。 |
+| [推送小蜜机器人单聊O2O消息](1828-push-xiaomi-customer-service-robot-single-chat-message.md) | 通过小蜜客服机器人发送O2O（即Online To Offline）线上线下消息。 |
+| [小蜜客服机器人消息回复](1829-xiaomi-customer-service-robot-message-reply.md) | 根据小蜜客服机器人sessionId进行异步消息回复。 |
+| [查询机器人基础指标数据](1830-query-robot-data-indicators.md) | 根据机器人ID查询某时间段机器人的基础指标数据。 |
+| [获取用户登录凭证](1827-obtains-the-user-login-credential-of-the-third-party-system-of.md) | 获取用户的登录凭证。 |
 
 ### **智能客服**
 
@@ -230,7 +230,7 @@ updated_at: "2026-07-22 16:24:53"
 
 | **API** | **接口说明** |
 | --- | --- |
-| [使用服务助手推送消息](1831-the-message-pushing-interface-of-the-assistant.md) | 通过服务助手机器人给企业员工发送消息。 |
+| [使用服务助手推送消息](1823-the-message-pushing-interface-of-the-assistant.md) | 通过服务助手机器人给企业员工发送消息。 |
 
 ### **制造业**
 
@@ -289,23 +289,23 @@ updated_at: "2026-07-22 16:24:53"
 
 | **API** | **接口说明** |
 | --- | --- |
-| [获取应用列表](1811-queries-applications.md) | 查询氚云的应用信息。 |
-| [获取应用功能节点](1812-queries-the-application-feature-nodes.md) | 获取应用的功能节点信息。 |
-| [获取组织数据](1813-queries-organization-data.md) | 获取组织部门数据信息。 |
-| [获取用户数据](1814-obtain-user-data.md) | 获取用户基础数据信息。 |
-| [获取角色数据](1815-obtain-role-data.md) | 获取角色组、角色数据等信息。 |
-| [获取角色用户数据](1816-historical-acquisition-of-role-user-data.md) | 获取指定角色包含的用户。 |
-| [获取表单对象结构](1817-gets-the-form-object-structure.md) | 获取表单对象结构信息。 |
-| [创建表单业务数据](1818-create-form-business-data.md) | 创建单条表单、流程表单的业务数据对象。 |
-| [查询表单业务数据列表](1819-querying-form-business-data.md) | 查询表单业务数据实例集合。 |
-| [修改表单业务对象数据](1820-modify-form-business-object-data.md) | 修改表单的单条业务实例数据。 |
-| [批量新增表单业务数据](1821-batch-add-form-business-data.md) | 批量新增表单的业务实例数据。 |
-| [删除业务对象](1822-delete-a-business-object.md) | 批量新增表单的业务实例数据。 |
-| [获取业务实例信息](1823-queries-business-instance-information.md) | 获取表单的单条业务实例数据。 |
-| [创建流程实例](1824-create-a-process-instance.md) | 创建流程表单的流程实例数据。 |
-| [删除流程实例数据](1825-delete-process-instance-data.md) | 流程表单的单条流程实例数据。 |
-| [取消流程实例](1826-cancel-a-process-instance.md) | 取消流程实例，取消后的流程实例状态为已取消。 |
-| [查询流程实例](1827-query-flow-instances.md) | 查询流程表单的流程实例数据。 |
-| [查询流程实例节点工作项](1828-query-flow-instance-node-work-items.md) | 获取流程实例节点工作项的相关信息。 |
-| [获取附件临时免登地址](1829-obtain-the-temporary-attachment-free-address.md) | 获取附件临时免登的访问地址。 |
-| [获取文件上传地址](1830-obtain-the-upload-url-of-a-file-2.md) | 返回表单中指定图片、附件等控件的文件上传地址。 |
+| [获取应用列表](1803-queries-applications.md) | 查询氚云的应用信息。 |
+| [获取应用功能节点](1804-queries-the-application-feature-nodes.md) | 获取应用的功能节点信息。 |
+| [获取组织数据](1805-queries-organization-data.md) | 获取组织部门数据信息。 |
+| [获取用户数据](1806-obtain-user-data.md) | 获取用户基础数据信息。 |
+| [获取角色数据](1807-obtain-role-data.md) | 获取角色组、角色数据等信息。 |
+| [获取角色用户数据](1808-historical-acquisition-of-role-user-data.md) | 获取指定角色包含的用户。 |
+| [获取表单对象结构](1809-gets-the-form-object-structure.md) | 获取表单对象结构信息。 |
+| [创建表单业务数据](1810-create-form-business-data.md) | 创建单条表单、流程表单的业务数据对象。 |
+| [查询表单业务数据列表](1811-querying-form-business-data.md) | 查询表单业务数据实例集合。 |
+| [修改表单业务对象数据](1812-modify-form-business-object-data.md) | 修改表单的单条业务实例数据。 |
+| [批量新增表单业务数据](1813-batch-add-form-business-data.md) | 批量新增表单的业务实例数据。 |
+| [删除业务对象](1814-delete-a-business-object.md) | 批量新增表单的业务实例数据。 |
+| [获取业务实例信息](1815-queries-business-instance-information.md) | 获取表单的单条业务实例数据。 |
+| [创建流程实例](1816-create-a-process-instance.md) | 创建流程表单的流程实例数据。 |
+| [删除流程实例数据](1817-delete-process-instance-data.md) | 流程表单的单条流程实例数据。 |
+| [取消流程实例](1818-cancel-a-process-instance.md) | 取消流程实例，取消后的流程实例状态为已取消。 |
+| [查询流程实例](1819-query-flow-instances.md) | 查询流程表单的流程实例数据。 |
+| [查询流程实例节点工作项](1820-query-flow-instance-node-work-items.md) | 获取流程实例节点工作项的相关信息。 |
+| [获取附件临时免登地址](1821-obtain-the-temporary-attachment-free-address.md) | 获取附件临时免登的访问地址。 |
+| [获取文件上传地址](1822-obtain-the-upload-url-of-a-file-2.md) | 返回表单中指定图片、附件等控件的文件上传地址。 |

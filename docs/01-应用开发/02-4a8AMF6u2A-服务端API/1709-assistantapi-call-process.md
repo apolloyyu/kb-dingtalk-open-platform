@@ -52,13 +52,13 @@ updated_at: "2026-03-06 09:22:39"
 
 Thread是一个用户跟AI助理的对话空间，相关的Message信息都存放在Thread中。
 
-具体信息参考[创建线程](1716-api-createassistantthread.md)文档
+具体信息参考[创建线程](1712-api-createassistantthread.md)文档
 
 ### **步骤二:添加Message到Thread中**
 
 - 用户的Query的信息可以通过Message传入，可以创建一个Message给到指定的线程（Thread）；
 
-具体信息参考[创建消息](1719-api-createassistantmessage.md)文档
+具体信息参考[创建消息](1715-api-createassistantmessage.md)文档
 
 ### **步骤三:创建Run，开始运行**
 
@@ -75,9 +75,9 @@ Thread是一个用户跟AI助理的对话空间，相关的Message信息都存�
 
 **接入参考文档：**
 
-- [创建AI助理的运行任务](1723-api-createassistantrun.md)文档
-- [获取AI助理的运行任务](1724-api-retrieveassistantrun.md)文档
-- [获取AI助理的消息列表](1721-api-listassistantmessage.md)文档
+- [创建AI助理的运行任务](1719-api-createassistantrun.md)文档
+- [获取AI助理的运行任务](1720-api-retrieveassistantrun.md)文档
+- [获取AI助理的消息列表](1717-api-listassistantmessage.md)文档
 
 > **[!IMPORTANT]**
 >
@@ -89,7 +89,7 @@ Thread是一个用户跟AI助理的对话空间，相关的Message信息都存�
 
 创建流式Run之后，AI助理回复的消息就会出现在流式数据中，开发者需要根据不同消息的格式进行解析， 最后再输出到自己的业务系统中。 注意：流式Run无需轮询检索Run状态，也不需要读取Message列表
 
-**接入参考文档：**[创建AI助理的运行任务](1723-api-createassistantrun.md)文档。
+**接入参考文档：**[创建AI助理的运行任务](1719-api-createassistantrun.md)文档。
 
 > **[!NOTE]**
 >

@@ -31,7 +31,7 @@ updated_at: "2026-06-08 09:48:21"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| x-acs-dingtalk-access-token | String | 是 | 调用该API的应用凭证，通过[服务商获取第三方应用授权企业的access\_token](1446-obtain-isvapp-token.md)接口获取。 |
+| x-acs-dingtalk-access-token | String | 是 | 调用该API的应用凭证，通过[服务商获取第三方应用授权企业的access\_token](1448-obtain-isvapp-token.md)接口获取。 |
 
 ### **请求体**
 

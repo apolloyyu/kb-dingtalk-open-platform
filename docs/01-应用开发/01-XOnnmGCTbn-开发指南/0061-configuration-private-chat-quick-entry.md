@@ -58,4 +58,4 @@ updated_at: "2026-01-29 14:52:02"
 
 - [接入机器人能力](0045-group-chat-coolapp-access-robot-app.md)：为应用添加消息收发、自动回复等机器人功能。
 - [开发互动卡片](0063-private-chat-coolapp-develop-interactive-cards.md)：提升交互体验，支持按钮点击、表单提交等富交互操作。
-- [批量安装酷应用到单聊会话](../03-Ogu5SlPY4t-客户端JSAPI/0276-batch-chat-session.md)：实现自动化部署，快速覆盖多个会话场景。
+- [批量安装酷应用到单聊会话](../03-Ogu5SlPY4t-客户端JSAPI/0277-batch-chat-session.md)：实现自动化部署，快速覆盖多个会话场景。

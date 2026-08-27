@@ -22,7 +22,7 @@ updated_at: "2026-07-14 09:21:49"
 
 - **调用第三方企业应用获取表单schema报错“code: 500，未知错误”**
 
-  答：调用[获取表单 schema](0492-obtain-the-form-schema.md)接口报错“code: 500, 未知错误”，可能为权限问题：可以获取的表单是经过用户授权的，获取不到的表单没有经过用户授权的。授权获取审批实例数据文档参见[唤起授权弹窗](../03-Ogu5SlPY4t-客户端JSAPI/0008-jsapi-request-auth-info.md)。
+  答：调用[获取表单 schema](0492-obtain-the-form-schema.md)接口报错“code: 500, 未知错误”，可能为权限问题：可以获取的表单是经过用户授权的，获取不到的表单没有经过用户授权的。授权获取审批实例数据文档参见[唤起授权弹窗](../03-Ogu5SlPY4t-客户端JSAPI/0009-jsapi-request-auth-info.md)。
 - **如何在审批中添加附件？**
 
   答：审批附件的实现需要配合服务端API和前端API实现，详细流程可参考[审批附件的操作流程](0487-new-version-of-attachment-approval-process.md)使用案例。

@@ -1,13 +1,13 @@
 # 编译结果
 
-源快照 3648 篇 / 35.5 MB
+源快照 3651 篇 / 35.5 MB
 
 | 层 | 篇数 | MB | ≈k tokens | 占比 |
 | --- | --- | --- | --- | --- |
-| T0 | 2212 | 25.1 | 16458 | 70.7% |
+| T0 | 2214 | 25.1 | 16465 | 70.8% |
 | T1 | 297 | 1.9 | 1270 | 5.5% |
-| T2 | 1007 | 7.6 | 4996 | 21.5% |
-| DROP | 132 | 0.8 | 548 | 2.4% |
+| T2 | 1009 | 7.6 | 4963 | 21.4% |
+| DROP | 131 | 0.8 | 546 | 2.3% |
 
 ## DROP 明细
 
@@ -24,7 +24,6 @@
 | 空壳文档：只有标题，无正文 | 7 | 0.00 |
 | 正文与 docs/01-应用开发/04-LFcRvVD08N-事件订阅/0246-enterprise-authorized-application-activation-event.md 完全重复 | 1 | 0.00 |
 | 正文与 docs/06-专属版客户端插件/02-sakFIe9HDV-Android-插件/0009-extension-points-overview.md 完全重复 | 2 | 0.00 |
-| 正文与 docs/01-应用开发/02-4a8AMF6u2A-服务端API/0776-message-link-description.md 完全重复 | 1 | 0.00 |
 | 正文与 docs/07-数据资产/01-fIz0pQ6X4y-平台介绍/0013-basic-construction-teaching.md 完全重复 | 1 | 0.00 |
 | 正文与 docs/01-应用开发/04-LFcRvVD08N-事件订阅/0248-enable-and-disable-application-events.md 完全重复 | 1 | 0.00 |
 | 正文与 docs/01-应用开发/04-LFcRvVD08N-事件订阅/0243-push-suite-ticket-events.md 完全重复 | 1 | 0.00 |

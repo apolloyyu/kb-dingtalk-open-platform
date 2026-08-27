@@ -45,7 +45,7 @@ updated_at: "2026-07-14 09:29:37"
 | --- | --- | --- | --- |
 | msgParam | String | 是 | 消息模板参数，详情参考[消息发送与接收类型](0699-robot-message-type.md)。 |
 | msgKey | String | 是 | 消息模板key，详情参考[消息发送与接收类型](0699-robot-message-type.md)。 |
-| openConversationId | String | 是 | 会话ID，可通过[批量安装酷应用到单聊会话](../03-Ogu5SlPY4t-客户端JSAPI/0276-batch-chat-session.md)或监听[单聊酷应用事件](../04-LFcRvVD08N-事件订阅/0002-org-event-overview.md#260a4e7084gs2)获取OpenConversationId参数值。 |
+| openConversationId | String | 是 | 会话ID，可通过[批量安装酷应用到单聊会话](../03-Ogu5SlPY4t-客户端JSAPI/0277-batch-chat-session.md)或监听[单聊酷应用事件](../04-LFcRvVD08N-事件订阅/0002-org-event-overview.md#260a4e7084gs2)获取OpenConversationId参数值。 |
 | robotCode | String | 是 | 机器人编码，该参数使用企业机器人的robotCode，详情参考[机器人 ID](https://open.dingtalk.com/document/development/robot-overview)。 |
 | coolAppCode | String | 是 | 酷应用编码。 image |
 

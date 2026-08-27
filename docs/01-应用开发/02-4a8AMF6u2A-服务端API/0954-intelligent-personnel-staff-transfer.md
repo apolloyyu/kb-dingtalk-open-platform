@@ -22,7 +22,7 @@ updated_at: "2026-07-14 09:22:32"
 
 调用本接口前，需要对智能人事产品进行升级。智能人事升级职位管理功能后，需注意：
 
-- 调用通讯录[更新用户信息v1](1455-update-user-details.md)接口和[更新用户信息v2](0057-user-information-update.md)接口更新员工部门或者员工职位时，接口会出现报错，报错信息如下图所示：
+- 调用通讯录[更新用户信息v1](1457-update-user-details.md)接口和[更新用户信息v2](0057-user-information-update.md)接口更新员工部门或者员工职位时，接口会出现报错，报错信息如下图所示：
 
   ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0512993871/p1087123.png)
 - 如果需要更新员工部门或者员工职位，请参考使用[智能人事员工调岗](#)接口。

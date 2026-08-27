@@ -100,8 +100,8 @@ async function getUserId(tmpAuthCode, accessToken) {
 
   - **未正确获取免登授权码**
 
-    - 小程序应用请通过[getAuthCode](../03-Ogu5SlPY4t-客户端JSAPI/0005-jsapi-get-auth-code.md)获取；
-    - H5微应用请通过 [requestAuthCode](../03-Ogu5SlPY4t-客户端JSAPI/0006-jsapi-request-auth-code.md)或[getOperateAuthCode](../03-Ogu5SlPY4t-客户端JSAPI/0007-jsapi-get-operate-auth-code.md)获取。
+    - 小程序应用请通过[getAuthCode](../03-Ogu5SlPY4t-客户端JSAPI/0006-jsapi-get-auth-code.md)获取；
+    - H5微应用请通过 [requestAuthCode](../03-Ogu5SlPY4t-客户端JSAPI/0007-jsapi-request-auth-code.md)或[getOperateAuthCode](../03-Ogu5SlPY4t-客户端JSAPI/0008-jsapi-get-operate-auth-code.md)获取。
   - **授权码已过期**
 
     - 免登授权码生成后，有效期为 **5分钟**，超过时间则失效。

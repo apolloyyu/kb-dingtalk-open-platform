@@ -162,7 +162,7 @@ updated_at: "2026-05-15 18:19:58"
 
   | 属性 | 类型 | 说明 |
   | --- | --- | --- |
-  | id | string | 权限成员id。  - 如果type参数值为**ORG**，该参数值传企业**corpId**。 - 如果type参数值为**DEPT**，该参数值传部门**deptId**，调用[获取部门列表](0082-user-management-acquires-the-list-departments.md)接口获取dept\_id参数值。 - 如果type参数值为**TAG**，该参数值传**tag名称**。 - 如果type参数值为**CONVERSATION**，该参数值传会话**openConversationId**，通过[创建群会话](1481-session-management-creates-groups.md)接口或[创建场景群](1484-create-a-scene-group-v2.md)接口获取。 - 如果type参数值为**USER**，该参数传用户**unionId**，可调用[查询用户详情](0056-query-user-details.md)接口获取unionid参数值。 |
+  | id | string | 权限成员id。  - 如果type参数值为**ORG**，该参数值传企业**corpId**。 - 如果type参数值为**DEPT**，该参数值传部门**deptId**，调用[获取部门列表](0082-user-management-acquires-the-list-departments.md)接口获取dept\_id参数值。 - 如果type参数值为**TAG**，该参数值传**tag名称**。 - 如果type参数值为**CONVERSATION**，该参数值传会话**openConversationId**，通过[创建群会话](1483-session-management-creates-groups.md)接口或[创建场景群](1486-create-a-scene-group-v2.md)接口获取。 - 如果type参数值为**USER**，该参数传用户**unionId**，可调用[查询用户详情](0056-query-user-details.md)接口获取unionid参数值。 |
   | roleId | string | 权限角色Id。  - **OWNER**：拥有者 - **MANAGER**：管理者 - **EDITOR**：编辑者 - **DOWNLOADER**：下载者 - **READER**：查看者 |
   | type | string | 权限成员类型：  - **ORG**：企业 - **DEPT**：部门 - **TAG**：自定义tag - **CONVERSATION**：会话 - **USER**：用户 |
   | duration | string | 授权有效时长，单位秒，默认值为-1，表示永久有效。  - 被添加权限的空间类型是APP时，授权有效时长生效。 - 被添加权限的空间类型是USER时，授权有效时长无效，默认为永久有效。 |

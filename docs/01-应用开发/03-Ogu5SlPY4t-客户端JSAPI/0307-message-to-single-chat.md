@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "酷应用 > 用户身份发送卡片消息到单聊"
 doc_id: "5BqfMOFhG6"
-updated_at: "2025-10-09 18:07:49"
+updated_at: "2026-08-27 14:23:52"
 ---
 
 > Source: https://open.dingtalk.com/document/development/message-to-single-chat
 > Path: 应用开发 / 客户端JSAPI / 酷应用 > 用户身份发送卡片消息到单聊
-> Updated: 2025-10-09 18:07:49
+> Updated: 2026-08-27 14:23:52
 
 # 用户身份发送卡片消息到单聊
 
@@ -26,11 +26,11 @@ updated_at: "2025-10-09 18:07:49"
 
 ### 发送消息
 
-![单聊发送消息](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2521618761/p578314.png)
+![单聊发送消息](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/7421618761/p578403.png)
 
 ### 发送成功
 
-![单聊发送成功](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2521618761/p578313.png)
+![单聊发送成功](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/7421618761/p578404.png)
 
 ## 准备工作
 
@@ -90,13 +90,13 @@ sendMessageToSingleChat({
 | 参数 | 类型 | 是否必填 | 说明 |
 | --- | --- | --- | --- |
 | context | Object | 是 | 应用相关身份标识。 |
-| context.clientId | String | 是 | 应用标识。   - 企业内部应用，传Appkey。   **[!NOTE]**  如何获取Appkey，请参见[基础概念-AppKey](https://open.dingtalk.com/document/orgapp/basic-concepts)。   - 第三方企业应用，传SuiteKey。   **[!NOTE]**  如何获取SuiteKey，请参见[基础概念-SuiteKey](https://open.dingtalk.com/document/orgapp/basic-concepts)。 |
-| context.corpId | String | 是 | 企业CorpId。  **[!NOTE]**  如何获取CorpId，请参见[基础概念-CorpId](https://open.dingtalk.com/document/orgapp/basic-concepts)。 |
+| context.clientId | String | 是 | 应用标识。   - 企业内部应用，传Appkey。   **[!NOTE]**  如何获取Appkey，请参见[基础概念-AppKey](https://open.dingtalk.com/document/orgapp/basic-concepts)。   - 第三方企业应用，传SuiteKey。   **[!NOTE]**  如何获取SuiteKey，请参见[基础概念-SuiteKey](https://open.dingtalk.com/document/isvapp/basic-concepts)。 |
+| context.corpId | String | 是 | 企业CorpId。  **[!NOTE]**   - 小程序可通过[dd.corpId](https://open.dingtalk.com/document/isvapp/dd-corpid)获取。 - 微应用可通过[获取企业CorpId](https://open.dingtalk.com/document/isvapp/obtain-enterprise-corpid)获取。 |
 | userIdList | String[] | 是 | 需要发送消息的单聊人员userId列表。 |
 | sendCardRequest | Object | 是 | 动态卡片的相关数据。 |
 | sendCardRequest.cardTemplateId | String | 是 | 互动卡片的消息模板ID。可通过[卡片平台](https://open-dev.dingtalk.com/fe/card)获取模板ID。image |
 | sendCardRequest.outTrackId | String | 是 | 唯一标示卡片的外部编码。  **[!NOTE]**  发送不同的卡片内容，需要使用不同的outTrackId。 |
-| sendCardRequest.cardData | Object | 是 | 卡片数据。详情参见[发送钉钉互动卡片](https://open.dingtalk.com/document/orgapp/send-interactive-dynamic-cards-1)cardData字段。 |
+| sendCardRequest.cardData | Object | 是 | 卡片数据。详情参见[发送钉钉互动卡片](https://open.dingtalk.com/document/isvapp/send-interactive-dynamic-cards-1)cardData字段。 |
 
 ## 返回结果
 
@@ -109,7 +109,7 @@ sendMessageToSingleChat({
 | detail | Object | 安装成功的相关信息。 |
 | detail.success | Boolean | 是否全部发送成功。 |
 | detail.result | Array | 发送结果。 |
-| detail.result[].userId | String | 需要发送消息的单聊人员userId列表。 |
+| detail.result[].openConversationId | String | 需要发送消息的单聊人员userId列表。 |
 | detail.result[].success | Boolean | 该单聊卡片消息是否发送成功。 |
 
 ### 失败
@@ -129,3 +129,7 @@ sendMessageToSingleChat({
 | --- | --- |
 | 22 | 表示页面被用户手动关闭。 |
 | 7 | 表示当前钉钉版本较低，不支持该API，需要升级至最新版本的钉钉。 |
+
+## 相关链接
+
+酷应用接入流程更多详情请参考文档[酷应用介绍](https://open.dingtalk.com/document/isvapp/cool-application-introduction-isv)。

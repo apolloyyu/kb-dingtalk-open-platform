@@ -62,4 +62,4 @@ updated_at: "2026-07-22 16:25:13"
 
   答：调用微应用jsapi接口报上述错误的原因可能如下:
 
-  因未JSAPI鉴权导致，需先完成[JSAPI鉴权](0003-jsapi-authentication.md)。
+  因未JSAPI鉴权导致，需先完成[JSAPI鉴权](0002-jsapi-authentication.md)。

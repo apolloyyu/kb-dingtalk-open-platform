@@ -36,7 +36,7 @@ updated_at: "2026-07-20 09:21:34"
 
 步骤三：[申请AI接口权限](0003-add-api-permission.md)，搜索“AI”，申请相应权限。
 
-步骤四：调用[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)接口，获取应用访问凭证access\_token（有效期2小时，建议服务端缓存并自动刷新。
+步骤四：调用[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)接口，获取应用访问凭证access\_token（有效期2小时，建议服务端缓存并自动刷新。
 
 步骤五：调用服务端API-[钉钉文本翻译](1009-dingtalk-translation.md)接口，实现文本内容翻译。
 
@@ -60,7 +60,7 @@ updated_at: "2026-07-20 09:21:34"
 
 ## 步骤四：获取应用访问凭证accessToken
 
-根据步骤二中的AppKey和AppSecret，调用[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)接口获取组织级access\_token。
+根据步骤二中的AppKey和AppSecret，调用[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)接口获取组织级access\_token。
 
 ## 步骤五：调用服务端AI相关API
 

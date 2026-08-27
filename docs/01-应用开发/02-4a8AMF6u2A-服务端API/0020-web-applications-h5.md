@@ -56,7 +56,7 @@ updated_at: "2026-07-02 10:35:25"
    ```
    npm install dingtalk-jsapi --save
    ```
-2. 获取免登授权码，网页应用免登可参考[requestAuthCode](../03-Ogu5SlPY4t-客户端JSAPI/0006-jsapi-request-auth-code.md)JSAPI。
+2. 获取免登授权码，网页应用免登可参考[requestAuthCode](../03-Ogu5SlPY4t-客户端JSAPI/0007-jsapi-request-auth-code.md)JSAPI。
 
    ```
    import * as dd from 'dingtalk-jsapi';

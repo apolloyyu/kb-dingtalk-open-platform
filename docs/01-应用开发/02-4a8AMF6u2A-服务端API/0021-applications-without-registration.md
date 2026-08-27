@@ -62,7 +62,7 @@ updated_at: "2026-07-02 10:35:28"
    ```
    npm install dingtalk-jsapi --save
    ```
-2. 获取免登授权码，小程序免登可参考[getAuthCode](../03-Ogu5SlPY4t-客户端JSAPI/0005-jsapi-get-auth-code.md)JSAPI。
+2. 获取免登授权码，小程序免登可参考[getAuthCode](../03-Ogu5SlPY4t-客户端JSAPI/0006-jsapi-get-auth-code.md)JSAPI。
 
    > 若在小程序中使用`dd.httpRequest`API，需将请求域名添加至“小程序开发设置 > 安全设置”的 HTTP 可信域名列表，否则线上环境无法成功发起请求。
 

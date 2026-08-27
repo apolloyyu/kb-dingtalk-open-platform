@@ -31,7 +31,7 @@ updated_at: "2026-06-08 09:21:15"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | 6d1bxxxx | 调用该接口的应用凭证，通过[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)接口获取。 |
+| access\_token | String | 是 | 6d1bxxxx | 调用该接口的应用凭证，通过[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)接口获取。 |
 | chatid | String | 是 | chate39f540dxxxx | 群会话的ID。   - 仅支持通过调用服务端[创建群会话](0738-create-common-group-new-version-v2.md)接口获取的chatid参数值。 - 不支持通过调用前端JSAPI获取的chatid。 |
 
 ### **请求示例**

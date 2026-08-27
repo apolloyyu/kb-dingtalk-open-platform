@@ -26,7 +26,7 @@ updated_at: "2026-08-04 09:07:27"
 - **设置卡片数据中非String类型的参数如何处理**
 
   - **新版接口**：如果是新版接口，包括[创建卡片](0780-interface-for-creating-a-card-instance.md)、[创建并投放卡片](0783-create-and-deliver-cards.md)和[更新卡片](0782-interactive-card-update-interface.md)，按照[API 卡片数据的填写说明](0789-instructions-for-filling-in-api-card-data.md)填写卡片数据即可。
-  - **旧版接口**：例如机器人[发送钉钉互动卡片（高级版）](1476-send-interactive-dynamic-cards-1.md)，需要使用`sys_full_json_obj` 字段，比如创建、更新卡片的接口是用 `Map<String, String>` 传递卡片数据，这种方式参数值只能传递 String 类型。`sys_full_json_obj` 字段是卡片数据中内置的一个参数，参数值格式是`JSONString`，如需设置卡片的非String参数值，参考以下步骤：
+  - **旧版接口**：例如机器人[发送钉钉互动卡片（高级版）](1478-send-interactive-dynamic-cards-1.md)，需要使用`sys_full_json_obj` 字段，比如创建、更新卡片的接口是用 `Map<String, String>` 传递卡片数据，这种方式参数值只能传递 String 类型。`sys_full_json_obj` 字段是卡片数据中内置的一个参数，参数值格式是`JSONString`，如需设置卡片的非String参数值，参考以下步骤：
 
     1. 将所有非 `String` 参数构建成一个 `JSONObject`
 

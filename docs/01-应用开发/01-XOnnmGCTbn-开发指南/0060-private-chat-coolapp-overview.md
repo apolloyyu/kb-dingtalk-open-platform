@@ -61,7 +61,7 @@ updated_at: "2026-07-21 14:29:38"
 
 ## 如何安装单聊酷应用
 
-1. 使用酷应用-JSAPI安装将单聊酷应用安装到单聊会话。详情参见[批量安装酷应用到单聊会话](../03-Ogu5SlPY4t-客户端JSAPI/0276-batch-chat-session.md)。
+1. 使用酷应用-JSAPI安装将单聊酷应用安装到单聊会话。详情参见[批量安装酷应用到单聊会话](../03-Ogu5SlPY4t-客户端JSAPI/0277-batch-chat-session.md)。
 
    ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/6059669671/p1050314.png)
 2. 安装成功后，用户可在单聊窗口的**单聊应用栏**中看到对应入口。例如，点击**智能财务**，即可查看申请人相关的财务数据详情。

@@ -96,7 +96,7 @@ updated_at: "2026-07-22 16:55:13"
 
 #### **前端发起授权并获取 authCode**
 
-用户进入E 小程序后，前端通过钉钉客户端提供的 JSAPI 发起授权请求，获取[getAuthCode](../03-Ogu5SlPY4t-客户端JSAPI/0005-jsapi-get-auth-code.md)（authCode），随后将该code传递给应用后端。该操作通常使用`dd.getAuthCode` 接口完成。
+用户进入E 小程序后，前端通过钉钉客户端提供的 JSAPI 发起授权请求，获取[getAuthCode](../03-Ogu5SlPY4t-客户端JSAPI/0006-jsapi-get-auth-code.md)（authCode），随后将该code传递给应用后端。该操作通常使用`dd.getAuthCode` 接口完成。
 
 > **关键术语说明**：`authCode` 是通过钉钉客户端 JSAPI（如 `dd.getAuthCode`）获取的临时授权码，有效期短暂且仅能使用一次，用于后端换取用户基本信息。
 

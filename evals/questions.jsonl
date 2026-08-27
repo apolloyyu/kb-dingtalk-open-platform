@@ -32,7 +32,7 @@
 {"id": "q099", "set": "extended", "question": "公告接口支持附件吗？", "ref_grade": "B-基本可用"}
 {"id": "q105", "set": "extended", "question": "审批实例的url和审批任务的url有什么区别", "ref_grade": "B-基本可用"}
 {"id": "q124", "set": "extended", "question": "通过openConversationId，能不能反查到群聊的名称？", "ref_grade": "B-基本可用"}
-{"id": "q137", "set": "core", "question": "钉钉小程序如何自定义导航栏", "ref_grade": "B-基本可用", "key_points": ["现行 setNavigationBar(0045)可定制标题/样式", "归档另有:导航栏透明 0864(H5)/左侧导航按钮文字 0786——引用须标归档并提示以线上为准", "app.json window 属性表(titleBarColor/defaultTitle)快照未收录,不得无据罗列表格", "下\"不可隐藏/不可自绘\"否定结论前必须 dkdoc jsapi+grep 三轮查完"], "ref_docs": ["docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0045-jsapi-set-navigation-bar.md", "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0865-the-microapplication-navigation-bar-is-transparent.md"]}
+{"id": "q137", "set": "core", "question": "钉钉小程序如何自定义导航栏", "ref_grade": "B-基本可用", "key_points": ["现行 setNavigationBar(0045)可定制标题/样式", "归档另有:导航栏透明 0864(H5)/左侧导航按钮文字 0786——引用须标归档并提示以线上为准", "app.json window 属性表(titleBarColor/defaultTitle)快照未收录,不得无据罗列表格", "下\"不可隐藏/不可自绘\"否定结论前必须 dkdoc jsapi+grep 三轮查完"], "ref_docs": ["docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0046-jsapi-set-navigation-bar.md", "docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0865-the-microapplication-navigation-bar-is-transparent.md"]}
 {"id": "q149", "set": "extended", "question": "钉钉小程序的路由层级有限制吗", "ref_grade": "D-未有效回答"}
 {"id": "q096", "set": "extended", "question": "支付宝小程序开发者工具鸿蒙手机真机调试不弹调试窗口", "ref_grade": "D-未有效回答"}
 {"id": "q128", "set": "extended", "question": "钉钉表格可以根据字段分配查看权限吗", "ref_grade": "C-部分偏差"}

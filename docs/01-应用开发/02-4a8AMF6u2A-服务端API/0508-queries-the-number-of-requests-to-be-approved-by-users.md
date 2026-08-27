@@ -20,7 +20,7 @@ updated_at: "2026-06-03 10:12:35"
 
 ## **接口调用说明**
 
-开发者可以通过以下链接，使用[打开目标](../03-Ogu5SlPY4t-客户端JSAPI/0191-jsapi-open-link.md)页面跳转到钉钉审批的**待我审批**页面，构造地址示例请参考：https://aflow.dingtalk.com/dingtalk/mobile/homepage.htm?showmenu=false&dd\_share=false&corpid=ding1\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*288#/upcoming?swfrom=work\_homepage
+开发者可以通过以下链接，使用[打开目标](../03-Ogu5SlPY4t-客户端JSAPI/0192-jsapi-open-link.md)页面跳转到钉钉审批的**待我审批**页面，构造地址示例请参考：https://aflow.dingtalk.com/dingtalk/mobile/homepage.htm?showmenu=false&dd\_share=false&corpid=ding1\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*288#/upcoming?swfrom=work\_homepage
 
 ## 请求
 

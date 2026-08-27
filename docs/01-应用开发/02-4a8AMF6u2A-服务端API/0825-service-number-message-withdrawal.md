@@ -35,14 +35,14 @@ updated_at: "2026-06-01 09:15:37"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | 30c36943eaxxxx | 调用该接口的应用凭证，通过[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)接口获取。 |
+| access\_token | String | 是 | 30c36943eaxxxx | 调用该接口的应用凭证，通过[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)接口获取。 |
 
 ### **请求体**
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
 | unionid | String | 是 | jYdrxxxxTo0iE | 服务号的unionid，可以通过[查询服务号详情](0813-inquire-about-service-number-details.md)接口获取。 |
-| task\_id | String | 是 | pushWxxxx2rjeI2SswiEiE | 消息发送任务id，可以通过[消息群发](1623-interactive-service-window-group-message-sending-interface.md)接口获取。 |
+| task\_id | String | 是 | pushWxxxx2rjeI2SswiEiE | 消息发送任务id，可以通过[消息群发](1625-interactive-service-window-group-message-sending-interface.md)接口获取。 |
 
 ### **请求示例**
 

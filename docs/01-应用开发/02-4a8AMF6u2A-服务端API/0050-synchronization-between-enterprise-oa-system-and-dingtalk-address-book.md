@@ -38,7 +38,7 @@ updated_at: "2026-07-02 10:35:50"
 > - 服务端API差异详情参见[新版API VS 旧版API](0002-download-the-server-side-sdk.md#section-8lr-id4-rbz)。
 > - 服务端API接口SDK下载，详情参见[服务端SDK下载](0002-download-the-server-side-sdk.md)。
 
-根据步骤一中 的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)。
+根据步骤一中 的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)。
 
 ```
 public void getAccessToken() throws ApiException {

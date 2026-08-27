@@ -20,7 +20,7 @@ updated_at: "2026-08-14 09:42:00"
 
 ## **接口调用说明**
 
-支持以下场景使用：基于群模板创建的群，详情参见[创建群](1484-create-a-scene-group-v2.md)。
+支持以下场景使用：基于群模板创建的群，详情参见[创建群](1486-create-a-scene-group-v2.md)。
 
 ## 请求
 
@@ -43,7 +43,7 @@ updated_at: "2026-08-14 09:42:00"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| openConversationId | String | 是 | 群ID，可调用[创建群](1484-create-a-scene-group-v2.md)接口获取`open_conversation_id`参数值。 |
+| openConversationId | String | 是 | 群ID，可调用[创建群](1486-create-a-scene-group-v2.md)接口获取`open_conversation_id`参数值。 |
 | userId | String | 是 | 用户的userid，可通过[获取部门用户userid列表](0065-query-the-list-of-department-userids.md)接口获取。 |
 | groupNick | String | 是 | 用户群昵称，最长不超过30字符，建议长度在10字符以内。 |
 

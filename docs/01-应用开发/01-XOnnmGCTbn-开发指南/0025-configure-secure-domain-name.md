@@ -45,12 +45,12 @@ updated_at: "2026-06-30 09:00:30"
 
 配置完成后，建议通过以下方式验证是否生效：
 
-1. 在小程序中调用[httpRequest](../03-Ogu5SlPY4t-客户端JSAPI/0009-jsapi-http-request.md)接口，向已配置的 HTTP 可信域名发起请求，检查控制台日志是否有网络错误。
+1. 在小程序中调用[httpRequest](../03-Ogu5SlPY4t-客户端JSAPI/0010-jsapi-http-request.md)接口，向已配置的 HTTP 可信域名发起请求，检查控制台日志是否有网络错误。
 2. 使用 web-view 组件加载已配置的 Webview 可信域名页面，确认页面能正常显示。
 
 ## 注意事项
 
 - 安全域名更新后，必须使用钉钉开发者工具重新构建并上传小程序包，否则更改不会生效。
-- 小程序使用[httpRequest](../03-Ogu5SlPY4t-客户端JSAPI/0009-jsapi-http-request.md)API请求的服务地址域名，都必须在 HTTP 安全域名中配置。
+- 小程序使用[httpRequest](../03-Ogu5SlPY4t-客户端JSAPI/0010-jsapi-http-request.md)API请求的服务地址域名，都必须在 HTTP 安全域名中配置。
 - 建议避免使用 IP 地址作为生产环境域名，部分客户端策略可能限制 IP 直接访问。
 - 所有线上环境应强制使用 HTTPS 加密传输，保障数据安全。

@@ -39,7 +39,7 @@ updated_at: "2026-06-05 13:57:16"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| openConversationId | String | 否 | 人与人单聊开放会话ID，可通过[批量安装酷应用到单聊会话](../03-Ogu5SlPY4t-客户端JSAPI/0276-batch-chat-session.md)并监听[会话管理](../04-LFcRvVD08N-事件订阅/0002-org-event-overview.md#260a4e7084gs2)获取OpenConversationId参数值。 |
+| openConversationId | String | 否 | 人与人单聊开放会话ID，可通过[批量安装酷应用到单聊会话](../03-Ogu5SlPY4t-客户端JSAPI/0277-batch-chat-session.md)并监听[会话管理](../04-LFcRvVD08N-事件订阅/0002-org-event-overview.md#260a4e7084gs2)获取OpenConversationId参数值。 |
 | robotCode | String | 否 | 机器人的编码，详情参考[机器人 ID](https://open.dingtalk.com/document/development/robot-overview)。 |
 | processQueryKey | String | 是 | 消息id，可通过[创建并投放卡片](0783-create-and-deliver-cards.md)接口或[人与人会话中机器人发送普通消息](0715-the-robot-sends-ordinary-messages-in-a-person-to-person-conversation.md)接口，获取`processQueryKey`参数值。 |
 | maxResults | Long | 否 | 分页查询每页的数量。 |

@@ -1,0 +1,729 @@
+# 快照对账 2026-08-28
+
+- 旧：3648 篇（本库 meta/documents.jsonl）
+- 新：3651 篇（/home/yuweilun.ywl/Documents/工作/开放平台/wiki/dingtalk-open-platform-docs-20260828-0700）
+- 新增 4 / 更新 197 / 移动 510 / 删除 1
+
+## 新增
+- [【升级】应用开发平台权限管理升级公告](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1444-application-development-announcement.md) · 应用开发/服务端API · 2026-08-27
+- [【升级】应用开发平台开发范围升级公告](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1445-application-development-upgrade-announcement.md) · 应用开发/服务端API · 2026-08-27
+- [消息类型说明](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1833-message-types-xiaomi-customer-service.md) · 应用开发/服务端API · 2026-08-27
+- [JSAPI标准输入输出对象](docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0005-jsapi-input-output-object.md) · 应用开发/客户端JSAPI · 2026-08-27
+
+## 内容更新
+- [应用授权校验](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1650-application-authorization-verification.md) · 2025-09-08 → 2026-08-27
+- [新购授权订单](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1651-new-order-authorization.md) · 2025-09-08 → 2026-08-27
+- [校验变配](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1652-verify-configuration.md) · 2025-09-08 → 2026-08-27
+- [校验订单](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1653-verification-order.md) · 2025-09-08 → 2026-08-27
+- [通过调用者unionId获取激活码](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1654-obtain-the-activation-code-by-calling-the-union-id-of.md) · 2025-09-08 → 2026-08-27
+- [通知授权结果](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1655-notify-the-authorization-result.md) · 2025-09-08 → 2026-08-27
+- [变配租户信息](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1656-change-tenant-information-1.md) · 2025-09-08 → 2026-08-27
+- [查询商品列表](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1657-query-product-lists.md) · 2025-09-08 → 2026-08-27
+- [注册账号](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1658-register-an-account.md) · 2025-09-08 → 2026-08-27
+- [验证激活结果](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1659-verify-activation-results.md) · 2025-09-08 → 2026-08-27
+- [校验订单的升级状态](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1660-upgrade-status-of-the-verification-order.md) · 2025-09-08 → 2026-08-27
+- [续费服务订单](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1661-renewal-service-order.md) · 2025-09-08 → 2026-08-27
+- [终止阿里云授权](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1662-terminate-authorization-for-alibaba-cloud-services.md) · 2025-09-08 → 2026-08-27
+- [移除租户资源](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1663-remove-tenant-resources.md) · 2025-09-08 → 2026-08-27
+- [续费租户](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1664-renewal-tenant.md) · 2025-09-08 → 2026-08-27
+- [执行宜搭的审批任务](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1665-execute-appropriate-approval-tasks.md) · 2025-09-08 → 2026-08-27
+- [获取平台服务资源](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1666-obtain-platform-service-resources.md) · 2025-09-08 → 2026-08-27
+- [获取应用下的页面列表](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1667-obtains-the-page-list-under-an-application.md) · 2025-09-08 → 2026-08-27
+- [多渠道新购校验](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1668-multi-channel-new-purchase-verification.md) · 2025-09-08 → 2026-08-27
+- [执行自定义API](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1669-run-custom-api.md) · 2025-09-08 → 2026-08-27
+- [查询激活码](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1670-query-activation-code.md) · 2025-09-08 → 2026-08-27
+- [查询销售用户信息](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1671-query-sales-user-information.md) · 2025-09-08 → 2026-08-27
+- [查询企业级别](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1672-query-enterprise-level.md) · 2025-09-08 → 2026-08-27
+- [校验订单的升级](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1673-upgrade-the-verification-order.md) · 2025-12-08 → 2026-08-27
+- [发布商品](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1674-release-products.md) · 2025-09-08 → 2026-08-27
+- [使商品过期](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1675-make-goods-expire.md) · 2025-09-08 → 2026-08-27
+- [退还商品](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1676-refund-of-goods.md) · 2025-09-08 → 2026-08-27
+- [流程实例](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1677-yida-process-instance.md) · 2025-10-17 → 2026-08-27
+- [单据实例](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1678-yida-document-instance.md) · 2025-10-17 → 2026-08-27
+- [任务中心](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1679-yida-task-center.md) · 2025-10-17 → 2026-08-27
+- [其他](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1680-other.md) · 2025-10-17 → 2026-08-27
+- [创建培训课程](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1681-create-live-courses.md) · 2026-08-26 → 2026-08-27
+- [修改培训课程](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1682-modify-the-basic-information-of-a-live-streaming-course.md) · 2026-08-26 → 2026-08-27
+- [删除培训课程](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1683-delete-live-training-courses.md) · 2026-08-26 → 2026-08-27
+- [获取培训观看数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1684-obtains-the-playback-data-of-a-live-stream.md) · 2026-08-26 → 2026-08-27
+- [剪辑直播课程回放](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1685-clip-live-course-playback.md) · 2026-08-26 → 2026-08-27
+- [获取培训课程的基本信息](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1686-get-basic-information-about-the-course.md) · 2026-08-26 → 2026-08-27
+- [查询直播课程的可观看白名单](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1687-query-the-whitelist-of-live-courses.md) · 2026-08-26 → 2026-08-27
+- [修改直播课程的可观看白名单](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1688-modify-the-whitelist-for-live-streaming-courses.md) · 2026-08-26 → 2026-08-27
+- [接入必读](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1689-access-required.md) · 2025-10-16 → 2026-08-27
+- [申请钉钉云账号](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1692-apply-for-a-dingtalk-cloud-account-1.md) · 2025-12-18 → 2026-08-27
+- [钉钉云解决方案](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1694-dingtalk-cloud-solution.md) · 2026-07-24 → 2026-08-27
+- [开通云产品](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1695-activate-alibaba-cloud-products.md) · 2025-12-18 → 2026-08-27
+- [设置RDS实例接收钉钉推送](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1698-configure-the-inbound-dingtalk-for-an-rds-instance.md) · 2025-12-18 → 2026-08-27
+- [查看RDS中钉钉推送的数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1699-view-the-data-pushed-by-dingtalk-in-rds.md) · 2025-12-18 → 2026-08-27
+- [钉钉云推送数据格式](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1700-deprecated-dingtalk-cloud-push-data-format.md) · 2025-12-09 → 2026-08-27
+- [释放钉钉云产品](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1703-release-dingtalk-cloud-products.md) · 2025-10-16 → 2026-08-27
+- [钉钉云迁移聚石塔](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1704-migrate-data-from-dingtalk-to-alibaba-cloud-1.md) · 2025-10-16 → 2026-08-27
+- [SLS数据迁移](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1706-log-service-data-migration.md) · 2025-10-16 → 2026-08-27
+- [接入常见问题](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1707-access-common-problems.md) · 2025-10-16 → 2026-08-27
+- [充值/退款等财务问题](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1709-financial-problems-such-as-recharge-refund.md) · 2025-10-16 → 2026-08-27
+- [资源的购买](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1710-purchase-resources.md) · 2025-10-16 → 2026-08-27
+- [Assistant API 调用流程](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1711-assistantapi-call-process.md) · 2026-03-06 → 2026-08-27
+- [AI助理响应接口-应用权限](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1712-api-assistantresponse.md) · 2026-03-06 → 2026-08-27
+- [AI助理响应接口-个人权限](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1713-api-assistantmeresponse.md) · 2026-03-06 → 2026-08-27
+- [创建线程](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1714-api-createassistantthread.md) · 2026-03-06 → 2026-08-27
+- [删除AI助理线程](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1715-api-deleteassistantthread.md) · 2026-03-06 → 2026-08-27
+- [检索AI助理线程](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1716-api-retrieveassistantthread.md) · 2026-03-06 → 2026-08-27
+- [创建消息](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1717-api-createassistantmessage.md) · 2026-03-06 → 2026-08-27
+- [删除AI助理的消息体](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1718-api-deleteassistantmessage.md) · 2026-03-06 → 2026-08-27
+- [获取AI助理的消息列表](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1719-api-listassistantmessage.md) · 2026-03-06 → 2026-08-27
+- [获取AI助理的消息体](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1720-api-retrieveassistantmessage.md) · 2026-03-06 → 2026-08-27
+- [创建AI助理的运行任务](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1721-api-createassistantrun.md) · 2026-03-06 → 2026-08-27
+- [获取AI助理的运行任务](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1722-api-retrieveassistantrun.md) · 2026-03-06 → 2026-08-27
+- [获取AI助理的运行任务的列表](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1723-api-listassistantrun.md) · 2026-03-06 → 2026-08-27
+- [创建AI助理](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1724-assistant-management-create-an-ai-assistant.md) · 2026-03-06 → 2026-08-27
+- [删除AI助理](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1725-assistant-management-deletes-ai-assistants.md) · 2026-03-06 → 2026-08-27
+- [更新AI助理基础信息](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1726-api-updateassistantbasicinfo.md) · 2026-03-06 → 2026-08-27
+- [查询 AI 助理基本信息](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1727-api-retrieveassistantbasicinfo.md) · 2026-03-06 → 2026-08-27
+- [更新 AI 助理的使用范围](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1728-api-updateassistantscope.md) · 2026-03-06 → 2026-08-27
+- [获取用户创建的AI助理列表](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1729-assistant-acquires-list-assistants-created-by-users.md) · 2026-03-06 → 2026-08-27
+- [获取 AI 助理的使用范围](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1730-api-retrieveassistantscope.md) · 2026-03-06 → 2026-08-27
+- [获取AI助理对话明细列表](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1731-api-loglist.md) · 2026-03-06 → 2026-08-27
+- [获取用户可见范围的AI助理列表](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1732-api-listvisibleassistant.md) · 2026-03-06 → 2026-08-27
+- [获取助理技能信息](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1733-api-getassistantactioninfo.md) · 2026-03-06 → 2026-08-27
+- [将助理技能发布到组织技能库](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1734-api-addtoorgskillrepository.md) · 2026-03-06 → 2026-08-27
+- [移除助理组织技能库技能](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1735-api-removefromorgskillrepository.md) · 2026-03-06 → 2026-08-27
+- [助理学习知识](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1736-api-learnknowledge.md) · 2026-03-06 → 2026-08-27
+- [助理删除知识](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1737-api-deleteknowledge.md) · 2026-03-06 → 2026-08-27
+- [助理重新学习](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1738-api-relearnknowledge.md) · 2026-03-06 → 2026-08-27
+- [获取问答明细](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1739-api-getaskdetail.md) · 2026-03-06 → 2026-08-27
+- [获取学习的知识列表](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1740-api-getknowledgelist.md) · 2026-03-06 → 2026-08-27
+- [创建互动卡片实例](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1741-create-an-interactive-card-instance-2.md) · 2025-09-08 → 2026-08-27
+- [开启互动卡片实例置顶](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1742-enable-the-interactive-card-setting.md) · 2025-09-08 → 2026-08-27
+- [关闭互动卡片实例置顶](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1743-disable-the-sticky-card-setting.md) · 2025-09-08 → 2026-08-27
+- [酷应用常见问题](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1744-cool-app-faq.md) · 2025-10-21 → 2026-08-27
+- [批量获取钉钉运动数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1745-queries-the-number-of-dingtalk-movement-steps-of-multiple-users.md) · 2025-09-08 → 2026-08-27
+- [获取个人或部门钉钉运动数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1746-queries-individual-or-department-dingtalk-exercise-steps.md) · 2025-09-08 → 2026-08-27
+- [获取视频直播明细列表](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1747-queries-the-details-list-of-apsaravideo-live.md) · 2025-09-08 → 2026-08-27
+- [获取视频直播观看人员列表](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1748-query-users-of-apsaravideo-live.md) · 2025-09-08 → 2026-08-27
+- [获取企业视频直播统计列表（部门维度）](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1749-live-broadcast-summary-statistics-of-key-account-departments.md) · 2025-09-08 → 2026-08-27
+- [获取企业视频直播统计数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1750-query-live-streaming-statistics.md) · 2025-09-08 → 2026-08-27
+- [获取企业某天的视频会议统计数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1751-video-conferencing-statistics-query-v2-for-key-accounts.md) · 2025-09-08 → 2026-08-27
+- [获取企业某天的所有部门视频会议统计数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1752-video-conferencing-statistics-list-for-key-accounts-and-departments.md) · 2025-09-08 → 2026-08-27
+- [获取企业视频会议明细列表](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1753-video-conference-details-for-key-accounts.md) · 2025-09-08 → 2026-08-27
+- [获取视频会议详情](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1754-get-details-of-the-video-conference.md) · 2025-12-08 → 2026-08-27
+- [获取企业某天的所有部门电话会议统计列表](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1755-major-customer-department-dimension-teleconference-statistics.md) · 2025-09-08 → 2026-08-27
+- [获取企业电话会议明细列表](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1756-major-account-conference-call-details-list.md) · 2025-09-08 → 2026-08-27
+- [获取企业某天的电话会议数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1757-major-customer-teleconference-statistics-interface.md) · 2025-09-08 → 2026-08-27
+- [获取企业各类群组创建情况](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1758-api-for-obtaining-the-creation-status-of-various-groups.md) · 2025-09-08 → 2026-08-27
+- [获取企业聊天数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1759-chat-data-statistics-query-for-key-accounts.md) · 2025-09-08 → 2026-08-27
+- [获取企业部门聊天数据（部门维度）](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1760-dingtalk-chat-information-in-key-accounts.md) · 2025-09-08 → 2026-08-27
+- [获取企业应用访问情况](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1761-queries-the-daily-usage-summary-of-microapplications-in-an-enterprise.md) · 2025-09-08 → 2026-08-27
+- [统计企业活跃用户](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1762-query-for-dau-statistics.md) · 2025-09-08 → 2026-08-27
+- [企业活跃用户统计列表（部门维度）](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1763-query-the-statistics-of-active-users-in-a-department-of.md) · 2025-09-08 → 2026-08-27
+- [查询企业通讯录未激活用户列表](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1764-queries-the-list-of-inactive-accounts-in-the-key-account.md) · 2025-09-08 → 2026-08-27
+- [获取企业DING使用数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1765-enterprise-ding-quantity-statistics.md) · 2025-09-08 → 2026-08-27
+- [获取企业DING使用数据（部门维度）](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1766-query-the-departmental-transmission-status-of-key-clients.md) · 2025-09-08 → 2026-08-27
+- [获得组织维度日程相关信息](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1767-queries-the-number-of-people-who-have-created-an-event.md) · 2025-09-08 → 2026-08-27
+- [获得企业创建日志相关信息（部门维度）](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1768-obtains-information-about-a-created-enterprise-log-from-the-department.md) · 2025-09-08 → 2026-08-27
+- [获得企业创建日志相关信息（组织维度）](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1769-obtains-information-about-a-created-enterprise-log-from-the-organization.md) · 2025-09-08 → 2026-08-27
+- [获得用户创建文档数和创建文档人数（部门维度）](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1770-obtain-departmental-dimensions-documents-created-people-creating.md) · 2025-12-08 → 2026-08-27
+- [获取用户创建文档数和创建文档人数（组织维度）](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1771-queries-the-number-dingtalk-documents-created-per-day-in-an.md) · 2025-09-08 → 2026-08-27
+- [获取发布智能填表数量和使用智能填表人数（部门维度）](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1772-obtains-the-number-of-tables-published-by-the-enterprise-from.md) · 2025-09-08 → 2026-08-27
+- [获取企业发布智能填表数（组织维度）](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1773-queries-the-number-of-tables-published-in-an-organization.md) · 2025-09-08 → 2026-08-27
+- [获取互动服务窗相关数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1774-queries-the-data-about-the-interactive-service-window.md) · 2025-09-08 → 2026-08-27
+- [获取年报数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1775-obtain-annual-report-data.md) · 2025-09-08 → 2026-08-27
+- [获取用户月活跃数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1776-retrieves-the-user-s-monthly-active-data.md) · 2025-09-08 → 2026-08-27
+- [获取未活跃用户登录明细](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1777-obtains-the-logon-details-of-inactive-users.md) · 2025-10-09 → 2026-08-27
+- [获取用户版本分布情况](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1778-queries-the-distribution-of-user-versions.md) · 2025-09-08 → 2026-08-27
+- [获取企业待办统计数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1779-obtains-the-to-do-statistics-of-an-enterprise.md) · 2025-09-08 → 2026-08-27
+- [获取企业日程统计数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1780-queries-enterprise-schedule-statistics.md) · 2025-09-08 → 2026-08-27
+- [获取企业钉盘统计数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1781-obtains-the-statistics-on-enterprise-dingtalk-trays.md) · 2025-09-08 → 2026-08-27
+- [获取数字区县组织信息](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1782-querydigitaldistrictorginfo-api-reference.md) · 2025-09-08 → 2026-08-27
+- [获取企业单聊统计数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1783-queries-the-statistics-on-one-time-enterprise-chats.md) · 2025-09-08 → 2026-08-27
+- [获取企业群聊统计数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1784-obtain-enterprise-group-chat-statistics.md) · 2025-09-08 → 2026-08-27
+- [获取企业日志统计数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1785-obtain-enterprise-log-statistics.md) · 2025-09-08 → 2026-08-27
+- [获取企业邮箱统计数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1786-queries-enterprise-email-statistics.md) · 2025-09-08 → 2026-08-27
+- [获取企业文档统计数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1787-get-enterprise-document-statistics.md) · 2025-09-08 → 2026-08-27
+- [获取企业签到统计数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1788-queries-enterprise-check-in-statistics.md) · 2025-09-08 → 2026-08-27
+- [获取企业公告统计数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1789-queries-corporate-announcement-statistics.md) · 2025-09-08 → 2026-08-27
+- [获取企业考勤统计数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1790-queries-enterprise-attendance-statistics.md) · 2025-09-08 → 2026-08-27
+- [获取企业审批统计数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1791-obtains-enterprise-approval-statistics.md) · 2025-09-08 → 2026-08-27
+- [获取企业发红包统计数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1792-obtains-the-statistics-on-red-packets-issued-by-enterprises.md) · 2025-09-08 → 2026-08-27
+- [获取企业群直播统计数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1793-obtains-the-live-stream-statistics-for-an-enterprise-group.md) · 2025-09-08 → 2026-08-27
+- [获取企业全员圈统计数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1794-obtains-the-statistical-data-of-all-employees-of-an-enterprise.md) · 2025-09-08 → 2026-08-27
+- [获取企业用户在线统计数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1795-retrieve-online-statistics-of-enterprise-users.md) · 2025-09-08 → 2026-08-27
+- [获取企业电话会议统计数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1796-get-enterprise-teleconference-statistics.md) · 2025-09-08 → 2026-08-27
+- [获取企业视频会议统计数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1797-get-enterprise-video-conference-statistics.md) · 2025-09-08 → 2026-08-27
+- [获取企业接收红包统计数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1798-queries-the-red-envelope-receiving-statistics-of-an-enterprise.md) · 2025-09-08 → 2026-08-27
+- [获取企业钉钉运动统计数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1799-queries-dingtalk-movement-statistics.md) · 2025-09-08 → 2026-08-27
+- [获取企业员工类型统计数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1800-obtains-statistics-on-employee-types.md) · 2025-09-08 → 2026-08-27
+- [获取企业DING发送统计数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1801-obtain-sending-statistics-of-an-enterprise-ding.md) · 2025-09-08 → 2026-08-27
+- [获取企业用户激活状态统计数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1802-obtains-statistics-on-user-activation-status.md) · 2025-09-08 → 2026-08-27
+- [获取企业DING接收及评论统计数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1803-obtain-statistics-on-receiving-and-comments-of-enterprise-ding.md) · 2025-09-08 → 2026-08-27
+- [ASR 一句话语音识别](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1804-asr-short-sentence-recognition.md) · 2026-01-22 → 2026-08-27
+- [获取应用列表](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1805-queries-applications.md) · 2025-09-08 → 2026-08-27
+- [获取应用功能节点](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1806-queries-the-application-feature-nodes.md) · 2025-09-08 → 2026-08-27
+- [获取组织数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1807-queries-organization-data.md) · 2025-09-08 → 2026-08-27
+- [获取用户数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1808-obtain-user-data.md) · 2025-09-08 → 2026-08-27
+- [获取角色数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1809-obtain-role-data.md) · 2025-09-08 → 2026-08-27
+- [获取角色用户数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1810-historical-acquisition-of-role-user-data.md) · 2025-12-05 → 2026-08-27
+- [获取表单对象结构](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1811-gets-the-form-object-structure.md) · 2025-09-08 → 2026-08-27
+- [创建表单业务数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1812-create-form-business-data.md) · 2025-09-08 → 2026-08-27
+- [查询表单业务数据列表](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1813-querying-form-business-data.md) · 2025-09-08 → 2026-08-27
+- [修改表单业务对象数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1814-modify-form-business-object-data.md) · 2025-09-08 → 2026-08-27
+- [批量新增表单业务数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1815-batch-add-form-business-data.md) · 2025-09-08 → 2026-08-27
+- [删除业务对象](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1816-delete-a-business-object.md) · 2025-09-08 → 2026-08-27
+- [获取业务实例信息](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1817-queries-business-instance-information.md) · 2025-09-08 → 2026-08-27
+- [创建流程实例](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1818-create-a-process-instance.md) · 2025-09-08 → 2026-08-27
+- [删除流程实例数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1819-delete-process-instance-data.md) · 2025-09-08 → 2026-08-27
+- [取消流程实例](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1820-cancel-a-process-instance.md) · 2025-09-08 → 2026-08-27
+- [查询流程实例](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1821-query-flow-instances.md) · 2025-09-08 → 2026-08-27
+- [查询流程实例节点工作项](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1822-query-flow-instance-node-work-items.md) · 2025-09-08 → 2026-08-27
+- [获取附件临时免登地址](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1823-obtain-the-temporary-attachment-free-address.md) · 2025-09-08 → 2026-08-27
+- [获取文件上传地址](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1824-obtain-the-upload-url-of-a-file-2.md) · 2025-09-08 → 2026-08-27
+- [使用服务助手推送消息](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1825-the-message-pushing-interface-of-the-assistant.md) · 2026-01-26 → 2026-08-27
+- [消息类型与数据格式](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1826-service-desk-message-types-and-data-formats.md) · 2025-12-05 → 2026-08-27
+- [消息链接说明](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1827-message-description-service-desk.md) · 2025-12-08 → 2026-08-27
+- [智能问答](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1828-alimebot-intelligent-q-a-interface.md) · 2025-09-08 → 2026-08-27
+- [获取用户登录凭证](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1829-obtains-the-user-login-credential-of-the-third-party-system-of.md) · 2025-09-08 → 2026-08-27
+- [推送小蜜机器人单聊O2O消息](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1830-push-xiaomi-customer-service-robot-single-chat-message.md) · 2025-09-08 → 2026-08-27
+- [小蜜客服机器人消息回复](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1831-xiaomi-customer-service-robot-message-reply.md) · 2025-09-08 → 2026-08-27
+- [查询机器人基础指标数据](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1832-query-robot-data-indicators.md) · 2025-09-08 → 2026-08-27
+- [注册设备](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1834-register-devices.md) · 2025-09-08 → 2026-08-27
+- [批量注册设备](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1835-batchregister-devices.md) · 2025-09-08 → 2026-08-27
+- [批量修改设备](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1836-batch-modify-devices.md) · 2025-09-08 → 2026-08-27
+- [删除设备](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1837-delete-a-device.md) · 2025-09-08 → 2026-08-27
+- [批量注册事件类型](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1838-registration-event-type.md) · 2025-09-08 → 2026-08-27
+- [设备入会](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1839-equipment-membership.md) · 2025-09-08 → 2026-08-27
+- [事件推送](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1840-dingtalk-iot-push-events.md) · 2025-09-08 → 2026-08-27
+- [创建店铺群](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1844-create-a-store-group.md) · 2025-09-08 → 2026-08-27
+- [创建钉外两人群](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1845-create-two-people-outside-the-nail.md) · 2025-09-08 → 2026-08-27
+- [创建互通群](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1846-create-an-intercommunication-group.md) · 2025-12-08 → 2026-08-27
+- [创建钉钉客联钉外账号](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1847-create-bc-account-association.md) · 2026-07-22 → 2026-08-27
+- [创建钉钉客联普通互通群](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1848-create-common-group-new-version.md) · 2026-07-22 → 2026-08-27
+- [创建钉钉客联两人互通群](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1849-creating-two-groups-of-people.md) · 2026-07-22 → 2026-08-27
+- [获取钉钉客联H5页面地址](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1850-get-the-dingtalk-guest-group-session-address.md) · 2026-07-21 → 2026-08-27
+- [批量查询跨钉两人互通群列表](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1851-queries-the-session-information-of-two-population-groups.md) · 2026-07-21 → 2026-08-27
+- [查询钉钉客联钉外账号未读消息数](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1852-querying-the-number-of-unread-messages-of-the-user.md) · 2026-07-21 → 2026-08-27
+- [添加钉钉客联互通群成员](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1853-add-a-group-member-1.md) · 2026-07-21 → 2026-08-27
+- [移除钉钉客联互通群成员](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1854-remove-group-members.md) · 2026-07-21 → 2026-08-27
+- [修改钉钉客联互通群头像](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1855-modify-the-avatar-of-a-communication-group.md) · 2026-07-21 → 2026-08-27
+- [修改钉钉客联互通群名称](docs/01-应用开发/02-4a8AMF6u2A-服务端API/1856-modify-the-group-name.md) · 2026-07-21 → 2026-08-27
+- [安装酷应用入群](docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0274-install-coothe-group.md) · 2025-10-09 → 2026-08-27
+- [用户身份发送卡片消息到群](docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0306-user-messages-to-groups.md) · 2025-10-09 → 2026-08-27
+- [用户身份发送卡片消息到单聊](docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0307-message-to-single-chat.md) · 2025-10-09 → 2026-08-27
+
+## 目录位置移动（内容未变）
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1444-obtain-orgapp-token.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1446-obtain-orgapp-token.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1445-obtain-application-suite-ticket.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1447-obtain-application-suite-ticket.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1446-obtain-isvapp-token.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1448-obtain-isvapp-token.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1447-obtain-jsapi-ticket.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1449-obtain-jsapi-ticket.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1448-obtains-the-enterprise-authorized-credential.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1450-obtains-the-enterprise-authorized-credential.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1449-obtain-the-ssotoken-for-micro-application-background-logon-free.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1451-obtain-the-ssotoken-for-micro-application-background-logon-free.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1450-exchange-code-for-the-identity-information-of-a-microapplication-administrator.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1452-exchange-code-for-the-identity-information-of-a-microapplication-administrator.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1451-get-user-userid-through-login-free-code.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1453-get-user-userid-through-login-free-code.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1452-obtain-the-user-information-based-on-the-sns-temporary-authorization.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1454-obtain-the-user-information-based-on-the-sns-temporary-authorization.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1453-create-user.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1455-create-user.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1454-create-dedicated-accounts.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1456-create-dedicated-accounts.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1455-update-user-details.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1457-update-user-details.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1456-delete-a-member.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1458-delete-a-member.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1457-queries-user-details.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1459-queries-user-details.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1458-obtain-the-basic-information-of-department-users.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1460-obtain-the-basic-information-of-department-users.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1459-obtain-the-list-of-employee-ids-by-department-id.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1461-obtain-the-list-of-employee-ids-by-department-id.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1460-obtain-department-members-details.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1462-obtain-department-members-details.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1461-obtain-the-number-of-employees.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1463-obtain-the-number-of-employees.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1462-query-data-of-inactive-users.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1464-query-data-of-inactive-users.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1463-retrieve-userid-from-mobile-phone-number.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1465-retrieve-userid-from-mobile-phone-number.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1464-you-can-call-this-operation-to-retrieve-the-userids-of.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1466-you-can-call-this-operation-to-retrieve-the-userids-of.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1465-obtains-a-list-of-administrators.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1467-obtains-a-list-of-administrators.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1466-queries-department-details.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1468-queries-department-details.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1467-obtain-the-department-list.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1469-obtain-the-department-list.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1468-obtain-a-sub-department-id-list.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1470-obtain-a-sub-department-id-list.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1469-queries-all-parent-departments-of-a-department.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1471-queries-all-parent-departments-of-a-department.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1470-queries-all-parent-departments-of-a-specified-user.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1472-queries-all-parent-departments-of-a-specified-user.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1471-create-a-department.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1473-create-a-department.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1472-delete-a-department.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1474-delete-a-department.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1473-update-a-department.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1475-update-a-department.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1474-robots-send-interactive-cards.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1476-robots-send-interactive-cards.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1475-update-the-robot-to-send-interactive-cards.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1477-update-the-robot-to-send-interactive-cards.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1476-send-interactive-dynamic-cards-1.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1478-send-interactive-dynamic-cards-1.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1477-update-dingtalk-interactive-cards.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1479-update-dingtalk-interactive-cards.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1478-registration-card-interaction-callback-address-1.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1480-registration-card-interaction-callback-address-1.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1479-send-dingtalk-interactive-cards-to-person-to-person-chat-sessions.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1481-send-dingtalk-interactive-cards-to-person-to-person-chat-sessions.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1480-send-lightweight-interactive-cards.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1482-send-lightweight-interactive-cards.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1481-session-management-creates-groups.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1483-session-management-creates-groups.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1482-modify-a-group-session.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1484-modify-a-group-session.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1483-set-chat-admin.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1485-set-chat-admin.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1484-create-a-scene-group-v2.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1486-create-a-scene-group-v2.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1485-scene-group-update.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1487-scene-group-update.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1486-add-people-to-scene-group.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1488-add-people-to-scene-group.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1487-scene-group-delete.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1489-scene-group-delete.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1488-send-group-messages.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1490-send-group-messages.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1489-queries-the-list-of-people-who-have-read-a-group.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1491-queries-the-list-of-people-who-have-read-a-group.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1490-send-normal-messages-1.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1492-send-normal-messages-1.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1491-outgoing-phone-ding.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1493-outgoing-phone-ding.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1492-queries-the-playback-data-of-a-live-stream.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1494-queries-the-playback-data-of-a-live-stream.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1493-offline-isv-service-provider-data-initialization.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1495-offline-isv-service-provider-data-initialization.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1494-authurl.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1496-authurl.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1495-e-sign-has-revoked-the-enterprise-authorization.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1497-e-sign-has-revoked-the-enterprise-authorization.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1496-obtain-the-status-of-enterprise-e-sign-treasure-micro-application.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1498-obtain-the-status-of-enterprise-e-sign-treasure-micro-application.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1497-package-resale-profit-distribution-model-1.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1499-package-resale-profit-distribution-model-1.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1498-package-resale-base-price-settlement-mode-1.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1500-package-resale-base-price-settlement-mode-1.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1499-get-package-margin.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1501-get-package-margin.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1500-check-whether-enterprise-registered-realname-e-sign-treasure.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1502-check-whether-enterprise-registered-realname-e-sign-treasure.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1501-query-whether-a-user-has-a-real-name.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1503-query-whether-a-user-has-a-real-name.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1502-get-the-address-enterprise-console-through-e-sign.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1504-get-the-address-enterprise-console-through-e-sign.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1503-obtain-enterprise-real-name-address.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1505-obtain-enterprise-real-name-address.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1504-obtain-personal-real-name-address.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1506-obtain-personal-real-name-address.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1505-upload-file-stream.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1507-upload-file-stream.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1506-obtain-the-file-upload-address-1.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1508-obtain-the-file-upload-address-1.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1507-query-file-details.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1509-query-file-details.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1508-obtain-the-address-of-the-initiating-signing-task.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1510-obtain-the-address-of-the-initiating-signing-task.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1509-obtain-signing-address-of-signatory-1.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1511-obtain-signing-address-of-signatory-1.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1510-obtain-the-task-details-of-the-corresponding-process.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1512-obtain-the-task-details-of-the-corresponding-process.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1511-obtain-the-process-task-print-approval-list-1.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1513-obtain-the-process-task-print-approval-list-1.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1512-obtain-the-process-task-contract-list.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1514-obtain-the-process-task-contract-list.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1513-get-process-sign-off-details.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1515-get-process-sign-off-details.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1514-delete-a-template.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1516-delete-a-template.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1515-initiate-an-approval-process-without-a-process.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1517-initiate-an-approval-process-without-a-process.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1516-to-do-instance-status.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1518-to-do-instance-status.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1517-oa-approval-initiates-approval-instances.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1519-oa-approval-initiates-approval-instances.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1518-clean-up-workflow-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1520-clean-up-workflow-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1519-terminate-a-workflow-by-using-an-instance-id.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1521-terminate-a-workflow-by-using-an-instance-id.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1520-add-an-approval-comment.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1522-add-an-approval-comment.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1521-create-a-to-do-task.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1523-create-a-to-do-task.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1522-query-a-user-s-to-do-items.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1524-query-a-user-s-to-do-items.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1523-update-to-do-task-status.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1525-update-to-do-task-status.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1524-cancel-multiple-tasks.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1526-cancel-multiple-tasks.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1525-grants-the-permission-to-download-the-approval-file.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1527-grants-the-permission-to-download-the-approval-file.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1526-obtains-the-template-code-based-on-the-template-name.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1528-obtains-the-template-code-based-on-the-template-name.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1527-update-the-status-of-multiple-instances-at-a-time.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1529-update-the-status-of-multiple-instances-at-a-time.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1528-preview-authorization-attachment.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1530-preview-authorization-attachment.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1529-execute-approval-operation-with-attachment.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1531-execute-approval-operation-with-attachment.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1530-save-approval-template.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1532-save-approval-template.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1531-operation-to-retrieve-a-list-of.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1533-operation-to-retrieve-a-list-of.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1532-obtain-the-number-of-tasks-to-be-approved-by-me.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1534-obtain-the-number-of-tasks-to-be-approved-by-me.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1533-get-details-single-approval-instance.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1535-get-details-single-approval-instance.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1534-query-the-space-of-an-approval-nail.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1536-query-the-space-of-an-approval-nail.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1535-approve-nail-disk-file-authorization.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1537-approve-nail-disk-file-authorization.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1536-obtains-the-information-about-all-manageable-templates-of-the-current.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1538-obtains-the-information-about-all-manageable-templates-of-the-current.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1537-you-can-call-this-operation-to-retrieve-a-list-of.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1539-you-can-call-this-operation-to-retrieve-a-list-of.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1538-schedule-2-0-creation-interface.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1540-schedule-2-0-creation-interface.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1539-schedule-2-0-modify-schedule.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1541-schedule-2-0-modify-schedule.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1540-schedule-2-0-participant-modification.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1542-schedule-2-0-participant-modification.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1541-schedule-2-0-cancel-schedule.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1543-schedule-2-0-cancel-schedule.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1542-sign-in-for-a-single-schedule.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1544-sign-in-for-a-single-schedule.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1543-calculate-duration-based-on-attendance-scheduling.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1545-calculate-duration-based-on-attendance-scheduling.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1544-notice-of-approval.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1546-notice-of-approval.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1545-holiday-type-added.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1547-holiday-type-added.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1546-holiday-type-update.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1548-holiday-type-update.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1547-query-holiday-consumption-records.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1549-query-holiday-consumption-records.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1548-query-log-statistics.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1550-query-log-statistics.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1549-obtains-the-details-of-a-bulletin-that-is-not-deleted.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1551-obtains-the-details-of-a-bulletin-that-is-not-deleted.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1550-new-to-do-items.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1552-new-to-do-items.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1551-update-to-do-status.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1553-update-to-do-status.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1552-query-the-number-of-to-do-tasks-of-the-enterprise.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1554-query-the-number-of-to-do-tasks-of-the-enterprise.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1553-get-the-user-s-to-do-items.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1555-get-the-user-s-to-do-items.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1554-sends-a-file-to-a-specified-user.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1556-sends-a-file-to-a-specified-user.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1555-add-file-to-user-s-dingtalk-disk.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1557-add-file-to-user-s-dingtalk-disk.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1556-obtain-user-space-under-the-enterprise.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1558-obtain-user-space-under-the-enterprise.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1557-authorize-a-user-to-access-a-custom-workspace-of-an.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1559-authorize-a-user-to-access-a-custom-workspace-of-an.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1558-queries-the-usage-details-of-a-custom-application-space.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1560-queries-the-usage-details-of-a-custom-application-space.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1559-obtain-space-information.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1561-obtain-space-information.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1560-obtain-the-file-list.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1562-obtain-the-file-list.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1561-obtain-file-information.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1563-obtain-file-information.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1562-add-file-and-folder.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1564-add-file-and-folder.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1563-delete-objects.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1565-delete-objects.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1564-move-file-and-folder.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1566-move-file-and-folder.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1565-modify-the-file-and-folder-name.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1567-modify-the-file-and-folder-name.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1566-copy-files-folders.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1568-copy-files-folders.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1567-obtain-download-file-info.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1569-obtain-download-file-info.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1568-obtain-upload-information.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1570-obtain-upload-information.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1569-example-of-the-file-upload-sdk.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1571-example-of-the-file-upload-sdk.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1570-file-download-process.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1572-file-download-process.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1571-obtain-the-recycle-bin-folder-list.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1573-obtain-the-recycle-bin-folder-list.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1572-restore-recycle-bin-files-folder.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1574-restore-recycle-bin-files-folder.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1573-delete-recycle-bin-files-folders.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1575-delete-recycle-bin-files-folders.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1574-empty-recycle-bin-files-folders.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1576-empty-recycle-bin-files-folders.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1575-obtain-a-permission-list.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1577-obtain-a-permission-list.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1576-add-pin-disk-permission.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1578-add-pin-disk-permission.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1577-delete-the-pin-disk-permission.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1579-delete-the-pin-disk-permission.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1578-modify-pin-disk-permission-click.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1580-modify-pin-disk-permission-click.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1579-add-custom-workspace-permissions.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1581-add-custom-workspace-permissions.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1580-single-step-file-upload.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1582-single-step-file-upload.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1581-enable-upload-transaction.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1583-enable-upload-transaction.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1582-upload-file-blocks.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1584-upload-file-blocks.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1583-submit-a-file-upload-transaction.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1585-submit-a-file-upload-transaction.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1584-create-a-team-space.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1586-create-a-team-space.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1585-query-team-space.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1587-query-team-space.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1586-querying-the-list-of-user-team-spaces.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1588-querying-the-list-of-user-team-spaces.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1587-add-permissions-for-team-space-members.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1589-add-permissions-for-team-space-members.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1588-delete-team-space-user-permissions.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1590-delete-team-space-user-permissions.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1589-update-team-space-user-permissions.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1591-update-team-space-user-permissions.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1590-query-a-document-template.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1592-query-a-document-template.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1591-query-the-directory-tree-in-the-knowledge-base.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1593-query-the-directory-tree-in-the-knowledge-base.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1592-query-knowledge-base-node-information.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1594-query-knowledge-base-node-information.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1593-add-workspace-document-user-permissions.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1595-add-workspace-document-user-permissions.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1594-update-team-space-document-user-permissions.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1596-update-team-space-document-user-permissions.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1595-delete-team-space-document-permissions.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1597-delete-team-space-document-permissions.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1596-add-storage-permissions.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1598-add-storage-permissions.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1597-delete-storage-permissions.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1599-delete-storage-permissions.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1598-modify-storage-permissions.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1600-modify-storage-permissions.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1599-get-the-storage-permission-list.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1601-get-the-storage-permission-list.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1600-obtain-storage-upload-information.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1602-obtain-storage-upload-information.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1601-submit-documents.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1603-submit-documents.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1602-manager-microapplications-api-permission.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1604-manager-microapplications-api-permission.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1603-list-the-microapplications-visible-to-employees.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1605-list-the-microapplications-visible-to-employees.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1604-set-the-visible-range-of-the-microapplication.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1606-set-the-visible-range-of-the-microapplication.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1605-gets-the-microapplication-visible-range-set-by-the-enterprise.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1607-gets-the-microapplication-visible-range-set-by-the-enterprise.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1606-create-an-h5-microapplication.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1608-create-an-h5-microapplication.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1607-delete-an-h5-microapplication.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1609-delete-an-h5-microapplication.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1608-obtain-employee-roster-field-information-in-batches.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1610-obtain-employee-roster-field-information-in-batches.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1609-update-employee-roster.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1611-update-employee-roster.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1610-intelligent-personnel-obtain-employee-roster-information.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1612-intelligent-personnel-obtain-employee-roster-information.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1611-intelligent-personnel-query-company-turnover-list.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1613-intelligent-personnel-query-company-turnover-list.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1612-obtain-multiple-employee-demission-information.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1614-obtain-multiple-employee-demission-information.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1613-ai-assistant-messages-reply-mode.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1615-ai-assistant-messages-reply-mode.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1614-api-prepare.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1616-api-prepare.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1615-the-ai-assistant-updates-active-message-sending-mode.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1617-the-ai-assistant-updates-active-message-sending-mode.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1616-api-finish.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1618-api-finish.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1617-ai-assistant-active-sends-messages-mode.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1619-ai-assistant-active-sends-messages-mode.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1618-message-content-filling-guidance.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1620-message-content-filling-guidance.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1619-intelligent-interaction-callback.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1621-intelligent-interaction-callback.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1620-obtains-the-template-that-a-user-creates.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1622-obtains-the-template-that-a-user-creates.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1621-obtains-multiple-form-filling-records.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1623-obtains-multiple-form-filling-records.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1622-query-collection-form-instance-details.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1624-query-collection-form-instance-details.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1623-interactive-service-window-group-message-sending-interface.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1625-interactive-service-window-group-message-sending-interface.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1624-initiate-the-approval-process.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1626-initiate-the-approval-process.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1625-obtains-a-list-of-instance-ids.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1627-obtains-a-list-of-instance-ids.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1626-obtain-process-instance.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1628-obtain-process-instance.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1627-queries-a-process-instance-based-on-its-id.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1629-queries-a-process-instance-based-on-its-id.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1628-obtain-the-information-about-the-nodes-in-process-design.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1630-obtain-the-information-about-the-nodes-in-process-design.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1629-obtain-a-list-of-process-node-buttons.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1631-obtain-a-list-of-process-node-buttons.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1630-update-process-instance-yida.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1632-update-process-instance-yida.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1631-obtain-process-definition.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1633-obtain-process-definition.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1632-save-form-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1634-save-form-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1633-update-form-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1635-update-form-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1634-query-form-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1636-query-form-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1635-obtain-the-ids-of-multiple-form-instances.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1637-obtain-the-ids-of-multiple-form-instances.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1636-add-or-update-form-instances.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1638-add-or-update-form-instances.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1637-querying-form-instance-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1639-querying-form-instance-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1638-query-form-instances-using-advanced-search-conditions.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1640-query-form-instances-using-advanced-search-conditions.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1639-delete-sequence.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1641-delete-sequence.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1640-update-status.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1642-update-status.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1641-obtain-platform-resources.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1643-obtain-platform-resources.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1642-initiate-multiple-callbacks.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1644-initiate-multiple-callbacks.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1643-query-plug-in-information.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1645-query-plug-in-information.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1644-query-plug-ins.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1646-query-plug-ins.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1645-queries-application-information.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1647-queries-application-information.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1646-queries-the-information-about-multiple-applications.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1648-queries-the-information-about-multiple-applications.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1647-suitable-for-new-purchase.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1649-suitable-for-new-purchase.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1688-dingtalk-cloud-2.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1690-dingtalk-cloud-2.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1689-security-restrictions-of-dingtalk-cloud.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1691-security-restrictions-of-dingtalk-cloud.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1691-hosted-as-dingtalk-alibaba-cloud-account.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1693-hosted-as-dingtalk-alibaba-cloud-account.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1694-apply-for-dingtalk-security-group-whitelist.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1696-apply-for-dingtalk-security-group-whitelist.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1695-dingtalk-push-service.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1697-dingtalk-push-service.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1699-application-trial-offline-record-callback-information.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1701-application-trial-offline-record-callback-information.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1700-home-school-address-book-2-0-data-push.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1702-home-school-address-book-2-0-data-push.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1703-migrate-data-on-an-ecs-instance-with-ebs-disks.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1705-migrate-data-on-an-ecs-instance-with-ebs-disks.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1706-dingtalk-prices-of-cloud-products.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1708-dingtalk-prices-of-cloud-products.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1838-interconnections-model.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1841-interconnections-model.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1839-interconnections-channel.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1842-interconnections-channel.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1840-interconnections-page.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1843-interconnections-page.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1854-change-group-owner.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1857-change-group-owner.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1855-queries-the-group-member-list.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1858-queries-the-group-member-list.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1856-disband-bc-interconnection-group.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1859-disband-bc-interconnection-group.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1857-group-robots-send-messages.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1860-group-robots-send-messages.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1858-send-c2b-messages.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1861-send-c2b-messages.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1859-send-b2c-messages.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1862-send-b2c-messages.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1860-dingtalk-paas-master-data-create-crm-contact-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1863-dingtalk-paas-master-data-create-crm-contact-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1861-dingtalk-paas-master-data-update-crm-contact-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1864-dingtalk-paas-master-data-update-crm-contact-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1862-dingtalk-paas-master-data-create-crm-customer-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1865-dingtalk-paas-master-data-create-crm-customer-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1863-dingtalk-paas-master-data-update-crm-customer-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1866-dingtalk-paas-master-data-update-crm-customer-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1864-delete-crm-customer.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1867-delete-crm-customer.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1865-dingtalk-paas-master-data-customer-data-search-and-query-interface.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1868-dingtalk-paas-master-data-customer-data-search-and-query-interface.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1866-obtains-customer-data-in-batches-based-on-the-id-list.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1869-obtains-customer-data-in-batches-based-on-the-id-list.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1867-get-metadata-description-of-crm-customer-object.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1870-get-metadata-description-of-crm-customer-object.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1868-dingtalk-the-contact-data-query-api.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1871-dingtalk-the-contact-data-query-api.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1869-retrieve-custom-crm-object-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1872-retrieve-custom-crm-object-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1870-service-window-contact-management.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1873-service-window-contact-management.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1871-obtains-the-contact-information-of-the-service-window.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1874-obtains-the-contact-information-of-the-service-window.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1872-obtain-contact-data-from-the-service-window.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1875-obtain-contact-data-from-the-service-window.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端API/1873-callback-event-for-service-window-following-and-cancellation.md → docs/01-应用开发/02-4a8AMF6u2A-服务端API/1876-callback-event-for-service-window-following-and-cancellation.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0002-jsapi-overview.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0001-jsapi-overview.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0003-jsapi-authentication.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0002-jsapi-authentication.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0001-client-jsapi-call-tutorial.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0003-client-jsapi-call-tutorial.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0005-jsapi-get-auth-code.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0006-jsapi-get-auth-code.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0006-jsapi-request-auth-code.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0007-jsapi-request-auth-code.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0007-jsapi-get-operate-auth-code.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0008-jsapi-get-operate-auth-code.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0008-jsapi-request-auth-info.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0009-jsapi-request-auth-info.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0009-jsapi-http-request.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0010-jsapi-http-request.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0010-jsapi-download-file.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0011-jsapi-download-file.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0011-jsapi-upload-file.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0012-jsapi-upload-file.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0012-jsapi-close-socket.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0013-jsapi-close-socket.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0013-jsapi-connect-socket.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0014-jsapi-connect-socket.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0014-jsapi-on-socket-open.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0015-jsapi-on-socket-open.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0015-jsapi-off-socket-open.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0016-jsapi-off-socket-open.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0016-jsapi-on-socket-error.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0017-jsapi-on-socket-error.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0017-jsapi-off-socket-error.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0018-jsapi-off-socket-error.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0018-jsapi-on-socket-close.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0019-jsapi-on-socket-close.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0019-jsapi-off-socket-close.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0020-jsapi-off-socket-close.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0020-jsapi-off-socket-message.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0021-jsapi-off-socket-message.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0021-jsapi-on-socket-message.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0022-jsapi-on-socket-message.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0022-jsapi-send-socket-message.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0023-jsapi-send-socket-message.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0023-jsapi-can-i-use.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0024-jsapi-can-i-use.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0024-jsapi-corp-id.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0025-jsapi-corp-id.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0025-jsapi-exit.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0026-jsapi-exit.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0026-jsapi-ext-sdk-version.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0027-jsapi-ext-sdk-version.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0027-jsapi-get-run-scene.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0028-jsapi-get-run-scene.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0028-jsapi-get-app-id-sync.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0029-jsapi-get-app-id-sync.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0029-jsapi-get-launch-options-sync.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0030-jsapi-get-launch-options-sync.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0030-jsapi-sdk-version.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0031-jsapi-sdk-version.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0031-jsapi-clear-storage.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0032-jsapi-clear-storage.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0032-jsapi-clear-storage-sync.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0033-jsapi-clear-storage-sync.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0033-jsapi-get-storage.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0034-jsapi-get-storage.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0034-jsapi-get-storage-info.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0035-jsapi-get-storage-info.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0035-jsapi-get-storage-sync.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0036-jsapi-get-storage-sync.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0036-jsapi-get-storage-info-sync.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0037-jsapi-get-storage-info-sync.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0037-jsapi-remove-storage.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0038-jsapi-remove-storage.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0038-jsapi-remove-storage-sync.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0039-jsapi-remove-storage-sync.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0039-jsapi-set-storage.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0040-jsapi-set-storage.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0040-jsapi-set-storage-sync.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0041-jsapi-set-storage-sync.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0041-jsapi-close-page.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0042-jsapi-close-page.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0042-jsapi-go-back-page.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0043-jsapi-go-back-page.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0043-jsapi-quit-page.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0044-jsapi-quit-page.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0044-jsapi-replace-page.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0045-jsapi-replace-page.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0045-jsapi-set-navigation-bar.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0046-jsapi-set-navigation-bar.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0046-jsapi-set-navigation-icon.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0047-jsapi-set-navigation-icon.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0047-jsapi-set-navigation-title.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0048-jsapi-set-navigation-title.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0048-jsapi-set-navigation-left.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0049-jsapi-set-navigation-left.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0049-jsapi-add-tab-bar-item.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0050-jsapi-add-tab-bar-item.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0050-jsapi-hide-tab-bar-red-dot.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0051-jsapi-hide-tab-bar-red-dot.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0051-jsapi-remove-tab-bar-item.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0052-jsapi-remove-tab-bar-item.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0052-jsapi-remove-tab-bar-badge.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0053-jsapi-remove-tab-bar-badge.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0053-jsapi-set-tab-bar-badge.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0054-jsapi-set-tab-bar-badge.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0054-jsapi-show-tab-bar-red-dot.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0055-jsapi-show-tab-bar-red-dot.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0055-jsapi-enable-leave-confirm.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0056-jsapi-enable-leave-confirm.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0056-jsapi-navigate-to.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0057-jsapi-navigate-to.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0057-jsapi-navigate-back.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0058-jsapi-navigate-back.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0058-jsapi-re-launch.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0059-jsapi-re-launch.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0059-jsapi-redirect-to.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0060-jsapi-redirect-to.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0060-jsapi-switch-tab.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0061-jsapi-switch-tab.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0061-jsapi-create-animation.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0062-jsapi-create-animation.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0062-jsapi-animation-bottom.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0063-jsapi-animation-bottom.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0063-jsapi-animation-background-color.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0064-jsapi-animation-background-color.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0064-jsapi-animation-height.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0065-jsapi-animation-height.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0065-jsapi-animation-left.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0066-jsapi-animation-left.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0066-jsapi-animation-matrix.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0067-jsapi-animation-matrix.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0067-jsapi-animation-matrix3d.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0068-jsapi-animation-matrix3d.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0068-jsapi-animation-opacity.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0069-jsapi-animation-opacity.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0069-jsapi-animation-right.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0070-jsapi-animation-right.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0070-jsapi-animation-rotate.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0071-jsapi-animation-rotate.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0071-jsapi-animation-rotate-x.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0072-jsapi-animation-rotate-x.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0072-jsapi-animation-rotate-y.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0073-jsapi-animation-rotate-y.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0073-jsapi-animation-rotate-z.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0074-jsapi-animation-rotate-z.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0074-jsapi-animation-rotate3d.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0075-jsapi-animation-rotate3d.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0075-jsapi-animation-scale.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0076-jsapi-animation-scale.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0076-jsapi-animation-scale-x.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0077-jsapi-animation-scale-x.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0077-jsapi-animation-scale-y.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0078-jsapi-animation-scale-y.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0078-jsapi-animation-scale-z.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0079-jsapi-animation-scale-z.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0079-jsapi-animation-scale3d.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0080-jsapi-animation-scale3d.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0080-jsapi-animation-skew.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0081-jsapi-animation-skew.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0081-jsapi-animation-skew-x.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0082-jsapi-animation-skew-x.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0082-jsapi-animation-skew-y.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0083-jsapi-animation-skew-y.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0083-jsapi-animation-top.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0084-jsapi-animation-top.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0084-jsapi-animation-translate.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0085-jsapi-animation-translate.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0085-jsapi-animation-translate-x.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0086-jsapi-animation-translate-x.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0086-jsapi-animation-translate-y.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0087-jsapi-animation-translate-y.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0087-jsapi-animation-translate-z.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0088-jsapi-animation-translate-z.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0088-jsapi-animation-translate3d.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0089-jsapi-animation-translate3d.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0089-jsapi-animation-width.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0090-jsapi-animation-width.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0090-jsapi-create-canvas-context.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0091-jsapi-create-canvas-context.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0091-jsapi-canvas-context-arc.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0092-jsapi-canvas-context-arc.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0092-jsapi-canvas-context-add-color-stop.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0093-jsapi-canvas-context-add-color-stop.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0093-jsapi-canvas-context-begin-path.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0094-jsapi-canvas-context-begin-path.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0094-jsapi-canvas-context-bezier-curve-to.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0095-jsapi-canvas-context-bezier-curve-to.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0095-jsapi-canvas-context-clip.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0096-jsapi-canvas-context-clip.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0096-jsapi-canvas-context-clear-rect.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0097-jsapi-canvas-context-clear-rect.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0097-jsapi-canvas-context-close-path.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0098-jsapi-canvas-context-close-path.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0098-jsapi-canvas-context-create-linear-gradient.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0099-jsapi-canvas-context-create-linear-gradient.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0099-jsapi-canvas-context-create-circular-gradient.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0100-jsapi-canvas-context-create-circular-gradient.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0100-jsapi-canvas-context-draw.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0101-jsapi-canvas-context-draw.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0101-jsapi-canvas-context-draw-image.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0102-jsapi-canvas-context-draw-image.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0102-jsapi-canvas-context-fill.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0103-jsapi-canvas-context-fill.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0103-jsapi-canvas-context-fill-rect.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0104-jsapi-canvas-context-fill-rect.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0104-jsapi-canvas-context-fill-text.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0105-jsapi-canvas-context-fill-text.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0105-jsapi-canvas-context-get-image-data.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0106-jsapi-canvas-context-get-image-data.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0106-jsapi-canvas-context-line-to.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0107-jsapi-canvas-context-line-to.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0107-jsapi-canvas-context-move-to.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0108-jsapi-canvas-context-move-to.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0108-jsapi-canvas-context-put-image-data.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0109-jsapi-canvas-context-put-image-data.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0109-jsapi-canvas-context-quadratic-curve-to.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0110-jsapi-canvas-context-quadratic-curve-to.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0110-jsapi-canvas-context-rect.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0111-jsapi-canvas-context-rect.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0111-jsapi-canvas-context-rotate.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0112-jsapi-canvas-context-rotate.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0112-jsapi-canvas-context-restore.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0113-jsapi-canvas-context-restore.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0113-jsapi-canvas-context-save.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0114-jsapi-canvas-context-save.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0114-jsapi-canvas-context-scale.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0115-jsapi-canvas-context-scale.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0115-jsapi-canvas-context-stroke.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0116-jsapi-canvas-context-stroke.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0116-jsapi-canvas-context-stroke-rect.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0117-jsapi-canvas-context-stroke-rect.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0117-jsapi-canvas-context-set-fill-style.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0118-jsapi-canvas-context-set-fill-style.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0118-jsapi-canvas-context-set-font-size.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0119-jsapi-canvas-context-set-font-size.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0119-jsapi-canvas-context-set-shadow.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0120-jsapi-canvas-context-set-shadow.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0120-jsapi-canvas-context-set-line-cap.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0121-jsapi-canvas-context-set-line-cap.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0121-jsapi-canvas-context-set-line-join.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0122-jsapi-canvas-context-set-line-join.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0122-jsapi-canvas-context-set-text-align.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0123-jsapi-canvas-context-set-text-align.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0123-jsapi-canvas-context-set-miter-limit.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0124-jsapi-canvas-context-set-miter-limit.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0124-jsapi-canvas-context-set-line-width.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0125-jsapi-canvas-context-set-line-width.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0125-jsapi-canvas-context-set-stroke-style.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0126-jsapi-canvas-context-set-stroke-style.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0126-jsapi-canvas-context-set-global-alpha.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0127-jsapi-canvas-context-set-global-alpha.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0127-jsapi-canvas-context-set-text-baseline.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0128-jsapi-canvas-context-set-text-baseline.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0128-jsapi-canvas-context-translate.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0129-jsapi-canvas-context-translate.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0129-jsapi-canvas-context-to-temp-file-path.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0130-jsapi-canvas-context-to-temp-file-path.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0130-jsapi-load-font-face.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0131-jsapi-load-font-face.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0131-jsapi-choose-district.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0132-jsapi-choose-district.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0132-jsapi-create-map-context.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0133-jsapi-create-map-context.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0133-jsapi-map-context-clear-route.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0134-jsapi-map-context-clear-route.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0134-jsapi-map-context-change-markers.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0135-jsapi-map-context-change-markers.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0135-jsapi-map-context-calculate-distance.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0136-jsapi-map-context-calculate-distance.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0136-jsapi-map-context-get-region.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0137-jsapi-map-context-get-region.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0137-jsapi-map-context-gesture-enable.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0138-jsapi-map-context-gesture-enable.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0138-jsapi-map-context-get-map-properties.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0139-jsapi-map-context-get-map-properties.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0139-jsapi-map-context-get-center-location.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0140-jsapi-map-context-get-center-location.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0140-jsapi-map-context-move-to-location.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0141-jsapi-map-context-move-to-location.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0141-jsapi-map-context-show-route.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0142-jsapi-map-context-show-route.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0142-jsapi-map-context-shows-scale.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0143-jsapi-map-context-shows-scale.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0143-jsapi-map-context-shows-compass.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0144-jsapi-map-context-shows-compass.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0144-jsapi-map-context-smooth-move-marker.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0145-jsapi-map-context-smooth-move-marker.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0145-jsapi-map-context-smooth-move-polyline.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0146-jsapi-map-context-smooth-move-polyline.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0146-jsapi-map-context-translate-marker.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0147-jsapi-map-context-translate-marker.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0147-jsapi-map-context-update-components.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0148-jsapi-map-context-update-components.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0148-jsapi-page-scroll-to.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0149-jsapi-page-scroll-to.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0149-jsapi-alert.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0150-jsapi-alert.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0150-jsapi-hide-toast.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0151-jsapi-hide-toast.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0151-jsapi-confirm.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0152-jsapi-confirm.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0152-jsapi-hide-loading.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0153-jsapi-hide-loading.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0153-jsapi-prompt.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0154-jsapi-prompt.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0154-jsapi-show-modal.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0155-jsapi-show-modal.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0155-jsapi-show-toast.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0156-jsapi-show-toast.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0156-jsapi-show-loading.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0157-jsapi-show-loading.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0157-jsapi-show-action-sheet.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0158-jsapi-show-action-sheet.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0158-jsapi-disable-pull-down-refresh.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0159-jsapi-disable-pull-down-refresh.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0159-jsapi-enable-pull-down-refresh.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0160-jsapi-enable-pull-down-refresh.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0160-jsapi-on-pull-down-refresh.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0161-jsapi-on-pull-down-refresh.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0161-jsapi-stop-pull-down-refresh.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0162-jsapi-stop-pull-down-refresh.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0162-jsapi-hide-keyboard.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0163-jsapi-hide-keyboard.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0163-jsapi-on-keyboard-hide.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0164-jsapi-on-keyboard-hide.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0164-jsapi-on-keyboard-show.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0165-jsapi-on-keyboard-show.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0165-jsapi-create-intersection-observer.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0166-jsapi-create-intersection-observer.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0166-jsapi-intersection-observer-disconnect.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0167-jsapi-intersection-observer-disconnect.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0167-jsapi-intersection-observer-observe.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0168-jsapi-intersection-observer-observe.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0168-jsapi-intersection-observer-relative-to.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0169-jsapi-intersection-observer-relative-to.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0169-jsapi-intersection-observer-relative-to-viewport.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0170-jsapi-intersection-observer-relative-to-viewport.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0170-jsapi-create-selector-query.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0171-jsapi-create-selector-query.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0171-jsapi-selector-query-bounding-client-rect.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0172-jsapi-selector-query-bounding-client-rect.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0172-jsapi-selector-query-exec.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0173-jsapi-selector-query-exec.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0173-jsapi-selector-query-select.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0174-jsapi-selector-query-select.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0174-jsapi-selector-query-select-all.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0175-jsapi-selector-query-select-all.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0175-jsapi-selector-query-scroll-offset.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0176-jsapi-selector-query-scroll-offset.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0176-jsapi-selector-query-select-viewport.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0177-jsapi-selector-query-select-viewport.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0177-jsapi-get-color-scheme-sync.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0178-jsapi-get-color-scheme-sync.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0178-jsapi-choose-date-time.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0179-jsapi-choose-date-time.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0179-jsapi-choose-one-day-in-calendar.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0180-jsapi-choose-one-day-in-calendar.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0180-jsapi-choose-half-day-in-calendar.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0181-jsapi-choose-half-day-in-calendar.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0181-jsapi-date-picker.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0182-jsapi-date-picker.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0182-jsapi-date-range-picker.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0183-jsapi-date-range-picker.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0183-jsapi-time-picker.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0184-jsapi-time-picker.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0184-jsapi-multi-select.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0185-jsapi-multi-select.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0185-jsapi-single-select.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0186-jsapi-single-select.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0186-jsapi-is-in-tab-window.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0187-jsapi-is-in-tab-window.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0187-jsapi-navigate-to-page.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0188-jsapi-navigate-to-page.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0188-jsapi-navigate-back-page.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0189-jsapi-navigate-back-page.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0189-jsapi-navigate-to-mini-program.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0190-jsapi-navigate-to-mini-program.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0190-jsapi-navigate-back-mini-program.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0191-jsapi-navigate-back-mini-program.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0191-jsapi-open-link.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0192-jsapi-open-link.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0192-jsapi-open-micro-app.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0193-jsapi-open-micro-app.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0193-jsapi-open-page-in-micro-app.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0194-jsapi-open-page-in-micro-app.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0194-jsapi-open-page-in-modal-for-pc.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0195-jsapi-open-page-in-modal-for-pc.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0195-jsapi-open-page-in-slide-panel-for-pc.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0196-jsapi-open-page-in-slide-panel-for-pc.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0196-jsapi-open-page-in-work-bench-for-pc.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0197-jsapi-open-page-in-work-bench-for-pc.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0197-jsapi-on-share-app-message.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0198-jsapi-on-share-app-message.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0198-jsapi-share.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0199-jsapi-share.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0199-jsapi-show-share-panel.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0200-jsapi-show-share-panel.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0200-jsapi-get-update-manager.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0201-jsapi-get-update-manager.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0201-jsapi-update-manager-apply-update.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0202-jsapi-update-manager-apply-update.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0202-jsapi-update-manager-on-update-failed.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0203-jsapi-update-manager-on-update-failed.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0203-jsapi-update-manager-on-update-ready.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0204-jsapi-update-manager-on-update-ready.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0204-jsapi-update-manager-on-check-for-update.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0205-jsapi-update-manager-on-check-for-update.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0205-jsapi-choose-image.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0206-jsapi-choose-image.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0206-jsapi-compress-image.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0207-jsapi-compress-image.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0207-jsapi-edit-picture.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0208-jsapi-edit-picture.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0208-jsapi-get-image-info.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0209-jsapi-get-image-info.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0209-jsapi-preview-image.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0210-jsapi-preview-image.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0210-jsapi-save-image.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0211-jsapi-save-image.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0211-jsapi-save-image-to-photos-album.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0212-jsapi-save-image-to-photos-album.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0212-jsapi-choose-media.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0213-jsapi-choose-media.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0213-jsapi-download-audio.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0214-jsapi-download-audio.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0214-jsapi-on-record-end.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0215-jsapi-on-record-end.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0215-jsapi-on-play-audio-end.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0216-jsapi-on-play-audio-end.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0216-jsapi-play-audio.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0217-jsapi-play-audio.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0217-jsapi-pause-audio.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0218-jsapi-pause-audio.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0218-jsapi-resume-audio.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0219-jsapi-resume-audio.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0219-jsapi-stop-record.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0220-jsapi-stop-record.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0220-jsapi-start-record.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0221-jsapi-start-record.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0221-jsapi-stop-audio.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0222-jsapi-stop-audio.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0222-jsapi-translate-voice.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0223-jsapi-translate-voice.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0223-jsapi-get-recorder-manager.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0224-jsapi-get-recorder-manager.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0224-jsapi-recorder-manager-on-start.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0225-jsapi-recorder-manager-on-start.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0225-jsapi-recorder-manager-on-stop.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0226-jsapi-recorder-manager-on-stop.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0226-jsapi-recorder-manager-on-error.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0227-jsapi-recorder-manager-on-error.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0227-jsapi-recorder-manager-on-pause.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0228-jsapi-recorder-manager-on-pause.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0228-jsapi-recorder-manager-on-resume.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0229-jsapi-recorder-manager-on-resume.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0229-jsapi-recorder-manager-on-frame-recorded.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0230-jsapi-recorder-manager-on-frame-recorded.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0230-jsapi-recorder-manager-pause.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0231-jsapi-recorder-manager-pause.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0231-jsapi-recorder-manager-resume.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0232-jsapi-recorder-manager-resume.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0232-jsapi-recorder-manager-stop.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0233-jsapi-recorder-manager-stop.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0233-jsapi-recorder-manager-start.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0234-jsapi-recorder-manager-start.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0234-jsapi-choose-video.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0235-jsapi-choose-video.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0235-jsapi-create-video-context.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0236-jsapi-create-video-context.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0236-jsapi-video-context-exit-full-screen.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0237-jsapi-video-context-exit-full-screen.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0237-jsapi-video-context-mute.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0238-jsapi-video-context-mute.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0238-jsapi-video-context-play.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0239-jsapi-video-context-play.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0239-jsapi-video-context-pause.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0240-jsapi-video-context-pause.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0240-jsapi-video-context-playback-rate.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0241-jsapi-video-context-playback-rate.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0241-jsapi-video-context-request-full-screen.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0242-jsapi-video-context-request-full-screen.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0242-jsapi-video-context-stop.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0243-jsapi-video-context-stop.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0243-jsapi-video-context-seek.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0244-jsapi-video-context-seek.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0244-jsapi-video-context-snapshot.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0245-jsapi-video-context-snapshot.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0245-jsapi-get-background-audio-manager.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0246-jsapi-get-background-audio-manager.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0246-jsapi-background-audio-manager-on-play.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0247-jsapi-background-audio-manager-on-play.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0247-jsapi-background-audio-manager-on-stop.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0248-jsapi-background-audio-manager-on-stop.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0248-jsapi-background-audio-manager-on-pause.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0249-jsapi-background-audio-manager-on-pause.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0249-jsapi-background-audio-manager-on-ended.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0250-jsapi-background-audio-manager-on-ended.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0250-jsapi-background-audio-manager-on-prev.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0251-jsapi-background-audio-manager-on-prev.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0251-jsapi-background-audio-manager-on-next.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0252-jsapi-background-audio-manager-on-next.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0252-jsapi-background-audio-manager-on-canplay.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0253-jsapi-background-audio-manager-on-canplay.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0253-jsapi-background-audio-manager-on-seeked.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0254-jsapi-background-audio-manager-on-seeked.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0254-jsapi-background-audio-manager-on-seeking.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0255-jsapi-background-audio-manager-on-seeking.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0255-jsapi-background-audio-manager-on-waiting.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0256-jsapi-background-audio-manager-on-waiting.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0256-jsapi-background-audio-manager-on-time-update.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0257-jsapi-background-audio-manager-on-time-update.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0257-jsapi-background-audio-manager-play.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0258-jsapi-background-audio-manager-play.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0258-jsapi-background-audio-manager-pause.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0259-jsapi-background-audio-manager-pause.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0259-jsapi-background-audio-manager-stop.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0260-jsapi-background-audio-manager-stop.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0260-jsapi-background-audio-manager-seek.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0261-jsapi-background-audio-manager-seek.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0261-jsapi-on-audio-interruption-end.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0262-jsapi-on-audio-interruption-end.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0262-jsapi-on-audio-interruption-begin.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0263-jsapi-on-audio-interruption-begin.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0263-jsapi-save-video-to-photos-album.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0264-jsapi-save-video-to-photos-album.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0264-jsapi-create-ding.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0265-jsapi-create-ding.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0265-jsapi-create-ding-for-pc.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0266-jsapi-create-ding-for-pc.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0266-jsapi-complex-choose.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0267-jsapi-complex-choose.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0267-jsapi-choose-staff-for-pc.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0268-jsapi-choose-staff-for-pc.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0268-jsapi-choose-phonebook.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0269-jsapi-choose-phonebook.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0269-jsapi-choose-departments.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0270-jsapi-choose-departments.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0270-jsapi-choose-user-from-list.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0271-jsapi-choose-user-from-list.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0271-jsapi-choose-external-users.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0272-jsapi-choose-external-users.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0272-jsapi-edit-external-user.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0273-jsapi-edit-external-user.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0274-add-group-members.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0275-add-group-members.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0275-create-group-install-group.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0276-create-group-install-group.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0276-batch-chat-session.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0277-batch-chat-session.md
+
+## 删除（已写 tombstone，源站已下线或移出目录树）
+- 获取消息内容 · https://open.dingtalk.com/document/development/message-menu-api · 最后见于 docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0277-message-menu-api.md
+
+## 后续动作
+- 结构层（index/ graph/ meta/kb_manifest）：--apply 已全量重建；未 --apply 则本报告仅供预览。
+- 认知层（index/TOPICS.md）：对照上面清单，凡命中 TOPICS 引用的文档（可用 `rg <path> index/TOPICS.md` 与 `graph/links.jsonl` 反查），由 LLM 复核该主题条目是否要改写。

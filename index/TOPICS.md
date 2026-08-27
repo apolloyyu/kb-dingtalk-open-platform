@@ -16,7 +16,7 @@
 - [获取企业内部应用的 accessToken](../docs/01-应用开发/02-4a8AMF6u2A-服务端API/0033-obtain-the-access-token-of-an-internal-app.md) — 全库被引用第二多的文档
 - [获取第三方应用授权企业的 accessToken](../docs/01-应用开发/02-4a8AMF6u2A-服务端API/0034-obtain-the-access-token-of-the-authorized-enterprise-1.md)（ISV/服务商场景）
 - [获取用户 token（OAuth 登录态）](../docs/01-应用开发/02-4a8AMF6u2A-服务端API/0032-obtain-user-token.md)
-- [JSAPI 鉴权（jsapi_ticket / dd.config）](../docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0003-jsapi-authentication.md)
+- [JSAPI 鉴权（jsapi_ticket / dd.config）](../docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0002-jsapi-authentication.md)
 - 基础概念（CorpId/UserId/UnionId/AgentId、凭证体系）：[基础概念](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md)
 
 ## 免登与登录
@@ -70,7 +70,7 @@
 
 - [基础概念](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md) · [应用类型与能力说明](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0002-application-type-introduction.md) · [应用创建与配置](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md)
 - 小程序：[客户端 SDK 介绍](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0022-mini-app-client-jsapi-overview.md) · [开发前端](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0026-develop-miniapp-fe.md) · [上传发布](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0027-upload-miniapp.md)
-- 导航栏定制：现行 [setNavigationBar](../docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0045-jsapi-set-navigation-bar.md)；归档参考[导航栏透明（H5）](../docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0865-the-microapplication-navigation-bar-is-transparent.md)、[左侧导航按钮文字](../docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0787-set-left-navigation-button-text.md)；查任意 JSAPI 名用 `dkdoc jsapi <名>`（如 setOptionMenu 快照未收录——下否定结论前先查表再声明"快照未见"）
+- 导航栏定制：现行 [setNavigationBar](../docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0046-jsapi-set-navigation-bar.md)；归档参考[导航栏透明（H5）](../docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0865-the-microapplication-navigation-bar-is-transparent.md)、[左侧导航按钮文字](../docs/01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0787-set-left-navigation-button-text.md)；查任意 JSAPI 名用 `dkdoc jsapi <名>`（如 setOptionMenu 快照未收录——下否定结论前先查表再声明"快照未见"）
 - 网页应用（H5）：[开发前必读](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0029-webapp-read-before-development.md) · [配置](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0030-configure-web-application.md) · [前端](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0031-develop-webapp-frontend.md) · [服务端](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0032-develop-webapp-backend.md)
 - [酷应用概述](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0042-coolapp-overview.md)（群聊/单聊内嵌应用形态）
 

@@ -43,7 +43,7 @@ updated_at: "2026-06-05 13:49:07"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| openConversationId | String | 是 | 群ID：基于群模板创建的群，调用[创建群](1484-create-a-scene-group-v2.md)接口获取`open_conversation_id`参数值。 |
+| openConversationId | String | 是 | 群ID：基于群模板创建的群，调用[创建群](1486-create-a-scene-group-v2.md)接口获取`open_conversation_id`参数值。 |
 
 ### 请求示例
 

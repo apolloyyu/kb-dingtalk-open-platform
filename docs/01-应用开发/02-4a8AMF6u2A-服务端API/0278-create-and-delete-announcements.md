@@ -32,7 +32,7 @@ updated_at: "2026-07-02 10:36:26"
 
 步骤二：申请接口权限，申请公告相关接口权限。
 
-步骤三：获取应用访问凭证[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
+步骤三：获取应用访问凭证[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
 
 步骤四：调用服务端公告相关API。
 
@@ -40,7 +40,7 @@ updated_at: "2026-07-02 10:36:26"
 2. 调用服务端API-[获取公告ID列表](0283-obtains-the-id-list-of-announcements-that-are-not-deleted.md)接口，获取公告`blackboardId`。
 3. 根据公告blackboardId进行公告管理。
 
-   - 根据公告`blackboardId`，调用服务端API-[获取公告详情](1549-obtains-the-details-of-a-bulletin-that-is-not-deleted.md)接口，实现获取公告详情信息。
+   - 根据公告`blackboardId`，调用服务端API-[获取公告详情](1551-obtains-the-details-of-a-bulletin-that-is-not-deleted.md)接口，实现获取公告详情信息。
    - 根据公告`blackboardId`，调用服务端API-[更新公告](0281-modify-the-announcement-according-to-the-announcement-id.md)接口，实现更新公告内容。
    - 根据公告`blackboardId`，调用服务端API-[删除公告](0280-delete-announcements-based-on-the-announcement-id.md)接口，实现删除公告。
 
@@ -63,7 +63,7 @@ updated_at: "2026-07-02 10:36:26"
 >
 > 服务端API差异详情参见[新版API VS 旧版API](0002-download-the-server-side-sdk.md#section-8lr-id4-rbz)。以下接口均使用服务端API接口，SDK下载详情参见[服务端SDK下载](0002-download-the-server-side-sdk.md)。
 
-根据步骤一中 的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)。
+根据步骤一中 的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)。
 
 ```
 public void getAccessToken() throws ApiException {
@@ -121,7 +121,7 @@ public void getAccessToken() throws ApiException {
    ```
 3. 根据公告blackboardId进行公告管理。
 
-   - 根据公告`blackboardId`，调用服务端API-[获取公告详情](1549-obtains-the-details-of-a-bulletin-that-is-not-deleted.md)接口，实现获取公告详情信息。
+   - 根据公告`blackboardId`，调用服务端API-[获取公告详情](1551-obtains-the-details-of-a-bulletin-that-is-not-deleted.md)接口，实现获取公告详情信息。
 
      ```
      public void getInfo() throws ApiException {

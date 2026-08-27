@@ -57,7 +57,7 @@ updated_at: "2026-08-07 14:53:16"
 | **组件类型** | - 区块组件 | - 原子组件 |
 | **布局方式** | - 上下布局 | - 上下布局 - 左右布局 - 嵌套布局 |
 | **卡片形式** | - JSON Schema | - 模板+数据 |
-| **接口能力** | - 发送钉钉互动卡片：[机器人发送互动卡片（普通版）](../../01-应用开发/02-4a8AMF6u2A-服务端API/1474-robots-send-interactive-cards.md) - 更新钉钉互动卡片：[更新机器人发送互动卡片（普通版）](../../01-应用开发/02-4a8AMF6u2A-服务端API/1475-update-the-robot-to-send-interactive-cards.md) - 注册互动卡片回调地址：无需注册，[机器人发送互动卡片（普通版）](../../01-应用开发/02-4a8AMF6u2A-服务端API/1474-robots-send-interactive-cards.md)可设置回调地址。 | - 发送钉钉互动卡片：[发送钉钉互动卡片（高级版）](../../01-应用开发/02-4a8AMF6u2A-服务端API/1476-send-interactive-dynamic-cards-1.md) - 更新钉钉互动卡片：[更新钉钉互动卡片](../../01-应用开发/02-4a8AMF6u2A-服务端API/0782-interactive-card-update-interface.md) - 注册互动卡片回调地址：[注册互动卡片回调地址](../../01-应用开发/02-4a8AMF6u2A-服务端API/1478-registration-card-interaction-callback-address-1.md) - 发送轻量级互动卡片：[发送轻量级互动卡片](../../01-应用开发/02-4a8AMF6u2A-服务端API/1480-send-lightweight-interactive-cards.md)  **[!NOTE]**  通过此模板将不再需要调试模板，不用关心卡片点击事件处理。在用户点击互动卡片之后，钉钉以事件订阅的形式将互动内容发送。 - 创建互动卡片实例：[创建并开启互动卡片吊顶](../../01-应用开发/02-4a8AMF6u2A-服务端API/0761-send-group-helper-message.md) - 开启互动卡片实例置顶：[创建并开启互动卡片吊顶](../../01-应用开发/02-4a8AMF6u2A-服务端API/0761-send-group-helper-message.md) - 关闭互动卡片实例置顶：[关闭互动卡片吊顶](../../01-应用开发/02-4a8AMF6u2A-服务端API/0762-close-interactive-card-ceiling.md) |
+| **接口能力** | - 发送钉钉互动卡片：[机器人发送互动卡片（普通版）](../../01-应用开发/02-4a8AMF6u2A-服务端API/1476-robots-send-interactive-cards.md) - 更新钉钉互动卡片：[更新机器人发送互动卡片（普通版）](../../01-应用开发/02-4a8AMF6u2A-服务端API/1477-update-the-robot-to-send-interactive-cards.md) - 注册互动卡片回调地址：无需注册，[机器人发送互动卡片（普通版）](../../01-应用开发/02-4a8AMF6u2A-服务端API/1476-robots-send-interactive-cards.md)可设置回调地址。 | - 发送钉钉互动卡片：[发送钉钉互动卡片（高级版）](../../01-应用开发/02-4a8AMF6u2A-服务端API/1478-send-interactive-dynamic-cards-1.md) - 更新钉钉互动卡片：[更新钉钉互动卡片](../../01-应用开发/02-4a8AMF6u2A-服务端API/0782-interactive-card-update-interface.md) - 注册互动卡片回调地址：[注册互动卡片回调地址](../../01-应用开发/02-4a8AMF6u2A-服务端API/1480-registration-card-interaction-callback-address-1.md) - 发送轻量级互动卡片：[发送轻量级互动卡片](../../01-应用开发/02-4a8AMF6u2A-服务端API/1482-send-lightweight-interactive-cards.md)  **[!NOTE]**  通过此模板将不再需要调试模板，不用关心卡片点击事件处理。在用户点击互动卡片之后，钉钉以事件订阅的形式将互动内容发送。 - 创建互动卡片实例：[创建并开启互动卡片吊顶](../../01-应用开发/02-4a8AMF6u2A-服务端API/0761-send-group-helper-message.md) - 开启互动卡片实例置顶：[创建并开启互动卡片吊顶](../../01-应用开发/02-4a8AMF6u2A-服务端API/0761-send-group-helper-message.md) - 关闭互动卡片实例置顶：[关闭互动卡片吊顶](../../01-应用开发/02-4a8AMF6u2A-服务端API/0762-close-interactive-card-ceiling.md) |
 
 ## **互动卡片普通版**
 
@@ -85,8 +85,8 @@ updated_at: "2026-08-07 14:53:16"
 
 | API | 说明 | 新版规范（新版服务端API） |
 | --- | --- | --- |
-| 机器人发送互动卡片 | 机器人发送互动卡片消息，支持单聊和群聊。 | [机器人发送互动卡片（普通版）](../../01-应用开发/02-4a8AMF6u2A-服务端API/1474-robots-send-interactive-cards.md) |
-| 更新机器人发送互动卡片 | 机器人更新发送的互动卡片。 | [更新机器人发送互动卡片（普通版）](../../01-应用开发/02-4a8AMF6u2A-服务端API/1475-update-the-robot-to-send-interactive-cards.md) |
+| 机器人发送互动卡片 | 机器人发送互动卡片消息，支持单聊和群聊。 | [机器人发送互动卡片（普通版）](../../01-应用开发/02-4a8AMF6u2A-服务端API/1476-robots-send-interactive-cards.md) |
+| 更新机器人发送互动卡片 | 机器人更新发送的互动卡片。 | [更新机器人发送互动卡片（普通版）](../../01-应用开发/02-4a8AMF6u2A-服务端API/1477-update-the-robot-to-send-interactive-cards.md) |
 
 ### **接入流程**
 

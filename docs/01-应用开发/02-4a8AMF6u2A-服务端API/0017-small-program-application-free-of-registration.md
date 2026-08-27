@@ -33,7 +33,7 @@ updated_at: "2026-07-02 10:35:15"
 
 建议将用户信息保存在前端缓存中（如 `dd.setStorage`）或 Cookie 中，避免每次进入应用都重复调用钉钉接口进行免登验证，提升性能与用户体验。
 
-1. 调用`dd.getAuthCode`接口获取免登授权码，小程序免登可参考[小程序免登](../03-Ogu5SlPY4t-客户端JSAPI/0005-jsapi-get-auth-code.md)。
+1. 调用`dd.getAuthCode`接口获取免登授权码，小程序免登可参考[小程序免登](../03-Ogu5SlPY4t-客户端JSAPI/0006-jsapi-get-auth-code.md)。
 
    若在小程序中使用`dd.httpRequest`API，需将请求域名添加至【小程序开发设置 > 安全设置】中的 HTTP 可信域名列表，否则线上发布后请求将被拦截。
 

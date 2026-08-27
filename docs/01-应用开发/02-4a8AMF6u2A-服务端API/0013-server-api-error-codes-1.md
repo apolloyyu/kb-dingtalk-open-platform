@@ -2164,7 +2164,7 @@ updated_at: "2026-05-06 10:20:52"
 | 33008 | 无效的微应用OA后台的主页 | 无效的微应用OA后台的主页。校验下微应用的后台管理的主页失败，必须以http开头或https开头。 |  |
 | 33012 | 无效的USERID | 无效的USERID。请检查userid是否正确，可通过[获取部门用户userid列表](0065-query-the-list-of-department-userids.md)接口获取。 |  |
 | 33013 | 企业自建微应用的个数过多，通过接口创建微应用受限 | 企业自建微应用的个数过多，通过接口创建微应用受限。此限制只针对企业自建微应用，对ISV应用没有限制。 |  |
-| 34001 | 无效的会话id | 无效的会话id。检查下所传的chatId字段是否为空。可通过[创建群](1481-session-management-creates-groups.md)接口获取chatId。 |  |
+| 34001 | 无效的会话id | 无效的会话id。检查下所传的chatId字段是否为空。可通过[创建群](1483-session-management-creates-groups.md)接口获取chatId。 |  |
 | 34002 | 无效的会话消息的发送者 | 无效的会话消息的发送者。检查下sender字段是否为空。 |  |
 | 34003 | 无效的会话消息的发送者的企业Id | 无效的会话消息的发送者的企业Id。检查下发送者的企业Id。可在[开发者后台](https://open-dev.dingtalk.com/#/index)首页获取。 |  |
 | 34004 | 无效的会话消息的类型 | 无效的会话消息的类型。检查下msgtype字段，是否为空，是否是定义的类型。msgtype请参考[消息通知类型](0775-message-types-and-data-format.md)。 |  |
@@ -2369,7 +2369,7 @@ updated_at: "2026-05-06 10:20:52"
 | 48002 | Api禁用 | Api禁用。无。 |  |
 | 48003 | suitetoken无效 | suitetoken无效。请检查该suitetoken是否已经过期或不正确。 |  |
 | 48004 | 授权关系无效 | 授权关系无效。无。 |  |
-| 49000 | 缺少chatid | 缺少chatid。请检查参数中是否有chatid。可通过[创建群](1481-session-management-creates-groups.md)接口获取chatId。 |  |
+| 49000 | 缺少chatid | 缺少chatid。请检查参数中是否有chatid。可通过[创建群](1483-session-management-creates-groups.md)接口获取chatId。 |  |
 | 49001 | 绑定的微应用超过个数限制 | 绑定的微应用超过个数限制。绑定群会话和微应用超过5个。 |  |
 | 49002 | 一个群只能被一个ISV套件绑定一次 | 一个群只能被一个ISV套件绑定一次。无。 |  |
 | 49003 | 操作者必须为群主 | 操作者必须为群主。无。 |  |

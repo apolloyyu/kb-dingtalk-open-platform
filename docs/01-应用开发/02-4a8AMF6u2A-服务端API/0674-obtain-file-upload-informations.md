@@ -22,7 +22,7 @@ updated_at: "2026-06-04 19:09:36"
 
 > **[!NOTE]**
 >
-> - 如果上传文件时提供的入参为spaceId字段，使用[获取文件上传信息](1600-obtain-storage-upload-information.md)接口。
+> - 如果上传文件时提供的入参为spaceId字段，使用[获取文件上传信息](1602-obtain-storage-upload-information.md)接口。
 > - 如果上传文件时提供的入参为dentryUuid或者uuid字段，推荐使用该文档。
 
 接口的调用流程如下：

@@ -156,7 +156,7 @@ updated_at: "2026-05-15 18:20:35"
 
 ### **chatId**
 
-chatId用于唯一标识**群聊会话**，通过[创建群](1481-session-management-creates-groups.md)接口返回值获取。
+chatId用于唯一标识**群聊会话**，通过[创建群](1483-session-management-creates-groups.md)接口返回值获取。
 
 > **[!IMPORTANT]**
 >
@@ -164,7 +164,7 @@ chatId用于唯一标识**群聊会话**，通过[创建群](1481-session-manage
 
 ### **openConversationId**
 
-openConversationId用于唯一识别**群聊会话**，通过[创建群](1484-create-a-scene-group-v2.md)接口返回值获取。
+openConversationId用于唯一识别**群聊会话**，通过[创建群](1486-create-a-scene-group-v2.md)接口返回值获取。
 
 ### **templateId**
 

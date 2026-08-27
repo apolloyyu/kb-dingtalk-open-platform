@@ -22,6 +22,6 @@ updated_at: "2025-09-03 15:56:19"
 
 | **API 名称** | **说明** |
 | --- | --- |
-| [安装酷应用入群](../03-Ogu5SlPY4t-客户端JSAPI/0273-install-coothe-group.md) | 将酷应用安装至群聊会话。 |
-| [添加群成员](../03-Ogu5SlPY4t-客户端JSAPI/0274-add-group-members.md) | 在群聊内添加群成员。 |
-| [创建群聊并安装酷应用入群](../03-Ogu5SlPY4t-客户端JSAPI/0275-create-group-install-group.md) | 将酷应用安装至群聊会话。 |
+| [安装酷应用入群](../03-Ogu5SlPY4t-客户端JSAPI/0274-install-coothe-group.md) | 将酷应用安装至群聊会话。 |
+| [添加群成员](../03-Ogu5SlPY4t-客户端JSAPI/0275-add-group-members.md) | 在群聊内添加群成员。 |
+| [创建群聊并安装酷应用入群](../03-Ogu5SlPY4t-客户端JSAPI/0276-create-group-install-group.md) | 将酷应用安装至群聊会话。 |

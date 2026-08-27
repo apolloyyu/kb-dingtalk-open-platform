@@ -37,7 +37,7 @@ updated_at: "2026-04-29 22:27:46"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| suite\_access\_token | String | 是 | 6ed1bxxxx | 第三方企业应用的suite\_access\_token，可调用[获取第三方企业应用的suite\_access\_token](1445-obtain-application-suite-ticket.md)接口获取。 |
+| suite\_access\_token | String | 是 | 6ed1bxxxx | 第三方企业应用的suite\_access\_token，可调用[获取第三方企业应用的suite\_access\_token](1447-obtain-application-suite-ticket.md)接口获取。 |
 
 ### **请求体**
 

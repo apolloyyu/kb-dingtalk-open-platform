@@ -53,7 +53,7 @@ updated_at: "2026-07-20 09:21:43"
       - H5微应用的首页URL，可以使用$CORPID$做为参数占位符，钉钉容器会将$CORPID$替换为当前访问的企业的CorpId。示例：https://xxxx?corpId=$CORPID$
    3. 获取免登授权码。
 
-      - 小程序获取授权码示例如下，详情请参考[免登授权码](../03-Ogu5SlPY4t-客户端JSAPI/0005-jsapi-get-auth-code.md)。
+      - 小程序获取授权码示例如下，详情请参考[免登授权码](../03-Ogu5SlPY4t-客户端JSAPI/0006-jsapi-get-auth-code.md)。
 
         ```
         dd.getAuthCode({
@@ -65,7 +65,7 @@ updated_at: "2026-07-20 09:21:43"
           complete: () => {},
         });
         ```
-      - H5微应用获取授权码示例如下，详情请参考[免登流程](../03-Ogu5SlPY4t-客户端JSAPI/0006-jsapi-request-auth-code.md)。
+      - H5微应用获取授权码示例如下，详情请参考[免登流程](../03-Ogu5SlPY4t-客户端JSAPI/0007-jsapi-request-auth-code.md)。
 
         ```
         dd.ready(function() {
@@ -95,7 +95,7 @@ updated_at: "2026-07-20 09:21:43"
 
   钉钉提供的JSAPI有很多是手机的基础能力，对这些JSAPI的调用不需要进行鉴权（**即不需要进行dd.config**），只需要在dd.ready里调用即可。对于一些钉钉业务相关、安全相关的JSAPI的调用，需要先进行鉴权然后再调用。
 
-  详见[JSAPI鉴权](../03-Ogu5SlPY4t-客户端JSAPI/0003-jsapi-authentication.md)。
+  详见[JSAPI鉴权](../03-Ogu5SlPY4t-客户端JSAPI/0002-jsapi-authentication.md)。
 - **数据变更推送**
 
   - RDS推送：
@@ -182,7 +182,7 @@ updated_at: "2026-07-20 09:21:43"
 
      钉钉提供的JSAPI有很多是手机的基础能力，对这些JSAPI的调用不需要进行鉴权（**即不需要进行dd.config**），只需要在dd.ready里调用即可。对于一些钉钉业务相关、安全相关的JSAPI的调用，需要先进行鉴权然后再调用。
 
-     详见[JSAPI鉴权](../03-Ogu5SlPY4t-客户端JSAPI/0003-jsapi-authentication.md)。
+     详见[JSAPI鉴权](../03-Ogu5SlPY4t-客户端JSAPI/0002-jsapi-authentication.md)。
    - **消息通知**
 
      钉钉提供以下消息通知方式：

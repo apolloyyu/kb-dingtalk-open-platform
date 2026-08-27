@@ -31,13 +31,13 @@ updated_at: "2026-07-02 10:35:34"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | 6ed1bxxx | 调用该API的应用凭证。   - 企业内部应用，通过[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)接口获取。 - 第三方企业应用，通过[获取第三方企业的access\_token](1446-obtain-isvapp-token.md)接口获取。 |
+| access\_token | String | 是 | 6ed1bxxx | 调用该API的应用凭证。   - 企业内部应用，通过[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)接口获取。 - 第三方企业应用，通过[获取第三方企业的access\_token](1448-obtain-isvapp-token.md)接口获取。 |
 
 ### **请求体**
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| code | String | 是 | bab02f63c1e030fbbxxxx | 免登授权码，获取方式请参考：   - 小程序：[getAuthCode](../03-Ogu5SlPY4t-客户端JSAPI/0005-jsapi-get-auth-code.md) - 微应用：[requestAuthCode](../03-Ogu5SlPY4t-客户端JSAPI/0006-jsapi-request-auth-code.md)   **[!NOTE]**  此授权码五分钟内有效，且只能使用一次。 |
+| code | String | 是 | bab02f63c1e030fbbxxxx | 免登授权码，获取方式请参考：   - 小程序：[getAuthCode](../03-Ogu5SlPY4t-客户端JSAPI/0006-jsapi-get-auth-code.md) - 微应用：[requestAuthCode](../03-Ogu5SlPY4t-客户端JSAPI/0007-jsapi-request-auth-code.md)   **[!NOTE]**  此授权码五分钟内有效，且只能使用一次。 |
 
 ### **请求示例**
 

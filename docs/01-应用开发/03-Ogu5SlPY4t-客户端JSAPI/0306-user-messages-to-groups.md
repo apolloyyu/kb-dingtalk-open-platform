@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端JSAPI"
 breadcrumb: "酷应用 > 用户身份发送卡片消息到群"
 doc_id: "NpXanZKhdz"
-updated_at: "2025-10-09 18:07:48"
+updated_at: "2026-08-27 14:23:04"
 ---
 
 > Source: https://open.dingtalk.com/document/development/user-messages-to-groups
 > Path: 应用开发 / 客户端JSAPI / 酷应用 > 用户身份发送卡片消息到群
-> Updated: 2025-10-09 18:07:48
+> Updated: 2026-08-27 14:23:04
 
 # 用户身份发送卡片消息到群
 
@@ -24,9 +24,13 @@ updated_at: "2025-10-09 18:07:48"
 
 ## 效果示例
 
-### 发送消息发送消息
+### 发送消息
 
-### 发送成功发送成功
+![消息发送](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/4871187871/p578397.png)
+
+### 发送成功
+
+### 发送群消息成功
 
 ## 准备工作
 

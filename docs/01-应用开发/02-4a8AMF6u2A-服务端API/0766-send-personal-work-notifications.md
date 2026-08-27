@@ -29,7 +29,7 @@ updated_at: "2026-07-14 09:22:09"
 1. 选择目标应用，进入应用详情页，单击**基础信息** > **凭证与基础信息**。
 2. 获取应用 Client ID 和 Client Secret。
 3. 企业内部应用已经默认开通工作通知接口权限，无需再手动提交申请。
-4. 获取应用访问凭证[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
+4. 获取应用访问凭证[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
 5. 调用[发送工作通知](0769-asynchronous-sending-of-enterprise-session-messages.md)接口，给目标用户发送工作消息通知，需要用户点击消息进行跳转，所以适合的消息类型有link消息、OA消息和卡片消息，具体可参考[消息通知类型](0775-message-types-and-data-format.md)。
 
 ## **点击工作通知跳转小程序**

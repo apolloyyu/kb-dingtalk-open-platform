@@ -67,7 +67,7 @@ updated_at: "2026-06-30 09:00:38"
 
 操作方法：
 
-1. 打开钉钉开放平台的 [JSAPI文档](../03-Ogu5SlPY4t-客户端JSAPI/0002-jsapi-overview.md)。
+1. 打开钉钉开放平台的 [JSAPI文档](../03-Ogu5SlPY4t-客户端JSAPI/0001-jsapi-overview.md)。
 2. 找到你代码里用到的所有接口。
 3. 查看接口详情里的 “支持说明” 栏目。
 4. 确认 Harmony 一列显示的是支持（通常是 7.0.0 版本及以上）。

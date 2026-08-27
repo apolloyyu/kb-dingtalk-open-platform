@@ -78,7 +78,7 @@ import * as dd from 'dingtalk-jsapi'; // 此方式为整体加载，也可按需
 
 **参考文档**：
 
-- 新版客户端 API，详情参考新版[JSAPI 总览](0002-jsapi-overview.md)。
+- 新版客户端 API，详情参考新版[JSAPI 总览](0001-jsapi-overview.md)。
 - 旧版客户端 API，分为小程序和H5微应用：
 
   - 小程序详情参考旧版[小程序JSAPI总览](0434-mini-program-jsapi-overview.md)。
@@ -136,33 +136,33 @@ import * as dd from 'dingtalk-jsapi'; // 此方式为整体加载，也可按需
 
 | **类目** | **新版客户端API** | **旧版客户端API** |
 | --- | --- | --- |
-| **地图** | [chooseDistrict](0131-jsapi-choose-district.md) | biz.util.chooseRegion |
-| **导航栏** | [setNavigationTitle](0047-jsapi-set-navigation-title.md) | biz.navigation.setTitle |
-| [setNavigationIcon](0046-jsapi-set-navigation-icon.md) | biz.navigation.setIcon |
-| [setNavigationLeft](0048-jsapi-set-navigation-left.md) | biz.navigation.setLeft |
-| [goBackPage](0042-jsapi-go-back-page.md) | biz.navigation.goBack |
-| [replacePage](0044-jsapi-replace-page.md) | biz.navigation.replace |
-| [closePage](0041-jsapi-close-page.md) | biz.navigation.close |
-| [quitPage](0043-jsapi-quit-page.md) | biz.navigation.quit |
-| **交互反馈** | [alert](0149-jsapi-alert.md) | device.notification.alert |
-| [confirm](0151-jsapi-confirm.md) | device.notification.confirm |
-| [showToast](0155-jsapi-show-toast.md) | device.notification.toast |
-| [hideLoading](0152-jsapi-hide-loading.md) | device.notification.hidePreloader |
-| [hideToast](0150-jsapi-hide-toast.md) | device.notification.hideToast |
-| [showLoading](0156-jsapi-show-loading.md) | device.notification.showPreloader |
-| [showActionSheet](0157-jsapi-show-action-sheet.md) | device.notification.actionSheet |
-| [showModal](0154-jsapi-show-modal.md) | device.notification.extendModal |
-| [prompt](0153-jsapi-prompt.md) | device.notification.prompt |
-| **选择日期** | [datePicker](0181-jsapi-date-picker.md) | biz.util.datetimepicker |
-| [dateRangePicker](0182-jsapi-date-range-picker.md) | biz.calendar.chooseInterval |
-| [timePicker](0183-jsapi-time-picker.md) | biz.util.timepicker |
-| [chooseDateTime](0178-jsapi-choose-date-time.md) | biz.calendar.chooseDateTime |
-| [chooseOneDayInCalendar](0179-jsapi-choose-one-day-in-calendar.md) | biz.calendar.chooseOneDay |
-| [chooseHalfDayInCalendar](0180-jsapi-choose-half-day-in-calendar.md) | biz.calendar.chooseHalfDay |
-| **下拉刷新** | [enablePullDownRefresh](0159-jsapi-enable-pull-down-refresh.md) | ui.pullToRefresh.enable |
-| [disablePullDownRefresh](0158-jsapi-disable-pull-down-refresh.md) | ui.pullToRefresh.disable |
-| **选项选择器** | [singleSelect](0185-jsapi-single-select.md) | biz.util.chosen |
-| [multiSelect](0184-jsapi-multi-select.md) | biz.util.multiSelect |
+| **地图** | [chooseDistrict](0132-jsapi-choose-district.md) | biz.util.chooseRegion |
+| **导航栏** | [setNavigationTitle](0048-jsapi-set-navigation-title.md) | biz.navigation.setTitle |
+| [setNavigationIcon](0047-jsapi-set-navigation-icon.md) | biz.navigation.setIcon |
+| [setNavigationLeft](0049-jsapi-set-navigation-left.md) | biz.navigation.setLeft |
+| [goBackPage](0043-jsapi-go-back-page.md) | biz.navigation.goBack |
+| [replacePage](0045-jsapi-replace-page.md) | biz.navigation.replace |
+| [closePage](0042-jsapi-close-page.md) | biz.navigation.close |
+| [quitPage](0044-jsapi-quit-page.md) | biz.navigation.quit |
+| **交互反馈** | [alert](0150-jsapi-alert.md) | device.notification.alert |
+| [confirm](0152-jsapi-confirm.md) | device.notification.confirm |
+| [showToast](0156-jsapi-show-toast.md) | device.notification.toast |
+| [hideLoading](0153-jsapi-hide-loading.md) | device.notification.hidePreloader |
+| [hideToast](0151-jsapi-hide-toast.md) | device.notification.hideToast |
+| [showLoading](0157-jsapi-show-loading.md) | device.notification.showPreloader |
+| [showActionSheet](0158-jsapi-show-action-sheet.md) | device.notification.actionSheet |
+| [showModal](0155-jsapi-show-modal.md) | device.notification.extendModal |
+| [prompt](0154-jsapi-prompt.md) | device.notification.prompt |
+| **选择日期** | [datePicker](0182-jsapi-date-picker.md) | biz.util.datetimepicker |
+| [dateRangePicker](0183-jsapi-date-range-picker.md) | biz.calendar.chooseInterval |
+| [timePicker](0184-jsapi-time-picker.md) | biz.util.timepicker |
+| [chooseDateTime](0179-jsapi-choose-date-time.md) | biz.calendar.chooseDateTime |
+| [chooseOneDayInCalendar](0180-jsapi-choose-one-day-in-calendar.md) | biz.calendar.chooseOneDay |
+| [chooseHalfDayInCalendar](0181-jsapi-choose-half-day-in-calendar.md) | biz.calendar.chooseHalfDay |
+| **下拉刷新** | [enablePullDownRefresh](0160-jsapi-enable-pull-down-refresh.md) | ui.pullToRefresh.enable |
+| [disablePullDownRefresh](0159-jsapi-disable-pull-down-refresh.md) | ui.pullToRefresh.disable |
+| **选项选择器** | [singleSelect](0186-jsapi-single-select.md) | biz.util.chosen |
+| [multiSelect](0185-jsapi-multi-select.md) | biz.util.multiSelect |
 
 #### **设备**
 
@@ -200,16 +200,16 @@ import * as dd from 'dingtalk-jsapi'; // 此方式为整体加载，也可按需
 
 | **新版客户端API** | **旧版客户端API** |
 | --- | --- |
-| [openLink](0191-jsapi-open-link.md) | biz.util.openLink |
-| [isInTabWindow](0186-jsapi-is-in-tab-window.md) | biz.tabwindow.isTab |
-| [getStorage](0033-jsapi-get-storage.md) | util.domainStorage.getItem |
-| [removeStorage](0037-jsapi-remove-storage.md) | util.domainStorage.removeItem |
-| [navigateBackPage](0188-jsapi-navigate-back-page.md) | biz.navigation.navigateBackPage |
-| [navigateToPage](0187-jsapi-navigate-to-page.md) | biz.navigation.navigateToPage |
-| [openMicroApp](0192-jsapi-open-micro-app.md) | biz.microApp.openApp |
-| [openPageInMicroApp](0193-jsapi-open-page-in-micro-app.md) | biz.util.open |
-| [openPageInWorkBenchForPC](0196-jsapi-open-page-in-work-bench-for-pc.md) | biz.util.invokeWorkbench |
-| [openPageInSlidePanelForPC](0195-jsapi-open-page-in-slide-panel-for-pc.md) | biz.util.openSlidePanel |
+| [openLink](0192-jsapi-open-link.md) | biz.util.openLink |
+| [isInTabWindow](0187-jsapi-is-in-tab-window.md) | biz.tabwindow.isTab |
+| [getStorage](0034-jsapi-get-storage.md) | util.domainStorage.getItem |
+| [removeStorage](0038-jsapi-remove-storage.md) | util.domainStorage.removeItem |
+| [navigateBackPage](0189-jsapi-navigate-back-page.md) | biz.navigation.navigateBackPage |
+| [navigateToPage](0188-jsapi-navigate-to-page.md) | biz.navigation.navigateToPage |
+| [openMicroApp](0193-jsapi-open-micro-app.md) | biz.microApp.openApp |
+| [openPageInMicroApp](0194-jsapi-open-page-in-micro-app.md) | biz.util.open |
+| [openPageInWorkBenchForPC](0197-jsapi-open-page-in-work-bench-for-pc.md) | biz.util.invokeWorkbench |
+| [openPageInSlidePanelForPC](0196-jsapi-open-page-in-slide-panel-for-pc.md) | biz.util.openSlidePanel |
 
 #### **多媒体**
 
@@ -217,18 +217,18 @@ import * as dd from 'dingtalk-jsapi'; // 此方式为整体加载，也可按需
 
 | **类目** | **新版客户端API** | **旧版客户端API** |
 | --- | --- | --- |
-| **图片** | [chooseImage](0205-jsapi-choose-image.md) | biz.util.chooseImage |
-| [previewImage](0209-jsapi-preview-image.md) | biz.util.previewImage |
-| **录音** | [translateVoice](0222-jsapi-translate-voice.md) | device.audio.translateVoice |
-| [onPlayAudioEnd](0215-jsapi-on-play-audio-end.md) | device.audio.onPlayEnd |
-| [onRecordEnd](0214-jsapi-on-record-end.md) | device.audio.onRecordEnd |
-| [downloadAudio](0213-jsapi-download-audio.md) | device.audio.download |
-| [resumeAudio](0218-jsapi-resume-audio.md) | device.audio.resume |
-| [pauseAudio](0217-jsapi-pause-audio.md) | device.audio.pause |
-| [stopAudio](0221-jsapi-stop-audio.md) | device.audio.stop |
-| [playAudio](0216-jsapi-play-audio.md) | device.audio.play |
-| [stopRecord](0219-jsapi-stop-record.md) | device.audio.stopRecord |
-| [startRecord](0220-jsapi-start-record.md) | device.audio.startRecord |
+| **图片** | [chooseImage](0206-jsapi-choose-image.md) | biz.util.chooseImage |
+| [previewImage](0210-jsapi-preview-image.md) | biz.util.previewImage |
+| **录音** | [translateVoice](0223-jsapi-translate-voice.md) | device.audio.translateVoice |
+| [onPlayAudioEnd](0216-jsapi-on-play-audio-end.md) | device.audio.onPlayEnd |
+| [onRecordEnd](0215-jsapi-on-record-end.md) | device.audio.onRecordEnd |
+| [downloadAudio](0214-jsapi-download-audio.md) | device.audio.download |
+| [resumeAudio](0219-jsapi-resume-audio.md) | device.audio.resume |
+| [pauseAudio](0218-jsapi-pause-audio.md) | device.audio.pause |
+| [stopAudio](0222-jsapi-stop-audio.md) | device.audio.stop |
+| [playAudio](0217-jsapi-play-audio.md) | device.audio.play |
+| [stopRecord](0220-jsapi-stop-record.md) | device.audio.stopRecord |
+| [startRecord](0221-jsapi-start-record.md) | device.audio.startRecord |
 
 #### **缓存**
 
@@ -236,9 +236,9 @@ import * as dd from 'dingtalk-jsapi'; // 此方式为整体加载，也可按需
 
 | **新版客户端API** | **旧版客户端API** |
 | --- | --- |
-| [setStorage](0039-jsapi-set-storage.md) | util.domainStorage.setItem |
-| [getStorage](0033-jsapi-get-storage.md) | util.domainStorage.getItem |
-| [removeStorage](0037-jsapi-remove-storage.md) | util.domainStorage.removeItem |
+| [setStorage](0040-jsapi-set-storage.md) | util.domainStorage.setItem |
+| [getStorage](0034-jsapi-get-storage.md) | util.domainStorage.getItem |
+| [removeStorage](0038-jsapi-remove-storage.md) | util.domainStorage.removeItem |
 
 #### **位置**
 
@@ -260,7 +260,7 @@ import * as dd from 'dingtalk-jsapi'; // 此方式为整体加载，也可按需
 
 | **类目** | **新版客户端API** | **旧版客户端API** |
 | --- | --- | --- |
-| **上传下载** | [downloadFile](0010-jsapi-download-file.md) | biz.file.downloadFile |
+| **上传下载** | [downloadFile](0011-jsapi-download-file.md) | biz.file.downloadFile |
 
 #### **分享**
 
@@ -268,8 +268,8 @@ import * as dd from 'dingtalk-jsapi'; // 此方式为整体加载，也可按需
 
 | **新版客户端API** | **旧版客户端API** |
 | --- | --- |
-| [share](0198-jsapi-share.md) | biz.util.share |
-| [showSharePanel](0199-jsapi-show-share-panel.md) | biz.util.showSharePanel |
+| [share](0199-jsapi-share.md) | biz.util.share |
+| [showSharePanel](0200-jsapi-show-share-panel.md) | biz.util.showSharePanel |
 
 #### **获取凭证**
 
@@ -277,8 +277,8 @@ import * as dd from 'dingtalk-jsapi'; // 此方式为整体加载，也可按需
 
 | **新版客户端API** | **旧版客户端API** |
 | --- | --- |
-| [getAuthCode](0005-jsapi-get-auth-code.md) | runtime.permission.requestAuthCode |
-| [getOperateAuthCode](0007-jsapi-get-operate-auth-code.md) | runtime.permission.requestOperateAuthCode |
+| [getAuthCode](0006-jsapi-get-auth-code.md) | runtime.permission.requestAuthCode |
+| [getOperateAuthCode](0008-jsapi-get-operate-auth-code.md) | runtime.permission.requestOperateAuthCode |
 
 #### **会话管理**
 
@@ -297,13 +297,13 @@ import * as dd from 'dingtalk-jsapi'; // 此方式为整体加载，也可按需
 
 | **新版客户端API** | **旧版客户端API** |
 | --- | --- |
-| [choosePhonebook](0268-jsapi-choose-phonebook.md) | biz.contact.chooseMobileContacts |
-| [complexChoose](0266-jsapi-complex-choose.md) | biz.contact.complexPicker |
-| [chooseDepartments](0269-jsapi-choose-departments.md) | biz.contact.departmentsPicker |
-| [chooseExternalUsers](0271-jsapi-choose-external-users.md) | biz.contact.externalComplexPicker |
-| [editExternalUser](0272-jsapi-edit-external-user.md) | biz.contact.externalEditForm |
-| [chooseUserFromList](0270-jsapi-choose-user-from-list.md) | chooseUserFromList |
-| [chooseStaffForPC](0267-jsapi-choose-staff-for-pc.md) | biz.contact.choose |
+| [choosePhonebook](0269-jsapi-choose-phonebook.md) | biz.contact.chooseMobileContacts |
+| [complexChoose](0267-jsapi-complex-choose.md) | biz.contact.complexPicker |
+| [chooseDepartments](0270-jsapi-choose-departments.md) | biz.contact.departmentsPicker |
+| [chooseExternalUsers](0272-jsapi-choose-external-users.md) | biz.contact.externalComplexPicker |
+| [editExternalUser](0273-jsapi-edit-external-user.md) | biz.contact.externalEditForm |
+| [chooseUserFromList](0271-jsapi-choose-user-from-list.md) | chooseUserFromList |
+| [chooseStaffForPC](0268-jsapi-choose-staff-for-pc.md) | biz.contact.choose |
 
 #### **DING**
 
@@ -311,8 +311,8 @@ import * as dd from 'dingtalk-jsapi'; // 此方式为整体加载，也可按需
 
 | **新版客户端API** | **旧版客户端API** |
 | --- | --- |
-| [createDing](0264-jsapi-create-ding.md) | biz.ding.create |
-| [createDingForPC](0265-jsapi-create-ding-for-pc.md) | biz.ding.post |
+| [createDing](0265-jsapi-create-ding.md) | biz.ding.create |
+| [createDingForPC](0266-jsapi-create-ding-for-pc.md) | biz.ding.post |
 
 #### **办公电话**
 

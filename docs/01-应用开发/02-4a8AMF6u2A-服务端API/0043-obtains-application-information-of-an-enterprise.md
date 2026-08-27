@@ -44,7 +44,7 @@ updated_at: "2026-04-29 22:27:45"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| suite\_access\_token | String | 是 | 68fbxxxx | 第三方企业应用的suite\_access\_token，可通过[获取第三方企业应用的suite\_access\_token](1445-obtain-application-suite-ticket.md)接口获取。 |
+| suite\_access\_token | String | 是 | 68fbxxxx | 第三方企业应用的suite\_access\_token，可通过[获取第三方企业应用的suite\_access\_token](1447-obtain-application-suite-ticket.md)接口获取。 |
 | timestamp | String | 是 | 1598359962000 | 当前时间戳, 单位毫秒。  **[!NOTE]**  使用SDK调用时，不需要传递此参数。 |
 | suiteTicket | String | 是 | test | 钉钉开放平台向应用的回调URL推送的suite\_ticket，详细内容请参考[数据格式biz\_type=2](../04-LFcRvVD08N-事件订阅/0005-development-data-format-help.md)。 |
 | signature | String | 是 | xxxx | 签名。签名计算方式请参考[第三方访问接口的签名计算方法](1429-the-signature-calculation-method-of-the-third-party-access-interface.md)。  **[!IMPORTANT]**  计算出签名以后，需要进行urlencode，才能把签名参数拼接到url中。 |

@@ -38,7 +38,7 @@ updated_at: "2026-06-08 09:28:42"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | 6d1bxxxx | 调用该接口的应用凭证，通过[获取第三方企业的access\_token](1446-obtain-isvapp-token.md)接口获取。 |
+| access\_token | String | 是 | 6d1bxxxx | 调用该接口的应用凭证，通过[获取第三方企业的access\_token](1448-obtain-isvapp-token.md)接口获取。 |
 | appId | Number | 是 | 2000121xxxx | 应用ID。可在[**钉钉开发者后台**](https://open-dev.dingtalk.com/#/appMgr/provider/eapp/53642/1) **> 第三方企业应用**的应用详情页获取AppID。 |
 | userId | String | 是 | 2000121xxxx | 要查询的管理员员工ID，可调用[获取管理员列表](0068-query-the-administrator-list.md)接口获取userid参数值。 |
 

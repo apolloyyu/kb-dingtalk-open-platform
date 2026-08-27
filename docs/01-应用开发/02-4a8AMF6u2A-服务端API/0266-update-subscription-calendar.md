@@ -51,7 +51,7 @@ updated_at: "2026-06-02 09:25:10"
 | managers | Array of String | 否 | 日历共同编辑人的unionId列表。   - 企业内部应用和第三方企业应用，调用[查询用户详情](0056-query-user-details.md)接口获取unionid参数值。 - 第三方个人应用，调用[获取用户通讯录个人信息](0054-dingtalk-retrieve-user-information.md)接口获取unionId参数值。 |
 | subscribeScope | Object | 否 | 日历的可订阅范围。 |
 | unionIds | Array of String | 否 | 可订阅该日历的人员unionId。   - 企业内部应用和第三方企业应用，调用[查询用户详情](0056-query-user-details.md)接口获取unionid参数值。 - 第三方个人应用，调用[获取用户通讯录个人信息](0054-dingtalk-retrieve-user-information.md)接口获取unionId参数值。 |
-| openConversationIds | Array of String | 否 | 可订阅该日历的群OpenConversationId列表。   - 企业内部应用，调用[获取群会话的OpenConversationId](0745-obtain-group-openconversationid.md)接口获取openConversationId参数值。 - 第三方企业应用，调用[创建群](1484-create-a-scene-group-v2.md)接口获取open\_conversation\_id参数值。        - 需要传该订阅日程创建者所在的群OpenConversationId。 - 第三方个人应用无需传此参数。 |
+| openConversationIds | Array of String | 否 | 可订阅该日历的群OpenConversationId列表。   - 企业内部应用，调用[获取群会话的OpenConversationId](0745-obtain-group-openconversationid.md)接口获取openConversationId参数值。 - 第三方企业应用，调用[创建群](1486-create-a-scene-group-v2.md)接口获取open\_conversation\_id参数值。        - 需要传该订阅日程创建者所在的群OpenConversationId。 - 第三方个人应用无需传此参数。 |
 | corpIds | Array of String | 否 | 可订阅该日历的组织corpId列表。 登录[钉钉开发者后台](https://open-dev.dingtalk.com/#/)，在首页下查看企业的corpId。      需要传该订阅日程创建者所在的组织corpId。 |
 
 ### 请求示例

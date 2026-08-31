@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """按 slug 重映射认知层引用(index/TOPICS.md 链接与 evals/questions.jsonl 的 ref_docs)。
 
+覆盖两类变化:① 重编号(文件名前缀变) ② 移动(分类目录变,文件名不变)。
+两者判据统一为"整条相对路径是否可达",与 lint[9] 一致。
+
 上游快照有插入时,同目录后续文档的 NNNN- 序号整体顺移,认知层引用的带序号路径随之
 失效(2026-08-17 流水线首跑即断 5 条)。序号只是排序展示前缀,slug(去序号文件名)
 才是稳定身份——本脚本把失效引用按 slug 找回现路径做机械替换;slug 消失(真删除)或
@@ -49,7 +52,7 @@ def fix_topics(by_slug):
     return fixed
 
 
-def fix_evals(by_slug, fnames):
+def fix_evals(by_slug):
     p = os.path.join(ROOT, "evals", "questions.jsonl")
     if not os.path.exists(p):
         return []
@@ -65,15 +68,21 @@ def fix_evals(by_slug, fnames):
         if isinstance(refs, list):
             nr = []
             for r in refs:
-                base = os.path.basename(str(r))
-                if base not in fnames:
-                    slug = re.sub(r"^\d{4}-", "", base)
-                    cand = by_slug.get(slug) or []
-                    if len(cand) == 1:
-                        nb = os.path.basename(cand[0])
-                        fixed.append((base, nb))
-                        r = str(r).replace(base, nb)
-                nr.append(r)
+                rp = str(r)
+                # 判据用"整条路径是否可达",与 lint[9] 的 os.path.exists 一致。
+                # 旧实现只看文件名是否还存在(base not in fnames),于是"文件名没变、
+                # 只换了分类目录"的移动被整条跳过 —— 2026-08-28 上游移动 510 篇后
+                # 19 条 ref 卡死 lint、流水线连续 3 天回滚不推送即由此而来。
+                if os.path.exists(os.path.join(ROOT, rp)):
+                    nr.append(rp)
+                    continue
+                slug = re.sub(r"^\d{4}-", "", os.path.basename(rp))
+                cand = by_slug.get(slug) or []
+                if len(cand) == 1:
+                    # 整条路径替换(含目录),而非只换文件名
+                    fixed.append((rp, cand[0]))
+                    rp = cand[0]
+                nr.append(rp)
             o["ref_docs"] = nr
             s = json.dumps(o, ensure_ascii=False)
         out.append(s)
@@ -85,7 +94,7 @@ def fix_evals(by_slug, fnames):
 def main():
     by_slug, fnames = build_maps()
     t = fix_topics(by_slug)
-    e = fix_evals(by_slug, fnames)
+    e = fix_evals(by_slug)
     for old, new in t:
         print(f"TOPICS: {os.path.basename(old)} -> {os.path.basename(new)}")
     for old, new in e:

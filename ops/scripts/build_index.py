@@ -12,7 +12,13 @@ index/TOPICS.md 是人工/LLM 维护的认知层页面，本脚本永不触碰�
 用法:
   python3 ops/scripts/build_index.py           # 重建
   python3 ops/scripts/build_index.py --check   # 只比对不落盘，漂移则退出码 1
-"""
+
+
+【bin 工具数据契约】bin/dkdoc(含 ctx)依赖流水线产物的以下字段,改动前先同步 bin 并跑冒烟:
+  meta/documents.jsonl: local_path/slug/title/breadcrumb/headings/snippet/source_url/updated_at
+  meta/kb_manifest.jsonl: local_path/tier/deprecated
+  graph/{api,errcode,event,jsapi,permission,links}.jsonl: 各表既有列(见 dkdoc 各 cmd_*)
+冒烟由 kb_pipeline.sh 在 push 前执行(dkdoc find 免登 + dkdoc ctx 免登)。"""
 import argparse
 import collections
 import json

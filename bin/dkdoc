@@ -2,6 +2,7 @@
 """dkdoc — 钉钉开放平台知识库查询 CLI（零依赖，cwd 无关，可通过软链调用）。
 
 子命令:
+  ctx   <词>...        ★一次打包检索：实体命中+top2正文+links相邻+检索审计（默认入口）
   find  <词>...        按标题/面包屑/小标题/摘要找文档（多词=AND）
   api   <词|url片段>   查接口表（名称/endpoint/method/权限点/新旧版本）
   err   <错误码|词>    查错误码表（新版字符串码；旧版数字码会提示走 grep 兜底）
@@ -267,6 +268,152 @@ def cmd_grep(terms, n):
         return 0 if cnt else 1
 
 
+def cmd_ctx(terms, n):
+    """一次打包检索：实体命中 + top-2 正文 + links 相邻 + 检索审计。异常→CTX_ERROR 提示回退。"""
+    try:
+        return _ctx_impl(terms, n)
+    except SystemExit:
+        raise
+    except Exception as e:  # 绝不半吊子输出：报错即引导回退旧检索序
+        print(f"CTX_ERROR: {type(e).__name__}: {e}；请改用分步命令(find/api/err/event/jsapi/perm→cat→links→grep)")
+        return 1
+
+
+_CTX_BODY_CAP = 8000     # 单篇正文上限(字符)
+_CTX_TOTAL_CAP = 20000   # 总输出上限(字符)
+
+
+def _ctx_impl(terms, n):
+    if not terms:
+        return usage("ctx 需要至少一个关键词")
+    tl = [t.lower() for t in terms]
+    docs = load_jsonl("meta/documents.jsonl")
+    flags = kb_flags()
+    bymap = {d["local_path"]: d for d in docs}
+
+    # 1) 五张实体表（匹配逻辑与各子命令一致；此处只收集不打印）
+    ent_lines, ent_paths, ent_counts = [], [], {}
+    rows = [r for r in load_jsonl("graph/api.jsonl")
+            if all(t in " ".join(str(r.get(k) or "") for k in ("title", "endpoint", "method")).lower() for t in tl)]
+    rows.sort(key=lambda r: (r.get("archived", False), r["title"]))
+    ent_counts["api"] = len(rows)
+    for r in rows[:6]:
+        tag = " ⚠归档" if r.get("archived") else ""
+        perm = f" · 权限:{r['permission']}" if r.get("permission") else ""
+        ent_lines.append(f"[api] {r['title']}{tag} · {(r.get('method') or '?')} {r.get('endpoint') or ''}{perm}\n      {r['doc_path']} · {r['source_url']}")
+        ent_paths.append(r["doc_path"])
+    q0 = terms[0]
+    err_rows = load_jsonl("graph/errcode.jsonl")
+    hits = [r for r in err_rows if r["error_code"].lower() == q0.lower()]
+    if not hits and q0.isdigit():
+        hits = [r for r in err_rows if r.get("http_code") == q0]
+    if not hits:
+        hits = [r for r in err_rows if all(
+            t.lower() in (r["error_code"] + " " + r["message"] + " " + r.get("explanation", "")).lower() for t in terms)]
+    ent_counts["err"] = len(hits)
+    for r in hits[:4]:
+        ent_lines.append(f"[err] {r['error_code']} · {r['message']} · HTTP {r['http_code']}\n      {r.get('explanation','')[:80]} · {r['source_url']}")
+    ev = [r for r in load_jsonl("graph/event.jsonl")
+          if all(t in (r["title"] + " " + " ".join(r.get("event_types", []))).lower() for t in tl)]
+    ent_counts["event"] = len(ev)
+    for r in ev[:4]:
+        tag = " ⚠归档" if r.get("archived") else ""
+        ent_lines.append(f"[event] {r['title']}{tag} · {', '.join(r.get('event_types', [])[:4])}\n      {r['doc_path']} · {r['source_url']}")
+        ent_paths.append(r["doc_path"])
+    js = [r for r in load_jsonl("graph/jsapi.jsonl")
+          if all(t in (r["title"] + " " + " ".join(r.get("jsapi_names", []))).lower() for t in tl)]
+    js.sort(key=lambda r: (r.get("archived", False), len(r.get("jsapi_names", [])), r["doc_path"]))
+    ent_counts["jsapi"] = len(js)
+    for r in js[:4]:
+        tag = " ⚠归档" if r.get("archived") else ""
+        ent_lines.append(f"[jsapi] {r['title']}{tag} · 含: {', '.join(r.get('jsapi_names', [])[:4])}\n      {r['doc_path']} · {r['source_url']}")
+        ent_paths.append(r["doc_path"])
+    pm_rows = load_jsonl("graph/permission.jsonl")
+    pm = [r for r in pm_rows if r["permission_scope"].lower() == q0.lower()] or \
+         [r for r in pm_rows if q0.lower() in r["permission_scope"].lower()]
+    ent_counts["perm"] = len(pm)
+    for r in pm[:3]:
+        apis = r.get("current_apis") or []
+        hint = f" · 如 {apis[0]['title']} {apis[0]['doc_path']}" if apis else ""
+        ent_lines.append(f"[perm] {r['permission_scope']} · 覆盖 {r['api_count']} 个接口{hint}")
+
+    # 2) find 篇目（排序逻辑与 cmd_find 一致）
+    scored = []
+    for d in docs:
+        title = d["title"].lower()
+        crumb = " ".join(d.get("breadcrumb") or []).lower()
+        rest = (" ".join(d.get("headings") or []) + " " + d.get("snippet", "") + " "
+                + d.get("slug", "") + " " + os.path.basename(d["local_path"])).lower()
+        hay = " ".join((title, crumb, rest))
+        if not all(t in hay for t in tl):
+            continue
+        score = sum(3 for t in tl if t in title) + sum(2 for t in tl if t in crumb)
+        tier_rank = 1 if d["local_path"] in flags else 0
+        scored.append((-score, tier_rank, d["local_path"], d))
+    scored.sort()
+
+    # 3) 候选合并：实体指向的文档优先，其后按 find 得分
+    cand, seen = [], set()
+    for p in ent_paths:
+        if p in bymap and p not in seen:
+            cand.append(bymap[p]); seen.add(p)
+    for _, _, _, d in scored:
+        if d["local_path"] not in seen:
+            cand.append(d); seen.add(d["local_path"])
+
+    edges = load_jsonl("graph/links.jsonl") if cand else []
+
+    def render(top_k):
+        parts = []
+        if ent_lines:
+            parts.append("== 实体命中 ==")
+            parts.extend(ent_lines)
+        for i, d in enumerate(cand[:top_k]):
+            lp = d["local_path"]
+            tag = " " + flags.get(lp, "") if flags.get(lp) else ""
+            parts.append(f"\n== 正文[{i+1}/{min(top_k, len(cand))}] {d['title']}{tag} ({lp}) ==")
+            parts.append(f"source_url: {d['source_url']} · updated_at: {d['updated_at'][:10]}")
+            body = open(os.path.join(ROOT, lp), encoding="utf-8", errors="ignore").read()
+            if len(body) > _CTX_BODY_CAP:
+                body = body[:_CTX_BODY_CAP] + f"\n…[已截断，完整: dkdoc cat {lp}]"
+            parts.append(body)
+            out_e = [e for e in edges if e["from"] == lp][:6]
+            inc_e = [e for e in edges if e["to"] == lp][:6]
+            if out_e or inc_e:
+                parts.append("== 相邻篇(links) ==")
+                for e in out_e:
+                    parts.append(f"  → {e['to']}")
+                for e in inc_e:
+                    parts.append(f"  ← {e['from']}")
+        others = cand[top_k:top_k + 8]
+        if others:
+            parts.append("\n== 其他候选(未展开) ==")
+            for d in others:
+                tag = " " + flags.get(d["local_path"], "") if flags.get(d["local_path"]) else ""
+                parts.append(f"  {d['title']}{tag} — {d['local_path']}")
+        parts.append("\n== 检索审计 ==")
+        parts.append("已检索: api/err/event/jsapi/perm/find · 关键词: " + " ".join(terms)
+                     + " · 命中: " + " ".join(f"{k}={v}" for k, v in ent_counts.items())
+                     + f" find={len(scored)}")
+        parts.append("== 继续 ==")
+        parts.append("读候选: dkdoc cat <路径> · 深查: dkdoc links <路径> · 全文兜底: dkdoc grep '<词>' · 否定前核对盲区: meta/UNAVAILABLE.md")
+        return "\n".join(parts)
+
+    if not cand and not ent_lines:
+        print("== 检索审计 ==")
+        print("已检索: api/err/event/jsapi/perm/find · 关键词: " + " ".join(terms) + " · 命中: 0")
+        print("== 继续 ==")
+        print(f"换同义词重试 ctx；或 dkdoc grep '{' '.join(terms)}'；否定前核对 meta/UNAVAILABLE.md")
+        return 1
+    text = render(2)
+    if len(text) > _CTX_TOTAL_CAP:
+        text = render(1)
+    if len(text) > _CTX_TOTAL_CAP:
+        text = text[:_CTX_TOTAL_CAP] + "\n…[ctx 总量截断，用 dkdoc cat 读完整正文]"
+    print(text)
+    return 0
+
+
 def usage(msg=""):
     if msg:
         print("错误: " + msg + "\n", file=sys.stderr)
@@ -291,7 +438,8 @@ def main():
         print(ROOT)
         return 0
     table = {"find": cmd_find, "api": cmd_api, "err": cmd_err, "event": cmd_event,
-             "jsapi": cmd_jsapi, "perm": cmd_perm, "links": cmd_links, "cat": cmd_cat, "grep": cmd_grep}
+             "jsapi": cmd_jsapi, "perm": cmd_perm, "links": cmd_links, "cat": cmd_cat,
+             "grep": cmd_grep, "ctx": cmd_ctx}
     if cmd not in table:
         return usage(f"未知子命令 {cmd}")
     return table[cmd](terms, n)

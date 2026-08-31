@@ -61,6 +61,18 @@ def check_docs_meta():
 
 
 def check_generated():
+    # [8b] 实体表行数地板:漂移检查(空 vs 空也一致)拦不住"一致地错",
+    # 2026-08-31 实录:上游 tab 命名加空格致 api/jsapi/permission 连续两周为空,lint 全绿。
+    floors = {"api.jsonl": 800, "errcode.jsonl": 1500, "event.jsonl": 100,
+              "jsapi.jsonl": 400, "permission.jsonl": 150}
+    for fn, floor in floors.items():
+        fp = os.path.join(ROOT, "graph", fn)
+        n = sum(1 for _ in open(fp, encoding="utf-8")) if os.path.exists(fp) else 0
+        if n < floor:
+            fails.append(f"[8b] graph/{fn} 仅 {n} 行(地板 {floor}):实体抽取疑似整体失效")
+        else:
+            print(f"  [8b] OK  graph/{fn} {n} 行(≥{floor})")
+
     for name, script in (("[3] index", "build_index.py"), ("[4] graph/links", "build_links.py"),
                          ("[8] kb_manifest", "compile_qa_kb.py"), ("[8] graph五表", "build_qa_index.py")):
         r = subprocess.run(["python3", os.path.join(SCRIPTS, script), "--check"],

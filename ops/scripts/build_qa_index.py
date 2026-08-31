@@ -61,6 +61,8 @@ def main() -> int:
         if not os.path.exists(path):
             continue
         text = open(path, encoding="utf-8", errors="ignore").read()
+        # 上游 tab 命名会抖动(2026-08 起「服务端API」→「服务端 API」),比较一律去空格
+        tab_n = (d["tab"] or "").replace(" ", "")
         archived = bool(d["breadcrumb"]) and d["breadcrumb"][0] == HIST
         base = {
             "title": d["title"],
@@ -73,7 +75,7 @@ def main() -> int:
         }
 
         # ---- 客户端 JSAPI 调用名 ----
-        if d["tab"] == "客户端JSAPI":
+        if tab_n == "客户端JSAPI":
             names = sorted({n for n in RE_JSAPI.findall(text) if "." in n and len(n) <= 80})
             if names:
                 jsapis.append({**base, "jsapi_names": names})
@@ -82,7 +84,7 @@ def main() -> int:
                 stats["jsapi_no_name"] += 1
 
         # ---- 事件类型 ----
-        if d["tab"] == "事件订阅":
+        if tab_n == "事件订阅":
             found = sorted(set(RE_EVENT.findall(text)))
             if found:
                 events.append({**base, "event_types": found})
@@ -90,7 +92,7 @@ def main() -> int:
             else:
                 stats["event_no_type"] += 1
 
-        if d["tab"] != "服务端API":
+        if tab_n != "服务端API":
             continue
 
         # ---- endpoint：优先结构化表格，回退到正文裸 URL ----

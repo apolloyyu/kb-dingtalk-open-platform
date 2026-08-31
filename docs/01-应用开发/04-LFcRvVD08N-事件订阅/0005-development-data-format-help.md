@@ -172,9 +172,9 @@ biz\_data数据如下：
   > **[!NOTE]**
   >
   > **org\_suite\_auth**，**org\_suite\_change**两个事件都表示企业对于第三方企业应用的授权信息，需要等同处理，在很短时间内发生的两个事件，有可能会覆盖，保证只给出最新的授权信息
-- auth\_corp\_info, auth\_info和auth\_user\_info 三段结构信息请参考[获取企业授权信息](../02-4a8AMF6u2A-服务端API/0042-obtains-the-basic-information-of-an-enterprise.md)。
-- auth\_scope结构信息请参考[获取通讯录权限范围](../02-4a8AMF6u2A-服务端API/0053-obtain-corpsecret-authorization-scope.md)。
-- permanent\_code已废弃。兼容老接口[获取第三方应用授权企业的accessToken](../02-4a8AMF6u2A-服务端API/0034-obtain-the-access-token-of-the-authorized-enterprise-1.md)。
+- auth\_corp\_info, auth\_info和auth\_user\_info 三段结构信息请参考[获取企业授权信息](../02-4a8AMF6u2A-服务端-API/0042-obtains-the-basic-information-of-an-enterprise.md)。
+- auth\_scope结构信息请参考[获取通讯录权限范围](../02-4a8AMF6u2A-服务端-API/0053-obtain-corpsecret-authorization-scope.md)。
+- permanent\_code已废弃。兼容老接口[获取第三方应用授权企业的accessToken](../02-4a8AMF6u2A-服务端-API/0034-obtain-the-access-token-of-the-authorized-enterprise-1.md)。
 - ch\_permanent\_code已废弃。兼容老接口service/get\_channel\_corp\_token。
 
 ## biz\_type=7
@@ -240,7 +240,7 @@ biz\_data数据如下：
 | biz\_id | 员工的userid。 |
 | biz\_data | 数据为Json格式。 |
 
-biz\_data数据为如下两种Json格式，企业增加或修改员工，字段值来自于[查询用户详情](../02-4a8AMF6u2A-服务端API/0056-query-user-details.md)接口 。
+biz\_data数据为如下两种Json格式，企业增加或修改员工，字段值来自于[查询用户详情](../02-4a8AMF6u2A-服务端-API/0056-query-user-details.md)接口 。
 
 - 增加企业员工：
 
@@ -306,7 +306,7 @@ biz\_data数据为如下两种Json格式，企业增加或修改员工，字段�
 | biz\_id | 部门ID。 |
 | biz\_data | 数据为Json格式。 |
 
-biz\_data数据为如下两种Json格式，企业增加或修改部门，字段值来自于[获取部门详情](../02-4a8AMF6u2A-服务端API/0081-query-department-details0-v2.md)接口 。
+biz\_data数据为如下两种Json格式，企业增加或修改部门，字段值来自于[获取部门详情](../02-4a8AMF6u2A-服务端-API/0081-query-department-details0-v2.md)接口 。
 
 - 企业增加部门：
 
@@ -583,7 +583,7 @@ biz\_data数据为如下两种 Json格式：
 
 > **[!NOTE]**
 >
-> 当表单内容大于64KB时，为防止推送失败，推送数据中会省略掉formValueVOS字段，并同时添加formValuesOmitted为true的标识字段。若需要获取表单完整数据，可调用服务端API-[获取单个审批实例详情](../02-4a8AMF6u2A-服务端API/0498-obtains-the-details-of-a-single-approval-instance-pop.md)接口。
+> 当表单内容大于64KB时，为防止推送失败，推送数据中会省略掉formValueVOS字段，并同时添加formValuesOmitted为true的标识字段。若需要获取表单完整数据，可调用服务端API-[获取单个审批实例详情](../02-4a8AMF6u2A-服务端-API/0498-obtains-the-details-of-a-single-approval-instance-pop.md)接口。
 
 | **字段** | **说明** |
 | --- | --- |
@@ -638,7 +638,7 @@ biz\_data数据如下。
 }
 ```
 
-字段说明，请参考[获取单个审批实例详情](../02-4a8AMF6u2A-服务端API/0498-obtains-the-details-of-a-single-approval-instance-pop.md)。
+字段说明，请参考[获取单个审批实例详情](../02-4a8AMF6u2A-服务端-API/0498-obtains-the-details-of-a-single-approval-instance-pop.md)。
 
 ## biz\_type=32
 

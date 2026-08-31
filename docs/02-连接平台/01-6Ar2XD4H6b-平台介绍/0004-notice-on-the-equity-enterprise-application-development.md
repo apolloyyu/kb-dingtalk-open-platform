@@ -49,12 +49,12 @@ updated_at: "2026-01-22 21:25:56"
 
 | **OpenAPI名称** | **OpenAPI详情** |
 | --- | --- |
-| [添加待入职员工](../../01-应用开发/02-4a8AMF6u2A-服务端API/0945-add-employees-to-be-hired-supports-system-and-custom-fields.md) | 在企业自有通讯录系统内，添加待入职员工时，调用本接口在钉钉智能人事应用内同步添加待入职员工 |
-| [配置考勤排班附加信息](../../01-应用开发/02-4a8AMF6u2A-服务端API/0211-synchronization-scheduling-information.md) | 企业考勤排班信息较多，手动配置排班的打卡位置、打卡WiFi信息比较繁琐，可调用本接口，更新排班的附加信息 |
-| [查询指定用户的封账规则](../../01-应用开发/02-4a8AMF6u2A-服务端API/0242-encapsulate-account-sealing-and-unsealing-rules.md) | 开启封账后，封账范围内的考勤结果将封存不允许修改。包含以下操作：请假，外出，出差，加班，补卡申请；员工排班，修改考勤结果等，调用本接口根据企业员工userId列表，获取员工的封账规则信息 |
-| [发送DING消息](../../01-应用开发/02-4a8AMF6u2A-服务端API/0712-robot-sends-nail-message.md) | 企业在紧急场景下，可调用本接口给指定员工发起应用内DING消息、短信DING消息和电话DING消息提醒 |
-| [撤回已经发送的DING消息](../../01-应用开发/02-4a8AMF6u2A-服务端API/0713-robot-withdraws-pin-message.md) | 已发送的DING消息，支持调用本接口进行撤回 |
-| [上传打卡记录](../../01-应用开发/02-4a8AMF6u2A-服务端API/0197-upload-punch-records.md) | 企业使用三方打卡设备或门禁系统刷卡，调用本接口，可将三方打卡或刷卡记录上传到钉钉考勤，作为员工的考勤打卡信息 |
+| [添加待入职员工](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0945-add-employees-to-be-hired-supports-system-and-custom-fields.md) | 在企业自有通讯录系统内，添加待入职员工时，调用本接口在钉钉智能人事应用内同步添加待入职员工 |
+| [配置考勤排班附加信息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0211-synchronization-scheduling-information.md) | 企业考勤排班信息较多，手动配置排班的打卡位置、打卡WiFi信息比较繁琐，可调用本接口，更新排班的附加信息 |
+| [查询指定用户的封账规则](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0242-encapsulate-account-sealing-and-unsealing-rules.md) | 开启封账后，封账范围内的考勤结果将封存不允许修改。包含以下操作：请假，外出，出差，加班，补卡申请；员工排班，修改考勤结果等，调用本接口根据企业员工userId列表，获取员工的封账规则信息 |
+| [发送DING消息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0712-robot-sends-nail-message.md) | 企业在紧急场景下，可调用本接口给指定员工发起应用内DING消息、短信DING消息和电话DING消息提醒 |
+| [撤回已经发送的DING消息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0713-robot-withdraws-pin-message.md) | 已发送的DING消息，支持调用本接口进行撤回 |
+| [上传打卡记录](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0197-upload-punch-records.md) | 企业使用三方打卡设备或门禁系统刷卡，调用本接口，可将三方打卡或刷卡记录上传到钉钉考勤，作为员工的考勤打卡信息 |
 
 ## **（二）扩容方式调整**
 
@@ -75,7 +75,7 @@ updated_at: "2026-01-22 21:25:56"
 
 **方式二**：
 
-- 支持购买[企业开发增购包](../../01-应用开发/02-4a8AMF6u2A-服务端API/1431-dingtalk-application-development-platform-billing-model.md)，开发者可登录[开发者后台-资源管理](https://open-dev.dingtalk.com/?hash=%23%2F#/)查看企业所有的用量权益。如您已经收到用量预警，或调用额度无法满足使用，您可以购买[应用开发增购包（独立购）](dingtalk://dingtalkclient/page/link?url=https%3A%2F%2Fn.dingtalk.com%2Fdingding%2Fdd-pro-composite-order%2Fpc%2Findex.html%3Fpopup_wnd%3Dtrue%26dd_tab%3Dtrue%26width%3D900%26height%3D600%26title%3D%25E9%2592%2589%25E9%2592%2589%25E6%2595%25B0%25E5%25AD%2597%25E8%25B5%2584%25E4%25BA%25A7%26articleCode%3DDT_GOODS_dingtalkmemberplus%26channel%3Dopenpf_web_devdoc%26corpId%3D${corpId}%26accessoryProduct%3DpaasWithConnector%26tabKey%3DDT_GOODS_dingtalkmemberplus&popup_wnd=true&height=600&width=900)提升当月调用总额度。
+- 支持购买[企业开发增购包](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1431-dingtalk-application-development-platform-billing-model.md)，开发者可登录[开发者后台-资源管理](https://open-dev.dingtalk.com/?hash=%23%2F#/)查看企业所有的用量权益。如您已经收到用量预警，或调用额度无法满足使用，您可以购买[应用开发增购包（独立购）](dingtalk://dingtalkclient/page/link?url=https%3A%2F%2Fn.dingtalk.com%2Fdingding%2Fdd-pro-composite-order%2Fpc%2Findex.html%3Fpopup_wnd%3Dtrue%26dd_tab%3Dtrue%26width%3D900%26height%3D600%26title%3D%25E9%2592%2589%25E9%2592%2589%25E6%2595%25B0%25E5%25AD%2597%25E8%25B5%2584%25E4%25BA%25A7%26articleCode%3DDT_GOODS_dingtalkmemberplus%26channel%3Dopenpf_web_devdoc%26corpId%3D${corpId}%26accessoryProduct%3DpaasWithConnector%26tabKey%3DDT_GOODS_dingtalkmemberplus&popup_wnd=true&height=600&width=900)提升当月调用总额度。
 
   |  | **企业应用开发增购包** | **价格** |
   | --- | --- | --- |

@@ -30,11 +30,11 @@ updated_at: "2026-08-07 14:53:22"
 
 在开始前，请确认已完成以下准备：
 
-- 已成为钉钉开发者，详情请参考[成为钉钉开发者](../../01-应用开发/02-4a8AMF6u2A-服务端API/0003-add-api-permission.md)。
+- 已成为钉钉开发者，详情请参考[成为钉钉开发者](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0003-add-api-permission.md)。
 - 明确关键参数获取方式：
 
   - **cardBizId**：开发者自定义的卡片业务标识 ID，需保证在同一会话中唯一。
-  - **openConversationId**：群会话 ID，获取方式参考[机器人发送互动卡片（普通版）](../../01-应用开发/02-4a8AMF6u2A-服务端API/1476-robots-send-interactive-cards.md)。
+  - **openConversationId**：群会话 ID，获取方式参考[机器人发送互动卡片（普通版）](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1476-robots-send-interactive-cards.md)。
 
 ## 接入流程简介
 
@@ -46,14 +46,14 @@ updated_at: "2026-08-07 14:53:22"
 
 步骤三：在权限管理中申请机器人相关接口权限。
 
-步骤四：调用[获取企业内部应用的accessToken](../../01-应用开发/02-4a8AMF6u2A-服务端API/0033-obtain-the-access-token-of-an-internal-app.md)接口获取企业内部应用的`accessToken`。
+步骤四：调用[获取企业内部应用的accessToken](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0033-obtain-the-access-token-of-an-internal-app.md)接口获取企业内部应用的`accessToken`。
 
 步骤五：登录[互动卡片普通版搭建平台](https://card.dingtalk.com/card-builder)，搭建卡片模板。
 
 步骤六：调用服务端 API 发送及更新互动卡片：
 
-- 调用新版服务端API-[机器人发送互动卡片（普通版）](../../01-应用开发/02-4a8AMF6u2A-服务端API/1476-robots-send-interactive-cards.md)接口，实现发送卡片信息。
-- 根据cardBizId卡片标识ID，调用新版服务端API-[更新机器人发送互动卡片（普通版）](../../01-应用开发/02-4a8AMF6u2A-服务端API/1477-update-the-robot-to-send-interactive-cards.md)接口，实现更新卡片内容。
+- 调用新版服务端API-[机器人发送互动卡片（普通版）](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1476-robots-send-interactive-cards.md)接口，实现发送卡片信息。
+- 根据cardBizId卡片标识ID，调用新版服务端API-[更新机器人发送互动卡片（普通版）](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1477-update-the-robot-to-send-interactive-cards.md)接口，实现更新卡片内容。
 
 ## 步骤一：创建企业内部应用
 
@@ -79,7 +79,7 @@ updated_at: "2026-08-07 14:53:22"
 
 ## 步骤四：获取企业内部应用的accessToken
 
-根据步骤二中的AppKey和AppSecret，根据[获取企业内部应用的accessToken](../../01-应用开发/02-4a8AMF6u2A-服务端API/0033-obtain-the-access-token-of-an-internal-app.md)接口获取应用访问凭证。
+根据步骤二中的AppKey和AppSecret，根据[获取企业内部应用的accessToken](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0033-obtain-the-access-token-of-an-internal-app.md)接口获取应用访问凭证。
 
 ## 步骤五：选择Ding Card互动卡片
 
@@ -88,8 +88,8 @@ updated_at: "2026-08-07 14:53:22"
 
 ## 步骤六：调用服务端API
 
-1. 下载新版SDK，详情参考[服务端SDK下载](../../01-应用开发/02-4a8AMF6u2A-服务端API/0002-download-the-server-side-sdk.md)。
-2. 调用新版服务端API-[机器人发送互动卡片（普通版）](../../01-应用开发/02-4a8AMF6u2A-服务端API/1476-robots-send-interactive-cards.md)接口，实现互动卡片发送。
+1. 下载新版SDK，详情参考[服务端SDK下载](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0002-download-the-server-side-sdk.md)。
+2. 调用新版服务端API-[机器人发送互动卡片（普通版）](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1476-robots-send-interactive-cards.md)接口，实现互动卡片发送。
 
    ```
    public void sendDingCard() throws Exception {
@@ -306,7 +306,7 @@ updated_at: "2026-08-07 14:53:22"
            }
        }
    ```
-3. 调用新版服务端API-[更新机器人发送互动卡片（普通版）](../../01-应用开发/02-4a8AMF6u2A-服务端API/1477-update-the-robot-to-send-interactive-cards.md)接口，实现互动卡片发送。
+3. 调用新版服务端API-[更新机器人发送互动卡片（普通版）](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1477-update-the-robot-to-send-interactive-cards.md)接口，实现互动卡片发送。
 
    ```
     public void interactiveCardsUpdate() throws Exception {

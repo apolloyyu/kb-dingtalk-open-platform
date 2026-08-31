@@ -55,13 +55,13 @@ updated_at: "2026-08-04 09:07:31"
 
 #### 更新公有数据
 
-调用[更新卡片](../../01-应用开发/02-4a8AMF6u2A-服务端API/0782-interactive-card-update-interface.md)接口更新所有接收者可见的公有数据。
+调用[更新卡片](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0782-interactive-card-update-interface.md)接口更新所有接收者可见的公有数据。
 
 **关键参数**：
 
 - `updateCardDataByKey`：设为`true`为增量更新，设为`false`，为全量覆盖（默认）。
-- 非 String 类型属性填写参考：：[API 卡片数据的填写说明](../../01-应用开发/02-4a8AMF6u2A-服务端API/0789-instructions-for-filling-in-api-card-data.md)。
-- `userIdType` 字段填写参考：[卡片数据与参数配置-userIdType 字段的填写说明](../../01-应用开发/02-4a8AMF6u2A-服务端API/0790-faq-card.md#8607bdd785avq)。
+- 非 String 类型属性填写参考：：[API 卡片数据的填写说明](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0789-instructions-for-filling-in-api-card-data.md)。
+- `userIdType` 字段填写参考：[卡片数据与参数配置-userIdType 字段的填写说明](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0790-faq-card.md#8607bdd785avq)。
 
 **代码实例**：
 
@@ -153,13 +153,13 @@ public class Sample {
 
 #### 更新私有数据
 
-调用[更新卡片](../../01-应用开发/02-4a8AMF6u2A-服务端API/0782-interactive-card-update-interface.md)接口，更新指定用户的私有数据。
+调用[更新卡片](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0782-interactive-card-update-interface.md)接口，更新指定用户的私有数据。
 
 **关键参数**：
 
 - `updatePrivateDataByKey`：设为 `true` 为增量更新，`false` 为全量覆盖（默认）
-- 非 String 类型属性填写参考：：[API 卡片数据的填写说明](../../01-应用开发/02-4a8AMF6u2A-服务端API/0789-instructions-for-filling-in-api-card-data.md)。
-- `userIdType` 字段填写参考：[卡片数据与参数配置-userIdType 字段的填写说明](../../01-应用开发/02-4a8AMF6u2A-服务端API/0790-faq-card.md#8607bdd785avq)。
+- 非 String 类型属性填写参考：：[API 卡片数据的填写说明](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0789-instructions-for-filling-in-api-card-data.md)。
+- `userIdType` 字段填写参考：[卡片数据与参数配置-userIdType 字段的填写说明](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0790-faq-card.md#8607bdd785avq)。
 
 **代码实例**：
 
@@ -256,14 +256,14 @@ public class Sample {
 
 #### 同时更新公有/私有数据
 
-调用[更新卡片](../../01-应用开发/02-4a8AMF6u2A-服务端API/0782-interactive-card-update-interface.md)接口，在一次请求中同时更新公有数据和私有数据。
+调用[更新卡片](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0782-interactive-card-update-interface.md)接口，在一次请求中同时更新公有数据和私有数据。
 
 **关键参数**：
 
 - `updateCardDataByKey`：控制公有数据更新方式。
 - `updatePrivateDataByKey`：控制私有数据更新方式。
-- 非 String 类型属性填写参考：：[API 卡片数据的填写说明](../../01-应用开发/02-4a8AMF6u2A-服务端API/0789-instructions-for-filling-in-api-card-data.md)。
-- `userIdType` 字段填写参考：[卡片数据与参数配置-userIdType 字段的填写说明](../../01-应用开发/02-4a8AMF6u2A-服务端API/0790-faq-card.md#8607bdd785avq)。
+- 非 String 类型属性填写参考：：[API 卡片数据的填写说明](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0789-instructions-for-filling-in-api-card-data.md)。
+- `userIdType` 字段填写参考：[卡片数据与参数配置-userIdType 字段的填写说明](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0790-faq-card.md#8607bdd785avq)。
 
 **代码实例**：
 
@@ -421,7 +421,7 @@ public class Sample {
 
 #### **审批完成后（调用更新接口）**
 
-审批人 userId2 点击"同意"后，审批系统调用[更新卡片](../../01-应用开发/02-4a8AMF6u2A-服务端API/0782-interactive-card-update-interface.md)接口，同时更新公有数据（审批状态）和私有数据（禁用按钮）。
+审批人 userId2 点击"同意"后，审批系统调用[更新卡片](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0782-interactive-card-update-interface.md)接口，同时更新公有数据（审批状态）和私有数据（禁用按钮）。
 
 **HTTP 请求示例**：
 

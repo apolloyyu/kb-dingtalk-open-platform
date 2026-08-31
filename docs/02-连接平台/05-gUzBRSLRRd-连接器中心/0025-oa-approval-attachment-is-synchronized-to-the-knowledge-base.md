@@ -26,7 +26,7 @@ OA审批表单通过后，将表单附件文件同步到文档知识库对很多
 
 1. 拥有所在钉钉组织开发者后台的[开发者权限](../../01-应用开发/01-XOnnmGCTbn-开发指南/0006-get-developer-permissions.md)。
 2. 拥有OA审批的管理员权限。
-3. 拥有一个所在钉钉组织的[知识库](../../01-应用开发/02-4a8AMF6u2A-服务端API/0553-knowledge-base-overview.md)。
+3. 拥有一个所在钉钉组织的[知识库](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0553-knowledge-base-overview.md)。
 4. 已开通[钉钉专业版](dingtalk://dingtalkclient/page/link?url=https%3A%2F%2Fn.dingtalk.com%2Fdingding%2Fdd-pro-composite-order%2Fpc%2Findex.html%3Fpopup_wnd%3Dtrue%26dd_tab%3Dtrue%26width%3D900%26height%3D600%26title%3D%25E9%2592%2589%25E9%2592%2589%25E6%2595%25B0%25E5%25AD%2597%25E8%25B5%2584%25E4%25BA%25A7%26articleCode%3DDT_GOODS_dingtalkmemberplus%26channel%3Dopenpf_web_devdoc%26corpId%3D${corpId}%26accessoryProduct%3DpaasWithConnector%26tabKey%3DDT_GOODS_dingtalkmemberplus&popup_wnd=true&height=600&width=900)。（OA审批中使用连接器必备）。
 
 ## **预期效果**
@@ -182,7 +182,7 @@ OA审批表单通过后，将表单附件文件同步到文档知识库对很多
 
 你已完成本教程的全部内容，可以开始测试。
 
-1. 需提前创建[知识库和知识库目录](../../01-应用开发/02-4a8AMF6u2A-服务端API/0553-knowledge-base-overview.md)。
+1. 需提前创建[知识库和知识库目录](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0553-knowledge-base-overview.md)。
 2. 附件大小建议在3MB以内。
 
    ![image.png](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/3434735871/p887603.png)

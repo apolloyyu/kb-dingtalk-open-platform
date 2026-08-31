@@ -251,11 +251,11 @@ updated_at: "2026-07-02 10:31:49"
     | prompt | 否 | 固定值为consent，会进入授权确认页。 |
 - 获取 accessToken，accessToken 是登录用户的访问凭证。
 
-  - 根据 authCode 调用接口获取 accessToken，由业务方服务端接入，可参考[接入文档](../02-4a8AMF6u2A-服务端API/0032-obtain-user-token.md)。
+  - 根据 authCode 调用接口获取 accessToken，由业务方服务端接入，可参考[接入文档](../02-4a8AMF6u2A-服务端-API/0032-obtain-user-token.md)。
   - 客户端本地可以通过[接口调试工具](https://open-dev.dingtalk.com/apiExplorer?spm=ding_open_doc.document.0.0.2bd4492dQuxTUk#/?devType=isv&api=oauth2_1.0%23GetUserToken)进行调试，
 - 获取用户通讯录相关信息
 
-  - 根据 accessToken 调用接口获取用户通讯录相关信息，由业务方服务端接入，可参考[接入文档](../02-4a8AMF6u2A-服务端API/0054-dingtalk-retrieve-user-information.md)。
+  - 根据 accessToken 调用接口获取用户通讯录相关信息，由业务方服务端接入，可参考[接入文档](../02-4a8AMF6u2A-服务端-API/0054-dingtalk-retrieve-user-information.md)。
   - 客户端本地可以通过[接口调试工具](https://open-dev.dingtalk.com/apiExplorer?spm=ding_open_doc.document.0.0.2e901f874Ka2xN#/?devType=isv&api=contact_1.0%23GetUser)进行调试
 
 ## **Android接入登录**
@@ -403,7 +403,7 @@ authApi.authLogin()
 
 ### **步骤五：获取用户个人access\_token**
 
-使用步骤四返回的authCode，调用[获取用户token](../02-4a8AMF6u2A-服务端API/0032-obtain-user-token.md)接口，换取用户个人access\_token。
+使用步骤四返回的authCode，调用[获取用户token](../02-4a8AMF6u2A-服务端-API/0032-obtain-user-token.md)接口，换取用户个人access\_token。
 
 ```
 public class Test {
@@ -444,7 +444,7 @@ public class Test {
 
 ### **步骤六：获取用户个人信息**
 
-使用步骤五获取的用户个人access\_token，调用[获取用户通讯录个人信息](../02-4a8AMF6u2A-服务端API/0054-dingtalk-retrieve-user-information.md)接口，获取用户个人手机号、用户的钉钉昵称、头像URL、用户的个人邮箱等信息。
+使用步骤五获取的用户个人access\_token，调用[获取用户通讯录个人信息](../02-4a8AMF6u2A-服务端-API/0054-dingtalk-retrieve-user-information.md)接口，获取用户个人手机号、用户的钉钉昵称、头像URL、用户的个人邮箱等信息。
 
 ```
 public class Test {

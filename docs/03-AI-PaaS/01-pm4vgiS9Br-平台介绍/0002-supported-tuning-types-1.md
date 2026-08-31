@@ -22,9 +22,9 @@ updated_at: "2026-08-03 09:15:20"
 
 开放平台提供了大模型服务接口，你可以使用这些接口访问已发布的模型服务：
 
-- [炼丹炉专属模型服务](../../01-应用开发/02-4a8AMF6u2A-服务端API/1199-api-liandanluexclusivemodel.md)
-- [大模型推理服务（文生文模型）](../../01-应用开发/02-4a8AMF6u2A-服务端API/1200-api-exclusivemodelcompleteservice.md)
-- [大模型推理服务（多模态模型）](../../01-应用开发/02-4a8AMF6u2A-服务端API/1201-large-model-reasoning-service-interface-multimodal-model-1.md)
+- [炼丹炉专属模型服务](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1199-api-liandanluexclusivemodel.md)
+- [大模型推理服务（文生文模型）](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1200-api-exclusivemodelcompleteservice.md)
+- [大模型推理服务（多模态模型）](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1201-large-model-reasoning-service-interface-multimodal-model-1.md)
 
 ## **已支持调优类型**
 

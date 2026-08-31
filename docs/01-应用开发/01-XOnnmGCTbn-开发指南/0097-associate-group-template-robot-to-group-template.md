@@ -68,4 +68,4 @@ updated_at: "2026-07-22 16:55:33"
 
 如果你需要使用群模板机器人发送消息，详情参考文档：
 
-- [群模板机器人发送群聊消息](../02-4a8AMF6u2A-服务端API/0703-group-template-robot-sends-group-chat-message.md)
+- [群模板机器人发送群聊消息](../02-4a8AMF6u2A-服务端-API/0703-group-template-robot-sends-group-chat-message.md)

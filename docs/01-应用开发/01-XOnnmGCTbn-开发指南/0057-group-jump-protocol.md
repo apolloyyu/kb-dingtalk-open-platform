@@ -71,7 +71,7 @@ dingtalk://dingtalkclient/action/openapp?corpid=$CORPID$&container_type=work_pla
 
 ## 跳转到小程序
 
-小程序 scheme支持跳转到第三方企业应用小程序、第三方个人应用小程序，请参考[小程序 scheme](../03-Ogu5SlPY4t-客户端JSAPI/0468-scheme-of-mini-programs-1.md)。
+小程序 scheme支持跳转到第三方企业应用小程序、第三方个人应用小程序，请参考[小程序 scheme](../03-Ogu5SlPY4t-客户端-JSAPI/0463-scheme-of-mini-programs-1.md)。
 
 | 跳转到应用类型 | 小程序schema是否支持 |
 | --- | --- |

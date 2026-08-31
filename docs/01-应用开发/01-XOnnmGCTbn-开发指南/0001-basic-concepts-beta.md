@@ -62,7 +62,7 @@ updated_at: "2026-07-22 16:55:12"
 
 用户跨应用统一标识，同一用户在同一个开放平台账号下的所有应用中拥有相同的UnionId，用于跨应用数据打通。
 
-**查看路径**：通过用户的userId调用[查询用户详情](../02-4a8AMF6u2A-服务端API/0056-query-user-details.md)接口获取`unionid`参数值。
+**查看路径**：通过用户的userId调用[查询用户详情](../02-4a8AMF6u2A-服务端-API/0056-query-user-details.md)接口获取`unionid`参数值。
 
 ### **Unified App ID**
 
@@ -120,8 +120,8 @@ updated_at: "2026-07-22 16:55:12"
 - **注意**：有效期通常为 7200 秒（2小时），有效期内重复获取会自动续期。
 - **获取：**
 
-  - 企业内部应用，通过[获取企业内部应用的accessToken](../02-4a8AMF6u2A-服务端API/0033-obtain-the-access-token-of-an-internal-app.md)接口获取access\_token。
-  - 第三方企业应用，通过[获取第三方应用授权企业的accessToken](../02-4a8AMF6u2A-服务端API/0034-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口获取access\_token。
+  - 企业内部应用，通过[获取企业内部应用的accessToken](../02-4a8AMF6u2A-服务端-API/0033-obtain-the-access-token-of-an-internal-app.md)接口获取access\_token。
+  - 第三方企业应用，通过[获取第三方应用授权企业的accessToken](../02-4a8AMF6u2A-服务端-API/0034-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口获取access\_token。
 - **差异：**
 
   - 企业内部应用的 `access_token` 具备该应用所申请的所有权限。
@@ -135,7 +135,7 @@ updated_at: "2026-07-22 16:55:12"
 
 **注意**：有效期仅为 5 分钟，使用一次后即失效且不可重复使用。
 
-**获取**：通过调用 [getAuthCode](../03-Ogu5SlPY4t-客户端JSAPI/0006-jsapi-get-auth-code.md)、[requestAuthCode](../03-Ogu5SlPY4t-客户端JSAPI/0007-jsapi-request-auth-code.md)等接口获取，详细使用可参考[身份验证（免登）](../02-4a8AMF6u2A-服务端API/0016-sso-overview.md)。
+**获取**：通过调用 [getAuthCode](../03-Ogu5SlPY4t-客户端-JSAPI/0006-jsapi-get-auth-code.md)、[requestAuthCode](../03-Ogu5SlPY4t-客户端-JSAPI/0007-jsapi-request-auth-code.md)等接口获取，详细使用可参考[身份验证（免登）](../02-4a8AMF6u2A-服务端-API/0016-sso-overview.md)。
 
 ### jsapi\_ticket
 
@@ -145,7 +145,7 @@ updated_at: "2026-07-22 16:55:12"
 
 **注意**：有效期设为 2 小时，过期或参数不一致，将导致"jsapi ticket 读取失败”或“签名校验失败”等错误。
 
-**获取**：使用 `access_token` 调用[获取jsapiTicket](../02-4a8AMF6u2A-服务端API/0039-create-a-jsapi-ticket.md)接口获取。
+**获取**：使用 `access_token` 调用[获取jsapiTicket](../02-4a8AMF6u2A-服务端-API/0039-create-a-jsapi-ticket.md)接口获取。
 
 ### **SSOSecret**
 

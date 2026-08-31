@@ -11,12 +11,12 @@
       },
       {
         "tabCode": "4a8AMF6u2A",
-        "tabName": "服务端API",
+        "tabName": "服务端 API",
         "sort": 2
       },
       {
         "tabCode": "Ogu5SlPY4t",
-        "tabName": "客户端JSAPI",
+        "tabName": "客户端 JSAPI",
         "sort": 3
       },
       {
@@ -26,7 +26,7 @@
       },
       {
         "tabCode": "QzuirX2lH7",
-        "tabName": "钉钉CLI",
+        "tabName": "钉钉 CLI",
         "sort": 5
       },
       {
@@ -117,12 +117,12 @@
       },
       {
         "tabCode": "CkFsxzbZNt",
-        "tabName": "门禁Linux 接入",
+        "tabName": "门禁 Linux 接入",
         "sort": 3
       },
       {
         "tabCode": "5Q63YgAfzq",
-        "tabName": "Android设备接入",
+        "tabName": "Android 设备接入",
         "sort": 4
       }
     ]

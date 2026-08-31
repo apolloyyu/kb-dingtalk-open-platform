@@ -99,7 +99,7 @@ updated_at: "2026-07-22 16:55:24"
    | timestamp | 开发者计算 sign 签名值时使用到的时间戳。 |
    | sign | 步骤一获取的签名值。 |
 
-   详情可参考[自定义机器人发送群聊消息](../02-4a8AMF6u2A-服务端API/0702-custom-bot-to-send-group-chat-messages.md)。
+   详情可参考[自定义机器人发送群聊消息](../02-4a8AMF6u2A-服务端-API/0702-custom-bot-to-send-group-chat-messages.md)。
 
 ## IP地址（段）
 
@@ -114,5 +114,5 @@ updated_at: "2026-07-22 16:55:24"
 
 ## **相关文档**
 
-- [自定义机器人发送群聊消息](../02-4a8AMF6u2A-服务端API/0702-custom-bot-to-send-group-chat-messages.md)
-- [自定义机器人发送群消息 OpenAPI](../02-4a8AMF6u2A-服务端API/0717-custom-robots-send-group-messages.md)
+- [自定义机器人发送群聊消息](../02-4a8AMF6u2A-服务端-API/0702-custom-bot-to-send-group-chat-messages.md)
+- [自定义机器人发送群消息 OpenAPI](../02-4a8AMF6u2A-服务端-API/0717-custom-robots-send-group-messages.md)

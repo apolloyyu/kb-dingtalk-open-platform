@@ -24,7 +24,7 @@ updated_at: "2026-07-22 16:55:15"
 2. 已完成事件订阅接入配置。
 
    - **事件订阅服务**用于接收钉钉平台推送的用户行为事件（如消息发送、应用安装等），可在【开发者后台】>【开发配置】> 【事件订阅】中查看是否已启用。
-   - 钉钉支持三种回调事件接收方式：RDS推送、SyncHTTP推送和Stream推送。详情请参考[事件订阅](../02-4a8AMF6u2A-服务端API/0014-event-subscription-overview.md)。
+   - 钉钉支持三种回调事件接收方式：RDS推送、SyncHTTP推送和Stream推送。详情请参考[事件订阅](../02-4a8AMF6u2A-服务端-API/0014-event-subscription-overview.md)。
 
 ## **操作步骤**
 
@@ -71,7 +71,7 @@ updated_at: "2026-07-22 16:55:15"
 
    ![4.完成机器人添加.png](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/7731072871/p722561.png)
 
-机器人添加完成后，获取企业应用机器人的 Webhook 地址，具体操作详见[企业机器人 Webhook 地址](../02-4a8AMF6u2A-服务端API/0791-faq-robot.md)。
+机器人添加完成后，获取企业应用机器人的 Webhook 地址，具体操作详见[企业机器人 Webhook 地址](../02-4a8AMF6u2A-服务端-API/0791-faq-robot.md)。
 
 ### **酷应用**
 

@@ -42,8 +42,8 @@ updated_at: "2026-08-19 09:12:35"
 
 ## 应用接入应用内授权能力
 
-- 应用内授权简述，请参考[概述](../../01-应用开发/02-4a8AMF6u2A-服务端API/0876-application-market-overview.md)。
-- 应用内授权开通接入方案，请参考[应用内授权开通接入](../../01-应用开发/02-4a8AMF6u2A-服务端API/0879-in-app-authorization-to-open-access.md)。
+- 应用内授权简述，请参考[概述](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0876-application-market-overview.md)。
+- 应用内授权开通接入方案，请参考[应用内授权开通接入](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0879-in-app-authorization-to-open-access.md)。
 
 ## 组件接入审核
 

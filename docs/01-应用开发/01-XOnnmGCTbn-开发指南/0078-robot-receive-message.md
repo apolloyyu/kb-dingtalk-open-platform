@@ -145,7 +145,7 @@ updated_at: "2026-06-30 09:01:09"
    | sessionWebhook | 当前会话的 Webhook 地址。 |
    | text | 文本消息：  - content：文本内容 |
    | robotCode | 机器人编码。 |
-   | msgtype | 消息类型，请参考[消息发送与接收类型](../02-4a8AMF6u2A-服务端API/0699-robot-message-type.md)。 |
+   | msgtype | 消息类型，请参考[消息发送与接收类型](../02-4a8AMF6u2A-服务端-API/0699-robot-message-type.md)。 |
 
 ### **HTTP 模式**
 
@@ -217,7 +217,7 @@ updated_at: "2026-06-30 09:01:09"
    | isInAtList | 是否在@列表中。 |
    | sessionWebhook | 当前会话的 Webhook 地址。 |
    | content | 消息文本。 |
-   | msgtype | 消息类型，请参考[消息发送与接收类型](../02-4a8AMF6u2A-服务端API/0699-robot-message-type.md)。 |
+   | msgtype | 消息类型，请参考[消息发送与接收类型](../02-4a8AMF6u2A-服务端-API/0699-robot-message-type.md)。 |
 
 ## **后续步骤**
 

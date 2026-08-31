@@ -32,22 +32,22 @@ updated_at: "2026-08-03 09:15:59"
 
 | **事件类型** | **触发条件** |
 | --- | --- |
-| 员工打卡事件 | 监听员工打卡行为，触发后续业务流程，更多信息可查看[员工打卡事件](../../01-应用开发/04-LFcRvVD08N-事件订阅/0126-employee-clock-in-event.md)说明。 |
-| 排班变更事件 | 监听排班调整，同步更新相关业务数据，更多信息可查看[班次变更](../../01-应用开发/04-LFcRvVD08N-事件订阅/0124-intelligent-personnel-shift-change.md)说明。 |
-| 员工加班事件 | 监听加班申请与审批状态，自动化处理加班逻辑，更多信息可查看[员工加班事件](../../01-应用开发/04-LFcRvVD08N-事件订阅/0127-employee-overtime-events.md)说明。 |
+| 员工打卡事件 | 监听员工打卡行为，触发后续业务流程，更多信息可查看[员工打卡事件](../../01-应用开发/04-LFcRvVD08N-事件订阅/0129-employee-clock-in-event.md)说明。 |
+| 排班变更事件 | 监听排班调整，同步更新相关业务数据，更多信息可查看[班次变更](../../01-应用开发/04-LFcRvVD08N-事件订阅/0127-intelligent-personnel-shift-change.md)说明。 |
+| 员工加班事件 | 监听加班申请与审批状态，自动化处理加班逻辑，更多信息可查看[员工加班事件](../../01-应用开发/04-LFcRvVD08N-事件订阅/0130-employee-overtime-events.md)说明。 |
 
 ### **执行动作**
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 考勤组管理 | 创建/更新/删除考勤组，批量管理参与人员，校验成员归属，更多信息查看[考勤组管理](../../01-应用开发/02-4a8AMF6u2A-服务端API/0170-attendance-group-write.md)相关接口介绍。  **[!NOTE]**  考勤组是一类具有相同的班次、考勤位置等考勤规则的人或部门的组合，企业可根据实际业务设置多个考勤组。 |
-| 班次管理 | 创建/修改/删除班次，查询班次详情，按名称搜索班次，更多信息查看[班次管理](../../01-应用开发/02-4a8AMF6u2A-服务端API/0198-create-modify-shifts.md)相关接口介绍。  **[!NOTE]**  在钉钉考勤应用中，班次是一类具有相同的打卡时间、休息时间等规则的组合，企业可根据实际业务设置多个班次。 |
-| 排班管理 | 排班制考勤组排班，查询排班打卡结果，查询企业排班详情，更多信息查看[排班管理](../../01-应用开发/02-4a8AMF6u2A-服务端API/0207-scheduling-system-attendance-group-scheduling.md)相关接口介绍。 |
-| 打卡管理 | 上传打卡记录，获取打卡结果/详情（区分汇总与明细），更多信息查看[打卡管理](../../01-应用开发/02-4a8AMF6u2A-服务端API/0195-open-attendance-clock-in-data.md)相关接口介绍。 |
-| 假期管理 | 假期规则，余额初始化/批量更新/查询，支持普通假期与调休假期，更多信息查看[假期管理](../../01-应用开发/02-4a8AMF6u2A-服务端API/0232-holiday-management-describe.md)相关接口介绍。 |
-| 假期审批 | 补卡/审批通过/撤销通知（加班、请假、外出、出差），时长预计算与统计，更多信息查看[假期审批](../../01-应用开发/02-4a8AMF6u2A-服务端API/0225-api-calculateduration.md#undefined)相关接口介绍。 |
-| 考勤统计 | 智能报表列定义/数据查询，用户考勤数据聚合（打卡流水、结果、审批列表），更多信息查看[考勤统计](../../01-应用开发/02-4a8AMF6u2A-服务端API/0216-obtain-the-attendance-update-data.md)相关接口介绍。 |
-| 考勤机管理 | 查询员工智能考勤机列表，更多信息查看[查询员工智能考勤机列表](../../01-应用开发/02-4a8AMF6u2A-服务端API/0221-query-the-list-of-employee-intelligent-attendance-machines.md)相关接口介绍。 |
+| 考勤组管理 | 创建/更新/删除考勤组，批量管理参与人员，校验成员归属，更多信息查看[考勤组管理](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0170-attendance-group-write.md)相关接口介绍。  **[!NOTE]**  考勤组是一类具有相同的班次、考勤位置等考勤规则的人或部门的组合，企业可根据实际业务设置多个考勤组。 |
+| 班次管理 | 创建/修改/删除班次，查询班次详情，按名称搜索班次，更多信息查看[班次管理](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0198-create-modify-shifts.md)相关接口介绍。  **[!NOTE]**  在钉钉考勤应用中，班次是一类具有相同的打卡时间、休息时间等规则的组合，企业可根据实际业务设置多个班次。 |
+| 排班管理 | 排班制考勤组排班，查询排班打卡结果，查询企业排班详情，更多信息查看[排班管理](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0207-scheduling-system-attendance-group-scheduling.md)相关接口介绍。 |
+| 打卡管理 | 上传打卡记录，获取打卡结果/详情（区分汇总与明细），更多信息查看[打卡管理](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0195-open-attendance-clock-in-data.md)相关接口介绍。 |
+| 假期管理 | 假期规则，余额初始化/批量更新/查询，支持普通假期与调休假期，更多信息查看[假期管理](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0232-holiday-management-describe.md)相关接口介绍。 |
+| 假期审批 | 补卡/审批通过/撤销通知（加班、请假、外出、出差），时长预计算与统计，更多信息查看[假期审批](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0225-api-calculateduration.md#undefined)相关接口介绍。 |
+| 考勤统计 | 智能报表列定义/数据查询，用户考勤数据聚合（打卡流水、结果、审批列表），更多信息查看[考勤统计](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0216-obtain-the-attendance-update-data.md)相关接口介绍。 |
+| 考勤机管理 | 查询员工智能考勤机列表，更多信息查看[查询员工智能考勤机列表](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0221-query-the-list-of-employee-intelligent-attendance-machines.md)相关接口介绍。 |
 
 ### **使用教程**
 
@@ -67,9 +67,9 @@ updated_at: "2026-08-03 09:15:59"
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 流程管理 | 发起/更新/删除/终止审批流程，获取流程实例信息，批量查询流程实例，更多信息查看[流程管理](../../01-应用开发/02-4a8AMF6u2A-服务端API/0311-api-startinstance-v2.md)相关接口介绍。 |
-| 表单管理 | 保存/更新/删除表单数据，查询表单实例，获取子表组件数据，获取表单组件定义，更多信息查看[表单管理](../../01-应用开发/02-4a8AMF6u2A-服务端API/0317-api-getformdatabyid-v2.md)相关接口介绍。 |
-| 任务管理 | 转交任务，提交评论，获取审批记录，查询组织维度任务列表，查询抄送任务，更多信息查看[任务管理](../../01-应用开发/02-4a8AMF6u2A-服务端API/0341-transfer-tasks.md)相关接口介绍。 |
+| 流程管理 | 发起/更新/删除/终止审批流程，获取流程实例信息，批量查询流程实例，更多信息查看[流程管理](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0311-api-startinstance-v2.md)相关接口介绍。 |
+| 表单管理 | 保存/更新/删除表单数据，查询表单实例，获取子表组件数据，获取表单组件定义，更多信息查看[表单管理](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0317-api-getformdatabyid-v2.md)相关接口介绍。 |
+| 任务管理 | 转交任务，提交评论，获取审批记录，查询组织维度任务列表，查询抄送任务，更多信息查看[任务管理](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0341-transfer-tasks.md)相关接口介绍。 |
 
 ### **使用教程**
 
@@ -107,8 +107,8 @@ updated_at: "2026-08-03 09:15:59"
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 工作表管理 | 在工作表指定位置插入/删除行或列，设置行/列的可见性，更多信息查看[工作表管理](../../01-应用开发/02-4a8AMF6u2A-服务端API/0591-create-a-worksheet.md)相关接口介绍。 |
-| 区域管理 | 获取/更新/清除单元格指定区域内的数据，支持仅清除数据或同时清除格式，更多信息查看[区域管理](../../01-应用开发/02-4a8AMF6u2A-服务端API/0609-get-cell-properties.md)相关接口介绍。 |
+| 工作表管理 | 在工作表指定位置插入/删除行或列，设置行/列的可见性，更多信息查看[工作表管理](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0591-create-a-worksheet.md)相关接口介绍。 |
+| 区域管理 | 获取/更新/清除单元格指定区域内的数据，支持仅清除数据或同时清除格式，更多信息查看[区域管理](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0609-get-cell-properties.md)相关接口介绍。 |
 
 ## **日程**
 
@@ -128,9 +128,9 @@ updated_at: "2026-08-03 09:15:59"
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 日程管理 | 创建/修改/删除日程（支持 userId 版本，相比 unionId 版本需额外传入 corpId），更多信息查看[日程管理](../../01-应用开发/02-4a8AMF6u2A-服务端API/0250-create-schedule.md)相关接口介绍。 |
-| 日历查询 | 查询用户的日历本信息（userId 版本），更多信息查看[日历管理](../../01-应用开发/02-4a8AMF6u2A-服务端API/0261-query-a-calendar.md)相关接口介绍。 |
-| 参与者管理 | 添加日程参与者（userId 版本），更多信息查看[参与者管理](../../01-应用开发/02-4a8AMF6u2A-服务端API/0256-add-schedule-participant.md)相关接口介绍。 |
+| 日程管理 | 创建/修改/删除日程（支持 userId 版本，相比 unionId 版本需额外传入 corpId），更多信息查看[日程管理](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0250-create-schedule.md)相关接口介绍。 |
+| 日历查询 | 查询用户的日历本信息（userId 版本），更多信息查看[日历管理](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0261-query-a-calendar.md)相关接口介绍。 |
+| 参与者管理 | 添加日程参与者（userId 版本），更多信息查看[参与者管理](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0256-add-schedule-participant.md)相关接口介绍。 |
 
 ### **使用教程**
 
@@ -148,9 +148,9 @@ updated_at: "2026-08-03 09:15:59"
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 公告管理 | 创建/更新/删除企业公告，获取公告详情，更多信息查看[公告管理](../../01-应用开发/02-4a8AMF6u2A-服务端API/0279-create-an-enterprise-announcement.md)相关接口介绍。 |
-| 公告查询 | 获取公告 ID 列表，获取公告分类列表，获取用户可查看的公告，更多信息查看[公告查询](../../01-应用开发/02-4a8AMF6u2A-服务端API/0283-obtains-the-id-list-of-announcements-that-are-not-deleted.md)相关接口介绍。 |
-| 钉盘空间 | 获取公告钉盘空间信息，更多信息查看[获取公告钉盘空间信息](../../01-应用开发/02-4a8AMF6u2A-服务端API/0286-obtain-bulletin-nail-disk-space-information.md)相关接口介绍。 |
+| 公告管理 | 创建/更新/删除企业公告，获取公告详情，更多信息查看[公告管理](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0279-create-an-enterprise-announcement.md)相关接口介绍。 |
+| 公告查询 | 获取公告 ID 列表，获取公告分类列表，获取用户可查看的公告，更多信息查看[公告查询](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0283-obtains-the-id-list-of-announcements-that-are-not-deleted.md)相关接口介绍。 |
+| 钉盘空间 | 获取公告钉盘空间信息，更多信息查看[获取公告钉盘空间信息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0286-obtain-bulletin-nail-disk-space-information.md)相关接口介绍。 |
 
 ### **使用教程**
 
@@ -174,8 +174,8 @@ updated_at: "2026-08-03 09:15:59"
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 获取部门用户签到记录 | 获取部门用户签到记录，更多信息查看[获取部门用户签到记录](../../01-应用开发/02-4a8AMF6u2A-服务端API/0291-get-check-in-data.md)相关接口介绍。 |
-| 获取用户签到记录 | 查询多个用户一段时间范围内的签到记录，更多信息查看[获取用户签到记录](../../01-应用开发/02-4a8AMF6u2A-服务端API/0290-obtain-the-check-in-records-of-multiple-users.md)相关接口介绍。  **[!NOTE]**  只给企业调用，ISV无法调用。 |
+| 获取部门用户签到记录 | 获取部门用户签到记录，更多信息查看[获取部门用户签到记录](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0291-get-check-in-data.md)相关接口介绍。 |
+| 获取用户签到记录 | 查询多个用户一段时间范围内的签到记录，更多信息查看[获取用户签到记录](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0290-obtain-the-check-in-records-of-multiple-users.md)相关接口介绍。  **[!NOTE]**  只给企业调用，ISV无法调用。 |
 
 ## **日志**
 
@@ -189,11 +189,11 @@ updated_at: "2026-08-03 09:15:59"
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 模板管理 | 获取模板详情，获取用户可见的日志模板，更多信息查看[模板管理](../../01-应用开发/02-4a8AMF6u2A-服务端API/0296-query-template-details.md)相关接口介绍。 |
-| 日志查询 | 获取用户发出的日志列表，获取用户发送日志的概要信息，获取日志统计数据，更多信息查看[日志查询](../../01-应用开发/02-4a8AMF6u2A-服务端API/0297-query-logs-sent-by-an-employee.md)相关接口介绍。 |
-| 互动管理 | 获取日志评论详情，获取日志相关人员列表（已读/评论/点赞人员），更多信息查看[日志评论](../../01-应用开发/02-4a8AMF6u2A-服务端API/0301-queries-log-comment-details.md)相关接口介绍。 |
-| 接收范围 | 获取日志接收人员列表（含群成员），更多信息查看[获取日志接收人员列表](../../01-应用开发/02-4a8AMF6u2A-服务端API/0300-queries-log-sharing-personnel.md)接口介绍。 |
-| 未读统计 | 获取用户日志未读数，更多信息查看[获取用户日志未读数](../../01-应用开发/02-4a8AMF6u2A-服务端API/0302-querying-the-employee-s-log-is-not-reading.md)接口介绍。 |
+| 模板管理 | 获取模板详情，获取用户可见的日志模板，更多信息查看[模板管理](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0296-query-template-details.md)相关接口介绍。 |
+| 日志查询 | 获取用户发出的日志列表，获取用户发送日志的概要信息，获取日志统计数据，更多信息查看[日志查询](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0297-query-logs-sent-by-an-employee.md)相关接口介绍。 |
+| 互动管理 | 获取日志评论详情，获取日志相关人员列表（已读/评论/点赞人员），更多信息查看[日志评论](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0301-queries-log-comment-details.md)相关接口介绍。 |
+| 接收范围 | 获取日志接收人员列表（含群成员），更多信息查看[获取日志接收人员列表](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0300-queries-log-sharing-personnel.md)接口介绍。 |
+| 未读统计 | 获取用户日志未读数，更多信息查看[获取用户日志未读数](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0302-querying-the-employee-s-log-is-not-reading.md)接口介绍。 |
 
 ## **AI 能力**
 
@@ -207,8 +207,8 @@ AI接口是由阿里巴巴达摩院提供的功能服务，用于提升企业办
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 文本翻译 | 输入一段文本，得到翻译指定语言后的译文，支持多种语言的互译，更多信息查看[钉钉文本翻译](../../01-应用开发/02-4a8AMF6u2A-服务端API/1009-dingtalk-translation.md)接口介绍。 |
-| OCR文字识别 | 根据识别图片地址，进行OCR文字识别，更多信息查看[OCR文字识别](../../01-应用开发/02-4a8AMF6u2A-服务端API/1010-structured-image-recognition-api.md)接口介绍。 |
+| 文本翻译 | 输入一段文本，得到翻译指定语言后的译文，支持多种语言的互译，更多信息查看[钉钉文本翻译](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1009-dingtalk-translation.md)接口介绍。 |
+| OCR文字识别 | 根据识别图片地址，进行OCR文字识别，更多信息查看[OCR文字识别](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1010-structured-image-recognition-api.md)接口介绍。 |
 
 ### **使用教程**
 
@@ -250,8 +250,8 @@ AI接口是由阿里巴巴达摩院提供的功能服务，用于提升企业办
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 数据表管理 | 创建/更新/删除/获取数据表，获取所有数据表列表，更多信息查看[数据表管理](../../01-应用开发/02-4a8AMF6u2A-服务端API/0459-api-createsheet.md)相关接口介绍。 |
-| 记录管理 | 新增/删除/更新/获取单行或多行记录，支持按用户维度查询记录，更多信息查看[记录管理](../../01-应用开发/02-4a8AMF6u2A-服务端API/0468-api-notable-insertrecords.md)相关接口介绍。 |
+| 数据表管理 | 创建/更新/删除/获取数据表，获取所有数据表列表，更多信息查看[数据表管理](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0459-api-createsheet.md)相关接口介绍。 |
+| 记录管理 | 新增/删除/更新/获取单行或多行记录，支持按用户维度查询记录，更多信息查看[记录管理](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0468-api-notable-insertrecords.md)相关接口介绍。 |
 
 ### **字段格式配置**
 
@@ -301,11 +301,11 @@ AI接口是由阿里巴巴达摩院提供的功能服务，用于提升企业办
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 用户管理 | 创建/更新/删除用户，查询用户详情，获取未登录钉钉的员工列表，userid/unionid 互转，更多信息查看[用户管理](../../01-应用开发/02-4a8AMF6u2A-服务端API/0055-user-information-creation.md)相关接口介绍。 |
-| 角色管理 | 创建/更新/删除角色，获取角色详情/列表/组列表，批量增删员工角色，设定角色成员管理范围，更多信息查看[角色管理](../../01-应用开发/02-4a8AMF6u2A-服务端API/0086-address-book-add-role.md)相关接口介绍。 |
-| 部门管理 | 更新/删除部门，获取部门详情/员工人数/子部门列表/人员列表/userid 列表，获取用户/部门的父部门列表，更多信息查看[部门管理](../../01-应用开发/02-4a8AMF6u2A-服务端API/0078-address-book-update-department.md)相关接口介绍。 |
-| 外部联系人 | 添加/更新外部联系人，获取外部联系人列表/详情，更多信息查看[外部联系人](../../01-应用开发/02-4a8AMF6u2A-服务端API/0097-add-enterprise-external-contacts.md)相关接口介绍。 |
-| 管理员与权限 | 获取管理员列表，获取管理员通讯录权限范围，更多信息查看[管理员与权限](../../01-应用开发/02-4a8AMF6u2A-服务端API/0068-query-the-administrator-list.md)相关接口介绍。 |
+| 用户管理 | 创建/更新/删除用户，查询用户详情，获取未登录钉钉的员工列表，userid/unionid 互转，更多信息查看[用户管理](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0055-user-information-creation.md)相关接口介绍。 |
+| 角色管理 | 创建/更新/删除角色，获取角色详情/列表/组列表，批量增删员工角色，设定角色成员管理范围，更多信息查看[角色管理](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0086-address-book-add-role.md)相关接口介绍。 |
+| 部门管理 | 更新/删除部门，获取部门详情/员工人数/子部门列表/人员列表/userid 列表，获取用户/部门的父部门列表，更多信息查看[部门管理](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0078-address-book-update-department.md)相关接口介绍。 |
+| 外部联系人 | 添加/更新外部联系人，获取外部联系人列表/详情，更多信息查看[外部联系人](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0097-add-enterprise-external-contacts.md)相关接口介绍。 |
+| 管理员与权限 | 获取管理员列表，获取管理员通讯录权限范围，更多信息查看[管理员与权限](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0068-query-the-administrator-list.md)相关接口介绍。 |
 
 ### **使用教程**
 
@@ -327,21 +327,21 @@ AI接口是由阿里巴巴达摩院提供的功能服务，用于提升企业办
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 文本消息 | 批量发送机器人单聊文本消息，更多信息查看[批量发送人与机器人会话中机器人消息](../../01-应用开发/02-4a8AMF6u2A-服务端API/0714-chatbots-send-one-on-one-chat-messages-in-batches.md)接口介绍。 |
-| 图片消息 | 批量发送机器人单聊图片消息，更多信息查看[批量发送人与机器人会话中机器人消息](../../01-应用开发/02-4a8AMF6u2A-服务端API/0714-chatbots-send-one-on-one-chat-messages-in-batches.md)接口介绍。 |
-| 链接消息 | 批量发送机器人单聊链接消息，更多信息查看[批量发送人与机器人会话中机器人消息](../../01-应用开发/02-4a8AMF6u2A-服务端API/0714-chatbots-send-one-on-one-chat-messages-in-batches.md)接口介绍。 |
-| Markdown 消息 | 批量发送机器人单聊 Markdown 消息，更多信息查看[批量发送人与机器人会话中机器人消息](../../01-应用开发/02-4a8AMF6u2A-服务端API/0714-chatbots-send-one-on-one-chat-messages-in-batches.md)接口介绍。 |
-| 按钮消息 | 批量发送单按钮/横向多按钮/竖向 2-5 个按钮消息，更多信息查看[批量发送人与机器人会话中机器人消息](../../01-应用开发/02-4a8AMF6u2A-服务端API/0714-chatbots-send-one-on-one-chat-messages-in-batches.md)接口介绍。 |
+| 文本消息 | 批量发送机器人单聊文本消息，更多信息查看[批量发送人与机器人会话中机器人消息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0714-chatbots-send-one-on-one-chat-messages-in-batches.md)接口介绍。 |
+| 图片消息 | 批量发送机器人单聊图片消息，更多信息查看[批量发送人与机器人会话中机器人消息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0714-chatbots-send-one-on-one-chat-messages-in-batches.md)接口介绍。 |
+| 链接消息 | 批量发送机器人单聊链接消息，更多信息查看[批量发送人与机器人会话中机器人消息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0714-chatbots-send-one-on-one-chat-messages-in-batches.md)接口介绍。 |
+| Markdown 消息 | 批量发送机器人单聊 Markdown 消息，更多信息查看[批量发送人与机器人会话中机器人消息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0714-chatbots-send-one-on-one-chat-messages-in-batches.md)接口介绍。 |
+| 按钮消息 | 批量发送单按钮/横向多按钮/竖向 2-5 个按钮消息，更多信息查看[批量发送人与机器人会话中机器人消息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0714-chatbots-send-one-on-one-chat-messages-in-batches.md)接口介绍。 |
 
 #### **自定义机器人**
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 文本消息 | 发送自定义机器人文本消息，更多信息查看[自定义机器人发送群消息](../../01-应用开发/02-4a8AMF6u2A-服务端API/0717-custom-robots-send-group-messages.md)接口介绍。 |
-| 链接消息 | 发送自定义机器人链接消息，更多信息查看[自定义机器人发送群消息](../../01-应用开发/02-4a8AMF6u2A-服务端API/0717-custom-robots-send-group-messages.md)接口介绍。 |
-| Markdown 消息 | 发送自定义机器人 Markdown 消息，更多信息查看[自定义机器人发送群消息](../../01-应用开发/02-4a8AMF6u2A-服务端API/0717-custom-robots-send-group-messages.md)接口介绍。 |
-| ActionCard 消息 | 发送单按钮/横排多按钮/竖排多按钮 ActionCard 消息，更多信息查看[自定义机器人发送群消息](../../01-应用开发/02-4a8AMF6u2A-服务端API/0717-custom-robots-send-group-messages.md)接口介绍。 |
-| FeedCard 消息 | 发送 FeedCard 消息（多图卡片），更多信息查看[自定义机器人发送群消息](../../01-应用开发/02-4a8AMF6u2A-服务端API/0717-custom-robots-send-group-messages.md)接口介绍。 |
+| 文本消息 | 发送自定义机器人文本消息，更多信息查看[自定义机器人发送群消息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0717-custom-robots-send-group-messages.md)接口介绍。 |
+| 链接消息 | 发送自定义机器人链接消息，更多信息查看[自定义机器人发送群消息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0717-custom-robots-send-group-messages.md)接口介绍。 |
+| Markdown 消息 | 发送自定义机器人 Markdown 消息，更多信息查看[自定义机器人发送群消息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0717-custom-robots-send-group-messages.md)接口介绍。 |
+| ActionCard 消息 | 发送单按钮/横排多按钮/竖排多按钮 ActionCard 消息，更多信息查看[自定义机器人发送群消息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0717-custom-robots-send-group-messages.md)接口介绍。 |
+| FeedCard 消息 | 发送 FeedCard 消息（多图卡片），更多信息查看[自定义机器人发送群消息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0717-custom-robots-send-group-messages.md)接口介绍。 |
 
 ### **使用教程**
 
@@ -468,14 +468,14 @@ OA审批常用组件包含基础控件、增强控件和套件：
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 文本消息 | 发送纯文本工作通知，更多信息查看[发送工作通知](../../01-应用开发/02-4a8AMF6u2A-服务端API/0769-asynchronous-sending-of-enterprise-session-messages.md)接口介绍。 |
-| 图片消息 | 发送图片工作通知，更多信息查看[发送工作通知](../../01-应用开发/02-4a8AMF6u2A-服务端API/0769-asynchronous-sending-of-enterprise-session-messages.md)接口介绍。 |
-| Markdown 消息 | 发送 Markdown 格式工作通知，更多信息查看[发送工作通知](../../01-应用开发/02-4a8AMF6u2A-服务端API/0769-asynchronous-sending-of-enterprise-session-messages.md)接口介绍。 |
-| OA 消息 | 发送 OA 样式工作通知（支持状态栏更新），更多信息查看[发送工作通知](../../01-应用开发/02-4a8AMF6u2A-服务端API/0769-asynchronous-sending-of-enterprise-session-messages.md)接口介绍。 |
-| 链接消息 | 发送带链接的工作通知，更多信息查看[发送工作通知](../../01-应用开发/02-4a8AMF6u2A-服务端API/0769-asynchronous-sending-of-enterprise-session-messages.md)接口介绍。 |
-| 语音消息 | 发送语音工作通知，更多信息查看[发送工作通知](../../01-应用开发/02-4a8AMF6u2A-服务端API/0769-asynchronous-sending-of-enterprise-session-messages.md)接口介绍。 |
-| 文件消息 | 发送文件附件工作通知，更多信息查看[发送工作通知](../../01-应用开发/02-4a8AMF6u2A-服务端API/0769-asynchronous-sending-of-enterprise-session-messages.md)接口介绍。 |
-| 卡片消息 | 发送整体跳转/横排多按钮/竖排多按钮 ActionCard 消息，更多信息查看[发送工作通知](../../01-应用开发/02-4a8AMF6u2A-服务端API/0769-asynchronous-sending-of-enterprise-session-messages.md)接口介绍。 |
+| 文本消息 | 发送纯文本工作通知，更多信息查看[发送工作通知](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0769-asynchronous-sending-of-enterprise-session-messages.md)接口介绍。 |
+| 图片消息 | 发送图片工作通知，更多信息查看[发送工作通知](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0769-asynchronous-sending-of-enterprise-session-messages.md)接口介绍。 |
+| Markdown 消息 | 发送 Markdown 格式工作通知，更多信息查看[发送工作通知](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0769-asynchronous-sending-of-enterprise-session-messages.md)接口介绍。 |
+| OA 消息 | 发送 OA 样式工作通知（支持状态栏更新），更多信息查看[发送工作通知](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0769-asynchronous-sending-of-enterprise-session-messages.md)接口介绍。 |
+| 链接消息 | 发送带链接的工作通知，更多信息查看[发送工作通知](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0769-asynchronous-sending-of-enterprise-session-messages.md)接口介绍。 |
+| 语音消息 | 发送语音工作通知，更多信息查看[发送工作通知](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0769-asynchronous-sending-of-enterprise-session-messages.md)接口介绍。 |
+| 文件消息 | 发送文件附件工作通知，更多信息查看[发送工作通知](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0769-asynchronous-sending-of-enterprise-session-messages.md)接口介绍。 |
+| 卡片消息 | 发送整体跳转/横排多按钮/竖排多按钮 ActionCard 消息，更多信息查看[发送工作通知](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0769-asynchronous-sending-of-enterprise-session-messages.md)接口介绍。 |
 
 #### **操作已发送的工作通知**
 
@@ -483,10 +483,10 @@ OA审批常用组件包含基础控件、增强控件和套件：
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 获取发送进度 | 查看工作通知消息的发送进度，更多信息查看[获取工作通知消息的发送进度](../../01-应用开发/02-4a8AMF6u2A-服务端API/0772-obtain-the-sending-progress-of-asynchronous-sending-of-enterprise-session.md)接口介绍。  **[!NOTE]**  只能获取24小时内工作通知消息的发送进度。 |
-| 更新状态栏 | 针对 OA 消息，更改 OA 消息状态栏，更多信息查看[更新工作通知状态栏](../../01-应用开发/02-4a8AMF6u2A-服务端API/0771-update-work-notification-status-bar.md)接口介绍。  **[!NOTE]**  只能更新24小时内发出的OA工作通知状态栏。 |
-| 撤回消息 | 撤回已发送的工作通知消息，更多信息查看[撤回工作通知消息](../../01-应用开发/02-4a8AMF6u2A-服务端API/0770-notification-of-work-withdrawal.md)接口介绍。  **[!NOTE]**  只能撤回24小时内发送的工作通知消息。 |
-| 获取发送结果 | 获取哪些员工没有发送成功及失败原因，更多信息查看[获取工作通知消息的发送结果](../../01-应用开发/02-4a8AMF6u2A-服务端API/0773-gets-the-result-of-sending-messages-asynchronously-to-the-enterprise.md)接口介绍。  **[!NOTE]**  只能获取24小时内工作通知消息的发送结果。 |
+| 获取发送进度 | 查看工作通知消息的发送进度，更多信息查看[获取工作通知消息的发送进度](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0772-obtain-the-sending-progress-of-asynchronous-sending-of-enterprise-session.md)接口介绍。  **[!NOTE]**  只能获取24小时内工作通知消息的发送进度。 |
+| 更新状态栏 | 针对 OA 消息，更改 OA 消息状态栏，更多信息查看[更新工作通知状态栏](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0771-update-work-notification-status-bar.md)接口介绍。  **[!NOTE]**  只能更新24小时内发出的OA工作通知状态栏。 |
+| 撤回消息 | 撤回已发送的工作通知消息，更多信息查看[撤回工作通知消息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0770-notification-of-work-withdrawal.md)接口介绍。  **[!NOTE]**  只能撤回24小时内发送的工作通知消息。 |
+| 获取发送结果 | 获取哪些员工没有发送成功及失败原因，更多信息查看[获取工作通知消息的发送结果](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0773-gets-the-result-of-sending-messages-asynchronously-to-the-enterprise.md)接口介绍。  **[!NOTE]**  只能获取24小时内工作通知消息的发送结果。 |
 
 ### **使用教程**
 
@@ -506,14 +506,14 @@ OA审批常用组件包含基础控件、增强控件和套件：
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 文本消息 | 发送纯文本消息到企业群，更多信息查看[发送消息到企业群](../../01-应用开发/02-4a8AMF6u2A-服务端API/1490-send-group-messages.md)接口介绍。 |
-| 图片消息 | 发送图片消息到企业群，更多信息查看[发送消息到企业群](../../01-应用开发/02-4a8AMF6u2A-服务端API/1490-send-group-messages.md)接口介绍。 |
-| Markdown 消息 | 发送 Markdown 格式消息到企业群，更多信息查看[发送消息到企业群](../../01-应用开发/02-4a8AMF6u2A-服务端API/1490-send-group-messages.md)接口介绍。 |
-| OA 消息 | 发送 OA 样式消息到企业群，更多信息查看[发送消息到企业群](../../01-应用开发/02-4a8AMF6u2A-服务端API/1490-send-group-messages.md)接口介绍。 |
-| 链接消息 | 发送带链接的消息到企业群，更多信息查看[发送消息到企业群](../../01-应用开发/02-4a8AMF6u2A-服务端API/1490-send-group-messages.md)接口介绍。 |
-| 语音消息 | 发送语音消息到企业群，更多信息查看[发送消息到企业群](../../01-应用开发/02-4a8AMF6u2A-服务端API/1490-send-group-messages.md)接口介绍。 |
-| 文件消息 | 发送文件附件消息到企业群，更多信息查看[发送消息到企业群](../../01-应用开发/02-4a8AMF6u2A-服务端API/1490-send-group-messages.md)接口介绍。 |
-| 卡片消息 | 发送卡片消息到企业群，更多信息查看[发送消息到企业群](../../01-应用开发/02-4a8AMF6u2A-服务端API/1490-send-group-messages.md)接口介绍。 |
+| 文本消息 | 发送纯文本消息到企业群，更多信息查看[发送消息到企业群](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1490-send-group-messages.md)接口介绍。 |
+| 图片消息 | 发送图片消息到企业群，更多信息查看[发送消息到企业群](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1490-send-group-messages.md)接口介绍。 |
+| Markdown 消息 | 发送 Markdown 格式消息到企业群，更多信息查看[发送消息到企业群](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1490-send-group-messages.md)接口介绍。 |
+| OA 消息 | 发送 OA 样式消息到企业群，更多信息查看[发送消息到企业群](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1490-send-group-messages.md)接口介绍。 |
+| 链接消息 | 发送带链接的消息到企业群，更多信息查看[发送消息到企业群](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1490-send-group-messages.md)接口介绍。 |
+| 语音消息 | 发送语音消息到企业群，更多信息查看[发送消息到企业群](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1490-send-group-messages.md)接口介绍。 |
+| 文件消息 | 发送文件附件消息到企业群，更多信息查看[发送消息到企业群](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1490-send-group-messages.md)接口介绍。 |
+| 卡片消息 | 发送卡片消息到企业群，更多信息查看[发送消息到企业群](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1490-send-group-messages.md)接口介绍。 |
 
 ### **使用教程**
 
@@ -529,7 +529,7 @@ OA审批常用组件包含基础控件、增强控件和套件：
 
 | **消息类型** | **触发条件** |
 | --- | --- |
-| 人事档案变动 | 当组织内部发生人事相关信息的变动时触发（如入职、转正、调岗、离职等），更多信息查看[人事档案变动](../../01-应用开发/04-LFcRvVD08N-事件订阅/0143-personnel-file-change.md)事件介绍。 |
+| 人事档案变动 | 当组织内部发生人事相关信息的变动时触发（如入职、转正、调岗、离职等），更多信息查看[人事档案变动](../../01-应用开发/04-LFcRvVD08N-事件订阅/0146-personnel-file-change.md)事件介绍。 |
 
 ### **执行动作**
 
@@ -543,10 +543,10 @@ OA审批常用组件包含基础控件、增强控件和套件：
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 获取花名册元数据 | 获取员工花名册的元数据定义（包括花名册分组、字段定义），更多信息查看[获取花名册元数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/0937-intelligent-personnel-roster-metadata-query.md)接口介绍。 |
-| 获取员工花名册字段信息 | 获取员工花名册字段信息，更多信息查看[获取员工花名册字段信息](../../01-应用开发/02-4a8AMF6u2A-服务端API/0939-api-getemployeerosterbyfield.md)接口介绍。 |
-| 获取花名册字段组详情 | 提供给 ISV 查询花名册的员工档案信息中有权限的字段列表，更多信息查看[获取花名册字段组详情](../../01-应用开发/02-4a8AMF6u2A-服务端API/0938-get-roster-field-group-details.md)接口介绍。 |
-| 更新员工花名册信息 | 更新员工花名册信息，更多信息查看[更新员工花名册信息](../../01-应用开发/02-4a8AMF6u2A-服务端API/0940-intelligent-personnel-update-employee-file-information.md)接口介绍。 |
+| 获取花名册元数据 | 获取员工花名册的元数据定义（包括花名册分组、字段定义），更多信息查看[获取花名册元数据](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0937-intelligent-personnel-roster-metadata-query.md)接口介绍。 |
+| 获取员工花名册字段信息 | 获取员工花名册字段信息，更多信息查看[获取员工花名册字段信息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0939-api-getemployeerosterbyfield.md)接口介绍。 |
+| 获取花名册字段组详情 | 提供给 ISV 查询花名册的员工档案信息中有权限的字段列表，更多信息查看[获取花名册字段组详情](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0938-get-roster-field-group-details.md)接口介绍。 |
+| 更新员工花名册信息 | 更新员工花名册信息，更多信息查看[更新员工花名册信息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0940-intelligent-personnel-update-employee-file-information.md)接口介绍。 |
 
 #### **员工管理**
 
@@ -558,9 +558,9 @@ OA审批常用组件包含基础控件、增强控件和套件：
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 待入职员工 | 添加待入职员工信息，获取待入职员工列表，更多信息查看[添加待入职员工](../../01-应用开发/02-4a8AMF6u2A-服务端API/0945-add-employees-to-be-hired-supports-system-and-custom-fields.md)相关接口介绍。 |
-| 在职员工 | 获取在职员工列表，更多信息查看[获取在职员工列表](../../01-应用开发/02-4a8AMF6u2A-服务端API/0946-intelligent-personnel-query-the-list-of-on-the-job-employees-of-the.md)接口介绍。 |
-| 离职员工 | 获取离职员工列表，获取离职员工信息，修改员工最后一次离职信息，更多信息查看[获取离职员工列表](../../01-应用开发/02-4a8AMF6u2A-服务端API/0947-obtain-the-list-of-employees-who-have-left.md)相关接口介绍。 |
+| 待入职员工 | 添加待入职员工信息，获取待入职员工列表，更多信息查看[添加待入职员工](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0945-add-employees-to-be-hired-supports-system-and-custom-fields.md)相关接口介绍。 |
+| 在职员工 | 获取在职员工列表，更多信息查看[获取在职员工列表](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0946-intelligent-personnel-query-the-list-of-on-the-job-employees-of-the.md)接口介绍。 |
+| 离职员工 | 获取离职员工列表，获取离职员工信息，修改员工最后一次离职信息，更多信息查看[获取离职员工列表](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0947-obtain-the-list-of-employees-who-have-left.md)相关接口介绍。 |
 
 ### **使用教程**
 
@@ -578,11 +578,11 @@ OA审批常用组件包含基础控件、增强控件和套件：
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 新增待办任务 | 为用户创建一个钉钉待办任务，更多信息查看[创建钉钉待办任务](../../01-应用开发/02-4a8AMF6u2A-服务端API/0793-add-dingtalk-to-do-task.md)接口介绍。 |
-| 更新待办任务 | 根据任务 ID，更新钉钉待办任务信息，更多信息查看[更新钉钉待办任务](../../01-应用开发/02-4a8AMF6u2A-服务端API/0796-updates-dingtalk-to-do-tasks.md)接口介绍。 |
-| 删除待办任务 | 根据任务 ID，删除钉钉待办任务，更多信息查看[删除钉钉待办任务](../../01-应用开发/02-4a8AMF6u2A-服务端API/0795-delete-dingtalk-to-do-tasks.md)接口介绍。 |
+| 新增待办任务 | 为用户创建一个钉钉待办任务，更多信息查看[创建钉钉待办任务](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0793-add-dingtalk-to-do-task.md)接口介绍。 |
+| 更新待办任务 | 根据任务 ID，更新钉钉待办任务信息，更多信息查看[更新钉钉待办任务](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0796-updates-dingtalk-to-do-tasks.md)接口介绍。 |
+| 删除待办任务 | 根据任务 ID，删除钉钉待办任务，更多信息查看[删除钉钉待办任务](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0795-delete-dingtalk-to-do-tasks.md)接口介绍。 |
 | 获取待办详情 | 根据任务 ID 或 sourceId，获取钉钉待办任务详情信息，参数请查看下方参数说明介绍。 |
-| 查询待办列表 | 获取该授权企业下某用户的待办列表，更多信息查看[查询企业下用户待办列表](../../01-应用开发/02-4a8AMF6u2A-服务端API/0798-query-the-to-do-list-of-enterprise-users.md)接口介绍。 |
+| 查询待办列表 | 获取该授权企业下某用户的待办列表，更多信息查看[查询企业下用户待办列表](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0798-query-the-to-do-list-of-enterprise-users.md)接口介绍。 |
 
 ### **参数说明**
 
@@ -615,10 +615,10 @@ OA审批常用组件包含基础控件、增强控件和套件：
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 获取应用列表 | 获取企业所有应用的信息，包括应用名称、应用描述、应用图标、应用访问地址等，更多信息查看[获取应用列表](../../01-应用开发/02-4a8AMF6u2A-服务端API/0864-obtains-a-list-of-all-enterprise-applications.md)相关接口介绍。  **[!NOTE]**   - 如果是企业主管理员，在企业管理后台-应用管理列表页，可以查看到所有的应用信息。 - 如果是企业子管理员，必须同时拥有全部应用管理权限，在企业管理后台-应用管理列表页，可以查看所有应用的信息。 |
-| 设置应用可见范围 | 设置指定应用的可见范围（支持企业内部应用-网页应用、小程序应用），更多信息查看[更新企业内部应用的可使用范围](../../01-应用开发/02-4a8AMF6u2A-服务端API/0871-update-the-visible-range-of-micro-applications.md)接口介绍。  **[!NOTE]**  企业内部应用-网页应用：   - 当前网页应用是开发版本，调用本接口可指定网页应用开发版本的可见范围。 - 当前网页应用是线上版本，调用本接口可指定网页应用线上版本的可见范围。   企业内部应用-小程序应用：   - 仅在小程序线上版本适用。 |
-| 获取应用可见范围 | 根据应用 agentId 参数，获取应用的可见范围，更多信息查看[获取企业内部应用的可使用范围](../../01-应用开发/02-4a8AMF6u2A-服务端API/0872-obtains-the-application-visible-range.md)接口介绍。 |
-| 获取员工可见应用列表 | 根据用户 ID，查询用户可见的应用列表，更多信息查看[获取用户可见的企业应用列表](../../01-应用开发/02-4a8AMF6u2A-服务端API/0866-obtains-the-list-of-enterprise-applications-visible-to-a-user.md)接口介绍。 |
+| 获取应用列表 | 获取企业所有应用的信息，包括应用名称、应用描述、应用图标、应用访问地址等，更多信息查看[获取应用列表](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0864-obtains-a-list-of-all-enterprise-applications.md)相关接口介绍。  **[!NOTE]**   - 如果是企业主管理员，在企业管理后台-应用管理列表页，可以查看到所有的应用信息。 - 如果是企业子管理员，必须同时拥有全部应用管理权限，在企业管理后台-应用管理列表页，可以查看所有应用的信息。 |
+| 设置应用可见范围 | 设置指定应用的可见范围（支持企业内部应用-网页应用、小程序应用），更多信息查看[更新企业内部应用的可使用范围](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0871-update-the-visible-range-of-micro-applications.md)接口介绍。  **[!NOTE]**  企业内部应用-网页应用：   - 当前网页应用是开发版本，调用本接口可指定网页应用开发版本的可见范围。 - 当前网页应用是线上版本，调用本接口可指定网页应用线上版本的可见范围。   企业内部应用-小程序应用：   - 仅在小程序线上版本适用。 |
+| 获取应用可见范围 | 根据应用 agentId 参数，获取应用的可见范围，更多信息查看[获取企业内部应用的可使用范围](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0872-obtains-the-application-visible-range.md)接口介绍。 |
+| 获取员工可见应用列表 | 根据用户 ID，查询用户可见的应用列表，更多信息查看[获取用户可见的企业应用列表](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0866-obtains-the-list-of-enterprise-applications-visible-to-a-user.md)接口介绍。 |
 
 ## **数据目录**
 
@@ -634,58 +634,58 @@ OA审批常用组件包含基础控件、增强控件和套件：
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 单聊统计 | 沟通互动率、聊天消息数、聊天用户数、单聊消息数、单聊用户数、人均发送消息数。更多信息查看[获取企业单聊统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1783-queries-the-statistics-on-one-time-enterprise-chats.md)接口介绍。 |
-| 群聊统计 | 群聊用户数、群聊消息数、活跃群数、新增群数、内部群数量、部门群数量。更多信息查看[获取企业群聊统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1784-obtain-enterprise-group-chat-statistics.md)接口介绍。 |
-| DING 发送统计 | 发送 DING 次数、发送应用/短信/电话 DING 次数及人数。更多信息查看[获取企业DING发送统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1801-obtain-sending-statistics-of-an-enterprise-ding.md)接口介绍。 |
-| DING 接收及评论统计 | 接收 DING 次数、接收应用/短信/电话 DING 次数。更多信息查看[获取企业DING接收及评论统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1803-obtain-statistics-on-receiving-and-comments-of-enterprise-ding.md)接口介绍。 |
+| 单聊统计 | 沟通互动率、聊天消息数、聊天用户数、单聊消息数、单聊用户数、人均发送消息数。更多信息查看[获取企业单聊统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1783-queries-the-statistics-on-one-time-enterprise-chats.md)接口介绍。 |
+| 群聊统计 | 群聊用户数、群聊消息数、活跃群数、新增群数、内部群数量、部门群数量。更多信息查看[获取企业群聊统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1784-obtain-enterprise-group-chat-statistics.md)接口介绍。 |
+| DING 发送统计 | 发送 DING 次数、发送应用/短信/电话 DING 次数及人数。更多信息查看[获取企业DING发送统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1801-obtain-sending-statistics-of-an-enterprise-ding.md)接口介绍。 |
+| DING 接收及评论统计 | 接收 DING 次数、接收应用/短信/电话 DING 次数。更多信息查看[获取企业DING接收及评论统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1803-obtain-statistics-on-receiving-and-comments-of-enterprise-ding.md)接口介绍。 |
 
 #### 会议与直播数据
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 电话会议统计 | 发起次数、成功发起次数、发起用户数、成功参与人数、会议时长（分钟）。  更多信息查看[获取企业电话会议统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1796-get-enterprise-teleconference-statistics.md)相关接口介绍。 |
-| 视频会议统计 | 发起次数、发起用户数、成功发起次数、参与用户数、成功参与用户数、参与人次、会议时长（分钟）。更多信息查看[获取企业视频会议统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1797-get-enterprise-video-conference-statistics.md)接口介绍。 |
-| 群直播统计 | 成功发起次数、观看次数、观看人数、直播时长（分钟）、看直播人数、回看次数、回看人数。更多信息查看[获取企业群直播统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1793-obtains-the-live-stream-statistics-for-an-enterprise-group.md)接口介绍。 |
+| 电话会议统计 | 发起次数、成功发起次数、发起用户数、成功参与人数、会议时长（分钟）。  更多信息查看[获取企业电话会议统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1796-get-enterprise-teleconference-statistics.md)相关接口介绍。 |
+| 视频会议统计 | 发起次数、发起用户数、成功发起次数、参与用户数、成功参与用户数、参与人次、会议时长（分钟）。更多信息查看[获取企业视频会议统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1797-get-enterprise-video-conference-statistics.md)接口介绍。 |
+| 群直播统计 | 成功发起次数、观看次数、观看人数、直播时长（分钟）、看直播人数、回看次数、回看人数。更多信息查看[获取企业群直播统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1793-obtains-the-live-stream-statistics-for-an-enterprise-group.md)接口介绍。 |
 
 #### 考勤与人事数据
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 考勤统计 | 应出勤人数、实际出勤人数、出勤率。更多信息查看[获取企业考勤统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1790-queries-enterprise-attendance-statistics.md)相关接口介绍。 |
-| 签到统计 | 签到次数、签到用户数。更多信息查看[获取企业签到统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1788-queries-enterprise-check-in-statistics.md)接口介绍。 |
-| 员工类型统计 | 全职人数、正式/试用/兼职/劳务外包/待离职/实习/劳务派遣/退休返聘/离职/试岗人数、资料不完整人数。更多信息查看[获取企业员工类型统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1800-obtains-statistics-on-employee-types.md)接口介绍。 |
-| 用户激活状态统计 | 累计激活人数、激活率。更多信息查看[获取企业用户激活状态统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1802-obtains-statistics-on-user-activation-status.md)接口介绍。 |
+| 考勤统计 | 应出勤人数、实际出勤人数、出勤率。更多信息查看[获取企业考勤统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1790-queries-enterprise-attendance-statistics.md)相关接口介绍。 |
+| 签到统计 | 签到次数、签到用户数。更多信息查看[获取企业签到统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1788-queries-enterprise-check-in-statistics.md)接口介绍。 |
+| 员工类型统计 | 全职人数、正式/试用/兼职/劳务外包/待离职/实习/劳务派遣/退休返聘/离职/试岗人数、资料不完整人数。更多信息查看[获取企业员工类型统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1800-obtains-statistics-on-employee-types.md)接口介绍。 |
+| 用户激活状态统计 | 累计激活人数、激活率。更多信息查看[获取企业用户激活状态统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1802-obtains-statistics-on-user-activation-status.md)接口介绍。 |
 
 #### 审批与待办数据
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 审批统计 | 累计审批模板数、累计自定义审批模板数、新建自定义模板数、提交审批单数、提交审批用户数、活跃审批模板数、操作审批次数和用户数。更多信息查看[获取企业审批统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1791-obtains-enterprise-approval-statistics.md)相关接口介绍。 |
-| 待办统计 | 待办用户数。更多信息查看[获取企业待办统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1779-obtains-the-to-do-statistics-of-an-enterprise.md)接口介绍。 |
+| 审批统计 | 累计审批模板数、累计自定义审批模板数、新建自定义模板数、提交审批单数、提交审批用户数、活跃审批模板数、操作审批次数和用户数。更多信息查看[获取企业审批统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1791-obtains-enterprise-approval-statistics.md)相关接口介绍。 |
+| 待办统计 | 待办用户数。更多信息查看[获取企业待办统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1779-obtains-the-to-do-statistics-of-an-enterprise.md)接口介绍。 |
 
 #### 内容与文档数据
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 文档统计 | 创建文档数、编辑文档数、分享文档数、阅读文档数。更多信息查看[获取企业文档统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1787-get-enterprise-document-statistics.md)相关接口介绍。 |
-| 公告统计 | 公告已读人数、公告已接收人数、发布公告数。更多信息查看[获取企业公告统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1789-queries-corporate-announcement-statistics.md)接口介绍。 |
-| 日志统计 | 发送日志数、发送日志用户数、评论日志用户数。更多信息查看[获取企业日志统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1785-obtain-enterprise-log-statistics.md)接口介绍。 |
-| 钉盘统计 | 钉盘用户数、钉盘上传文件数、钉盘预览文件数。更多信息查看[获取企业钉盘统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1781-obtains-the-statistics-on-enterprise-dingtalk-trays.md)接口介绍。 |
+| 文档统计 | 创建文档数、编辑文档数、分享文档数、阅读文档数。更多信息查看[获取企业文档统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1787-get-enterprise-document-statistics.md)相关接口介绍。 |
+| 公告统计 | 公告已读人数、公告已接收人数、发布公告数。更多信息查看[获取企业公告统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1789-queries-corporate-announcement-statistics.md)接口介绍。 |
+| 日志统计 | 发送日志数、发送日志用户数、评论日志用户数。更多信息查看[获取企业日志统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1785-obtain-enterprise-log-statistics.md)接口介绍。 |
+| 钉盘统计 | 钉盘用户数、钉盘上传文件数、钉盘预览文件数。更多信息查看[获取企业钉盘统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1781-obtains-the-statistics-on-enterprise-dingtalk-trays.md)接口介绍。 |
 
 #### 邮件与红包数据
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 邮箱统计 | 钉邮操作次数、发送/转发/回复操作次数及用户数。更多信息查看[获取企业邮箱统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1786-queries-enterprise-email-statistics.md)相关接口介绍。 |
-| 发送红包统计 | 发送红包数、发送拼手气/专享红包数、发送红包用户数、发送拼手气/专享红包用户数。更多信息查看[获取企业发红包统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1792-obtains-the-statistics-on-red-packets-issued-by-enterprises.md)接口介绍。 |
-| 接收红包统计 | 接收红包数、接收拼手气/专享红包数、接收红包用户数、接收拼手气/专享红包用户数。更多信息查看[获取企业接收红包统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1798-queries-the-red-envelope-receiving-statistics-of-an-enterprise.md)接口介绍。 |
+| 邮箱统计 | 钉邮操作次数、发送/转发/回复操作次数及用户数。更多信息查看[获取企业邮箱统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1786-queries-enterprise-email-statistics.md)相关接口介绍。 |
+| 发送红包统计 | 发送红包数、发送拼手气/专享红包数、发送红包用户数、发送拼手气/专享红包用户数。更多信息查看[获取企业发红包统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1792-obtains-the-statistics-on-red-packets-issued-by-enterprises.md)接口介绍。 |
+| 接收红包统计 | 接收红包数、接收拼手气/专享红包数、接收红包用户数、接收拼手气/专享红包用户数。更多信息查看[获取企业接收红包统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1798-queries-the-red-envelope-receiving-statistics-of-an-enterprise.md)接口介绍。 |
 
 #### 日程与组织数据
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 日程统计 | 日程用户数、发起日程用户数、接收日程用户数。更多信息查看[获取企业日程统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端API/1780-queries-enterprise-schedule-statistics.md)相关接口介绍。 |
-| 数字区县组织信息 | 通讯录录入手机人数、通讯录人数、激活人数、激活率、活跃人数、户数、一户一钉户数、一户至少激活一人率。更多信息查看[获取数字区县组织信息](../../01-应用开发/02-4a8AMF6u2A-服务端API/1782-querydigitaldistrictorginfo-api-reference.md)接口介绍。 |
+| 日程统计 | 日程用户数、发起日程用户数、接收日程用户数。更多信息查看[获取企业日程统计数据](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1780-queries-enterprise-schedule-statistics.md)相关接口介绍。 |
+| 数字区县组织信息 | 通讯录录入手机人数、通讯录人数、激活人数、激活率、活跃人数、户数、一户一钉户数、一户至少激活一人率。更多信息查看[获取数字区县组织信息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1782-querydigitaldistrictorginfo-api-reference.md)接口介绍。 |
 
 ## **会话管理**
 
@@ -699,13 +699,13 @@ OA审批常用组件包含基础控件、增强控件和套件：
 
 | **模块** | **核心能力** |
 | --- | --- |
-| 创建场景群 | 根据业务场景创建专属群聊，更多信息查看[创建场景群](../../01-应用开发/02-4a8AMF6u2A-服务端API/0746-create-a-scene-group.md)接口介绍。 |
-| 更新场景群 | 更新场景群的基本信息（如群名称、群头像等），更多信息查看[更新场景群](../../01-应用开发/02-4a8AMF6u2A-服务端API/0747-api-updatescenegroup.md)接口介绍。 |
-| 新增群成员 | 向场景群中添加成员，更多信息查看[添加群成员](../../01-应用开发/02-4a8AMF6u2A-服务端API/0749-api-addscenegroupmember.md)接口介绍。 |
-| 删除群成员 | 从场景群中移除成员，更多信息查看[删除群成员](../../01-应用开发/02-4a8AMF6u2A-服务端API/0750-api-removescenegroupmember.md)接口介绍。 |
-| 停用群模板 | 停用已启用的群模板，更多信息查看[停用群模板](../../01-应用开发/02-4a8AMF6u2A-服务端API/0760-disable-a-group-template.md)接口介绍。 |
-| 获取场景群成员 | 查询场景群中的成员列表，更多信息查看[查询群成员](../../01-应用开发/02-4a8AMF6u2A-服务端API/0751-query-group-members.md)接口介绍。 |
-| 查询场景群基本信息 | 获取场景群的基本信息（如群 ID、群名称、创建时间等），更多信息查看[查询群信息](../../01-应用开发/02-4a8AMF6u2A-服务端API/0755-queries-the-basic-information-of-a-scenario-group.md)接口介绍。 |
+| 创建场景群 | 根据业务场景创建专属群聊，更多信息查看[创建场景群](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0746-create-a-scene-group.md)接口介绍。 |
+| 更新场景群 | 更新场景群的基本信息（如群名称、群头像等），更多信息查看[更新场景群](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0747-api-updatescenegroup.md)接口介绍。 |
+| 新增群成员 | 向场景群中添加成员，更多信息查看[添加群成员](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0749-api-addscenegroupmember.md)接口介绍。 |
+| 删除群成员 | 从场景群中移除成员，更多信息查看[删除群成员](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0750-api-removescenegroupmember.md)接口介绍。 |
+| 停用群模板 | 停用已启用的群模板，更多信息查看[停用群模板](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0760-disable-a-group-template.md)接口介绍。 |
+| 获取场景群成员 | 查询场景群中的成员列表，更多信息查看[查询群成员](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0751-query-group-members.md)接口介绍。 |
+| 查询场景群基本信息 | 获取场景群的基本信息（如群 ID、群名称、创建时间等），更多信息查看[查询群信息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0755-queries-the-basic-information-of-a-scenario-group.md)接口介绍。 |
 
 ### **使用教程**
 

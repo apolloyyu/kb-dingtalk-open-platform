@@ -50,14 +50,14 @@ updated_at: "2026-07-21 14:19:52"
 
    | **模块** | **以前** | **现在** |
    | --- | --- | --- |
-   | **跳转协议** | [AppLink协议](../02-4a8AMF6u2A-服务端API/1395-structure-of-applink.md)多，不够聚焦酷应用场景。 | 提供多种AppLink协议跳转，请参考[AppLink协议](../02-4a8AMF6u2A-服务端API/1395-structure-of-applink.md)。 |
+   | **跳转协议** | [AppLink协议](../02-4a8AMF6u2A-服务端-API/1395-structure-of-applink.md)多，不够聚焦酷应用场景。 | 提供多种AppLink协议跳转，请参考[AppLink协议](../02-4a8AMF6u2A-服务端-API/1395-structure-of-applink.md)。 |
    | **页面布局** | 无标准规范，开发自己实现，处理不同跳转协议的页面Header实现。 | - 页面容器标准设计规范，请参考[半屏容器&侧边栏设计规范](https://ding.design/#/cate/1/page/823)。 - 页面容器官方组件实现，请参考[页面容器PageContainer](https://ding.design/#/cate/64/page/826)。 |
    | **页面组件** | - 缺少设计规范及配套实现 - 不支持桌面端 - 一端代码直接跑在另一端，不符合交互习惯 | Ding Design 官方设计语言 + 官方实现，自动支持移动和桌面端，请参考[Ding Design](https://ding.design/#/cate/227/page/740)。 |
    | **页面模板** | 无 | 覆盖表单、数据展示、数据统计等常用场景话模板，请参考[页面模板库](https://www.npmjs.com/package/dd-cool-templates)。 |
 
 ## **酷应用群扩展中使用沉浸式容器的操作步骤**
 
-**步骤一**：提供多种AppLink协议跳转，请参考[AppLink协议](../02-4a8AMF6u2A-服务端API/1395-structure-of-applink.md)。
+**步骤一**：提供多种AppLink协议跳转，请参考[AppLink协议](../02-4a8AMF6u2A-服务端-API/1395-structure-of-applink.md)。
 
 **步骤二**：配置酷应用的访问链接。![iShot2023-01-03 18](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2974164871/p547865.png)
 

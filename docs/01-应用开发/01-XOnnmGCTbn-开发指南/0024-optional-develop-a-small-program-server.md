@@ -20,7 +20,7 @@ updated_at: "2026-06-30 09:00:29"
 
 - 已登录[开发者后台](https://open-dev.dingtalk.com/#/)并拥有目标应用的管理权限；
 - 能够获取应用的关键凭证（如 `Client ID`、`Client Secret`）；
-- 理解 `access_token` 的作用及其获取方式：详见[获取访问凭证（accessToken）](../02-4a8AMF6u2A-服务端API/0028-authorization-overview.md)；
+- 理解 `access_token` 的作用及其获取方式：详见[获取访问凭证（accessToken）](../02-4a8AMF6u2A-服务端-API/0028-authorization-overview.md)；
 - 了解用户唯一标识 `unionId` 的含义与获取路径：详见 [unionId介绍](0001-basic-concepts-beta.md#9dc00a3569e13)。
 
 ## 适用对象与权限说明
@@ -51,14 +51,14 @@ updated_at: "2026-06-30 09:00:29"
 
    用户无需输入账号密码即可完成身份验证。推荐使用“扫码登录”或“静默授权”模式。
 
-   详细流程请参考：[网页应用（H5微应用）免登](../02-4a8AMF6u2A-服务端API/0018-enterprise-internal-application-logon-free.md)。
+   详细流程请参考：[网页应用（H5微应用）免登](../02-4a8AMF6u2A-服务端-API/0018-enterprise-internal-application-logon-free.md)。
 4. 申请接口调用权限。
 
    根据业务需求，在应用详情页中为应用添加所需的 API 权限。例如：发送机器人消息、读取组织架构、创建日程等。
 
    操作路径：**权限管理** > **添加接口调用权限**
 
-   详情参考：[添加接口调用权限](../02-4a8AMF6u2A-服务端API/0003-add-api-permission.md)。
+   详情参考：[添加接口调用权限](../02-4a8AMF6u2A-服务端-API/0003-add-api-permission.md)。
 5. 选择合适的事件推送方式并完成接入。
 
    通过事件订阅机制，开发者可以实时接收钉钉平台发生的各类事件通知（如用户加入企业、群消息发送、审批状态变更等），实现异步数据同步和自动化响应。
@@ -72,7 +72,7 @@ updated_at: "2026-06-30 09:00:29"
 
    示例：调用机器人接口发送文本消息
 
-   详情参考：[服务端SDK下载](../02-4a8AMF6u2A-服务端API/0002-download-the-server-side-sdk.md)。
+   详情参考：[服务端SDK下载](../02-4a8AMF6u2A-服务端-API/0002-download-the-server-side-sdk.md)。
 
 ## 验证与调试
 
@@ -94,4 +94,4 @@ updated_at: "2026-06-30 09:00:29"
 | `invalid access_token` | token 过期或获取失败 | 重新调用获取接口，注意缓存有效期（通常为 2 小时） |
 | `no api permission` | 缺少对应 API 权限 | 进入**权限管理**添加所需权限并提交审核（如需要） |
 
-建议结合[全局错误码](../02-4a8AMF6u2A-服务端API/0013-server-api-error-codes-1.md)快速定位问题。
+建议结合[全局错误码](../02-4a8AMF6u2A-服务端-API/0013-server-api-error-codes-1.md)快速定位问题。

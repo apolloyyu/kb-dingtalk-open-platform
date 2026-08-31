@@ -30,7 +30,7 @@ updated_at: "2026-07-27 17:25:50"
 
 因钉钉开放接口获取 Token 的方式存在新版和旧版的区别。本示例将提供钉钉新旧版 Token 的鉴权示例。
 
-钉钉开放接口新旧版差异，详情参见[新版API VS 旧版API](../../01-应用开发/02-4a8AMF6u2A-服务端API/0002-download-the-server-side-sdk.md#section-8lr-id4-rbz)。
+钉钉开放接口新旧版差异，详情参见[新版API VS 旧版API](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0002-download-the-server-side-sdk.md#section-8lr-id4-rbz)。
 
 ### **示例一：接口鉴权（新版）**
 
@@ -168,7 +168,7 @@ updated_at: "2026-07-27 17:25:50"
               ![验证请求入参](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0534415871/p629581.png)
           - 返回结果：
 
-            提示接口没有权限，需申请接口权限后重新鉴权验证即可，详情参见[添加接口调用权限](../../01-应用开发/02-4a8AMF6u2A-服务端API/0003-add-api-permission.md)。
+            提示接口没有权限，需申请接口权限后重新鉴权验证即可，详情参见[添加接口调用权限](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0003-add-api-permission.md)。
 
             ![旧版权限申请](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0534415871/p629584.png)
      4. 单击**完成**保存鉴权配置。

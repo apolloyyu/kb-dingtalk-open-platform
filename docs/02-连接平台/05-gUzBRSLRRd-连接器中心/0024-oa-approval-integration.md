@@ -37,7 +37,7 @@ updated_at: "2026-01-22 21:27:45"
 
 - 已经完成了钉钉开发者的注册与激活并拥有了子管理员和开发者权限。若尚未完成，请参考[成为钉钉开发者](https://open.dingtalk.com/document/dingstart/dingtalk-developer)。
 - 已开通钉钉专业版（OA审批中使用连接器必备）。若尚未完成，请参考[钉钉专业版](dingtalk://dingtalkclient/page/link?url=https%3A%2F%2Fn.dingtalk.com%2Fdingding%2Fdd-pro-composite-order%2Fpc%2Findex.html%3Fpopup_wnd%3Dtrue%26dd_tab%3Dtrue%26width%3D900%26height%3D600%26title%3D%25E9%2592%2589%25E9%2592%2589%25E6%2595%25B0%25E5%25AD%2597%25E8%25B5%2584%25E4%25BA%25A7%26articleCode%3DDT_GOODS_dingtalkmemberplus%26channel%3Dopenpf_web_devdoc%26corpId%3D${corpId}%26accessoryProduct%3DpaasWithConnector%26tabKey%3DDT_GOODS_dingtalkmemberplus&popup_wnd=true&height=600&width=900)。
-- 创建一个企业H5微应用并获取应用的AgentId，如何创建可参考[创建企业内部应用](../../01-应用开发/02-4a8AMF6u2A-服务端API/0861-create-an-h5-application-for-your-enterprise.md)。
+- 创建一个企业H5微应用并获取应用的AgentId，如何创建可参考[创建企业内部应用](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0861-create-an-h5-application-for-your-enterprise.md)。
 
 ## **审批场景**
 
@@ -80,7 +80,7 @@ OA审批场景下不支持编排和表达式，无法对官方或三方连接器
 
    ![OA审批接入集成流-入参映射设置](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/9531716661/p506148.png)
 
-   - **需要获取的花名册字段信息**：选择**固定值**，并设置为**sys01-positionLevel**，更多字段信息，请参考[花名册自定义字段业务code](../../01-应用开发/02-4a8AMF6u2A-服务端API/0943-roster-custom-field-business-code.md)。
+   - **需要获取的花名册字段信息**：选择**固定值**，并设置为**sys01-positionLevel**，更多字段信息，请参考[花名册自定义字段业务code](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0943-roster-custom-field-business-code.md)。
 
 ### **配置子流程出参**
 
@@ -151,7 +151,7 @@ OA审批场景下不支持编排和表达式，无法对官方或三方连接器
 
    > **[!NOTE]**
    >
-   > AgentId如何获取，详情请参考[创建企业内部应用](../../01-应用开发/02-4a8AMF6u2A-服务端API/0861-create-an-h5-application-for-your-enterprise.md)。
+   > AgentId如何获取，详情请参考[创建企业内部应用](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0861-create-an-h5-application-for-your-enterprise.md)。
 
    ![OA审批接入集成流-配置执行动作-自定义企业agentId](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/9531716661/p506165.png)
 3. 设置**获取的数据填充到以下控件**，选择**添加**，将**字段取值**填充到**员工职级**，并单击**保存**。

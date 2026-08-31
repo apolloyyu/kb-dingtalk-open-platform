@@ -1,0 +1,545 @@
+---
+title: "审批市内用车申请单"
+source_url: "https://open.dingtalk.com/document/development/approval-of-third-party-city-car-application-form"
+namespace: "development"
+slug: "approval-of-third-party-city-car-application-form"
+group: "应用开发"
+tab: "服务端 API"
+breadcrumb: "行业与生态 > 生态开放 > 阿里商旅 > 市内用车申请 > 审批市内用车申请单"
+doc_id: "zYuWEesjM9"
+updated_at: "2026-06-04 19:10:48"
+---
+
+> Source: https://open.dingtalk.com/document/development/approval-of-third-party-city-car-application-form
+> Path: 应用开发 / 服务端 API / 行业与生态 > 生态开放 > 阿里商旅 > 市内用车申请 > 审批市内用车申请单
+> Updated: 2026-06-04 19:10:48
+
+# 审批市内用车申请单
+
+调用本接口审批市内用车申请单。
+
+## 请求
+
+### 基本信息
+
+| 字段 | 值 |
+| --- | --- |
+| HTTP URL | https://api.dingtalk.com/v1.0/alitrip/cityCarApprovals |
+| HTTP Method | PUT |
+| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
+| 权限要求 | permission-qyapi\_ali\_business\_trip\_write-阿里商旅专用写入权限点 |
+
+### 请求头
+
+| 名称 | 类型 | 是否必填 | 描述 |
+| --- | --- | --- | --- |
+| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，通过以下获取：   - 企业内部应用，调用[获取企业内部应用的accessToken](0033-obtain-the-access-token-of-an-internal-app.md)接口获取。 - 第三方企业应用，调用[获取第三方应用授权企业的accessToken](0034-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口获取。 |
+
+### 请求体
+
+| 名称 | 类型 | 是否必填 | 描述 |
+| --- | --- | --- | --- |
+| corpId | String | 是 | 第三方企业的corpid。 |
+| operateTime | String | 否 | 审批时间，例如2021-03-18 20:26:56。 |
+| remark | String | 否 | 审批备注。 |
+| status | Long | 是 | 审批结果：   - **1**：同意 - **2**：拒绝 |
+| thirdPartApplyId | String | 是 | 第三方审批单ID。 |
+| userId | String | 是 | 审批的第三方员工ID。 |
+
+### 请求示例
+
+HTTP
+
+```
+PUT /v1.0/alitrip/cityCarApprovals HTTP/1.1
+Host:api.dingtalk.com
+x-acs-dingtalk-access-token:1
+Content-Type:application/json
+
+{
+  "corpId" : "corpx",
+  "operateTime" : "2021-03-18 20:26:56",
+  "remark" : "同意",
+  "status" : 1,
+  "thirdPartApplyId" : "apply1",
+  "userId" : "user1"
+}
+```
+
+Java
+
+```
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sample;
+
+import com.aliyun.tea.*;
+import com.aliyun.teautil.*;
+import com.aliyun.teautil.models.*;
+import com.aliyun.dingtalkalitrip_1_0.*;
+import com.aliyun.dingtalkalitrip_1_0.models.*;
+import com.aliyun.teaopenapi.*;
+import com.aliyun.teaopenapi.models.*;
+
+public class Sample {
+
+    /**
+     * 使用 Token 初始化账号Client
+     * @return Client
+     * @throws Exception
+     */
+    public static com.aliyun.dingtalkalitrip_1_0.Client createClient() throws Exception {
+        Config config = new Config();
+        config.protocol = "https";
+        config.regionId = "central";
+        return new com.aliyun.dingtalkalitrip_1_0.Client(config);
+    }
+
+    public static void main(String[] args_) throws Exception {
+        java.util.List<String> args = java.util.Arrays.asList(args_);
+        com.aliyun.dingtalkalitrip_1_0.Client client = Sample.createClient();
+        ApproveCityCarApplyHeaders approveCityCarApplyHeaders = new ApproveCityCarApplyHeaders();
+        approveCityCarApplyHeaders.xAcsDingtalkAccessToken = "<your access token>";
+        ApproveCityCarApplyRequest approveCityCarApplyRequest = new ApproveCityCarApplyRequest()
+                .setCorpId("corpx")
+                .setOperateTime("2021-03-18 20:26:56")
+                .setRemark("同意")
+                .setStatus(1L)
+                .setThirdPartApplyId("apply1")
+                .setUserId("user1");
+        try {
+            client.approveCityCarApplyWithOptions(approveCityCarApplyRequest, approveCityCarApplyHeaders, new RuntimeOptions());
+        } catch (TeaException err) {
+            if (!com.aliyun.teautil.Common.empty(err.code) && !com.aliyun.teautil.Common.empty(err.message)) {
+                // err 中含有 code 和 message 属性，可帮助开发定位问题
+            }
+
+        } catch (Exception _err) {
+            TeaException err = new TeaException(_err.getMessage(), _err);
+            if (!com.aliyun.teautil.Common.empty(err.code) && !com.aliyun.teautil.Common.empty(err.message)) {
+                // err 中含有 code 和 message 属性，可帮助开发定位问题
+            }
+
+        }        
+    }
+}
+```
+
+Python
+
+```
+# -*- coding: utf-8 -*-
+# This file is auto-generated, don't edit it. Thanks.
+import sys
+
+from typing import List
+
+from alibabacloud_dingtalk.alitrip_1_0.client import Client as dingtalkalitrip_1_0Client
+from alibabacloud_tea_openapi import models as open_api_models
+from alibabacloud_dingtalk.alitrip_1_0 import models as dingtalkalitrip__1__0_models
+from alibabacloud_tea_util import models as util_models
+from alibabacloud_tea_util.client import Client as UtilClient
+
+class Sample:
+    def __init__(self):
+        pass
+
+    @staticmethod
+    def create_client() -> dingtalkalitrip_1_0Client:
+        """
+        使用 Token 初始化账号Client
+        @return: Client
+        @throws Exception
+        """
+        config = open_api_models.Config()
+        config.protocol = 'https'
+        config.region_id = 'central'
+        return dingtalkalitrip_1_0Client(config)
+
+    @staticmethod
+    def main(
+        args: List[str],
+    ) -> None:
+        client = Sample.create_client()
+        approve_city_car_apply_headers = dingtalkalitrip__1__0_models.ApproveCityCarApplyHeaders()
+        approve_city_car_apply_headers.x_acs_dingtalk_access_token = '<your access token>'
+        approve_city_car_apply_request = dingtalkalitrip__1__0_models.ApproveCityCarApplyRequest(
+            corp_id='corpx',
+            operate_time='2021-03-18 20:26:56',
+            remark='同意',
+            status=1,
+            third_part_apply_id='apply1',
+            user_id='user1'
+        )
+        try:
+            client.approve_city_car_apply_with_options(approve_city_car_apply_request, approve_city_car_apply_headers, util_models.RuntimeOptions())
+        except Exception as err:
+            if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
+                # err 中含有 code 和 message 属性，可帮助开发定位问题
+                pass
+
+    @staticmethod
+    async def main_async(
+        args: List[str],
+    ) -> None:
+        client = Sample.create_client()
+        approve_city_car_apply_headers = dingtalkalitrip__1__0_models.ApproveCityCarApplyHeaders()
+        approve_city_car_apply_headers.x_acs_dingtalk_access_token = '<your access token>'
+        approve_city_car_apply_request = dingtalkalitrip__1__0_models.ApproveCityCarApplyRequest(
+            corp_id='corpx',
+            operate_time='2021-03-18 20:26:56',
+            remark='同意',
+            status=1,
+            third_part_apply_id='apply1',
+            user_id='user1'
+        )
+        try:
+            await client.approve_city_car_apply_with_options_async(approve_city_car_apply_request, approve_city_car_apply_headers, util_models.RuntimeOptions())
+        except Exception as err:
+            if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
+                # err 中含有 code 和 message 属性，可帮助开发定位问题
+                pass
+
+if __name__ == '__main__':
+    Sample.main(sys.argv[1:])
+```
+
+PHP
+
+```
+<?php
+
+// This file is auto-generated, don't edit it. Thanks.
+namespace AlibabaCloud\SDK\Sample;
+
+use AlibabaCloud\SDK\Dingtalk\Valitrip_1_0\Dingtalk;
+use \Exception;
+use AlibabaCloud\Tea\Exception\TeaError;
+use AlibabaCloud\Tea\Utils\Utils;
+
+use Darabonba\OpenApi\Models\Config;
+use AlibabaCloud\SDK\Dingtalk\Valitrip_1_0\Models\ApproveCityCarApplyHeaders;
+use AlibabaCloud\SDK\Dingtalk\Valitrip_1_0\Models\ApproveCityCarApplyRequest;
+use AlibabaCloud\Tea\Utils\Utils\RuntimeOptions;
+
+class Sample {
+
+    /**
+     * 使用 Token 初始化账号Client
+     * @return Dingtalk Client
+     */
+    public static function createClient(){
+        $config = new Config([]);
+        $config->protocol = "https";
+        $config->regionId = "central";
+        return new Dingtalk($config);
+    }
+
+    /**
+     * @param string[] $args
+     * @return void
+     */
+    public static function main($args){
+        $client = self::createClient();
+        $approveCityCarApplyHeaders = new ApproveCityCarApplyHeaders([]);
+        $approveCityCarApplyHeaders->xAcsDingtalkAccessToken = "<your access token>";
+        $approveCityCarApplyRequest = new ApproveCityCarApplyRequest([
+            "corpId" => "corpx",
+            "operateTime" => "2021-03-18 20:26:56",
+            "remark" => "同意",
+            "status" => 1,
+            "thirdPartApplyId" => "apply1",
+            "userId" => "user1"
+        ]);
+        try {
+            $client->approveCityCarApplyWithOptions($approveCityCarApplyRequest, $approveCityCarApplyHeaders, new RuntimeOptions([]));
+        }
+        catch (Exception $err) {
+            if (!($err instanceof TeaError)) {
+                $err = new TeaError([], $err->getMessage(), $err->getCode(), $err);
+            }
+            if (!Utils::empty_($err->code) && !Utils::empty_($err->message)) {
+                // err 中含有 code 和 message 属性，可帮助开发定位问题
+            }
+        }
+    }
+}
+$path = __DIR__ . \DIRECTORY_SEPARATOR . '..' . \DIRECTORY_SEPARATOR . 'vendor' . \DIRECTORY_SEPARATOR . 'autoload.php';
+if (file_exists($path)) {
+    require_once $path;
+}
+Sample::main(array_slice($argv, 1));
+```
+
+Go
+
+```
+// This file is auto-generated, don't edit it. Thanks.
+package main
+
+import (
+  "os"
+  util  "github.com/alibabacloud-go/tea-utils/service"
+  dingtalkalitrip_1_0  "github.com/alibabacloud-go/dingtalk/alitrip_1_0"
+  openapi  "github.com/alibabacloud-go/darabonba-openapi/client"
+  "github.com/alibabacloud-go/tea/tea"
+)
+
+/**
+ * 使用 Token 初始化账号Client
+ * @return Client
+ * @throws Exception
+ */
+func CreateClient () (_result *dingtalkalitrip_1_0.Client, _err error) {
+  config := &openapi.Config{}
+  config.Protocol = tea.String("https")
+  config.RegionId = tea.String("central")
+  _result = &dingtalkalitrip_1_0.Client{}
+  _result, _err = dingtalkalitrip_1_0.NewClient(config)
+  return _result, _err
+}
+
+func _main (args []*string) (_err error) {
+  client, _err := CreateClient()
+  if _err != nil {
+    return _err
+  }
+
+  approveCityCarApplyHeaders := &dingtalkalitrip_1_0.ApproveCityCarApplyHeaders{}
+  approveCityCarApplyHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
+  approveCityCarApplyRequest := &dingtalkalitrip_1_0.ApproveCityCarApplyRequest{
+    CorpId: tea.String("corpx"),
+    OperateTime: tea.String("2021-03-18 20:26:56"),
+    Remark: tea.String("同意"),
+    Status: tea.Int64(1),
+    ThirdPartApplyId: tea.String("apply1"),
+    UserId: tea.String("user1"),
+  }
+  tryErr := func()(_e error) {
+    defer func() {
+      if r := tea.Recover(recover()); r != nil {
+        _e = r
+      }
+    }()
+    _, _err = client.ApproveCityCarApplyWithOptions(approveCityCarApplyRequest, approveCityCarApplyHeaders, &util.RuntimeOptions{})
+    if _err != nil {
+      return _err
+    }
+
+    return nil
+  }()
+
+  if tryErr != nil {
+    var err = &tea.SDKError{}
+    if _t, ok := tryErr.(*tea.SDKError); ok {
+      err = _t
+    } else {
+      err.Message = tea.String(tryErr.Error())
+    }
+    if !tea.BoolValue(util.Empty(err.Code)) && !tea.BoolValue(util.Empty(err.Message)) {
+      // err 中含有 code 和 message 属性，可帮助开发定位问题
+    }
+
+  }
+  return _err
+}
+
+func main() {
+  err := _main(tea.StringSlice(os.Args[1:]))
+  if err != nil {
+    panic(err)
+  }
+}
+```
+
+Node.js
+
+```
+// This file is auto-generated, don't edit it
+import Util, * as $Util from '@alicloud/tea-util';
+import dingtalkalitrip_1_0, * as $dingtalkalitrip_1_0 from '@alicloud/dingtalk/alitrip_1_0';
+import OpenApi, * as $OpenApi from '@alicloud/openapi-client';
+import * as $tea from '@alicloud/tea-typescript';
+
+export default class Client {
+
+  /**
+   * 使用 Token 初始化账号Client
+   * @return Client
+   * @throws Exception
+   */
+  static createClient(): dingtalkalitrip_1_0 {
+    let config = new $OpenApi.Config({ });
+    config.protocol = "https";
+    config.regionId = "central";
+    return new dingtalkalitrip_1_0(config);
+  }
+
+  static async main(args: string[]): Promise<void> {
+    let client = Client.createClient();
+    let approveCityCarApplyHeaders = new $dingtalkalitrip_1_0.ApproveCityCarApplyHeaders({ });
+    approveCityCarApplyHeaders.xAcsDingtalkAccessToken = "<your access token>";
+    let approveCityCarApplyRequest = new $dingtalkalitrip_1_0.ApproveCityCarApplyRequest({
+      corpId: "corpx",
+      operateTime: "2021-03-18 20:26:56",
+      remark: "同意",
+      status: 1,
+      thirdPartApplyId: "apply1",
+      userId: "user1",
+    });
+    try {
+      await client.approveCityCarApplyWithOptions(approveCityCarApplyRequest, approveCityCarApplyHeaders, new $Util.RuntimeOptions({ }));
+    } catch (err) {
+      if (!Util.empty(err.code) && !Util.empty(err.message)) {
+        // err 中含有 code 和 message 属性，可帮助开发定位问题
+      }
+
+    }    
+  }
+
+}
+
+Client.main(process.argv.slice(2));
+```
+
+C#
+
+```
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using System.Threading.Tasks;
+
+using Tea;
+using Tea.Utils;
+
+namespace AlibabaCloud.SDK.Sample
+{
+    public class Sample 
+    {
+
+        /**
+         * 使用 Token 初始化账号Client
+         * @return Client
+         * @throws Exception
+         */
+        public static AlibabaCloud.SDK.Dingtalkalitrip_1_0.Client CreateClient()
+        {
+            AlibabaCloud.OpenApiClient.Models.Config config = new AlibabaCloud.OpenApiClient.Models.Config();
+            config.Protocol = "https";
+            config.RegionId = "central";
+            return new AlibabaCloud.SDK.Dingtalkalitrip_1_0.Client(config);
+        }
+
+        public static void Main(string[] args)
+        {
+            AlibabaCloud.SDK.Dingtalkalitrip_1_0.Client client = CreateClient();
+            AlibabaCloud.SDK.Dingtalkalitrip_1_0.Models.ApproveCityCarApplyHeaders approveCityCarApplyHeaders = new AlibabaCloud.SDK.Dingtalkalitrip_1_0.Models.ApproveCityCarApplyHeaders();
+            approveCityCarApplyHeaders.XAcsDingtalkAccessToken = "<your access token>";
+            AlibabaCloud.SDK.Dingtalkalitrip_1_0.Models.ApproveCityCarApplyRequest approveCityCarApplyRequest = new AlibabaCloud.SDK.Dingtalkalitrip_1_0.Models.ApproveCityCarApplyRequest
+            {
+                CorpId = "corpx",
+                OperateTime = "2021-03-18 20:26:56",
+                Remark = "同意",
+                Status = 1,
+                ThirdPartApplyId = "apply1",
+                UserId = "user1",
+            };
+            try
+            {
+                client.ApproveCityCarApplyWithOptions(approveCityCarApplyRequest, approveCityCarApplyHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
+            }
+            catch (TeaException err)
+            {
+                if (!AlibabaCloud.TeaUtil.Common.Empty(err.Code) && !AlibabaCloud.TeaUtil.Common.Empty(err.Message))
+                {
+                    // err 中含有 code 和 message 属性，可帮助开发定位问题
+                }
+            }
+            catch (Exception _err)
+            {
+                TeaException err = new TeaException(new Dictionary<string, object>
+                {
+                    { "message", _err.Message }
+                });
+                if (!AlibabaCloud.TeaUtil.Common.Empty(err.Code) && !AlibabaCloud.TeaUtil.Common.Empty(err.Message))
+                {
+                    // err 中含有 code 和 message 属性，可帮助开发定位问题
+                }
+            }
+        }
+
+    }
+}
+```
+
+C++
+
+```
+// This file is auto-generated, don't edit it. Thanks.
+
+#include <alibabacloud/dingtalkalitrip__1__0.hpp>
+#include <alibabacloud/open_api.hpp>
+#include <boost/any.hpp>
+#include <darabonba/core.hpp>
+#include <darabonba/util.hpp>
+#include <iostream>
+#include <map>
+
+using namespace std;
+
+Alibabacloud_Dingtalkalitrip_1_0::Client createClient() {
+  shared_ptr<Alibabacloud_OpenApi::Config> config = make_shared<Alibabacloud_OpenApi::Config>();
+  config->protocol = make_shared<string>("https");
+  config->regionId = make_shared<string>("central");
+  return Alibabacloud_Dingtalkalitrip_1_0::Client(config);
+}
+
+int main(int argc, char *args[]) {
+  args++;
+  shared_ptr<Alibabacloud_Dingtalkalitrip_1_0::Client> client = make_shared<Alibabacloud_Dingtalkalitrip_1_0::Client>(createClient());
+  shared_ptr<Alibabacloud_Dingtalkalitrip_1_0::ApproveCityCarApplyHeaders> approveCityCarApplyHeaders = make_shared<Alibabacloud_Dingtalkalitrip_1_0::ApproveCityCarApplyHeaders>();
+  approveCityCarApplyHeaders->xAcsDingtalkAccessToken = make_shared<string>("<your access token>");
+  shared_ptr<Alibabacloud_Dingtalkalitrip_1_0::ApproveCityCarApplyRequest> approveCityCarApplyRequest = make_shared<Alibabacloud_Dingtalkalitrip_1_0::ApproveCityCarApplyRequest>(map<string, boost::any>({
+    {"corpId", boost::any(string("corpx"))},
+    {"operateTime", boost::any(string("2021-03-18 20:26:56"))},
+    {"remark", boost::any(string("同意"))},
+    {"status", boost::any(1)},
+    {"thirdPartApplyId", boost::any(string("apply1"))},
+    {"userId", boost::any(string("user1"))}
+  }));
+  try {
+    client->approveCityCarApplyWithOptions(approveCityCarApplyRequest, approveCityCarApplyHeaders, make_shared<Darabonba_Util::RuntimeOptions>(Darabonba_Util::RuntimeOptions()));
+  }
+  catch (std::exception &err) {
+    if (!Darabonba_Util::Client::empty(err.code) && !Darabonba_Util::Client::empty(err.message)) {
+      // err 中含有 code 和 message 属性，可帮助开发定位问题
+    }
+  }
+}
+```
+
+## 响应
+
+### 响应体
+
+| 名称 | 类型 | 描述 |
+| --- | --- | --- |
+| approveResult | Boolean | 审批结果。 |
+
+### 响应体示例
+
+```
+HTTP/1.1 200 OK
+Content-Type:application/json
+
+{
+  "approveResult" : true
+}
+```
+
+### **错误码**
+
+若调用该接口报错，可根据错误信息在[全局错误码](0013-server-api-error-codes-1.md)文档中查找解决方案。

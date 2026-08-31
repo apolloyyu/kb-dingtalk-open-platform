@@ -100,9 +100,9 @@ updated_at: "2026-07-22 16:55:21"
 
 | API | 说明 |
 | --- | --- |
-| [注册卡片回调地址](../02-4a8AMF6u2A-服务端API/0786-register-card-callback-address.md) | 酷应用机器人注册卡片回调地址。一个`callbackRouteKey`仅可映射一个`callback_url`。 |
-| [发送钉钉互动卡片（高级版）](../02-4a8AMF6u2A-服务端API/0783-create-and-deliver-cards.md) | 酷应用机器人在企业内部群发送互动卡片消息。 |
-| [更新钉钉互动卡片](../02-4a8AMF6u2A-服务端API/0783-create-and-deliver-cards.md) | 酷应用机器人在企业内部群更新互动卡片消息。 |
+| [注册卡片回调地址](../02-4a8AMF6u2A-服务端-API/0786-register-card-callback-address.md) | 酷应用机器人注册卡片回调地址。一个`callbackRouteKey`仅可映射一个`callback_url`。 |
+| [发送钉钉互动卡片（高级版）](../02-4a8AMF6u2A-服务端-API/0783-create-and-deliver-cards.md) | 酷应用机器人在企业内部群发送互动卡片消息。 |
+| [更新钉钉互动卡片](../02-4a8AMF6u2A-服务端-API/0783-create-and-deliver-cards.md) | 酷应用机器人在企业内部群更新互动卡片消息。 |
 
 ## **新建互动卡片开发流程**
 

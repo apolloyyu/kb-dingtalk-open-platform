@@ -37,7 +37,7 @@ updated_at: "2026-08-04 09:07:24"
 
 ### **统一投放 ID**
 
-在投放接口中，使用 `openSpaceId` 作为统一投放id，一个 `openSpaceId` 包含多个开放场域 id，并且可以在多次投放中复用。`openSpaceId`采用固定协议且支持版本升级，主要由**版本、场域code、场域id**三部分内容组成，其具体协议内容可参见服务端API-[投放卡片](../../01-应用开发/02-4a8AMF6u2A-服务端API/0781-delivery-card-interface.md)接口。
+在投放接口中，使用 `openSpaceId` 作为统一投放id，一个 `openSpaceId` 包含多个开放场域 id，并且可以在多次投放中复用。`openSpaceId`采用固定协议且支持版本升级，主要由**版本、场域code、场域id**三部分内容组成，其具体协议内容可参见服务端API-[投放卡片](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0781-delivery-card-interface.md)接口。
 
 目前支持的场域以及场域id的含义如下：
 
@@ -50,8 +50,8 @@ updated_at: "2026-08-04 09:07:24"
 
 > **[!NOTE]**
 >
-> - 调用创建群会话接口若未保存`OpenConversationId`，可使用`chatId`调用[获取群会话的OpenConversationId](../../01-应用开发/02-4a8AMF6u2A-服务端API/0745-obtain-group-openconversationid.md)接口获取。
-> - `userIdType` 字段填写，请参考[卡片数据与参数配置-userIdType 字段的填写说明](../../01-应用开发/02-4a8AMF6u2A-服务端API/0790-faq-card.md#8607bdd785avq)。
+> - 调用创建群会话接口若未保存`OpenConversationId`，可使用`chatId`调用[获取群会话的OpenConversationId](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0745-obtain-group-openconversationid.md)接口获取。
+> - `userIdType` 字段填写，请参考[卡片数据与参数配置-userIdType 字段的填写说明](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0790-faq-card.md#8607bdd785avq)。
 
 ### **卡片场域属性**
 
@@ -60,7 +60,7 @@ updated_at: "2026-08-04 09:07:24"
 同时，卡片实例只有设置了某个场域属性，才能被投放至该场域。为卡片设置场域属性有两种方式：
 
 - **创建时设置**：在创建卡片时设置场域属性；
-- **调用接口设置**：开放接口提供为卡片设置场域属性的接口，调用[新增或者更新卡片的场域信息](../../01-应用开发/02-4a8AMF6u2A-服务端API/0787-add-field-interface.md)接口即可为已经创建的卡片设置某个场域的属性，使其可被投放至该场域中。
+- **调用接口设置**：开放接口提供为卡片设置场域属性的接口，调用[新增或者更新卡片的场域信息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0787-add-field-interface.md)接口即可为已经创建的卡片设置某个场域的属性，使其可被投放至该场域中。
 
 ### **卡片投放属性**
 
@@ -81,8 +81,8 @@ updated_at: "2026-08-04 09:07:24"
 
 ![投放流程](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/5465085871/p538024.png)
 
-1. 调用服务端API-[创建卡片](../../01-应用开发/02-4a8AMF6u2A-服务端API/0780-interface-for-creating-a-card-instance.md)接口，实现创建卡片实例并获取`outTrackId`。
-2. 若卡片未增加场域属性，则需要调用服务端API-[新增或者更新卡片的场域信息](../../01-应用开发/02-4a8AMF6u2A-服务端API/0787-add-field-interface.md)接口为卡片配置场域属性。
+1. 调用服务端API-[创建卡片](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0780-interface-for-creating-a-card-instance.md)接口，实现创建卡片实例并获取`outTrackId`。
+2. 若卡片未增加场域属性，则需要调用服务端API-[新增或者更新卡片的场域信息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0787-add-field-interface.md)接口为卡片配置场域属性。
 
    HTTP
 
@@ -196,7 +196,7 @@ updated_at: "2026-08-04 09:07:24"
    // 具体openSpaceId示例：
    dtv1.card//im_group.cidp4Gh*******VCQ==;one_box.cidp4Gh*******VCQ==;
    ```
-4. 构造目标场域的投放模型，并统一调用服务端API-[投放卡片](../../01-应用开发/02-4a8AMF6u2A-服务端API/0781-delivery-card-interface.md)接口，实现卡片投放。
+4. 构造目标场域的投放模型，并统一调用服务端API-[投放卡片](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0781-delivery-card-interface.md)接口，实现卡片投放。
 
    HTTP
 

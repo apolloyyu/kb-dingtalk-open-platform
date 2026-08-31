@@ -97,7 +97,7 @@ updated_at: "2026-06-30 09:01:06"
        ```
      - 初始化脚本服务页面：在使用脚本服务前，你需在脚本服务页面中调用initScript初始化脚本服务，导入脚本函数。
 
-       调用[initScript](../03-Ogu5SlPY4t-客户端JSAPI/0278-initialize-script-service.md)接口初始化脚本服务，向scriptUrl中注入全局变量「DingdocsScript」。
+       调用[initScript](../03-Ogu5SlPY4t-客户端-JSAPI/0278-initialize-script-service.md)接口初始化脚本服务，向scriptUrl中注入全局变量「DingdocsScript」。
 
        ```
        /* 脚本服务页面 */
@@ -107,7 +107,7 @@ updated_at: "2026-06-30 09:01:06"
          scriptUrl: '脚本函数js文件地址',
        })
        ```
-   - 搭建 UI 页面：你可通过搭建UI页面实现在钉钉文档中展示个性化交互面板，在载入UI页面时，你需调用[initView](../03-Ogu5SlPY4t-客户端JSAPI/0279-initialize-ui-interface.md)接口初始化UI页面。
+   - 搭建 UI 页面：你可通过搭建UI页面实现在钉钉文档中展示个性化交互面板，在载入UI页面时，你需调用[initView](../03-Ogu5SlPY4t-客户端-JSAPI/0279-initialize-ui-interface.md)接口初始化UI页面。
 
      ```
      /* UI页面 */

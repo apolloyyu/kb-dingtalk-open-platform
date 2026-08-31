@@ -41,7 +41,7 @@ updated_at: "2026-07-22 16:55:31"
     
    https://oss.sonatype.org/?spm=openapi-amp.sdkpublish.0.0.6ce52AE02AE0YH#nexus-search;gav~~dingtalk~~~
    ```
-2. 调用[创建并投放卡片](../02-4a8AMF6u2A-服务端API/0783-create-and-deliver-cards.md)接口发送动态卡片消息。
+2. 调用[创建并投放卡片](../02-4a8AMF6u2A-服务端-API/0783-create-and-deliver-cards.md)接口发送动态卡片消息。
 
    > **[!IMPORTANT]**
    >
@@ -54,4 +54,4 @@ updated_at: "2026-07-22 16:55:31"
 其他接口：
 
 - [响应互动卡片消息](0096-responding-to-interactive-messages.md)
-- [创建并投放卡片](../02-4a8AMF6u2A-服务端API/0783-create-and-deliver-cards.md)
+- [创建并投放卡片](../02-4a8AMF6u2A-服务端-API/0783-create-and-deliver-cards.md)

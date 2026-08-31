@@ -39,4 +39,4 @@ updated_at: "2026-07-22 16:55:25"
 
 ## **后续步骤**
 
-如果你需要根据 Webhook 地址发送消息，可以参考[自定义机器人发送群聊消息](../02-4a8AMF6u2A-服务端API/0702-custom-bot-to-send-group-chat-messages.md)。
+如果你需要根据 Webhook 地址发送消息，可以参考[自定义机器人发送群聊消息](../02-4a8AMF6u2A-服务端-API/0702-custom-bot-to-send-group-chat-messages.md)。

@@ -22,7 +22,7 @@ updated_at: "2026-08-04 09:07:22"
 
 前文提到互动卡片是由**卡片模板**和**卡片数据**构成的， 创建卡片实例是将卡片模板和卡片数据关联起来进行**实例化**的过程。完成创建后即可针对卡片实例进行数据更新、投放等操作。
 
-详情参见[创建卡片](../../01-应用开发/02-4a8AMF6u2A-服务端API/0780-interface-for-creating-a-card-instance.md)接口。
+详情参见[创建卡片](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0780-interface-for-creating-a-card-instance.md)接口。
 
 ### **卡片数据**
 
@@ -44,8 +44,8 @@ updated_at: "2026-08-04 09:07:22"
 
 目前可用的场域、以及如何配置和添加场域信息参见：
 
-- 通过服务端API-[创建卡片](../../01-应用开发/02-4a8AMF6u2A-服务端API/0780-interface-for-creating-a-card-instance.md)接口，实现场域的添加。
-- 通过服务端API-[新增或者更新卡片的场域信息](../../01-应用开发/02-4a8AMF6u2A-服务端API/0787-add-field-interface.md)接口，实现对场域信息的添加和更新操作，详情参见[开放接口投放卡片实例](0006-open-interface-card-delivery-instance.md)。
+- 通过服务端API-[创建卡片](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0780-interface-for-creating-a-card-instance.md)接口，实现场域的添加。
+- 通过服务端API-[新增或者更新卡片的场域信息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0787-add-field-interface.md)接口，实现对场域信息的添加和更新操作，详情参见[开放接口投放卡片实例](0006-open-interface-card-delivery-instance.md)。
 
 ## **前置准备**
 
@@ -64,7 +64,7 @@ updated_at: "2026-08-04 09:07:22"
 - `cardData`：卡片的公共数据
 - `privateData`：卡片的私有数据
 
-调用服务端API-[创建卡片](../../01-应用开发/02-4a8AMF6u2A-服务端API/0780-interface-for-creating-a-card-instance.md)接口实现卡片实例的创建。
+调用服务端API-[创建卡片](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0780-interface-for-creating-a-card-instance.md)接口实现卡片实例的创建。
 
 HTTP
 
@@ -171,8 +171,8 @@ public class Sample {
 
 > **[!NOTE]**
 >
-> - 卡片非 String 类型属性的填写请参考：[API 卡片数据的填写说明](../../01-应用开发/02-4a8AMF6u2A-服务端API/0789-instructions-for-filling-in-api-card-data.md)。
-> - `userIdType` 字段的填写请参考：[卡片数据与参数配置-userIdType 字段的填写说明](../../01-应用开发/02-4a8AMF6u2A-服务端API/0790-faq-card.md#8607bdd785avq)。
+> - 卡片非 String 类型属性的填写请参考：[API 卡片数据的填写说明](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0789-instructions-for-filling-in-api-card-data.md)。
+> - `userIdType` 字段的填写请参考：[卡片数据与参数配置-userIdType 字段的填写说明](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0790-faq-card.md#8607bdd785avq)。
 > - 总大小控制在100KB以内
 
 ## **步骤二：设置卡片的高级属性**

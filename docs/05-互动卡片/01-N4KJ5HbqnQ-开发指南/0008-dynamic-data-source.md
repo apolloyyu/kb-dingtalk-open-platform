@@ -74,7 +74,7 @@ updated_at: "2026-08-04 09:07:29"
 
 ### **注册回调地址**
 
-调用[注册卡片回调地址](../../01-应用开发/02-4a8AMF6u2A-服务端API/0786-register-card-callback-address.md)接口，注册动态数据源的回调地址。
+调用[注册卡片回调地址](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0786-register-card-callback-address.md)接口，注册动态数据源的回调地址。
 
 回调模式选择：
 
@@ -83,7 +83,7 @@ updated_at: "2026-08-04 09:07:29"
 
 ### **配置动态数据源**
 
-调用[创建卡片](../../01-应用开发/02-4a8AMF6u2A-服务端API/0780-interface-for-creating-a-card-instance.md)接口，在`openDynamicDataConfig`参数中配置动态数据源。在[开放接口创建卡片实例](0004-open-the-interface-to-create-a-card-instance.md)中，动态数据源相关配置参数`openDynamicDataConfig`，通过简单实例，针对`openDynamicDataConfig`参数的解释说明：
+调用[创建卡片](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0780-interface-for-creating-a-card-instance.md)接口，在`openDynamicDataConfig`参数中配置动态数据源。在[开放接口创建卡片实例](0004-open-the-interface-to-create-a-card-instance.md)中，动态数据源相关配置参数`openDynamicDataConfig`，通过简单实例，针对`openDynamicDataConfig`参数的解释说明：
 
 #### **核心参数说明**
 
@@ -524,7 +524,7 @@ content：这是JSONString格式，解析后为如下样式：
 
 #### HTTP 模式安全校验
 
-如[注册卡片回调地址](../../01-应用开发/02-4a8AMF6u2A-服务端API/0786-register-card-callback-address.md)时提供了"卡片数据回调 apiSecret"，钉钉会在请求 Header 中包含签名：
+如[注册卡片回调地址](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0786-register-card-callback-address.md)时提供了"卡片数据回调 apiSecret"，钉钉会在请求 Header 中包含签名：
 
 • `x-ddpaas-signature-timestamp`：签名时间戳
 
@@ -556,5 +556,5 @@ public static String calcSignature(String apiSecret, long ts) {
 ## **注意事项**
 
 - 动态数据源回调有超时（TIMEOUT）限制，请在 2 秒内完成业务处理并响应。
-- 如果有比较耗时的业务逻辑处理（比如调用大模型），考虑异步调用[更新卡片](../../01-应用开发/02-4a8AMF6u2A-服务端API/0782-interactive-card-update-interface.md)的方式来更新卡片。
+- 如果有比较耗时的业务逻辑处理（比如调用大模型），考虑异步调用[更新卡片](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0782-interactive-card-update-interface.md)的方式来更新卡片。
 - 请勿在回调过程中调用更新接口。

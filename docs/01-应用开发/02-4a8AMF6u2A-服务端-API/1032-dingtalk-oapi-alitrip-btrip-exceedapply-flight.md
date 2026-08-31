@@ -1,0 +1,543 @@
+---
+title: "搜索第三方机票超标审批单"
+source_url: "https://open.dingtalk.com/document/development/dingtalk-oapi-alitrip-btrip-exceedapply-flight"
+namespace: "development"
+slug: "dingtalk-oapi-alitrip-btrip-exceedapply-flight"
+group: "应用开发"
+tab: "服务端 API"
+breadcrumb: "行业与生态 > 生态开放 > 阿里商旅 > 出差申请 > 搜索第三方机票超标审批单"
+doc_id: "LtVql4VW5I"
+updated_at: "2026-06-02 19:51:50"
+---
+
+> Source: https://open.dingtalk.com/document/development/dingtalk-oapi-alitrip-btrip-exceedapply-flight
+> Path: 应用开发 / 服务端 API / 行业与生态 > 生态开放 > 阿里商旅 > 出差申请 > 搜索第三方机票超标审批单
+> Updated: 2026-06-02 19:51:50
+
+# 搜索第三方机票超标审批单
+
+通过此接口查询第三方机票的超标审批单详情，支持企业差旅管理系统与阿里商旅系统的集成场景。
+
+## 请求
+
+### 基本信息
+
+| 字段 | 值 |
+| --- | --- |
+| HTTP URL | https://api.dingtalk.com/v1.0/alitrip/exceedapply/getFlight |
+| HTTP Method | GET |
+| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
+| 权限要求 | permission-qyapi\_ali\_business\_trip-阿里商旅专用权限点 |
+
+### 请求头
+
+| 名称 | 类型 | 是否必填 | 描述 |
+| --- | --- | --- | --- |
+| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，通过以下获取：   - 企业内部应用，调用[获取企业内部应用的accessToken](0033-obtain-the-access-token-of-an-internal-app.md)接口获取。 - 第三方企业应用，调用[获取第三方应用授权企业的accessToken](0034-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口获取。 |
+
+### 查询参数
+
+| 名称 | 类型 | 是否必填 | 描述 |
+| --- | --- | --- | --- |
+| corpId | String | 是 | 第三方企业的corpId。 |
+| applyId | String | 是 | 商旅超标审批单ID。 |
+
+### 请求示例
+
+HTTP
+
+```
+GET /v1.0/alitrip/exceedapply/getFlight?corpId=ding1234&applyId=1234 HTTP/1.1
+Host:api.dingtalk.com
+x-acs-dingtalk-access-token:dca2686xxx
+Content-Type:application/json
+```
+
+Java
+
+```
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sample;
+
+import com.aliyun.tea.*;
+import com.aliyun.teautil.*;
+import com.aliyun.teautil.models.*;
+import com.aliyun.dingtalkalitrip_1_0.*;
+import com.aliyun.dingtalkalitrip_1_0.models.*;
+import com.aliyun.teaopenapi.*;
+import com.aliyun.teaopenapi.models.*;
+
+public class Sample {
+
+    /**
+     * 使用 Token 初始化账号Client
+     * @return Client
+     * @throws Exception
+     */
+    public static com.aliyun.dingtalkalitrip_1_0.Client createClient() throws Exception {
+        Config config = new Config();
+        config.protocol = "https";
+        config.regionId = "central";
+        return new com.aliyun.dingtalkalitrip_1_0.Client(config);
+    }
+
+    public static void main(String[] args_) throws Exception {
+        java.util.List<String> args = java.util.Arrays.asList(args_);
+        com.aliyun.dingtalkalitrip_1_0.Client client = Sample.createClient();
+        GetFlightExceedApplyHeaders getFlightExceedApplyHeaders = new GetFlightExceedApplyHeaders();
+        getFlightExceedApplyHeaders.xAcsDingtalkAccessToken = "<your access token>";
+        GetFlightExceedApplyRequest getFlightExceedApplyRequest = new GetFlightExceedApplyRequest()
+                .setCorpId("ding1234")
+                .setApplyId("1234");
+        try {
+            client.getFlightExceedApplyWithOptions(getFlightExceedApplyRequest, getFlightExceedApplyHeaders, new RuntimeOptions());
+        } catch (TeaException err) {
+            if (!com.aliyun.teautil.Common.empty(err.code) && !com.aliyun.teautil.Common.empty(err.message)) {
+                // err 中含有 code 和 message 属性，可帮助开发定位问题
+            }
+
+        } catch (Exception _err) {
+            TeaException err = new TeaException(_err.getMessage(), _err);
+            if (!com.aliyun.teautil.Common.empty(err.code) && !com.aliyun.teautil.Common.empty(err.message)) {
+                // err 中含有 code 和 message 属性，可帮助开发定位问题
+            }
+
+        }        
+    }
+}
+```
+
+Python
+
+```
+# -*- coding: utf-8 -*-
+# This file is auto-generated, don't edit it. Thanks.
+import sys
+
+from typing import List
+
+from alibabacloud_dingtalk.alitrip_1_0.client import Client as dingtalkalitrip_1_0Client
+from alibabacloud_tea_openapi import models as open_api_models
+from alibabacloud_dingtalk.alitrip_1_0 import models as dingtalkalitrip__1__0_models
+from alibabacloud_tea_util import models as util_models
+from alibabacloud_tea_util.client import Client as UtilClient
+
+class Sample:
+    def __init__(self):
+        pass
+
+    @staticmethod
+    def create_client() -> dingtalkalitrip_1_0Client:
+        """
+        使用 Token 初始化账号Client
+        @return: Client
+        @throws Exception
+        """
+        config = open_api_models.Config()
+        config.protocol = 'https'
+        config.region_id = 'central'
+        return dingtalkalitrip_1_0Client(config)
+
+    @staticmethod
+    def main(
+        args: List[str],
+    ) -> None:
+        client = Sample.create_client()
+        get_flight_exceed_apply_headers = dingtalkalitrip__1__0_models.GetFlightExceedApplyHeaders()
+        get_flight_exceed_apply_headers.x_acs_dingtalk_access_token = '<your access token>'
+        get_flight_exceed_apply_request = dingtalkalitrip__1__0_models.GetFlightExceedApplyRequest(
+            corp_id='ding1234',
+            apply_id='1234'
+        )
+        try:
+            client.get_flight_exceed_apply_with_options(get_flight_exceed_apply_request, get_flight_exceed_apply_headers, util_models.RuntimeOptions())
+        except Exception as err:
+            if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
+                # err 中含有 code 和 message 属性，可帮助开发定位问题
+                pass
+
+    @staticmethod
+    async def main_async(
+        args: List[str],
+    ) -> None:
+        client = Sample.create_client()
+        get_flight_exceed_apply_headers = dingtalkalitrip__1__0_models.GetFlightExceedApplyHeaders()
+        get_flight_exceed_apply_headers.x_acs_dingtalk_access_token = '<your access token>'
+        get_flight_exceed_apply_request = dingtalkalitrip__1__0_models.GetFlightExceedApplyRequest(
+            corp_id='ding1234',
+            apply_id='1234'
+        )
+        try:
+            await client.get_flight_exceed_apply_with_options_async(get_flight_exceed_apply_request, get_flight_exceed_apply_headers, util_models.RuntimeOptions())
+        except Exception as err:
+            if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
+                # err 中含有 code 和 message 属性，可帮助开发定位问题
+                pass
+
+if __name__ == '__main__':
+    Sample.main(sys.argv[1:])
+```
+
+PHP
+
+```
+<?php
+
+// This file is auto-generated, don't edit it. Thanks.
+namespace AlibabaCloud\SDK\Sample;
+
+use AlibabaCloud\SDK\Dingtalk\Valitrip_1_0\Dingtalk;
+use \Exception;
+use AlibabaCloud\Tea\Exception\TeaError;
+use AlibabaCloud\Tea\Utils\Utils;
+
+use Darabonba\OpenApi\Models\Config;
+use AlibabaCloud\SDK\Dingtalk\Valitrip_1_0\Models\GetFlightExceedApplyHeaders;
+use AlibabaCloud\SDK\Dingtalk\Valitrip_1_0\Models\GetFlightExceedApplyRequest;
+use AlibabaCloud\Tea\Utils\Utils\RuntimeOptions;
+
+class Sample {
+
+    /**
+     * 使用 Token 初始化账号Client
+     * @return Dingtalk Client
+     */
+    public static function createClient(){
+        $config = new Config([]);
+        $config->protocol = "https";
+        $config->regionId = "central";
+        return new Dingtalk($config);
+    }
+
+    /**
+     * @param string[] $args
+     * @return void
+     */
+    public static function main($args){
+        $client = self::createClient();
+        $getFlightExceedApplyHeaders = new GetFlightExceedApplyHeaders([]);
+        $getFlightExceedApplyHeaders->xAcsDingtalkAccessToken = "<your access token>";
+        $getFlightExceedApplyRequest = new GetFlightExceedApplyRequest([
+            "corpId" => "ding1234",
+            "applyId" => "1234"
+        ]);
+        try {
+            $client->getFlightExceedApplyWithOptions($getFlightExceedApplyRequest, $getFlightExceedApplyHeaders, new RuntimeOptions([]));
+        }
+        catch (Exception $err) {
+            if (!($err instanceof TeaError)) {
+                $err = new TeaError([], $err->getMessage(), $err->getCode(), $err);
+            }
+            if (!Utils::empty_($err->code) && !Utils::empty_($err->message)) {
+                // err 中含有 code 和 message 属性，可帮助开发定位问题
+            }
+        }
+    }
+}
+$path = __DIR__ . \DIRECTORY_SEPARATOR . '..' . \DIRECTORY_SEPARATOR . 'vendor' . \DIRECTORY_SEPARATOR . 'autoload.php';
+if (file_exists($path)) {
+    require_once $path;
+}
+Sample::main(array_slice($argv, 1));
+```
+
+Go
+
+```
+// This file is auto-generated, don't edit it. Thanks.
+package main
+
+import (
+  "os"
+  util  "github.com/alibabacloud-go/tea-utils/service"
+  dingtalkalitrip_1_0  "github.com/alibabacloud-go/dingtalk/alitrip_1_0"
+  openapi  "github.com/alibabacloud-go/darabonba-openapi/client"
+  "github.com/alibabacloud-go/tea/tea"
+)
+
+/**
+ * 使用 Token 初始化账号Client
+ * @return Client
+ * @throws Exception
+ */
+func CreateClient () (_result *dingtalkalitrip_1_0.Client, _err error) {
+  config := &openapi.Config{}
+  config.Protocol = tea.String("https")
+  config.RegionId = tea.String("central")
+  _result = &dingtalkalitrip_1_0.Client{}
+  _result, _err = dingtalkalitrip_1_0.NewClient(config)
+  return _result, _err
+}
+
+func _main (args []*string) (_err error) {
+  client, _err := CreateClient()
+  if _err != nil {
+    return _err
+  }
+
+  getFlightExceedApplyHeaders := &dingtalkalitrip_1_0.GetFlightExceedApplyHeaders{}
+  getFlightExceedApplyHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
+  getFlightExceedApplyRequest := &dingtalkalitrip_1_0.GetFlightExceedApplyRequest{
+    CorpId: tea.String("ding1234"),
+    ApplyId: tea.String("1234"),
+  }
+  tryErr := func()(_e error) {
+    defer func() {
+      if r := tea.Recover(recover()); r != nil {
+        _e = r
+      }
+    }()
+    _, _err = client.GetFlightExceedApplyWithOptions(getFlightExceedApplyRequest, getFlightExceedApplyHeaders, &util.RuntimeOptions{})
+    if _err != nil {
+      return _err
+    }
+
+    return nil
+  }()
+
+  if tryErr != nil {
+    var err = &tea.SDKError{}
+    if _t, ok := tryErr.(*tea.SDKError); ok {
+      err = _t
+    } else {
+      err.Message = tea.String(tryErr.Error())
+    }
+    if !tea.BoolValue(util.Empty(err.Code)) && !tea.BoolValue(util.Empty(err.Message)) {
+      // err 中含有 code 和 message 属性，可帮助开发定位问题
+    }
+
+  }
+  return _err
+}
+
+func main() {
+  err := _main(tea.StringSlice(os.Args[1:]))
+  if err != nil {
+    panic(err)
+  }
+}
+```
+
+Node.js
+
+```
+// This file is auto-generated, don't edit it
+import Util, * as $Util from '@alicloud/tea-util';
+import dingtalkalitrip_1_0, * as $dingtalkalitrip_1_0 from '@alicloud/dingtalk/alitrip_1_0';
+import OpenApi, * as $OpenApi from '@alicloud/openapi-client';
+import * as $tea from '@alicloud/tea-typescript';
+
+export default class Client {
+
+  /**
+   * 使用 Token 初始化账号Client
+   * @return Client
+   * @throws Exception
+   */
+  static createClient(): dingtalkalitrip_1_0 {
+    let config = new $OpenApi.Config({ });
+    config.protocol = "https";
+    config.regionId = "central";
+    return new dingtalkalitrip_1_0(config);
+  }
+
+  static async main(args: string[]): Promise<void> {
+    let client = Client.createClient();
+    let getFlightExceedApplyHeaders = new $dingtalkalitrip_1_0.GetFlightExceedApplyHeaders({ });
+    getFlightExceedApplyHeaders.xAcsDingtalkAccessToken = "<your access token>";
+    let getFlightExceedApplyRequest = new $dingtalkalitrip_1_0.GetFlightExceedApplyRequest({
+      corpId: "ding1234",
+      applyId: "1234",
+    });
+    try {
+      await client.getFlightExceedApplyWithOptions(getFlightExceedApplyRequest, getFlightExceedApplyHeaders, new $Util.RuntimeOptions({ }));
+    } catch (err) {
+      if (!Util.empty(err.code) && !Util.empty(err.message)) {
+        // err 中含有 code 和 message 属性，可帮助开发定位问题
+      }
+
+    }    
+  }
+
+}
+
+Client.main(process.argv.slice(2));
+```
+
+C#
+
+```
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using System.Threading.Tasks;
+
+using Tea;
+using Tea.Utils;
+
+namespace AlibabaCloud.SDK.Sample
+{
+    public class Sample 
+    {
+
+        /**
+         * 使用 Token 初始化账号Client
+         * @return Client
+         * @throws Exception
+         */
+        public static AlibabaCloud.SDK.Dingtalkalitrip_1_0.Client CreateClient()
+        {
+            AlibabaCloud.OpenApiClient.Models.Config config = new AlibabaCloud.OpenApiClient.Models.Config();
+            config.Protocol = "https";
+            config.RegionId = "central";
+            return new AlibabaCloud.SDK.Dingtalkalitrip_1_0.Client(config);
+        }
+
+        public static void Main(string[] args)
+        {
+            AlibabaCloud.SDK.Dingtalkalitrip_1_0.Client client = CreateClient();
+            AlibabaCloud.SDK.Dingtalkalitrip_1_0.Models.GetFlightExceedApplyHeaders getFlightExceedApplyHeaders = new AlibabaCloud.SDK.Dingtalkalitrip_1_0.Models.GetFlightExceedApplyHeaders();
+            getFlightExceedApplyHeaders.XAcsDingtalkAccessToken = "<your access token>";
+            AlibabaCloud.SDK.Dingtalkalitrip_1_0.Models.GetFlightExceedApplyRequest getFlightExceedApplyRequest = new AlibabaCloud.SDK.Dingtalkalitrip_1_0.Models.GetFlightExceedApplyRequest
+            {
+                CorpId = "ding1234",
+                ApplyId = "1234",
+            };
+            try
+            {
+                client.GetFlightExceedApplyWithOptions(getFlightExceedApplyRequest, getFlightExceedApplyHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
+            }
+            catch (TeaException err)
+            {
+                if (!AlibabaCloud.TeaUtil.Common.Empty(err.Code) && !AlibabaCloud.TeaUtil.Common.Empty(err.Message))
+                {
+                    // err 中含有 code 和 message 属性，可帮助开发定位问题
+                }
+            }
+            catch (Exception _err)
+            {
+                TeaException err = new TeaException(new Dictionary<string, object>
+                {
+                    { "message", _err.Message }
+                });
+                if (!AlibabaCloud.TeaUtil.Common.Empty(err.Code) && !AlibabaCloud.TeaUtil.Common.Empty(err.Message))
+                {
+                    // err 中含有 code 和 message 属性，可帮助开发定位问题
+                }
+            }
+        }
+
+    }
+}
+```
+
+C++
+
+```
+// This file is auto-generated, don't edit it. Thanks.
+
+#include <alibabacloud/dingtalkalitrip__1__0.hpp>
+#include <alibabacloud/open_api.hpp>
+#include <boost/any.hpp>
+#include <darabonba/core.hpp>
+#include <darabonba/util.hpp>
+#include <iostream>
+#include <map>
+
+using namespace std;
+
+Alibabacloud_Dingtalkalitrip_1_0::Client createClient() {
+  shared_ptr<Alibabacloud_OpenApi::Config> config = make_shared<Alibabacloud_OpenApi::Config>();
+  config->protocol = make_shared<string>("https");
+  config->regionId = make_shared<string>("central");
+  return Alibabacloud_Dingtalkalitrip_1_0::Client(config);
+}
+
+int main(int argc, char *args[]) {
+  args++;
+  shared_ptr<Alibabacloud_Dingtalkalitrip_1_0::Client> client = make_shared<Alibabacloud_Dingtalkalitrip_1_0::Client>(createClient());
+  shared_ptr<Alibabacloud_Dingtalkalitrip_1_0::GetFlightExceedApplyHeaders> getFlightExceedApplyHeaders = make_shared<Alibabacloud_Dingtalkalitrip_1_0::GetFlightExceedApplyHeaders>();
+  getFlightExceedApplyHeaders->xAcsDingtalkAccessToken = make_shared<string>("<your access token>");
+  shared_ptr<Alibabacloud_Dingtalkalitrip_1_0::GetFlightExceedApplyRequest> getFlightExceedApplyRequest = make_shared<Alibabacloud_Dingtalkalitrip_1_0::GetFlightExceedApplyRequest>(map<string, boost::any>({
+    {"corpId", boost::any(string("ding1234"))},
+    {"applyId", boost::any(string("1234"))}
+  }));
+  try {
+    client->getFlightExceedApplyWithOptions(getFlightExceedApplyRequest, getFlightExceedApplyHeaders, make_shared<Darabonba_Util::RuntimeOptions>(Darabonba_Util::RuntimeOptions()));
+  }
+  catch (std::exception &err) {
+    if (!Darabonba_Util::Client::empty(err.code) && !Darabonba_Util::Client::empty(err.message)) {
+      // err 中含有 code 和 message 属性，可帮助开发定位问题
+    }
+  }
+}
+```
+
+## 响应
+
+### 响应体
+
+| 名称 | 类型 | 描述 |
+| --- | --- | --- |
+| corpId | String | 第三方企业的corpId。 |
+| applyId | Long | 商旅超标审批单ID。 |
+| status | Integer | 审批单状态，取值：   - **0**：审批中 - **1**：已同意 - **2**：已拒绝 |
+| btripCause | String | 出差原因。 |
+| exceedType | Integer | 超标类型，取值：   - **1**：折扣 - **2**、**8**、**10**：时间 - **3**、**9**、**11**：折扣和时间 |
+| exceedReason | String | 超标原因。 |
+| originStandard | String | 原差旅标准。 |
+| submitTime | String | 审批单提交时间。 |
+| userId | String | 第三方用户的userid。 |
+| applyIntentionInfoDO | Object | 意向出行信息。 |
+| arrCity | String | 到达城市三字码。 |
+| arrCityName | String | 到达城市名称。 |
+| arrTime | String | 到达时间。 |
+| cabin | String | 超标的舱位，取值：   - **F**：头等舱 - **C**：商务舱 - **Y**：经济舱 - **P**：超值经济舱 |
+| cabinClass | Integer | 申请超标的舱等，取值：   - **0**：头等舱 - **1**：商务舱 - **2**：经济舱 - **3**：超值经济舱 |
+| cabinClassStr | String | 舱等描述。 |
+| depCity | String | 出发城市三字码。 |
+| depCityName | String | 出发城市名称。 |
+| depTime | String | 出发时间。 |
+| discount | double | 折扣。 |
+| flightNo | String | 航班号。 |
+| price | Long | 意向航班价格（元）。 |
+| type | Integer | 超标类型，取值：   - **1**：折扣 - **2、8、10**：时间 - **3、9、11**：折扣和时间 |
+| thirdpartApplyId | String | 第三方出差审批单号。 |
+
+### 响应体示例
+
+```
+HTTP/1.1 200 OK
+Content-Type:application/json
+
+{
+  "corpId" : "ding1234",
+  "applyId" : 1234,
+  "status" : 0,
+  "btripCause" : "出差",
+  "exceedType" : 1,
+  "exceedReason" : "出差",
+  "originStandard" : "经济舱（2折及以下）",
+  "submitTime" : "2021-07-08 15:23:56",
+  "userId" : "weifeng",
+  "applyIntentionInfoDO" : {
+    "arrCity" : "HGH",
+    "arrCityName" : "杭州",
+    "arrTime" : "2021-07-08 15:23:56",
+    "cabin" : "F",
+    "cabinClass" : 1,
+    "cabinClassStr" : "经济舱",
+    "depCity" : "SHA",
+    "depCityName" : "上海",
+    "depTime" : "2021-07-08 15:23:56",
+    "discount" : 4.1,
+    "flightNo" : "MU2759",
+    "price" : 1000,
+    "type" : 1
+  },
+  "thirdpartApplyId" : "0001A11xxx"
+}
+```

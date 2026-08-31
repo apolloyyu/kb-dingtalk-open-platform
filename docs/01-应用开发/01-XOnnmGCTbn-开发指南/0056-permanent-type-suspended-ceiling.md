@@ -62,8 +62,8 @@ updated_at: "2026-06-30 09:00:57"
 
 | API | 说明 |
 | --- | --- |
-| [创建并开启互动卡片吊顶](../02-4a8AMF6u2A-服务端API/0761-send-group-helper-message.md) | 酷应用在企业内部群创建并开启互动卡片吊顶。 |
-| [关闭互动卡片吊顶](../02-4a8AMF6u2A-服务端API/0762-close-interactive-card-ceiling.md) | 酷应用在企业内部群关闭互动卡片吊顶。 |
+| [创建并开启互动卡片吊顶](../02-4a8AMF6u2A-服务端-API/0761-send-group-helper-message.md) | 酷应用在企业内部群创建并开启互动卡片吊顶。 |
+| [关闭互动卡片吊顶](../02-4a8AMF6u2A-服务端-API/0762-close-interactive-card-ceiling.md) | 酷应用在企业内部群关闭互动卡片吊顶。 |
 
 ## **新建吊顶卡片开发流程**
 
@@ -95,7 +95,7 @@ updated_at: "2026-06-30 09:00:57"
 
 ### **测试吊顶模板**
 
-调用服务端API-[创建并开启互动卡片吊顶](../02-4a8AMF6u2A-服务端API/0761-send-group-helper-message.md)接口，实现发送吊顶卡片。
+调用服务端API-[创建并开启互动卡片吊顶](../02-4a8AMF6u2A-服务端-API/0761-send-group-helper-message.md)接口，实现发送吊顶卡片。
 
 ```
 POST /v2.0/im/topBoxes HTTP/1.1

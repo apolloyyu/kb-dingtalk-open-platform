@@ -29,7 +29,7 @@ updated_at: "2026-08-04 09:07:18"
 ## **步骤一：创建卡片模板**
 
 1. 前往[开发者后台 > 卡片平台](https://open-dev.dingtalk.com/fe/card)。
-2. 进入**新建模板**页面，并填写**模板名称**、[卡片类型](../../01-应用开发/02-4a8AMF6u2A-服务端API/0777-overview-card.md)。
+2. 进入**新建模板**页面，并填写**模板名称**、[卡片类型](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0777-overview-card.md)。
 
    ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8365085871/p512421.png)
 3. 关联[钉钉应用列表](https://open-dev.dingtalk.com/fe/app#/corp/app)中的应用（可选）。

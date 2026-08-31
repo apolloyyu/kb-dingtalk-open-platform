@@ -73,7 +73,7 @@ updated_at: "2026-08-07 14:52:48"
       | >singleChatAnotherUserId | String | 否 | - 如果会话是单聊，表示单聊对方在企业内的员工userId； - 如果会话是群聊，此字段为空。 |
       | corpId | String | 是 | 发送人或群所在的企业CorpId。 |
       | userId | String | 是 | 发送人在企业内的员工userId。 |
-   2. 业务方解析url等参数，并自行调用[创建卡片](../02-4a8AMF6u2A-服务端API/0780-interface-for-creating-a-card-instance.md)接口创建卡片实例（注意卡片创建者的userId在此场景需要必填，否则发送者自己可能看不到卡片）。
+   2. 业务方解析url等参数，并自行调用[创建卡片](../02-4a8AMF6u2A-服务端-API/0780-interface-for-creating-a-card-instance.md)接口创建卡片实例（注意卡片创建者的userId在此场景需要必填，否则发送者自己可能看不到卡片）。
    3. 业务方响应钉钉侧数据结构（出参）：
 
       ```

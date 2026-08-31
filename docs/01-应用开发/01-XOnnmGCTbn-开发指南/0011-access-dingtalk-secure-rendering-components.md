@@ -150,7 +150,7 @@ updated_at: "2025-09-03 15:55:01"
 
 #### **消息通知模板内容转译**
 
-发通知消息时，可以在内容中以模板参数语法包含id，钉钉会将其替换为成员名或部门名，涉及服务端api：[发送工作通知](../02-4a8AMF6u2A-服务端API/0769-asynchronous-sending-of-enterprise-session-messages.md)
+发通知消息时，可以在内容中以模板参数语法包含id，钉钉会将其替换为成员名或部门名，涉及服务端api：[发送工作通知](../02-4a8AMF6u2A-服务端-API/0769-asynchronous-sending-of-enterprise-session-messages.md)
 
 需要在原接口参数上添加`enable_id_trans`字段且置为true，才能开启转译，仅第三方应用需要用到，企业内部应用可以忽略。
 
@@ -168,8 +168,8 @@ $userName=USER_ID$
 
 #### **通讯录转译**
 
-- [异步转译通讯录ID](../02-4a8AMF6u2A-服务端API/0133-asynchronous-address-book-file-content-translation.md)
-- [获取异步转译任务结果](../02-4a8AMF6u2A-服务端API/0134-obtains-the-results-of-an-asynchronous-translation-task.md)
+- [异步转译通讯录ID](../02-4a8AMF6u2A-服务端-API/0133-asynchronous-address-book-file-content-translation.md)
+- [获取异步转译任务结果](../02-4a8AMF6u2A-服务端-API/0134-obtains-the-results-of-an-asynchronous-translation-task.md)
 
 ## **后续步骤**
 

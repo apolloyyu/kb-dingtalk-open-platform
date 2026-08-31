@@ -44,7 +44,7 @@ updated_at: "2026-08-04 09:07:28"
 - HTTP 需要完成的准备工作：
 
   - 在卡片平台上完成[卡片模板搭建及发布](0001-card-template-building-and-publishing.md)，并配置[交互组件](../03-MhNX42mFB1-模板搭建器/0010-interactive-components.md)。
-  - 调用服务端API-[注册卡片回调地址](../../01-应用开发/02-4a8AMF6u2A-服务端API/0786-register-card-callback-address.md)接口完成回调地址的注册。
+  - 调用服务端API-[注册卡片回调地址](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0786-register-card-callback-address.md)接口完成回调地址的注册。
   - 实现完成[开放接口创建卡片实例](0004-open-the-interface-to-create-a-card-instance.md)，并在创建卡片时指定参数 callbackType 为 HTTP 和注册的 callbackRouteKey 绑定回调地址。
   - 实现完成[开放接口投放卡片实例](0006-open-interface-card-delivery-instance.md)，完成卡片投放。
 
@@ -52,7 +52,7 @@ updated_at: "2026-08-04 09:07:28"
 
 ### **注册回调地址**
 
-用户在进行事件回调前，需要先调用[注册卡片回调地址](../../01-应用开发/02-4a8AMF6u2A-服务端API/0786-register-card-callback-address.md)接口完成回调地址的注册。注册回调地址，就是用户将自己服务的 URL 注册到一个`callbackRouteKey`上，用户在创建卡片时，需要将这个`callbackRouteKey`填写到卡片的创建参数中。之后，卡片发生交互请求时，卡片服务端会将这个交互请求发送给卡片绑定的`callbackRouteKey`所对应的 URL 处。下面简单介绍注册回调地址的 API。
+用户在进行事件回调前，需要先调用[注册卡片回调地址](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0786-register-card-callback-address.md)接口完成回调地址的注册。注册回调地址，就是用户将自己服务的 URL 注册到一个`callbackRouteKey`上，用户在创建卡片时，需要将这个`callbackRouteKey`填写到卡片的创建参数中。之后，卡片发生交互请求时，卡片服务端会将这个交互请求发送给卡片绑定的`callbackRouteKey`所对应的 URL 处。下面简单介绍注册回调地址的 API。
 
 HTTP
 
@@ -312,7 +312,7 @@ if __name__ == "__main__":
 
 为了提升回调接口的安全性，从钉钉侧发起的HTTP回调请求，支持开发者进行来源校验。
 
-如[注册卡片回调地址](../../01-应用开发/02-4a8AMF6u2A-服务端API/0786-register-card-callback-address.md)时提供了“卡片数据回调apiSecret”，则收到的HTTP请求Header中包含签名相关Header:
+如[注册卡片回调地址](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0786-register-card-callback-address.md)时提供了“卡片数据回调apiSecret”，则收到的HTTP请求Header中包含签名相关Header:
 
 • `x-ddpaas-signature-timestamp`：签名时间戳
 
@@ -709,12 +709,12 @@ request参数说明：
 
 > **[!IMPORTANT]**
 >
-> 如果使用的是卡片接口（path 以 /v1.0/card 开头）创建、投放的卡片，`cardData`和 `userPrivateData`中非 String 类型属性的填写请参考：[API 卡片数据的填写说明](../../01-应用开发/02-4a8AMF6u2A-服务端API/0789-instructions-for-filling-in-api-card-data.md)。
+> 如果使用的是卡片接口（path 以 /v1.0/card 开头）创建、投放的卡片，`cardData`和 `userPrivateData`中非 String 类型属性的填写请参考：[API 卡片数据的填写说明](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0789-instructions-for-filling-in-api-card-data.md)。
 >
-> 如果使用的不是卡片接口创建、投放的卡片（如以 /v1.0/im 开头的机器人发送卡片的接口），`cardData`和 `userPrivateData`中非 String 类型属性的填写请参考：[常见问题](../../01-应用开发/02-4a8AMF6u2A-服务端API/0790-faq-card.md)
+> 如果使用的不是卡片接口创建、投放的卡片（如以 /v1.0/im 开头的机器人发送卡片的接口），`cardData`和 `userPrivateData`中非 String 类型属性的填写请参考：[常见问题](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0790-faq-card.md)
 
 ## 注意事项
 
 - 事件回调有超时（TIMEOUT）限制，请在 2 秒内完成业务处理并响应。
-- 如果有比较耗时的业务逻辑处理（比如调用大模型），考虑异步调用[更新卡片](../../01-应用开发/02-4a8AMF6u2A-服务端API/0782-interactive-card-update-interface.md)的方式来更新卡片。
+- 如果有比较耗时的业务逻辑处理（比如调用大模型），考虑异步调用[更新卡片](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0782-interactive-card-update-interface.md)的方式来更新卡片。
 - 请勿在回调过程中，调用更新接口。

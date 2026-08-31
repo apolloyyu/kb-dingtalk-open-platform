@@ -48,11 +48,11 @@ updated_at: "2025-09-23 19:22:13"
 1. 创建第三方企业应用。详细步骤请参考[第三方企业应用](../01-XOnnmGCTbn-开发指南/0007-create-application.md)。
 2. 请完成下述代码开发，包括：获取文件上传信息、提交文件。详细步骤请参考：
 
-   1. [添加空间](../02-4a8AMF6u2A-服务端API/0652-add-space.md)
-   2. [获取文件上传信息](../02-4a8AMF6u2A-服务端API/0674-obtain-file-upload-informations.md)
-   3. [提交文件](../02-4a8AMF6u2A-服务端API/0675-submittal-file.md)
-   4. [获取文件或文件夹信息](../02-4a8AMF6u2A-服务端API/0664-obtain-file-or-folder-information.md)
-   5. [获取文件预览或编辑信息](../02-4a8AMF6u2A-服务端API/0670-obtains-the-object-preview-or-editing-information.md)
+   1. [添加空间](../02-4a8AMF6u2A-服务端-API/0652-add-space.md)
+   2. [获取文件上传信息](../02-4a8AMF6u2A-服务端-API/0674-obtain-file-upload-informations.md)
+   3. [提交文件](../02-4a8AMF6u2A-服务端-API/0675-submittal-file.md)
+   4. [获取文件或文件夹信息](../02-4a8AMF6u2A-服务端-API/0664-obtain-file-or-folder-information.md)
+   5. [获取文件预览或编辑信息](../02-4a8AMF6u2A-服务端-API/0670-obtains-the-object-preview-or-editing-information.md)
 3. 完成安全策略中心对接。完成对接后，可实现的产品功能：
 
    1. 访问安全：可实现「应用访问」场景的访问控制规则配置。

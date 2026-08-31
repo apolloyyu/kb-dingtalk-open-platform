@@ -319,7 +319,7 @@ PC 端示意图：
   openLink --> import openLink from 'dingtalk-jsapi/api/biz/util/openLink'
   ```
 
-  JSAPI 使用文档：[JSAPI 总览](../../01-应用开发/03-Ogu5SlPY4t-客户端JSAPI/0001-jsapi-overview.md)。
+  JSAPI 使用文档：[JSAPI 总览](../../01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0001-jsapi-overview.md)。
 
   > **[!NOTE]**
   >

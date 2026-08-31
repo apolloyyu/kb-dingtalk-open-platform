@@ -25,7 +25,7 @@ updated_at: "2026-07-22 16:25:37"
 
 ## 功能描述
 
-企业内部用户变更事件，事件英文名称为user\_active\_org时表示用户加入企业后的激活信息，active字段为true时表示已激活，字段值来自于[查询用户详情](../02-4a8AMF6u2A-服务端API/0056-query-user-details.md)接口 。
+企业内部用户变更事件，事件英文名称为user\_active\_org时表示用户加入企业后的激活信息，active字段为true时表示已激活，字段值来自于[查询用户详情](../02-4a8AMF6u2A-服务端-API/0056-query-user-details.md)接口 。
 
 ## 支持应用类型
 

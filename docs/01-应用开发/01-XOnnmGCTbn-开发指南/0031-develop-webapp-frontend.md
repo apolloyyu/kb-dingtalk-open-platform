@@ -27,12 +27,12 @@ updated_at: "2026-07-22 16:55:18"
 
 ### **钉钉客户端 JSAPI 鉴权**
 
-1. 调用[获取企业内部应用的accessToken](../02-4a8AMF6u2A-服务端API/0033-obtain-the-access-token-of-an-internal-app.md)接口，获取应用凭证 AccessToken。
-2. 根据应用凭证 AccessToken，调用[获取jsapiTicket](../02-4a8AMF6u2A-服务端API/0039-create-a-jsapi-ticket.md)接口，获取返回参数 jsapiTicket 字段值。
+1. 调用[获取企业内部应用的accessToken](../02-4a8AMF6u2A-服务端-API/0033-obtain-the-access-token-of-an-internal-app.md)接口，获取应用凭证 AccessToken。
+2. 根据应用凭证 AccessToken，调用[获取jsapiTicket](../02-4a8AMF6u2A-服务端-API/0039-create-a-jsapi-ticket.md)接口，获取返回参数 jsapiTicket 字段值。
 
    > **[!NOTE]**
    >
-   > 获取 jsapiTicket 后，如果 jsapiTicket 尚未过期，再次调用[获取jsapiTicket](../02-4a8AMF6u2A-服务端API/0039-create-a-jsapi-ticket.md)接口时，返回的 jsapiTicket 值与之前的相同，只是续期了 2 小时。需要注意的是，从 jsapiTicket 生成起，最大过期时间为 24 小时，即使续期后，最大过期时间仍从 jsapiTicket 生成起计算。
+   > 获取 jsapiTicket 后，如果 jsapiTicket 尚未过期，再次调用[获取jsapiTicket](../02-4a8AMF6u2A-服务端-API/0039-create-a-jsapi-ticket.md)接口时，返回的 jsapiTicket 值与之前的相同，只是续期了 2 小时。需要注意的是，从 jsapiTicket 生成起，最大过期时间为 24 小时，即使续期后，最大过期时间仍从 jsapiTicket 生成起计算。
    >
    > > 例如：当你早上 9 点，生成一个 jsapiTicket 时，即使一直续期，第二天早上9点，jsapiTicket 也会过期，需要重新生成一个新的 jsapiTicket。
 3. 根据 jsapiTicket，计算签名 signature 字段，计算签名的各项参数如下：
@@ -268,8 +268,8 @@ updated_at: "2026-07-22 16:55:18"
    | 后端服务 | 在解压后的 web-app-jsapi-auth 的目录下：  1. `cd backend/`  2. `./mvnw spring-boot:run -Dspring-boot.run.arguments="--dingtalk.clientId=your app clientId --dingtalk.clientSecret=your app clientSecret --dingtalk.agentId=your app agentId"`  **[!NOTE]**  你需要替换 clientId 和 clientSecret：  - Client ID，详情参考[Client ID](0001-basic-concepts-beta.md#section-pje-9wf-l7c)。 - Client Secret，详情参考 [Client Secret](0001-basic-concepts-beta.md#section-pje-9wf-l7c)。 - Agent ID，详情参考[基础概念](0001-basic-concepts-beta.md#884d363067bnq)。 |
 4. 项目启动后，即可在钉钉工作台打开应用。本示例分别鉴权：
 
-   - [biz.contact.choose](../03-Ogu5SlPY4t-客户端JSAPI/0777-on-the-pc-select-the-person-in-the-enterprise.md)：PC 端选择企业内部的人
-   - [chooseChat](../03-Ogu5SlPY4t-客户端JSAPI/0318-jsapi-choose-chat.md)：PC 端选择会话
+   - [biz.contact.choose](../03-Ogu5SlPY4t-客户端-JSAPI/0772-on-the-pc-select-the-person-in-the-enterprise.md)：PC 端选择企业内部的人
+   - [chooseChat](../03-Ogu5SlPY4t-客户端-JSAPI/0318-jsapi-choose-chat.md)：PC 端选择会话
 
      > 钉钉客户端使用一段式，例如：chooseChat， dingtalk-jsapi SDK 版本至少为3.0.27。
 
@@ -286,16 +286,16 @@ updated_at: "2026-07-22 16:55:18"
 
 确保服务端开发者已完成以下操作：
 
-1. 调用[获取第三方应用授权企业的accessToken](../02-4a8AMF6u2A-服务端API/0034-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口，获取应用凭证 AccessToken。
+1. 调用[获取第三方应用授权企业的accessToken](../02-4a8AMF6u2A-服务端-API/0034-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口，获取应用凭证 AccessToken。
 
    > **[!NOTE]**
    >
    > 必须使用当前网页应用的参数获取access\_token。
-2. 根据应用凭证 AccessToken，调用[获取jsapiTicket](../02-4a8AMF6u2A-服务端API/0039-create-a-jsapi-ticket.md)接口，获取返回参数`jsapiTicket`字段值。
+2. 根据应用凭证 AccessToken，调用[获取jsapiTicket](../02-4a8AMF6u2A-服务端-API/0039-create-a-jsapi-ticket.md)接口，获取返回参数`jsapiTicket`字段值。
 
    > **[!NOTE]**
    >
-   > 获取 jsapiTicket 后，如果 jsapiTicket 尚未过期，再次调用[获取jsapiTicket](../02-4a8AMF6u2A-服务端API/0039-create-a-jsapi-ticket.md)接口时，返回的 jsapiTicket 值与之前的相同，只是续期了 2 小时。需要注意的是，从 jsapiTicket 生成起，最大过期时间为 24 小时，即使续期后，最大过期时间仍从 jsapiTicket 生成起计算。
+   > 获取 jsapiTicket 后，如果 jsapiTicket 尚未过期，再次调用[获取jsapiTicket](../02-4a8AMF6u2A-服务端-API/0039-create-a-jsapi-ticket.md)接口时，返回的 jsapiTicket 值与之前的相同，只是续期了 2 小时。需要注意的是，从 jsapiTicket 生成起，最大过期时间为 24 小时，即使续期后，最大过期时间仍从 jsapiTicket 生成起计算。
    >
    > > 例如：当你早上 9 点，生成一个 jsapiTicket 时，即使一直续期，第二天早上9点，jsapiTicket 也会过期，需要重新生成一个新的 jsapiTicket。
 3. 根据 jsapiTicket，计算签名 signature 字段，计算签名的各项参数如下：

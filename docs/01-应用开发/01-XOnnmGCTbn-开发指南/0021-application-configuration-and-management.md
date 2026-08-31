@@ -1,18 +1,18 @@
 ---
 title: "常见问题"
-source_url: "https://open.dingtalk.com/document/development/application-configuration-and-management"
-namespace: "development"
+source_url: "https://open.dingtalk.com/document/dingstart/application-configuration-and-management"
+namespace: "dingstart"
 slug: "application-configuration-and-management"
 group: "应用开发"
 tab: "开发指南"
 breadcrumb: "开发指南 > 常见问题"
 doc_id: "upqtJLeKX6"
-updated_at: "2026-07-22 16:31:51"
+updated_at: "2026-08-28 11:29:20"
 ---
 
-> Source: https://open.dingtalk.com/document/development/application-configuration-and-management
+> Source: https://open.dingtalk.com/document/dingstart/application-configuration-and-management
 > Path: 应用开发 / 开发指南 / 开发指南 > 常见问题
-> Updated: 2026-07-22 16:31:51
+> Updated: 2026-08-28 11:29:20
 
 # 常见问题
 

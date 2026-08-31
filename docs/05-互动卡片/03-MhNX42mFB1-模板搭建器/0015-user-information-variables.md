@@ -7,12 +7,12 @@ group: "互动卡片"
 tab: "模板搭建器"
 breadcrumb: "变量协议 > 用户信息变量"
 doc_id: "jFSHqtFTX4"
-updated_at: "2025-10-09 18:05:18"
+updated_at: "2026-08-28 10:26:12"
 ---
 
 > Source: https://open.dingtalk.com/document/development/user-information-variables
 > Path: 互动卡片 / 模板搭建器 / 变量协议 > 用户信息变量
-> Updated: 2025-10-09 18:05:18
+> Updated: 2026-08-28 10:26:12
 
 # 用户信息变量
 

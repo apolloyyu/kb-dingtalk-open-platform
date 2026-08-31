@@ -1,7 +1,7 @@
-# 应用开发 / 服务端API · 功能域索引
+# 应用开发 / 服务端 API · 功能域索引
 
-> 1876 篇，按官方目录第一级拆为 35 个功能域。REST OpenAPI 全集（新版 api.dingtalk.com 与旧版 oapi.dingtalk.com）：通讯录、消息、文档、审批、考勤、日程等功能域。
-> 找具体接口优先用 `graph/`（api/errcode/event/permission 四张表）；全文检索 `rg 关键词 docs/01-应用开发/02-4a8AMF6u2A-服务端API/`。
+> 1876 篇，按官方目录第一级拆为 35 个功能域。。
+> 找具体接口优先用 `graph/`（api/errcode/event/permission 四张表）；全文检索 `rg 关键词 docs/01-应用开发/02-4a8AMF6u2A-服务端-API/`。
 >
 > 标记：`⚠归档` = 历史文档/不推荐（接口多数仍可调用，但优先用现行版）；`◇边缘` = 商务/运营/端侧等非开发答疑内容。
 

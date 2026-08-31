@@ -1,0 +1,622 @@
+---
+title: "数据集成培训学习记录同步"
+source_url: "https://open.dingtalk.com/document/development/api-hrbrainimporttraining"
+namespace: "development"
+slug: "api-hrbrainimporttraining"
+group: "应用开发"
+tab: "服务端 API"
+breadcrumb: "组织大脑 > 数据集成 > 经历与档案 > 数据集成培训学习记录同步"
+doc_id: "Jat6FXihhT"
+updated_at: "2026-06-02 19:28:36"
+---
+
+> Source: https://open.dingtalk.com/document/development/api-hrbrainimporttraining
+> Path: 应用开发 / 服务端 API / 组织大脑 > 数据集成 > 经历与档案 > 数据集成培训学习记录同步
+> Updated: 2026-06-02 19:28:36
+
+# 数据集成培训学习记录同步
+
+调用本接口，人员培训学习记录同步至组织大脑，支持批量同步。
+
+## 请求
+
+### 基本信息
+
+| 字段 | 值 |
+| --- | --- |
+| HTTP URL | https://api.dingtalk.com/v1.0/hrbrain/datas/trainings/import |
+| HTTP Method | POST |
+| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
+| 权限要求 | permission-Hrbrain.Import.Write-组织大脑数据集成写入权限 |
+
+### 请求头
+
+| 名称 | 类型 | 是否必填 | 描述 |
+| --- | --- | --- | --- |
+| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，通过以下获取：   - 企业内部应用，调用[获取企业内部应用的accessToken](0033-obtain-the-access-token-of-an-internal-app.md)接口获取。 - 第三方企业应用，调用[获取第三方应用授权企业的accessToken](0034-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口获取。 |
+
+### 查询参数
+
+| 名称 | 类型 | 是否必填 | 描述 |
+| --- | --- | --- | --- |
+| corpId | String | 是 | 组织编码。 |
+
+### 请求体
+
+| 名称 | 类型 | 是否必填 | 描述 |
+| --- | --- | --- | --- |
+|  | Array | 否 | 数据集。 |
+| deptName | String | 否 | 学习培训时部门名称。 |
+| deptNo | String | 否 | 学习培训时部门ID。 |
+| extendInfo | Map | 否 | 额外信息，可不传。 |
+| jobCodeName | String | 否 | 学习培训时职务。 |
+| jobLevel | String | 否 | 学习培训时职级。 |
+| name | String | 否 | 姓名。 |
+| postName | String | 否 | 学习培训时职位。 |
+| trainEndDate | String | 是 | 学习培训结束时间。 |
+| trainName | String | 是 | 学习培训名称。 |
+| trainStartDate | String | 是 | 学习培训开始时间。 |
+| workNo | String | 是 | 钉钉用户UserId。 |
+| certifCnt | String | 否 | 培训时获得证书数 |
+| creditScore | String | 否 | 培训分数 |
+
+### 请求示例
+
+HTTP
+
+```
+POST /v1.0/hrbrain/datas/trainings/import?corpId=ding3b*********88 HTTP/1.1
+Host:api.dingtalk.com
+x-acs-dingtalk-access-token:480021443f9f37fcbf464c4a6b85d299
+Content-Type:application/json
+
+[ {
+  "deptName" : "测试部",
+  "deptNo" : "2344325",
+  "jobCodeName" : "经理",
+  "jobLevel" : "P5",
+  "name" : "张三",
+  "postName" : "研发",
+  "trainEndDate" : "2024-02-03",
+  "trainName" : "基础培训",
+  "trainStartDate" : "2024-01-01",
+  "workNo" : "239847328",
+  "certifCnt" : "5",
+  "creditScore" : "90"
+} ]
+```
+
+Java
+
+```
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sample;
+
+import com.aliyun.tea.*;
+
+public class Sample {
+
+    /**
+     * <b>description</b> :
+     * <p>使用 Token 初始化账号Client</p>
+     * @return Client
+     * 
+     * @throws Exception
+     */
+    public static com.aliyun.dingtalkhrbrain_1_0.Client createClient() throws Exception {
+        com.aliyun.teaopenapi.models.Config config = new com.aliyun.teaopenapi.models.Config();
+        config.protocol = "https";
+        config.regionId = "central";
+        return new com.aliyun.dingtalkhrbrain_1_0.Client(config);
+    }
+
+    public static void main(String[] args_) throws Exception {
+        java.util.List<String> args = java.util.Arrays.asList(args_);
+        com.aliyun.dingtalkhrbrain_1_0.Client client = Sample.createClient();
+        com.aliyun.dingtalkhrbrain_1_0.models.HrbrainImportTrainingHeaders hrbrainImportTrainingHeaders = new com.aliyun.dingtalkhrbrain_1_0.models.HrbrainImportTrainingHeaders();
+        hrbrainImportTrainingHeaders.xAcsDingtalkAccessToken = "<your access token>";
+        com.aliyun.dingtalkhrbrain_1_0.models.HrbrainImportTrainingRequest.HrbrainImportTrainingRequestBody body0 = new com.aliyun.dingtalkhrbrain_1_0.models.HrbrainImportTrainingRequest.HrbrainImportTrainingRequestBody()
+                .setDeptName("测试部")
+                .setDeptNo("2344325")
+                .setJobCodeName("经理")
+                .setJobLevel("P5")
+                .setName("张三")
+                .setPostName("研发")
+                .setTrainEndDate("2024-02-03")
+                .setTrainName("基础培训")
+                .setTrainStartDate("2024-01-01")
+                .setWorkNo("239847328")
+                .setCertifCnt("5")
+                .setCreditScore("90");
+        com.aliyun.dingtalkhrbrain_1_0.models.HrbrainImportTrainingRequest hrbrainImportTrainingRequest = new com.aliyun.dingtalkhrbrain_1_0.models.HrbrainImportTrainingRequest()
+                .setCorpId("ding3b*********88")
+                .setBody(java.util.Arrays.asList(
+                    body0
+                ));
+        try {
+            client.hrbrainImportTrainingWithOptions(hrbrainImportTrainingRequest, hrbrainImportTrainingHeaders, new com.aliyun.teautil.models.RuntimeOptions());
+        } catch (TeaException err) {
+            if (!com.aliyun.teautil.Common.empty(err.code) && !com.aliyun.teautil.Common.empty(err.message)) {
+                // err 中含有 code 和 message 属性，可帮助开发定位问题
+            }
+
+        } catch (Exception _err) {
+            TeaException err = new TeaException(_err.getMessage(), _err);
+            if (!com.aliyun.teautil.Common.empty(err.code) && !com.aliyun.teautil.Common.empty(err.message)) {
+                // err 中含有 code 和 message 属性，可帮助开发定位问题
+            }
+
+        }        
+    }
+}
+```
+
+Python
+
+```
+# -*- coding: utf-8 -*-
+# This file is auto-generated, don't edit it. Thanks.
+import os
+import sys
+
+from typing import List
+
+from alibabacloud_dingtalk.hrbrain_1_0.client import Client as dingtalkhrbrain_1_0Client
+from alibabacloud_tea_openapi import models as open_api_models
+from alibabacloud_dingtalk.hrbrain_1_0 import models as dingtalkhrbrain__1__0_models
+from alibabacloud_tea_util import models as util_models
+from alibabacloud_tea_util.client import Client as UtilClient
+
+class Sample:
+    def __init__(self):
+        pass
+
+    @staticmethod
+    def create_client() -> dingtalkhrbrain_1_0Client:
+        """
+        使用 Token 初始化账号Client
+        @return: Client
+        @throws Exception
+        """
+        config = open_api_models.Config()
+        config.protocol = 'https'
+        config.region_id = 'central'
+        return dingtalkhrbrain_1_0Client(config)
+
+    @staticmethod
+    def main(
+        args: List[str],
+    ) -> None:
+        client = Sample.create_client()
+        hrbrain_import_training_headers = dingtalkhrbrain__1__0_models.HrbrainImportTrainingHeaders()
+        hrbrain_import_training_headers.x_acs_dingtalk_access_token = '<your access token>'
+        body_0 = dingtalkhrbrain__1__0_models.HrbrainImportTrainingRequestBody(
+            dept_name='测试部',
+            dept_no='2344325',
+            job_code_name='经理',
+            job_level='P5',
+            name='张三',
+            post_name='研发',
+            train_end_date='2024-02-03',
+            train_name='基础培训',
+            train_start_date='2024-01-01',
+            work_no='239847328',
+            certif_cnt='5',
+            credit_score='90'
+        )
+        hrbrain_import_training_request = dingtalkhrbrain__1__0_models.HrbrainImportTrainingRequest(
+            corp_id='ding3b*********88',
+            body=[
+                body_0
+            ]
+        )
+        try:
+            client.hrbrain_import_training_with_options(hrbrain_import_training_request, hrbrain_import_training_headers, util_models.RuntimeOptions())
+        except Exception as err:
+            if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
+                # err 中含有 code 和 message 属性，可帮助开发定位问题
+                pass
+
+    @staticmethod
+    async def main_async(
+        args: List[str],
+    ) -> None:
+        client = Sample.create_client()
+        hrbrain_import_training_headers = dingtalkhrbrain__1__0_models.HrbrainImportTrainingHeaders()
+        hrbrain_import_training_headers.x_acs_dingtalk_access_token = '<your access token>'
+        body_0 = dingtalkhrbrain__1__0_models.HrbrainImportTrainingRequestBody(
+            dept_name='测试部',
+            dept_no='2344325',
+            job_code_name='经理',
+            job_level='P5',
+            name='张三',
+            post_name='研发',
+            train_end_date='2024-02-03',
+            train_name='基础培训',
+            train_start_date='2024-01-01',
+            work_no='239847328',
+            certif_cnt='5',
+            credit_score='90'
+        )
+        hrbrain_import_training_request = dingtalkhrbrain__1__0_models.HrbrainImportTrainingRequest(
+            corp_id='ding3b*********88',
+            body=[
+                body_0
+            ]
+        )
+        try:
+            await client.hrbrain_import_training_with_options_async(hrbrain_import_training_request, hrbrain_import_training_headers, util_models.RuntimeOptions())
+        except Exception as err:
+            if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
+                # err 中含有 code 和 message 属性，可帮助开发定位问题
+                pass
+
+if __name__ == '__main__':
+    Sample.main(sys.argv[1:])
+```
+
+PHP
+
+```
+<?php
+
+// This file is auto-generated, don't edit it. Thanks.
+namespace AlibabaCloud\SDK\Sample;
+
+use AlibabaCloud\SDK\Dingtalk\Vhrbrain_1_0\Dingtalk;
+use \Exception;
+use AlibabaCloud\Tea\Exception\TeaError;
+use AlibabaCloud\Tea\Utils\Utils;
+
+use Darabonba\OpenApi\Models\Config;
+use AlibabaCloud\SDK\Dingtalk\Vhrbrain_1_0\Models\HrbrainImportTrainingHeaders;
+use AlibabaCloud\SDK\Dingtalk\Vhrbrain_1_0\Models\HrbrainImportTrainingRequest\body;
+use AlibabaCloud\SDK\Dingtalk\Vhrbrain_1_0\Models\HrbrainImportTrainingRequest;
+use AlibabaCloud\Tea\Utils\Utils\RuntimeOptions;
+
+class Sample {
+
+    /**
+     * 使用 Token 初始化账号Client
+     * @return Dingtalk Client
+     */
+    public static function createClient(){
+        $config = new Config([]);
+        $config->protocol = "https";
+        $config->regionId = "central";
+        return new Dingtalk($config);
+    }
+
+    /**
+     * @param string[] $args
+     * @return void
+     */
+    public static function main($args){
+        $client = self::createClient();
+        $hrbrainImportTrainingHeaders = new HrbrainImportTrainingHeaders([]);
+        $hrbrainImportTrainingHeaders->xAcsDingtalkAccessToken = "<your access token>";
+        $body0 = new body([
+            "deptName" => "测试部",
+            "deptNo" => "2344325",
+            "jobCodeName" => "经理",
+            "jobLevel" => "P5",
+            "name" => "张三",
+            "postName" => "研发",
+            "trainEndDate" => "2024-02-03",
+            "trainName" => "基础培训",
+            "trainStartDate" => "2024-01-01",
+            "workNo" => "239847328",
+            "certifCnt" => "5",
+            "creditScore" => "90"
+        ]);
+        $hrbrainImportTrainingRequest = new HrbrainImportTrainingRequest([
+            "corpId" => "ding3b*********88",
+            "body" => [
+                $body0
+            ]
+        ]);
+        try {
+            $client->hrbrainImportTrainingWithOptions($hrbrainImportTrainingRequest, $hrbrainImportTrainingHeaders, new RuntimeOptions([]));
+        }
+        catch (Exception $err) {
+            if (!($err instanceof TeaError)) {
+                $err = new TeaError([], $err->getMessage(), $err->getCode(), $err);
+            }
+            if (!Utils::empty_($err->code) && !Utils::empty_($err->message)) {
+                // err 中含有 code 和 message 属性，可帮助开发定位问题
+            }
+        }
+    }
+}
+$path = __DIR__ . \DIRECTORY_SEPARATOR . '..' . \DIRECTORY_SEPARATOR . 'vendor' . \DIRECTORY_SEPARATOR . 'autoload.php';
+if (file_exists($path)) {
+    require_once $path;
+}
+Sample::main(array_slice($argv, 1));
+```
+
+Go
+
+```
+// This file is auto-generated, don't edit it. Thanks.
+package main
+
+import (
+  "encoding/json"
+  "strings"
+  "fmt"
+  "os"
+  util  "github.com/alibabacloud-go/tea-utils/v2/service"
+  dingtalkhrbrain_1_0  "github.com/alibabacloud-go/dingtalk/hrbrain_1_0"
+  openapi  "github.com/alibabacloud-go/darabonba-openapi/v2/client"
+  "github.com/alibabacloud-go/tea/tea"
+)
+
+// Description:
+// 
+// 使用 Token 初始化账号Client
+// 
+// @return Client
+// 
+// @throws Exception
+func CreateClient () (_result *dingtalkhrbrain_1_0.Client, _err error) {
+  config := &openapi.Config{}
+  config.Protocol = tea.String("https")
+  config.RegionId = tea.String("central")
+  _result = &dingtalkhrbrain_1_0.Client{}
+  _result, _err = dingtalkhrbrain_1_0.NewClient(config)
+  return _result, _err
+}
+
+func _main (args []*string) (_err error) {
+  client, _err := CreateClient()
+  if _err != nil {
+    return _err
+  }
+
+  hrbrainImportTrainingHeaders := &dingtalkhrbrain_1_0.HrbrainImportTrainingHeaders{}
+  hrbrainImportTrainingHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
+  body0 := &dingtalkhrbrain_1_0.HrbrainImportTrainingRequestBody{
+    DeptName: tea.String("测试部"),
+    DeptNo: tea.String("2344325"),
+    JobCodeName: tea.String("经理"),
+    JobLevel: tea.String("P5"),
+    Name: tea.String("张三"),
+    PostName: tea.String("研发"),
+    TrainEndDate: tea.String("2024-02-03"),
+    TrainName: tea.String("基础培训"),
+    TrainStartDate: tea.String("2024-01-01"),
+    WorkNo: tea.String("239847328"),
+    CertifCnt: tea.String("5"),
+    CreditScore: tea.String("90"),
+  }
+  hrbrainImportTrainingRequest := &dingtalkhrbrain_1_0.HrbrainImportTrainingRequest{
+    CorpId: tea.String("ding3b*********88"),
+    Body: []*dingtalkhrbrain_1_0.HrbrainImportTrainingRequestBody{body0},
+  }
+  tryErr := func()(_e error) {
+    defer func() {
+      if r := tea.Recover(recover()); r != nil {
+        _e = r
+      }
+    }()
+    _, _err = client.HrbrainImportTrainingWithOptions(hrbrainImportTrainingRequest, hrbrainImportTrainingHeaders, &util.RuntimeOptions{})
+    if _err != nil {
+      return _err
+    }
+
+    return nil
+  }()
+
+  if tryErr != nil {
+    var err = &tea.SDKError{}
+    if _t, ok := tryErr.(*tea.SDKError); ok {
+      err = _t
+    } else {
+      err.Message = tea.String(tryErr.Error())
+    }
+    if !tea.BoolValue(util.Empty(err.Code)) && !tea.BoolValue(util.Empty(err.Message)) {
+      // err 中含有 code 和 message 属性，可帮助开发定位问题
+    }
+
+  }
+  return _err
+}
+
+func main() {
+  err := _main(tea.StringSlice(os.Args[1:]))
+  if err != nil {
+    panic(err)
+  }
+}
+```
+
+Node.js
+
+```
+'use strict';
+// This file is auto-generated, don't edit it
+const Util = require('@alicloud/tea-util');
+const dingtalkhrbrain_1_0 = require('@alicloud/dingtalk/hrbrain_1_0');
+const OpenApi = require('@alicloud/openapi-client');
+const Tea = require('@alicloud/tea-typescript');
+
+class Client {
+
+  /**
+   * 使用 Token 初始化账号Client
+   * @return Client
+   * @throws Exception
+   */
+  static createClient() {
+    let config = new OpenApi.Config({ });
+    config.protocol = 'https';
+    config.regionId = 'central';
+    return new dingtalkhrbrain_1_0.default(config);
+  }
+
+  static async main(args) {
+    let client = Client.createClient();
+    let hrbrainImportTrainingHeaders = new dingtalkhrbrain_1_0.HrbrainImportTrainingHeaders({ });
+    hrbrainImportTrainingHeaders.xAcsDingtalkAccessToken = '<your access token>';
+    let body0 = new dingtalkhrbrain_1_0.HrbrainImportTrainingRequestBody({
+      deptName: '测试部',
+      deptNo: '2344325',
+      jobCodeName: '经理',
+      jobLevel: 'P5',
+      name: '张三',
+      postName: '研发',
+      trainEndDate: '2024-02-03',
+      trainName: '基础培训',
+      trainStartDate: '2024-01-01',
+      workNo: '239847328',
+      certifCnt: '5',
+      creditScore: '90',
+    });
+    let hrbrainImportTrainingRequest = new dingtalkhrbrain_1_0.HrbrainImportTrainingRequest({
+      corpId: 'ding3b*********88',
+      body: [
+        body0
+      ],
+    });
+    try {
+      await client.hrbrainImportTrainingWithOptions(hrbrainImportTrainingRequest, hrbrainImportTrainingHeaders, new Util.RuntimeOptions({ }));
+    } catch (err) {
+      if (!Util.default.empty(err.code) && !Util.default.empty(err.message)) {
+        // err 中含有 code 和 message 属性，可帮助开发定位问题
+      }
+
+    }    
+  }
+
+}
+
+exports.Client = Client;
+Client.main(process.argv.slice(2));
+```
+
+C#
+
+```
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using System.Threading.Tasks;
+
+using Tea;
+using Tea.Utils;
+
+namespace AlibabaCloud.SDK.Sample
+{
+    public class Sample 
+    {
+
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用 Token 初始化账号Client</para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// Client
+        /// </returns>
+        /// 
+        /// <term><b>Exception:</b></term>
+        /// Exception
+        public static AlibabaCloud.SDK.Dingtalkhrbrain_1_0.Client CreateClient()
+        {
+            AlibabaCloud.OpenApiClient.Models.Config config = new AlibabaCloud.OpenApiClient.Models.Config();
+            config.Protocol = "https";
+            config.RegionId = "central";
+            return new AlibabaCloud.SDK.Dingtalkhrbrain_1_0.Client(config);
+        }
+
+        public static void Main(string[] args)
+        {
+            AlibabaCloud.SDK.Dingtalkhrbrain_1_0.Client client = CreateClient();
+            AlibabaCloud.SDK.Dingtalkhrbrain_1_0.Models.HrbrainImportTrainingHeaders hrbrainImportTrainingHeaders = new AlibabaCloud.SDK.Dingtalkhrbrain_1_0.Models.HrbrainImportTrainingHeaders();
+            hrbrainImportTrainingHeaders.XAcsDingtalkAccessToken = "<your access token>";
+            AlibabaCloud.SDK.Dingtalkhrbrain_1_0.Models.HrbrainImportTrainingRequest.HrbrainImportTrainingRequestBody body0 = new AlibabaCloud.SDK.Dingtalkhrbrain_1_0.Models.HrbrainImportTrainingRequest.HrbrainImportTrainingRequestBody
+            {
+                DeptName = "测试部",
+                DeptNo = "2344325",
+                JobCodeName = "经理",
+                JobLevel = "P5",
+                Name = "张三",
+                PostName = "研发",
+                TrainEndDate = "2024-02-03",
+                TrainName = "基础培训",
+                TrainStartDate = "2024-01-01",
+                WorkNo = "239847328",
+                CertifCnt = "5",
+                CreditScore = "90",
+            };
+            AlibabaCloud.SDK.Dingtalkhrbrain_1_0.Models.HrbrainImportTrainingRequest hrbrainImportTrainingRequest = new AlibabaCloud.SDK.Dingtalkhrbrain_1_0.Models.HrbrainImportTrainingRequest
+            {
+                CorpId = "ding3b*********88",
+                Body = new List<AlibabaCloud.SDK.Dingtalkhrbrain_1_0.Models.HrbrainImportTrainingRequest.HrbrainImportTrainingRequestBody>
+                {
+                    body0
+                },
+            };
+            try
+            {
+                client.HrbrainImportTrainingWithOptions(hrbrainImportTrainingRequest, hrbrainImportTrainingHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
+            }
+            catch (TeaException err)
+            {
+                if (!AlibabaCloud.TeaUtil.Common.Empty(err.Code) && !AlibabaCloud.TeaUtil.Common.Empty(err.Message))
+                {
+                    // err 中含有 code 和 message 属性，可帮助开发定位问题
+                }
+            }
+            catch (Exception _err)
+            {
+                TeaException err = new TeaException(new Dictionary<string, object>
+                {
+                    { "message", _err.Message }
+                });
+                if (!AlibabaCloud.TeaUtil.Common.Empty(err.Code) && !AlibabaCloud.TeaUtil.Common.Empty(err.Message))
+                {
+                    // err 中含有 code 和 message 属性，可帮助开发定位问题
+                }
+            }
+        }
+
+    }
+}
+```
+
+## 响应
+
+### 响应体
+
+| 名称 | 类型 | 描述 |
+| --- | --- | --- |
+| requestId | String | 请求ID。 |
+| result | Boolean | 删除是否成功。 |
+| success | Boolean | 接口调用是否成功。 |
+
+### 响应体示例
+
+```
+HTTP/1.1 200 OK
+Content-Type:application/json
+
+{
+  "requestId" : "480021443f9f37fcbf464c4a6b85d289",
+  "result" : true,
+  "success" : true
+}
+```
+
+### 错误码
+
+若调用该接口报错，可根据错误信息在[全局错误码](0013-server-api-error-codes-1.md)文档中查找解决方案。
+
+| HttpCode | 错误码 | 错误信息 | 说明 |
+| --- | --- | --- | --- |
+| 400 | serviceError | service error. %s | 执行异常 |
+| 401 | paramIllegal | param illegal. %s | 入参错误 |

@@ -26,7 +26,7 @@ OA数据表单同步到宜搭可以为很多行业带来重大意义，特别是
 
 1. 拥有所在钉钉组织开发者后台的[开发者权限](../../01-应用开发/01-XOnnmGCTbn-开发指南/0006-get-developer-permissions.md)。
 2. 已开通[钉钉专业版](dingtalk://dingtalkclient/page/link?url=https%3A%2F%2Fn.dingtalk.com%2Fdingding%2Fdd-pro-composite-order%2Fpc%2Findex.html%3Fpopup_wnd%3Dtrue%26dd_tab%3Dtrue%26width%3D900%26height%3D600%26title%3D%25E9%2592%2589%25E9%2592%2589%25E6%2595%25B0%25E5%25AD%2597%25E8%25B5%2584%25E4%25BA%25A7%26articleCode%3DDT_GOODS_dingtalkmemberplus%26channel%3Dopenpf_web_devdoc%26corpId%3D${corpId}%26accessoryProduct%3DpaasWithConnector%26tabKey%3DDT_GOODS_dingtalkmemberplus&popup_wnd=true&height=600&width=900)（OA审批中使用连接器必备）。
-3. 拥有一个所在组织的[宜搭应用](../../01-应用开发/02-4a8AMF6u2A-服务端API/0368-yida-faq.md#7b1f6070ebwcc)。
+3. 拥有一个所在组织的[宜搭应用](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0368-yida-faq.md#7b1f6070ebwcc)。
 
 ## **预期效果**
 
@@ -36,7 +36,7 @@ OA审批数据表单提交后，同步至宜搭数据表单。
 
 ## **步骤一：创建宜搭数据表单**
 
-- 如果无宜搭数据表单，详情参见[如何创建流程表单？](../../01-应用开发/02-4a8AMF6u2A-服务端API/0368-yida-faq.md#fc88b0c0ebdtm)。
+- 如果无宜搭数据表单，详情参见[如何创建流程表单？](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0368-yida-faq.md#fc88b0c0ebdtm)。
 
   > **[!NOTE]**
   >

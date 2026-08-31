@@ -161,7 +161,7 @@ Webhook 数据同步自动化流程可以让"数据主动找你"成为现实！
   | msgtype | String | 是 | 消息类型，此时固定为：link。 |
   | title | String | 是 | 消息标题。 |
   | text | String | 是 | 消息内容。如果太长只会部分展示。 |
-  | messageUrl | String | 是 | 点击消息跳转的URL，打开方式如下：  - 移动端，在钉钉客户端内打开 - PC端    - 默认侧边栏打开   - 希望在外部浏览器打开，详情可参考[消息链接说明](../../01-应用开发/02-4a8AMF6u2A-服务端API/0776-message-link-description.md)。 |
+  | messageUrl | String | 是 | 点击消息跳转的URL，打开方式如下：  - 移动端，在钉钉客户端内打开 - PC端    - 默认侧边栏打开   - 希望在外部浏览器打开，详情可参考[消息链接说明](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0776-message-link-description.md)。 |
   | picUrl | String | 否 | 图片URL。 |
 
 ### **Markdown类型**
@@ -265,7 +265,7 @@ Webhook 数据同步自动化流程可以让"数据主动找你"成为现实！
   | title | String | 是 | 首屏会话透出的展示内容。 |
   | text | String | 是 | markdown格式的消息。 |
   | singleTitle | String | 是 | 单个按钮的标题。  **提示：**设置此项和singleURL后，btns无效。 |
-  | singleURL | String | 是 | 点击消息跳转的URL，打开方式如下：  - 移动端，在钉钉客户端内打开 - PC端    - 默认侧边栏打开   - 希望在外部浏览器打开，详情可参考[消息链接说明](../../01-应用开发/02-4a8AMF6u2A-服务端API/0776-message-link-description.md)。 |
+  | singleURL | String | 是 | 点击消息跳转的URL，打开方式如下：  - 移动端，在钉钉客户端内打开 - PC端    - 默认侧边栏打开   - 希望在外部浏览器打开，详情可参考[消息链接说明](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0776-message-link-description.md)。 |
   | btnOrientation | String | 否 | 0：按钮竖直排列  1：按钮横向排列 |
 
 #### **独立跳转**
@@ -303,7 +303,7 @@ Webhook 数据同步自动化流程可以让"数据主动找你"成为现实！
   | title | String | 是 | 首屏会话透出的展示内容。 |
   | text | String | 是 | markdown格式的消息。 |
   | singleTitle | String | 是 | 单个按钮的标题。  **提示：**设置此项和singleURL后，btns无效。 |
-  | singleURL | String | 是 | 点击消息跳转的URL，打开方式如下：  - 移动端，在钉钉客户端内打开 - PC端    - 默认侧边栏打开   - 希望在外部浏览器打开，详情可参考[消息链接说明](../../01-应用开发/02-4a8AMF6u2A-服务端API/0776-message-link-description.md)。 |
+  | singleURL | String | 是 | 点击消息跳转的URL，打开方式如下：  - 移动端，在钉钉客户端内打开 - PC端    - 默认侧边栏打开   - 希望在外部浏览器打开，详情可参考[消息链接说明](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0776-message-link-description.md)。 |
   | btnOrientation | String | 否 | 0：按钮竖直排列  1：按钮横向排列 |
 
 ### **FeedCard类型**
@@ -338,5 +338,5 @@ Webhook 数据同步自动化流程可以让"数据主动找你"成为现实！
   | --- | --- | --- | --- |
   | msgtype | String | 是 | 此消息类型为固定feedCard。 |
   | title | String | 是 | 单条信息文本。 |
-  | messageURL | String | 是 | 点击单条信息到跳转链接。    **说明**  PC端跳转目标页面的方式，详情可参考[消息链接在PC端侧边栏或者外部浏览器打开](../../01-应用开发/02-4a8AMF6u2A-服务端API/0776-message-link-description.md)。 |
+  | messageURL | String | 是 | 点击单条信息到跳转链接。    **说明**  PC端跳转目标页面的方式，详情可参考[消息链接在PC端侧边栏或者外部浏览器打开](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0776-message-link-description.md)。 |
   | picURL | String | 是 | 单条信息后面图片的URL。 |

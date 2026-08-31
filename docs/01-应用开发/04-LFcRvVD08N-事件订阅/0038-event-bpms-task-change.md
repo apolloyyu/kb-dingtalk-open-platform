@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "办公 > OA审批 > 审批任务开始，结束，转交"
 doc_id: "UVpm3LGZsj"
-updated_at: "2025-10-15 15:59:04"
+updated_at: "2026-08-28 10:26:32"
 ---
 
 > Source: https://open.dingtalk.com/document/development/event-bpms-task-change
 > Path: 应用开发 / 事件订阅 / 办公 > OA审批 > 审批任务开始，结束，转交
-> Updated: 2025-10-15 15:59:04
+> Updated: 2026-08-28 10:26:32
 
 # 审批任务开始，结束，转交
 

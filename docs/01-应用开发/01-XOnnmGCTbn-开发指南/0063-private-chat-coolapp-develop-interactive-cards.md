@@ -67,7 +67,7 @@ updated_at: "2026-07-22 16:55:22"
 1. 获取单应用机器人RobotCode。
 
    ![图片](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0521872871/p435248.png)
-2. 调用服务端API-[创建并投放卡片](../02-4a8AMF6u2A-服务端API/0783-create-and-deliver-cards.md)，实现互动卡片的发送。
+2. 调用服务端API-[创建并投放卡片](../02-4a8AMF6u2A-服务端-API/0783-create-and-deliver-cards.md)，实现互动卡片的发送。
 
    ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2250174871/p497652.png)
 
@@ -76,14 +76,14 @@ updated_at: "2026-07-22 16:55:22"
 1. 了[互动卡片高级版编辑器](https://open.dingtalk.com/document/download/interactive-card-editor)详细信息，通过[互动卡片高级版搭建平台](https://open.dingtalk.com/document/download/card-building-platform)创建吊顶卡片模板。
 
    ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0621872871/p1084375.png)
-2. 调用[创建并开启互动卡片吊顶](../02-4a8AMF6u2A-服务端API/0761-send-group-helper-message.md)接口，创建并开启卡片吊顶。
+2. 调用[创建并开启互动卡片吊顶](../02-4a8AMF6u2A-服务端-API/0761-send-group-helper-message.md)接口，创建并开启卡片吊顶。
 
    ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0621872871/p497654.png)
 
    > **[!NOTE]**
    >
    > 单聊应用在开启卡片吊顶时，需传参数应用编码**coolAppCode**。获取应用编码**coolAppCode**，请查看。
-3. 调用[关闭互动卡片吊顶](../02-4a8AMF6u2A-服务端API/0762-close-interactive-card-ceiling.md)接口，关闭卡片吊顶。
+3. 调用[关闭互动卡片吊顶](../02-4a8AMF6u2A-服务端-API/0762-close-interactive-card-ceiling.md)接口，关闭卡片吊顶。
 
 ## 注意事项
 

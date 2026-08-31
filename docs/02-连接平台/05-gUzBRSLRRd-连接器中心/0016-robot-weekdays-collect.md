@@ -70,7 +70,7 @@ updated_at: "2026-05-19 19:46:08"
 
         > *提醒来自温柔、可爱、贴心的钉三多～*
         ```
-      - **accessToken**：选择**输入值**，本示例填写：[机器人Webhook的access\_token值](../../01-应用开发/02-4a8AMF6u2A-服务端API/0791-faq-robot.md#cf081fe0c4jc1)。
+      - **accessToken**：选择**输入值**，本示例填写：[机器人Webhook的access\_token值](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0791-faq-robot.md#cf081fe0c4jc1)。
       - **标题**：选择**输入值**，本示例填写：日报。
 
       此时，单击**测试并预览，**就可以查看日报消息了。

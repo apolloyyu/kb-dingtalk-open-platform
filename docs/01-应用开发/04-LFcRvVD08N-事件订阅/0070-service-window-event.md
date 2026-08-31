@@ -29,7 +29,7 @@ updated_at: "2026-07-22 16:25:40"
 
 > **[!NOTE]**
 >
-> 服务窗事件回调，要求在服务窗自建应用中订阅，才可以正常接收回调信息。服务窗自建应用请参考[自建服务窗应用](../02-4a8AMF6u2A-服务端API/1279-self-built-service-window-application.md)。
+> 服务窗事件回调，要求在服务窗自建应用中订阅，才可以正常接收回调信息。服务窗自建应用请参考[自建服务窗应用](../02-4a8AMF6u2A-服务端-API/1279-self-built-service-window-application.md)。
 
 ## 支持应用类型
 

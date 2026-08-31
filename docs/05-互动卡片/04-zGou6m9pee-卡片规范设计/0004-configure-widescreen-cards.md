@@ -26,7 +26,7 @@ updated_at: "2026-05-19 15:23:41"
 
 ## **投放卡片时传参示例**
 
-调用接口[创建并投放卡片](../../01-应用开发/02-4a8AMF6u2A-服务端API/0783-create-and-deliver-cards.md)，传参 cardData：
+调用接口[创建并投放卡片](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0783-create-and-deliver-cards.md)，传参 cardData：
 
 Java
 

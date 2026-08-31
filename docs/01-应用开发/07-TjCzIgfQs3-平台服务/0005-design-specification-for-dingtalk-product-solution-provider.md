@@ -160,18 +160,18 @@ updated_at: "2026-08-19 09:15:24"
 
 | **API** | **使用场景** | **用户价值** | **开发文档** |
 | --- | --- | --- | --- |
-| 免登 | 统一钉钉账号登录，不允许在应用内要求用户输入登录凭据，不允许通过其他的账号体系登录。 | 统一完整的用户体验 | [免登概述](../02-4a8AMF6u2A-服务端API/0016-sso-overview.md) |
-| 内购 | 在应用内购买高级功能或者产品服务 | 统一购买渠道，安全有保障 | [应用内购](../02-4a8AMF6u2A-服务端API/0876-application-market-overview.md) |
-| 消息通知 | 应用内任务或状态变更，需要告知用户，在钉钉内发工作通知 | 在钉钉里接收所有应用的提醒 | [使用模板发送工作通知消息](../02-4a8AMF6u2A-服务端API/0774-work-notification-templating-send-notification-interface.md) |
-| 待办/工作流 | 应用内有审批或工作流 | 在钉钉里统一处理所有工作流，效率高，速度快，体验好 | [OA工作流概述](../02-4a8AMF6u2A-服务端API/0473-workflow-overview.md) |
-| 通讯录基础信息 | 获取成员在组织内部的基本信息 | 统一管理组织内用户信息 | [通讯录基础信息](../02-4a8AMF6u2A-服务端API/0056-query-user-details.md) |
-| 通讯录角色 | 获取成员在组织内部的角色 | 统一管理组织内用户信息 | [角色详情](../02-4a8AMF6u2A-服务端API/0090-queries-role-details.md) |
-| 通讯录权限 | 获取管理员在组织内部的权限范围 | 统一管理组织内用户信息 | [获取管理员通讯录权限范围](../02-4a8AMF6u2A-服务端API/0070-query-permissions-of-the-administrator-address-book.md) |
-| 外部联系人 | 获取组织的客户管理列表与详情 | 统一管理组织的客户/外部联系人 | [获取外部联系人列表](../02-4a8AMF6u2A-服务端API/0100-obtain-the-external-contact-list.md) |
-| 钉盘相关 | 上传文件、发送文件 | 在钉钉可以统一管理团队文件 | [钉盘](../02-4a8AMF6u2A-服务端API/0633-ding-drive-overview.md) |
-| 电话 | 拨打电话联系 | 拨打钉钉电话，使用智能办公电话 | [拨打钉钉电话](../03-Ogu5SlPY4t-客户端JSAPI/0810-call-dingtalk-h5.md)  [拨打钉钉电话](../03-Ogu5SlPY4t-客户端JSAPI/0736-call-dingtalk.md) |
-| 选人 | 通讯录选人 | 选择组织中的人或部门 | [微应用选择部门和人](../03-Ogu5SlPY4t-客户端JSAPI/0773-select-department-and-person.md)  [小程序选人与部门](../03-Ogu5SlPY4t-客户端JSAPI/0728-candidates-and-departments.md) |
-| DING | 发送紧急通知 | 通过DING发送紧急事项，可支持唤起DING、任务、会议 | [微应用发DING](../03-Ogu5SlPY4t-客户端JSAPI/0811-ding-2-0-hair-pin.md)  [小程序发DING](../03-Ogu5SlPY4t-客户端JSAPI/0735-ding-1.md) |
+| 免登 | 统一钉钉账号登录，不允许在应用内要求用户输入登录凭据，不允许通过其他的账号体系登录。 | 统一完整的用户体验 | [免登概述](../02-4a8AMF6u2A-服务端-API/0016-sso-overview.md) |
+| 内购 | 在应用内购买高级功能或者产品服务 | 统一购买渠道，安全有保障 | [应用内购](../02-4a8AMF6u2A-服务端-API/0876-application-market-overview.md) |
+| 消息通知 | 应用内任务或状态变更，需要告知用户，在钉钉内发工作通知 | 在钉钉里接收所有应用的提醒 | [使用模板发送工作通知消息](../02-4a8AMF6u2A-服务端-API/0774-work-notification-templating-send-notification-interface.md) |
+| 待办/工作流 | 应用内有审批或工作流 | 在钉钉里统一处理所有工作流，效率高，速度快，体验好 | [OA工作流概述](../02-4a8AMF6u2A-服务端-API/0473-workflow-overview.md) |
+| 通讯录基础信息 | 获取成员在组织内部的基本信息 | 统一管理组织内用户信息 | [通讯录基础信息](../02-4a8AMF6u2A-服务端-API/0056-query-user-details.md) |
+| 通讯录角色 | 获取成员在组织内部的角色 | 统一管理组织内用户信息 | [角色详情](../02-4a8AMF6u2A-服务端-API/0090-queries-role-details.md) |
+| 通讯录权限 | 获取管理员在组织内部的权限范围 | 统一管理组织内用户信息 | [获取管理员通讯录权限范围](../02-4a8AMF6u2A-服务端-API/0070-query-permissions-of-the-administrator-address-book.md) |
+| 外部联系人 | 获取组织的客户管理列表与详情 | 统一管理组织的客户/外部联系人 | [获取外部联系人列表](../02-4a8AMF6u2A-服务端-API/0100-obtain-the-external-contact-list.md) |
+| 钉盘相关 | 上传文件、发送文件 | 在钉钉可以统一管理团队文件 | [钉盘](../02-4a8AMF6u2A-服务端-API/0633-ding-drive-overview.md) |
+| 电话 | 拨打电话联系 | 拨打钉钉电话，使用智能办公电话 | [拨打钉钉电话](../03-Ogu5SlPY4t-客户端-JSAPI/0805-call-dingtalk-h5.md)  [拨打钉钉电话](../03-Ogu5SlPY4t-客户端-JSAPI/0731-call-dingtalk.md) |
+| 选人 | 通讯录选人 | 选择组织中的人或部门 | [微应用选择部门和人](../03-Ogu5SlPY4t-客户端-JSAPI/0768-select-department-and-person.md)  [小程序选人与部门](../03-Ogu5SlPY4t-客户端-JSAPI/0723-candidates-and-departments.md) |
+| DING | 发送紧急通知 | 通过DING发送紧急事项，可支持唤起DING、任务、会议 | [微应用发DING](../03-Ogu5SlPY4t-客户端-JSAPI/0806-ding-2-0-hair-pin.md)  [小程序发DING](../03-Ogu5SlPY4t-客户端-JSAPI/0730-ding-1.md) |
 
 ### **接入要求**
 

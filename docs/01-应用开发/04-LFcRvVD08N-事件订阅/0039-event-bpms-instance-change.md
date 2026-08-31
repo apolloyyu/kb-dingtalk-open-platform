@@ -39,8 +39,8 @@ updated_at: "2026-07-22 16:25:35"
 
 | 规则 | 描述 | 示例 | 说明 |
 | --- | --- | --- | --- |
-| `/v1.0/event/bpms_instance_change/bizCategoryId/{bizCategoryId}/processCode/{processCode}/type/{type}` | 针对某个业务分类下特定审批模板的实例开始、结束或终止事件进行订阅。 | `/v1.0/event/bpms_instance_change/bizCategoryId/{bizCategoryId}/processCode/{PROC-EA*F-885E-47AA-AEB9-8F59CB10E309}/type/start` | - bizCategoryId：审批表单所属的业务分类标识 - processCode：审批表单的唯一编码   详情参考[审批 ID 说明](../02-4a8AMF6u2A-服务端API/0473-workflow-overview.md)。 |
-| `/v1.0/event/bpms_instance_change/processCode/{processCode}/type/{type}` | 针对某个审批模板下的实例开始、结束或终止事件进行订阅。 | `/v1.0/event/bpms_instance_change/processCode/{PROC-EA*F-885E-47AA-AEB9-8F59CB10E309}/type/start` | - processCode：审批表单的唯一编码   详情参考[审批 ID 说明](../02-4a8AMF6u2A-服务端API/0473-workflow-overview.md)。 |
+| `/v1.0/event/bpms_instance_change/bizCategoryId/{bizCategoryId}/processCode/{processCode}/type/{type}` | 针对某个业务分类下特定审批模板的实例开始、结束或终止事件进行订阅。 | `/v1.0/event/bpms_instance_change/bizCategoryId/{bizCategoryId}/processCode/{PROC-EA*F-885E-47AA-AEB9-8F59CB10E309}/type/start` | - bizCategoryId：审批表单所属的业务分类标识 - processCode：审批表单的唯一编码   详情参考[审批 ID 说明](../02-4a8AMF6u2A-服务端-API/0473-workflow-overview.md)。 |
+| `/v1.0/event/bpms_instance_change/processCode/{processCode}/type/{type}` | 针对某个审批模板下的实例开始、结束或终止事件进行订阅。 | `/v1.0/event/bpms_instance_change/processCode/{PROC-EA*F-885E-47AA-AEB9-8F59CB10E309}/type/start` | - processCode：审批表单的唯一编码   详情参考[审批 ID 说明](../02-4a8AMF6u2A-服务端-API/0473-workflow-overview.md)。 |
 
 ### **OA审批****套件业务分类标识**
 

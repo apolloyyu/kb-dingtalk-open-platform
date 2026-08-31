@@ -676,6 +676,6 @@ java -jar target/**.jar --client_id="your-client-id" --client_secret="your-clien
 
 ## **相关内容**
 
-- [AI卡片流式更新](../../01-应用开发/02-4a8AMF6u2A-服务端API/0785-api-streamingupdate.md)
+- [AI卡片流式更新](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0785-api-streamingupdate.md)
 
 如果你需要了解更多互动卡片示例，请参考[互动卡片示例中心](https://github.com/open-dingtalk/dingtalk-card-examples)

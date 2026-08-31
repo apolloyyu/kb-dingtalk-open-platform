@@ -43,14 +43,14 @@ updated_at: "2026-06-30 09:00:31"
 
    > **[!NOTE]**
    >
-   > 项目初始化完成后，工具将自动加载项目结构，包括 `app.json`（全局配置）、`pages/`（页面目录）等标准文件夹或文件夹，小程序框架说明可参考[钉钉小程序框架](../03-Ogu5SlPY4t-客户端JSAPI/0436-mini-app-directory-structure-of-mini-programs.md)。
+   > 项目初始化完成后，工具将自动加载项目结构，包括 `app.json`（全局配置）、`pages/`（页面目录）等标准文件夹或文件夹，小程序框架说明可参考[钉钉小程序框架](../03-Ogu5SlPY4t-客户端-JSAPI/0431-mini-app-directory-structure-of-mini-programs.md)。
 
    ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/5552376671/p1037211.png)
 7. 使用前端框架编写小程序前端组件界面，实现小程序的交互和展示。
 
    > **[!NOTE]**
    >
-   > 你可以参考[小程序基础组件](../03-Ogu5SlPY4t-客户端JSAPI/0481-mini-app-dd-view-container.md)、和[钉钉设计开放资源](https://open.dingtalk.com/document/design_latest)引入样式和 UI 组件，设计小程序页面，提高用户体验。
+   > 你可以参考[小程序基础组件](../03-Ogu5SlPY4t-客户端-JSAPI/0476-mini-app-dd-view-container.md)、和[钉钉设计开放资源](https://open.dingtalk.com/document/design_latest)引入样式和 UI 组件，设计小程序页面，提高用户体验。
 8. 编写过程中，你可以随时在右侧进行预览。
 
    ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/5552376671/p1037213.png)

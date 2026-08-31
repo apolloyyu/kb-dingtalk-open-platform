@@ -25,7 +25,7 @@ updated_at: "2026-07-22 16:25:27"
 
 ## 功能描述
 
-数据为企业授权应用的最新状态，套件授权事件表示企业授权第三方企业应用。其中authCorpInfo， authInfo和authUserInfo三段结构信息请参考[获取企业授权信息](../02-4a8AMF6u2A-服务端API/0042-obtains-the-basic-information-of-an-enterprise.md)。authScope结构信息请参考[获取通讯录权限范围](../02-4a8AMF6u2A-服务端API/0053-obtain-corpsecret-authorization-scope.md)。
+数据为企业授权应用的最新状态，套件授权事件表示企业授权第三方企业应用。其中authCorpInfo， authInfo和authUserInfo三段结构信息请参考[获取企业授权信息](../02-4a8AMF6u2A-服务端-API/0042-obtains-the-basic-information-of-an-enterprise.md)。authScope结构信息请参考[获取通讯录权限范围](../02-4a8AMF6u2A-服务端-API/0053-obtain-corpsecret-authorization-scope.md)。
 
 ## 支持应用类型
 

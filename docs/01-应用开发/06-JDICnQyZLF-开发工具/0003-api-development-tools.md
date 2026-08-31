@@ -79,4 +79,4 @@ A：统计基于离线计算，默认延迟一天，最新仅能查看到昨日�
 A：可参考文档：
 
 - [新版接口错误码](https://open.dingtalk.com/document/development/error-code)
-- [旧版接口错误码](../02-4a8AMF6u2A-服务端API/0013-server-api-error-codes-1.md)
+- [旧版接口错误码](../02-4a8AMF6u2A-服务端-API/0013-server-api-error-codes-1.md)

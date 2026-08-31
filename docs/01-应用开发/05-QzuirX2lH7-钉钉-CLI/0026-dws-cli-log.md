@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "钉钉 CLI"
 breadcrumb: "更新日志"
 doc_id: "JqaPUpyWXl"
-updated_at: "2026-08-31 11:57:11"
+updated_at: "2026-08-31 14:38:04"
 ---
 
 > Source: https://open.dingtalk.com/document/development/dws-cli-log
 > Path: 应用开发 / 钉钉 CLI / 更新日志
-> Updated: 2026-08-31 11:57:11
+> Updated: 2026-08-31 14:38:04
 
 # 更新日志
 
@@ -160,21 +160,17 @@ AI 搜问与通讯录人员搜索统一走审核过的 `person` 数据源，�
 - 日程空窗查询、待办截止时间更新不再误报失败，日志"最新一篇"查找修复首个续页即失败；
 - 文档导入前先解析默认文档目标；评论表情回应收窄为钉钉官方表情名；命令拼写错误给出最多 3 个相近建议与父级 `--help` 入口。
 
-#### 重要兼容性变更
+#### **云盘旧版评论命令迁移**
 
-- **教育版/校园扩展命令移除**
+`dws drive comment create`/`list` 保留旧行为，新场景请改用 `create-v2`/`list-v2`。
 
-  `dws edu-contact`、`dws edu-group`、`dws edu-app`、`dws edu-familygroup`、`dws college-contact` 已从 CLI、Schema、内置 Skill 与开放版 MCP 端点注册表全面移除，后续版本不再提供。
-- **云盘旧版评论命令迁移**
+#### **日志提交必须显式指定接收人**
 
-  `dws drive comment create`/`list` 保留旧行为，新场景请改用 `create-v2`/`list-v2`。
-- **日志提交必须显式指定接收人**
+`dws report entry submit` 的 `--to-user-ids` 已变为必填，空接收人或纯分隔符在本地即拒绝。
 
-  `dws report entry submit` 的 `--to-user-ids` 已变为必填，空接收人或纯分隔符在本地即拒绝。
-
-  ```
-  dws report entry submit --to-user-ids <USER_ID_1>,<USER_ID_2> <其他原有参数>
-  ```
+```
+dws report entry submit --to-user-ids <USER_ID_1>,<USER_ID_2> <其他原有参数>
+```
 
 ## **2026-08-21**
 

@@ -14,8 +14,8 @@
 - 58 ← [服务端SDK下载](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0002-download-the-server-side-sdk.md)（服务端 API）
 - 50 ← [获取部门用户userid列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0065-query-the-list-of-department-userids.md)（服务端 API）
 - 47 ← [通过免登码获取用户信息](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0024-obtain-the-userid-of-a-user-by-using-the-log-free.md)（服务端 API）
+- 45 ← [获取开发者权限](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0006-get-developer-permissions.md)（开发指南）
 - 44 ← [基础概念](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md)（开发指南）
-- 44 ← [获取开发者权限](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0006-get-developer-permissions.md)（开发指南）
 - 44 ← [创建知识库文档](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0567-create-team-space-document.md)（服务端 API）
 - 40 ← [上传媒体文件](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0646-upload-media-files.md)（服务端 API）
 - 39 ← [获取部门列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0082-user-management-acquires-the-list-departments.md)（服务端 API）

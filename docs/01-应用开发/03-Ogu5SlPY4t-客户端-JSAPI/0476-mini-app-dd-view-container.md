@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端 JSAPI"
 breadcrumb: "历史文档（不推荐） > 小程序 > 基础组件 > 视图容器 > view 视图容器"
 doc_id: "zds657Dn0I"
-updated_at: "2025-09-17 20:58:17"
+updated_at: "2026-08-31 14:38:31"
 ---
 
 > Source: https://open.dingtalk.com/document/development/mini-app-dd-view-container
 > Path: 应用开发 / 客户端 JSAPI / 历史文档（不推荐） > 小程序 > 基础组件 > 视图容器 > view 视图容器
-> Updated: 2025-09-17 20:58:17
+> Updated: 2026-08-31 14:38:31
 
 # view 视图容器
 
@@ -22,7 +22,7 @@ updated_at: "2025-09-17 20:58:17"
 >
 > 对于明确指定了框架最低版本的属性，请通过 dd.canIUse 进行兼容性判断。
 >
-> 示例：[dd.canIUse](https://open.dingtalk.com/document/orgapp/dd-caniuse)('view.onTransitionEnd')。
+> 示例：[dd.canIUse](0504-dd-caniuse.md)('view.onTransitionEnd')。
 
 ## 在线体验
 
@@ -37,7 +37,7 @@ updated_at: "2025-09-17 20:58:17"
 | hidden | boolean | 是否隐藏。  **默认值**：false。 |
 | class | String | 自定义样式名。 |
 | style | String | 内联样式。 |
-| animation | Object | 用于动画，详情请参考[创建动画实例](https://open.dingtalk.com/document/orgapp/dd-createanimation)。 |
+| animation | Object | 用于动画，详情请参考[创建动画实例](0561-dd-createanimation.md)。 |
 | onTap | EventHandle | 点击。 |
 | onTouchStart | EventHandle | 触摸动作开始。 |
 | onTouchMove | EventHandle | 触摸后移动。 |

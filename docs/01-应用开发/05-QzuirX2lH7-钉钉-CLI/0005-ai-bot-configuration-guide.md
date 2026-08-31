@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "钉钉 CLI"
 breadcrumb: "新手入门 > 快速尝试 > 5分钟配置：给自己配个嘴替AI 机器人"
 doc_id: "hZ0wNBWaPo"
-updated_at: "2026-08-07 14:13:19"
+updated_at: "2026-08-31 16:46:49"
 ---
 
 > Source: https://open.dingtalk.com/document/development/ai-bot-configuration-guide
 > Path: 应用开发 / 钉钉 CLI / 新手入门 > 快速尝试 > 5分钟配置：给自己配个嘴替AI 机器人
-> Updated: 2026-08-07 14:13:19
+> Updated: 2026-08-31 16:46:49
 
 # 5分钟配置：给自己配个嘴替AI 机器人
 
@@ -154,6 +154,10 @@ dws contact me --format json
 
 **千问办公**： 在频道设置页面找到钉钉频道的机器人配置项，按引导操作即可创建。
 
+> **[!IMPORTANT]**
+>
+> 在添加钉钉机器人前，需要具备该组织的开发者权限，如何添加请参见[获取开发者权限](../01-XOnnmGCTbn-开发指南/0006-get-developer-permissions.md)说明。
+
 ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/9913806871/p1093838.png)
 
 ### Step 4：把机器人拉进钉钉群
@@ -212,7 +216,7 @@ Agent 会查询已连接的 IM 会话，找到你刚发的消息和机器人的�
 
 ### Step 7：真人测试完整流程
 
- 在钉钉群里 @ 机器人，问一个文档里确实提到的问题；等它处理完后，可以查看执行记录。
+在钉钉群里 @ 机器人，问一个文档里确实提到的问题；等它处理完后，可以查看执行记录。
 
 ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/9913806871/p1093839.png)
 

@@ -9059,6 +9059,8 @@
 {"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0428-client-log.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0426-jsapi-stop-dinger-record.md", "text": "stopDingerRecord", "n": 1}
 {"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0428-client-log.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0427-jsapi-get-dinger-device-status.md", "text": "getDingerDeviceStatus", "n": 1}
 {"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0463-scheme-of-mini-programs-1.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md", "text": "基础概念-CorpId", "n": 3}
+{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0476-mini-app-dd-view-container.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0504-dd-caniuse.md", "text": "dd.canIUse", "n": 1}
+{"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0476-mini-app-dd-view-container.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0561-dd-createanimation.md", "text": "创建动画实例", "n": 1}
 {"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0746-logon-free-process.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0748-obtain-the-micro-application-exemption-authorization-code.md", "text": "获取微应用免登授权码", "n": 1}
 {"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0882-small-program.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0499-mini-app-video-player-1.md", "text": "video 视频播放器", "n": 2}
 {"from": "docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0882-small-program.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0502-mini-app-web-view.md", "text": "web-view", "n": 1}
@@ -9354,6 +9356,7 @@
 {"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0235-event-log.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0226-events-edu-card-update.md", "text": "打卡任务更新", "n": 1}
 {"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0235-event-log.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0227-events-edu-card-end.md", "text": "打卡任务结束", "n": 1}
 {"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0235-event-log.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0228-events-edu-card-delete.md", "text": "打卡任务删除", "n": 1}
+{"from": "docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0005-ai-bot-configuration-guide.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0006-get-developer-permissions.md", "text": "获取开发者权限", "n": 1}
 {"from": "docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0005-ai-bot-configuration-guide.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0075-robot-application-overview.md", "text": "机器人概述", "n": 1}
 {"from": "docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0005-ai-bot-configuration-guide.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0077-add-robot-to-group.md", "text": "添加机器人入群", "n": 1}
 {"from": "docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0007-mcp-square-introduction.md", "to": "docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0008-dingtalk-deap-platform-using-mcp-services.md", "text": "钉钉Deap平台使用MCP服务", "n": 1}

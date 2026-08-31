@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "钉钉 CLI"
 breadcrumb: "更新日志"
 doc_id: "JqaPUpyWXl"
-updated_at: "2026-08-24 12:00:12"
+updated_at: "2026-08-31 11:57:11"
 ---
 
 > Source: https://open.dingtalk.com/document/development/dws-cli-log
 > Path: 应用开发 / 钉钉 CLI / 更新日志
-> Updated: 2026-08-24 12:00:12
+> Updated: 2026-08-31 11:57:11
 
 # 更新日志
 
@@ -40,6 +40,141 @@ dws upgrade --list
 - 钉钉 CLI 每周发布更新，开发者可扫描下方二维码加入"**dws 开源沟通群**"获取最新动态。
 
   ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/6160536871/p1094200.png)
+
+## **2026-08-28**
+
+### **更新说明**
+
+本周重点：**OA审批附件上传下载双向闭环、话题圈开放**、钉盘与文档工作流补齐、表格数据源接入，以及**OpenAPI 直调能力重点补齐**。建议通过 `dws upgrade` 升级到最新版[v1.0.60](https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli/releases/tag/v1.0.60)。
+
+### **新增功能**
+
+#### 开发者专属：OpenAPI 直调能力补齐
+
+`dws api <METHOD> <PATH>` 是调用未封装成 CLI 命令的开放平台服务端 OpenAPI 的通道，免 SDK、自有应用凭证登录后 App Token 自动获取与刷新，覆盖 `api.dingtalk.com`（/v1.0、/v2.0）与 `oapi.dingtalk.com`（/topapi）。本次重点补齐：支持从文件读取参数或请求体、单文件流式上传、分页拉取与有界二进制下载；同时收紧重定向、凭据配对与响应体大小等安全约束。
+
+```
+dws api POST /v1.0/contact/users/search --data @./request.json
+```
+
+#### OA审批附件上传 + 下载，双向闭环成立
+
+**本周最重磅**。审批附件从"只能看"变成"能进能出"：上传侧一条命令完成"初始化上传凭证 → OSS 上传 → 提交"三步（`--file-name` 默认取文件名、`--md5` 缺省自动计算）；取件侧支持获取附件下载链接、授权当前用户下载或预览。至此"发起审批带附件 → 审批完成后取附件归档"全链路打通，Agent 可完整处理带附件的审批流。
+
+```
+dws oa approval attachment upload --file ./发票.pdf
+dws oa approval attachment download-url --instance-id <INSTANCE_ID> --format json
+```
+
+#### 新增话题圈开放
+
+群聊新增 `chat thread` 专用命令组，共 13 个命令，覆盖话题圈创建、Thread 发布、读取、回复、转发、撤回、表情回应与文字表情；参数沿用 `chat group`/`chat message` 命名（`--conversation-id`、`--topic-id` 等）。
+
+```
+dws chat thread --help
+```
+
+#### 钉盘能力补齐
+
+- **新增容量、异步任务与通用导出能力**
+
+  可查看企业、应用、空间三级存储用量；复制、移动、导入、导出等异步任务有统一查询入口，`copy`/`move` 在服务端返回任务时自动轮询；在线文档、表格、演示文稿可通过一个命令导出为常用格式（自动格式识别、退避轮询、可 `--async` 异步）；公开分享链接支持设密码与有效期。
+
+  ```
+  dws drive quota apps --format json
+  dws drive task get --type export --id <TASK_ID> --format json
+  dws drive export --node <DOC_ID_OR_URL> --export-format pdf --output ./exported.pdf
+  dws drive publish set --password <密码> --expire-days <天数>
+  ```
+- **钉盘本地文件评论支持完整协作闭环**
+
+  普通云盘文件支持新体系的全局评论：创建、列表、回复、修改、删除、批量查询、解决、恢复与表情回应；原生 Markdown 文件支持按全局/行内、解决状态、游标过滤查看评论列表。既有 `create`、`list` 保持兼容，新工作流请显式使用 `-v2` 入口。
+
+  ```
+  dws drive comment list-v2 --node <DENTRY_UUID> --resolve-status unresolved --format json
+  dws markdown comment list --node <NODE_ID> --format json
+  ```
+
+#### 钉钉文档支持公网密码文档与历史版本读取
+
+可读取带密码保护的互联网公开文档，并按历史版本读取任意时点内容（`0` 为初始版本）。
+
+```
+dws doc read --node <DOC_ID> --password <PASSWORD> --version <HISTORY_VERSION>
+```
+
+#### 表格类：电子表格浮动图片直传 + AI 表格数据源接入
+
+- **在线电子表格**： 支持从本地文件直接创建或替换浮动图片（保留原 `--src` 工作流）。
+- **AI 表格**： 新增 7 个数据源 shortcut，支持列出可用数据源、读取可同步字段、创建或更新数据源、触发同步及查询同步状态。
+
+```
+dws sheet create-float-image --file ./screenshot.png
+dws aitable +datasource-list-sources --base-id <BASE_ID>
+dws aitable +datasource-sync --base-id <BASE_ID> --table-ids <TABLE_ID>
+```
+
+#### 文档内嵌白板新增可查看并更新
+
+可读取钉钉文档内已有白板的 OpenNodes 内容，并在确认后追加或整页更新，带稳定目标回执与精确读回验证。
+
+```
+dws whiteboard query --node <DOC_ID_OR_URL> --part-id <WHITEBOARD_PART_ID> --format json
+```
+
+#### Agoal 目标管理新增计分卡搜索
+
+计分卡支持按关键词搜索指标与关键事项，返回计分卡 ID、实体类型、标题与归属团队，支持 `--page`/`--page-size` 分页。
+
+```
+dws agoal scorecard search-entities --keyword "业绩" --page 1 --page-size 20
+```
+
+### **体验优化**
+
+#### 文档与权限协作更可控
+
+- `drive`、`doc`、`sheet`、`wiki`、`markdown` 支持 `--principal-user-id` 委托身份：启用后首次按节点调用前执行能力校验，拒绝时透传服务端提示，预览（dry-run）与执行行为一致。
+- 文档、钉盘与知识库的权限/成员列表支持服务端游标分页；成员授权默认不再通知（`--notify` 默认关闭）；批量移除权限或成员需确认后执行。
+
+```
+dws doc +fetch --node <DOC_ID> --principal-user-id <USER_ID>
+dws drive permission list --node <NODE_ID> --next-token <TOKEN> --format json
+```
+
+#### 易用性与错误指引
+
+日志提交 `--to-user-ids` 提升为必填（无接收人的日志对任何人不可见）；
+
+AI 搜问与通讯录人员搜索统一走审核过的 `person` 数据源，手机号查找先规范化格式；权限被拒统一以 `AUTH_PERMISSION_DENIED` 退出并附权限申请指引，业务错误输出附带 `code`/`logId` 便于追溯。
+
+#### 大文档写入与登录身份更可靠
+
+长 Markdown 写入按完整块安全拆分，表格和代码块不会在单元格或围栏中间截断，写后校验以实际写入计划为基准，四条写入路径统一分块器；`refresh_token` 被拒时自动用同组织镜像令牌重试一次并双槽位回写。
+
+### **问题优化**
+
+#### 误报消除与结果可信
+
+- AI 听记列表/搜索/转写的分页连续性与耗尽证据统一经 `meta.pagination` 发布（#1112）；
+- 日程空窗查询、待办截止时间更新不再误报失败，日志"最新一篇"查找修复首个续页即失败；
+- 文档导入前先解析默认文档目标；评论表情回应收窄为钉钉官方表情名；命令拼写错误给出最多 3 个相近建议与父级 `--help` 入口。
+
+#### 重要兼容性变更
+
+- **教育版/校园扩展命令移除**
+
+  `dws edu-contact`、`dws edu-group`、`dws edu-app`、`dws edu-familygroup`、`dws college-contact` 已从 CLI、Schema、内置 Skill 与开放版 MCP 端点注册表全面移除，后续版本不再提供。
+- **云盘旧版评论命令迁移**
+
+  `dws drive comment create`/`list` 保留旧行为，新场景请改用 `create-v2`/`list-v2`。
+- **日志提交必须显式指定接收人**
+
+  `dws report entry submit` 的 `--to-user-ids` 已变为必填，空接收人或纯分隔符在本地即拒绝。
+
+  ```
+  dws report entry submit --to-user-ids <USER_ID_1>,<USER_ID_2> <其他原有参数>
+  ```
 
 ## **2026-08-21**
 

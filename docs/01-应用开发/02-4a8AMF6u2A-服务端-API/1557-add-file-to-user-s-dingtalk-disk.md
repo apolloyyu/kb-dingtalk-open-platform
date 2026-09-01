@@ -54,7 +54,7 @@ updated_at: "2026-08-25 09:38:14"
 | --- | --- | --- | --- | --- |
 | access\_token | String | 是 | 6d1bxxxx | 调用该接口的应用凭证。   - 企业内部应用可通过[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)接口获取。 - 第三方企业应用可通过[服务商获取第三方应用授权企业的access\_token](1448-obtain-isvapp-token.md)接口获取。 |
 | agent\_id | String | 否 | 123 | 应用的AgentId。   - 企业内部应用可以在[开发者后台](https://open-dev.dingtalk.com/)的应用详情页获取。 - 第三方企业应用可以调用[获取企业授权信息](0042-obtains-the-basic-information-of-an-enterprise.md)接口获取。 |
-| code | String | 是 | a6981a1df0c03297b70aa23a6db2ce65 | code值为应用免登授权码：   - [免登授权码](../03-Ogu5SlPY4t-客户端-JSAPI/0510-mini-program-free-login.md) - [获取微应用免登授权码](../03-Ogu5SlPY4t-客户端-JSAPI/0748-obtain-the-micro-application-exemption-authorization-code.md) |
+| code | String | 是 | a6981a1df0c03297b70aa23a6db2ce65 | code值为应用免登授权码：   - [免登授权码](../03-Ogu5SlPY4t-客户端-JSAPI/0478-mini-program-free-login.md) - [获取微应用免登授权码](../03-Ogu5SlPY4t-客户端-JSAPI/0716-obtain-the-micro-application-exemption-authorization-code.md) |
 | media\_id | String | 是 | @123 | 调用[单步文件上传](1582-single-step-file-upload.md)接口得到的media\_id。 |
 | space\_id | String | 是 | 234 | 钉盘空间ID。 |
 | folder\_id | String | 否 | 0 | 钉盘文件夹ID。  **[!IMPORTANT]**   - 如果**space\_id**是审批附件钉盘，**folder\_id**参数传0。 - 如果**space\_id**是自定义钉盘，该参数不传。 |

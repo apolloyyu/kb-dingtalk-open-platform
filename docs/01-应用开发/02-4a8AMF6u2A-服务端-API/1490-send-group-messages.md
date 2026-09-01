@@ -59,7 +59,7 @@ updated_at: "2026-08-25 09:37:19"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| chatid | String | 是 | chate39f5xxxxxx335 | 群会话的ID。   - 服务端API获取，调用[创建群](1483-session-management-creates-groups.md)接口的返回chatid字段。 - 前端API获取，小程序调用[选择会话](../03-Ogu5SlPY4t-客户端-JSAPI/0739-select-session.md)，微应用调用[根据corpid选择会话](../03-Ogu5SlPY4t-客户端-JSAPI/0798-select-session-based-on-corpid.md)。 |
+| chatid | String | 是 | chate39f5xxxxxx335 | 群会话的ID。   - 服务端API获取，调用[创建群](1483-session-management-creates-groups.md)接口的返回chatid字段。 - 前端API获取，小程序调用[选择会话](../03-Ogu5SlPY4t-客户端-JSAPI/0707-select-session.md)，微应用调用[根据corpid选择会话](../03-Ogu5SlPY4t-客户端-JSAPI/0766-select-session-based-on-corpid.md)。 |
 | msg | JSON Object | 是 | {"msgtype":"text","text":{"content":"请提交日报。"}} | 消息内容，最长不超过2048个字节，消息类型和样例参考[消息通知类型](0775-message-types-and-data-format.md)。 |
 
 ## 返回参数

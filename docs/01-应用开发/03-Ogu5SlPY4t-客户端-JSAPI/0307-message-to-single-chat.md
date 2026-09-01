@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端 JSAPI"
 breadcrumb: "酷应用 > 用户身份发送卡片消息到单聊"
 doc_id: "5BqfMOFhG6"
-updated_at: "2026-08-27 14:23:52"
+updated_at: "2026-09-01 09:15:50"
 ---
 
 > Source: https://open.dingtalk.com/document/development/message-to-single-chat
 > Path: 应用开发 / 客户端 JSAPI / 酷应用 > 用户身份发送卡片消息到单聊
-> Updated: 2026-08-27 14:23:52
+> Updated: 2026-09-01 09:15:50
 
 # 用户身份发送卡片消息到单聊
 
@@ -26,11 +26,11 @@ updated_at: "2026-08-27 14:23:52"
 
 ### 发送消息
 
-![单聊发送消息](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/7421618761/p578403.png)
+![单聊发送消息](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0535228871/p578403.png)
 
 ### 发送成功
 
-![单聊发送成功](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/7421618761/p578404.png)
+![单聊发送成功](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0535228871/p578404.png)
 
 ## 准备工作
 
@@ -55,33 +55,33 @@ import 'dingtalk-jsapi/entry/union';
 import { sendMessageToSingleChat } from 'dingtalk-jsapi/plugin/coolAppSdk';
 
 sendMessageToSingleChat({
-      context: {
-        clientId: 'dingmpixxxxxxx',
-        corpId: 'ding16xxxxxxxxxx', // 根据对应场景获取 corpId
-      },
-      userIdList: ["manxxxxxx75"],
-      sendCardRequest: {
-        cardData: {
-          cardParamMap: {
-            title: "xxxxx",
-            approval: "测试",
-            type: "测试",
-            amount: "1000元",
-            reason: "北京出差",
-            agree: "同意",
-            disagree: "拒绝"
-          }
-        },
-        cardTemplateId: "44ed1b33-xxxx-xxxx-xxxx-a552d42f0104",
-        outTrackId: "xxxxxxxxxx"
+  context: {
+    clientId: 'dingmpixxxxxxx',
+    corpId: 'ding16xxxxxxxxxx', // 根据对应场景获取 corpId
+  },
+  userIdList: ["manxxxxxx75"],
+  sendCardRequest: {
+    cardData: {
+      cardParamMap: {
+        title: "xxxxx",
+        approval: "测试",
+        type: "测试",
+        amount: "1000元",
+        reason: "北京出差",
+        agree: "同意",
+        disagree: "拒绝"
       }
-    }).then(m => {
-      console.log('测试' + JSON.stringify(m))
-      if (res.errorCode === '0') {
-        console.log('获取成功：' + JSON.stringify(res.detail))
-      }
-    }).catch(e => {
-      console.log('失败' + JSON.stringify(e))
+    },
+    cardTemplateId: "44ed1b33-xxxx-xxxx-xxxx-a552d42f0104",
+    outTrackId: "xxxxxxxxxx"
+  }
+}).then(m => {
+  console.log('测试' + JSON.stringify(m))
+  if (res.errorCode === '0') {
+    console.log('获取成功：' + JSON.stringify(res.detail))
+  }
+}).catch(e => {
+  console.log('失败' + JSON.stringify(e))
 });
 ```
 
@@ -90,13 +90,13 @@ sendMessageToSingleChat({
 | 参数 | 类型 | 是否必填 | 说明 |
 | --- | --- | --- | --- |
 | context | Object | 是 | 应用相关身份标识。 |
-| context.clientId | String | 是 | 应用标识。   - 企业内部应用，传Appkey。   **[!NOTE]**  如何获取Appkey，请参见[基础概念-AppKey](https://open.dingtalk.com/document/orgapp/basic-concepts)。   - 第三方企业应用，传SuiteKey。   **[!NOTE]**  如何获取SuiteKey，请参见[基础概念-SuiteKey](https://open.dingtalk.com/document/isvapp/basic-concepts)。 |
-| context.corpId | String | 是 | 企业CorpId。  **[!NOTE]**   - 小程序可通过[dd.corpId](https://open.dingtalk.com/document/isvapp/dd-corpid)获取。 - 微应用可通过[获取企业CorpId](https://open.dingtalk.com/document/isvapp/obtain-enterprise-corpid)获取。 |
+| context.clientId | String | 是 | 应用标识。   - 企业内部应用，传clientId。  **[!NOTE]**  如何获取Appkey，请参见[Client ID/Client Secret](../01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md#7d9825efaadw7)。 - 第三方企业应用，传SuiteKey。  **[!NOTE]**  如何获取Appkey，请参见[基础概念-SuiteKey](../01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md#7d9825efaadw7)。 |
+| context.corpId | String | 是 | 企业CorpId。  **[!NOTE]**   - 小程序可通过[dd.corpId](0477-dd-corpid.md)获取。 - 微应用可通过[获取企业CorpId](0715-obtain-enterprise-corpid.md)获取。 |
 | userIdList | String[] | 是 | 需要发送消息的单聊人员userId列表。 |
 | sendCardRequest | Object | 是 | 动态卡片的相关数据。 |
 | sendCardRequest.cardTemplateId | String | 是 | 互动卡片的消息模板ID。可通过[卡片平台](https://open-dev.dingtalk.com/fe/card)获取模板ID。image |
 | sendCardRequest.outTrackId | String | 是 | 唯一标示卡片的外部编码。  **[!NOTE]**  发送不同的卡片内容，需要使用不同的outTrackId。 |
-| sendCardRequest.cardData | Object | 是 | 卡片数据。详情参见[发送钉钉互动卡片](https://open.dingtalk.com/document/isvapp/send-interactive-dynamic-cards-1)cardData字段。 |
+| sendCardRequest.cardData | Object | 是 | 卡片数据。详情参见[发送钉钉互动卡片（高级版）](../02-4a8AMF6u2A-服务端-API/1478-send-interactive-dynamic-cards-1.md)cardData字段。 |
 
 ## 返回结果
 
@@ -129,7 +129,3 @@ sendMessageToSingleChat({
 | --- | --- |
 | 22 | 表示页面被用户手动关闭。 |
 | 7 | 表示当前钉钉版本较低，不支持该API，需要升级至最新版本的钉钉。 |
-
-## 相关链接
-
-酷应用接入流程更多详情请参考文档[酷应用介绍](https://open.dingtalk.com/document/isvapp/cool-application-introduction-isv)。

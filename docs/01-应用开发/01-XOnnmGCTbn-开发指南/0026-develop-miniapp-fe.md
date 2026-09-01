@@ -50,7 +50,7 @@ updated_at: "2026-06-30 09:00:31"
 
    > **[!NOTE]**
    >
-   > 你可以参考[小程序基础组件](../03-Ogu5SlPY4t-客户端-JSAPI/0476-mini-app-dd-view-container.md)、和[钉钉设计开放资源](https://open.dingtalk.com/document/design_latest)引入样式和 UI 组件，设计小程序页面，提高用户体验。
+   > 你可以参考[小程序基础组件](../03-Ogu5SlPY4t-客户端-JSAPI/0444-mini-app-dd-view-container.md)、和[钉钉设计开放资源](https://open.dingtalk.com/document/design_latest)引入样式和 UI 组件，设计小程序页面，提高用户体验。
 8. 编写过程中，你可以随时在右侧进行预览。
 
    ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/5552376671/p1037213.png)

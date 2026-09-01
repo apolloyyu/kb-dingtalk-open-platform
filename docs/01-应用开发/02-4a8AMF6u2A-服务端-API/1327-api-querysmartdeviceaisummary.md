@@ -37,8 +37,8 @@ updated_at: "2026-07-03 10:11:27"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| agentId | String | 否 | 小助理id，接入[DingTalkA1小助理总结完成事件](../04-LFcRvVD08N-事件订阅/0119-events-aone-assistant-summary-change.md)获取agentId。 |
-| openFileId | String | 否 | 录音文件id，接入[DingTalkA1小助理总结完成事件](../04-LFcRvVD08N-事件订阅/0119-events-aone-assistant-summary-change.md)获取fileId。 |
+| agentId | String | 否 | 小助理id，接入[DingTalkA1小助理总结完成事件](../04-LFcRvVD08N-事件订阅/0120-events-aone-assistant-summary-change.md)获取agentId。 |
+| openFileId | String | 否 | 录音文件id，接入[DingTalkA1小助理总结完成事件](../04-LFcRvVD08N-事件订阅/0120-events-aone-assistant-summary-change.md)获取fileId。 |
 
 ### **请求示例**
 

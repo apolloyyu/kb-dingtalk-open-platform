@@ -234,7 +234,7 @@ updated_at: "2026-08-27 12:31:20"
 
   - **钉钉小程序**
 
-    [钉钉小程序](../03-Ogu5SlPY4t-客户端-JSAPI/0430-introduction-to-dingtalk-mini-programs.md)服务端需要部署在钉钉云解决方案中，建议一个小程序部署在一个解决方案中。解决方案中所创建的应用为Service应用。Service应用对应服务化概念中的Service，可以有单个或多个Service应用构成你的小程序产品后端。对于小程序来说，至少要有一个外部Service应用以提供对外访问的入口。
+    [钉钉小程序](../03-Ogu5SlPY4t-客户端-JSAPI/0429-introduction-to-dingtalk-mini-programs.md)服务端需要部署在钉钉云解决方案中，建议一个小程序部署在一个解决方案中。解决方案中所创建的应用为Service应用。Service应用对应服务化概念中的Service，可以有单个或多个Service应用构成你的小程序产品后端。对于小程序来说，至少要有一个外部Service应用以提供对外访问的入口。
   - **微应用**
 
     微应用的前端及服务端均需部署在同一解决方案中，建议一个微应用部署在一个解决方案中，Service应用（解决方案中所创建的应用）可以是微应用的前端、服务端。

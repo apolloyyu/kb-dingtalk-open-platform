@@ -26,7 +26,7 @@ updated_at: "2026-08-25 09:37:47"
 建议开发者通过以下方式实现带附件的审批流程：
 
 1. 调用**本接口**，获取钉盘空间的上传权限，并获取space\_id。
-2. 使用参数space\_id，调用H5微应用[上传附件到钉盘/从钉盘选择文件](../03-Ogu5SlPY4t-客户端-JSAPI/0816-upload-attachment-to-nail-plate-select-file-from-nail-plate-h5.md)或者小程序[上传附件到钉盘/从钉盘选择文件](../03-Ogu5SlPY4t-客户端-JSAPI/0737-upload-attachment-to-nail-plate-select-file-from-nail-plate.md)后获取钉盘附件的信息。
+2. 使用参数space\_id，调用H5微应用[上传附件到钉盘/从钉盘选择文件](../03-Ogu5SlPY4t-客户端-JSAPI/0784-upload-attachment-to-nail-plate-select-file-from-nail-plate-h5.md)或者小程序[上传附件到钉盘/从钉盘选择文件](../03-Ogu5SlPY4t-客户端-JSAPI/0705-upload-attachment-to-nail-plate-select-file-from-nail-plate.md)后获取钉盘附件的信息。
 
    space\_id的使用说明：
 

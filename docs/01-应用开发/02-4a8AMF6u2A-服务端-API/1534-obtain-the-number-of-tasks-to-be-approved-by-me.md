@@ -55,7 +55,7 @@ updated_at: "2026-08-25 09:37:45"
 
 | 名称 | 类型 | 示例值 | 描述 |
 | --- | --- | --- | --- |
-| count | Number | 13 | 待处理的审批数量。  **[!NOTE]**  开发者可以通过以下链接，使用[打开目标页面](../03-Ogu5SlPY4t-客户端-JSAPI/0866-open-link-on-new-window.md)跳转到钉钉审批移动端微应用（暂不支持PC端）的待我审批页面：  https://aflow.dingtalk.com/dingtalk/mobile/homepage.htm?showmenu=false&dd\_share=false&corpid=$CORPID#/upcoming?swfrom=work\_homepage |
+| count | Number | 13 | 待处理的审批数量。  **[!NOTE]**  开发者可以通过以下链接，使用[打开目标页面](../03-Ogu5SlPY4t-客户端-JSAPI/0834-open-link-on-new-window.md)跳转到钉钉审批移动端微应用（暂不支持PC端）的待我审批页面：  https://aflow.dingtalk.com/dingtalk/mobile/homepage.htm?showmenu=false&dd\_share=false&corpid=$CORPID#/upcoming?swfrom=work\_homepage |
 | errcode | Number | 0 | 返回码。 |
 | errmsg | String | ok | 返回描述。 |
 | request\_id | String | 3x1lrffff9xk | 请求ID。 |

@@ -29,7 +29,7 @@ updated_at: "2026-08-19 09:07:58"
 
 | **类目** | **说明** | **应用范围** |
 | --- | --- | --- |
-| DingTalk A1 | **新增事件订阅：**   - 新增[DingTalkA1小助理状态变更](0120-events-aone-assistant-status-change-1.md)，DingTalkA1小助理状态变更事件。 - 新增[DingTalkA1小助理总结完成事件](0119-events-aone-assistant-summary-change.md)，DingTalkA1小助理执行分析结果事件。 | - 企业内部应用 - 第三方企业应用 |
+| DingTalk A1 | **新增事件订阅：**   - 新增[DingTalkA1小助理状态变更](0119-events-aone-assistant-status-change-1.md)，DingTalkA1小助理状态变更事件。 - 新增[DingTalkA1小助理总结完成事件](0120-events-aone-assistant-summary-change.md)，DingTalkA1小助理执行分析结果事件。 | - 企业内部应用 - 第三方企业应用 |
 | AIoT平台 | **新增事件订阅：**   - 新增[AIoT设备上行事件](0118-events-aiot-device-uplink-event.md)，设备上行事件，包括设备状态变更事件、物模型事件。 | - 企业内部应用 - 第三方企业应用 |
 | 教育 | **新增事件订阅：**   - 新增[打卡任务更新](0226-events-edu-card-update.md)，对已创建且未结束、未删除的打卡任务进行信息更新时，触发此事件的推送。 - 新增[打卡任务结束](0227-events-edu-card-end.md)，当打卡任务被提前结束时，触发此事件的推送。 - 新增[打卡任务删除](0228-events-edu-card-delete.md)，当已创建且未结束的打卡任务被删除时，触发此事件的推送。 | - 企业内部应用 - 第三方企业应用 |
 | 视听智能服务 | **新增事件订阅：**   - 新增[智能工牌自定义AI分析项完成事件](0125-events-dvi-custom-ai-analysis-completed.md)，智能工牌应用中客户自定义的AI分析项分析完成的通知事件。 | - 企业内部应用 - 第三方企业应用 |

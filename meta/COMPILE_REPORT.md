@@ -1,13 +1,13 @@
 # 编译结果
 
-源快照 3624 篇 / 35.4 MB
+源快照 3622 篇 / 35.4 MB
 
 | 层 | 篇数 | MB | ≈k tokens | 占比 |
 | --- | --- | --- | --- | --- |
-| T0 | 341 | 1.8 | 1188 | 5.1% |
-| T1 | 2168 | 25.3 | 16550 | 71.4% |
-| T2 | 985 | 7.5 | 4911 | 21.2% |
-| DROP | 130 | 0.8 | 546 | 2.4% |
+| T0 | 341 | 1.8 | 1189 | 5.1% |
+| T1 | 2168 | 25.3 | 16550 | 71.2% |
+| T2 | 983 | 7.5 | 4946 | 21.3% |
+| DROP | 130 | 0.8 | 546 | 2.3% |
 
 ## DROP 明细
 
@@ -28,7 +28,7 @@
 | 正文与 docs/01-应用开发/04-LFcRvVD08N-事件订阅/0251-enable-and-disable-application-events.md 完全重复 | 1 | 0.00 |
 | 正文与 docs/01-应用开发/04-LFcRvVD08N-事件订阅/0246-push-suite-ticket-events.md 完全重复 | 1 | 0.00 |
 | 正文与 docs/01-应用开发/04-LFcRvVD08N-事件订阅/0252-address-book-authorization-scope-change-event.md 完全重复 | 1 | 0.00 |
-| 正文与 docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0791-extendmodal-1.md 完全重复 | 1 | 0.00 |
+| 正文与 docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0759-extendmodal-1.md 完全重复 | 1 | 0.00 |
 | 正文与 docs/01-应用开发/04-LFcRvVD08N-事件订阅/0248-app-callback-url-update.md 完全重复 | 1 | 0.00 |
 | 正文与 docs/01-应用开发/04-LFcRvVD08N-事件订阅/0250-revoke-authorization.md 完全重复 | 1 | 0.00 |
 | 正文与 docs/01-应用开发/04-LFcRvVD08N-事件订阅/0245-test-callback-url-events.md 完全重复 | 1 | 0.00 |

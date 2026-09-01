@@ -1,20 +1,20 @@
 ---
-title: "小程序目录结构"
+title: "目录结构"
 source_url: "https://open.dingtalk.com/document/development/mini-app-directory-structure-of-mini-programs"
 namespace: "development"
 slug: "mini-app-directory-structure-of-mini-programs"
 group: "应用开发"
 tab: "客户端 JSAPI"
-breadcrumb: "历史文档（不推荐） > 小程序 > 小程序目录结构"
+breadcrumb: "历史文档（不推荐） > 小程序 > 目录结构"
 doc_id: "nVAcJ85aA0"
-updated_at: "2025-09-17 20:57:47"
+updated_at: "2026-09-01 09:16:02"
 ---
 
 > Source: https://open.dingtalk.com/document/development/mini-app-directory-structure-of-mini-programs
-> Path: 应用开发 / 客户端 JSAPI / 历史文档（不推荐） > 小程序 > 小程序目录结构
-> Updated: 2025-09-17 20:57:47
+> Path: 应用开发 / 客户端 JSAPI / 历史文档（不推荐） > 小程序 > 目录结构
+> Updated: 2026-09-01 09:16:02
 
-# 小程序目录结构
+# 目录结构
 
 小程序包含一个描述整体程序的 app 和多个描述各自页面的 page。
 

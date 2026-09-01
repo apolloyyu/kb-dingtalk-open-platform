@@ -39,7 +39,7 @@ updated_at: "2026-08-28 10:27:08"
 
 1. 获取联系人授权
 
-   服务窗用户授权通过调用前端jsapi实现，详情请参考[获取用户授权](../03-Ogu5SlPY4t-客户端-JSAPI/0743-obtain-user-auth-data.md)接口。
+   服务窗用户授权通过调用前端jsapi实现，详情请参考[获取用户授权](../03-Ogu5SlPY4t-客户端-JSAPI/0711-obtain-user-auth-data.md)接口。
 2. 调用接口获取授权数据
 
    可调用调用[获取服务窗联系人信息](1874-obtains-the-contact-information-of-the-service-window.md)接口获取授权之后的手机号和企业名称等数据。

@@ -18,7 +18,7 @@ updated_at: "2026-07-22 16:25:11"
 
 钉钉提供的JSAPI有很多是手机的基础能力，对这些JSAPI的调用不需要进行鉴权（**不需要进行dd.config**），只需要在**dd.ready**里调用。对于一些钉钉业务、安全相关的JSAPI的调用，需要先鉴权，然后再调用。
 
-了解JSAPI是否需要鉴权，请查看[H5微应用JSAPI总览](0745-jsapi-overview-1.md)。
+了解JSAPI是否需要鉴权，请查看[H5微应用JSAPI总览](0713-jsapi-overview-1.md)。
 
 ## 接入必读
 

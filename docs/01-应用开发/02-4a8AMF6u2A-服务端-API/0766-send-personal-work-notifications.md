@@ -69,7 +69,7 @@ updated_at: "2026-07-14 09:22:09"
 ### **第三方企业应用**
 
 1. 调用[发送工作通知](0769-asynchronous-sending-of-enterprise-session-messages.md)接口，工作消息的格式选择link消息、OA消息或者卡片消息，这三种类型消息可以进行跳转。
-2. 跳转链接的构造参考[小程序 scheme](../03-Ogu5SlPY4t-客户端-JSAPI/0463-scheme-of-mini-programs-1.md)，如下提供这三种类型消息中链接的构造示例，完整的消息格式请参考[消息通知类型](0775-message-types-and-data-format.md)。
+2. 跳转链接的构造参考[小程序 scheme](../03-Ogu5SlPY4t-客户端-JSAPI/0441-scheme-of-mini-programs-1.md)，如下提供这三种类型消息中链接的构造示例，完整的消息格式请参考[消息通知类型](0775-message-types-and-data-format.md)。
 
    | **参数名** | **是否必填** | **说明** |
    | --- | --- | --- |

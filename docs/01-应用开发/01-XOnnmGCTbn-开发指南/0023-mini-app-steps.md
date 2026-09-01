@@ -43,7 +43,7 @@ import 'dingtalk-jsapi/entry/mobile';
 
 ## **步骤三：在钉钉小程序内调用**
 
-以在钉钉小程序index页面，调用网页应用的[选择部门和人](../03-Ogu5SlPY4t-客户端-JSAPI/0768-select-department-and-person.md)接口为例。
+以在钉钉小程序index页面，调用网页应用的[选择部门和人](../03-Ogu5SlPY4t-客户端-JSAPI/0736-select-department-and-person.md)接口为例。
 
 1. 小程序index.js文件头部，添加以下代码：
 

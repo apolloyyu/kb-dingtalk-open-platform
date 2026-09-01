@@ -50,7 +50,7 @@ updated_at: "2026-08-27 12:32:14"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| chat\_id | String | 是 | cidzZ7txxxx | 直播绑定的群列表ID。   - 小程序通过[选择会话](../03-Ogu5SlPY4t-客户端-JSAPI/0739-select-session.md)方法获取。 - 微应用通过[根据corpid选择会话](../03-Ogu5SlPY4t-客户端-JSAPI/0798-select-session-based-on-corpid.md)方法获取。 |
+| chat\_id | String | 是 | cidzZ7txxxx | 直播绑定的群列表ID。   - 小程序通过[选择会话](../03-Ogu5SlPY4t-客户端-JSAPI/0707-select-session.md)方法获取。 - 微应用通过[根据corpid选择会话](../03-Ogu5SlPY4t-客户端-JSAPI/0766-select-session-based-on-corpid.md)方法获取。 |
 | feed\_id | String | 是 | c16a6277-a538-466xxxx | 课程ID，调用[创建培训课程](1681-create-live-courses.md)接口返回的课程ID。 |
 | page\_size | Number | 否 | 10 | 分页大小。  **默认值**：0 |
 | index | Number | 否 | 0 | 分页起始位置，不传默认获取前10个。 |

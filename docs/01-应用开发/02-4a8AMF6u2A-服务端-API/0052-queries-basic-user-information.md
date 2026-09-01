@@ -39,7 +39,7 @@ updated_at: "2026-06-08 09:28:27"
 
 | 参数 | 参数类型 | 是否必选 | 描述 |
 | --- | --- | --- | --- |
-| tmp\_auth\_code | String | 是 | 用户授权给钉钉开放应用的免登授权码，通过调用JSAPI `dd.getAuthCode`获取，参考[免登授权码](../03-Ogu5SlPY4t-客户端-JSAPI/0510-mini-program-free-login.md)。 |
+| tmp\_auth\_code | String | 是 | 用户授权给钉钉开放应用的免登授权码，通过调用JSAPI `dd.getAuthCode`获取，参考[免登授权码](../03-Ogu5SlPY4t-客户端-JSAPI/0478-mini-program-free-login.md)。 |
 
 ### **请求示例**
 

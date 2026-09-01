@@ -67,7 +67,7 @@ installCoolAppToGroup({
 | --- | --- | --- | --- |
 | coolAppCode | String | 是 | 需要安装的酷应用的编码。通过以下方式获取：三方群扩展 |
 | clientId | String | 是 | 应用标识。   - 企业内部应用，传clientId。  **[!NOTE]**  如何获取Appkey，请参见[Client ID/Client Secret](../01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md#7d9825efaadw7)。 - 第三方企业应用，传SuiteKey。  **[!NOTE]**  如何获取Appkey，请参见[基础概念-SuiteKey](../01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md#7d9825efaadw7)。 |
-| corpId | String | 是 | 企业CorpId，用于校验群所属企业，只能安装到该企业的内部群。  **[!NOTE]**   - 小程序通过[dd.corpId](0505-dd-corpid.md)获取。 - 微应用通过[获取企业CorpId](0747-obtain-enterprise-corpid.md)获取。 |
+| corpId | String | 是 | 企业CorpId，用于校验群所属企业，只能安装到该企业的内部群。  **[!NOTE]**   - 小程序通过[dd.corpId](0477-dd-corpid.md)获取。 - 微应用通过[获取企业CorpId](0715-obtain-enterprise-corpid.md)获取。 |
 
 ## 返回结果
 

@@ -52,7 +52,7 @@ updated_at: "2026-08-25 09:37:43"
 > 添加审批评论附件需将文件上传至审批钉盘空间，可以获取到接口参数file\_type，file\_name，file\_id，file\_size。获取方式如下：
 >
 > 1. 调用[获取审批钉盘空间信息](1536-query-the-space-of-an-approval-nail.md)，获取钉盘空间的上传权限，并获取space\_id。
-> 2. 使用参数space\_id，调用H5微应用[上传附件到钉盘/从钉盘选择文件](../03-Ogu5SlPY4t-客户端-JSAPI/0816-upload-attachment-to-nail-plate-select-file-from-nail-plate-h5.md)或者小程序[上传附件到钉盘/从钉盘选择文件](../03-Ogu5SlPY4t-客户端-JSAPI/0737-upload-attachment-to-nail-plate-select-file-from-nail-plate.md)后获取钉盘附件file的信息。
+> 2. 使用参数space\_id，调用H5微应用[上传附件到钉盘/从钉盘选择文件](../03-Ogu5SlPY4t-客户端-JSAPI/0784-upload-attachment-to-nail-plate-select-file-from-nail-plate-h5.md)或者小程序[上传附件到钉盘/从钉盘选择文件](../03-Ogu5SlPY4t-客户端-JSAPI/0705-upload-attachment-to-nail-plate-select-file-from-nail-plate.md)后获取钉盘附件file的信息。
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |

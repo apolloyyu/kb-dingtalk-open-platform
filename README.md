@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | 内容 | 官方文档中心全量快照：8 大类 / 26 子类 / **3781 篇** Markdown |
-| 快照日期 | 2026-09-01（权威值见 [meta/source_manifest.json](meta/source_manifest.json) 的 crawl_time） |
+| 快照日期 | 2026-09-02（权威值见 [meta/source_manifest.json](meta/source_manifest.json) 的 crawl_time） |
 | 检索设施 | 三级索引（107 文件）· 关系图谱（5 张边表，8124 条互链）· `dkdoc` 查询 CLI |
 | 维护方式 | 重爬 → 按 `doc_id` 对账 → 全量重建派生层 → lint（[ops/INGEST.md](ops/INGEST.md)） |
 | 使用定位 | **外挂文件夹**：不作为 Agent 工作区（cwd），挂给任意 Agent 使用 |
@@ -76,7 +76,7 @@ python3 ops/scripts/diff_snapshot.py <新快照目录> --apply         # 3. 换�
 
 ## 边界
 
-- 静态快照，时效止于 2026-09-01；时效敏感问题（计费/灰度/上线时间）以线上为准。
+- 静态快照，时效止于 2026-09-02；时效敏感问题（计费/灰度/上线时间）以线上为准。
 - 源站 90MB 原始 HTML（`raw_html/`）未收编，需要时回源 dump 查转换边界。
 - 已知抓取盲区见 [meta/UNAVAILABLE.md](meta/UNAVAILABLE.md) 与 `meta/failures.json`（1 篇失败）。
 - 文档内容版权归钉钉官方；本仓库提供快照的组织方式、索引与工具。

@@ -11,9 +11,10 @@
 
 ## 怎么查
 
-**主线：选入口 →（命中即停）→ 读正文 → 沿 `dkdoc links` / `graph/hubs.md` 扩展。**
+**主线：`dkdoc ctx` 一次打包 →（未覆盖所问才）分步精查 → 沿 `dkdoc links` / `graph/hubs.md` 扩展。**
 
 ```bash
+python3 $WIKI/bin/dkdoc ctx <词>...        # ★首选：实体五表命中+top2正文(含source_url)+links相邻+检索审计行
 python3 $WIKI/bin/dkdoc find <关键词>...   # 标题/面包屑/小标题/slug 模糊定位（多词=AND）
 python3 $WIKI/bin/dkdoc api|err|event|jsapi|perm <词>   # 精确实体五表（未命中自动兜底）
 python3 $WIKI/bin/dkdoc cat|links <路径|slug>     # 读正文 / 查正反链

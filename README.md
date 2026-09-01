@@ -19,6 +19,7 @@
 Agent 读完 [AGENTS.md](AGENTS.md) 即掌握全部用法。人类直接查也行：
 
 ```bash
+python3 <路径>/bin/dkdoc ctx 免登               # ★一次打包:实体命中+正文+相邻篇+审计行
 python3 <路径>/bin/dkdoc find 免登 小程序       # 找文档
 python3 <路径>/bin/dkdoc api 创建群             # 查接口
 python3 <路径>/bin/dkdoc err invalidDept        # 查错误码（未命中自动全文兜底）
@@ -29,7 +30,7 @@ python3 <路径>/bin/dkdoc cat <路径|slug>        # 读正文
 
 ```
 AGENTS.md                   Agent 操作手册：定位/最佳实践/找不到怎么办/ingest/维护  ← 入口
-bin/dkdoc                   查询 CLI：find/api/err/event/jsapi/perm/links/cat/grep（python3 标准库）
+bin/dkdoc                   查询 CLI：ctx/find/api/err/event/jsapi/perm/links/cat/grep（python3 标准库）
 index/
   INDEX.md                  L1 总索引：26 子类 + 一句话路由提示
   <大类>/<子类>.md           L2 子类清单；>200 篇的大类目再按功能域拆 L3

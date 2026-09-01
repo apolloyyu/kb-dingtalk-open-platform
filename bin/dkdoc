@@ -399,13 +399,20 @@ def _ctx_impl(terms, n):
         parts.append("读候选: dkdoc cat <路径> · 深查: dkdoc links <路径> · 全文兜底: dkdoc grep '<词>' · 否定前核对盲区: meta/UNAVAILABLE.md")
         return "\n".join(parts)
 
+    # 分层瘦身:实体表已精确命中时,简单题不需要两篇全文——1 篇+更小截断即可
+    ent_total = sum(ent_counts.values())
+    global _CTX_BODY_CAP
+    top_k_default = 1 if ent_total >= 1 else 2
+    if ent_total >= 1:
+        _CTX_BODY_CAP = 5000
+
     if not cand and not ent_lines:
         print("== 检索审计 ==")
         print("已检索: api/err/event/jsapi/perm/find · 关键词: " + " ".join(terms) + " · 命中: 0")
         print("== 继续 ==")
         print(f"换同义词重试 ctx；或 dkdoc grep '{' '.join(terms)}'；否定前核对 meta/UNAVAILABLE.md")
         return 1
-    text = render(2)
+    text = render(top_k_default)
     if len(text) > _CTX_TOTAL_CAP:
         text = render(1)
     if len(text) > _CTX_TOTAL_CAP:

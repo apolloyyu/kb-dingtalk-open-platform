@@ -510,6 +510,10 @@ def main():
     if not argv:
         return usage()
     cmd, terms = argv[0], argv[1:]
+    # ctx 调用方可能传多参数(ctx a b c)或引号整串(ctx "a b c"),后者不拆词会让
+    # 逐词检索退化成整句子串匹配而全部落空(实录:整串222B/0命中 vs 多参数14KB)。
+    if cmd == "ctx" and len(terms) == 1:
+        terms = [w for w in re.split(r"[\s,，、]+", terms[0]) if w] or terms
     if cmd == "where":
         print(ROOT)
         return 0

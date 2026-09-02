@@ -22,10 +22,10 @@ updated_at: "2025-10-09 18:05:11"
 
 以下机器人类型支持在群聊场景使用：
 
-- [企业内部开发机器人](../01-XOnnmGCTbn-开发指南/0076-configure-the-robot-application.md)
-- [第三方企业开发机器人](../01-XOnnmGCTbn-开发指南/0080-third-party-enterprise-robots.md)
-- [群模板机器人接入](../01-XOnnmGCTbn-开发指南/0092-creation-and-installation-of-swarm-template-robots.md)
-- [自定义机器人接入](../01-XOnnmGCTbn-开发指南/0081-custom-bot-creation-and-installation.md)
+- [企业内部开发机器人](../01-XOnnmGCTbn-开发指南/0078-configure-the-robot-application.md)
+- [第三方企业开发机器人](../01-XOnnmGCTbn-开发指南/0082-third-party-enterprise-robots.md)
+- [群模板机器人接入](../01-XOnnmGCTbn-开发指南/0094-creation-and-installation-of-swarm-template-robots.md)
+- [自定义机器人接入](../01-XOnnmGCTbn-开发指南/0083-custom-bot-creation-and-installation.md)
 
 所谓群聊机器人，指可以在群内使用的机器人，目前主要为webhook机器人和企业自建机器人两大类，另外通过场景群模板的方式，也可以预先配置好机器人并通过启用模板的方式安装到群内。
 

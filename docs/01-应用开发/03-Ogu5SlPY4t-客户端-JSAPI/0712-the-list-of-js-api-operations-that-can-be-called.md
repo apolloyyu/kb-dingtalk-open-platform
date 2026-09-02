@@ -5,13 +5,13 @@ namespace: "development"
 slug: "the-list-of-js-api-operations-that-can-be-called"
 group: "应用开发"
 tab: "客户端 JSAPI"
-breadcrumb: "历史文档（不推荐） > 小程序 > 小程序内支持调用的微应用JSAPI列表"
+breadcrumb: "历史文档（不推荐） > 小程序 > 小程序可用微应用JSAPI列表"
 doc_id: "SL1u4OqnUN"
 updated_at: "2025-09-17 21:01:25"
 ---
 
 > Source: https://open.dingtalk.com/document/development/the-list-of-js-api-operations-that-can-be-called
-> Path: 应用开发 / 客户端 JSAPI / 历史文档（不推荐） > 小程序 > 小程序内支持调用的微应用JSAPI列表
+> Path: 应用开发 / 客户端 JSAPI / 历史文档（不推荐） > 小程序 > 小程序可用微应用JSAPI列表
 > Updated: 2025-09-17 21:01:25
 
 # 小程序内支持调用的微应用JSAPI列表

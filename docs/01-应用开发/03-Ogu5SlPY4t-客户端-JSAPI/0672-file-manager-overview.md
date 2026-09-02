@@ -28,22 +28,22 @@ updated_at: "2026-09-01 09:17:08"
 
 | **名称** | **功能说明** |
 | --- | --- |
-| [创建本地用户目录](0673-creat-folder.md) | 调用**FileSystemManager.mkdir**，创建本地用户目录。 |
-| [判断文件或目录是否存在](0674-determine-whether-a-file-or-directory-exists.md) | 调用**FileSystemManager.access**，判断文件或者目录是否存在。 |
-| [保存文件](0675-save-file.md) | 调用**FileSystemManager.saveFile**，将本地临时文件保存为本地缓存文件或本地用户文件。 |
-| [获取文件信息](0676-get-file-information.md) | 调用**FileSystemManager.getFileInfo**，获取本地临时文件、本地缓存文件和本地用户文件的信息。 |
-| [获取本地用户文件和目录列表](0677-obtains-a-list-of-local-user-files.md) | 调用**FileSystemManager.readdir**，获取本地用户文件列表。 |
-| [获取文件或目录的status对象](0678-obtain-the-file-status-object.md) | 调用**FileSystemManager.stat**，获取文件或目录的status对象。 |
+| [创建本地用户目录](0675-creat-folder.md) | 调用**FileSystemManager.mkdir**，创建本地用户目录。 |
+| [判断文件或目录是否存在](0683-determine-whether-a-file-or-directory-exists.md) | 调用**FileSystemManager.access**，判断文件或者目录是否存在。 |
+| [保存文件](0673-save-file.md) | 调用**FileSystemManager.saveFile**，将本地临时文件保存为本地缓存文件或本地用户文件。 |
+| [获取文件信息](0674-get-file-information.md) | 调用**FileSystemManager.getFileInfo**，获取本地临时文件、本地缓存文件和本地用户文件的信息。 |
+| [获取本地用户文件和目录列表](0685-obtains-a-list-of-local-user-files.md) | 调用**FileSystemManager.readdir**，获取本地用户文件列表。 |
+| [获取文件或目录的status对象](0684-obtain-the-file-status-object.md) | 调用**FileSystemManager.stat**，获取文件或目录的status对象。 |
 | [获取本地缓存文件列表](0679-obtains-a-list-of-local-cached-files.md) | 调用**FileSystemManager.getSavedFileList**，获取本地缓存文件列表。 |
 | [读取本地用户文件内容](0680-read-local-user-file.md) | 调用**FileSystemManager.readFile**，读取本地用户文件的内容。 |
 | [删除本地用户文件目录](0681-delete-local-user-file-directory.md) | 调用**FileSystemManager.rmdir**，删除本地用户文件目录。 |
-| [删除本地用户文件](0682-delete-objects-local.md) | 调用**FileSystemManager.unlink**，删除本地用户文件。 |
-| [删除本地缓存文件](0683-delete-local-cache-files.md) | 调用**FileSystemManager.removeSavedFile**，删除本地缓存文件。 |
-| [复制文件保存到本地用户目录内](0684-copy-the-file-to-the-local-user-directory.md) | 调用**FileSystemManager.copyFile**，复制文件保存到本地用户目录。 |
-| [重命名并移动本地用户文件或目录](0685-rename-and-move-local-user-files-or-directories.md) | 调用**FileSystemManager.rename**，重命名本地用户文件或目录的名称并且可以移动到新目录下。 |
-| [向本地用户目录写入文件](0686-write-file-to-local-user-directory.md) | 调用**FileSystemManager.writeFile**，向本地用户目录内写入文件。 |
-| [向本地用户文件末尾添加内容](0687-append-content-to-the-end-of-the-local-user-file.md) | 调用**FileSystemManager.appendFile**，向本地用户文件末尾添加内容。 |
-| [解压本地用户文件](0688-unzip-local-user-files.md) | 调用**FileSystemManager.unzip**，解压本地用户文件。 |
+| [删除本地用户文件](0676-delete-objects-local.md) | 调用**FileSystemManager.unlink**，删除本地用户文件。 |
+| [删除本地缓存文件](0677-delete-local-cache-files.md) | 调用**FileSystemManager.removeSavedFile**，删除本地缓存文件。 |
+| [复制文件保存到本地用户目录内](0687-copy-the-file-to-the-local-user-directory.md) | 调用**FileSystemManager.copyFile**，复制文件保存到本地用户目录。 |
+| [重命名并移动本地用户文件或目录](0688-rename-and-move-local-user-files-or-directories.md) | 调用**FileSystemManager.rename**，重命名本地用户文件或目录的名称并且可以移动到新目录下。 |
+| [向本地用户目录写入文件](0682-write-file-to-local-user-directory.md) | 调用**FileSystemManager.writeFile**，向本地用户目录内写入文件。 |
+| [向本地用户文件末尾添加内容](0686-append-content-to-the-end-of-the-local-user-file.md) | 调用**FileSystemManager.appendFile**，向本地用户文件末尾添加内容。 |
+| [解压本地用户文件](0678-unzip-local-user-files.md) | 调用**FileSystemManager.unzip**，解压本地用户文件。 |
 
 ## **名词解释**
 
@@ -63,8 +63,8 @@ updated_at: "2026-09-01 09:17:08"
 
 - 本地临时文件只能通过特定接口产生，不能直接写入内容。本地临时文件通过文件虚拟协议`https://resource`操作。
 - 本地临时文件产生后，仅在当前生命周期内保证有效，重启之后不一定可用。并且一旦小程序被完全关闭就被清理，即下次冷启动小程序时不可继续使用。
-- 如果需要保证在下次启动是无需下载，可通过[保存文件](0675-save-file.md)接口将本地临时文件转换为本地缓存文件或本地用户文件。
-- 在下载临时文件时，可先通过[判断文件或目录是否存在](0674-determine-whether-a-file-or-directory-exists.md)接口检查文件是否存在，减少重复文件下载，提升用户体验。
+- 如果需要保证在下次启动是无需下载，可通过[保存文件](0673-save-file.md)接口将本地临时文件转换为本地缓存文件或本地用户文件。
+- 在下载临时文件时，可先通过[判断文件或目录是否存在](0683-determine-whether-a-file-or-directory-exists.md)接口检查文件是否存在，减少重复文件下载，提升用户体验。
 - 支持产生本地临时文件的API有：
 
   - [选择图片](0498-dd-chooseimage.md)，获取本地图片的本地临时文件。
@@ -75,24 +75,24 @@ updated_at: "2026-09-01 09:17:08"
 
 - 本地缓存文件只能通过调用特定接口产生，不能直接写入内容，本地缓存文件通过文件虚拟协议`https://resource`操作。
 - 本地缓存文件产生后，重启小程序之后仍可用。
-- 本地缓存文件只能通过[保存文件](0675-save-file.md)（不指定filePath）接口将本地临时文件保存获取。
+- 本地缓存文件只能通过[保存文件](0673-save-file.md)（不指定filePath）接口将本地临时文件保存获取。
 - 单个本地缓存文件最大限制是10MB。
-- 本地缓存文件和本地用户文件共计最多可存储50MB文件，若超出该大小，可通过[删除本地缓存文件](0683-delete-local-cache-files.md)接口删除本地缓存文件。
+- 本地缓存文件和本地用户文件共计最多可存储50MB文件，若超出该大小，可通过[删除本地缓存文件](0677-delete-local-cache-files.md)接口删除本地缓存文件。
 - 支持产生本地缓存文件的API有：
 
-  - [保存文件](0675-save-file.md)（不传filePath），将本地临时文件保存为本地缓存文件。
+  - [保存文件](0673-save-file.md)（不传filePath），将本地临时文件保存为本地缓存文件。
 
 #### **本地用户文件**
 
 - 本地用户文件通过文件虚拟协议`https://usr`操作。
 - 本地用户文件是指钉钉提供了一个用户文件目录给开发者，开发者对这个目录有完全自由的读写权限，通过`dd.env.USER_DATA_PATH`可以获取到这个目录的路径。
 - 单个本地用户文件最大限制是10MB。
-- 本地用户文件与本地缓存文件共计最多可存储50MB文件，若超过该大小，可通过[删除本地缓存文件](0683-delete-local-cache-files.md)接口或[删除本地用户文件](0682-delete-objects-local.md)接口。
+- 本地用户文件与本地缓存文件共计最多可存储50MB文件，若超过该大小，可通过[删除本地缓存文件](0677-delete-local-cache-files.md)接口或[删除本地用户文件](0676-delete-objects-local.md)接口。
 - 支持产生本地用户文件的API有：
 
-  - [保存文件](0675-save-file.md)（传filePath），将本地临时文件保存为本地用户文件。
-  - [复制文件保存到本地用户目录内](0684-copy-the-file-to-the-local-user-directory.md)，将本地临时文件、本地缓存文件和本地用户文件复制保存到本地用户目录内。
-  - [向本地用户目录写入文件](0686-write-file-to-local-user-directory.md)，向本地用户目录内写入文件。
+  - [保存文件](0673-save-file.md)（传filePath），将本地临时文件保存为本地用户文件。
+  - [复制文件保存到本地用户目录内](0687-copy-the-file-to-the-local-user-directory.md)，将本地临时文件、本地缓存文件和本地用户文件复制保存到本地用户目录内。
+  - [向本地用户目录写入文件](0682-write-file-to-local-user-directory.md)，向本地用户目录内写入文件。
 
 #### **读写权限**
 

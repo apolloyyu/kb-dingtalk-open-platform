@@ -31,17 +31,17 @@ updated_at: "2026-07-02 10:35:18"
 
 建议用户信息保存在前端缓存中（dd.setStorage）或者cookie中，避免每次进入应用都调用钉钉接口进行免登。
 
-1. 引入 JS SDK。详情参考[客户端SDK介绍](../01-XOnnmGCTbn-开发指南/0029-webapp-read-before-development.md)。
+1. 引入 JS SDK。详情参考[客户端SDK介绍](../01-XOnnmGCTbn-开发指南/0031-webapp-read-before-development.md)。
 
    ```
    npm install dingtalk-jsapi --save
    ```
-2. 获取免登授权码，网页应用免登可参考[网页应用（微应用）免登](../03-Ogu5SlPY4t-客户端-JSAPI/0007-jsapi-request-auth-code.md)。
+2. 获取免登授权码，网页应用免登可参考[网页应用（微应用）免登](../03-Ogu5SlPY4t-客户端-JSAPI/0008-jsapi-request-auth-code.md)。
 
    > **[!NOTE]**
    >
    > - 在使用该 JSAPI 之前，请确保网页应用的首页地址/重定向 URL（回调地址）/端内免登地址与运行该 JSAPI 的地址域名保持一致。
-   > - 网页应用首页地址配置请参考[配置网页应用](../01-XOnnmGCTbn-开发指南/0030-configure-web-application.md)。
+   > - 网页应用首页地址配置请参考[配置网页应用](../01-XOnnmGCTbn-开发指南/0032-configure-web-application.md)。
    > - 端内免登地址/重定向URL（回调地址），[应用创建与配置](../01-XOnnmGCTbn-开发指南/0007-create-application.md)后，单击左侧导航栏的开发配置 > 安全设置，进入页面即可进行配置*。*
 
    ```

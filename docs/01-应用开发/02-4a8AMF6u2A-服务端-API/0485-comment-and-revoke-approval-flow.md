@@ -48,7 +48,7 @@ updated_at: "2026-07-10 10:11:30"
 5. 若需要添加审批评论附件，需将文件上传至审批钉盘空间。可以获取到接口参数spaceId，fileType，fileName，fileId，fileSize。获取方式如下：
 
    1. 调用新版服务端API-[获取审批钉盘空间信息](0502-obtains-the-information-about-approval-nail-disk.md)接口，获取钉盘空间的上传权限，并获取审批钉盘空间spaceId。
-   2. 调用客户端JSAPI-[获取审批钉盘空间信息](../03-Ogu5SlPY4t-客户端-JSAPI/0333-jsapi-upload-attachment-to-ding-talk.md)接口，获取文件基本信息。
+   2. 调用客户端JSAPI-[获取审批钉盘空间信息](../03-Ogu5SlPY4t-客户端-JSAPI/0332-jsapi-upload-attachment-to-ding-talk.md)接口，获取文件基本信息。
 6. 获取审批钉盘空间spaceId后，可根据审批实例`instanceId`，调用新版服务端API-[添加审批评论](0500-official-approval-adds-approval-comments.md)接口，实现审批单的添加评论操作。
 7. 查看审批后，可根据审批实例`instanceId`，调用新版服务端API-[撤销审批实例](0499-revoke-an-approval-instance.md)，实现审批单的撤销操作。
 
@@ -516,11 +516,11 @@ updated_at: "2026-07-10 10:11:30"
               }
           }
       ```
-   2. 调用客户端JSAPI-[上传附件到钉盘/从钉盘选择文件](../03-Ogu5SlPY4t-客户端-JSAPI/0333-jsapi-upload-attachment-to-ding-talk.md)接口，获取文件基本信息，本流程示例使用[JSAPI Explorer](https://open.dingtalk.com/tools/explorer/jsapi?id=10318)实现。
+   2. 调用客户端JSAPI-[上传附件到钉盘/从钉盘选择文件](../03-Ogu5SlPY4t-客户端-JSAPI/0332-jsapi-upload-attachment-to-ding-talk.md)接口，获取文件基本信息，本流程示例使用[JSAPI Explorer](https://open.dingtalk.com/tools/explorer/jsapi?id=10318)实现。
 
       > **[!IMPORTANT]**
       >
-      > 调用该方法前，需要调用[获取审批钉盘空间信息](../03-Ogu5SlPY4t-客户端-JSAPI/0333-jsapi-upload-attachment-to-ding-talk.md)进行授权操作。
+      > 调用该方法前，需要调用[获取审批钉盘空间信息](../03-Ogu5SlPY4t-客户端-JSAPI/0332-jsapi-upload-attachment-to-ding-talk.md)进行授权操作。
 6. 获取审批钉盘空间spaceId后，可根据审批实例`instanceId`，调用新版服务端API-[添加审批评论](0500-official-approval-adds-approval-comments.md)接口，实现审批单的添加评论操作。
 
    ```

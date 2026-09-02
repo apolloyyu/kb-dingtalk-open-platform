@@ -24,12 +24,12 @@ updated_at: "2026-09-01 09:15:53"
 
 | **API名称** | **API说明** | **支持范围** |
 | --- | --- | --- |
-| [dd.corpId](0477-dd-corpid.md) | 获取当前用户的企业corpId | - 企业内部应有 - 第三方企业应用 |
-| [dd.canIUse](0476-dd-caniuse.md) | 判断小程序的API、回调、参数、组件等是否在当前版本可用 | - 企业内部应有 - 第三方企业应用 - 第三方个人应用 |
+| [dd.corpId](0476-dd-corpid.md) | 获取当前用户的企业corpId | - 企业内部应有 - 第三方企业应用 |
+| [dd.canIUse](0477-dd-caniuse.md) | 判断小程序的API、回调、参数、组件等是否在当前版本可用 | - 企业内部应有 - 第三方企业应用 - 第三方个人应用 |
 | [获取基础库版本号](0479-gets-the-version-number-of-the-base-database.md) | 获取基础库版本号 |
 | [dd.getAppIdSync](0480-synchronously-obtain-the-appid-of-the-mini-program.md) | 同步获取小程序AppId |
-| [dd.getLaunchOptionsSync](0481-obtains-the-startup-parameters-of-mini-programs.md) | 获取小程序启动时的参数 |
-| [dd.getRunScene](0482-obtain-the-running-version-of-the-mini-program.md) | 获取小程序的运行版本 |
+| [dd.getLaunchOptionsSync](0482-obtains-the-startup-parameters-of-mini-programs.md) | 获取小程序启动时的参数 |
+| [dd.getRunScene](0481-obtain-the-running-version-of-the-mini-program.md) | 获取小程序的运行版本 |
 
 ## 免登
 
@@ -54,17 +54,17 @@ updated_at: "2026-09-01 09:15:53"
 | **发网络请求** | [dd.httpRequest](0484-send-network-requests.md) | 发网络请求 | - 企业内部应有 - 第三方企业应用 - 第三方个人应用 |
 | **上传下载** | [dd.uploadFile](0485-dd-upload-objects.md) | 上传文件 |
 | [dd.downloadFile](0486-mini-program-download-objects.md) | 下载文件 |
-| **WebSocket** | [dd.connectSocket](0487-dd-connectsocket.md) | 创建WebSocket连接 |
-| [dd.onSocketOpen](0488-dd-onsocketopen.md) | 监听WebSocket连接打开事件 |
-| [dd.offSocketOpen](0489-dd-offsocketopen.md) | 取消监听WebSocket连接打开事件 |
-| [dd.onSocketError](0490-dd-onsocketerror.md) | 监听WebSocket错误 |
-| [dd.offSocketError](0491-dd-offsocketerror.md) | 取消监听WebSocket错误 |
-| [dd.sendSocketMessage](0492-dd-sendsocketmessage.md) | 发送数据 |
-| [dd.onSocketMessage](0493-dd-onsocketmessage.md) | 监听接收到的消息事件 |
-| [dd.offSocketMessage](0494-dd-offsocketmessage.md) | 取消监听接收消息事件 |
-| [dd.closeSocket](0495-dd-closesocket.md) | 关闭WebSocket连接 |
-| [dd.onSocketClose](0496-dd-onsocketclose.md) | 监听WebSocket关闭 |
-| [dd.offSocketClose](0497-dd-offsocketclose.md) | 取消监听WebSocket关闭事件 |
+| **WebSocket** | [dd.connectSocket](0488-dd-connectsocket.md) | 创建WebSocket连接 |
+| [dd.onSocketOpen](0495-dd-onsocketopen.md) | 监听WebSocket连接打开事件 |
+| [dd.offSocketOpen](0497-dd-offsocketopen.md) | 取消监听WebSocket连接打开事件 |
+| [dd.onSocketError](0489-dd-onsocketerror.md) | 监听WebSocket错误 |
+| [dd.offSocketError](0494-dd-offsocketerror.md) | 取消监听WebSocket错误 |
+| [dd.sendSocketMessage](0487-dd-sendsocketmessage.md) | 发送数据 |
+| [dd.onSocketMessage](0492-dd-onsocketmessage.md) | 监听接收到的消息事件 |
+| [dd.offSocketMessage](0493-dd-offsocketmessage.md) | 取消监听接收消息事件 |
+| [dd.closeSocket](0490-dd-closesocket.md) | 关闭WebSocket连接 |
+| [dd.onSocketClose](0491-dd-onsocketclose.md) | 监听WebSocket关闭 |
+| [dd.offSocketClose](0496-dd-offsocketclose.md) | 取消监听WebSocket关闭事件 |
 
 ## 多媒体
 
@@ -72,10 +72,10 @@ updated_at: "2026-09-01 09:15:53"
 | --- | --- | --- | --- |
 | **图片** | [dd.chooseImage](0498-dd-chooseimage.md) | [选择图片](https://open.dingtalk.com/document/orgapp/dd-chooseimage) | - 企业内部应有 - 第三方企业应用 - 第三方个人应用 |
 | [dd.previewImage](0499-dd-previewimage.md) | [预览图片](https://open.dingtalk.com/document/orgapp/dd-previewimage) |
-| [dd.saveImage](0500-dd-saveimage.md) | [保存图片到手机相册](https://open.dingtalk.com/document/orgapp/dd-saveimage) |
-| [dd.compressImage](0501-dd-compressimage.md) | [压缩图片](https://open.dingtalk.com/document/orgapp/dd-compressimage) |
+| [dd.saveImage](0503-dd-saveimage.md) | [保存图片到手机相册](https://open.dingtalk.com/document/orgapp/dd-saveimage) |
+| [dd.compressImage](0500-dd-compressimage.md) | [压缩图片](https://open.dingtalk.com/document/orgapp/dd-compressimage) |
 | [dd.getImageInfo](0502-dd-getimageinfo.md) | [获取图片信息](https://open.dingtalk.com/document/orgapp/dd-getimageinfo) |
-| [dd.editPicture](0503-dd-editpicture.md) | [编辑图片](https://open.dingtalk.com/document/orgapp/dd-editpicture) |
+| [dd.editPicture](0501-dd-editpicture.md) | [编辑图片](https://open.dingtalk.com/document/orgapp/dd-editpicture) |
 | **录音管理** | [dd.getRecorderManager](0504-dd-getrecordermanager.md) | [获取录音管理器](https://open.dingtalk.com/document/orgapp/dd-getrecordermanager) |
 | **背景音频管理** | [dd.getBackgroundAudioManager](0505-dd-getbackgroundaudiomanager.md) | [获取背景音频管理](https://open.dingtalk.com/document/orgapp/dd-getbackgroundaudiomanager) |
 | **视频** | [dd.chooseVideo](0506-dd-choosevideo.md) | [选择视频](https://open.dingtalk.com/document/orgapp/dd-choosevideo) |
@@ -85,18 +85,18 @@ updated_at: "2026-09-01 09:15:53"
 
 | **类目** | **API名称** | **API说明** | **支持范围** |
 | --- | --- | --- | --- |
-| **导航栏** | [dd.navigateTo](0508-dd-navigateto.md) | 页面跳转（保留当前页） | - 企业内部应有 - 第三方企业应用 - 第三方个人应用 |
-| [dd.redirectTo](0509-dd-redirectto.md) | 页面跳转（关闭当前页） |
-| [dd.reLaunch](0510-dd-relaunch.md) | 页面跳转（关闭所有页面） |
-| [dd.navigateBack](0511-dd-navigateback.md) | 返回上一级或多级页面 |
-| [dd.setNavigationBar](0512-dd-setnavigationbar.md) | 设置导航栏 |
-| **TabBar** | [dd.switchTab](0513-dd-switchtab.md) | 跳转到指定tabBar页面 |
-| [dd.setTabBarBadge](0514-dd-settabbarbadge.md) | 添加tabBar文本 |
-| [dd.removeTabBarBadge](0515-dd-removetabbarbadge.md) | 移除tabBar文本 |
-| [dd.showTabBarRedDot](0516-dd-showtabbarreddot.md) | 显示tabBar红点 |
-| [dd.hideTabBarRedDot](0517-dd-hidetabbarreddot.md) | 隐藏tabBar红点 |
-| [dd.addTabBarItem](0518-dd-addtabbaritem.md) | 添加tabBar页面 |
-| [dd.removeTabBarItem](0519-dd-removetabbaritem.md) | 移除tabBar页面 |
+| **导航栏** | [dd.navigateTo](0509-dd-navigateto.md) | 页面跳转（保留当前页） | - 企业内部应有 - 第三方企业应用 - 第三方个人应用 |
+| [dd.redirectTo](0510-dd-redirectto.md) | 页面跳转（关闭当前页） |
+| [dd.reLaunch](0511-dd-relaunch.md) | 页面跳转（关闭所有页面） |
+| [dd.navigateBack](0512-dd-navigateback.md) | 返回上一级或多级页面 |
+| [dd.setNavigationBar](0508-dd-setnavigationbar.md) | 设置导航栏 |
+| **TabBar** | [dd.switchTab](0519-dd-switchtab.md) | 跳转到指定tabBar页面 |
+| [dd.setTabBarBadge](0513-dd-settabbarbadge.md) | 添加tabBar文本 |
+| [dd.removeTabBarBadge](0514-dd-removetabbarbadge.md) | 移除tabBar文本 |
+| [dd.showTabBarRedDot](0515-dd-showtabbarreddot.md) | 显示tabBar红点 |
+| [dd.hideTabBarRedDot](0516-dd-hidetabbarreddot.md) | 隐藏tabBar红点 |
+| [dd.addTabBarItem](0517-dd-addtabbaritem.md) | 添加tabBar页面 |
+| [dd.removeTabBarItem](0518-dd-removetabbaritem.md) | 移除tabBar页面 |
 | **显示模式** | [dd.getColorSchemeSync](0520-display-mode.md) | 显示模式 |
 | **交互反馈** | [dd.alert](0521-dd-alert.md) | 显示警告框 |
 | [dd.confirm](0522-dd-confirm.md) | 显示确认框 |
@@ -112,9 +112,9 @@ updated_at: "2026-09-01 09:15:53"
 | **选择日期** | [dd.datePicker](0532-dd-datepicker.md) | 打开日期选择列表 |
 | **动画** | [dd.createAnimation](0533-dd-createanimation.md) | 创建动画实例 |
 | **画布** | [dd.createCanvasContext](0535-create-a-canvas.md) | 创建canvas |
-| **键盘** | [dd.onKeyboardShow](0575-dd-onkeyboardshow.md) | 监听键盘弹起事件 |
-| [dd.onKeyboardHide](0576-dd-onkeyboardhide.md) | 监听键盘收起事件 |
-| [dd.hideKeyboard](0577-dd-hidekeyboard.md) | 隐藏键盘 |
+| **键盘** | [dd.onKeyboardShow](0576-dd-onkeyboardshow.md) | 监听键盘弹起事件 |
+| [dd.onKeyboardHide](0577-dd-onkeyboardhide.md) | 监听键盘收起事件 |
+| [dd.hideKeyboard](0575-dd-hidekeyboard.md) | 隐藏键盘 |
 | **滚动** | [dd.pageScrollTo](0578-dd-pagescrollto.md) | 滚动到页面的目标位置 |
 | **字体** | [dd.loadFontFace](0579-dynamically-load-network-fonts.md) | 动态加载网络字体 |
 
@@ -122,8 +122,8 @@ updated_at: "2026-09-01 09:15:53"
 
 | **API名称** | **API说明** | **支持范围** |
 | --- | --- | --- |
-| [dd.navigateToMiniProgram](0580-inter-mini-program-jump.md) | 跳转到另一个钉钉小程序 | - 企业内部应有 - 第三方企业应用 - 第三方个人应用 |
-| [dd.navigateBackMiniProgram](0581-return-to-the-previous-dingtalk-mini-program.md) | 返回上一个钉钉小程序 |
+| [dd.navigateToMiniProgram](0581-inter-mini-program-jump.md) | 跳转到另一个钉钉小程序 | - 企业内部应有 - 第三方企业应用 - 第三方个人应用 |
+| [dd.navigateBackMiniProgram](0580-return-to-the-previous-dingtalk-mini-program.md) | 返回上一个钉钉小程序 |
 
 ## 节点查询
 
@@ -225,22 +225,22 @@ updated_at: "2026-09-01 09:15:53"
 
 | **API名称** | **API说明** | **支持范围** |
 | --- | --- | --- |
-| [FileSystemManager.mkdir](0673-creat-folder.md) | 创建本地用户目录 | - 企业内部应有 - 第三方企业应用 - 第三方个人应用 |
-| [FileSystemManager.access](0674-determine-whether-a-file-or-directory-exists.md) | 判断文件或目录是否存在 |
-| [FileSystemManager.saveFile](0675-save-file.md) | 将本地临时文件保存为本地缓存文件或本地用户文件 |
-| [FileSystemManager.getFileInfo](0676-get-file-information.md) | 获取本地临时文件、本地缓存文件和本地用户文件的信息 |
-| [FileSystemManager.readdir](0677-obtains-a-list-of-local-user-files.md) | 获取本地用户文件和目录列表 |
-| [FileSystemManager.stat](0678-obtain-the-file-status-object.md) | 获取文件或目录的status对象 |
+| [FileSystemManager.mkdir](0675-creat-folder.md) | 创建本地用户目录 | - 企业内部应有 - 第三方企业应用 - 第三方个人应用 |
+| [FileSystemManager.access](0683-determine-whether-a-file-or-directory-exists.md) | 判断文件或目录是否存在 |
+| [FileSystemManager.saveFile](0673-save-file.md) | 将本地临时文件保存为本地缓存文件或本地用户文件 |
+| [FileSystemManager.getFileInfo](0674-get-file-information.md) | 获取本地临时文件、本地缓存文件和本地用户文件的信息 |
+| [FileSystemManager.readdir](0685-obtains-a-list-of-local-user-files.md) | 获取本地用户文件和目录列表 |
+| [FileSystemManager.stat](0684-obtain-the-file-status-object.md) | 获取文件或目录的status对象 |
 | [FileSystemManager.getSavedFileList](0679-obtains-a-list-of-local-cached-files.md) | 获取本地缓存文件列表 |
 | [FileSystemManager.readFile](0680-read-local-user-file.md) | 读取本地用户文件内容 |
 | [FileSystemManager.rmdir](0681-delete-local-user-file-directory.md) | 删除本地用户文件目录 |
-| [FileSystemManager.unlink](0682-delete-objects-local.md) | 删除本地用户文件 |
-| [FileSystemManager.removeSavedFile](0683-delete-local-cache-files.md) | 删除本地缓存文件 |
-| [FileSystemManager.copyFile](0684-copy-the-file-to-the-local-user-directory.md) | 复制文件保存到本地用户目录内 |
-| [FileSystemManager.rename](0685-rename-and-move-local-user-files-or-directories.md) | 重命名并移动本地用户文件或目录 |
-| [FileSystemManager.writeFile](0686-write-file-to-local-user-directory.md) | 向本地用户目录写入文件 |
-| [FileSystemManager.appendFile](0687-append-content-to-the-end-of-the-local-user-file.md) | 向本地用户文件末尾添加内容 |
-| [FileSystemManager.unzip](0688-unzip-local-user-files.md) | 解压本地用户文件 |
+| [FileSystemManager.unlink](0676-delete-objects-local.md) | 删除本地用户文件 |
+| [FileSystemManager.removeSavedFile](0677-delete-local-cache-files.md) | 删除本地缓存文件 |
+| [FileSystemManager.copyFile](0687-copy-the-file-to-the-local-user-directory.md) | 复制文件保存到本地用户目录内 |
+| [FileSystemManager.rename](0688-rename-and-move-local-user-files-or-directories.md) | 重命名并移动本地用户文件或目录 |
+| [FileSystemManager.writeFile](0682-write-file-to-local-user-directory.md) | 向本地用户目录写入文件 |
+| [FileSystemManager.appendFile](0686-append-content-to-the-end-of-the-local-user-file.md) | 向本地用户文件末尾添加内容 |
+| [FileSystemManager.unzip](0678-unzip-local-user-files.md) | 解压本地用户文件 |
 
 ## 开放接口
 
@@ -292,10 +292,10 @@ updated_at: "2026-09-01 09:15:53"
 
 | **API名称** | **API说明** | **支持范围** |
 | --- | --- | --- |
-| [dd.saveFileToDingTalk](0703-transfer-files-to-a-nail-drive.md) | 转存文件到钉盘 | - 企业内部应有 - 第三方企业应用 - 第三方个人应用 |
-| [dd.previewFileInDingTalk](0704-nail-plate-file-preview.md) | 钉盘文件预览 |
-| [dd.uploadAttachmentToDingTalk](0705-upload-attachment-to-nail-plate-select-file-from-nail-plate.md) | 传附件到钉盘，或从钉盘选择文件 |
-| [dd.chooseDingTalkDir](0706-select-a-pin-plate-directory.md) | 唤起钉盘选择器， 从用户当前的企业空间或个人空间选择一个目录 |
+| [dd.saveFileToDingTalk](0705-transfer-files-to-a-nail-drive.md) | 转存文件到钉盘 | - 企业内部应有 - 第三方企业应用 - 第三方个人应用 |
+| [dd.previewFileInDingTalk](0703-nail-plate-file-preview.md) | 钉盘文件预览 |
+| [dd.uploadAttachmentToDingTalk](0706-upload-attachment-to-nail-plate-select-file-from-nail-plate.md) | 传附件到钉盘，或从钉盘选择文件 |
+| [dd.chooseDingTalkDir](0704-select-a-pin-plate-directory.md) | 唤起钉盘选择器， 从用户当前的企业空间或个人空间选择一个目录 |
 
 ### **会话**
 
@@ -309,4 +309,4 @@ updated_at: "2026-09-01 09:15:53"
 
 | **API名称** | **API说明** | **支持范围** |
 | --- | --- | --- |
-| [授权获取审批实例数据](0710-authorize-to-obtain-approved-instance-data-1.md) | 审批：唤起授权弹窗，提示用户授权 | - 企业内部应有 - 第三方企业应用 |
+| [授权获取审批实例数据](0711-authorize-to-obtain-approved-instance-data-1.md) | 审批：唤起授权弹窗，提示用户授权 | - 企业内部应有 - 第三方企业应用 |

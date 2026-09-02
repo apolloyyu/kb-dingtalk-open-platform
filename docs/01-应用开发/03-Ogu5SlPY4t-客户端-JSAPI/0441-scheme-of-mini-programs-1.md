@@ -27,7 +27,7 @@ updated_at: "2026-09-01 09:16:11"
 - 从 H5 跳转到某个小程序。
 - 生成一个二维码，供用户通过钉钉扫码打开小程序。
 
-从 H5 跳转到小程序，可以使用dd.biz.util.openLink，详情请参考[打开目标页面](0834-open-link-on-new-window.md)。
+从 H5 跳转到小程序，可以使用dd.biz.util.openLink，详情请参考[打开目标页面](0835-open-link-on-new-window.md)。
 
 根据不同业务类型，钉钉小程序分为第三方企业应用、企业内部应用以及第三方个人应用。这三种业务类型的 scheme 存在一些异同。
 

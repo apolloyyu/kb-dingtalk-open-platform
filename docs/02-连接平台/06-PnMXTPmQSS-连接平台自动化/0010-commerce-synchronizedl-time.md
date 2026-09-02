@@ -49,7 +49,7 @@ updated_at: "2026-08-03 09:13:32"
 - 创建一个钉钉 AI 表格，并设置该表格的字段（字段名称需要与后续配置时保持一致）。
 
   ![image.png](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2169175871/p988637.png)
-- 在群内添加自定义机器人，步骤参考[创建自定义机器人](../../01-应用开发/01-XOnnmGCTbn-开发指南/0081-custom-bot-creation-and-installation.md)。
+- 在群内添加自定义机器人，步骤参考[创建自定义机器人](../../01-应用开发/01-XOnnmGCTbn-开发指南/0083-custom-bot-creation-and-installation.md)。
 - 在千牛商家后台的自动化节点中，配置自定义机器人 WebHook 地址。
 
   ![image.png](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8294813571/p988638.png)

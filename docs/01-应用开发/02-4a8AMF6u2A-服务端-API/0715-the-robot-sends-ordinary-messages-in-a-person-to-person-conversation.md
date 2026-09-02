@@ -20,7 +20,7 @@ updated_at: "2026-07-14 09:29:37"
 
 ## 接口调用说明
 
-仅在单聊酷应用场景下使用，详情参考[单聊酷应用](../01-XOnnmGCTbn-开发指南/0060-private-chat-coolapp-overview.md)。
+仅在单聊酷应用场景下使用，详情参考[单聊酷应用](../01-XOnnmGCTbn-开发指南/0062-private-chat-coolapp-overview.md)。
 
 ## 请求
 

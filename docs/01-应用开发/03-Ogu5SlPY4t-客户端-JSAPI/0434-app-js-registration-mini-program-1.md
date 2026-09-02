@@ -107,7 +107,7 @@ App({
 | onShow | Function | 监听小程序显示。  当小程序启动，或从后台进入前台显示时触发。 |
 | onHide | Function | 监听小程序隐藏。  当小程序从前台进入后台时触发。 |
 | onError | Function | 监听小程序错误。  当小程序发生 js 错误时触发。 |
-| onPageNotFound | Function | 监听小程序启动时的页面不存在。  当小程序冷启动或热启动时触发。  不支持处理**导航栏相关API**失败场景，如以下API：   - [页面跳转（保留当前页）](0508-dd-navigateto.md) - [页面跳转（关闭当前页）](0509-dd-redirectto.md) - [页面跳转（关闭所有页面）](0510-dd-relaunch.md) - [返回上一级或多级页面](0511-dd-navigateback.md) - [设置导航栏](0512-dd-setnavigationbar.md) |
+| onPageNotFound | Function | 监听小程序启动时的页面不存在。  当小程序冷启动或热启动时触发。  不支持处理**导航栏相关API**失败场景，如以下API：   - [页面跳转（保留当前页）](0509-dd-navigateto.md) - [页面跳转（关闭当前页）](0510-dd-redirectto.md) - [页面跳转（关闭所有页面）](0511-dd-relaunch.md) - [返回上一级或多级页面](0512-dd-navigateback.md) - [设置导航栏](0508-dd-setnavigationbar.md) |
 | 其他 | Any | 开发者可以添加任意数据或者函数到object对象中，可以通过getApp()方法获取。 |
 
 > **[!NOTE]**

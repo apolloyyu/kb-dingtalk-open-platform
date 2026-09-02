@@ -84,7 +84,7 @@ Content-Type:application/json
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
 | cardTemplateId | String | 是 | 卡片搭建平台模板ID，固定值填写为`StandardCard`。 |
-| openConversationId | String | 否 | 接收卡片的加密群ID，特指多人群会话（非单聊）。  **[!NOTE]**   - 基于群模板创建的群，请参考[创建群](1486-create-a-scene-group-v2.md)。 - 安装群聊酷应用的群，请参考[酷应用](../01-XOnnmGCTbn-开发指南/0042-coolapp-overview.md)。   `openConversationId`和`singleChatReceiver` 二选一必填。 |
+| openConversationId | String | 否 | 接收卡片的加密群ID，特指多人群会话（非单聊）。  **[!NOTE]**   - 基于群模板创建的群，请参考[创建群](1486-create-a-scene-group-v2.md)。 - 安装群聊酷应用的群，请参考[酷应用](../01-XOnnmGCTbn-开发指南/0044-coolapp-overview.md)。   `openConversationId`和`singleChatReceiver` 二选一必填。 |
 | singleChatReceiver | String | 否 | 单聊会话接收者json串。  **[!NOTE]**  `openConversationId`和`singleChatReceiver` 二选一必填。 |
 | cardBizId | String | 是 | 唯一标识一张卡片的外部ID，卡片幂等ID，可用于更新或重复发送同一卡片到多个群会话。  **[!NOTE]**   - 不超过100字符，建议64字符以内。 - 若使用新的 `cardTemplateId` 或 `cardData` 等参数，则需要生成一个全新的 outTrackId，否则更改不会生效。 |
 | robotCode | String | 是 | 机器人的编码，参见[机器人名词表-robotCode](0698-development-robot-overview.md)内容，获取`robotCode`。 |

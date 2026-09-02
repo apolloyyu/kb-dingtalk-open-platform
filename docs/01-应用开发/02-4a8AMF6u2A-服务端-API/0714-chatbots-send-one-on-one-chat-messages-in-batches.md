@@ -20,7 +20,7 @@ updated_at: "2026-07-14 09:29:36"
 
 ## **接口调用说明**
 
-本接口支持企业内部应用机器人，详情参考[配置企业机器人](../01-XOnnmGCTbn-开发指南/0076-configure-the-robot-application.md)。
+本接口支持企业内部应用机器人，详情参考[配置企业机器人](../01-XOnnmGCTbn-开发指南/0078-configure-the-robot-application.md)。
 
 ## 请求
 

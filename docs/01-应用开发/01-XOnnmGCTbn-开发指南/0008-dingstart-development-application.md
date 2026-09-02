@@ -21,14 +21,14 @@ updated_at: "2026-05-12 08:53:46"
 平台目前提供了多种应用开发方式，其中包括小程序应用和微应用、酷应用等，你可根据实际开放环境，选择合适的开发场景进行开发：
 
 - [开发AI应用](../../03-AI-PaaS/01-pm4vgiS9Br-平台介绍/0001-introduction-to-dingtalk-ai-paas-1.md)
-- [开发小程序应用](0024-optional-develop-a-small-program-server.md)
-- [配置网页应用](0030-configure-web-application.md)
+- [开发小程序应用](0026-optional-develop-a-small-program-server.md)
+- [配置网页应用](0032-configure-web-application.md)
 
   > **[!NOTE]**
   >
-  > 网页应用的运行环境如果是鸿蒙系统，可参考[鸿蒙适配指南](0034-harmony-adaptation-guide.md)文档，在鸿蒙系统中接入钉钉JSAPI。
-- [开发酷应用](0042-coolapp-overview.md)
-- [开发机器人](0075-robot-application-overview.md)
+  > 网页应用的运行环境如果是鸿蒙系统，可参考[鸿蒙适配指南](0036-harmony-adaptation-guide.md)文档，在鸿蒙系统中接入钉钉JSAPI。
+- [开发酷应用](0044-coolapp-overview.md)
+- [开发机器人](0077-robot-application-overview.md)
 
 ## **监控应用**
 

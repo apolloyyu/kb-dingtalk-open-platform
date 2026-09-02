@@ -65,7 +65,7 @@ updated_at: "2026-07-20 09:21:43"
           complete: () => {},
         });
         ```
-      - H5微应用获取授权码示例如下，详情请参考[免登流程](../03-Ogu5SlPY4t-客户端-JSAPI/0007-jsapi-request-auth-code.md)。
+      - H5微应用获取授权码示例如下，详情请参考[免登流程](../03-Ogu5SlPY4t-客户端-JSAPI/0008-jsapi-request-auth-code.md)。
 
         ```
         dd.ready(function() {
@@ -100,7 +100,7 @@ updated_at: "2026-07-20 09:21:43"
 
   - RDS推送：
 
-    在保障数据安全的前提下，极大的简化了推送协议，减少了数据传输次数，提高了数据传输速度，提升了推送的稳定性。详情请参考[配置RDS推送表](../04-LFcRvVD08N-事件订阅/0352-configure-rds-push-table.md)。
+    在保障数据安全的前提下，极大的简化了推送协议，减少了数据传输次数，提高了数据传输速度，提升了推送的稳定性。详情请参考[配置RDS推送表](../04-LFcRvVD08N-事件订阅/0332-configure-rds-push-table.md)。
   - SyncHTTP回调推送：
 
     SyncHTTP回调推送是使用回调地址推送数据的方式，开发者提供HTTP回调服务，钉钉服务器会向此回调地址推送数据，数据需要经过加解密的处理。详情请参考[配置 SyncHTTP 推送（不推荐）](../04-LFcRvVD08N-事件订阅/0003-configure-stream-push.md#421584309ds03)。

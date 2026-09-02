@@ -57,7 +57,7 @@ updated_at: "2026-07-14 09:22:13"
 | pullStrategy | String | 否 | 拉取策略，可选值：   - **NONE**：不拉取，无动态数据 - **INTERVAL**：间隔拉取 - **ONCE**：只拉取一次       使用动态数据源功能时该参数字段必填。 |
 | interval | Integer | 否 | 拉取的间隔时间。       - 只在将`pullStrategy`设置为**INTERVAL**的时候生效。 - 最小拉取间隔时间3s。 |
 | timeUnit | String | 否 | 拉取的间隔时间的单位， 可选值：   - **SECONDS**：秒 - **MINUTES**：分钟 - **HOURS**：小时 - **DAYS**：天       只在将`pullStrategy`设置为**INTERVAL**的时候生效。 |
-| imSingleOpenSpaceModel | Object | 否 | IM单聊酷应用场域信息，具体表现如下：  image      单聊酷应用详情参考[接入单聊酷应用](../01-XOnnmGCTbn-开发指南/0061-configuration-private-chat-quick-entry.md)。 |
+| imSingleOpenSpaceModel | Object | 否 | IM单聊酷应用场域信息，具体表现如下：  image      单聊酷应用详情参考[接入单聊酷应用](../01-XOnnmGCTbn-开发指南/0063-configuration-private-chat-quick-entry.md)。 |
 | supportForward | Boolean | 否 | 是否支持转发, 默认 false。 |
 | lastMessageI18n | Map<String, String> | 否 | 支持国际化的LastMessage，目前支持的语言枚举值：   - **ZH\_CN**：简体中文 - **ZH\_TW**：繁体中文: - **EN\_US**：英文 - **JA\_JP**：日语 - **VI\_VN**：越南语 - **TH\_TH**: 泰语       key为语言枚举值，value为lastMessage内容。    示例：   ``` {"ZH_CN":"卡片", "EN_US" : "card"} ``` |
 | searchSupport | Object | 否 | 支持卡片消息可被搜索字段。 |

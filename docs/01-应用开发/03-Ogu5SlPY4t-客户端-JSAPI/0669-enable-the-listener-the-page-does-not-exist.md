@@ -30,7 +30,7 @@ updated_at: "2026-09-01 09:17:04"
 
 > **[!NOTE]**
 >
-> - 开发者可以通过[dd.canIUse](0476-dd-caniuse.md)函数判断端上是否支持此能力。
+> - 开发者可以通过[dd.canIUse](0477-dd-caniuse.md)函数判断端上是否支持此能力。
 > - 开发者在回调中进行页面重定向，必须在回调中同步处理，异步处理无效，例如 setTimeout 异步执行无效。
 > - 如果开发者没有调用本接口dd.onPageNotFound绑定监听，也没有声明[app.js注册小程序](0434-app-js-registration-mini-program-1.md)中**App.onPageNotFound**，当跳转页面不存在时，将推入钉钉客户端原生的页面不存在提示页面，提示“很抱歉，您访问的页面不存在”。
 >

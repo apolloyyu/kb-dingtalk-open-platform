@@ -135,7 +135,7 @@ updated_at: "2026-07-22 16:55:12"
 
 **注意**：有效期仅为 5 分钟，使用一次后即失效且不可重复使用。
 
-**获取**：通过调用 [getAuthCode](../03-Ogu5SlPY4t-客户端-JSAPI/0006-jsapi-get-auth-code.md)、[requestAuthCode](../03-Ogu5SlPY4t-客户端-JSAPI/0007-jsapi-request-auth-code.md)等接口获取，详细使用可参考[身份验证（免登）](../02-4a8AMF6u2A-服务端-API/0016-sso-overview.md)。
+**获取**：通过调用 [getAuthCode](../03-Ogu5SlPY4t-客户端-JSAPI/0006-jsapi-get-auth-code.md)、[requestAuthCode](../03-Ogu5SlPY4t-客户端-JSAPI/0008-jsapi-request-auth-code.md)等接口获取，详细使用可参考[身份验证（免登）](../02-4a8AMF6u2A-服务端-API/0016-sso-overview.md)。
 
 ### jsapi\_ticket
 

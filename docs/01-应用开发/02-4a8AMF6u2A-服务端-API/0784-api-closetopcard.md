@@ -40,7 +40,7 @@ updated_at: "2026-07-14 09:22:15"
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
 | outTrackId | String | 是 | 外部卡片实例Id，与[创建卡片](0780-interface-for-creating-a-card-instance.md)/[创建并投放卡片](0783-create-and-deliver-cards.md)中的 outTrackId 保持一致。也可在对应模板的**卡片实例管理**中获取：  image      由开发者自己生成并作为入参传递给钉钉的，钉钉只在对应使用到outTrackId的场景，帮助开发者对TrackId进行记录。 |
-| openConversationId | String | 是 | 会话 id：   - **群聊**（此参数必传）：    - 基于群模板创建的群，调用[创建场景群](0746-create-a-scene-group.md)接口获取`open_conversation_id`参数值。   - 安装群聊酷应用的群，通过[感知群变化（事件订阅）](../01-XOnnmGCTbn-开发指南/0058-group-chat-coolapp-event.md)获取回调参数`OpenConversationId`参数值。 - **单聊助手**：不传入此参数。 |
+| openConversationId | String | 是 | 会话 id：   - **群聊**（此参数必传）：    - 基于群模板创建的群，调用[创建场景群](0746-create-a-scene-group.md)接口获取`open_conversation_id`参数值。   - 安装群聊酷应用的群，通过[感知群变化（事件订阅）](../01-XOnnmGCTbn-开发指南/0060-group-chat-coolapp-event.md)获取回调参数`OpenConversationId`参数值。 - **单聊助手**：不传入此参数。 |
 
 ### 请求示例
 

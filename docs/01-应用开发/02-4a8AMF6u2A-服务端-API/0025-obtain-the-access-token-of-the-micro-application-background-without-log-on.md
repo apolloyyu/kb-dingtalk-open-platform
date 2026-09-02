@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "认证与授权 > 身份验证（免登） > 获取微应用后台免登的accessToken"
 doc_id: "dTbalMop3X"
-updated_at: "2026-04-29 22:27:34"
+updated_at: "2026-09-02 18:06:54"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-the-access-token-of-the-micro-application-background-without-log-on
 > Path: 应用开发 / 服务端 API / 认证与授权 > 身份验证（免登） > 获取微应用后台免登的accessToken
-> Updated: 2026-04-29 22:27:34
+> Updated: 2026-09-02 18:06:54
 
 # 获取微应用后台免登的accessToken
 

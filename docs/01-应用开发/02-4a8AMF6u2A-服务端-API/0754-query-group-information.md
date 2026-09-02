@@ -23,7 +23,7 @@ updated_at: "2026-08-14 09:41:56"
 支持以下场景使用：
 
 - 基于群模板创建的群，详情参见[创建场景群](0746-create-a-scene-group.md)。
-- 安装群聊酷应用的群，详情参见[群聊酷应用](../01-XOnnmGCTbn-开发指南/0042-coolapp-overview.md)。
+- 安装群聊酷应用的群，详情参见[群聊酷应用](../01-XOnnmGCTbn-开发指南/0044-coolapp-overview.md)。
 
 ## 请求
 
@@ -46,7 +46,7 @@ updated_at: "2026-08-14 09:41:56"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| openConversationId | String | 是 | 群ID：   - 基于群模板创建的群：调用[创建场景群](0746-create-a-scene-group.md)接口获取`open_conversation_id`参数值。 - 安装群聊酷应用的群：通过[群内安装酷应用事件](../01-XOnnmGCTbn-开发指南/0058-group-chat-coolapp-event.md)获取回调参数`OpenConversationId`参数值。 |
+| openConversationId | String | 是 | 群ID：   - 基于群模板创建的群：调用[创建场景群](0746-create-a-scene-group.md)接口获取`open_conversation_id`参数值。 - 安装群聊酷应用的群：通过[群内安装酷应用事件](../01-XOnnmGCTbn-开发指南/0060-group-chat-coolapp-event.md)获取回调参数`OpenConversationId`参数值。 |
 | coolAppCode | String | 否 | 群聊酷应用编码：   - 基于群模板创建的群：不需要传入此参数。 - 安装群聊酷应用的群，**必须**传入此参数。 |
 
 ### 请求示例

@@ -1,0 +1,853 @@
+# 快照对账 2026-09-03
+
+- 旧：3622 篇（本库 meta/documents.jsonl）
+- 新：3613 篇（/home/yuweilun.ywl/Documents/工作/开放平台/wiki/dingtalk-open-platform-docs-20260903-0700）
+- 新增 4 / 更新 81 / 移动 738 / 删除 13
+
+## 新增
+- [应用部署](docs/01-应用开发/01-XOnnmGCTbn-开发指南/0010-deploy-applications.md) · 应用开发/开发指南 · 2026-09-02
+- [架构最佳实践](docs/01-应用开发/01-XOnnmGCTbn-开发指南/0011-architecture-best-practices.md) · 应用开发/开发指南 · 2026-08-26
+- [prompt](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0757-prompt.md) · 应用开发/客户端 JSAPI · 2026-09-01
+- [AI招聘消息通知事件](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0140-events-hire-agent-notification.md) · 应用开发/事件订阅 · 2026-09-02
+
+## 内容更新
+- [数据分页](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0011-pagination.md) · 2026-05-09 → 2026-09-02
+- [概述](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0016-sso-overview.md) · 2026-01-22 → 2026-09-02
+- [第三方个人应用免登并获取用户信息](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0023-quickstart.md) · 2026-07-02 → 2026-09-02
+- [获取微应用后台免登的accessToken](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0025-obtain-the-access-token-of-the-micro-application-background-without-log-on.md) · 2026-04-29 → 2026-09-02
+- [激活应用](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1863-activate-suite.md) · 2025-10-16 → 2026-09-02
+- [注册回调事件](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1864-register-callback-events.md) · 2025-10-16 → 2026-09-02
+- [更新事件接口](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1866-update-event-interface.md) · 2025-10-16 → 2026-09-02
+- [查询订阅事件](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1867-query-subscribed-events.md) · 2025-10-16 → 2026-09-02
+- [删除事件回调接口](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1868-delete-an-event-callback-interface.md) · 2025-10-16 → 2026-09-02
+- [获取推送失败的事件列表](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1869-list-of-events-where-historical-push-notifications-failed.md) · 2025-12-05 → 2026-09-02
+- [获取授权企业的永久授权码](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1870-obtain-a-permanent-authorization-code.md) · 2025-10-16 → 2026-09-02
+- [转存文件到钉盘](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0705-transfer-files-to-a-nail-drive.md) · 2025-09-17 → 2026-09-02
+- [上传附件到钉盘/从钉盘选择文件](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0706-upload-attachment-to-nail-plate-select-file-from-nail-plate.md) · 2025-09-17 → 2026-09-02
+- [获取用户授权](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0710-obtain-user-auth-data.md) · 2025-09-17 → 2026-09-02
+- [授权获取审批实例数据](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0711-authorize-to-obtain-approved-instance-data-1.md) · 2025-09-17 → 2026-09-02
+- [JSAPI总览](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0713-jsapi-overview-1.md) · 2025-09-17 → 2026-09-02
+- [免登流程](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0714-logon-free-process.md) · 2025-10-09 → 2026-09-02
+- [获取企业CorpId](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0715-obtain-enterprise-corpid.md) · 2025-09-17 → 2026-09-02
+- [获取微应用免登授权码](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0716-obtain-the-micro-application-exemption-authorization-code.md) · 2025-09-17 → 2026-09-02
+- [获取微应用反馈式操作的临时授权码](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0717-obtain-the-temporary-authorization-code-for-micro-application-feedback-operation.md) · 2025-09-17 → 2026-09-02
+- [获取uuid](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0718-get-uuid.md) · 2025-09-17 → 2026-09-02
+- [获取wifi状态](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0719-get-wifi-status.md) · 2025-09-17 → 2026-09-02
+- [获取手机基础信息](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0724-obtain-basic-mobile-phone-information.md) · 2025-09-17 → 2026-09-02
+- [打开应用](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0744-open-an-application.md) · 2025-09-17 → 2026-09-02
+- [设置左侧导航按钮文本](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0754-set-left-navigation-button-text.md) · 2025-09-17 → 2026-09-02
+- [根据chatId跳转到对应会话](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0768-redirects-to-a-specific-session-based-on-the-chatid-h5.md) · 2025-09-17 → 2026-09-02
+- [根据openConversationId跳转到对应会话](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0770-redirects-to-the-specified-session-based-on-the-openconversationid.md) · 2025-09-17 → 2026-09-02
+- [上传文件](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0777-upload-objects-jsapi.md) · 2025-09-17 → 2026-09-02
+- [下载文件](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0778-download-objects.md) · 2025-09-17 → 2026-09-02
+- [预览钉盘文件](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0784-preview-nail-plate-file.md) · 2025-09-17 → 2026-09-02
+- [批量预览钉盘图片](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0787-batch-preview-of-nail-plate-pictures.md) · 2025-09-17 → 2026-09-02
+- [上传附件到钉盘/从钉盘选择文件](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0788-upload-attachment-to-nail-plate-select-file-from-nail-plate-h5.md) · 2025-09-17 → 2026-09-02
+- [压缩图片](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0790-compress-images.md) · 2025-09-17 → 2026-09-02
+- [获取用户授权](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0821-obtain-user-authorization.md) · 2025-09-17 → 2026-09-02
+- [发单聊消息授权](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0822-single-chat-message-authorization.md) · 2025-09-17 → 2026-09-02
+- [编辑外部联系人](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0831-edit-external-contacts.md) · 2025-09-17 → 2026-09-02
+- [单选自定义联系人](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0832-custom-radio-contact.md) · 2025-09-17 → 2026-09-02
+- [判断是否为弹窗窗口](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0839-determines-whether-it-is-a-pop-up-window.md) · 2025-09-17 → 2026-09-02
+- [返回上一个应用](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0841-return-to-previous-application.md) · 2025-09-17 → 2026-09-02
+- [发起在线课堂](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0848-online-classroom-initiation.md) · 2025-09-17 → 2026-09-02
+- [专属实人认证](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0849-id-verification.md) · 2025-09-17 → 2026-09-02
+- [H5微应用](docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0852-h5-micro-application.md) · 2026-07-22 → 2026-09-02
+- [HTTP回调概述](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0237-http-callback-overview.md) · 2025-10-16 → 2026-09-02
+- [事件列表](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0238-test-callback-url-events.md) · 2025-10-16 → 2026-09-02
+- [回调事件列表](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0239-hidden-event-list.md) · 2025-10-16 → 2026-09-02
+- [通用回调事件](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0240-event-subscription-callback-test-url-event.md) · 2025-12-08 → 2026-09-02
+- [开发小程序（HTTP回调）](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0241-develop-mini-programs-http-callback.md) · 2025-10-16 → 2026-09-02
+- [会议室事件](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0246-meeting-room-events.md) · 2025-10-16 → 2026-09-02
+- [通讯录授权范围变更事件](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0251-event-subscription-address-book-auth-change-event.md) · 2025-12-08 → 2026-09-02
+- [配置Stream推送](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0253-stream.md) · 2025-10-16 → 2026-09-02
+- [AI助理安装事件](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0254-ai-assistant-installation-event.md) · 2025-08-28 → 2026-09-02
+- [企业授权第三方企业应用](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0260-enterprise-authorized-application-stream.md) · 2025-10-30 → 2026-09-02
+- [企业变更第三方企业应用的授权范围](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0261-enterprise-change-scope-stream.md) · 2025-10-30 → 2026-09-02
+- [用户激活信息](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0275-event-subscription-user-activation-information.md) · 2025-12-08 → 2026-09-02
+- [创建部门事件](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0277-event-subscription-creates-department-events.md) · 2025-12-08 → 2026-09-02
+- [修改部门事件](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0278-modify-department-event-stream.md) · 2025-10-16 → 2026-09-02
+- [企业增加员工事件](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0283-event-subscription-enterprises-increase-employee-events.md) · 2025-12-08 → 2026-09-02
+- [企业修改员工事件](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0284-enterprise-modifies-the-employee-incident.md) · 2025-12-08 → 2026-09-02
+- [企业修改员工部门后员工信息事件](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0289-employee-information-event-after-the-enterprise-modifies-the-employee-dept-stream.md) · 2025-10-16 → 2026-09-02
+- [企业修改员工所在角色后员工信息事件](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0290-employee-information-event-after-the-enterprise-modifies-the-employee-role-stream.md) · 2025-10-16 → 2026-09-02
+- [审批实例状态变更(广播)](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0293-approve-instance-state-change-event-broadcast-stream.md) · 2025-10-16 → 2026-09-02
+- [审批任务状态变更(广播)](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0294-approve-task-status-change-broadcast-stream.md) · 2025-10-16 → 2026-09-02
+- [概述](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0328-callback-events-overview.md) · 2025-10-16 → 2026-09-02
+- [事件与回调流程](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0329-third-party-enterprise-application-address-book-change-event-subscription-process.md) · 2025-10-16 → 2026-09-02
+- [开发小程序（RDS推送）](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0330-develop-mini-programs-using-rds-push.md) · 2025-10-16 → 2026-09-02
+- [配置RDS推送（推荐）](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0332-configure-rds-push-table.md) · 2025-10-16 → 2026-09-02
+- [配置SyncHTTP推送（推荐）](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0333-configure-synchttp-push.md) · 2026-01-22 → 2026-09-02
+- [配置HTTP数据推送（不推荐）](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0334-configure-http-push.md) · 2025-12-18 → 2026-09-02
+- [授权事件](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0335-authorization-event-1.md) · 2025-10-16 → 2026-09-02
+- [直播事件](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0336-live-stream-events.md) · 2025-10-16 → 2026-09-02
+- [会议事件](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0337-video-conference-events.md) · 2025-10-16 → 2026-09-02
+- [审批事件](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0338-approval-events-3.md) · 2025-10-16 → 2026-09-02
+- [存储事件](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0339-storage-event.md) · 2025-10-16 → 2026-09-02
+- [考勤事件](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0340-subscribe-to-attendance-events.md) · 2025-12-08 → 2026-09-02
+- [通讯录事件](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0343-address-book-events.md) · 2025-10-16 → 2026-09-02
+- [OA审批事件](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0345-oa-approval-event.md) · 2025-10-16 → 2026-09-02
+- [智能人事事件](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0347-intelligent-personnel-events.md) · 2025-10-16 → 2026-09-02
+- [应用市场事件](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0348-application-market-related-events.md) · 2025-10-16 → 2026-09-02
+- [智能硬件事件](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0349-smart-hardware-events.md) · 2025-10-16 → 2026-09-02
+- [场景群变更事件](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0353-business-integration-receiving.md) · 2025-10-16 → 2026-09-02
+- [家校通讯录事件](docs/01-应用开发/04-LFcRvVD08N-事件订阅/0354-subscribe-to-events-home-school-address-book.md) · 2025-12-08 → 2026-09-02
+
+## 目录位置移动（内容未变）
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0014-configure-update-secure-domain-name.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0013-configure-update-secure-domain-name.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0013-bind-a-dingtalk-account-to-an-alibaba-cloud-account.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0014-bind-a-dingtalk-account-to-an-alibaba-cloud-account.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0010-enable-data-security-center.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0015-enable-data-security-center.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0011-access-dingtalk-secure-rendering-components.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0016-access-dingtalk-secure-rendering-components.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0015-config-domain-name.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0017-config-domain-name.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0016-test-dingtalk-app.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0018-test-dingtalk-app.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0017-publish-dingtalk-application.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0019-publish-dingtalk-application.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0018-self-built-application-audit-configuration.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0020-self-built-application-audit-configuration.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0019-selfcheck-dingtalk-app.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0021-selfcheck-dingtalk-app.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0020-safe-operation.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0022-safe-operation.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0021-application-configuration-and-management.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0023-application-configuration-and-management.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0022-mini-app-client-jsapi-overview.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0024-mini-app-client-jsapi-overview.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0023-mini-app-steps.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0025-mini-app-steps.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0024-optional-develop-a-small-program-server.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0026-optional-develop-a-small-program-server.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0025-configure-secure-domain-name.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0027-configure-secure-domain-name.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0026-develop-miniapp-fe.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0028-develop-miniapp-fe.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0027-upload-miniapp.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0029-upload-miniapp.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0028-add-miniapp-address.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0030-add-miniapp-address.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0029-webapp-read-before-development.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0031-webapp-read-before-development.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0030-configure-web-application.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0032-configure-web-application.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0031-develop-webapp-frontend.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0033-develop-webapp-frontend.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0032-develop-webapp-backend.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0034-develop-webapp-backend.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0033-application-visible-range.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0035-application-visible-range.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0034-harmony-adaptation-guide.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0036-harmony-adaptation-guide.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0035-harmonyos-compatibility-self-check.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0037-harmonyos-compatibility-self-check.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0036-access-dingtalk-performance-experience-log.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0038-access-dingtalk-performance-experience-log.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0037-weak-network-solution-without-network.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0039-weak-network-solution-without-network.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0038-webapp-image-scaling.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0040-webapp-image-scaling.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0039-webapp-front-end-components-ding-design.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0041-webapp-front-end-components-ding-design.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0040-webapp-page-event-monitoring.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0042-webapp-page-event-monitoring.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0041-webapp-error-code-description.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0043-webapp-error-code-description.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0042-coolapp-overview.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0044-coolapp-overview.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0043-group-chat-coolapp-overview.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0045-group-chat-coolapp-overview.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0044-configuration-group-chat-quick-entry.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0046-configuration-group-chat-quick-entry.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0045-group-chat-coolapp-access-robot-app.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0047-group-chat-coolapp-access-robot-app.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0046-develop-group-chat-coolapp-interactive-card.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0048-develop-group-chat-coolapp-interactive-card.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0047-grounding-group-chat-coolapp.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0049-grounding-group-chat-coolapp.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0048-manage-group-chat-coolapp.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0050-manage-group-chat-coolapp.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0049-introduction-to-yida-group-chat-coolapp.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0051-introduction-to-yida-group-chat-coolapp.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0050-yida-group-chat-coolapp-develop-process.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0052-yida-group-chat-coolapp-develop-process.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0051-yida-cool-card-design.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0053-yida-cool-card-design.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0052-yida-cool-process-design.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0054-yida-cool-process-design.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0053-yida-cool-application-release.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0055-yida-cool-application-release.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0054-yida-cool-application-enabled.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0056-yida-cool-application-enabled.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0055-group-chat-coolapp-interactive-card.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0057-group-chat-coolapp-interactive-card.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0056-permanent-type-suspended-ceiling.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0058-permanent-type-suspended-ceiling.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0057-group-jump-protocol.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0059-group-jump-protocol.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0058-group-chat-coolapp-event.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0060-group-chat-coolapp-event.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0059-group-chat-coolapp-expands-immersive-container.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0061-group-chat-coolapp-expands-immersive-container.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0060-private-chat-coolapp-overview.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0062-private-chat-coolapp-overview.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0061-configuration-private-chat-quick-entry.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0063-configuration-private-chat-quick-entry.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0062-group-chat-coolapp-access-robot-app-1.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0064-group-chat-coolapp-access-robot-app-1.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0063-private-chat-coolapp-develop-interactive-cards.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0065-private-chat-coolapp-develop-interactive-cards.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0064-private-chat-related-jump-protocol.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0066-private-chat-related-jump-protocol.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0065-link-enhancements-coolapp-overview.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0067-link-enhancements-coolapp-overview.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0066-access-link-enhancements-coolapp.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0068-access-link-enhancements-coolapp.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0067-member-profile-coolapp-overview.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0069-member-profile-coolapp-overview.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0068-access-member-profile-coolapp.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0070-access-member-profile-coolapp.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0069-create-contact-card.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0071-create-contact-card.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0070-member-information-page-expands-interactive-card-capability-beta.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0072-member-information-page-expands-interactive-card-capability-beta.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0071-develop-document-coolapp-overview.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0073-develop-document-coolapp-overview.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0072-access-document-coolapp.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0074-access-document-coolapp.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0073-configure-document-coolapp-manifest.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0075-configure-document-coolapp-manifest.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0074-develop-document-coolapp-script-services-and-ui-pages.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0076-develop-document-coolapp-script-services-and-ui-pages.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0075-robot-application-overview.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0077-robot-application-overview.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0076-configure-the-robot-application.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0078-configure-the-robot-application.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0077-add-robot-to-group.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0079-add-robot-to-group.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0078-robot-receive-message.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0080-robot-receive-message.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0079-robot-reply-and-send-messages.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0081-robot-reply-and-send-messages.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0080-third-party-enterprise-robots.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0082-third-party-enterprise-robots.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0081-custom-bot-creation-and-installation.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0083-custom-bot-creation-and-installation.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0082-customize-robot-security-settings.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0084-customize-robot-security-settings.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0083-obtain-the-webhook-address-of-a-custom-robot.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0085-obtain-the-webhook-address-of-a-custom-robot.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0084-gitlab-robot.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0086-gitlab-robot.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0085-github-robot.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0087-github-robot.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0086-the-jira-robot.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0088-the-jira-robot.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0087-alibaba-cloud-code-robot.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0089-alibaba-cloud-code-robot.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0088-alibaba-cloud-codeup-robot.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0090-alibaba-cloud-codeup-robot.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0089-travis-robot.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0091-travis-robot.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0090-coding-robot.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0092-coding-robot.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0091-tower-swarm-robot-access.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0093-tower-swarm-robot-access.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0092-creation-and-installation-of-swarm-template-robots.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0094-creation-and-installation-of-swarm-template-robots.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0093-create-a-message-template.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0095-create-a-message-template.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0094-interactive-card-message-sending-process.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0096-interactive-card-message-sending-process.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0095-lightweight-interactive-card-messages.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0097-lightweight-interactive-card-messages.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0096-responding-to-interactive-messages.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0098-responding-to-interactive-messages.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0097-associate-group-template-robot-to-group-template.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0099-associate-group-template-robot-to-group-template.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0098-webhook-robot.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0100-webhook-robot.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0099-introduction-to-dingtalk-sharing.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0101-introduction-to-dingtalk-sharing.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0100-mini-app-access.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0102-mini-app-access.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0101-mini-app-ios-sharing-sdk-compliance-guide.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0103-mini-app-ios-sharing-sdk-compliance-guide.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0102-mini-app-android-share-sdk-compliance-guide.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0104-mini-app-android-share-sdk-compliance-guide.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0103-harmony-share-sdk-compliance-guide.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0105-harmony-share-sdk-compliance-guide.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0104-share-common-questions-about-the-sdk.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0106-share-common-questions-about-the-sdk.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0105-mini-app-mobile-application-access.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0107-mini-app-mobile-application-access.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0106-mini-app-procedures-for-authorized-logon-to-ios-applications.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0108-mini-app-procedures-for-authorized-logon-to-ios-applications.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0107-mini-app-ios-login-sdk-developer-compliance-guide.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0109-mini-app-ios-login-sdk-developer-compliance-guide.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0108-mini-app-android-login-sdk-compliance-guide.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0110-mini-app-android-login-sdk-compliance-guide.md
+- docs/01-应用开发/01-XOnnmGCTbn-开发指南/0109-hongmeng-sdk-compliance.md → docs/01-应用开发/01-XOnnmGCTbn-开发指南/0111-hongmeng-sdk-compliance.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0238-receive-callback-message.md → docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1865-receive-callback-message.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1863-dingtalk-paas-master-data-create-crm-contact-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1871-dingtalk-paas-master-data-create-crm-contact-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1864-dingtalk-paas-master-data-update-crm-contact-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1872-dingtalk-paas-master-data-update-crm-contact-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1865-dingtalk-paas-master-data-create-crm-customer-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1873-dingtalk-paas-master-data-create-crm-customer-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1866-dingtalk-paas-master-data-update-crm-customer-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1874-dingtalk-paas-master-data-update-crm-customer-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1867-delete-crm-customer.md → docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1875-delete-crm-customer.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1868-dingtalk-paas-master-data-customer-data-search-and-query-interface.md → docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1876-dingtalk-paas-master-data-customer-data-search-and-query-interface.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1869-obtains-customer-data-in-batches-based-on-the-id-list.md → docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1877-obtains-customer-data-in-batches-based-on-the-id-list.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1870-get-metadata-description-of-crm-customer-object.md → docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1878-get-metadata-description-of-crm-customer-object.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1871-dingtalk-the-contact-data-query-api.md → docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1879-dingtalk-the-contact-data-query-api.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1872-retrieve-custom-crm-object-data.md → docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1880-retrieve-custom-crm-object-data.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1873-service-window-contact-management.md → docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1881-service-window-contact-management.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1874-obtains-the-contact-information-of-the-service-window.md → docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1882-obtains-the-contact-information-of-the-service-window.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1875-obtain-contact-data-from-the-service-window.md → docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1883-obtain-contact-data-from-the-service-window.md
+- docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1876-callback-event-for-service-window-following-and-cancellation.md → docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1884-callback-event-for-service-window-following-and-cancellation.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0009-jsapi-request-auth-info.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0007-jsapi-request-auth-info.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0007-jsapi-request-auth-code.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0008-jsapi-request-auth-code.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0008-jsapi-get-operate-auth-code.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0009-jsapi-get-operate-auth-code.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0012-jsapi-upload-file.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0011-jsapi-upload-file.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0011-jsapi-download-file.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0012-jsapi-download-file.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0026-jsapi-exit.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0024-jsapi-exit.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0024-jsapi-can-i-use.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0026-jsapi-can-i-use.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0031-jsapi-sdk-version.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0027-jsapi-sdk-version.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0027-jsapi-ext-sdk-version.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0030-jsapi-ext-sdk-version.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0030-jsapi-get-launch-options-sync.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0031-jsapi-get-launch-options-sync.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0034-jsapi-get-storage.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0032-jsapi-get-storage.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0040-jsapi-set-storage.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0033-jsapi-set-storage.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0032-jsapi-clear-storage.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0034-jsapi-clear-storage.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0038-jsapi-remove-storage.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0036-jsapi-remove-storage.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0036-jsapi-get-storage-sync.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0037-jsapi-get-storage-sync.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0041-jsapi-set-storage-sync.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0038-jsapi-set-storage-sync.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0033-jsapi-clear-storage-sync.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0039-jsapi-clear-storage-sync.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0037-jsapi-get-storage-info-sync.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0040-jsapi-get-storage-info-sync.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0039-jsapi-remove-storage-sync.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0041-jsapi-remove-storage-sync.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0044-jsapi-quit-page.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0042-jsapi-quit-page.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0042-jsapi-close-page.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0043-jsapi-close-page.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0043-jsapi-go-back-page.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0044-jsapi-go-back-page.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0054-jsapi-set-tab-bar-badge.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0051-jsapi-set-tab-bar-badge.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0051-jsapi-hide-tab-bar-red-dot.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0052-jsapi-hide-tab-bar-red-dot.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0052-jsapi-remove-tab-bar-item.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0053-jsapi-remove-tab-bar-item.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0055-jsapi-show-tab-bar-red-dot.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0054-jsapi-show-tab-bar-red-dot.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0053-jsapi-remove-tab-bar-badge.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0055-jsapi-remove-tab-bar-badge.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0059-jsapi-re-launch.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0057-jsapi-re-launch.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0060-jsapi-redirect-to.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0058-jsapi-redirect-to.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0061-jsapi-switch-tab.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0059-jsapi-switch-tab.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0057-jsapi-navigate-to.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0060-jsapi-navigate-to.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0058-jsapi-navigate-back.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0061-jsapi-navigate-back.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0084-jsapi-animation-top.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0062-jsapi-animation-top.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0066-jsapi-animation-left.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0063-jsapi-animation-left.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0070-jsapi-animation-right.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0064-jsapi-animation-right.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0090-jsapi-animation-width.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0065-jsapi-animation-width.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0065-jsapi-animation-height.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0066-jsapi-animation-height.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0063-jsapi-animation-bottom.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0067-jsapi-animation-bottom.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0062-jsapi-create-animation.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0068-jsapi-create-animation.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0071-jsapi-animation-rotate.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0069-jsapi-animation-rotate.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0067-jsapi-animation-matrix.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0070-jsapi-animation-matrix.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0069-jsapi-animation-opacity.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0071-jsapi-animation-opacity.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0068-jsapi-animation-matrix3d.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0075-jsapi-animation-matrix3d.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0075-jsapi-animation-rotate3d.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0076-jsapi-animation-rotate3d.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0076-jsapi-animation-scale.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0077-jsapi-animation-scale.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0077-jsapi-animation-scale-x.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0078-jsapi-animation-scale-x.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0078-jsapi-animation-scale-y.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0079-jsapi-animation-scale-y.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0079-jsapi-animation-scale-z.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0080-jsapi-animation-scale-z.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0080-jsapi-animation-scale3d.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0081-jsapi-animation-scale3d.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0081-jsapi-animation-skew.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0082-jsapi-animation-skew.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0082-jsapi-animation-skew-x.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0083-jsapi-animation-skew-x.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0083-jsapi-animation-skew-y.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0084-jsapi-animation-skew-y.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0064-jsapi-animation-background-color.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0090-jsapi-animation-background-color.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0103-jsapi-canvas-context-fill.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0091-jsapi-canvas-context-fill.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0096-jsapi-canvas-context-clip.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0093-jsapi-canvas-context-clip.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0111-jsapi-canvas-context-rect.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0094-jsapi-canvas-context-rect.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0114-jsapi-canvas-context-save.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0095-jsapi-canvas-context-save.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0101-jsapi-canvas-context-draw.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0096-jsapi-canvas-context-draw.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0115-jsapi-canvas-context-scale.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0097-jsapi-canvas-context-scale.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0112-jsapi-canvas-context-rotate.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0098-jsapi-canvas-context-rotate.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0107-jsapi-canvas-context-line-to.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0099-jsapi-canvas-context-line-to.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0116-jsapi-canvas-context-stroke.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0100-jsapi-canvas-context-stroke.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0091-jsapi-create-canvas-context.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0101-jsapi-create-canvas-context.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0105-jsapi-canvas-context-fill-text.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0102-jsapi-canvas-context-fill-text.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0104-jsapi-canvas-context-fill-rect.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0103-jsapi-canvas-context-fill-rect.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0113-jsapi-canvas-context-restore.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0104-jsapi-canvas-context-restore.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0108-jsapi-canvas-context-move-to.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0105-jsapi-canvas-context-move-to.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0129-jsapi-canvas-context-translate.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0106-jsapi-canvas-context-translate.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0094-jsapi-canvas-context-begin-path.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0107-jsapi-canvas-context-begin-path.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0097-jsapi-canvas-context-clear-rect.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0108-jsapi-canvas-context-clear-rect.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0098-jsapi-canvas-context-close-path.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0109-jsapi-canvas-context-close-path.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0102-jsapi-canvas-context-draw-image.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0110-jsapi-canvas-context-draw-image.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0117-jsapi-canvas-context-stroke-rect.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0111-jsapi-canvas-context-stroke-rect.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0118-jsapi-canvas-context-set-fill-style.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0112-jsapi-canvas-context-set-fill-style.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0119-jsapi-canvas-context-set-font-size.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0113-jsapi-canvas-context-set-font-size.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0120-jsapi-canvas-context-set-shadow.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0114-jsapi-canvas-context-set-shadow.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0121-jsapi-canvas-context-set-line-cap.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0115-jsapi-canvas-context-set-line-cap.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0122-jsapi-canvas-context-set-line-join.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0116-jsapi-canvas-context-set-line-join.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0123-jsapi-canvas-context-set-text-align.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0117-jsapi-canvas-context-set-text-align.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0124-jsapi-canvas-context-set-miter-limit.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0118-jsapi-canvas-context-set-miter-limit.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0125-jsapi-canvas-context-set-line-width.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0119-jsapi-canvas-context-set-line-width.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0093-jsapi-canvas-context-add-color-stop.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0120-jsapi-canvas-context-add-color-stop.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0109-jsapi-canvas-context-put-image-data.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0121-jsapi-canvas-context-put-image-data.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0106-jsapi-canvas-context-get-image-data.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0122-jsapi-canvas-context-get-image-data.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0126-jsapi-canvas-context-set-stroke-style.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0123-jsapi-canvas-context-set-stroke-style.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0095-jsapi-canvas-context-bezier-curve-to.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0124-jsapi-canvas-context-bezier-curve-to.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0127-jsapi-canvas-context-set-global-alpha.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0125-jsapi-canvas-context-set-global-alpha.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0128-jsapi-canvas-context-set-text-baseline.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0126-jsapi-canvas-context-set-text-baseline.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0130-jsapi-canvas-context-to-temp-file-path.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0127-jsapi-canvas-context-to-temp-file-path.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0110-jsapi-canvas-context-quadratic-curve-to.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0128-jsapi-canvas-context-quadratic-curve-to.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0099-jsapi-canvas-context-create-linear-gradient.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0129-jsapi-canvas-context-create-linear-gradient.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0100-jsapi-canvas-context-create-circular-gradient.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0130-jsapi-canvas-context-create-circular-gradient.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0137-jsapi-map-context-get-region.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0134-jsapi-map-context-get-region.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0134-jsapi-map-context-clear-route.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0135-jsapi-map-context-clear-route.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0142-jsapi-map-context-show-route.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0136-jsapi-map-context-show-route.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0143-jsapi-map-context-shows-scale.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0137-jsapi-map-context-shows-scale.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0147-jsapi-map-context-translate-marker.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0139-jsapi-map-context-translate-marker.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0135-jsapi-map-context-change-markers.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0140-jsapi-map-context-change-markers.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0144-jsapi-map-context-shows-compass.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0141-jsapi-map-context-shows-compass.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0141-jsapi-map-context-move-to-location.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0142-jsapi-map-context-move-to-location.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0136-jsapi-map-context-calculate-distance.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0143-jsapi-map-context-calculate-distance.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0139-jsapi-map-context-get-map-properties.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0144-jsapi-map-context-get-map-properties.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0140-jsapi-map-context-get-center-location.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0145-jsapi-map-context-get-center-location.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0148-jsapi-map-context-update-components.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0146-jsapi-map-context-update-components.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0145-jsapi-map-context-smooth-move-marker.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0147-jsapi-map-context-smooth-move-marker.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0146-jsapi-map-context-smooth-move-polyline.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0148-jsapi-map-context-smooth-move-polyline.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0154-jsapi-prompt.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0151-jsapi-prompt.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0151-jsapi-hide-toast.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0153-jsapi-hide-toast.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0156-jsapi-show-toast.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0154-jsapi-show-toast.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0153-jsapi-hide-loading.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0156-jsapi-hide-loading.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0161-jsapi-on-pull-down-refresh.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0159-jsapi-on-pull-down-refresh.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0162-jsapi-stop-pull-down-refresh.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0160-jsapi-stop-pull-down-refresh.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0160-jsapi-enable-pull-down-refresh.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0161-jsapi-enable-pull-down-refresh.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0159-jsapi-disable-pull-down-refresh.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0162-jsapi-disable-pull-down-refresh.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0173-jsapi-selector-query-exec.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0166-jsapi-selector-query-exec.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0171-jsapi-create-selector-query.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0167-jsapi-create-selector-query.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0174-jsapi-selector-query-select.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0168-jsapi-selector-query-select.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0175-jsapi-selector-query-select-all.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0169-jsapi-selector-query-select-all.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0166-jsapi-create-intersection-observer.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0170-jsapi-create-intersection-observer.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0168-jsapi-intersection-observer-observe.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0171-jsapi-intersection-observer-observe.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0169-jsapi-intersection-observer-relative-to.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0172-jsapi-intersection-observer-relative-to.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0167-jsapi-intersection-observer-disconnect.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0173-jsapi-intersection-observer-disconnect.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0170-jsapi-intersection-observer-relative-to-viewport.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0174-jsapi-intersection-observer-relative-to-viewport.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0176-jsapi-selector-query-scroll-offset.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0175-jsapi-selector-query-scroll-offset.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0177-jsapi-selector-query-select-viewport.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0176-jsapi-selector-query-select-viewport.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0172-jsapi-selector-query-bounding-client-rect.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0177-jsapi-selector-query-bounding-client-rect.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0182-jsapi-date-picker.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0179-jsapi-date-picker.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0184-jsapi-time-picker.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0180-jsapi-time-picker.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0179-jsapi-choose-date-time.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0181-jsapi-choose-date-time.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0183-jsapi-date-range-picker.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0182-jsapi-date-range-picker.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0180-jsapi-choose-one-day-in-calendar.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0183-jsapi-choose-one-day-in-calendar.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0181-jsapi-choose-half-day-in-calendar.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0184-jsapi-choose-half-day-in-calendar.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0192-jsapi-open-link.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0187-jsapi-open-link.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0193-jsapi-open-micro-app.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0188-jsapi-open-micro-app.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0187-jsapi-is-in-tab-window.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0189-jsapi-is-in-tab-window.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0188-jsapi-navigate-to-page.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0190-jsapi-navigate-to-page.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0189-jsapi-navigate-back-page.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0191-jsapi-navigate-back-page.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0194-jsapi-open-page-in-micro-app.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0192-jsapi-open-page-in-micro-app.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0190-jsapi-navigate-to-mini-program.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0193-jsapi-navigate-to-mini-program.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0195-jsapi-open-page-in-modal-for-pc.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0194-jsapi-open-page-in-modal-for-pc.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0191-jsapi-navigate-back-mini-program.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0195-jsapi-navigate-back-mini-program.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0199-jsapi-share.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0198-jsapi-share.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0200-jsapi-show-share-panel.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0199-jsapi-show-share-panel.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0198-jsapi-on-share-app-message.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0200-jsapi-on-share-app-message.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0208-jsapi-edit-picture.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0206-jsapi-edit-picture.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0211-jsapi-save-image.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0207-jsapi-save-image.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0213-jsapi-choose-media.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0208-jsapi-choose-media.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0206-jsapi-choose-image.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0210-jsapi-choose-image.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0210-jsapi-preview-image.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0211-jsapi-preview-image.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0207-jsapi-compress-image.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0212-jsapi-compress-image.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0212-jsapi-save-image-to-photos-album.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0213-jsapi-save-image-to-photos-album.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0217-jsapi-play-audio.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0214-jsapi-play-audio.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0222-jsapi-stop-audio.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0215-jsapi-stop-audio.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0220-jsapi-stop-record.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0216-jsapi-stop-record.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0221-jsapi-start-record.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0217-jsapi-start-record.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0215-jsapi-on-record-end.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0220-jsapi-on-record-end.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0223-jsapi-translate-voice.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0221-jsapi-translate-voice.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0214-jsapi-download-audio.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0222-jsapi-download-audio.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0216-jsapi-on-play-audio-end.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0223-jsapi-on-play-audio-end.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0233-jsapi-recorder-manager-stop.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0225-jsapi-recorder-manager-stop.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0234-jsapi-recorder-manager-start.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0226-jsapi-recorder-manager-start.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0231-jsapi-recorder-manager-pause.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0227-jsapi-recorder-manager-pause.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0225-jsapi-recorder-manager-on-start.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0228-jsapi-recorder-manager-on-start.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0226-jsapi-recorder-manager-on-stop.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0229-jsapi-recorder-manager-on-stop.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0232-jsapi-recorder-manager-resume.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0230-jsapi-recorder-manager-resume.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0227-jsapi-recorder-manager-on-error.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0231-jsapi-recorder-manager-on-error.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0228-jsapi-recorder-manager-on-pause.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0232-jsapi-recorder-manager-on-pause.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0229-jsapi-recorder-manager-on-resume.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0233-jsapi-recorder-manager-on-resume.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0230-jsapi-recorder-manager-on-frame-recorded.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0234-jsapi-recorder-manager-on-frame-recorded.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0238-jsapi-video-context-mute.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0237-jsapi-video-context-mute.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0239-jsapi-video-context-play.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0238-jsapi-video-context-play.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0243-jsapi-video-context-stop.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0239-jsapi-video-context-stop.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0244-jsapi-video-context-seek.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0240-jsapi-video-context-seek.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0240-jsapi-video-context-pause.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0241-jsapi-video-context-pause.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0245-jsapi-video-context-snapshot.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0242-jsapi-video-context-snapshot.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0241-jsapi-video-context-playback-rate.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0243-jsapi-video-context-playback-rate.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0237-jsapi-video-context-exit-full-screen.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0244-jsapi-video-context-exit-full-screen.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0242-jsapi-video-context-request-full-screen.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0245-jsapi-video-context-request-full-screen.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0262-jsapi-on-audio-interruption-end.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0246-jsapi-on-audio-interruption-end.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0263-jsapi-on-audio-interruption-begin.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0247-jsapi-on-audio-interruption-begin.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0264-jsapi-save-video-to-photos-album.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0248-jsapi-save-video-to-photos-album.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0246-jsapi-get-background-audio-manager.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0249-jsapi-get-background-audio-manager.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0258-jsapi-background-audio-manager-play.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0250-jsapi-background-audio-manager-play.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0260-jsapi-background-audio-manager-stop.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0251-jsapi-background-audio-manager-stop.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0261-jsapi-background-audio-manager-seek.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0252-jsapi-background-audio-manager-seek.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0259-jsapi-background-audio-manager-pause.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0253-jsapi-background-audio-manager-pause.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0247-jsapi-background-audio-manager-on-play.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0254-jsapi-background-audio-manager-on-play.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0248-jsapi-background-audio-manager-on-stop.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0255-jsapi-background-audio-manager-on-stop.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0251-jsapi-background-audio-manager-on-prev.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0256-jsapi-background-audio-manager-on-prev.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0252-jsapi-background-audio-manager-on-next.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0257-jsapi-background-audio-manager-on-next.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0249-jsapi-background-audio-manager-on-pause.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0258-jsapi-background-audio-manager-on-pause.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0250-jsapi-background-audio-manager-on-ended.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0259-jsapi-background-audio-manager-on-ended.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0253-jsapi-background-audio-manager-on-canplay.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0260-jsapi-background-audio-manager-on-canplay.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0254-jsapi-background-audio-manager-on-seeked.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0261-jsapi-background-audio-manager-on-seeked.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0255-jsapi-background-audio-manager-on-seeking.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0262-jsapi-background-audio-manager-on-seeking.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0256-jsapi-background-audio-manager-on-waiting.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0263-jsapi-background-audio-manager-on-waiting.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0257-jsapi-background-audio-manager-on-time-update.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0264-jsapi-background-audio-manager-on-time-update.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0273-jsapi-edit-external-user.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0268-jsapi-edit-external-user.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0268-jsapi-choose-staff-for-pc.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0269-jsapi-choose-staff-for-pc.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0269-jsapi-choose-phonebook.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0270-jsapi-choose-phonebook.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0270-jsapi-choose-departments.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0271-jsapi-choose-departments.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0271-jsapi-choose-user-from-list.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0272-jsapi-choose-user-from-list.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0272-jsapi-choose-external-users.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0273-jsapi-choose-external-users.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0275-add-group-members.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0274-add-group-members.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0274-install-coothe-group.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0275-install-coothe-group.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0279-initialize-ui-interface.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0278-initialize-ui-interface.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0278-initialize-script-service.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0279-initialize-script-service.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0282-call-the-script-service.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0281-call-the-script-service.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0281-dingtalk-document-model.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0282-dingtalk-document-model.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0286-request-authorization-code.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0284-request-authorization-code.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0284-dialog-parent-page.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0286-dialog-parent-page.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0290-whether-the-saved.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0288-whether-the-saved.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0288-listening-behavior.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0289-listening-behavior.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0289-listen-for-behavior.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0290-listen-for-behavior.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0298-filter.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0291-filter.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0304-color.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0292-color.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0292-sheet.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0293-sheet.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0293-range.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0294-range.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0303-sortfield.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0295-sortfield.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0301-hyperlink.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0296-hyperlink.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0291-workbook.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0297-workbook.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0297-rangelist.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0298-rangelist.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0296-bordertype.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0299-bordertype.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0305-filtercondition.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0301-filtercondition.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0294-setvalueoptions.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0303-setvalueoptions.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0299-filtercriteriabuilder.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0304-filtercriteriabuilder.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0295-dropdownlistoption.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0305-dropdownlistoption.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0316-jsapi-quick-call-list.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0312-jsapi-quick-call-list.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0312-jsapi-check-biz-call.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0313-jsapi-check-biz-call.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0317-jsapi-show-call-menu.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0314-jsapi-show-call-menu.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0313-jsapi-get-cloud-call-info.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0316-jsapi-get-cloud-call-info.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0314-jsapi-get-cloud-call-list.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0317-jsapi-get-cloud-call-list.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0326-jsapi-search-map.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0323-jsapi-search-map.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0327-jsapi-stop-locating.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0326-jsapi-stop-locating.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0328-jsapi-start-locating.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0327-jsapi-start-locating.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0323-jsapi-get-locating-status.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0328-jsapi-get-locating-status.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0332-jsapi-save-file-to-ding-talk.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0330-jsapi-save-file-to-ding-talk.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0330-jsapi-preview-file-in-ding-talk.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0331-jsapi-preview-file-in-ding-talk.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0333-jsapi-upload-attachment-to-ding-talk.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0332-jsapi-upload-attachment-to-ding-talk.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0331-jsapi-preview-images-in-ding-talk-batch.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0333-jsapi-preview-images-in-ding-talk-batch.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0336-jsapi-choose-file.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0334-jsapi-choose-file.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0334-jsapi-is-local-file-exist.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0336-jsapi-is-local-file-exist.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0350-jsapi-file-system-manager-stat.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0339-jsapi-file-system-manager-stat.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0344-jsapi-file-system-manager-mkdir.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0340-jsapi-file-system-manager-mkdir.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0345-jsapi-file-system-manager-rmdir.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0341-jsapi-file-system-manager-rmdir.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0352-jsapi-file-system-manager-unzip.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0342-jsapi-file-system-manager-unzip.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0353-jsapi-file-system-manager-unlink.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0343-jsapi-file-system-manager-unlink.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0339-jsapi-file-system-manager-access.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0344-jsapi-file-system-manager-access.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0347-jsapi-file-system-manager-readdir.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0345-jsapi-file-system-manager-readdir.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0351-jsapi-file-system-manager-save-file.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0347-jsapi-file-system-manager-save-file.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0341-jsapi-file-system-manager-copy-file.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0348-jsapi-file-system-manager-copy-file.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0348-jsapi-file-system-manager-read-file.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0349-jsapi-file-system-manager-read-file.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0354-jsapi-file-system-manager-write-file.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0350-jsapi-file-system-manager-write-file.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0342-jsapi-file-system-manager-get-file-info.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0351-jsapi-file-system-manager-get-file-info.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0340-jsapi-file-system-manager-append-file.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0352-jsapi-file-system-manager-append-file.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0343-jsapi-file-system-manager-get-saved-file-list.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0353-jsapi-file-system-manager-get-saved-file-list.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0349-jsapi-file-system-manager-remove-saved-file.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0354-jsapi-file-system-manager-remove-saved-file.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0362-jsapi-rsa.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0357-jsapi-rsa.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0357-jsapi-check-auth.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0358-jsapi-check-auth.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0358-jsapi-get-system-info.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0359-jsapi-get-system-info.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0363-jsapi-show-auth-guide.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0360-jsapi-show-auth-guide.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0359-jsapi-get-system-settings.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0361-jsapi-get-system-settings.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0360-jsapi-get-system-info-sync.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0362-jsapi-get-system-info-sync.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0361-jsapi-is-screen-reader-enabled.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0363-jsapi-is-screen-reader-enabled.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0376-jsapi-start-wifi.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0366-jsapi-start-wifi.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0375-jsapi-stop-wifi.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0367-jsapi-stop-wifi.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0377-jsapi-set-wifi-list.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0368-jsapi-set-wifi-list.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0367-jsapi-get-wifi-list.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0369-jsapi-get-wifi-list.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0366-jsapi-connect-wifi.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0370-jsapi-connect-wifi.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0374-jsapi-register-ssid.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0371-jsapi-register-ssid.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0368-jsapi-get-wifi-status.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0372-jsapi-get-wifi-status.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0370-jsapi-on-get-wifi-list.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0373-jsapi-on-get-wifi-list.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0371-jsapi-off-get-wifi-list.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0374-jsapi-off-get-wifi-list.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0378-jsapi-unregister-ssid.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0375-jsapi-unregister-ssid.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0372-jsapi-on-wifi-connected.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0376-jsapi-on-wifi-connected.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0373-jsapi-off-wifi-connected.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0377-jsapi-off-wifi-connected.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0369-jsapi-get-connected-wifi.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0378-jsapi-get-connected-wifi.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0393-jsapi-read-ble-characteristic-value.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0387-jsapi-read-ble-characteristic-value.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0394-jsapi-write-ble-characteristic-value.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0388-jsapi-write-ble-characteristic-value.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0387-jsapi-get-ble-device-characteristics.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0389-jsapi-get-ble-device-characteristics.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0389-jsapi-on-ble-connection-state-changed.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0390-jsapi-on-ble-connection-state-changed.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0390-jsapi-off-ble-connection-state-changed.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0391-jsapi-off-ble-connection-state-changed.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0391-jsapi-on-ble-characteristic-value-change.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0392-jsapi-on-ble-characteristic-value-change.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0392-jsapi-off-ble-characteristic-value-change.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0393-jsapi-off-ble-characteristic-value-change.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0388-jsapi-notify-ble-haracteristic-value-change.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0394-jsapi-notify-ble-haracteristic-value-change.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0396-jsapi-get-bluetooth-devices.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0395-jsapi-get-bluetooth-devices.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0401-jsapi-open-bluetooth-adapter.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0396-jsapi-open-bluetooth-adapter.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0395-jsapi-close-bluetooth-adapter.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0397-jsapi-close-bluetooth-adapter.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0397-jsapi-get-bluetooth-adapter-state.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0398-jsapi-get-bluetooth-adapter-state.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0398-jsapi-get-connected-bluetooth-devices.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0401-jsapi-get-connected-bluetooth-devices.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0414-jsapi-set-keep-screen-on.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0412-jsapi-set-keep-screen-on.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0412-jsapi-get-screen-brightness.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0413-jsapi-get-screen-brightness.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0413-jsapi-set-screen-brightness.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0414-jsapi-set-screen-brightness.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0422-jsapi-get-page-terminate-info.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0419-jsapi-get-page-terminate-info.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0419-jsapi-remove-cached-a-p-i-response.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0422-jsapi-remove-cached-a-p-i-response.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0452-mini-app-rich-text-1.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0451-mini-app-rich-text-1.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0451-mini-app-progress-progress-bar-1.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0452-mini-app-progress-progress-bar-1.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0455-mini-app-label-1.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0454-mini-app-label-1.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0454-mini-app-button-1.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0455-mini-app-button-1.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0458-mini-app-radio-button-1.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0457-mini-app-radio-button-1.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0461-mini-app-switch-radio-switch-1.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0458-mini-app-switch-radio-switch-1.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0462-mini-app-slider-slide-selector-1.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0459-mini-app-slider-slide-selector-1.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0457-mini-app-textarea-multi-line-input-box-1.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0460-mini-app-textarea-multi-line-input-box-1.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0460-mini-app-checkbox-multiple-selectors-1.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0461-mini-app-checkbox-multiple-selectors-1.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0463-mini-app-picker-view-scroll-selector-1.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0462-mini-app-picker-view-scroll-selector-1.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0459-mini-app-radio-group-individual-project-group-1.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0463-mini-app-radio-group-individual-project-group-1.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0477-dd-corpid.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0476-dd-corpid.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0476-dd-caniuse.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0477-dd-caniuse.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0482-obtain-the-running-version-of-the-mini-program.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0481-obtain-the-running-version-of-the-mini-program.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0481-obtains-the-startup-parameters-of-mini-programs.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0482-obtains-the-startup-parameters-of-mini-programs.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0492-dd-sendsocketmessage.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0487-dd-sendsocketmessage.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0487-dd-connectsocket.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0488-dd-connectsocket.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0490-dd-onsocketerror.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0489-dd-onsocketerror.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0495-dd-closesocket.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0490-dd-closesocket.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0496-dd-onsocketclose.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0491-dd-onsocketclose.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0493-dd-onsocketmessage.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0492-dd-onsocketmessage.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0494-dd-offsocketmessage.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0493-dd-offsocketmessage.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0491-dd-offsocketerror.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0494-dd-offsocketerror.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0488-dd-onsocketopen.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0495-dd-onsocketopen.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0497-dd-offsocketclose.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0496-dd-offsocketclose.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0489-dd-offsocketopen.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0497-dd-offsocketopen.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0501-dd-compressimage.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0500-dd-compressimage.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0503-dd-editpicture.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0501-dd-editpicture.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0500-dd-saveimage.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0503-dd-saveimage.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0512-dd-setnavigationbar.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0508-dd-setnavigationbar.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0508-dd-navigateto.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0509-dd-navigateto.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0509-dd-redirectto.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0510-dd-redirectto.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0510-dd-relaunch.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0511-dd-relaunch.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0511-dd-navigateback.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0512-dd-navigateback.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0514-dd-settabbarbadge.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0513-dd-settabbarbadge.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0515-dd-removetabbarbadge.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0514-dd-removetabbarbadge.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0516-dd-showtabbarreddot.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0515-dd-showtabbarreddot.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0517-dd-hidetabbarreddot.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0516-dd-hidetabbarreddot.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0518-dd-addtabbaritem.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0517-dd-addtabbaritem.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0519-dd-removetabbaritem.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0518-dd-removetabbaritem.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0513-dd-switchtab.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0519-dd-switchtab.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0577-dd-hidekeyboard.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0575-dd-hidekeyboard.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0575-dd-onkeyboardshow.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0576-dd-onkeyboardshow.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0576-dd-onkeyboardhide.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0577-dd-onkeyboardhide.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0581-return-to-the-previous-dingtalk-mini-program.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0580-return-to-the-previous-dingtalk-mini-program.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0580-inter-mini-program-jump.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0581-inter-mini-program-jump.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0675-save-file.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0673-save-file.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0676-get-file-information.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0674-get-file-information.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0673-creat-folder.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0675-creat-folder.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0682-delete-objects-local.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0676-delete-objects-local.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0683-delete-local-cache-files.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0677-delete-local-cache-files.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0688-unzip-local-user-files.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0678-unzip-local-user-files.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0686-write-file-to-local-user-directory.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0682-write-file-to-local-user-directory.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0674-determine-whether-a-file-or-directory-exists.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0683-determine-whether-a-file-or-directory-exists.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0678-obtain-the-file-status-object.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0684-obtain-the-file-status-object.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0677-obtains-a-list-of-local-user-files.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0685-obtains-a-list-of-local-user-files.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0687-append-content-to-the-end-of-the-local-user-file.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0686-append-content-to-the-end-of-the-local-user-file.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0684-copy-the-file-to-the-local-user-directory.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0687-copy-the-file-to-the-local-user-directory.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0685-rename-and-move-local-user-files-or-directories.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0688-rename-and-move-local-user-files-or-directories.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0704-nail-plate-file-preview.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0703-nail-plate-file-preview.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0706-select-a-pin-plate-directory.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0704-select-a-pin-plate-directory.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0722-queries-the-network-type.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0720-queries-the-network-type.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0724-nfc-data-write.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0721-nfc-data-write.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0725-the-setting-screen-is-always-on.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0722-the-setting-screen-is-always-on.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0727-open-ios-system-settings.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0723-open-ios-system-settings.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0720-queries-the-hotspot-access-information.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0725-queries-the-hotspot-access-information.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0723-read-nfc-chip-content.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0726-read-nfc-chip-content.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0726-obtains-the-h5-container-startup-time.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0727-obtains-the-h5-container-startup-time.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0733-monthly-calendar-component-select-a-certain-day.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0732-monthly-calendar-component-select-a-certain-day.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0734-monthly-calendar-component-select-a-date-range.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0733-monthly-calendar-component-select-a-date-range.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0732-monthly-calendar-component-select-a-specific-time.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0734-monthly-calendar-component-select-a-specific-time.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0744-copy-to-clipboard.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0745-copy-to-clipboard.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0752-close-page.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0746-close-page.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0754-replace-page.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0747-replace-page.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0751-close-the-current-page.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0748-close-the-current-page.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0746-set-the-navigation-bar-color.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0749-set-the-navigation-bar-color.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0748-set-the-navigation-bar-title.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0750-set-the-navigation-bar-title.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0753-return-to-previous-page.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0751-return-to-previous-page.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0747-microapplication-page-supports-horizontal-dashboard-h5.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0752-microapplication-page-supports-horizontal-dashboard-h5.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0749-title-bar-add-question-mark-icon.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0753-title-bar-add-question-mark-icon.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0763-alert.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0755-alert.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0757-toast.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0756-toast.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0764-confirm.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0758-confirm.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0755-show-load.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0759-show-load.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0756-hide-loading.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0760-hide-loading.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0758-multiple-select-components.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0761-multiple-select-components.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0761-actionsheet.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0763-actionsheet.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0759-extendmodal-1.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0764-extendmodal-1.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0760-modal-pop-up-layer.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0766-modal-pop-up-layer.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0766-select-session-based-on-corpid.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0767-select-session-based-on-corpid.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0772-universal-phone-call-h5.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0771-universal-phone-call-h5.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0773-call-dingtalk-h5.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0772-call-dingtalk-h5.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0770-make-a-single-call-option-customizable-h5.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0773-make-a-single-call-option-customizable-h5.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0771-check-the-status-of-office-telephones-of-an-enterprise-h5.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0774-check-the-status-of-office-telephones-of-an-enterprise-h5.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0774-ding-2-0-hair-pin.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0776-ding-2-0-hair-pin.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0777-open-a-local-file.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0779-open-a-local-file.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0776-checks-for-local-files-in-batches.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0780-checks-for-local-files-in-batches.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0780-set-storage-information.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0781-set-storage-information.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0781-obtain-storage-information.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0782-obtain-storage-information.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0782-delete-storage-information.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0783-delete-storage-information.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0787-select-a-pin-plate-directory-h5.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0785-select-a-pin-plate-directory-h5.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0783-save-file-to-nail-plate.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0786-save-file-to-nail-plate.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0788-select-picture.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0789-select-picture.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0790-image-preview.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0791-image-preview.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0793-map-positioning.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0792-map-positioning.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0795-display-position.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0793-display-position.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0791-stop-continuous-positioning.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0794-stop-continuous-positioning.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0792-batch-continuous-positioning-status.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0795-batch-continuous-positioning-status.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0794-map-page-supports-search.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0796-map-page-supports-search.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0796-obtain-current-geographic-location-information-single-positioning.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0797-obtain-current-geographic-location-information-single-positioning.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0797-continuous-retrieval-of-current-geographic-information-continuous-location.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0798-continuous-retrieval-of-current-geographic-information-continuous-location.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0798-start-recording.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0799-start-recording.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0799-stop-recording.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0800-stop-recording.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0802-playback-voice.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0801-playback-voice.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0801-download-audio.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0802-download-audio.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0804-voice-to-text.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0803-voice-to-text.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0803-pause-playback-of-speech.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0804-pause-playback-of-speech.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0806-stop-audio-playback.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0805-stop-audio-playback.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0800-automatic-stop-of-monitoring-and-recording.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0806-automatic-stop-of-monitoring-and-recording.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0805-automatically-stops-playback.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0807-automatically-stops-playback.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0807-resume-paused-voice.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0808-resume-paused-voice.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0808-start-a-shake.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0809-start-a-shake.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0809-stop-a-shake.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0810-stop-a-shake.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0810-input-box.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0811-input-box.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0811-set-the-color-of-the-top-progress-bar.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0815-set-the-color-of-the-top-progress-bar.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0815-enable-webview-for-ios.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0816-enable-webview-for-ios.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0816-disable-webview-autoscaling-for-ios.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0817-disable-webview-autoscaling-for-ios.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0817-scan-business-cards.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0818-scan-business-cards.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0818-scan-barcodes-and-qr-codes.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0819-scan-barcodes-and-qr-codes.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0819-payment-interface.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0820-payment-interface.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0822-obtain-user-authorization-1.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0823-obtain-user-authorization-1.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0823-rotate-screen.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0824-rotate-screen.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0824-reset-rotation-screen.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0825-reset-rotation-screen.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0825-microapplication-page-supports-screen-rotation.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0826-microapplication-page-supports-screen-rotation.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0826-microapplication-page-supports-horizontal-dashboard.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0827-microapplication-page-supports-horizontal-dashboard.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0827-full-screen-display-of-microapplication-page.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0828-full-screen-display-of-microapplication-page.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0828-the-microapplication-navigation-bar-is-transparent.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0829-the-microapplication-navigation-bar-is-transparent.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0829-select-external-contacts.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0830-select-external-contacts.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0832-multiple-custom-contacts.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0833-multiple-custom-contacts.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0835-open-modal-box.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0834-open-modal-box.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0834-open-link-on-new-window.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0835-open-link-on-new-window.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0833-open-the-in-application-page.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0837-open-the-in-application-page.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0837-open-new-tab.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0838-open-new-tab.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0839-jump-to-h5-micro-application.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0840-jump-to-h5-micro-application.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0841-data-encryption.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0842-data-encryption.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0842-data-decryption.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0843-data-decryption.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0843-initiate-video-conference.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0844-initiate-video-conference.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0846-query-the-number-list.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0845-query-the-number-list.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0845-direct-dialing.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0846-direct-dialing.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0844-check-whether-the-enterprise-has-an-office-phone-number.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0847-check-whether-the-enterprise-has-an-office-phone-number.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0848-retrieve-user-information-info.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0850-retrieve-user-information-info.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0850-small-program.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0851-small-program.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0852-unified-jump-protocol.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0853-unified-jump-protocol.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0853-sharing-and-login.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0854-sharing-and-login.md
+- docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0854-link-dingtalk-chat.md → docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0855-link-dingtalk-chat.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0145-events-hire-agent-sourcing-task-change.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0141-events-hire-agent-sourcing-task-change.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0140-recruitment-channel-message-push-switch.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0142-recruitment-channel-message-push-switch.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0141-change-of-rights-and-interests-of-recruitment-business-platform.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0143-change-of-rights-and-interests-of-recruitment-business-platform.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0142-intelligent-recruitment-talent-through-train-task.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0145-intelligent-recruitment-talent-through-train-task.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0143-recruitment-platform-position-delivery-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0146-recruitment-platform-position-delivery-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0146-personnel-file-change.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0147-personnel-file-change.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0149-personnel-commercialization-program-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0148-personnel-commercialization-program-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0147-personnel-solution-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0149-personnel-solution-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0148-personnel-platform-employee-change-event-v2.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0151-personnel-platform-employee-change-event-v2.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0151-intelligent-personnel-integration-application-authorization.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0152-intelligent-personnel-integration-application-authorization.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0152-intelligent-financial-enterprise-information-change.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0153-intelligent-financial-enterprise-information-change.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0153-smart-financial-approval-template-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0154-smart-financial-approval-template-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0154-invoice-data-associated-with-invoicing-requisition-change.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0155-invoice-data-associated-with-invoicing-requisition-change.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0155-intelligent-financial-enterprise-multi-subject-information-change.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0156-intelligent-financial-enterprise-multi-subject-information-change.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0156-dingtalk-intelligent-financial-customer-information-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0157-dingtalk-intelligent-financial-customer-information-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0157-dingtalk-intelligent-financial-commodity-information-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0158-dingtalk-intelligent-financial-commodity-information-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0158-dingtalk-smart-finance-role-member-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0159-dingtalk-smart-finance-role-member-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0159-dingtalk-intelligent-financial-project-information-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0160-dingtalk-intelligent-financial-project-information-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0160-dingtalk-intelligent-financial-supplier-information-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0161-dingtalk-intelligent-financial-supplier-information-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0161-dingtalk-intelligent-financial-revenue-and-expenditure-category-information-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0162-dingtalk-intelligent-financial-revenue-and-expenditure-category-information-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0162-dingtalk-intelligent-financial-custom-profile-information-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0163-dingtalk-intelligent-financial-custom-profile-information-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0163-dingtalk-intelligent-financial-custom-file-data-information-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0164-dingtalk-intelligent-financial-custom-file-data-information-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0164-event-ding-crm-object-meta.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0165-event-ding-crm-object-meta.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0165-crm-customer-dynamics.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0166-crm-customer-dynamics.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0166-events-ding-paas-object-data-create.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0167-events-ding-paas-object-data-create.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0167-event-ding-paas-object-data-delete.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0168-event-ding-paas-object-data-delete.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0168-event-ding-paas-object-data-update.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0169-event-ding-paas-object-data-update.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0169-events-agoal-indicator-add.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0170-events-agoal-indicator-add.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0170-events-agoal-indicator-modify.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0171-events-agoal-indicator-modify.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0171-events-agoal-indicator-copy.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0172-events-agoal-indicator-copy.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0172-events-agoal-indicator-remove.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0173-events-agoal-indicator-remove.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0173-events-agoal-objectiveprogress-add.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0174-events-agoal-objectiveprogress-add.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0174-events-agoal-objectiveprogress-modify.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0175-events-agoal-objectiveprogress-modify.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0175-events-agoal-objectiveprogress-remove.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0176-events-agoal-objectiveprogress-remove.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0176-events-agoal-objectiverule-add.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0177-events-agoal-objectiverule-add.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0177-events-agoal-objectiverule-modify.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0178-events-agoal-objectiverule-modify.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0178-events-agoal-objectiverule-remove.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0179-events-agoal-objectiverule-remove.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0179-agoal-personal-goal-deletion-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0180-agoal-personal-goal-deletion-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0180-agoal-personal-goal-update-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0181-agoal-personal-goal-update-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0181-agoal-personal-goals-have-added-new-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0182-agoal-personal-goals-have-added-new-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0182-events-hrbrain-talent-pool-add.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0183-events-hrbrain-talent-pool-add.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0183-events-hrbrain-talent-pool-edit.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0184-events-hrbrain-talent-pool-edit.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0184-events-hrbrain-talent-pool-delete.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0185-events-hrbrain-talent-pool-delete.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0185-events-hrbrain-talent-pool-staff-add.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0186-events-hrbrain-talent-pool-staff-add.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0186-events-hrbrain-talent-pool-staff-delete.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0187-events-hrbrain-talent-pool-staff-delete.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0187-honor-confer.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0188-honor-confer.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0188-honor-review-results.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0189-honor-review-results.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0189-commodity-operation.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0190-commodity-operation.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0190-application-market-order.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0191-application-market-order.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0191-market-order-identification.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0192-market-order-identification.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0192-lightweight-opportunity-notification.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0193-lightweight-opportunity-notification.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0193-apply-order-refund-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0194-apply-order-refund-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0194-dingtalk-transaction-ordering-on.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0195-dingtalk-transaction-ordering-on.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0195-dingtalk-transaction-ordering-closed.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0196-dingtalk-transaction-ordering-closed.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0196-all-in-one-application-installation-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0197-all-in-one-application-installation-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0197-events-market-ai-agent-order.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0198-events-market-ai-agent-order.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0198-enterprise-logic-enabled-microapps.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0199-enterprise-logic-enabled-microapps.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0199-enterprise-logic-deactivates-microapps.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0200-enterprise-logic-deactivates-microapps.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0200-enterprise-physical-deletion-of-micro-applications.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0201-enterprise-physical-deletion-of-micro-applications.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0201-enterprise-micro-application-visible-range-change.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0202-enterprise-micro-application-visible-range-change.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0202-enterprise-self-built-application-version-release-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0203-enterprise-self-built-application-version-release-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0203-enterprise-self-built-application-version-rollback-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0204-enterprise-self-built-application-version-rollback-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0204-enterprise-self-built-application-release.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0205-enterprise-self-built-application-release.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0205-enterprise-self-built-application-status-change.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0206-enterprise-self-built-application-status-change.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0206-enterprise-self-built-applications-can-be-used-to-change-the-scope.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0207-enterprise-self-built-applications-can-be-used-to-change-the-scope.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0207-exclusive-group-expansion-approval.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0208-exclusive-group-expansion-approval.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0208-dedicated-dingtalk-data-migration.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0209-dedicated-dingtalk-data-migration.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0209-service-number-receiving-single-chat-message.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0210-service-number-receiving-single-chat-message.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0210-events-exclusive-delete-trusted-device.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0211-events-exclusive-delete-trusted-device.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0211-detection-event-of-enterprise-employee-sending-file.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0212-detection-event-of-enterprise-employee-sending-file.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0212-full-synchronization-of-medical-address-book.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0213-full-synchronization-of-medical-address-book.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0213-user-attribute-change-in-medical-industry.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0214-user-attribute-change-in-medical-industry.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0214-changes-in-medical-departments-and-medical-groups-in-the-medical.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0215-changes-in-medical-departments-and-medical-groups-in-the-medical.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0215-change-of-attribute-of-medical-group-of-medical-department-in.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0216-change-of-attribute-of-medical-group-of-medical-department-in.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0216-changes-in-the-medical-group-of-the-department-where-the.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0217-changes-in-the-medical-group-of-the-department-where-the.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0217-new-education-sector.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0218-new-education-sector.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0218-education-sector-update.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0219-education-sector-update.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0219-education-department-delete.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0220-education-department-delete.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0220-new-education-staff-added.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0221-new-education-staff-added.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0221-new-education-staff-update.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0222-new-education-staff-update.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0222-new-education-staff-deleted.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0223-new-education-staff-deleted.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0223-new-education-staff-relations-added.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0224-new-education-staff-relations-added.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0224-new-education-staff-relationship-update.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0225-new-education-staff-relationship-update.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0225-new-education-staff-relation-delete.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0226-new-education-staff-relation-delete.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0226-events-edu-card-update.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0227-events-edu-card-update.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0227-events-edu-card-end.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0228-events-edu-card-end.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0228-events-edu-card-delete.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0229-events-edu-card-delete.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0229-payment-status-synchronization.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0230-payment-status-synchronization.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0230-store-pass-node-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0231-store-pass-node-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0231-stores-through-stores-grouping-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0232-stores-through-stores-grouping-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0232-store-general-business-role-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0233-store-general-business-role-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0233-store-general-account-equity-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0234-store-general-account-equity-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0234-event-subscription-and-data-push.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0235-event-subscription-and-data-push.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0235-event-log.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0236-event-log.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0262-approval-events-1.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0242-approval-events-1.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0263-group-session-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0243-group-session-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0264-sign-in-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0244-sign-in-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0265-attendance-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0245-attendance-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0267-home-school-address-book-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0247-home-school-address-book-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0268-enterprise-authorization-to-open-application-event-history.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0248-enterprise-authorization-to-open-application-event-history.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0269-history-of-authorization-cancellation-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0249-history-of-authorization-cancellation-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0270-event-subscription-enables-disables-application-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0250-event-subscription-enables-disables-application-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0272-approval-events-2.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0252-approval-events-2.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0303-ai-assistant-information-change.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0255-ai-assistant-information-change.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0300-video-conference-status-change-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0256-video-conference-status-change-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0301-video-conference-member-status-change-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0257-video-conference-member-status-change-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0274-kit-ticket-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0258-kit-ticket-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0275-enterprise-de-authorization-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0259-enterprise-de-authorization-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0310-live-status-change-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0262-live-status-change-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0311-live-modify-information-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0263-live-modify-information-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0312-live-viewing-playback-information-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0264-live-viewing-playback-information-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0313-live-end-data-processing-task-completion-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0265-live-end-data-processing-task-completion-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0319-file-or-folder-update-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0266-file-or-folder-update-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0318-file-or-folder-add-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0267-file-or-folder-add-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0320-file-or-folder-delete-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0268-file-or-folder-delete-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0325-shift-change-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0269-shift-change-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0324-event-subscription-attendance-group-changes.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0270-event-subscription-attendance-group-changes.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0326-attendance-result-change-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0271-attendance-result-change-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0323-vacation-data-synchronization-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0272-vacation-data-synchronization-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0294-enterprise-change-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0273-enterprise-change-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0295-enterprise-delete-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0274-enterprise-delete-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0287-enterprise-deletes-the-employee.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0276-enterprise-deletes-the-employee.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0290-delete-department-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0279-delete-department-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0291-enterprise-add-role-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0280-enterprise-add-role-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0292-enterprise-modify-role-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0281-enterprise-modify-role-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0293-enterprise-delete-role-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0282-enterprise-delete-role-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0296-enterprise-add-external-contacts-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0285-enterprise-add-external-contacts-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0297-enterprise-modify-external-contact-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0286-enterprise-modify-external-contact-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0298-enterprise-delete-external-contact-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0287-enterprise-delete-external-contact-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0299-asynchronous-translation-address-book-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0288-asynchronous-translation-address-book-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0314-approve-instance-state-change-directed-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0291-approve-instance-state-change-directed-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0315-approve-task-status-change-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0292-approve-task-status-change-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0321-event-subscription-old-crm-metadata.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0295-event-subscription-old-crm-metadata.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0322-crm-customer-dynamic-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0296-crm-customer-dynamic-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0328-event-subscription-personnel-commercialization-plan-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0297-event-subscription-personnel-commercialization-plan-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0327-subscribe-to-the-personnel-solution-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0298-subscribe-to-the-personnel-solution-change-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0329-training-learning-record-synchronization-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0299-training-learning-record-synchronization-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0330-personnel-platform-employee-change-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0300-personnel-platform-employee-change-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0331-personnel-platform-employee-file-change-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0301-personnel-platform-employee-file-change-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0338-event-subscription-app-order-refund-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0302-event-subscription-app-order-refund-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0339-callback-information-activation-record-event-subscription-application.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0303-callback-information-activation-record-event-subscription-application.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0340-orders-generated-by-enterprises-opening-applications-in-the-application-market-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0304-orders-generated-by-enterprises-opening-applications-in-the-application-market-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0341-equity-services-open-etc-corresponding-to-goods-purchased-by-the-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0305-equity-services-open-etc-corresponding-to-goods-purchased-by-the-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0342-equity-services-close-etc-corresponding-to-goods-purchased-by-the-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0306-equity-services-close-etc-corresponding-to-goods-purchased-by-the-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0343-smart-hardware-binding-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0307-smart-hardware-binding-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0344-install-group-extension-event-in-the-group-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0308-install-group-extension-event-in-the-group-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0345-intra-cluster-offload-cluster-extension-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0309-intra-cluster-offload-cluster-extension-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0346-have-one-chat-about-installing-old-version-cool-app.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0310-have-one-chat-about-installing-old-version-cool-app.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0347-single-chat-uninstall-cool-app-event-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0311-single-chat-uninstall-cool-app-event-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0332-home-school-address-book-department-change-department-node-added-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0312-home-school-address-book-department-change-department-node-added-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0333-home-school-address-book-department-change-department-node-update-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0313-home-school-address-book-department-change-department-node-update-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0334-home-school-address-book-department-change-department-node-delete-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0314-home-school-address-book-department-change-department-node-delete-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0335-home-school-address-book-personnel-change-personnel-identity-added-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0315-home-school-address-book-personnel-change-personnel-identity-added-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0336-home-school-address-book-personnel-change-personnel-identity-update-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0316-home-school-address-book-personnel-change-personnel-identity-update-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0337-home-school-address-book-personnel-change-personnel-identity-deletion-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0317-home-school-address-book-personnel-change-personnel-identity-deletion-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0309-group-session-dismiss-group-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0318-group-session-dismiss-group-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0304-add-personnel-event-subscription-group-session.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0319-add-personnel-event-subscription-group-session.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0305-event-subscription-group-session-deletion-personnel.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0320-event-subscription-group-session-deletion-personnel.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0307-group-session-change-group-owner-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0321-group-session-change-group-owner-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0308-event-subscription-group-session-changes-name-group.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0322-event-subscription-group-session-changes-name-group.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0306-group-session-users-actively-withdraw-from-group-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0323-group-session-users-actively-withdraw-from-group-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0278-enable-for-third-party-enterprise-applications-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0324-enable-for-third-party-enterprise-applications-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0279-third-party-enterprise-application-deactivation-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0325-third-party-enterprise-application-deactivation-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0280-third-party-enterprise-app-deletion-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0326-third-party-enterprise-app-deletion-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0281-third-party-enterprise-application-visible-scope-change-stream.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0327-third-party-enterprise-application-visible-scope-change-stream.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0350-callback-event-message-body-encryption-and-decryption.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0331-callback-event-message-body-encryption-and-decryption.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0370-event-subscription-attendance-result-changes.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0341-event-subscription-attendance-result-changes.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0376-notification-callback.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0342-notification-callback.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0374-croud-expansion-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0344-croud-expansion-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0357-activate-authorized-applications.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0346-activate-authorized-applications.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0366-crm-metadata.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0350-crm-metadata.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0367-crm-customer-dynamic-events.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0351-crm-customer-dynamic-events.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0375-one-on-one-chat-cool-application-extension-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0352-one-on-one-chat-cool-application-extension-event.md
+- docs/01-应用开发/04-LFcRvVD08N-事件订阅/0368-teambiton-work-change-event.md → docs/01-应用开发/04-LFcRvVD08N-事件订阅/0355-teambiton-work-change-event.md
+
+## 删除（已写 tombstone，源站已下线或移出目录树）
+- 推送suite_ticket事件 · https://open.dingtalk.com/document/development/push-suite-ticket-events · 最后见于 docs/01-应用开发/04-LFcRvVD08N-事件订阅/0246-push-suite-ticket-events.md
+- 验证和更新回调URL事件 · https://open.dingtalk.com/document/development/validating-and-updating-callback-url-events · 最后见于 docs/01-应用开发/04-LFcRvVD08N-事件订阅/0247-validating-and-updating-callback-url-events.md
+- 应用回调地址更新 · https://open.dingtalk.com/document/development/app-callback-url-update · 最后见于 docs/01-应用开发/04-LFcRvVD08N-事件订阅/0248-app-callback-url-update.md
+- 企业授权开通应用事件 · https://open.dingtalk.com/document/development/enterprise-authorized-application-activation-event · 最后见于 docs/01-应用开发/04-LFcRvVD08N-事件订阅/0249-enterprise-authorized-application-activation-event.md
+- 解除授权事件 · https://open.dingtalk.com/document/development/revoke-authorization · 最后见于 docs/01-应用开发/04-LFcRvVD08N-事件订阅/0250-revoke-authorization.md
+- 启用和停用应用事件 · https://open.dingtalk.com/document/development/enable-and-disable-application-events · 最后见于 docs/01-应用开发/04-LFcRvVD08N-事件订阅/0251-enable-and-disable-application-events.md
+- 通讯录授权范围变更事件 · https://open.dingtalk.com/document/development/address-book-authorization-scope-change-event · 最后见于 docs/01-应用开发/04-LFcRvVD08N-事件订阅/0252-address-book-authorization-scope-change-event.md
+- 审批事件 · https://open.dingtalk.com/document/development/event-subscription-approval-event · 最后见于 docs/01-应用开发/04-LFcRvVD08N-事件订阅/0253-event-subscription-approval-event.md
+- 用户购买下单事件 · https://open.dingtalk.com/document/development/user-purchase-order-event · 最后见于 docs/01-应用开发/04-LFcRvVD08N-事件订阅/0254-user-purchase-order-event.md
+- 异步转译通讯录id任务完成通知事件 · https://open.dingtalk.com/document/development/asynchronous-translation-task-completion-notification-event · 最后见于 docs/01-应用开发/04-LFcRvVD08N-事件订阅/0255-asynchronous-translation-task-completion-notification-event.md
+- 应用回调地址更新 · https://open.dingtalk.com/document/development/event-subscription-application-callback-address-update · 最后见于 docs/01-应用开发/04-LFcRvVD08N-事件订阅/0258-event-subscription-application-callback-address-update.md
+- 验证和更新回调URL事件 · https://open.dingtalk.com/document/development/event-subscription-verification-update-callbackurl-event · 最后见于 docs/01-应用开发/04-LFcRvVD08N-事件订阅/0259-event-subscription-verification-update-callbackurl-event.md
+- 推送suite_ticket事件 · https://open.dingtalk.com/document/development/event-subscription-push-suite-ticket-event · 最后见于 docs/01-应用开发/04-LFcRvVD08N-事件订阅/0260-event-subscription-push-suite-ticket-event.md
+
+## 后续动作
+- 结构层（index/ graph/ meta/kb_manifest）：--apply 已全量重建；未 --apply 则本报告仅供预览。
+- 认知层（index/TOPICS.md）：对照上面清单，凡命中 TOPICS 引用的文档（可用 `rg <path> index/TOPICS.md` 与 `graph/links.jsonl` 反查），由 LLM 复核该主题条目是否要改写。

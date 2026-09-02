@@ -23,7 +23,7 @@ updated_at: "2026-06-03 10:12:28"
 添加审批评论附件需将文件上传至审批钉盘空间，可以获取到接口参数spaceId，fileType，fileName，fileId，fileSize。获取方式如下：
 
 1. 调用[获取审批钉盘空间信息](0502-obtains-the-information-about-approval-nail-disk.md)接口，获取钉盘空间的上传权限，并获取审批钉盘空间spaceId。
-2. 根据审批钉盘空间spaceId，网页应用（H5微应用）/小程序，通过[上传附件到钉盘/从钉盘选择文件](../03-Ogu5SlPY4t-客户端-JSAPI/0333-jsapi-upload-attachment-to-ding-talk.md)获取钉盘附件file的信息。
+2. 根据审批钉盘空间spaceId，网页应用（H5微应用）/小程序，通过[上传附件到钉盘/从钉盘选择文件](../03-Ogu5SlPY4t-客户端-JSAPI/0332-jsapi-upload-attachment-to-ding-talk.md)获取钉盘附件file的信息。
 
 ## 请求
 

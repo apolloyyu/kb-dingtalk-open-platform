@@ -20,10 +20,10 @@ updated_at: "2026-05-19 17:05:10"
 
 ## 前提条件
 
-1. 完成[创建企业内部应用机器人](../../01-应用开发/01-XOnnmGCTbn-开发指南/0076-configure-the-robot-application.md)的流程。
+1. 完成[创建企业内部应用机器人](../../01-应用开发/01-XOnnmGCTbn-开发指南/0078-configure-the-robot-application.md)的流程。
 
    > 机器人接收消息模式选择 **Stream 模式**。
-2. 完成[添加机器人入群](../../01-应用开发/01-XOnnmGCTbn-开发指南/0077-add-robot-to-group.md)的流程。
+2. 完成[添加机器人入群](../../01-应用开发/01-XOnnmGCTbn-开发指南/0079-add-robot-to-group.md)的流程。
 3. 申请权限：权限点 Code：`Card.Streaming.Write`。
 
 ![image.png](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/9906372171/p785445.png)

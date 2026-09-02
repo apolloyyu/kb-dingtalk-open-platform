@@ -49,4 +49,4 @@ Page({
 
 ## 兼容性判断
 
-调用[dd.canIUse](0476-dd-caniuse.md)("getColorSchemeSync") 进行兼容性判断。
+调用[dd.canIUse](0477-dd-caniuse.md)("getColorSchemeSync") 进行兼容性判断。

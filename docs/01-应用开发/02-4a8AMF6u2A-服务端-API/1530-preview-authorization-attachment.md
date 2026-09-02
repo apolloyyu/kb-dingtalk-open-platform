@@ -30,10 +30,10 @@ updated_at: "2026-08-25 09:37:48"
 > 使用方法如下：
 >
 > 1. 调用[获取审批钉盘空间信息](1536-query-the-space-of-an-approval-nail.md)接口，获取审批钉盘空间space\_id。
-> 2. 根据space\_id，调用H5微应用[上传附件到钉盘/从钉盘选择文件](../03-Ogu5SlPY4t-客户端-JSAPI/0784-upload-attachment-to-nail-plate-select-file-from-nail-plate-h5.md)或者小程序[上传附件到钉盘/从钉盘选择文件](../03-Ogu5SlPY4t-客户端-JSAPI/0705-upload-attachment-to-nail-plate-select-file-from-nail-plate.md)接口，获取上传附件的信息。
+> 2. 根据space\_id，调用H5微应用[上传附件到钉盘/从钉盘选择文件](../03-Ogu5SlPY4t-客户端-JSAPI/0788-upload-attachment-to-nail-plate-select-file-from-nail-plate-h5.md)或者小程序[上传附件到钉盘/从钉盘选择文件](../03-Ogu5SlPY4t-客户端-JSAPI/0706-upload-attachment-to-nail-plate-select-file-from-nail-plate.md)接口，获取上传附件的信息。
 > 3. 调用[发起审批实例](1519-oa-approval-initiates-approval-instances.md)接口，获取审批实例process\_instance\_id。
 > 4. 根据上述获取信息，调用本文接口，授权用户审批附件预览权限。每一次预览审批附件前，都需要调用该接口进行授权。
-> 5. 调用H5微应用[预览钉盘文件](../03-Ogu5SlPY4t-客户端-JSAPI/0785-preview-nail-plate-file.md)或者小程序[钉盘文件预览](../03-Ogu5SlPY4t-客户端-JSAPI/0704-nail-plate-file-preview.md)接口，进行预览。
+> 5. 调用H5微应用[预览钉盘文件](../03-Ogu5SlPY4t-客户端-JSAPI/0784-preview-nail-plate-file.md)或者小程序[钉盘文件预览](../03-Ogu5SlPY4t-客户端-JSAPI/0703-nail-plate-file-preview.md)接口，进行预览。
 
 ## 权限
 
@@ -63,7 +63,7 @@ updated_at: "2026-08-25 09:37:48"
 | --- | --- | --- | --- | --- |
 | request | GrantCspaceRequest | 是 |  | 请求信息。 |
 | agentid | Number | 否 | 868810166 | 应用标识。可在开发者后台的应用详情页获取。 |
-| process\_instance\_id | String | 是 | a17444d1-075b-4a4d-xxxx | 实例ID：   - 企业内部应用，通过[获取审批实例ID列表](1533-operation-to-retrieve-a-list-of.md)接口获取。 - 第三方企业应用，通过推送的审批事件中获取，参考[biz\_type=22](../04-LFcRvVD08N-事件订阅/0363-approval-events-3.md)。 |
+| process\_instance\_id | String | 是 | a17444d1-075b-4a4d-xxxx | 实例ID：   - 企业内部应用，通过[获取审批实例ID列表](1533-operation-to-retrieve-a-list-of.md)接口获取。 - 第三方企业应用，通过推送的审批事件中获取，参考[biz\_type=22](../04-LFcRvVD08N-事件订阅/0338-approval-events-3.md)。 |
 | file\_id | String | 是 | 11 | 审批附件ID。  **[!NOTE]**  file\_id必须与发起审批实例中附件组件中的文件fileId保持一致，否则出现无权限错误信息。 |
 | userid | String | 是 | user123 | 授权允许预览附件的用户userid。 |
 | fileid\_list | String[] | 否 | 123 | 附件ID列表，支持批量授权，最大列表长度：20。 |

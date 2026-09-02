@@ -145,8 +145,8 @@ updated_at: "2026-08-04 09:07:26"
 
   > **[!NOTE]**
   >
-  > 1. 企业内部机器人已完成保存发布。详情参见[配置企业机器人](../01-XOnnmGCTbn-开发指南/0076-configure-the-robot-application.md)。
-  > 2. 企业内部企应用已完成发布，否则企业内部其他成员无法查看到该机器人，详情参见[发布应用](../01-XOnnmGCTbn-开发指南/0017-publish-dingtalk-application.md)。
+  > 1. 企业内部机器人已完成保存发布。详情参见[配置企业机器人](../01-XOnnmGCTbn-开发指南/0078-configure-the-robot-application.md)。
+  > 2. 企业内部企应用已完成发布，否则企业内部其他成员无法查看到该机器人，详情参见[发布应用](../01-XOnnmGCTbn-开发指南/0019-publish-dingtalk-application.md)。
 
   答：添加机器人入群方法如下：
 

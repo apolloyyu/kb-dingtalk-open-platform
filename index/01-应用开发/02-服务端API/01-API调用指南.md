@@ -12,6 +12,6 @@
 - [授权说明](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0008-applications-authorization.md) · 授权套件 · 2026-07-02
 - [接入流程](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0009-instructions-for-use.md) · 授权套件 · 2026-08-03
 - [授权套件SDK](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0010-unified-licensing-suite-sdk.md) · 授权套件 · 2026-07-02
-- [数据分页](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0011-pagination.md) · 2026-05-09
+- [数据分页](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0011-pagination.md) · 2026-09-02
 - [调用频率限制](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0012-call-frequency-limit.md) · 2026-01-22
 - [全局错误码](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0013-server-api-error-codes-1.md) · 2026-05-06

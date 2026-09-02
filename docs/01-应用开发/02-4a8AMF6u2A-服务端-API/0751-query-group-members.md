@@ -39,7 +39,7 @@ updated_at: "2026-08-14 09:41:53"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| openConversationId | String | 是 | 群ID：   - 基于群模板创建的群，可调用[创建群](1486-create-a-scene-group-v2.md)接口获取`open_conversation_id`参数值。 - 安装群聊酷应用的群，通过[安装酷应用入群](../03-Ogu5SlPY4t-客户端-JSAPI/0274-install-coothe-group.md)获取返回参数`openConversationId`参数值。 |
+| openConversationId | String | 是 | 群ID：   - 基于群模板创建的群，可调用[创建群](1486-create-a-scene-group-v2.md)接口获取`open_conversation_id`参数值。 - 安装群聊酷应用的群，通过[安装酷应用入群](../03-Ogu5SlPY4t-客户端-JSAPI/0275-install-coothe-group.md)获取返回参数`openConversationId`参数值。 |
 | coolAppCode | String | 否 | 群聊酷应用编码：   - 基于群模板创建的群，不需要传入此参数。 - 安装群聊酷应用的群，**必须**传入此参数。 |
 | maxResults | Long | 是 | 分页大小。      接口返回结果可能会大于或小于maxResults，以实际返回结果为准。如果群成员数量不超过1000，而直接一次性返回全部群成员；如果群成员数量大于1000，则按照分页大小分批次返回。 |
 | nextToken | String | 否 | 分页游标，置空表示从首页开始查询。 |

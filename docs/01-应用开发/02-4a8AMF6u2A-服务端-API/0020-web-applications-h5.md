@@ -51,12 +51,12 @@ updated_at: "2026-07-02 10:35:25"
 
 建议用户信息保存在前端缓存中（dd.setStorage）或者cookie中，避免每次进入应用都调用钉钉接口进行免登。
 
-1. 引入 JS SDK，详情参考[客户端 SDK](../01-XOnnmGCTbn-开发指南/0029-webapp-read-before-development.md)。
+1. 引入 JS SDK，详情参考[客户端 SDK](../01-XOnnmGCTbn-开发指南/0031-webapp-read-before-development.md)。
 
    ```
    npm install dingtalk-jsapi --save
    ```
-2. 获取免登授权码，网页应用免登可参考[requestAuthCode](../03-Ogu5SlPY4t-客户端-JSAPI/0007-jsapi-request-auth-code.md)JSAPI。
+2. 获取免登授权码，网页应用免登可参考[requestAuthCode](../03-Ogu5SlPY4t-客户端-JSAPI/0008-jsapi-request-auth-code.md)JSAPI。
 
    ```
    import * as dd from 'dingtalk-jsapi';

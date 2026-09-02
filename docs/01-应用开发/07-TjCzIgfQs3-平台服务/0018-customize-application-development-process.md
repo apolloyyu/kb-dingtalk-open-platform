@@ -93,7 +93,7 @@ updated_at: "2026-08-19 09:15:40"
 
 ## 步骤三：应用开发
 
-应用开发可参考[开发小程序](../01-XOnnmGCTbn-开发指南/0024-optional-develop-a-small-program-server.md)的示例代码。
+应用开发可参考[开发小程序](../01-XOnnmGCTbn-开发指南/0026-optional-develop-a-small-program-server.md)的示例代码。
 
 ## 步骤四：应用发布
 

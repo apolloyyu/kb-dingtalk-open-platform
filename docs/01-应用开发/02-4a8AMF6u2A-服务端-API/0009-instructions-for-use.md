@@ -234,7 +234,7 @@ openAuth({
 
 1. 确保应用为第三方企业应用，且已有授权组织。
 
-   > 测试阶段可通过添加体验组织进行测试，详情参考[（可选）测试应用](../01-XOnnmGCTbn-开发指南/0016-test-dingtalk-app.md)。
+   > 测试阶段可通过添加体验组织进行测试，详情参考[（可选）测试应用](../01-XOnnmGCTbn-开发指南/0018-test-dingtalk-app.md)。
 2. 设置应用首页地址和 PC 端首页地址为：`http://localhost:3000/`。
 
    > 本示例运行在本地，采用 http://localhost:3000/。

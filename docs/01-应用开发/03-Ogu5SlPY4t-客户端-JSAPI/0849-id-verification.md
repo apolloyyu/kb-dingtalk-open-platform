@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端 JSAPI"
 breadcrumb: "历史文档（不推荐） > H5微应用 > JSAPI参考 > 专属钉钉 > 专属实人认证"
 doc_id: "GbChFxaga0"
-updated_at: "2025-09-17 20:57:38"
+updated_at: "2026-09-02 18:14:22"
 ---
 
 > Source: https://open.dingtalk.com/document/development/id-verification
 > Path: 应用开发 / 客户端 JSAPI / 历史文档（不推荐） > H5微应用 > JSAPI参考 > 专属钉钉 > 专属实人认证
-> Updated: 2025-09-17 20:57:38
+> Updated: 2026-09-02 18:14:22
 
 # 专属实人认证
 
@@ -34,24 +34,24 @@ updated_at: "2025-09-17 20:57:38"
 | 支持说明 | 支持(钉钉版本≥6.5.40) | 支持(钉钉版本≥6.5.40) | 不支持 |
 
 ```
- dd.biz.ATMBle.exclusiveLiveCheck({
-           agentId:"2748xxxx",
-           corpId:"ding027xxxxx",
-           onSuccess:(res)=>{
-                  console.log(JSON.stringify(res))
-                },
-           onFail:(err) =>{
-                  console.log(JSON.stringify(err))
-                }
- })
+dd.biz.ATMBle.exclusiveLiveCheck({
+  agentId:"2748xxxx",
+  corpId:"ding027xxxxx",
+  onSuccess:(res)=>{
+    console.log(JSON.stringify(res))
+  },
+  onFail:(err) =>{
+    console.log(JSON.stringify(err))
+  }
+})
 ```
 
 ## **参数说明**
 
 | **参数** | **类型** | **是否必填** | **描述** |
 | --- | --- | --- | --- |
-| agentId | String | 是 | 钉钉应用agentId，参考[基础概念-AgentId念](https://open.dingtalk.com/document/orgapp/basic-concepts)。 |
-| corpId | Sting | 是 | 钉钉组织corpId，参考[基础概念-CorpId念](https://open.dingtalk.com/document/orgapp/basic-concepts)。 |
+| agentId | String | 是 | 钉钉应用agentId，参考[基础概念-AgentId](../01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md)。 |
+| corpId | Sting | 是 | 钉钉组织corpId，参考[基础概念-CorpId](../01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md)。 |
 | onSuccess | Function | 否 | 调用成功的回调函数。 |
 | onFail | Function | 否 | 调用失败的回调函数。 |
 

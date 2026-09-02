@@ -49,7 +49,7 @@ updated_at: "2026-08-25 09:37:41"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| process\_instance\_id | String | 是 | 1a2b-3e4dxxxx | 审批实例ID   - 企业内部应用可通过[获取审批实例ID列表](1533-operation-to-retrieve-a-list-of.md)接口获取。 - 钉钉三方企业应用可以通过推送的审批事件中获取，参考[biz\_type=22](../04-LFcRvVD08N-事件订阅/0363-approval-events-3.md)。 |
+| process\_instance\_id | String | 是 | 1a2b-3e4dxxxx | 审批实例ID   - 企业内部应用可通过[获取审批实例ID列表](1533-operation-to-retrieve-a-list-of.md)接口获取。 - 钉钉三方企业应用可以通过推送的审批事件中获取，参考[biz\_type=22](../04-LFcRvVD08N-事件订阅/0338-approval-events-3.md)。 |
 
 ## 返回参数
 

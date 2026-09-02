@@ -18,11 +18,11 @@ updated_at: "2026-08-12 09:20:52"
 
 ## **基础信息**
 
-当专属插件有获取免登授权码做安全身份校验时，可通过借用 H5 微应用身份获取。参考JSAPI [requestAuthCode](../../01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0007-jsapi-request-auth-code.md)。
+当专属插件有获取免登授权码做安全身份校验时，可通过借用 H5 微应用身份获取。参考JSAPI [requestAuthCode](../../01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0008-jsapi-request-auth-code.md)。
 
 | API名称 | 调用方式 | 说明 |
 | --- | --- | --- |
-| dd. getAuthCode | 异步 | 获取免登授权码，授权码同微应用的 requestAuthCode，授权码使用方式可参考：[requestAuthCode](../../01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0007-jsapi-request-auth-code.md) |
+| dd. getAuthCode | 异步 | 获取免登授权码，授权码同微应用的 requestAuthCode，授权码使用方式可参考：[requestAuthCode](../../01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0008-jsapi-request-auth-code.md) |
 
 > **[!NOTE]**
 >

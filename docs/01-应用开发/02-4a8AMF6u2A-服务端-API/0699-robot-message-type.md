@@ -139,7 +139,7 @@ Content-Type:application/json
 >
 > webhook方式只支持在群聊会话。
 
-Webhook发送消息的实现方式，请参考[机器人回复/发送消息](../01-XOnnmGCTbn-开发指南/0079-robot-reply-and-send-messages.md)和[创建自定义机器人](../01-XOnnmGCTbn-开发指南/0081-custom-bot-creation-and-installation.md)。
+Webhook发送消息的实现方式，请参考[机器人回复/发送消息](../01-XOnnmGCTbn-开发指南/0081-robot-reply-and-send-messages.md)和[创建自定义机器人](../01-XOnnmGCTbn-开发指南/0083-custom-bot-creation-and-installation.md)。
 
 #### **文本text类型**
 
@@ -563,7 +563,7 @@ Webhook发送消息的实现方式，请参考[机器人回复/发送消息](../
 
 ### **相关内容**
 
-如果[创建企业内部应用机器人](../01-XOnnmGCTbn-开发指南/0076-configure-the-robot-application.md)时，消息接收模式选择了 HTTP模式，在机器人使用过程中，当机器人收到消息时，此时除了上述的消息体，此时还存在 HTTP header参数，格式如下：
+如果[创建企业内部应用机器人](../01-XOnnmGCTbn-开发指南/0078-configure-the-robot-application.md)时，消息接收模式选择了 HTTP模式，在机器人使用过程中，当机器人收到消息时，此时除了上述的消息体，此时还存在 HTTP header参数，格式如下：
 
 ```
 {

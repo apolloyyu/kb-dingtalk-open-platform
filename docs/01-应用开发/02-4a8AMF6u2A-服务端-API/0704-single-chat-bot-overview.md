@@ -22,8 +22,8 @@ updated_at: "2025-10-09 17:54:59"
 
 以下机器人类型支持在单聊场景使用：
 
-- [企业内部开发机器人](../01-XOnnmGCTbn-开发指南/0076-configure-the-robot-application.md)
-- [第三方企业开发机器人](../01-XOnnmGCTbn-开发指南/0080-third-party-enterprise-robots.md)
+- [企业内部开发机器人](../01-XOnnmGCTbn-开发指南/0078-configure-the-robot-application.md)
+- [第三方企业开发机器人](../01-XOnnmGCTbn-开发指南/0082-third-party-enterprise-robots.md)
 
 如图所示，内外小蜜为阿里巴巴为阿里员工开发的机器人，就是一个典型的单聊机器人，既能够推送消息给到用户，也能够通过对话能力和用户进行互动，也支持被客户搜索到。
 

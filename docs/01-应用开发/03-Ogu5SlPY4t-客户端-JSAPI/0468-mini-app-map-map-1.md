@@ -32,7 +32,7 @@ map 组件是由客户端创建的原生组件，可以通过 **dd.canIUse('inPa
 - 请勿在[scroll-view 可滚动视图区域](0446-mini-app-scroll-view-the-scrollable-area.md)中使用 map 组件。
 - css 动画对 map 组件无效。
 - 缩小或者放大了地图比例尺之后，若再次设置 data 经纬度到一个地点，请在 onRegionChange 函数中重新设置 data 的 scale 值，否则会出现拖动地图区域后，重新加载导致地图比例尺又变回缩放前的大小，具体请参照示例代码 regionchange 函数部分。
-- 基础库 1.24.13 开始支持 optimize 属性，开启 optimize 后，开发者不需要再监听 onRegionChange 来更新 scale 属性值以保证缩放比例不变。此特性在客户端 5.1.2 以上支持，可通过[dd.canIUse](0476-dd-caniuse.md)('map.optimize')进行检测。基础库版本号获取方法，请参考[获取基础库版本号](0479-gets-the-version-number-of-the-base-database.md)。
+- 基础库 1.24.13 开始支持 optimize 属性，开启 optimize 后，开发者不需要再监听 onRegionChange 来更新 scale 属性值以保证缩放比例不变。此特性在客户端 5.1.2 以上支持，可通过[dd.canIUse](0477-dd-caniuse.md)('map.optimize')进行检测。基础库版本号获取方法，请参考[获取基础库版本号](0479-gets-the-version-number-of-the-base-database.md)。
 - 小程序不支持获取当前地图的经纬度。
 
 ## **示例代码**

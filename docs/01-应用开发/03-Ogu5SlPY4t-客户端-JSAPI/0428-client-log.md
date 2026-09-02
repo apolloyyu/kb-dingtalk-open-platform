@@ -38,5 +38,5 @@ updated_at: "2026-08-14 17:07:56"
 
 | **类目** | **说明** | **应用类型** |
 | --- | --- | --- |
-| **多媒体** | **新增开放**：   - 新增[chooseMedia](0213-jsapi-choose-media.md)JSAPI，拍摄或从手机相册中选择图片或视频。 | - 企业内部应用 - 第三方企业应用 - 第三方个人应用 |
-| **设备** | **新增开放**：   - 新增[removeCachedAPIResponse](0419-jsapi-remove-cached-a-p-i-response.md)JSAPI，清除当前页面上已缓存的 JSAPI 返回值。 - 新增[getCachedAPIResponse](0420-jsapi-get-cached-a-p-i-response.md)JSAPI，获取已缓存的JSAPI返回值。 - 新增[enableAPIResponseCache](0421-jsapi-enable-a-p-i-response-cache.md)JSAPI，开启JSAPI返回值缓存。 - 新增[getPageTerminateInfo](0422-jsapi-get-page-terminate-info.md)JSAPI，获取WebView崩溃信息。 | - 企业内部应用 - 第三方企业应用 - 第三方个人应用 |
+| **多媒体** | **新增开放**：   - 新增[chooseMedia](0208-jsapi-choose-media.md)JSAPI，拍摄或从手机相册中选择图片或视频。 | - 企业内部应用 - 第三方企业应用 - 第三方个人应用 |
+| **设备** | **新增开放**：   - 新增[removeCachedAPIResponse](0422-jsapi-remove-cached-a-p-i-response.md)JSAPI，清除当前页面上已缓存的 JSAPI 返回值。 - 新增[getCachedAPIResponse](0420-jsapi-get-cached-a-p-i-response.md)JSAPI，获取已缓存的JSAPI返回值。 - 新增[enableAPIResponseCache](0421-jsapi-enable-a-p-i-response-cache.md)JSAPI，开启JSAPI返回值缓存。 - 新增[getPageTerminateInfo](0419-jsapi-get-page-terminate-info.md)JSAPI，获取WebView崩溃信息。 | - 企业内部应用 - 第三方企业应用 - 第三方个人应用 |

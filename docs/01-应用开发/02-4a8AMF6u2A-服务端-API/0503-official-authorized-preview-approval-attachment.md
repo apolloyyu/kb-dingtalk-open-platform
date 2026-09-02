@@ -25,10 +25,10 @@ updated_at: "2026-06-03 10:12:31"
 > 本接口需配合钉盘JSAPI使用。
 
 1. 获取审批钉盘空间spaceId，调用[获取审批钉盘空间信息](0502-obtains-the-information-about-approval-nail-disk.md)接口，获取审批钉盘空间spaceId。
-2. 根据审批钉盘空间spaceId，网页应用（H5微应用）/小程序，通过[上传附件到钉盘/从钉盘选择文件](../03-Ogu5SlPY4t-客户端-JSAPI/0333-jsapi-upload-attachment-to-ding-talk.md)获取钉盘附件file的信息。
+2. 根据审批钉盘空间spaceId，网页应用（H5微应用）/小程序，通过[上传附件到钉盘/从钉盘选择文件](../03-Ogu5SlPY4t-客户端-JSAPI/0332-jsapi-upload-attachment-to-ding-talk.md)获取钉盘附件file的信息。
 3. 获取审批实例processInstanceId，调用[发起审批实例](0497-create-an-approval-instance.md)接口获取InstanceId参数值。
 4. 根据上述获取信息，调用本接口，授权用户审批附件预览权限。每一次预览审批附件前，都需要调用本接口进行授权。
-5. 调用**预览钉盘文件**接口，进行预览，调用[预览钉盘文件](../03-Ogu5SlPY4t-客户端-JSAPI/0330-jsapi-preview-file-in-ding-talk.md)接口。
+5. 调用**预览钉盘文件**接口，进行预览，调用[预览钉盘文件](../03-Ogu5SlPY4t-客户端-JSAPI/0331-jsapi-preview-file-in-ding-talk.md)接口。
 
 ## 请求
 

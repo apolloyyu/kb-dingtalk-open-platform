@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "认证与授权 > 身份验证（免登） > 概述"
 doc_id: "QKBVgceaQ8"
-updated_at: "2026-01-22 20:43:33"
+updated_at: "2026-09-02 18:13:35"
 ---
 
 > Source: https://open.dingtalk.com/document/development/sso-overview
 > Path: 应用开发 / 服务端 API / 认证与授权 > 身份验证（免登） > 概述
-> Updated: 2026-01-22 20:43:33
+> Updated: 2026-09-02 18:13:35
 
 # 概述
 
@@ -28,9 +28,9 @@ updated_at: "2026-01-22 20:43:33"
 
 # 支持的免登场景
 
-- [网页应用（H5微应用）免登](https://open.dingtalk.com/document/dingstart/enterprise-internal-application-logon-free)
-- [应用管理后台免登](https://open.dingtalk.com/document/dingstart/log-on-site-application-management-backend)
-- [实现网页方式登录应用（登录第三方网站）](https://open.dingtalk.com/document/dingstart/tutorial-obtaining-user-personal-information)
+- [网页应用（H5微应用）免登](0018-enterprise-internal-application-logon-free.md)
+- [应用管理后台免登](0022-log-on-site-application-management-backend.md)
+- [实现网页方式登录应用（登录第三方网站）](0019-tutorial-obtaining-user-personal-information.md)
 
   - 浏览器内实现
 
@@ -41,7 +41,7 @@ updated_at: "2026-01-22 20:43:33"
 
 当企业开发者开发了一个企业内部应用时，企业员工在钉钉内使用该应用，无需输入账户密码即可自动登录所开发的系统。
 
-免登步骤，详情参见[网页应用（H5微应用）免登](https://open.dingtalk.com/document/dingstart/enterprise-internal-application-logon-free)。
+免登步骤，详情参见[网页应用（H5微应用）免登](0018-enterprise-internal-application-logon-free.md)。
 
 | 步骤 | 说明 |
 | --- | --- |
@@ -67,7 +67,7 @@ updated_at: "2026-01-22 20:43:33"
 
 当开发的应用需要企业管理员在[钉钉管理后台](https://oa.dingtalk.com/)对应用进行一些设置和管理功能时，你需要开发一套应用的后台管理系统，管理员在[钉钉管理后台](https://oa.dingtalk.com/)直接点应用管理后台，便可免输入账户密码实现自动登录你的应用管理后台系统。
 
-免登步骤，详情参见[应用管理后台免登](https://open.dingtalk.com/document/dingstart/log-on-site-application-management-backend)。
+免登步骤，详情参见[应用管理后台免登](0022-log-on-site-application-management-backend.md)。
 
 | 步骤 | 说明 |
 | --- | --- |

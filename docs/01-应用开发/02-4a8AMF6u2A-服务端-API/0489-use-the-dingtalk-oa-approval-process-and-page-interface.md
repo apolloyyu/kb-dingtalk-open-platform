@@ -426,7 +426,7 @@ updated_at: "2026-07-10 10:11:37"
 5. **添加审批评论附件：**若需要添加审批评论附件，需先将文件上传至审批钉盘空间，再调用新版服务端API-[添加审批评论](0500-official-approval-adds-approval-comments.md)接口。具体使用教程参考：[评论及撤销审批流](0485-comment-and-revoke-approval-flow.md)。
 
    1. 需先调用新版服务端API-[获取审批钉盘空间信息](0502-obtains-the-information-about-approval-nail-disk.md)接口，获取钉盘空间的上传权限，并获取审批钉盘空间spaceId。
-   2. 调用客户端JSAPI-[uploadAttachmentToDingTalk](../03-Ogu5SlPY4t-客户端-JSAPI/0333-jsapi-upload-attachment-to-ding-talk.md)接口，获取文件基本信息，本流程示例使用[JSAPI Explorer](https://open.dingtalk.com/tools/explorer/jsapi?id=10318)实现。
+   2. 调用客户端JSAPI-[uploadAttachmentToDingTalk](../03-Ogu5SlPY4t-客户端-JSAPI/0332-jsapi-upload-attachment-to-ding-talk.md)接口，获取文件基本信息，本流程示例使用[JSAPI Explorer](https://open.dingtalk.com/tools/explorer/jsapi?id=10318)实现。
    3. 获取审批钉盘空间spaceId后，可根据审批实例`instanceId`，调用新版服务端API-[添加审批评论](0500-official-approval-adds-approval-comments.md)接口，实现审批单的添加评论操作。
 
 ```

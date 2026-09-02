@@ -37,7 +37,7 @@ updated_at: "2026-07-02 10:35:34"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| code | String | 是 | bab02f63c1e030fbbxxxx | 免登授权码，获取方式请参考：   - 小程序：[getAuthCode](../03-Ogu5SlPY4t-客户端-JSAPI/0006-jsapi-get-auth-code.md) - 微应用：[requestAuthCode](../03-Ogu5SlPY4t-客户端-JSAPI/0007-jsapi-request-auth-code.md)   **[!NOTE]**  此授权码五分钟内有效，且只能使用一次。 |
+| code | String | 是 | bab02f63c1e030fbbxxxx | 免登授权码，获取方式请参考：   - 小程序：[getAuthCode](../03-Ogu5SlPY4t-客户端-JSAPI/0006-jsapi-get-auth-code.md) - 微应用：[requestAuthCode](../03-Ogu5SlPY4t-客户端-JSAPI/0008-jsapi-request-auth-code.md)   **[!NOTE]**  此授权码五分钟内有效，且只能使用一次。 |
 
 ### **请求示例**
 

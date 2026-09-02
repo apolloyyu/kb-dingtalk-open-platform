@@ -109,10 +109,10 @@ PC端：钉钉PC客户端-工作台
 
 客户管理支持元数据实例和主数据实例新增、更新及删除回调事件。
 
-- [主数据实例新增事件](../04-LFcRvVD08N-事件订阅/0166-events-ding-paas-object-data-create.md)
-- [主数据实例删除事件](../04-LFcRvVD08N-事件订阅/0167-event-ding-paas-object-data-delete.md)
-- [主数据实例更新事件](../04-LFcRvVD08N-事件订阅/0168-event-ding-paas-object-data-update.md)
-- [CRM元数据](../04-LFcRvVD08N-事件订阅/0164-event-ding-crm-object-meta.md)
+- [主数据实例新增事件](../04-LFcRvVD08N-事件订阅/0167-events-ding-paas-object-data-create.md)
+- [主数据实例删除事件](../04-LFcRvVD08N-事件订阅/0168-event-ding-paas-object-data-delete.md)
+- [主数据实例更新事件](../04-LFcRvVD08N-事件订阅/0169-event-ding-paas-object-data-update.md)
+- [CRM元数据](../04-LFcRvVD08N-事件订阅/0165-event-ding-crm-object-meta.md)
 
 ## 使用教程
 

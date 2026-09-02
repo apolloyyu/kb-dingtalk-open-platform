@@ -24,10 +24,10 @@ updated_at: "2026-07-14 09:21:53"
 
 ## 前提条件
 
-1. 完成[创建自定义机器人](../01-XOnnmGCTbn-开发指南/0081-custom-bot-creation-and-installation.md)流程。
+1. 完成[创建自定义机器人](../01-XOnnmGCTbn-开发指南/0083-custom-bot-creation-and-installation.md)流程。
 
-   > 自定义机器人的安全设置选择**加签**的方式，详情参考[自定义机器人安全设置](../01-XOnnmGCTbn-开发指南/0082-customize-robot-security-settings.md)。
-2. 完成[获取自定义机器人 Webhook 地址](../01-XOnnmGCTbn-开发指南/0083-obtain-the-webhook-address-of-a-custom-robot.md)流程。
+   > 自定义机器人的安全设置选择**加签**的方式，详情参考[自定义机器人安全设置](../01-XOnnmGCTbn-开发指南/0084-customize-robot-security-settings.md)。
+2. 完成[获取自定义机器人 Webhook 地址](../01-XOnnmGCTbn-开发指南/0085-obtain-the-webhook-address-of-a-custom-robot.md)流程。
 3. 开发环境准备：
 
    | **开发环境** | **说明** |
@@ -47,7 +47,7 @@ updated_at: "2026-07-14 09:21:53"
 
    | **类型** | **说明** |
    | --- | --- |
-   | Java | 1. 修改 customRobotGroupMessage.java 的 main 方法参数：     - CUSTOM\_ROBOT\_TOKEN：机器人应用的 access\_token 的值，详情参考[获取自定义机器人 Webhook 地址](../01-XOnnmGCTbn-开发指南/0083-obtain-the-webhook-address-of-a-custom-robot.md)。  **[!NOTE]**  仅需填写 Webhook 地址后access\_token的值。不是整个webhook地址。  image    - SECRET：安全设置，加签密钥。详情参考[自定义机器人安全设置](../01-XOnnmGCTbn-开发指南/0082-customize-robot-security-settings.md)。    - （可选）USER\_ID：用户的 userId 信息，详情参考[用户 UserId](../01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md#section-aa9-zk1-os6)。  内部群：可以填写用户的 UserId 实现 @ 能力。  外部群：机器人调用 OpenAPI 发送消息时，无法实现 @ 能力。 2. 启动 main 方法。 3. 此时，你可以在群内看到自定义机器人发送的消息了。 |
+   | Java | 1. 修改 customRobotGroupMessage.java 的 main 方法参数：     - CUSTOM\_ROBOT\_TOKEN：机器人应用的 access\_token 的值，详情参考[获取自定义机器人 Webhook 地址](../01-XOnnmGCTbn-开发指南/0085-obtain-the-webhook-address-of-a-custom-robot.md)。  **[!NOTE]**  仅需填写 Webhook 地址后access\_token的值。不是整个webhook地址。  image    - SECRET：安全设置，加签密钥。详情参考[自定义机器人安全设置](../01-XOnnmGCTbn-开发指南/0084-customize-robot-security-settings.md)。    - （可选）USER\_ID：用户的 userId 信息，详情参考[用户 UserId](../01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md#section-aa9-zk1-os6)。  内部群：可以填写用户的 UserId 实现 @ 能力。  外部群：机器人调用 OpenAPI 发送消息时，无法实现 @ 能力。 2. 启动 main 方法。 3. 此时，你可以在群内看到自定义机器人发送的消息了。 |
    | Python | 1. 在当前文件的目录下，输入启动命令：`python3 send_custom_robot_group_message.py --access_token="your custom robot token" --secret="your custom robot secret" --userid="you need @ group user's userid"`。  注意替换机器人 webhook 的 access\_token、机器人的加签 secret 和用户 userid，参数如何获取请参考 Java 中的说明。 2. 此时，你可以在群内看到自定义机器人发送的消息了。 |
 
 ## **操作步骤**
@@ -156,6 +156,6 @@ updated_at: "2026-07-14 09:21:53"
 
 ## **相关文档**
 
-- [自定义机器人安全设置](../01-XOnnmGCTbn-开发指南/0082-customize-robot-security-settings.md)
+- [自定义机器人安全设置](../01-XOnnmGCTbn-开发指南/0084-customize-robot-security-settings.md)
 - [消息发送与接收类型](0699-robot-message-type.md)
 - [自定义机器人发送群消息](0717-custom-robots-send-group-messages.md)

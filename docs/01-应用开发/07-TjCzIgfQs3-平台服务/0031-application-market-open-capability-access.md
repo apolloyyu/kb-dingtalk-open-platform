@@ -50,14 +50,14 @@ updated_at: "2026-08-25 09:45:09"
 
 针对**试用规格的开通**，钉钉平台会推送1条试用订单开通的订单数据给到ISV，ISV接收到推送消息后用来给购买客户开通应用服务等操作。
 
-- [试用订单（商品操作）推送](../04-LFcRvVD08N-事件订阅/0189-commodity-operation.md)
+- [试用订单（商品操作）推送](../04-LFcRvVD08N-事件订阅/0190-commodity-operation.md)
 
   针对付费规格购买，在订单支付、订单关闭、订单退款场景下钉钉平台会推送1笔订单。
-- [付费订单（应用市场下单）推送](../04-LFcRvVD08N-事件订阅/0190-application-market-order.md)
+- [付费订单（应用市场下单）推送](../04-LFcRvVD08N-事件订阅/0191-application-market-order.md)
 - 订购信息推送：
 
-  - [钉钉交易订购开启](../04-LFcRvVD08N-事件订阅/0194-dingtalk-transaction-ordering-on.md)
-  - [钉钉交易订购关闭](../04-LFcRvVD08N-事件订阅/0195-dingtalk-transaction-ordering-closed.md)
+  - [钉钉交易订购开启](../04-LFcRvVD08N-事件订阅/0195-dingtalk-transaction-ordering-on.md)
+  - [钉钉交易订购关闭](../04-LFcRvVD08N-事件订阅/0196-dingtalk-transaction-ordering-closed.md)
 
 ## 3、续费变配接入
 

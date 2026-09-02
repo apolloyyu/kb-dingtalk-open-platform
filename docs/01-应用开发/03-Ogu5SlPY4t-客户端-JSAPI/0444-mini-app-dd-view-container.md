@@ -22,7 +22,7 @@ updated_at: "2026-08-31 14:38:31"
 >
 > 对于明确指定了框架最低版本的属性，请通过 dd.canIUse 进行兼容性判断。
 >
-> 示例：[dd.canIUse](0476-dd-caniuse.md)('view.onTransitionEnd')。
+> 示例：[dd.canIUse](0477-dd-caniuse.md)('view.onTransitionEnd')。
 
 ## 在线体验
 

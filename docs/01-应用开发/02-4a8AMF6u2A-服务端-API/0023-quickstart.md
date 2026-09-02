@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "认证与授权 > 身份验证（免登） > 使用教程 > 第三方个人应用免登并获取用户信息"
 doc_id: "75Mh6g9M28"
-updated_at: "2026-07-02 10:35:33"
+updated_at: "2026-09-02 18:13:36"
 ---
 
 > Source: https://open.dingtalk.com/document/development/quickstart
 > Path: 应用开发 / 服务端 API / 认证与授权 > 身份验证（免登） > 使用教程 > 第三方个人应用免登并获取用户信息
-> Updated: 2026-07-02 10:35:33
+> Updated: 2026-09-02 18:13:36
 
 # 第三方个人应用免登并获取用户信息
 
@@ -51,7 +51,7 @@ updated_at: "2026-07-02 10:35:33"
 ### **前提条件**
 
 - 注册了钉钉管理员账号。如果没有注册，请单击[这里](https://oa.dingtalk.com/register_new.htm?source=1008_OA&lwfrom=2018122711522903000&succJump=oa#/)完成注册。
-- 安装小程序开发者工具IDE，单击[这里](https://ding-doc.dingtalk.com/document/resourcedownload/miniapp-tool)下载安装。
+- 安装小程序开发者工具IDE，单击[这里](../06-JDICnQyZLF-开发工具/0001-miniapp-tool.md)下载安装。
 - 安装了Java开发环境（JDK1.6及以上）以及Java项目构建工具Maven。
 - 执行以下命令，下载服务端代码。
 
@@ -196,39 +196,31 @@ updated_at: "2026-07-02 10:35:33"
 
 ## 常见问题（FAQ）
 
-**Q1：安全域名设置失败怎么办？**
+- **Q1：安全域名设置失败怎么办？**
 
-A：请确保所填写的域名或IP已在“安全中心”正确添加，并且没有拼写错误（如多余空格）。若使用本地调试，请填写 `127.0.0.1` 并确保小程序IDE已重新上传打包后的版本。
+  A：请确保所填写的域名或IP已在“安全中心”正确添加，并且没有拼写错误（如多余空格）。若使用本地调试，请填写 `127.0.0.1` 并确保小程序IDE已重新上传打包后的版本。
+- **Q2：无法关联小程序应用如何处理？**
 
-**Q2：无法关联小程序应用如何处理？**
+  A：请确认当前登录账号是否已被添加为该应用的开发人员。登录[开发者后台](https://open-dev.dingtalk.com/)，进入应用详情页，在“人员管理”中检查并添加对应成员。
+- **Q3：后端服务启动报错如何排查？**
 
-A：请确认当前登录账号是否已被添加为该应用的开发人员。登录[开发者后台](https://open-dev.dingtalk.com/)，进入应用详情页，在“人员管理”中检查并添加对应成员。
+  A：常见原因包括：
 
-**Q3：后端服务启动报错如何排查？**
+  - 缺少正确的 AppId 或 AppSecret；
+  - Maven 构建失败，请检查网络及依赖源；
+  - 端口被占用，请修改 `application.properties` 中的 `server.port`；
+  - Java 版本过低，请确保使用 JDK1.6 及以上版本。
+- **Q4：调用接口返回 errcode 错误如何处理？**
 
-A：常见原因包括：
+  A：请根据返回的 `errcode` 值查阅钉钉开放平台[全局错误码](0013-server-api-error-codes-1.md)文档。
+- **Q5：前端无法获取用户信息可能是什么原因？**
 
-- 缺少正确的 AppId 或 AppSecret；
-- Maven 构建失败，请检查网络及依赖源；
-- 端口被占用，请修改 `application.properties` 中的 `server.port`；
-- Java 版本过低，请确保使用 JDK1.6 及以上版本。
+  A：可能原因包括：
 
-**Q4：调用接口返回 errcode 错误如何处理？**
+  - 安全域名未设置或配置错误；
+  - 后端服务未正常启动或接口不可达；
+  - access\_token 获取失败，检查 AppId 和 AppSecret 是否正确；
+  - 小程序未上传新版本导致缓存未更新。
+- **Q6：如何添加更多 API 接口调用权限？**
 
-A：请根据返回的 `errcode` 值查阅钉钉开放平台错误码文档：
-
-- 新版错误码：<https://open.dingtalk.com/document/development/error-code>
-- 旧版错误码：[https://open.dingtalk.com/document/development/server-api-error-codes-1](0013-server-api-error-codes-1.md)
-
-**Q5：前端无法获取用户信息可能是什么原因？**
-
-A：可能原因包括：
-
-- 安全域名未设置或配置错误；
-- 后端服务未正常启动或接口不可达；
-- access\_token 获取失败，检查 AppId 和 AppSecret 是否正确；
-- 小程序未上传新版本导致缓存未更新。
-
-**Q6：如何添加更多 API 接口调用权限？**
-
-A：进入开发者后台 → 应用详情 → **权限管理** → 添加所需接口权限，并提交审核。详情参见：[https://open.dingtalk.com/document/development/add-api-permission](0003-add-api-permission.md)
+  A：进入开发者后台 → 应用详情 → **权限管理** → [添加接口调用权限](0003-add-api-permission.md)，并提交审核。

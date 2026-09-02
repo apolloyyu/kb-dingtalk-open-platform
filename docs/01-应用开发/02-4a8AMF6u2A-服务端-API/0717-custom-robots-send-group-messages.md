@@ -22,7 +22,7 @@ updated_at: "2026-07-14 09:21:57"
 
 - 本接口支持自定义机器人在企业内部群和普通群中发送消息，调用本接口前需要创建自定义机器人，可参见[开发机器人应用](0698-development-robot-overview.md)。
 - 如果你有大量发消息的场景（譬如系统监控报警）可以将这些信息进行整合，通过markdown消息以摘要的形式发送到群里。
-- 如果自定义机器人的安全设置使用的是[自定义机器人安全设置](../01-XOnnmGCTbn-开发指南/0082-customize-robot-security-settings.md)，调用本接口发送消息时，需要拼接timestamp和sign参数，示例为：
+- 如果自定义机器人的安全设置使用的是[自定义机器人安全设置](../01-XOnnmGCTbn-开发指南/0084-customize-robot-security-settings.md)，调用本接口发送消息时，需要拼接timestamp和sign参数，示例为：
 
   ```
   https://oapi.dingtalk.com/robot/send?access_token=XXXXXX&timestamp=XXX&sign=XXX
@@ -42,7 +42,7 @@ updated_at: "2026-07-14 09:21:57"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | BE3xxxx | 自定义机器人调用接口的凭证。  自定义机器人安装后webhook地址中的access\_token值。详情参考[获取自定义机器人 Webhook 地址](../01-XOnnmGCTbn-开发指南/0083-obtain-the-webhook-address-of-a-custom-robot.md)。 |
+| access\_token | String | 是 | BE3xxxx | 自定义机器人调用接口的凭证。  自定义机器人安装后webhook地址中的access\_token值。详情参考[获取自定义机器人 Webhook 地址](../01-XOnnmGCTbn-开发指南/0085-obtain-the-webhook-address-of-a-custom-robot.md)。 |
 
 ### **请求体**
 

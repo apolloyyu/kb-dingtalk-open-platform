@@ -28,7 +28,7 @@ updated_at: "2026-08-28 10:26:25"
 
 ## 准备工作
 
-1. 完成酷应用开发，详情参见[群聊酷应用](../01-XOnnmGCTbn-开发指南/0043-group-chat-coolapp-overview.md)。
+1. 完成酷应用开发，详情参见[群聊酷应用](../01-XOnnmGCTbn-开发指南/0045-group-chat-coolapp-overview.md)。
 2. 酷应用入群JSAPI需依赖[dingtalk-jsapi](https://www.npmjs.com/package/dingtalk-jsapi)，请先升级到最新版本的[dingtalk-jsapi](https://www.npmjs.com/package/dingtalk-jsapi)版本。
 
 ```

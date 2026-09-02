@@ -28,12 +28,12 @@ updated_at: "2026-07-14 09:07:38"
 
 | **类型** | **是否支持群聊** | **是否支持单聊** | **创建方式** |
 | --- | --- | --- | --- |
-| 企业机器人 | ✅（内部群） | ✅ | [配置企业机器人](../01-XOnnmGCTbn-开发指南/0076-configure-the-robot-application.md) |
-| 第三方企业应用-机器人 | ✅（内部群） | ✅ | [第三方企业机器人](../01-XOnnmGCTbn-开发指南/0080-third-party-enterprise-robots.md) |
-| 自定义机器人 | ✅（外部群&&内部群） | ❌ | [创建自定义机器人](../01-XOnnmGCTbn-开发指南/0081-custom-bot-creation-and-installation.md) |
-| 群模板机器人 | ✅（内部群） | ❌ | [创建群模板机器人](../01-XOnnmGCTbn-开发指南/0092-creation-and-installation-of-swarm-template-robots.md) |
+| 企业机器人 | ✅（内部群） | ✅ | [配置企业机器人](../01-XOnnmGCTbn-开发指南/0078-configure-the-robot-application.md) |
+| 第三方企业应用-机器人 | ✅（内部群） | ✅ | [第三方企业机器人](../01-XOnnmGCTbn-开发指南/0082-third-party-enterprise-robots.md) |
+| 自定义机器人 | ✅（外部群&&内部群） | ❌ | [创建自定义机器人](../01-XOnnmGCTbn-开发指南/0083-custom-bot-creation-and-installation.md) |
+| 群模板机器人 | ✅（内部群） | ❌ | [创建群模板机器人](../01-XOnnmGCTbn-开发指南/0094-creation-and-installation-of-swarm-template-robots.md) |
 
-更多信息可参看[开发机器人应用-概述](../01-XOnnmGCTbn-开发指南/0075-robot-application-overview.md)。
+更多信息可参看[开发机器人应用-概述](../01-XOnnmGCTbn-开发指南/0077-robot-application-overview.md)。
 
 ### **机器人 ID**
 
@@ -112,7 +112,7 @@ updated_at: "2026-07-14 09:07:38"
 
 ### **企业机器人**
 
-- 如果你需要创建一个企业机器人，可参考[配置企业机器人](../01-XOnnmGCTbn-开发指南/0076-configure-the-robot-application.md)介绍。
+- 如果你需要创建一个企业机器人，可参考[配置企业机器人](../01-XOnnmGCTbn-开发指南/0078-configure-the-robot-application.md)介绍。
 - 钉钉提供了该机器人发送单聊和群聊消息的相关教程及示例代码，可点击下方链接查看相关介绍。
 
   - 发送群聊消息：[企业机器人发送群聊消息](0700-the-application-robot-in-the-enterprise-sends-group-chat-messages.md)
@@ -120,16 +120,16 @@ updated_at: "2026-07-14 09:07:38"
 
 ### **第三方企业机器人**
 
-如果你需要创建一个第三方企业机器人，可参考[第三方企业机器人](../01-XOnnmGCTbn-开发指南/0080-third-party-enterprise-robots.md)介绍。
+如果你需要创建一个第三方企业机器人，可参考[第三方企业机器人](../01-XOnnmGCTbn-开发指南/0082-third-party-enterprise-robots.md)介绍。
 
 ### **自定义机器人**
 
-- 如果你需要创建一个自定义机器人，可参考[创建自定义机器人](../01-XOnnmGCTbn-开发指南/0081-custom-bot-creation-and-installation.md)介绍。
+- 如果你需要创建一个自定义机器人，可参考[创建自定义机器人](../01-XOnnmGCTbn-开发指南/0083-custom-bot-creation-and-installation.md)介绍。
 - 钉钉提供了该机器人发送群聊消息的相关教程及示例代码，可查看[自定义机器人发送群聊消息](0702-custom-bot-to-send-group-chat-messages.md)文档中介绍。
 
 ### **群模板机器人**
 
-如果你需要创建群聊会话时，同时将机器人添加至群内，可参考[创建群模板机器人](../01-XOnnmGCTbn-开发指南/0092-creation-and-installation-of-swarm-template-robots.md)介绍。
+如果你需要创建群聊会话时，同时将机器人添加至群内，可参考[创建群模板机器人](../01-XOnnmGCTbn-开发指南/0094-creation-and-installation-of-swarm-template-robots.md)介绍。
 
 > **[!IMPORTANT]**
 >
@@ -139,4 +139,4 @@ updated_at: "2026-07-14 09:07:38"
 
 ### **三方工具机器人**
 
-如果你仅需要发送消息的能力，并仅限于从 GitLab、GitHub、JIRA、阿里云 Codeup 和 Travis 推送消息到钉钉群内，可参考[Webhook 机器人](../01-XOnnmGCTbn-开发指南/0098-webhook-robot.md)介绍。
+如果你仅需要发送消息的能力，并仅限于从 GitLab、GitHub、JIRA、阿里云 Codeup 和 Travis 推送消息到钉钉群内，可参考[Webhook 机器人](../01-XOnnmGCTbn-开发指南/0100-webhook-robot.md)介绍。

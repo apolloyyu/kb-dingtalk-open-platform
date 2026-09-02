@@ -20,7 +20,7 @@ updated_at: "2026-07-14 09:29:38"
 
 ## 接口调用说明
 
-本接口支持企业内部应用机器人，详情参考[创建企业内部应用机器人](../01-XOnnmGCTbn-开发指南/0076-configure-the-robot-application.md)。
+本接口支持企业内部应用机器人，详情参考[创建企业内部应用机器人](../01-XOnnmGCTbn-开发指南/0078-configure-the-robot-application.md)。
 
 ## 请求
 
@@ -47,7 +47,7 @@ updated_at: "2026-07-14 09:29:38"
 | msgKey | String | 是 | 消息模板key，详情参考[消息发送与接收类型](0699-robot-message-type.md)。 |
 | openConversationId | String | 是 | 会话ID：   - 如果是企业内部群    - 新创建企业内部群，企业内部应用，可调用[创建企业内部群](https://open.dingtalk.com/document/development/create-group-session)接口获取。已存在的企业内部群，可调用[chooseChat](../03-Ogu5SlPY4t-客户端-JSAPI/0318-jsapi-choose-chat.md)获取。 - 如果是场景群    - 企业内部应用，可调用[创建场景群](1486-create-a-scene-group-v2.md)接口获取。已存在的场景群，可调用 [chooseChat](https://open.dingtalk.com/document/orgapp/jsapi-choose-chat) 选择会话 JSAPI 获取。 |
 | robotCode | String | 是 | 机器人的编码，详情参考[机器人 ID](0698-development-robot-overview.md)。 |
-| coolAppCode | String | 否 | 群聊酷应用编码，详情参考[群聊酷应用](../01-XOnnmGCTbn-开发指南/0044-configuration-group-chat-quick-entry.md)。    当使用群聊酷应用的方式安装机器人时，**必须**传入此参数。 |
+| coolAppCode | String | 否 | 群聊酷应用编码，详情参考[群聊酷应用](../01-XOnnmGCTbn-开发指南/0046-configuration-group-chat-quick-entry.md)。    当使用群聊酷应用的方式安装机器人时，**必须**传入此参数。 |
 
 ### 请求示例
 

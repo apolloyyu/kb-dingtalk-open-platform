@@ -75,7 +75,7 @@ updated_at: "2026-07-30 09:18:43"
 - **订阅组名称**：自定义命名，建议包含业务关键词便于后续检索（如「订单同步流告警」「CRM数据推送监控」）。
 - **告警对象**：选择要监控的连接流、低代码应用，或勾选「全局告警」覆盖全组织。
 - **通知方式**：当前支持通过钉钉机器人推送，需提前在目标会话或群聊中配置好机器人 webhook。
-- **机器人AccessToken**：填写access\_token值，如何获取access\_token值，请参考[获取自定义机器人 Webhook 地址](../../01-应用开发/01-XOnnmGCTbn-开发指南/0083-obtain-the-webhook-address-of-a-custom-robot.md)。
+- **机器人AccessToken**：填写access\_token值，如何获取access\_token值，请参考[获取自定义机器人 Webhook 地址](../../01-应用开发/01-XOnnmGCTbn-开发指南/0085-obtain-the-webhook-address-of-a-custom-robot.md)。
 - **通知频次**：默认值0秒。
 
 ## 告警记录

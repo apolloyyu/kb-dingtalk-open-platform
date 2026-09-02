@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "API 调用指南 > 数据分页"
 doc_id: "nlpzoQq9F3"
-updated_at: "2026-05-09 11:46:43"
+updated_at: "2026-09-02 18:13:33"
 ---
 
 > Source: https://open.dingtalk.com/document/development/pagination
 > Path: 应用开发 / 服务端 API / API 调用指南 > 数据分页
-> Updated: 2026-05-09 11:46:43
+> Updated: 2026-09-02 18:13:33
 
 # 数据分页
 
@@ -46,7 +46,7 @@ DingTalk OpenAPI 支持两种分页方式，不同接口可能采用不同的分
 - `access_token` 有效期通常为 7200 秒，建议缓存并定期刷新。
 - 错误的或过期的 `access_token` 将导致接口返回 `40001` 或 `40014` 错误码。
 
-参考文档：[如何调用API](https://open.dingtalk.com/document/development/how-to-call-apis)
+参考文档：[API 调用步骤详解](0001-server-api-calling-guide.md)
 
 ## **方式一：nextToken方式**
 

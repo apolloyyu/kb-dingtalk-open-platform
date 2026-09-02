@@ -91,7 +91,7 @@ sendMessageToSingleChat({
 | --- | --- | --- | --- |
 | context | Object | 是 | 应用相关身份标识。 |
 | context.clientId | String | 是 | 应用标识。   - 企业内部应用，传clientId。  **[!NOTE]**  如何获取Appkey，请参见[Client ID/Client Secret](../01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md#7d9825efaadw7)。 - 第三方企业应用，传SuiteKey。  **[!NOTE]**  如何获取Appkey，请参见[基础概念-SuiteKey](../01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md#7d9825efaadw7)。 |
-| context.corpId | String | 是 | 企业CorpId。  **[!NOTE]**   - 小程序可通过[dd.corpId](0477-dd-corpid.md)获取。 - 微应用可通过[获取企业CorpId](0715-obtain-enterprise-corpid.md)获取。 |
+| context.corpId | String | 是 | 企业CorpId。  **[!NOTE]**   - 小程序可通过[dd.corpId](0476-dd-corpid.md)获取。 - 微应用可通过[获取企业CorpId](0715-obtain-enterprise-corpid.md)获取。 |
 | userIdList | String[] | 是 | 需要发送消息的单聊人员userId列表。 |
 | sendCardRequest | Object | 是 | 动态卡片的相关数据。 |
 | sendCardRequest.cardTemplateId | String | 是 | 互动卡片的消息模板ID。可通过[卡片平台](https://open-dev.dingtalk.com/fe/card)获取模板ID。image |

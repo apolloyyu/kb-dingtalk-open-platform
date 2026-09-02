@@ -24,7 +24,7 @@ updated_at: "2026-07-14 09:21:54"
 
 ## **前提条件**
 
-1. 完成[配置企业机器人](../01-XOnnmGCTbn-开发指南/0076-configure-the-robot-application.md)流程（消息接收模式选择 Stream 模式）。
+1. 完成[配置企业机器人](../01-XOnnmGCTbn-开发指南/0078-configure-the-robot-application.md)流程（消息接收模式选择 Stream 模式）。
 2. 完成 OpenAPI 接口的[调用权限申请](0003-add-api-permission.md)，需申请`企业内机器人发送消息权限`。
 3. 开发环境准备：
 
@@ -200,7 +200,7 @@ updated_at: "2026-07-14 09:21:54"
 
 ## **相关文档**
 
-- [机器人接收消息](../01-XOnnmGCTbn-开发指南/0078-robot-receive-message.md)
+- [机器人接收消息](../01-XOnnmGCTbn-开发指南/0080-robot-receive-message.md)
 - [消息发送与接收类型](0699-robot-message-type.md)
 - [配置 Stream 推送（推荐）](../04-LFcRvVD08N-事件订阅/0003-configure-stream-push.md#151be9e66238j)
 - [批量发送人与机器人会话中机器人消息](0714-chatbots-send-one-on-one-chat-messages-in-batches.md)

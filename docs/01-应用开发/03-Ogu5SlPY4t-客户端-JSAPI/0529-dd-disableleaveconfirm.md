@@ -50,4 +50,4 @@ dd.disableLeaveConfirm({
 
 **兼容性判断**
 
-请使用[dd.canIUse](0476-dd-caniuse.md)('enableLeaveConfirm') 和[dd.canIUse](0476-dd-caniuse.md)('disableLeaveConfirm') 进行兼容性判断。
+请使用[dd.canIUse](0477-dd-caniuse.md)('enableLeaveConfirm') 和[dd.canIUse](0477-dd-caniuse.md)('disableLeaveConfirm') 进行兼容性判断。

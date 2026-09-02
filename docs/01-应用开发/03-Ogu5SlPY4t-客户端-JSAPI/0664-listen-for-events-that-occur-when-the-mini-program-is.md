@@ -30,7 +30,7 @@ updated_at: "2026-09-01 09:16:59"
 
 > **[!NOTE]**
 >
-> - 开发者可以通过[dd.canIUse](0476-dd-caniuse.md)函数判断端上是否支持此能力。
+> - 开发者可以通过[dd.canIUse](0477-dd-caniuse.md)函数判断端上是否支持此能力。
 > - 该事件与App.js内声明的[app.js注册小程序](0434-app-js-registration-mini-program-1.md)**onShow**方法的回调时机一致。
 > - 请勿使用本API监听匿名函数，否则将无法关闭监听。
 

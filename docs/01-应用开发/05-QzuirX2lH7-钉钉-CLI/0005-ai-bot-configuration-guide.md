@@ -76,7 +76,7 @@ updated_at: "2026-08-31 16:46:49"
 
 > **[!NOTE]**
 >
-> 更多机器人介绍，可查看[机器人概述](../01-XOnnmGCTbn-开发指南/0075-robot-application-overview.md)。
+> 更多机器人介绍，可查看[机器人概述](../01-XOnnmGCTbn-开发指南/0077-robot-application-overview.md)。
 
 ### **两者如何配合**
 
@@ -168,7 +168,7 @@ dws contact me --format json
 2. 群设置 → 群机器人 → 添加。
 3. 选中刚创建的机器人并加入。
 
-机器人进群后，Agent 端会自动感知到这个新的群会话，无需手动配置，机器人如何添加入群，可参考[添加机器人入群](../01-XOnnmGCTbn-开发指南/0077-add-robot-to-group.md)介绍。
+机器人进群后，Agent 端会自动感知到这个新的群会话，无需手动配置，机器人如何添加入群，可参考[添加机器人入群](../01-XOnnmGCTbn-开发指南/0079-add-robot-to-group.md)介绍。
 
 ### Step 5：验证消息通道
 

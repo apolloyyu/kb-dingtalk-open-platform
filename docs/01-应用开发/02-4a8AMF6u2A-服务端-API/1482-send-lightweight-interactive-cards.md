@@ -68,13 +68,13 @@ Content-Type:application/json
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| cardTemplateId | String | 是 | 卡片内容模板ID，响应模板目前有：   - **TuWenCard01** - **TuWenCard02** - **TuWenCard03** - **TuWenCard04**   **[!NOTE]**  模板内容详情请参考：[轻量级互动卡片消息](../01-XOnnmGCTbn-开发指南/0095-lightweight-interactive-card-messages.md)。 |
+| cardTemplateId | String | 是 | 卡片内容模板ID，响应模板目前有：   - **TuWenCard01** - **TuWenCard02** - **TuWenCard03** - **TuWenCard04**   **[!NOTE]**  模板内容详情请参考：[轻量级互动卡片消息](../01-XOnnmGCTbn-开发指南/0097-lightweight-interactive-card-messages.md)。 |
 | openConversationId | String | 否 | 接收卡片的加密群ID，特指多人群会话（非单聊）。  **[!NOTE]**  `openConversationId`和`singleChatReceiver`二选一必填。 |
 | singleChatReceiver | String | 否 | 单聊会话接收者json字符串。群模板机器人暂不支持单聊，其他企业内部机器人和企业三方机器人有勾选支持单聊选项的可支持单聊。  **[!NOTE]**  `openConversationId`和`singleChatReceiver`二选一必填。 |
 | outTrackId | String | 是 | 唯一标识一张卡片的外部ID。  **[!NOTE]**  卡片幂等ID，可用于更新或重复发送同一卡片到多个群会话，如果同一个**outTrackId**重复创建，卡片数据不覆盖更新。 |
 | robotCode | String | 是 | 机器人代码。群模板机器人暂不支持单聊，其他企业内部机器人和企业三方机器人有勾选支持单聊选项的可支持单聊。  **[!NOTE]**  企业内部机器人取机器人appKey值，第三方企业机器人或群模板机器人取robotCode值。 |
 | callbackUrl | String | 否 | 可控制卡片回调的URL。  **[!NOTE]**  如果不填则默认为无需回调。 |
-| cardData | String | 是 | 卡片模板，文本内容参数、  **[!NOTE]**  卡片模板内容请参考：[轻量级互动卡片消息](../01-XOnnmGCTbn-开发指南/0095-lightweight-interactive-card-messages.md)。 |
+| cardData | String | 是 | 卡片模板，文本内容参数、  **[!NOTE]**  卡片模板内容请参考：[轻量级互动卡片消息](../01-XOnnmGCTbn-开发指南/0097-lightweight-interactive-card-messages.md)。 |
 | sendOptions | Object | 否 | 互动卡片发送选项。 |
 | atUserListJson | String | 否 | 消息@人，JSON格式：   ``` [     {         "nickName": "张三",         "userId": "userId0001"     },     {         "nickName": "李四",         "unionId": "unionId001"     } ] ``` |
 | atAll | Boolean | 否 | 是否@所有人。 |

@@ -118,7 +118,7 @@ Content-Type:application/json
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
 | cardTemplateId | String | 是 | 互动卡片的消息模板ID，获取方式请参考[管理消息模板](0765-manage-message-templates.md)介绍。 |
-| openConversationId | String | 否 | 群ID：   - 基于群模板创建的群，请参考[创建群](1486-create-a-scene-group-v2.md)。 - 安装群聊酷应用的群，通过[群内安装酷应用事件](../04-LFcRvVD08N-事件订阅/0344-install-group-extension-event-in-the-group-stream.md)获取回调参数`OpenConversationId`参数值。 |
+| openConversationId | String | 否 | 群ID：   - 基于群模板创建的群，请参考[创建群](1486-create-a-scene-group-v2.md)。 - 安装群聊酷应用的群，通过[群内安装酷应用事件](../04-LFcRvVD08N-事件订阅/0308-install-group-extension-event-in-the-group-stream.md)获取回调参数`OpenConversationId`参数值。 |
 | receiverUserIdList | Array of String | 否 | 接收人userId列表。   - receiverUserIdList填写分为以下情况：    - 单聊：      - 填写用户ID，最大值20。   - 群聊：      - 填写用户ID，表示群内指定用户可见。     - 不填写，表示群内所有用户可见。 - 对应privateData、userIdType字段关于用户ID的值填写方式：    - **userId模式**：key填写用户userId。   - **unionId模式**：key填写用户unionId。 |
 | outTrackId | String | 是 | 唯一标示卡片的外部编码。  **[!NOTE]**   - 不超过100字符，建议64字符以内。 - 是由开发者自己生成并作为入参传递给钉钉的，钉钉只在对应使用到**outTrackId**的场景，帮助开发者对TrackId进行记录。   若使用新的 `cardTemplateId` 或 `cardData` 等参数，则需要生成一个全新的 outTrackId，否则更改不会生效。 |
 | robotCode | String | 否 | 机器人的编码，参见[机器人名词表-robotCode](0698-development-robot-overview.md)内容，获取`robotCode`。  **[!NOTE]**   - 场景群机器人发送群聊：场景群使用**robotCode**来发送，**chatBotId**不填写。 - 非场景群的企业内部开发-机器人发送群聊：填写**robotCode**来发送，**chatBotId**不填写。 - 非场景群的企业内部开发-机器人发送单聊：**chatBotId**和**robotCode**都不填写，直接用支持单聊的机器人应用来发送。 |

@@ -30,7 +30,7 @@ updated_at: "2026-09-01 09:16:57"
 
 > **[!NOTE]**
 >
-> - 开发者可以通过[dd.canIUse](0476-dd-caniuse.md)函数判断端上是否支持此能力。
+> - 开发者可以通过[dd.canIUse](0477-dd-caniuse.md)函数判断端上是否支持此能力。
 > - 使用**dd.onError**监听到的报错，[App.onError](0434-app-js-registration-mini-program-1.md#section-17x-lfu-u46)方法也会监听到。
 > - 使用本接口**dd.onError**监听页面报错，如果在多个页面开启监听没有关闭，则页面报错时会触发多个监听事件，建议在页面关闭时调用[dd.offError](0666-cancels-the-listening-applet-error-event.md)关闭监听。
 

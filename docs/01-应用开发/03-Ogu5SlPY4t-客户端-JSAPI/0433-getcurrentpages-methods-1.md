@@ -327,7 +327,7 @@ Page({
 
 > **[!NOTE]**
 >
-> `$batchedUpdates`自1.14.0之后才支持，可以使用`dd.canIUse('page.$batchedUpdates')`做兼容性处理，详情请参考[dd.canIUse](0476-dd-caniuse.md)。
+> `$batchedUpdates`自1.14.0之后才支持，可以使用`dd.canIUse('page.$batchedUpdates')`做兼容性处理，详情请参考[dd.canIUse](0477-dd-caniuse.md)。
 
 #### **参数说明**
 

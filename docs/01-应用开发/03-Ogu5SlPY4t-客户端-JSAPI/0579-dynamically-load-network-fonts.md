@@ -30,7 +30,7 @@ updated_at: "2026-09-01 09:16:41"
 
 > **[!NOTE]**
 >
-> - 开发者可以通过[dd.canIUse](0476-dd-caniuse.md)函数判断端上是否支持此能力。
+> - 开发者可以通过[dd.canIUse](0477-dd-caniuse.md)函数判断端上是否支持此能力。
 > - iOS 仅支持 HTTPS 格式文件地址。
 > - 钉钉小程序目前只支持 woff，otf，ttf，sfnt 字体。
 > - 钉钉小程序不支持woff2字体，原因是：

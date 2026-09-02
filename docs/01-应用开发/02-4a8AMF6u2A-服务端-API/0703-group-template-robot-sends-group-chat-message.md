@@ -24,7 +24,7 @@ updated_at: "2026-05-15 13:07:49"
 
 ## **前提条件**
 
-1. 完成[创建群模板机器人](../01-XOnnmGCTbn-开发指南/0092-creation-and-installation-of-swarm-template-robots.md)流程。
+1. 完成[创建群模板机器人](../01-XOnnmGCTbn-开发指南/0094-creation-and-installation-of-swarm-template-robots.md)流程。
 2. 完成 OpenAPI 接口的[调用权限申请](0003-add-api-permission.md)，需申请`钉钉群消息管理权限`。
 3. 开发环境准备：
 
@@ -39,7 +39,7 @@ updated_at: "2026-05-15 13:07:49"
    | 配置项 | 说明 |
    | --- | --- |
    | GROUP\_TEMPLATE\_ID | 登录开发者后台，单击**开放能力** > **场景群** > **群模板，**复制 ID。  image.png |
-   | ROBOT\_CODE | 登录开发者后台，单击**开放能力** > **场景群** > **群模板** > **目标群模板**。复制机器人 ID。  image.png  如果群模板没有关联机器人，参考[关联群模板机器人到群模板](../01-XOnnmGCTbn-开发指南/0097-associate-group-template-robot-to-group-template.md)。 |
+   | ROBOT\_CODE | 登录开发者后台，单击**开放能力** > **场景群** > **群模板** > **目标群模板**。复制机器人 ID。  image.png  如果群模板没有关联机器人，参考[关联群模板机器人到群模板](../01-XOnnmGCTbn-开发指南/0099-associate-group-template-robot-to-group-template.md)。 |
    | OWNER\_USER\_ID | 用户的 userId 信息，详情参考[用户 UserId](../01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md#section-aa9-zk1-os6)。 |
    | CLIENT\_ID | 应用的 Client ID，详情参考[Client ID](../01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md#section-pje-9wf-l7c)。 |
    | CLIENT\_SECRET | 应用的 Client Secret，详情参考[Client Secret](../01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md#section-pje-9wf-l7c)。 |

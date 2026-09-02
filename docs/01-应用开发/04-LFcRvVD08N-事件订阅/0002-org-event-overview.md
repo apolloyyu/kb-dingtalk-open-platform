@@ -309,121 +309,121 @@ updated_at: "2026-09-01 09:16:14"
 | **名称** | **描述** |
 | --- | --- |
 | [招聘业务平台配置变更](0144-event-ats-config-change.md) | 招聘业务平台配置变更事件的相关推送的数据说明。 |
-| [招聘渠道消息推送开关](0140-recruitment-channel-message-push-switch.md) | 该事件用于通知与钉钉智能招聘打通的招聘渠道平台，用户在智能招聘侧设置渠道候选人投递简历的通知消息是否通过IM进行推送。 |
-| [招聘业务平台权益变更](0141-change-of-rights-and-interests-of-recruitment-business-platform.md) | 招聘高级版权益变更时会发出事件。 |
-| [智能招聘人才直通车任务](0142-intelligent-recruitment-talent-through-train-task.md) | 创建人才直通车，仅招聘需求可申请。 |
-| [招聘平台职位投递变更事件](0143-recruitment-platform-position-delivery-change-event.md) | 数据为招聘平台职位投递变更事件。 |
+| [招聘渠道消息推送开关](0142-recruitment-channel-message-push-switch.md) | 该事件用于通知与钉钉智能招聘打通的招聘渠道平台，用户在智能招聘侧设置渠道候选人投递简历的通知消息是否通过IM进行推送。 |
+| [招聘业务平台权益变更](0143-change-of-rights-and-interests-of-recruitment-business-platform.md) | 招聘高级版权益变更时会发出事件。 |
+| [智能招聘人才直通车任务](0145-intelligent-recruitment-talent-through-train-task.md) | 创建人才直通车，仅招聘需求可申请。 |
+| [招聘平台职位投递变更事件](0146-recruitment-platform-position-delivery-change-event.md) | 数据为招聘平台职位投递变更事件。 |
 
 ### **智能人事**
 
 | **名称** | **描述** |
 | --- | --- |
-| [人事档案变动](0146-personnel-file-change.md) | 人事档案变动的推送数据。 |
-| [人事解决方案变更事件](0147-personnel-solution-change-event.md) | 人事解决方案变更的推送数据。 |
-| [人事平台员工异动事件v2](0148-personnel-platform-employee-change-event-v2.md) | 人事平台员工异动的推送数据，异动有入职、转正、调岗、离职和晋升。 |
-| [人事商业化方案事件](0149-personnel-commercialization-program-event.md) | 人事商业化方案事件，为人事商业化方案的数据变更时的数据的推送数据。 |
+| [人事档案变动](0147-personnel-file-change.md) | 人事档案变动的推送数据。 |
+| [人事解决方案变更事件](0149-personnel-solution-change-event.md) | 人事解决方案变更的推送数据。 |
+| [人事平台员工异动事件v2](0151-personnel-platform-employee-change-event-v2.md) | 人事平台员工异动的推送数据，异动有入职、转正、调岗、离职和晋升。 |
+| [人事商业化方案事件](0148-personnel-commercialization-program-event.md) | 人事商业化方案事件，为人事商业化方案的数据变更时的数据的推送数据。 |
 | [培训学习记录同步事件](0150-training-learning-record-sync-events.md) | 培训学习记录同步事件数据。 |
-| [智能人事一体化应用授权](0151-intelligent-personnel-integration-application-authorization.md) | 企业将三方应用数据授权给人事主数据平台后的事件通知。 |
+| [智能人事一体化应用授权](0152-intelligent-personnel-integration-application-authorization.md) | 企业将三方应用数据授权给人事主数据平台后的事件通知。 |
 
 ## **智能财务**
 
 | **名称** | **描述** |
 | --- | --- |
-| [智能财务企业信息变更](0152-intelligent-financial-enterprise-information-change.md) | 数据为智能财务企业信息变更相关数据。 |
-| [智能财务审批模板变更事件](0153-smart-financial-approval-template-change-event.md) | 当智能财务相关审批模板发生变更时，钉钉会通过事件订阅的方式将审批模板变更的信息推送给开发者，用于监听审批模板变更信息。 |
-| [开票申请单关联发票数据变更](0154-invoice-data-associated-with-invoicing-requisition-change.md) | 该事件用于给ISV推送在智能财务侧完成的开票申请单的发票数据，用户ISV配合钉钉侧完成后续业务逻辑。 |
-| [智能财务企业多主体信息变更](0155-intelligent-financial-enterprise-multi-subject-information-change.md) | 智能财务的企业主体变更时，会通过该事件通知业务方。 |
-| [钉钉智能财务客户信息变更事件](0156-dingtalk-intelligent-financial-customer-information-change-event.md) | 该文档为智能财务的客户变更相关数据。 |
-| [钉钉智能财务商品信息变更事件](0157-dingtalk-intelligent-financial-commodity-information-change-event.md) | 当智能财务商品辅助字段发生增删改时，钉钉会通过事件订阅的方式将商品变更的信息推送给开发者，用于监听商品变更信息。 |
-| [钉钉智能财务角色成员变更事件](0158-dingtalk-smart-finance-role-member-change-event.md) | 数据为智能财务的角色成员变更事件相关数据。 |
-| [钉钉智能财务项目信息变更事件](0159-dingtalk-intelligent-financial-project-information-change-event.md) | 数据为智能财务的项目变更相关数据。 |
-| [钉钉智能财务供应商信息变更事件](0160-dingtalk-intelligent-financial-supplier-information-change-event.md) | 数据为智能财务的供应商变更相关数据。 |
-| [钉钉智能财务收支类别信息变更事件](0161-dingtalk-intelligent-financial-revenue-and-expenditure-category-information-change-event.md) | 数据为智能财务的收支类别变更相关数据。 |
-| [钉钉智能财务自定义档案信息变更事件](0162-dingtalk-intelligent-financial-custom-profile-information-change-event.md) | 数据为智能财务的自定义档案类别信息变更相关数据。 |
-| [钉钉智能财务自定义档案数据信息变更事件](0163-dingtalk-intelligent-financial-custom-file-data-information-change-event.md) | 数据为智能财务的自定义档案具体数据信息变更相关数据。 |
+| [智能财务企业信息变更](0153-intelligent-financial-enterprise-information-change.md) | 数据为智能财务企业信息变更相关数据。 |
+| [智能财务审批模板变更事件](0154-smart-financial-approval-template-change-event.md) | 当智能财务相关审批模板发生变更时，钉钉会通过事件订阅的方式将审批模板变更的信息推送给开发者，用于监听审批模板变更信息。 |
+| [开票申请单关联发票数据变更](0155-invoice-data-associated-with-invoicing-requisition-change.md) | 该事件用于给ISV推送在智能财务侧完成的开票申请单的发票数据，用户ISV配合钉钉侧完成后续业务逻辑。 |
+| [智能财务企业多主体信息变更](0156-intelligent-financial-enterprise-multi-subject-information-change.md) | 智能财务的企业主体变更时，会通过该事件通知业务方。 |
+| [钉钉智能财务客户信息变更事件](0157-dingtalk-intelligent-financial-customer-information-change-event.md) | 该文档为智能财务的客户变更相关数据。 |
+| [钉钉智能财务商品信息变更事件](0158-dingtalk-intelligent-financial-commodity-information-change-event.md) | 当智能财务商品辅助字段发生增删改时，钉钉会通过事件订阅的方式将商品变更的信息推送给开发者，用于监听商品变更信息。 |
+| [钉钉智能财务角色成员变更事件](0159-dingtalk-smart-finance-role-member-change-event.md) | 数据为智能财务的角色成员变更事件相关数据。 |
+| [钉钉智能财务项目信息变更事件](0160-dingtalk-intelligent-financial-project-information-change-event.md) | 数据为智能财务的项目变更相关数据。 |
+| [钉钉智能财务供应商信息变更事件](0161-dingtalk-intelligent-financial-supplier-information-change-event.md) | 数据为智能财务的供应商变更相关数据。 |
+| [钉钉智能财务收支类别信息变更事件](0162-dingtalk-intelligent-financial-revenue-and-expenditure-category-information-change-event.md) | 数据为智能财务的收支类别变更相关数据。 |
+| [钉钉智能财务自定义档案信息变更事件](0163-dingtalk-intelligent-financial-custom-profile-information-change-event.md) | 数据为智能财务的自定义档案类别信息变更相关数据。 |
+| [钉钉智能财务自定义档案数据信息变更事件](0164-dingtalk-intelligent-financial-custom-file-data-information-change-event.md) | 数据为智能财务的自定义档案具体数据信息变更相关数据。 |
 
 ## **客户管理**
 
 | **名称** | **描述** |
 | --- | --- |
-| [主数据实例新增事件](0166-events-ding-paas-object-data-create.md) | 主数据实例新增的推送数据。 |
-| [主数据实例删除事件](0167-event-ding-paas-object-data-delete.md) | 主数据实例删除的推送数据。 |
-| [主数据实例更新事件](0168-event-ding-paas-object-data-update.md) | 主数据实例更新的推送数据。 |
-| [CRM元数据](0164-event-ding-crm-object-meta.md) | 客户管理元数据回调事件，当用户进入客户管理后台编辑并发布客户、联系人、跟进记录表单时会触发推送。 |
-| [CRM客户动态](0165-crm-customer-dynamics.md) | CRM客户动态相关信息发生变更时，钉钉通过事件订阅的方式将CRM客户动态相关变更内容推送给开发者。 |
+| [主数据实例新增事件](0167-events-ding-paas-object-data-create.md) | 主数据实例新增的推送数据。 |
+| [主数据实例删除事件](0168-event-ding-paas-object-data-delete.md) | 主数据实例删除的推送数据。 |
+| [主数据实例更新事件](0169-event-ding-paas-object-data-update.md) | 主数据实例更新的推送数据。 |
+| [CRM元数据](0165-event-ding-crm-object-meta.md) | 客户管理元数据回调事件，当用户进入客户管理后台编辑并发布客户、联系人、跟进记录表单时会触发推送。 |
+| [CRM客户动态](0166-crm-customer-dynamics.md) | CRM客户动态相关信息发生变更时，钉钉通过事件订阅的方式将CRM客户动态相关变更内容推送给开发者。 |
 
 ## **Agoal**
 
 | **名称** | **描述** |
 | --- | --- |
-| [Agoal新增指标事件](0169-events-agoal-indicator-add.md) | 当Agoal管理员在Agoal中新增指标时，会发送事件通知订阅方新增指标的信息。 |
-| [Agoal修改指标事件](0170-events-agoal-indicator-modify.md) | 当Agoal管理员在Agoal中修改指标内容时，会发送事件通知订阅方被修改指标的信息。 |
-| [Agoal复制指标事件](0171-events-agoal-indicator-copy.md) | 当Agoal管理员在Agoal中复制指标时，会发送事件通知订阅方被复制指标及复制生成的指标信息。 |
-| [Agoal删除指标事件](0172-events-agoal-indicator-remove.md) | 当Agoal管理员在Agoal中删除指标时，会发送事件通知订阅方被删除指标的信息。 |
-| [Agoal新增目标进展事件](0173-events-agoal-objectiveprogress-add.md) | 当用户在Agoal中新增目标进展时，会发送事件通知订阅方目标进展的信息。 |
-| [Agoal修改目标进展事件](0174-events-agoal-objectiveprogress-modify.md) | 当用户在Agoal中修改目标进展时，会发送事件通知订阅方目标进展的信息。 |
-| [Agoal删除目标进展事件](0175-events-agoal-objectiveprogress-remove.md) | 当用户在Agoal中删除目标进展时，会发送事件通知订阅方目标进展的信息。 |
-| [Agoal新增目标规则事件](0176-events-agoal-objectiverule-add.md) | 当用户在Agoal中新增目标规则时，会发送事件通知订阅方目标规则的信息。 |
-| [Agoal修改目标规则事件](0177-events-agoal-objectiverule-modify.md) | 当用户在Agoal中修改目标规则时，会发送事件通知订阅方目标规则的信息。 |
-| [Agoal删除目标规则事件](0178-events-agoal-objectiverule-remove.md) | 当用户在Agoal中删除目标规则时，会发送事件通知订阅方目标规则的信息。 |
-| [Agoal个人目标删除事件](0179-agoal-personal-goal-deletion-event.md) | 当用户在Agoal中删除个人目标时，会发送事件通知订阅方个人目标的信息。 |
-| [Agoal个人目标更新事件](0180-agoal-personal-goal-update-event.md) | 当用户在Agoal中修改个人目标内容或更新进展时，会发送事件通知订阅方个人目标的信息。 |
-| [Agoal个人目标新增事件](0181-agoal-personal-goals-have-added-new-events.md) | 当用户在Agoal的员工目标下录入目标时，会发送事件通知订阅方个人目标的信息。 |
+| [Agoal新增指标事件](0170-events-agoal-indicator-add.md) | 当Agoal管理员在Agoal中新增指标时，会发送事件通知订阅方新增指标的信息。 |
+| [Agoal修改指标事件](0171-events-agoal-indicator-modify.md) | 当Agoal管理员在Agoal中修改指标内容时，会发送事件通知订阅方被修改指标的信息。 |
+| [Agoal复制指标事件](0172-events-agoal-indicator-copy.md) | 当Agoal管理员在Agoal中复制指标时，会发送事件通知订阅方被复制指标及复制生成的指标信息。 |
+| [Agoal删除指标事件](0173-events-agoal-indicator-remove.md) | 当Agoal管理员在Agoal中删除指标时，会发送事件通知订阅方被删除指标的信息。 |
+| [Agoal新增目标进展事件](0174-events-agoal-objectiveprogress-add.md) | 当用户在Agoal中新增目标进展时，会发送事件通知订阅方目标进展的信息。 |
+| [Agoal修改目标进展事件](0175-events-agoal-objectiveprogress-modify.md) | 当用户在Agoal中修改目标进展时，会发送事件通知订阅方目标进展的信息。 |
+| [Agoal删除目标进展事件](0176-events-agoal-objectiveprogress-remove.md) | 当用户在Agoal中删除目标进展时，会发送事件通知订阅方目标进展的信息。 |
+| [Agoal新增目标规则事件](0177-events-agoal-objectiverule-add.md) | 当用户在Agoal中新增目标规则时，会发送事件通知订阅方目标规则的信息。 |
+| [Agoal修改目标规则事件](0178-events-agoal-objectiverule-modify.md) | 当用户在Agoal中修改目标规则时，会发送事件通知订阅方目标规则的信息。 |
+| [Agoal删除目标规则事件](0179-events-agoal-objectiverule-remove.md) | 当用户在Agoal中删除目标规则时，会发送事件通知订阅方目标规则的信息。 |
+| [Agoal个人目标删除事件](0180-agoal-personal-goal-deletion-event.md) | 当用户在Agoal中删除个人目标时，会发送事件通知订阅方个人目标的信息。 |
+| [Agoal个人目标更新事件](0181-agoal-personal-goal-update-event.md) | 当用户在Agoal中修改个人目标内容或更新进展时，会发送事件通知订阅方个人目标的信息。 |
+| [Agoal个人目标新增事件](0182-agoal-personal-goals-have-added-new-events.md) | 当用户在Agoal的员工目标下录入目标时，会发送事件通知订阅方个人目标的信息。 |
 
 ## **组织大脑**
 
 | **名称** | **描述** |
 | --- | --- |
-| [组织大脑人才池新增](0182-events-hrbrain-talent-pool-add.md) | 当组织大脑人才池新增时，会通知订阅方。 |
-| [组织大脑人才池编辑](0183-events-hrbrain-talent-pool-edit.md) | 当组织大脑人才池修改时，会通知订阅方。 |
-| [组织大脑人才池删除](0184-events-hrbrain-talent-pool-delete.md) | 当组织大脑人才池删除时，会通知订阅方。 |
-| [组织大脑人才池人员新增](0185-events-hrbrain-talent-pool-staff-add.md) | 当人才池人员入池时，会通知订阅方。 |
-| [组织大脑人才池人员删除](0186-events-hrbrain-talent-pool-staff-delete.md) | 当人才池人员出池时，会通知订阅方。 |
+| [组织大脑人才池新增](0183-events-hrbrain-talent-pool-add.md) | 当组织大脑人才池新增时，会通知订阅方。 |
+| [组织大脑人才池编辑](0184-events-hrbrain-talent-pool-edit.md) | 当组织大脑人才池修改时，会通知订阅方。 |
+| [组织大脑人才池删除](0185-events-hrbrain-talent-pool-delete.md) | 当组织大脑人才池删除时，会通知订阅方。 |
+| [组织大脑人才池人员新增](0186-events-hrbrain-talent-pool-staff-add.md) | 当人才池人员入池时，会通知订阅方。 |
+| [组织大脑人才池人员删除](0187-events-hrbrain-talent-pool-staff-delete.md) | 当人才池人员出池时，会通知订阅方。 |
 
 ## **企业文化**
 
 | **名称** | **描述** |
 | --- | --- |
-| [荣誉授予](0187-honor-confer.md) | 授予企业成员荣誉勋章时，推送的荣誉授予事件内容。 |
-| [荣誉审核结果](0188-honor-review-results.md) | 荣誉审核结果事件数据。 |
+| [荣誉授予](0188-honor-confer.md) | 授予企业成员荣誉勋章时，推送的荣誉授予事件内容。 |
+| [荣誉审核结果](0189-honor-review-results.md) | 荣誉审核结果事件数据。 |
 
 ## **应用市场**
 
 | **名称** | **描述** |
 | --- | --- |
-| [商品操作](0189-commodity-operation.md) | 组织/个人在应用开通后，钉钉后台新增了应用开通记录的回调信息。 |
-| [应用市场下单](0190-application-market-order.md) | 数据为企业在钉钉服务市场购买开通应用产生订单时刻，推送的订单信息事件内容。 |
-| [市场订单标识](0191-market-order-identification.md) | 市场订单标识事件。 |
-| [轻量级商机通知](0192-lightweight-opportunity-notification.md) | 客户触发的进服务群、提交业务需求等轻量级商机触发事件 |
-| [应用订单退款事件](0193-apply-order-refund-event.md) | 应用商品订单退款事件。 |
-| [钉钉交易订购开启](0194-dingtalk-transaction-ordering-on.md) | 业在应用市场购买商品对应的权益服务开通事件数据。 |
-| [钉钉交易订购关闭](0195-dingtalk-transaction-ordering-closed.md) | 服务关闭事件数据。 |
-| [一体化应用安装事件](0196-all-in-one-application-installation-events.md) | 一体化应用安装事件。 |
-| [市场AI助理下单](0197-events-market-ai-agent-order.md) | 数据为企业在钉钉市场购买开通AI助理产生订单时刻，推送的订单信息事件内容。 |
+| [商品操作](0190-commodity-operation.md) | 组织/个人在应用开通后，钉钉后台新增了应用开通记录的回调信息。 |
+| [应用市场下单](0191-application-market-order.md) | 数据为企业在钉钉服务市场购买开通应用产生订单时刻，推送的订单信息事件内容。 |
+| [市场订单标识](0192-market-order-identification.md) | 市场订单标识事件。 |
+| [轻量级商机通知](0193-lightweight-opportunity-notification.md) | 客户触发的进服务群、提交业务需求等轻量级商机触发事件 |
+| [应用订单退款事件](0194-apply-order-refund-event.md) | 应用商品订单退款事件。 |
+| [钉钉交易订购开启](0195-dingtalk-transaction-ordering-on.md) | 业在应用市场购买商品对应的权益服务开通事件数据。 |
+| [钉钉交易订购关闭](0196-dingtalk-transaction-ordering-closed.md) | 服务关闭事件数据。 |
+| [一体化应用安装事件](0197-all-in-one-application-installation-events.md) | 一体化应用安装事件。 |
+| [市场AI助理下单](0198-events-market-ai-agent-order.md) | 数据为企业在钉钉市场购买开通AI助理产生订单时刻，推送的订单信息事件内容。 |
 
 ## **应用管理**
 
 | **名称** | **描述** |
 | --- | --- |
-| [企业逻辑启用微应用](0198-enterprise-logic-enabled-microapps.md) | 数据为第三方企业应用的最新状态，该事件为当第三方企业应用启用。 |
-| [企业逻辑停用微应用](0199-enterprise-logic-deactivates-microapps.md) | 该事件为企业停用第三方企业应用停用的时刻推送的数据。 |
-| [企业物理删除微应用](0200-enterprise-physical-deletion-of-micro-applications.md) | 该事件为第三方企业应用第三方企业应用删除。 |
-| [企业微应用可见范围变更](0201-enterprise-micro-application-visible-range-change.md) | 该事件为第三方企业应用可见范围变更推送的数据。 |
+| [企业逻辑启用微应用](0199-enterprise-logic-enabled-microapps.md) | 数据为第三方企业应用的最新状态，该事件为当第三方企业应用启用。 |
+| [企业逻辑停用微应用](0200-enterprise-logic-deactivates-microapps.md) | 该事件为企业停用第三方企业应用停用的时刻推送的数据。 |
+| [企业物理删除微应用](0201-enterprise-physical-deletion-of-micro-applications.md) | 该事件为第三方企业应用第三方企业应用删除。 |
+| [企业微应用可见范围变更](0202-enterprise-micro-application-visible-range-change.md) | 该事件为第三方企业应用可见范围变更推送的数据。 |
 | [小程序版本发布事件](https://open.dingtalk.com/document/orgapp/event-inner-app-version-publish) | 当开发者在开发者后台操作或者调用开放平台接口对企业内部小程序的开发版本进行体验发布和线上发布，推送的小程序版本发布事件数据。 |
 | [小程序版本回滚事件](https://open.dingtalk.com/document/orgapp/event-inner-app-version-rollback) | 开发者在开发者后台操作或者调用开放平台接口对企业内部小程序的历史线上版本进行回滚时，推送的小程序版本回滚事件数据。 |
-| [企业内部应用发布](0204-enterprise-self-built-application-release.md) | 当开发者对企业内部应用进行发布时，推送事件相关数据。 |
-| [企业内部应用状态变更](0205-enterprise-self-built-application-status-change.md) | 当开发者对企业内部应用进行启用/停用/删除时，推送事件相关数据。 |
-| [企业内部应用可使用范围变更](0206-enterprise-self-built-applications-can-be-used-to-change-the-scope.md) | 当开发者对企业内部应用进行可使用范围变更时，推送事件相关数据。 |
+| [企业内部应用发布](0205-enterprise-self-built-application-release.md) | 当开发者对企业内部应用进行发布时，推送事件相关数据。 |
+| [企业内部应用状态变更](0206-enterprise-self-built-application-status-change.md) | 当开发者对企业内部应用进行启用/停用/删除时，推送事件相关数据。 |
+| [企业内部应用可使用范围变更](0207-enterprise-self-built-applications-can-be-used-to-change-the-scope.md) | 当开发者对企业内部应用进行可使用范围变更时，推送事件相关数据。 |
 
 ## **专属开放**
 
 | **名称** | **描述** |
 | --- | --- |
-| [服务号接收单聊消息](0209-service-number-receiving-single-chat-message.md) | 服务号收到用户单聊消息的事件,钉钉服务器给开发者推送的事件内容，开发者根据收到的用户消息，结合发消息的接口，实现个性化的自动回复功能。 |
-| [企业员工发送文件的检测事件](0211-detection-event-of-enterprise-employee-sending-file.md) | 企业员工发送文件的检测的推送数据。 |
-| [专属群扩容审批](0207-exclusive-group-expansion-approval.md) | 群规模扩容审批的推送数据。 |
-| [专属钉钉数据迁移](0208-dedicated-dingtalk-data-migration.md) | 专属钉钉数据迁移的推送数据。 |
-| [专属可信设备删除推送事件](0210-events-exclusive-delete-trusted-device.md) | 删除专属可信设备时触发该事件。 |
+| [服务号接收单聊消息](0210-service-number-receiving-single-chat-message.md) | 服务号收到用户单聊消息的事件,钉钉服务器给开发者推送的事件内容，开发者根据收到的用户消息，结合发消息的接口，实现个性化的自动回复功能。 |
+| [企业员工发送文件的检测事件](0212-detection-event-of-enterprise-employee-sending-file.md) | 企业员工发送文件的检测的推送数据。 |
+| [专属群扩容审批](0208-exclusive-group-expansion-approval.md) | 群规模扩容审批的推送数据。 |
+| [专属钉钉数据迁移](0209-dedicated-dingtalk-data-migration.md) | 专属钉钉数据迁移的推送数据。 |
+| [专属可信设备删除推送事件](0211-events-exclusive-delete-trusted-device.md) | 删除专属可信设备时触发该事件。 |
 
 ## **行业开放**
 
@@ -431,35 +431,35 @@ updated_at: "2026-09-01 09:16:14"
 
 | **名称** | **描述** |
 | --- | --- |
-| [医疗行业用户属性变动](0213-user-attribute-change-in-medical-industry.md) | 医疗通讯录发生医疗行业用户属性变动时，触发的医疗行业用户属性变动事件推送数据说明。 |
-| [医疗行业用户所在科室医疗组变动](0216-changes-in-the-medical-group-of-the-department-where-the.md) | 医疗通讯录发生医疗行业用户所在科室医疗组变动时，医疗行业用户所在科室医疗组变动的数据推送说明。 |
-| [医疗行业科室医疗组变动](0214-changes-in-medical-departments-and-medical-groups-in-the-medical.md) | 医疗通讯录发生医疗行业科室医疗组变动时，推送的医疗行业科室医疗组变动事件数据。 |
-| [医疗行业科室医疗组属性变动](0215-change-of-attribute-of-medical-group-of-medical-department-in.md) | 医疗通讯录发生医疗行业科室医疗组变动时，推送的医疗行业科室医疗组变动事件数据。 |
-| [医疗通讯录全量同步](0212-full-synchronization-of-medical-address-book.md) | 医疗通讯录发生医疗通讯录全量同步时，推送的医疗通讯录全量同步事件数据说明。 |
+| [医疗行业用户属性变动](0214-user-attribute-change-in-medical-industry.md) | 医疗通讯录发生医疗行业用户属性变动时，触发的医疗行业用户属性变动事件推送数据说明。 |
+| [医疗行业用户所在科室医疗组变动](0217-changes-in-the-medical-group-of-the-department-where-the.md) | 医疗通讯录发生医疗行业用户所在科室医疗组变动时，医疗行业用户所在科室医疗组变动的数据推送说明。 |
+| [医疗行业科室医疗组变动](0215-changes-in-medical-departments-and-medical-groups-in-the-medical.md) | 医疗通讯录发生医疗行业科室医疗组变动时，推送的医疗行业科室医疗组变动事件数据。 |
+| [医疗行业科室医疗组属性变动](0216-change-of-attribute-of-medical-group-of-medical-department-in.md) | 医疗通讯录发生医疗行业科室医疗组变动时，推送的医疗行业科室医疗组变动事件数据。 |
+| [医疗通讯录全量同步](0213-full-synchronization-of-medical-address-book.md) | 医疗通讯录发生医疗通讯录全量同步时，推送的医疗通讯录全量同步事件数据说明。 |
 
 ### **教育**
 
 | **名称** | **描述** |
 | --- | --- |
-| [教育部门新增](0217-new-education-sector.md) | 家校通讯录2.0，部门信息变更。主要包括家校通讯录架构中各个部门发生变更时的信息,edu\_dept\_insert表示部门节点新增事件数据。 |
-| [教育部门更新](0218-education-sector-update.md) | 家校通讯录2.0部门信息变更，家校通讯录架构中各个部门发生变更时的信息,edu\_dept\_update为部门节点更新事件数据。 |
-| [教育部门删除](0219-education-department-delete.md) | 家校通讯录2.0，部门信息变更。主要包括家校通讯录架构中各个部门发生变更时的信息,该事件为部门节点删除事件数据。 |
-| [新教育人员新增](0220-new-education-staff-added.md) | 家校通讯录2.0，家校通讯录人员变更，主要包括两部分：人员在家校业务场景下的身份以及用户关系（目前关系只有监护人与学生的关系)。教育人员新增事件表示在某个班级中人员相关身份新增触发的事件推送的数据。 |
-| [新教育人员更新](0221-new-education-staff-update.md) | 家校通讯录2.0，家校通讯录人员变更，主要包括两部分：人员在家校业务场景下的身份以及用户关系（目前关系只有监护人与学生的关系)。教育人员更新事件表示在某个班级中人员相关身份更新触发的事件推送的数据。 |
-| [新教育人员删除](0222-new-education-staff-deleted.md) | 家校通讯录2.0，家校通讯录人员变更，主要包括两部分：人员在家校业务场景下的身份以及用户关系（目前关系只有监护人与学生的关系)。该事件表示在某个班级中人员相关身份删除事件数据。 |
-| [新教育人员关系新增](0223-new-education-staff-relations-added.md) | 家校通讯录2.0，人员变更推送。家校通讯录人员变更，主要包括两部分：人员在家校业务场景下的身份以及用户关系。（目前关系只有监护人与学生的关系)。 该事件表示在某个班级中人员关系新增。此事件中各个字段的理解，可以总结为如下一句表达式：在班级${classId}中，${fromUserid}与${toUserid}的关系是 ${relationName}。在家校场景下，fromUserid为监护人，toUserid为学生。此回调事件推送的是最简单的数据。 |
-| [新教育人员关系更新](0224-new-education-staff-relationship-update.md) |
-| [新教育人员关系删除](0225-new-education-staff-relation-delete.md) |
-| [打卡任务更新](0226-events-edu-card-update.md) | 新教育2.0，对已创建且未结束、未删除的打卡任务进行信息更新时，触发此事件的推送。 |
-| [打卡任务结束](0227-events-edu-card-end.md) | 新教育2.0，当打卡任务被提前结束时，触发此事件的推送。 |
-| [打卡任务删除](0228-events-edu-card-delete.md) | 新教育2.0，组织打卡任务删除事件。当已创建且未结束的打卡任务被删除时，触发此事件的推送。 |
-| [支付状态同步](0229-payment-status-synchronization.md) | 为了方便开发者感知用户状态变化，统一支付平台提供了事件推送能力，当前仅支持支付状态同步事件，即当用户订单的支付状态发生变化时，钉钉会通过事件订阅的方式将用户订单的支付状态的变更内容推送给开发者。 |
+| [教育部门新增](0218-new-education-sector.md) | 家校通讯录2.0，部门信息变更。主要包括家校通讯录架构中各个部门发生变更时的信息,edu\_dept\_insert表示部门节点新增事件数据。 |
+| [教育部门更新](0219-education-sector-update.md) | 家校通讯录2.0部门信息变更，家校通讯录架构中各个部门发生变更时的信息,edu\_dept\_update为部门节点更新事件数据。 |
+| [教育部门删除](0220-education-department-delete.md) | 家校通讯录2.0，部门信息变更。主要包括家校通讯录架构中各个部门发生变更时的信息,该事件为部门节点删除事件数据。 |
+| [新教育人员新增](0221-new-education-staff-added.md) | 家校通讯录2.0，家校通讯录人员变更，主要包括两部分：人员在家校业务场景下的身份以及用户关系（目前关系只有监护人与学生的关系)。教育人员新增事件表示在某个班级中人员相关身份新增触发的事件推送的数据。 |
+| [新教育人员更新](0222-new-education-staff-update.md) | 家校通讯录2.0，家校通讯录人员变更，主要包括两部分：人员在家校业务场景下的身份以及用户关系（目前关系只有监护人与学生的关系)。教育人员更新事件表示在某个班级中人员相关身份更新触发的事件推送的数据。 |
+| [新教育人员删除](0223-new-education-staff-deleted.md) | 家校通讯录2.0，家校通讯录人员变更，主要包括两部分：人员在家校业务场景下的身份以及用户关系（目前关系只有监护人与学生的关系)。该事件表示在某个班级中人员相关身份删除事件数据。 |
+| [新教育人员关系新增](0224-new-education-staff-relations-added.md) | 家校通讯录2.0，人员变更推送。家校通讯录人员变更，主要包括两部分：人员在家校业务场景下的身份以及用户关系。（目前关系只有监护人与学生的关系)。 该事件表示在某个班级中人员关系新增。此事件中各个字段的理解，可以总结为如下一句表达式：在班级${classId}中，${fromUserid}与${toUserid}的关系是 ${relationName}。在家校场景下，fromUserid为监护人，toUserid为学生。此回调事件推送的是最简单的数据。 |
+| [新教育人员关系更新](0225-new-education-staff-relationship-update.md) |
+| [新教育人员关系删除](0226-new-education-staff-relation-delete.md) |
+| [打卡任务更新](0227-events-edu-card-update.md) | 新教育2.0，对已创建且未结束、未删除的打卡任务进行信息更新时，触发此事件的推送。 |
+| [打卡任务结束](0228-events-edu-card-end.md) | 新教育2.0，当打卡任务被提前结束时，触发此事件的推送。 |
+| [打卡任务删除](0229-events-edu-card-delete.md) | 新教育2.0，组织打卡任务删除事件。当已创建且未结束的打卡任务被删除时，触发此事件的推送。 |
+| [支付状态同步](0230-payment-status-synchronization.md) | 为了方便开发者感知用户状态变化，统一支付平台提供了事件推送能力，当前仅支持支付状态同步事件，即当用户订单的支付状态发生变化时，钉钉会通过事件订阅的方式将用户订单的支付状态的变更内容推送给开发者。 |
 
 ### **行业通用**
 
 | **名称** | **描述** |
 | --- | --- |
-| [门店通节点变更事件](0230-store-pass-node-change-event.md) | 门店架构节点变更时的数据推送。 |
-| [门店通门店分组事件](0231-stores-through-stores-grouping-events.md) | 门店通门店分组变更的数据推送。 |
-| [门店通业务角色变更事件](0232-store-general-business-role-change-event.md) | 业务角色的添加、更新、删除，以及角色对应的人员变更。 |
-| [门店通用户权益变更事件](0233-store-general-account-equity-change-event.md) | 门店通用户权益变更事件的推送数据。 |
+| [门店通节点变更事件](0231-store-pass-node-change-event.md) | 门店架构节点变更时的数据推送。 |
+| [门店通门店分组事件](0232-stores-through-stores-grouping-events.md) | 门店通门店分组变更的数据推送。 |
+| [门店通业务角色变更事件](0233-store-general-business-role-change-event.md) | 业务角色的添加、更新、删除，以及角色对应的人员变更。 |
+| [门店通用户权益变更事件](0234-store-general-account-equity-change-event.md) | 门店通用户权益变更事件的推送数据。 |

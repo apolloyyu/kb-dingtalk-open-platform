@@ -57,7 +57,7 @@ updated_at: "2026-07-02 10:35:28"
 
 建议将用户信息保存在前端缓存中（如 `dd.setStorage`）或 Cookie 中，避免每次进入应用时重复调用接口进行免登，提升性能和用户体验。
 
-1. 引入 JS SDK。详情参考[客户端 SDK](../01-XOnnmGCTbn-开发指南/0029-webapp-read-before-development.md)。
+1. 引入 JS SDK。详情参考[客户端 SDK](../01-XOnnmGCTbn-开发指南/0031-webapp-read-before-development.md)。
 
    ```
    npm install dingtalk-jsapi --save

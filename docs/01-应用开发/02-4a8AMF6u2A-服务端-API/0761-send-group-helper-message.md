@@ -23,7 +23,7 @@ updated_at: "2026-07-14 09:29:43"
 - 对于群聊会话类型，支持以下场景使用：
 
   - 基于群模板创建的群，详情参见[创建场景群](0746-create-a-scene-group.md)。
-  - 安装群聊酷应用的群，详情参见[酷应用](../01-XOnnmGCTbn-开发指南/0042-coolapp-overview.md)。
+  - 安装群聊酷应用的群，详情参见[酷应用](../01-XOnnmGCTbn-开发指南/0044-coolapp-overview.md)。
 - 对于单聊助手会话类型，支持以下场景：
 
   此接口只适用于已经建立会话的单聊助手，即第一次开启吊顶前，需要先使用机器人给用户发送单聊消息，以建立单聊助手会话。
@@ -67,7 +67,7 @@ updated_at: "2026-07-14 09:29:43"
 | cardSettings | Object | 否 | 卡片设置项。 |
 | pullStrategy | Boolean | 否 | 是否开启卡片纯拉模式：参见[纯拉模式流程指南](0736-pure-pull-mode-process-guide.md)。   - **true**：开启 - **false**：关闭 |
 | conversationType | Integer | 是 | 会话类型：   - **1**：群聊 - **2**：单聊助手 |
-| openConversationId | String | 否 | 会话id：   - **群聊**（此参数必传）：    - 基于群模板创建的群，调用[创建场景群](0746-create-a-scene-group.md)接口获取`open_conversation_id`参数值。   - 安装群聊酷应用的群，通过[感知群变化（事件订阅）](../01-XOnnmGCTbn-开发指南/0058-group-chat-coolapp-event.md)获取回调参数`OpenConversationId`参数值。 - **单聊助手**：不传入此参数。 |
+| openConversationId | String | 否 | 会话id：   - **群聊**（此参数必传）：    - 基于群模板创建的群，调用[创建场景群](0746-create-a-scene-group.md)接口获取`open_conversation_id`参数值。   - 安装群聊酷应用的群，通过[感知群变化（事件订阅）](../01-XOnnmGCTbn-开发指南/0060-group-chat-coolapp-event.md)获取回调参数`OpenConversationId`参数值。 - **单聊助手**：不传入此参数。 |
 | userId | String | 否 | 用户userId，可通过[获取部门用户userid列表](0065-query-the-list-of-department-userids.md)或[查询用户详情](0056-query-user-details.md)接口获取。   - 当会话类型为单聊助手时，userId和unionId二选一必填。 - 其他会话类型，不需要传入此参数。 |
 | unionId | String | 否 | 用户unionId，可通过[查询用户详情](0056-query-user-details.md)接口获取。   - 当会话类型为单聊助手时，userId和unionId二选一必填。 - 其他会话类型，不需要传入此参数。 |
 | robotCode | String | 否 | 机器人编码：   - 单聊助手（此参数必填）。    - 企业内部开发-机器人应用的AppKey值。   - 企业内部应用机器人。   - 第三方企业应用机器人 - 其他会话类型，不需要传入此参数 |

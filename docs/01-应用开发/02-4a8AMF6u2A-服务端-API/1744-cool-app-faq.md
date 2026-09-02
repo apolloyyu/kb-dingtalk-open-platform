@@ -48,8 +48,8 @@ updated_at: "2026-08-27 14:07:22"
 
   答：取决于开发的应用类型。
 
-  - 企业内部使用，可以通过企业内部应用进行开发，不需要服务商的资质。开发流程参见[群聊酷应用开发流程](../01-XOnnmGCTbn-开发指南/0043-group-chat-coolapp-overview.md)。
-  - 第三方企业应用，是需要[产品方案商](../07-TjCzIgfQs3-平台服务/0028-become-an-application-service-provider.md)资质。开发流程参见[群扩展](../01-XOnnmGCTbn-开发指南/0043-group-chat-coolapp-overview.md)。
+  - 企业内部使用，可以通过企业内部应用进行开发，不需要服务商的资质。开发流程参见[群聊酷应用开发流程](../01-XOnnmGCTbn-开发指南/0045-group-chat-coolapp-overview.md)。
+  - 第三方企业应用，是需要[产品方案商](../07-TjCzIgfQs3-平台服务/0028-become-an-application-service-provider.md)资质。开发流程参见[群扩展](../01-XOnnmGCTbn-开发指南/0045-group-chat-coolapp-overview.md)。
   - 委托定制的链路暂不支持。
 - **群管理员不是钉钉管理员也可以使用酷应用，群管理员可以购买吗？**
 
@@ -59,7 +59,7 @@ updated_at: "2026-08-27 14:07:22"
   ​答：目前在开发者后台不支持修改已经创建的酷应用链接，这一问题会在后续更新版本中进行修复。
 - **在应用内选择成员并自动建群的功能，功能是否已开放？**
 
-  ​答：功能已开放，请参见[概述](../01-XOnnmGCTbn-开发指南/0043-group-chat-coolapp-overview.md)。
+  ​答：功能已开放，请参见[概述](../01-XOnnmGCTbn-开发指南/0045-group-chat-coolapp-overview.md)。
 - **群内酷应用和群插件是类似的吗？**
 
   答：群插件被称为会话快捷栏，指在群会话框下面快捷栏中的按钮，这些按钮是群内的开放功能，这些功能以酷应用集成的形式绑定在酷应用中。

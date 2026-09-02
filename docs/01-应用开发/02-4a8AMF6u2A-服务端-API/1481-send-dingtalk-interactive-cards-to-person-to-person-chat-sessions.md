@@ -98,7 +98,7 @@ Content-Type:application/json
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
 | cardTemplateId | String | 是 | 卡片模板ID，可通过[卡片平台](https://open-dev.dingtalk.com/fe/card)创建消息卡片，参见[管理消息模板](0765-manage-message-templates.md)介绍。 |
-| openConversationId | String | 否 | 会话ID，可通过[批量安装酷应用到单聊会话](../03-Ogu5SlPY4t-客户端-JSAPI/0277-batch-chat-session.md)或监听[单聊酷应用事件](../04-LFcRvVD08N-事件订阅/0375-one-on-one-chat-cool-application-extension-event.md)获取`OpenConversationId`参数值。 |
+| openConversationId | String | 否 | 会话ID，可通过[批量安装酷应用到单聊会话](../03-Ogu5SlPY4t-客户端-JSAPI/0277-batch-chat-session.md)或监听[单聊酷应用事件](../04-LFcRvVD08N-事件订阅/0352-one-on-one-chat-cool-application-extension-event.md)获取`OpenConversationId`参数值。 |
 | receiverUserIdList | Array of String | 否 | 用户ID列表。 |
 | outTrackId | String | 是 | 唯一标示卡片的外部编码。  **[!NOTE]**  是由开发者自己生成并作为入参传递给钉钉的，钉钉只在对应使用到outTrackId的场景，帮助开发者对TrackId进行记录。 |
 | robotCode | String | 否 | 机器人编码，参见[机器人名词表-robotCode](0698-development-robot-overview.md)内容，获取`robotCode`。 |

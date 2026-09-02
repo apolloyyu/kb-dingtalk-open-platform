@@ -47,7 +47,7 @@ updated_at: "2026-08-07 14:50:56"
 
 > **[!NOTE]**
 >
-> 设置卡片模板的内容，详情请参考文档[创建消息模板](../01-XOnnmGCTbn-开发指南/0093-create-a-message-template.md)。
+> 设置卡片模板的内容，详情请参考文档[创建消息模板](../01-XOnnmGCTbn-开发指南/0095-create-a-message-template.md)。
 
 ![11111](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0724118561/p466977.png)
 
@@ -55,7 +55,7 @@ updated_at: "2026-08-07 14:50:56"
 
 > **[!NOTE]**
 >
-> - 使用互动卡片实现用户与卡片的交互，详情请参考文档[开发互动卡片](../01-XOnnmGCTbn-开发指南/0046-develop-group-chat-coolapp-interactive-card.md)。
+> - 使用互动卡片实现用户与卡片的交互，详情请参考文档[开发互动卡片](../01-XOnnmGCTbn-开发指南/0048-develop-group-chat-coolapp-interactive-card.md)。
 > - 纯拉模式只能拉取互动卡片消息模板中的私有变量对应的数据。
 
 在卡片模板编辑器上，可以设置私有变量。![iShot2022-07-15_14](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0724118561/p467139.png)![222](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0724118561/p467140.png)
@@ -78,7 +78,7 @@ updated_at: "2026-08-07 14:50:56"
 
 ## 步骤四：更新卡片内容
 
-[响应互动卡片消息](../01-XOnnmGCTbn-开发指南/0096-responding-to-interactive-messages.md)，返回卡片私有数据，实现更新卡片内容。
+[响应互动卡片消息](../01-XOnnmGCTbn-开发指南/0098-responding-to-interactive-messages.md)，返回卡片私有数据，实现更新卡片内容。
 
 > **[!NOTE]**
 >

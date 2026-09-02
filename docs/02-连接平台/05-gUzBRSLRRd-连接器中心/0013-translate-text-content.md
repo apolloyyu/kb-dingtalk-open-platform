@@ -21,8 +21,8 @@ updated_at: "2026-05-19 19:46:10"
 ## **准备工作**
 
 1. 拥有所在钉钉组织开发者后台的[开发者权限](../../01-应用开发/01-XOnnmGCTbn-开发指南/0006-get-developer-permissions.md)。
-2. 拥有所在钉钉组织**已发布**的钉钉[企业内部应用机器人](../../01-应用开发/01-XOnnmGCTbn-开发指南/0076-configure-the-robot-application.md)。
-3. 拥有所在钉钉组织且已经完成了[添加机器人入群](../../01-应用开发/01-XOnnmGCTbn-开发指南/0077-add-robot-to-group.md)的操作。
+2. 拥有所在钉钉组织**已发布**的钉钉[企业内部应用机器人](../../01-应用开发/01-XOnnmGCTbn-开发指南/0078-configure-the-robot-application.md)。
+3. 拥有所在钉钉组织且已经完成了[添加机器人入群](../../01-应用开发/01-XOnnmGCTbn-开发指南/0079-add-robot-to-group.md)的操作。
 
 ## **预期效果**
 

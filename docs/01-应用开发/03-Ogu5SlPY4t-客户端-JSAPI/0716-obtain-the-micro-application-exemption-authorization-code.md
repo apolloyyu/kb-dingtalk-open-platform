@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "客户端 JSAPI"
 breadcrumb: "历史文档（不推荐） > H5微应用 > JSAPI参考 > 免登 > 获取微应用免登授权码"
 doc_id: "AyQJgBY68Y"
-updated_at: "2025-09-17 20:56:01"
+updated_at: "2026-09-02 18:14:01"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-the-micro-application-exemption-authorization-code
 > Path: 应用开发 / 客户端 JSAPI / 历史文档（不推荐） > H5微应用 > JSAPI参考 > 免登 > 获取微应用免登授权码
-> Updated: 2025-09-17 20:56:01
+> Updated: 2026-09-02 18:14:01
 
 # 获取微应用免登授权码
 
@@ -22,7 +22,7 @@ updated_at: "2025-09-17 20:56:01"
 >
 > 为提升接口的使用安全性，我们对本接口进行了升级，具体说明如下：
 >
-> - 如果未使用本接口，我们建议您使用推荐的 [requestAuthCode](https://open.dingtalk.com/document/orgapp/jsapi-request-auth-code) 接口。
+> - 如果未使用本接口，我们建议您使用推荐的 [requestAuthCode](0008-jsapi-request-auth-code.md)接口。
 > - 如果已使用本接口，建议您根据自身的实际情况，评估是否切换至推荐的接口。
 >
 > 感谢您的理解与支持！
@@ -33,7 +33,7 @@ updated_at: "2025-09-17 20:56:01"
 
 ## 使用说明
 
-调用本接口前，请先引入钉钉js，参考[准备工作](https://open.dingtalk.com/document/orgapp/read-before-development)。
+调用本接口前，请先引入钉钉js，参考[客户端SDK](../01-XOnnmGCTbn-开发指南/0031-webapp-read-before-development.md)。
 
 | **客户端** | **是否需要鉴权** | **Android** | **iOS** | **PC** |
 | --- | --- | --- | --- | --- |

@@ -9,7 +9,7 @@
 
 - 用户标识对照：**userId**（企业内唯一、不可改）/ **unionId**（跨企业唯一）/ **工号 job_number**（企业自维护、可不唯一、非必填，不能作唯一标识）——[基础概念](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md) · [通讯录概述·名词解释](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0047-contacts-overview.md)
 - 注意：旧版（归档）JSAPI 文档里的"工号/emplId"多为 userid 的历史命名混用，勿按字面理解
-- 会话标识 openConversationId：获取 = [创建群返回](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0738-create-common-group-new-version-v2.md) / [chatId 转换接口](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0745-obtain-group-openconversationid.md) / [JSAPI 选择会话 chooseChat](../docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0318-jsapi-choose-chat.md) / [机器人接收消息回调](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0078-robot-receive-message.md)；`openChatByConversationId` 是**消费**该 ID 的跳转 JSAPI，不是获取途径
+- 会话标识 openConversationId：获取 = [创建群返回](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0738-create-common-group-new-version-v2.md) / [chatId 转换接口](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0745-obtain-group-openconversationid.md) / [JSAPI 选择会话 chooseChat](../docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0318-jsapi-choose-chat.md) / [机器人接收消息回调](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0080-robot-receive-message.md)；`openChatByConversationId` 是**消费**该 ID 的跳转 JSAPI，不是获取途径
 
 ## 凭证与鉴权
 
@@ -40,9 +40,9 @@
 
 ## 机器人（Bot）
 
-- [机器人应用概述](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0075-robot-application-overview.md) · [配置企业机器人](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0076-configure-the-robot-application.md)
-- [机器人接收消息](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0078-robot-receive-message.md) · [机器人回复/发送消息](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0079-robot-reply-and-send-messages.md)
-- 群自定义机器人（Webhook 推送）：[创建](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0081-custom-bot-creation-and-installation.md) · [获取 Webhook 地址](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0083-obtain-the-webhook-address-of-a-custom-robot.md) · [安全设置](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0082-customize-robot-security-settings.md)
+- [机器人应用概述](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0077-robot-application-overview.md) · [配置企业机器人](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0078-configure-the-robot-application.md)
+- [机器人接收消息](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0080-robot-receive-message.md) · [机器人回复/发送消息](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0081-robot-reply-and-send-messages.md)
+- 群自定义机器人（Webhook 推送）：[创建](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0083-custom-bot-creation-and-installation.md) · [获取 Webhook 地址](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0085-obtain-the-webhook-address-of-a-custom-robot.md) · [安全设置](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0084-customize-robot-security-settings.md)
 
 ## 群文件与媒体
 
@@ -69,10 +69,10 @@
 ## 应用开发入门
 
 - [基础概念](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md) · [应用类型与能力说明](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0002-application-type-introduction.md) · [应用创建与配置](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md)
-- 小程序：[客户端 SDK 介绍](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0022-mini-app-client-jsapi-overview.md) · [开发前端](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0026-develop-miniapp-fe.md) · [上传发布](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0027-upload-miniapp.md)
-- 导航栏定制：现行 [setNavigationBar](../docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0046-jsapi-set-navigation-bar.md)；归档参考[导航栏透明（H5）](../docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0828-the-microapplication-navigation-bar-is-transparent.md)、[左侧导航按钮文字](../docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0750-set-left-navigation-button-text.md)；查任意 JSAPI 名用 `dkdoc jsapi <名>`（如 setOptionMenu 快照未收录——下否定结论前先查表再声明"快照未见"）
-- 网页应用（H5）：[开发前必读](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0029-webapp-read-before-development.md) · [配置](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0030-configure-web-application.md) · [前端](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0031-develop-webapp-frontend.md) · [服务端](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0032-develop-webapp-backend.md)
-- [酷应用概述](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0042-coolapp-overview.md)（群聊/单聊内嵌应用形态）
+- 小程序：[客户端 SDK 介绍](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0024-mini-app-client-jsapi-overview.md) · [开发前端](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0028-develop-miniapp-fe.md) · [上传发布](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0029-upload-miniapp.md)
+- 导航栏定制：现行 [setNavigationBar](../docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0046-jsapi-set-navigation-bar.md)；归档参考[导航栏透明（H5）](../docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0829-the-microapplication-navigation-bar-is-transparent.md)、[左侧导航按钮文字](../docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0754-set-left-navigation-button-text.md)；查任意 JSAPI 名用 `dkdoc jsapi <名>`（如 setOptionMenu 快照未收录——下否定结论前先查表再声明"快照未见"）
+- 网页应用（H5）：[开发前必读](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0031-webapp-read-before-development.md) · [配置](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0032-configure-web-application.md) · [前端](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0033-develop-webapp-frontend.md) · [服务端](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0034-develop-webapp-backend.md)
+- [酷应用概述](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0044-coolapp-overview.md)（群聊/单聊内嵌应用形态）
 
 ## 通讯录
 

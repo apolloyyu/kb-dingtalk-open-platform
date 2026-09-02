@@ -44,7 +44,7 @@ updated_at: "2026-07-10 10:11:34"
 步骤四：调用OA审批相关API和客户端JSAPI：
 
 1. 调用服务端API-[获取审批钉盘空间信息](0502-obtains-the-information-about-approval-nail-disk.md)接口，获取审批钉盘空间`spaceId`。
-2. 调用客户端JSAPI-[上传附件到钉盘/从钉盘选择文件](../03-Ogu5SlPY4t-客户端-JSAPI/0333-jsapi-upload-attachment-to-ding-talk.md)接口，获取文件基本信息。
+2. 调用客户端JSAPI-[上传附件到钉盘/从钉盘选择文件](../03-Ogu5SlPY4t-客户端-JSAPI/0332-jsapi-upload-attachment-to-ding-talk.md)接口，获取文件基本信息。
 3. 获取模板的唯一编码`processCode`。
 
    - 通过[钉钉管理后台](https://oa.dingtalk.com/index.htm#/microApp/microAppListNew)-OA审批-打开对应审批模板获取。
@@ -60,7 +60,7 @@ updated_at: "2026-07-10 10:11:34"
    2. 预览审批附件：
 
       1. 调用服务端API-[授权预览审批附件](0503-official-authorized-preview-approval-attachment.md)接口，实现钉盘文件的预览操作。
-      2. 调用客户端JSAPI-[预览钉盘文件](../03-Ogu5SlPY4t-客户端-JSAPI/0330-jsapi-preview-file-in-ding-talk.md)接口，实现预览钉盘文件。
+      2. 调用客户端JSAPI-[预览钉盘文件](../03-Ogu5SlPY4t-客户端-JSAPI/0331-jsapi-preview-file-in-ding-talk.md)接口，实现预览钉盘文件。
 
 ## **前提条件**
 
@@ -131,7 +131,7 @@ updated_at: "2026-07-10 10:11:34"
            }
        }
    ```
-2. 调用客户端JSAPI-[上传附件到钉盘/从钉盘选择文件](../03-Ogu5SlPY4t-客户端-JSAPI/0333-jsapi-upload-attachment-to-ding-talk.md)接口，获取文件基本信息，本流程示例使用[JSAPI Explorer](https://open.dingtalk.com/tools/explorer/jsapi?id=10318)实现。
+2. 调用客户端JSAPI-[上传附件到钉盘/从钉盘选择文件](../03-Ogu5SlPY4t-客户端-JSAPI/0332-jsapi-upload-attachment-to-ding-talk.md)接口，获取文件基本信息，本流程示例使用[JSAPI Explorer](https://open.dingtalk.com/tools/explorer/jsapi?id=10318)实现。
 
    > **[!IMPORTANT]**
    >
@@ -401,7 +401,7 @@ updated_at: "2026-07-10 10:11:34"
                  }
              }
          ```
-      2. 调用客户端JSAPI-[预览钉盘文件](../03-Ogu5SlPY4t-客户端-JSAPI/0330-jsapi-preview-file-in-ding-talk.md)接口，实现预览钉盘文件。可通过访问[JSAPI Explorer](https://open.dingtalk.com/tools/explorer/jsapi?id=10317)在线调试该接口。
+      2. 调用客户端JSAPI-[预览钉盘文件](../03-Ogu5SlPY4t-客户端-JSAPI/0331-jsapi-preview-file-in-ding-talk.md)接口，实现预览钉盘文件。可通过访问[JSAPI Explorer](https://open.dingtalk.com/tools/explorer/jsapi?id=10317)在线调试该接口。
 
          > **[!NOTE]**
          >

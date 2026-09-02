@@ -53,7 +53,7 @@ updated_at: "2026-08-27 12:32:10"
 | appoint\_begin\_time | Number | 是 | 1546358399000 | 约定开播（未来时间），Unix时间戳，单位毫秒。 |
 | pic\_introduction\_url | String | 否 | http://tblearxxxx | 图片简介URL，必须是公网可访问的图片地址。 |
 | feed\_type | Number | 是 | 0 | 课程类型：   - **0**：直播 |
-| group\_ids | String | 否 | cidzZ7txxxx,cidaZ5xxxx | 直播要绑定的群列表ID。   - 小程序通过[选择会话](../03-Ogu5SlPY4t-客户端-JSAPI/0707-select-session.md)方法获取。 - 微应用通过[根据corpid选择会话](../03-Ogu5SlPY4t-客户端-JSAPI/0766-select-session-based-on-corpid.md)方法获取。 |
+| group\_ids | String | 否 | cidzZ7txxxx,cidaZ5xxxx | 直播要绑定的群列表ID。   - 小程序通过[选择会话](../03-Ogu5SlPY4t-客户端-JSAPI/0707-select-session.md)方法获取。 - 微应用通过[根据corpid选择会话](../03-Ogu5SlPY4t-客户端-JSAPI/0767-select-session-based-on-corpid.md)方法获取。 |
 | title | String | 是 | 测试课程 | 课程标题。 |
 | anchor\_id | String | 是 | 0225376 | 主播在组织内的userId。 |
 | introduction | String | 否 | 简介 | 培训简介。 |

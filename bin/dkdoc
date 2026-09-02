@@ -77,9 +77,11 @@ def cmd_find(terms, n):
         rest = (" ".join(d.get("headings") or []) + " " + d.get("snippet", "") + " "
                 + d.get("slug", "") + " " + os.path.basename(d["local_path"])).lower()
         hay = " ".join((title, crumb, rest))
-        if not all(t in hay for t in tl):
+        nhit = sum(1 for w in tl if w in hay)
+        if nhit == 0:
             continue
-        score = sum(3 for t in tl if t in title) + sum(2 for t in tl if t in crumb)
+        # AND 太严(自然问句拆词很难同时命中一篇),改为 OR + 命中词数优先
+        score = nhit * 10 + sum(3 for w in tl if w in title) + sum(2 for w in tl if w in crumb)
         tier_rank = 1 if d["local_path"] in flags else 0
         scored.append((-score, tier_rank, d["local_path"], d))
     scored.sort()
@@ -95,8 +97,13 @@ def cmd_find(terms, n):
 
 def cmd_api(terms, n):
     tl = [t.lower() for t in terms]
-    rows = [r for r in load_jsonl("graph/api.jsonl")
-            if all(t in " ".join(str(r.get(k) or "") for k in ("title", "endpoint", "method")).lower() for t in tl)]
+    def _hay_api(r):
+        return " ".join(str(r.get(k) or "") for k in ("title", "endpoint", "method")).lower()
+    _api = load_jsonl("graph/api.jsonl")
+    rows = [r for r in _api if all(w in _hay_api(r) for w in tl)]
+    if not rows and len(tl) > 1:
+        rows = sorted(_api, key=lambda r: -sum(1 for w in tl if w in _hay_api(r)))
+        rows = [r for r in rows if any(w in _hay_api(r) for w in tl)]
     rows.sort(key=lambda r: (r.get("archived", False), r["title"]))
     for r in rows[:n]:
         tag = " ⚠归档" if r.get("archived") else ""
@@ -283,18 +290,47 @@ _CTX_BODY_CAP = 8000     # 单篇正文上限(字符)
 _CTX_TOTAL_CAP = 20000   # 总输出上限(字符)
 
 
+def _intent(terms):
+    """问法预判：一次到位决定要不要额外带料，避免模型查完再查。"""
+    q = " ".join(terms)
+    return {
+        "why":     any(k in q for k in ("为什么", "原理", "机制", "不一致", "冲突", "怎么回事", "原因")),
+        "howmany": any(k in q for k in ("多少", "上限", "限制", "有效期", "配额", "频率", "几个", "多久", "时长")),
+        "support": any(k in q for k in ("支持", "有没有", "能不能", "可以吗", "是否")),
+        "error":   any(k in q for k in ("报错", "错误", "失败", "异常", "errcode", "不通过")),
+    }
+
+
+def _limit_lines(body, n=12):
+    """抽正文里的限额/配额/时长相关行（数值类问法用）。"""
+    pat = re.compile(r"(上限|最多|不超过|限制|有效期|配额|频率|QPS|次/|分钟|小时|天内|长度)")
+    hits = [l.strip() for l in body.splitlines() if pat.search(l) and len(l.strip()) > 6]
+    return hits[:n]
+
+
 def _ctx_impl(terms, n):
     if not terms:
         return usage("ctx 需要至少一个关键词")
-    tl = [t.lower() for t in terms]
+    intent = _intent(terms)
+    # 问法虚词不参与检索(用户自然问句里的"支持/多少/为什么"是意图信号,不是实体词)
+    _STOP = {"支持", "有没有", "能不能", "可以吗", "是否", "多少", "上限", "限制", "有效期",
+             "配额", "几个", "多久", "时长", "为什么", "原理", "机制", "原因", "怎么回事",
+             "报错", "错误", "失败", "异常", "的", "吗", "呢", "怎么", "如何"}
+    core = [w for w in terms if w not in _STOP] or terms
+    tl = [w.lower() for w in core]
     docs = load_jsonl("meta/documents.jsonl")
     flags = kb_flags()
     bymap = {d["local_path"]: d for d in docs}
 
     # 1) 五张实体表（匹配逻辑与各子命令一致；此处只收集不打印）
     ent_lines, ent_paths, ent_counts = [], [], {}
-    rows = [r for r in load_jsonl("graph/api.jsonl")
-            if all(t in " ".join(str(r.get(k) or "") for k in ("title", "endpoint", "method")).lower() for t in tl)]
+    def _hay_api(r):
+        return " ".join(str(r.get(k) or "") for k in ("title", "endpoint", "method")).lower()
+    _api = load_jsonl("graph/api.jsonl")
+    rows = [r for r in _api if all(w in _hay_api(r) for w in tl)]
+    if not rows and len(tl) > 1:
+        rows = sorted(_api, key=lambda r: -sum(1 for w in tl if w in _hay_api(r)))
+        rows = [r for r in rows if any(w in _hay_api(r) for w in tl)]
     rows.sort(key=lambda r: (r.get("archived", False), r["title"]))
     ent_counts["api"] = len(rows)
     for r in rows[:6]:
@@ -345,9 +381,11 @@ def _ctx_impl(terms, n):
         rest = (" ".join(d.get("headings") or []) + " " + d.get("snippet", "") + " "
                 + d.get("slug", "") + " " + os.path.basename(d["local_path"])).lower()
         hay = " ".join((title, crumb, rest))
-        if not all(t in hay for t in tl):
+        nhit = sum(1 for w in tl if w in hay)
+        if nhit == 0:
             continue
-        score = sum(3 for t in tl if t in title) + sum(2 for t in tl if t in crumb)
+        # AND 太严(自然问句拆词很难同时命中一篇),改为 OR + 命中词数优先
+        score = nhit * 10 + sum(3 for w in tl if w in title) + sum(2 for w in tl if w in crumb)
         tier_rank = 1 if d["local_path"] in flags else 0
         scored.append((-score, tier_rank, d["local_path"], d))
     scored.sort()
@@ -381,22 +419,53 @@ def _ctx_impl(terms, n):
             inc_e = [e for e in edges if e["to"] == lp][:6]
             if out_e or inc_e:
                 parts.append("== 相邻篇(links) ==")
-                for e in out_e:
-                    parts.append(f"  → {e['to']}")
-                for e in inc_e:
-                    parts.append(f"  ← {e['from']}")
+                # 支持性/存在性问法：正确答案常在相邻篇（如「创建公告」→「公告钉盘空间」），
+                # 只给标题会逼出第二轮 cat，故直接带摘要，一轮到位。
+                brief = intent["support"] or intent["why"]
+                shown = 0
+                for e in out_e + inc_e:
+                    tgt = e["to"] if e in out_e else e["from"]
+                    arrow = "→" if e in out_e else "←"
+                    if brief and shown < 3 and tgt in bymap:
+                        try:
+                            b = open(os.path.join(ROOT, tgt), encoding="utf-8", errors="ignore").read()
+                        except OSError:
+                            b = ""
+                        head = b[:800].replace("\n\n", "\n")
+                        parts.append(f"  {arrow} {tgt} — {bymap[tgt]['title']}")
+                        parts.append(f"    摘要: {head}")
+                        shown += 1
+                    else:
+                        parts.append(f"  {arrow} {tgt}")
         others = cand[top_k:top_k + 8]
         if others:
             parts.append("\n== 其他候选(未展开) ==")
             for d in others:
                 tag = " " + flags.get(d["local_path"], "") if flags.get(d["local_path"]) else ""
                 parts.append(f"  {d['title']}{tag} — {d['local_path']}")
+        if intent["howmany"] and cand:
+            lim = []
+            for d in cand[:3]:
+                try:
+                    b = open(os.path.join(ROOT, d["local_path"]), encoding="utf-8", errors="ignore").read()
+                except OSError:
+                    continue
+                for l in _limit_lines(b, 6):
+                    lim.append(f"  [{d['title'][:20]}] {l[:120]}")
+            if lim:
+                parts.append("\n== 数值/限额专项(问法含数量或时长时自动抽取) ==")
+                parts.extend(lim[:15])
         parts.append("\n== 检索审计 ==")
         parts.append("已检索: api/err/event/jsapi/perm/find · 关键词: " + " ".join(terms)
                      + " · 命中: " + " ".join(f"{k}={v}" for k, v in ent_counts.items())
                      + f" find={len(scored)}")
         parts.append("== 继续 ==")
-        parts.append("读候选: dkdoc cat <路径> · 深查: dkdoc links <路径> · 全文兜底: dkdoc grep '<词>' · 否定前核对盲区: meta/UNAVAILABLE.md")
+        tips = ["读候选: dkdoc cat <路径>", "深查: dkdoc links <路径>", "全文兜底: dkdoc grep '<词>'"]
+        if intent["support"]:
+            tips.append("否定前必看: meta/UNAVAILABLE.md(抓取盲区)+上方相邻篇摘要")
+        if intent["error"]:
+            tips.append("错误码语义: dkdoc err <码>")
+        parts.append(" · ".join(tips))
         return "\n".join(parts)
 
     # 分层瘦身:实体表已精确命中时,简单题不需要两篇全文——1 篇+更小截断即可

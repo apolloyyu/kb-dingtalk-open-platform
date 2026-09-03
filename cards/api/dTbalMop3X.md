@@ -29,4 +29,4 @@ permissions: qyapi_base
 - none stated
 
 source_url: https://open.dingtalk.com/document/development/obtain-the-access-token-of-the-micro-application-background-without-log-on
-updated_at: 2026-04-29 22:27:34
+updated_at: 2026-09-02 18:06:54

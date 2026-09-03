@@ -1,0 +1,31 @@
+# 组织变革主数据部门数据推送
+
+doc_id: 8ZNy4wGg0f
+completeness: full
+archived: false
+method: POST
+endpoint: https://api.dingtalk.com/v1.0/amdp/organizations/departments/datas/push
+api_version: v2-new
+app_types: 第三方企业应用
+permissions: Okr.Common.ReadWrite
+
+## Request headers
+- x-acs-dingtalk-access-token (String, required): 调用该接口的访问凭证，通过以下获取： - 企业内部应用，调用获取企业内部应用的accessToken接口获取。 - 第三方企业应用，调用获取第三方应用授权企业的accessToken接口获取。
+
+## Path params
+- none
+
+## Query params
+- none
+
+## Body
+- optional: param(Array), deptId(String), parentId(String), dingTalkDeptId(String), dingTalkParentId(String), name(String), deptManagerIdList(Array of String), isDelete(String)
+
+## Returns
+- optional: requestId(String), success(Boolean), status(String), result(Boolean)
+
+## Limits
+- none stated
+
+source_url: https://open.dingtalk.com/document/development/api-amdporganizationdatapush
+updated_at: 2026-06-03 09:34:47

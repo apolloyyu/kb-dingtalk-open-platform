@@ -1,0 +1,31 @@
+# 查询企业下个人目标详情
+
+doc_id: FwY4lkiOsv
+completeness: full
+archived: false
+method: GET
+endpoint: https://api.dingtalk.com/v1.0/agoal/objectives/details
+api_version: v2-new
+app_types: 第三方企业应用
+permissions: Agoal.Objective.Read
+
+## Request headers
+- x-acs-dingtalk-access-token (String, required): 调用该接口的访问凭证，通过以下获取： - 企业内部应用，调用获取企业内部应用的accessToken接口获取。 - 第三方企业应用，调用获取第三方应用授权企业的accessToken接口获取。
+
+## Path params
+- none
+
+## Query params
+- objectiveId (String, required): 目标Id。
+
+## Body
+- none
+
+## Returns
+- optional: requestId(String), success(Boolean), content(OpenAgoalObjectiveDTO)
+
+## Limits
+- none stated
+
+source_url: https://open.dingtalk.com/document/development/api-getobjectivedetail
+updated_at: 2026-06-02 11:54:14

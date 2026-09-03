@@ -6,7 +6,7 @@
 |---|---|
 | 内容 | 官方文档中心全量快照：8 大类 / 26 子类 / **3781 篇** Markdown |
 | 快照日期 | 2026-09-03（权威值见 [meta/source_manifest.json](meta/source_manifest.json) 的 crawl_time） |
-| 检索设施 | 三级索引（107 文件）· 关系图谱（5 张边表，8124 条互链）· `dkdoc` 查询 CLI |
+| 检索设施 | 三级索引 · 关系图谱 · API 答案卡（full/partial 自动判定）· `dkdoc` 查询 CLI |
 | 维护方式 | 重爬 → 按 `doc_id` 对账 → 全量重建派生层 → lint（[ops/INGEST.md](ops/INGEST.md)） |
 | 使用定位 | **外挂文件夹**：不作为 Agent 工作区（cwd），挂给任意 Agent 使用 |
 
@@ -19,7 +19,9 @@
 Agent 读完 [AGENTS.md](AGENTS.md) 即掌握全部用法。人类直接查也行：
 
 ```bash
-python3 <路径>/bin/dkdoc ctx 免登               # ★一次打包:实体命中+正文+相邻篇+审计行
+python3 <路径>/bin/dkdoc ctx '通过免登码获取用户信息的必填参数'  # ★安全时 full 卡直答，复杂题保留正文
+python3 <路径>/bin/dkdoc card H2mylS6eke        # 按 doc_id 精查 API 卡
+python3 <路径>/bin/dkdoc ctx --full 免登        # 强制全文回退
 python3 <路径>/bin/dkdoc find 免登 小程序       # 找文档
 python3 <路径>/bin/dkdoc api 创建群             # 查接口
 python3 <路径>/bin/dkdoc err invalidDept        # 查错误码（未命中自动全文兜底）
@@ -35,6 +37,9 @@ index/
   INDEX.md                  L1 总索引：26 子类 + 一句话路由提示
   <大类>/<子类>.md           L2 子类清单；>200 篇的大类目再按功能域拆 L3
   TOPICS.md                 高频主题 → 权威文档直达（唯一人工维护的索引页）
+cards/
+  api/                      从官方参数表确定性生成的一接口一卡（full/partial）
+  api-index.jsonl           doc_id/标题/endpoint → 卡片路径与完整度
 graph/
   GRAPH.md                  图谱说明 + jq 查询配方
   links.jsonl               文档互链 8124 条边；hubs.md 被引用 Top100 枢纽榜
@@ -55,7 +60,7 @@ ops/
 | 层 | 位置 | 谁维护 | 纪律 |
 |---|---|---|---|
 | 原始层（上游镜像） | `docs/` `meta/` | 爬虫，快照整体换入 | 只读；`doc_id` 为稳定身份，删除写 tombstone |
-| 结构层（派生索引） | `index/`* `graph/`* | 脚本全量重建，从不增量修补 | 生成物勿手改，lint 会报漂移 |
+| 结构层（派生索引） | `index/`* `graph/`* `cards/` | 脚本全量重建，从不增量修补 | 生成物勿手改，lint 会报漂移 |
 | 认知层（人工策展） | `index/TOPICS.md` 及各入口文件 | 人 / LLM | 只收会饱和的高频主题；快照更新后复核 |
 
 <sub>* `index/TOPICS.md` 与 `graph/GRAPH.md` 属认知层，生成器不触碰。</sub>

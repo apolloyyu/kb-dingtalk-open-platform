@@ -14,12 +14,18 @@
 **主线：`dkdoc ctx` 一次打包 →（未覆盖所问才）分步精查 → 沿 `dkdoc links` / `graph/hubs.md` 扩展。**
 
 ```bash
-python3 $WIKI/bin/dkdoc ctx <词>...        # ★首选：实体五表命中+top2正文(含source_url)+links相邻+检索审计行
+python3 $WIKI/bin/dkdoc ctx '<完整用户问题>'  # ★安全时 API full 卡直答；复杂题自动保留正文/links
+python3 $WIKI/bin/dkdoc ctx --full '<问题>'   # 强制旧全文路径（深查/回退）
+python3 $WIKI/bin/dkdoc card <doc_id|API标题|endpoint>  # 精查单张 API 卡
 python3 $WIKI/bin/dkdoc find <关键词>...   # 标题/面包屑/小标题/slug 模糊定位（多词=AND）
 python3 $WIKI/bin/dkdoc api|err|event|jsapi|perm <词>   # 精确实体五表（未命中自动兜底）
 python3 $WIKI/bin/dkdoc cat|links <路径|slug>     # 读正文 / 查正反链
 python3 $WIKI/bin/dkdoc grep '<词>' [子路径]      # 全文兜底
 ```
+
+- 审计行为 `card=1(fast=1)` 且卡为 `completeness: full`：卡片已覆盖方法、endpoint、应用类型、权限点、请求/响应字段与文档内限额，可直接作答，不再 cat；
+- `fast=0`、partial、归档 API，或机制/数值/支持性/报错/版本/跨文档题：按 ctx 自动附带的正文与相邻篇核验；
+- 全局回退可设 `KB_NO_CARDS=1`，输出与 `ctx --full` 字节级一致。
 
 | 问题类型 | 入口 |
 |---|---|

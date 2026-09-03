@@ -2,7 +2,9 @@
 """dkdoc — 钉钉开放平台知识库查询 CLI（零依赖，cwd 无关，可通过软链调用）。
 
 子命令:
-  ctx   <词>...        ★一次打包检索：实体命中+top2正文+links相邻+检索审计（默认入口）
+  ctx   <词>...        ★一次打包检索：安全时 API 答案卡直答，否则正文+links+审计
+  ctx --full <词>...  强制旧版全文路径（跳过答案卡，用于深查/回退）
+  card  <doc_id|标题|endpoint>  打印 API 答案卡（full 可直答，partial 继续读原文）
   find  <词>...        按标题/面包屑/小标题/摘要找文档（多词=AND）
   api   <词|url片段>   查接口表（名称/endpoint/method/权限点/新旧版本）
   err   <错误码|词>    查错误码表（新版字符串码；旧版数字码会提示走 grep 兜底）
@@ -30,6 +32,49 @@ def load_jsonl(rel):
     p = os.path.join(ROOT, rel)
     with open(p, encoding="utf-8") as f:
         return [json.loads(line) for line in f]
+
+
+def api_card_index():
+    p = os.path.join(ROOT, "cards", "api-index.jsonl")
+    return load_jsonl("cards/api-index.jsonl") if os.path.exists(p) else []
+
+
+def read_api_card(doc_path):
+    hit = next((r for r in api_card_index() if r.get("doc_path") == doc_path), None)
+    if not hit:
+        return None
+    p = os.path.join(ROOT, hit["path"])
+    if not os.path.exists(p):
+        return None
+    body = open(p, encoding="utf-8", errors="replace").read()
+    return {**hit, "body": body.rstrip(),
+            "full": hit.get("completeness") == "full" and "\ncompleteness: full\n" in "\n" + body}
+
+
+def cmd_card(terms, n):
+    if not terms:
+        return usage("card 需要 doc_id、API 标题、endpoint 或 doc_path")
+    q = " ".join(terms).strip().lower()
+    rows = []
+    for r in api_card_index():
+        vals = [str(r.get(k) or "").lower() for k in ("doc_id", "title", "endpoint", "doc_path")]
+        if any(q == x for x in vals) or any(q in x for x in vals):
+            exact = 0 if any(q == x for x in vals) else 1
+            rows.append((exact, r.get("archived", False),
+                         r.get("completeness") != "full", r["doc_id"], r))
+    shown = 0
+    for *_, r in sorted(rows)[:n]:
+        p = os.path.join(ROOT, r["path"])
+        if not os.path.exists(p):
+            continue
+        if shown:
+            print("\n---\n")
+        print(open(p, encoding="utf-8", errors="replace").read().rstrip())
+        shown += 1
+    if not shown:
+        print(f"API 答案卡无命中: {q};用 dkdoc api/find 或 ctx --full 查原文")
+        return 1
+    return 0
 
 
 def kb_flags():
@@ -107,8 +152,8 @@ def cmd_api(terms, n):
     rows.sort(key=lambda r: (r.get("archived", False), r["title"]))
     for r in rows[:n]:
         tag = " ⚠归档" if r.get("archived") else ""
-        perm = f" · 权限:{r['permission']}" if r.get("permission") else ""
-        print(f"{r['title']}{tag} · {(r.get('method') or '?')} {r.get('endpoint') or ''} · {r.get('version') or ''}{perm}")
+        perm = f" · 权限:{','.join(r.get('permission_scopes') or [])}" if r.get("permission_scopes") else ""
+        print(f"{r['title']}{tag} · {(r.get('method') or '?')} {r.get('endpoint') or ''} · {r.get('api_version') or ''}{perm}")
         print(f"  {r['doc_path']}")
         print(f"  {r['source_url']}")
     if not rows:
@@ -275,10 +320,10 @@ def cmd_grep(terms, n):
         return 0 if cnt else 1
 
 
-def cmd_ctx(terms, n):
-    """一次打包检索：实体命中 + top-2 正文 + links 相邻 + 检索审计。异常→CTX_ERROR 提示回退。"""
+def cmd_ctx(terms, n, force_full=False):
+    """一次打包检索：安全时答案卡直答，否则正文+links；异常→CTX_ERROR。"""
     try:
-        return _ctx_impl(terms, n)
+        return _ctx_impl(terms, n, force_full=force_full)
     except SystemExit:
         raise
     except Exception as e:  # 绝不半吊子输出：报错即引导回退旧检索序
@@ -291,13 +336,20 @@ _CTX_TOTAL_CAP = 20000   # 总输出上限(字符)
 
 
 def _intent(terms):
-    """问法预判：一次到位决定要不要额外带料，避免模型查完再查。"""
-    q = " ".join(terms)
+    """问法预判：决定答案卡能否独立覆盖；复杂题继续带正文与相邻篇。"""
+    q = " ".join(terms).lower()
+    support = (any(k in q for k in ("支持", "有没有", "有吗", "能不能", "可以吗", "是否", "会不会", "能否"))
+               or bool(re.search(r"(?:能|可以).{0,3}(?:获取|查询|查看|拿到|做到|实现|解析|发送|创建|删除|使用|读取)", q)))
     return {
-        "why":     any(k in q for k in ("为什么", "原理", "机制", "不一致", "冲突", "怎么回事", "原因")),
-        "howmany": any(k in q for k in ("多少", "上限", "限制", "有效期", "配额", "频率", "几个", "多久", "时长")),
-        "support": any(k in q for k in ("支持", "有没有", "能不能", "可以吗", "是否")),
-        "error":   any(k in q for k in ("报错", "错误", "失败", "异常", "errcode", "不通过")),
+        "why":     any(k in q for k in ("为什么", "原理", "机制", "不一致", "冲突", "怎么回事", "原因", "逻辑", "源码")),
+        "howmany": any(k in q for k in ("多少", "上限", "限制", "有效期", "时效", "时效性", "过期", "配额", "频率", "几个", "多久", "时长")),
+        "support": support,
+        "error":   (any(k in q for k in ("报错", "错误", "失败", "异常", "errcode", "不通过", "提示", "无权限"))
+                    or bool(re.search(r"\b(error|failed|exception|denied)\b", q))),
+        "version": any(k in q for k in ("版本", "归档", "下线", "兼容", "灰度", "什么时候上线")),
+        "cross_doc": any(k in q for k in ("全部接口", "所有接口", "有哪些接口", "哪些接口", "有哪些事件", "全部事件")),
+        "semantic": any(k in q for k in ("如果", "情况下", "先", "再", "然后", "之后", "只是", "还是", "区别", "影响",
+                                             "怎么开通", "如何开通", "怎么申请", "如何申请", "添加权限", "配置权限", "授权")),
     }
 
 
@@ -308,37 +360,116 @@ def _limit_lines(body, n=12):
     return hits[:n]
 
 
-def _ctx_impl(terms, n):
+_QUERY_ALIASES = {"page": "页面", "pages": "页面", "event": "事件", "events": "事件",
+                  "permission": "权限", "permissions": "权限", "user": "用户"}
+
+
+def _tokenize_query(terms, corpus, stop):
+    """自然中文按语料最长匹配，不产生跨边界伪词；常见英文概念补中文同义词。"""
+    out = []
+    for raw in terms:
+        for token in re.findall(r"[a-zA-Z0-9_.:/-]+|[一-鿿]+", raw):
+            low = token.lower()
+            if low in stop:
+                continue
+            if re.fullmatch(r"[a-zA-Z0-9_.:/-]+", token):
+                out.append(_QUERY_ALIASES.get(low, low))
+                continue
+            covered = [False] * len(token)
+            for word in sorted((x for x in stop if re.fullmatch(r"[一-鿿]+", x)),
+                               key=len, reverse=True):
+                start = 0
+                while True:
+                    i = token.find(word, start)
+                    if i < 0:
+                        break
+                    covered[i:i + len(word)] = [True] * len(word)
+                    start = i + 1
+            i = 0
+            while i < len(token):
+                if covered[i]:
+                    i += 1
+                    continue
+                end = i
+                while end < len(token) and not covered[end]:
+                    end += 1
+                seg, p = token[i:end], 0
+                while p < len(seg):
+                    best = ""
+                    for size in range(min(20, len(seg) - p), 1, -1):
+                        cand = seg[p:p + size].lower()
+                        if cand in corpus:
+                            best = cand
+                            break
+                    if best:
+                        out.append(best)
+                        p += len(best)
+                    else:
+                        p += 1
+                i = end
+    return list(dict.fromkeys(out))
+
+
+def _ctx_impl(terms, n, force_full=False):
     if not terms:
         return usage("ctx 需要至少一个关键词")
     intent = _intent(terms)
     # 问法虚词不参与检索(用户自然问句里的"支持/多少/为什么"是意图信号,不是实体词)
-    _STOP = {"支持", "有没有", "能不能", "可以吗", "是否", "多少", "上限", "限制", "有效期",
+    _STOP = {"支持", "有没有", "有吗", "能不能", "可以吗", "是否", "多少", "上限", "限制", "有效期",
              "配额", "几个", "多久", "时长", "为什么", "原理", "机制", "原因", "怎么回事",
-             "报错", "错误", "失败", "异常", "的", "吗", "呢", "怎么", "如何"}
-    core = [w for w in terms if w not in _STOP] or terms
-    tl = [w.lower() for w in core]
+             "报错", "错误", "失败", "异常", "不通过", "提示", "全部", "所有", "哪些", "哪个",
+             "什么", "如果", "情况下", "先", "再", "然后", "之后", "钉钉", "的", "吗", "呢", "怎么", "如何"}
     docs = load_jsonl("meta/documents.jsonl")
+    corpus = "\n".join((d["title"] + " " + " ".join(d.get("breadcrumb") or []) + " "
+                          + " ".join(d.get("headings") or [])).lower() for d in docs)
+    tl = _tokenize_query(terms, corpus, _STOP)
+    if not tl:
+        tl = [w.lower() for w in terms]
     flags = kb_flags()
     bymap = {d["local_path"]: d for d in docs}
 
     # 1) 五张实体表（匹配逻辑与各子命令一致；此处只收集不打印）
     ent_lines, ent_paths, ent_counts = [], [], {}
     def _hay_api(r):
-        return " ".join(str(r.get(k) or "") for k in ("title", "endpoint", "method")).lower()
+        return " ".join([str(r.get(k) or "") for k in ("title", "endpoint", "method", "permission_raw")]
+                        + list(r.get("permission_scopes") or []) + list(r.get("breadcrumb") or [])).lower()
     _api = load_jsonl("graph/api.jsonl")
-    rows = [r for r in _api if all(w in _hay_api(r) for w in tl)]
-    if not rows and len(tl) > 1:
-        rows = sorted(_api, key=lambda r: -sum(1 for w in tl if w in _hay_api(r)))
-        rows = [r for r in rows if any(w in _hay_api(r) for w in tl)]
-    rows.sort(key=lambda r: (r.get("archived", False), r["title"]))
+    q_join = " ".join(tl)
+    api_scored = []
+    raw_q = " ".join(terms).lower()
+    api_signal = any(k in raw_q for k in ("api", "接口", "endpoint", "http", "请求", "响应", "权限", "access_token"))
+    for r in _api:
+        hay = _hay_api(r)
+        hit = sum(1 for w in tl if w in hay)
+        if not hit:
+            continue
+        title, endpoint = r["title"].lower(), (r.get("endpoint") or "").lower()
+        exact = bool(q_join and (q_join == title or q_join == endpoint))
+        strong_single = any(
+            w in hay and ((re.fullmatch(r"[一-鿿]+", w) and len(w) >= 4)
+                          or (re.fullmatch(r"[a-z0-9_.:/-]+", w) and len(w) >= 6))
+            for w in tl)
+        # 非 API 题里只因“事件/用户/应用”等单个泛词撞中 API 表，不得抢到 find 前面。
+        if not (exact or api_signal or hit >= 2 or strong_single):
+            continue
+        score = hit * 10 + sum(4 for w in tl if w in title) + sum(3 for w in tl if w in endpoint)
+        if any(w == title or w == endpoint for w in tl):
+            score += 500
+        if exact:
+            score += 1000
+        rr = dict(r)
+        rr["_ctx_score"] = score
+        api_scored.append((bool(r.get("archived")), -score, r["title"], r["doc_path"], rr))
+    api_scored.sort()
+    rows = [r for _, _, _, _, r in api_scored]
     ent_counts["api"] = len(rows)
     for r in rows[:6]:
         tag = " ⚠归档" if r.get("archived") else ""
-        perm = f" · 权限:{r['permission']}" if r.get("permission") else ""
+        perm = f" · 权限:{','.join(r.get('permission_scopes') or [])}" if r.get("permission_scopes") else ""
         ent_lines.append(f"[api] {r['title']}{tag} · {(r.get('method') or '?')} {r.get('endpoint') or ''}{perm}\n      {r['doc_path']} · {r['source_url']}")
         ent_paths.append(r["doc_path"])
-    q0 = terms[0]
+    # 自然句里嵌入的错误码/权限点优先做精确实体键，不能拿整句 terms[0] 去等值比较。
+    q0 = next((x for x in tl if x.isdigit() or "." in x), tl[0] if tl else terms[0])
     err_rows = load_jsonl("graph/errcode.jsonl")
     hits = [r for r in err_rows if r["error_code"].lower() == q0.lower()]
     if not hits and q0.isdigit():
@@ -384,8 +515,14 @@ def _ctx_impl(terms, n):
         nhit = sum(1 for w in tl if w in hay)
         if nhit == 0:
             continue
-        # AND 太严(自然问句拆词很难同时命中一篇),改为 OR + 命中词数优先
-        score = nhit * 10 + sum(3 for w in tl if w in title) + sum(2 for w in tl if w in crumb)
+        # AND 太严(自然问句拆词很难同时命中一篇),改为 OR + 命中词数优先。
+        # 枚举题优先汇总/配置页，降权单事件叶子页，避免“有哪些事件”只返回某一个监听 API。
+        score = nhit * 10 + sum(10 for w in tl if w in title) + sum(2 for w in tl if w in crumb)
+        if intent["cross_doc"]:
+            if any(k in title for k in ("配置", "概述", "总览", "说明", "列表", "事件类型")):
+                score += 30
+            if any(title.startswith(k) for k in ("监听", "取消", "创建", "删除", "获取单个")):
+                score -= 8
         tier_rank = 1 if d["local_path"] in flags else 0
         scored.append((-score, tier_rank, d["local_path"], d))
     scored.sort()
@@ -401,8 +538,33 @@ def _ctx_impl(terms, n):
 
     edges = load_jsonl("graph/links.jsonl") if cand else []
 
+    # API 卡片只在“未归档 + full + 首名明显胜出 + 非复杂问法”时替代正文。
+    cards_enabled = (not force_full and os.environ.get("KB_NO_CARDS") != "1")
+    api_top = rows[0] if rows else None
+    api_card = read_api_card(api_top["doc_path"]) if cards_enabled and api_top else None
+    top_score = api_top.get("_ctx_score", 0) if api_top else 0
+    # 归档旧版与现行同标题同分时不算竞争者；现行版已由 archived 排序明确胜出。
+    second_score = next((r.get("_ctx_score", 0) for r in rows[1:]
+                         if bool(r.get("archived")) == bool(api_top.get("archived"))), 0) if api_top else 0
+    confident = top_score >= 1000 or (top_score >= 14 and (not second_score or top_score >= second_score * 1.2))
+    top_hay = _hay_api(api_top) if api_top else ""
+    strong_anchor = top_score >= 1000 or any(
+        w in top_hay and ((re.fullmatch(r"[一-鿿]+", w) and len(w) >= 4)
+                          or (re.fullmatch(r"[a-z0-9_.:/-]+", w) and len(w) >= 6))
+        for w in tl)
+    card_scope = (top_score >= 1000 or any(k in raw_q for k in
+                  ("接口地址", "文档地址", "endpoint", "http method", "请求方式", "请求方法",
+                   "请求头", "请求体", "查询参数", "路径参数", "参数", "字段", "必填",
+                   "返回值", "返回字段", "响应", "权限点", "调用", "用法", "示例")))
+    card_blocked = any(intent.values())
+    card_fast = bool(api_card and api_card["full"] and not api_card.get("archived")
+                     and confident and strong_anchor and card_scope and not card_blocked)
+
     def render(top_k):
         parts = []
+        if card_fast:
+            parts.append("== API答案卡(card:full,首名明确,可直接作答) ==")
+            parts.append(api_card["body"])
         if ent_lines:
             parts.append("== 实体命中 ==")
             parts.extend(ent_lines)
@@ -456,11 +618,14 @@ def _ctx_impl(terms, n):
                 parts.append("\n== 数值/限额专项(问法含数量或时长时自动抽取) ==")
                 parts.extend(lim[:15])
         parts.append("\n== 检索审计 ==")
-        parts.append("已检索: api/err/event/jsapi/perm/find · 关键词: " + " ".join(terms)
-                     + " · 命中: " + " ".join(f"{k}={v}" for k, v in ent_counts.items())
+        parts.append("已检索: card/api/err/event/jsapi/perm/find · 关键词: " + " ".join(terms)
+                     + f" · 命中: card={int(bool(api_card))}(fast={int(card_fast)}) "
+                     + " ".join(f"{k}={v}" for k, v in ent_counts.items())
                      + f" find={len(scored)}")
         parts.append("== 继续 ==")
         tips = ["读候选: dkdoc cat <路径>", "深查: dkdoc links <路径>", "全文兜底: dkdoc grep '<词>'"]
+        if card_fast:
+            tips.insert(0, "API卡为full且首名明确:字段齐全可直接作答,无需cat")
         if intent["support"]:
             tips.append("否定前必看: meta/UNAVAILABLE.md(抓取盲区)+上方相邻篇摘要")
         if intent["error"]:
@@ -481,9 +646,9 @@ def _ctx_impl(terms, n):
         print("== 继续 ==")
         print(f"换同义词重试 ctx；或 dkdoc grep '{' '.join(terms)}'；否定前核对 meta/UNAVAILABLE.md")
         return 1
-    text = render(top_k_default)
+    text = render(0 if card_fast else top_k_default)
     if len(text) > _CTX_TOTAL_CAP:
-        text = render(1)
+        text = render(0 if card_fast else 1)
     if len(text) > _CTX_TOTAL_CAP:
         text = text[:_CTX_TOTAL_CAP] + "\n…[ctx 总量截断，用 dkdoc cat 读完整正文]"
     print(text)
@@ -510,16 +675,22 @@ def main():
     if not argv:
         return usage()
     cmd, terms = argv[0], argv[1:]
+    force_full = False
+    if cmd == "ctx" and "--full" in terms:
+        terms = [x for x in terms if x != "--full"]
+        force_full = True
     # ctx 调用方可能传多参数(ctx a b c)或引号整串(ctx "a b c"),后者不拆词会让
     # 逐词检索退化成整句子串匹配而全部落空(实录:整串222B/0命中 vs 多参数14KB)。
     if cmd == "ctx" and len(terms) == 1:
         terms = [w for w in re.split(r"[\s,，、]+", terms[0]) if w] or terms
+    if cmd == "ctx":
+        return cmd_ctx(terms, n, force_full=force_full)
     if cmd == "where":
         print(ROOT)
         return 0
     table = {"find": cmd_find, "api": cmd_api, "err": cmd_err, "event": cmd_event,
              "jsapi": cmd_jsapi, "perm": cmd_perm, "links": cmd_links, "cat": cmd_cat,
-             "grep": cmd_grep, "ctx": cmd_ctx}
+             "grep": cmd_grep, "card": cmd_card}
     if cmd not in table:
         return usage(f"未知子命令 {cmd}")
     return table[cmd](terms, n)

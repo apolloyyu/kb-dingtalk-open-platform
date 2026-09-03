@@ -130,6 +130,7 @@ def main():
     # ---- 派生层全量重建 ----
     for cmd in (["python3", os.path.join(SCRIPTS, "compile_qa_kb.py")],
                 ["python3", os.path.join(SCRIPTS, "build_qa_index.py")],
+                ["python3", os.path.join(SCRIPTS, "build_cards.py")],
                 ["python3", os.path.join(SCRIPTS, "build_index.py")],
                 ["python3", os.path.join(SCRIPTS, "build_links.py")],
                 ["python3", os.path.join(SCRIPTS, "lint.py")]):

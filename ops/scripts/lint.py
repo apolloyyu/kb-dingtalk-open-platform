@@ -11,6 +11,7 @@
   7. graph/ 表引用的 doc_path 存在（WARN）
   8. meta/kb_manifest.jsonl 与 graph 五表（api/errcode/event/jsapi/permission）与 docs/meta 无漂移
   9. evals/questions.jsonl 的 ref_docs 全部可达（快照重编号的哨兵）
+  10. cards/api 与 graph/api/docs 无漂移，卡片数 >=1200、full >=70%
 
 用法: python3 ops/scripts/lint.py    # 退出码 0=通过（WARN 不算失败）
 """
@@ -74,7 +75,8 @@ def check_generated():
             print(f"  [8b] OK  graph/{fn} {n} 行(≥{floor})")
 
     for name, script in (("[3] index", "build_index.py"), ("[4] graph/links", "build_links.py"),
-                         ("[8] kb_manifest", "compile_qa_kb.py"), ("[8] graph五表", "build_qa_index.py")):
+                         ("[8] kb_manifest", "compile_qa_kb.py"), ("[8] graph五表", "build_qa_index.py"),
+                         ("[10] API cards", "build_cards.py")):
         r = subprocess.run(["python3", os.path.join(SCRIPTS, script), "--check"],
                            capture_output=True, text=True, cwd=ROOT)
         if r.returncode != 0:

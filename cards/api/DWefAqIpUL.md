@@ -1,0 +1,33 @@
+# 保存流程中心外部集成审批任务
+
+doc_id: DWefAqIpUL
+completeness: full
+archived: false
+method: POST
+endpoint: https://api.dingtalk.com/v1.0/workflow/premium/processCentres/tasks
+api_version: v2-new
+app_types: 第三方企业应用
+permissions: Premium.Workflow.ReadWrite.All
+
+## Request headers
+- x-acs-dingtalk-access-token (String, required): 调用该接口的访问凭证，通过以下获取： 企业内部应用，调用获取企业内部应用的accessToken接口获取。 第三方企业应用，调用获取第三方应用授权企业的accessToken接口获取。
+
+## Path params
+- none
+
+## Query params
+- none
+
+## Body
+- processInstanceId (String, required): OA审批流程实例ID，调用创建实例接口获取`processInstanceId`参数值。
+- tasks (Array, required): 任务列表。
+- optional: activityId(String), userId(String), url(String), customData(String), dueTimestamp(Long), featureConfig(Object), features(Array), name(String), pcUrl(String), mobileUrl(String), runType(String), callback(Object), appUuid(String), apiKey(String), version(String), config(String), taskConfig(Object), disableSendCard(Boolean)
+
+## Returns
+- optional: result(Array), taskId(Long), userId(String), success(Boolean)
+
+## Limits
+- none stated
+
+source_url: https://open.dingtalk.com/document/development/api-premiumsaveintegratedtask
+updated_at: 2026-06-03 10:13:01

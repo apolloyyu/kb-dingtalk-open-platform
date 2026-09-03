@@ -24,6 +24,7 @@ import os
 import re
 import subprocess
 import sys
+from urllib.parse import urlsplit
 
 ROOT = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))  # realpath 兼容软链安装
 
@@ -51,6 +52,45 @@ def read_api_card(doc_path):
             "full": hit.get("completeness") == "full" and "\ncompleteness: full\n" in "\n" + body}
 
 
+_INTENT_LABELS = {
+    "why": "因果/机制",
+    "howmany": "数值/限额",
+    "support": "支持性判断",
+    "error": "报错归因",
+    "version": "版本/归档",
+    "cross_doc": "跨文档汇总",
+    "semantic": "条件/流程",
+    "ui": "客户端展示行为",
+    "stage": "跨配置阶段数据流",
+    "id_format": "ID格式/合法性",
+    "lifecycle": "生命周期/触发时机",
+    "enumeration": "枚举/全量列表",
+    "truncated": "输入疑似截断",
+}
+
+
+def _evidence_contract(card=None, intent=None, fast=False):
+    """检索输出的事实边界；不改官方正文，也不把示例外观升级为格式约束。"""
+    intent = intent or {}
+    blocked = [_INTENT_LABELS[k] for k, v in intent.items() if v and k in _INTENT_LABELS]
+    if card and fast:
+        title = card.get("title") or card.get("doc_id") or "当前 API"
+        lines = [f"mode: card-only · card: {title}"]
+    elif card:
+        lines = ["mode: full-context-required · card-only: disabled;以展开正文为证据"]
+    else:
+        lines = ["mode: full-context-required · card: none"]
+    if blocked:
+        lines.append("blocked_by: " + ", ".join(blocked))
+    lines += [
+        "scope: 结论只在当前 source_url 明示的 API、端、阶段、应用类型和版本内有效",
+        "proves: 卡片仅证明列出的 method/endpoint/应用类型/权限/请求头/路径、查询和Body参数/响应字段/必填性/明确限额；正文仅证明其逐字陈述",
+        "not_proved: 未明示的 ID 格式或校验、其他接口/配置阶段的数据流、客户端分栏/排序/展示因果",
+        "rule: 示例值不等于格式规范；字段存在不等于它决定产品行为；未直接证明则写“文档未说明”",
+    ]
+    return "== 证据契约 ==\n" + "\n".join(lines)
+
+
 def cmd_card(terms, n):
     if not terms:
         return usage("card 需要 doc_id、API 标题、endpoint 或 doc_path")
@@ -63,13 +103,21 @@ def cmd_card(terms, n):
             rows.append((exact, r.get("archived", False),
                          r.get("completeness") != "full", r["doc_id"], r))
     shown = 0
-    for *_, r in sorted(rows)[:n]:
+    unique_hit = len(rows) == 1
+    for exact, *_, r in sorted(rows)[:n]:
         p = os.path.join(ROOT, r["path"])
         if not os.path.exists(p):
             continue
         if shown:
             print("\n---\n")
-        print(open(p, encoding="utf-8", errors="replace").read().rstrip())
+        body = open(p, encoding="utf-8", errors="replace").read()
+        print(body.rstrip())
+        # 模糊子串多命中说明查询没锚定到具体 API；此时卡片只是候选线索，
+        # 不得声明 card-only 直答（实录：`card 用户` 命中一串无关接口全标可直答）。
+        anchored = exact == 0 or unique_hit
+        direct = (anchored and r.get("completeness") == "full" and not r.get("archived")
+                  and "\ncompleteness: full\n" in "\n" + body)
+        print("\n" + _evidence_contract(r, fast=direct))
         shown += 1
     if not shown:
         print(f"API 答案卡无命中: {q};用 dkdoc api/find 或 ctx --full 查原文")
@@ -99,6 +147,36 @@ def resolve_doc(query, docs=None):
     if len(hits) == 1:
         return hits[0], None
     return None, hits
+
+
+def _normalized_source_url(value):
+    value = str(value or "").strip().rstrip(".,;，。；)]}】")
+    if not value:
+        return ""
+    try:
+        parsed = urlsplit(value)
+    except ValueError:
+        return ""
+    if not parsed.scheme or not parsed.netloc:
+        return ""
+    return f"{parsed.scheme.lower()}://{parsed.netloc.lower()}{parsed.path.rstrip('/')}"
+
+
+def _source_doc_hint(query, docs):
+    """用户贴 source_url（即使带 query/fragment）时，确定性锚定对应文档。"""
+    by_url = {_normalized_source_url(d.get("source_url")): d for d in docs if d.get("source_url")}
+    by_slug = {str(d.get("slug") or "").lower(): d for d in docs if d.get("slug")}
+    for raw in re.findall(r"https?://[^\s<>\"']+", query, re.I):
+        normalized = _normalized_source_url(raw)
+        if normalized in by_url:
+            return by_url[normalized]
+        try:
+            slug = urlsplit(raw.rstrip(".,;，。；)]}】")).path.rstrip("/").rsplit("/", 1)[-1].lower()
+        except ValueError:
+            slug = ""
+        if slug in by_slug:
+            return by_slug[slug]
+    return None
 
 
 def print_doc_hit(d, flags, indent="  "):
@@ -335,21 +413,56 @@ _CTX_BODY_CAP = 8000     # 单篇正文上限(字符)
 _CTX_TOTAL_CAP = 20000   # 总输出上限(字符)
 
 
+def _looks_truncated_input(q):
+    """保守识别未闭合代码/报文或只贴片段未提出问题；只用于禁止 card-only。"""
+    s = q.strip()
+    codeish = any(k in s.lower() for k in
+                  ("{", "[", "```", "json", "curl", "payload", "request", "response",
+                   "userid", "unionid", "access_token", "header", "body", "msg", "param"))
+    if not codeish:
+        return False
+    if any(s.count(left) != s.count(right) for left, right in (("{", "}"), ("[", "]"), ("(", ")"))):
+        return True
+    if s.count('"') % 2 or s.count("`") % 2:
+        return True
+    if s.endswith((",", "，", ":", "：", "{", "[", "(", "\\", "...", "…")):
+        return True
+    question_signal = any(k in s.lower() for k in
+                          ("?", "？", "吗", "呢", "为什么", "怎么", "如何", "是否", "能否", "请", "帮我", "报错", "错误"))
+    structured_fragment = any(k in s for k in ("{", "[", "```", "\":", "'=", "=>", "="))
+    return structured_fragment and not question_signal
+
+
 def _intent(terms):
-    """问法预判：决定答案卡能否独立覆盖；复杂题继续带正文与相邻篇。"""
+    """问法预判：决定答案卡能否独立覆盖；高风险题必须带正文与相邻篇。"""
     q = " ".join(terms).lower()
     support = (any(k in q for k in ("支持", "有没有", "有吗", "能不能", "可以吗", "是否", "会不会", "能否"))
                or bool(re.search(r"(?:能|可以).{0,3}(?:获取|查询|查看|拿到|做到|实现|解析|发送|创建|删除|使用|读取)", q)))
+    has_id = "id" in q or any(k in q for k in ("标识", "实例号", "用户号", "会话号"))
+    id_judgment = any(k in q for k in
+                      ("格式", "合法", "有效", "无效", "正确", "长度", "前缀", "纯数字", "字符集", "uuid", "看起来像", "是不是"))
     return {
-        "why":     any(k in q for k in ("为什么", "原理", "机制", "不一致", "冲突", "怎么回事", "原因", "逻辑", "源码")),
+        "why":     any(k in q for k in ("为什么", "原理", "机制", "不一致", "冲突", "怎么回事", "原因", "逻辑", "源码", "导致", "因为什么")),
         "howmany": any(k in q for k in ("多少", "上限", "限制", "有效期", "时效", "时效性", "过期", "配额", "频率", "几个", "多久", "时长")),
         "support": support,
-        "error":   (any(k in q for k in ("报错", "错误", "失败", "异常", "errcode", "不通过", "提示", "无权限"))
+        "error":   (any(k in q for k in ("报错", "错误", "失败", "异常", "errcode", "不通过", "提示", "无权限", "param_error"))
                     or bool(re.search(r"\b(error|failed|exception|denied)\b", q))),
         "version": any(k in q for k in ("版本", "归档", "下线", "兼容", "灰度", "什么时候上线")),
-        "cross_doc": any(k in q for k in ("全部接口", "所有接口", "有哪些接口", "哪些接口", "有哪些事件", "全部事件")),
-        "semantic": any(k in q for k in ("如果", "情况下", "先", "再", "然后", "之后", "只是", "还是", "区别", "影响",
-                                             "怎么开通", "如何开通", "怎么申请", "如何申请", "添加权限", "配置权限", "授权")),
+        "cross_doc": any(k in q for k in ("全部接口", "所有接口", "有哪些接口", "哪些接口", "有哪些事件", "全部事件", "全量")),
+        "semantic": (any(k in q for k in ("如果", "情况下", "先", "再", "然后", "之后", "只是", "还是", "区别", "影响",
+                                              "如何在", "怎么在", "流程", "步骤", "怎么实现", "如何实现",
+                                              "怎么开通", "如何开通", "怎么申请", "如何申请", "添加权限", "配置权限", "授权"))
+                     # 「如何使用/怎么调用/怎样接入」是流程题，即使带 source_url 强锚点
+                     # 也必须展开正文示例，不得 card-only（实录：贴 URL 问用法只回卡片字段）。
+                     or bool(re.search(r"(?:怎么|如何|怎样)\s*(?:用|使用|调用|接入|集成|对接)", q))),
+        "ui": any(k in q for k in ("客户端", "分栏", "tab", "排序", "置顶", "展示算法", "展示逻辑", "优先处理", "待我处理", "红点", "推荐")),
+        "stage": any(k in q for k in ("鉴权阶段", "鉴权请求", "执行动作", "入参映射", "出入参配置", "自动注入", "运行时注入",
+                                              "$.body", "$.header", "上文节点", "跨阶段")),
+        "id_format": has_id and id_judgment,
+        "lifecycle": any(k in q for k in ("生命周期", "触发时机", "触发顺序", "回调时机", "何时触发", "何时失效", "什么时候失效")),
+        "enumeration": any(k in q for k in ("列出", "枚举", "有哪些", "哪些", "全部", "所有", "分别是什么", "支持以下", "事件列表", "生命周期函数",
+                                                  "可选值", "取值范围", "枚举值", "有效值", "合法值", "都有什么")),
+        "truncated": _looks_truncated_input(q),
     }
 
 
@@ -373,6 +486,13 @@ def _tokenize_query(terms, corpus, stop):
             if low in stop:
                 continue
             if re.fullmatch(r"[a-zA-Z0-9_.:/-]+", token):
+                # JSON 标点、布尔值与 source_url 不是实体词；":" 曾导致每个 endpoint 都命中。
+                if not re.search(r"[a-z0-9]", low):
+                    continue
+                if low in {"true", "false", "null", "none", "debug", "http", "https"}:
+                    continue
+                if low.startswith(("http://", "https://")):
+                    continue
                 out.append(_QUERY_ALIASES.get(low, low))
                 continue
             covered = [False] * len(token)
@@ -413,6 +533,7 @@ def _tokenize_query(terms, corpus, stop):
 def _ctx_impl(terms, n, force_full=False):
     if not terms:
         return usage("ctx 需要至少一个关键词")
+    raw_query = " ".join(terms)
     intent = _intent(terms)
     # 问法虚词不参与检索(用户自然问句里的"支持/多少/为什么"是意图信号,不是实体词)
     _STOP = {"支持", "有没有", "有吗", "能不能", "可以吗", "是否", "多少", "上限", "限制", "有效期",
@@ -420,43 +541,63 @@ def _ctx_impl(terms, n, force_full=False):
              "报错", "错误", "失败", "异常", "不通过", "提示", "全部", "所有", "哪些", "哪个",
              "什么", "如果", "情况下", "先", "再", "然后", "之后", "钉钉", "的", "吗", "呢", "怎么", "如何"}
     docs = load_jsonl("meta/documents.jsonl")
+    doc_hint = _source_doc_hint(raw_query, docs)
     corpus = "\n".join((d["title"] + " " + " ".join(d.get("breadcrumb") or []) + " "
                           + " ".join(d.get("headings") or [])).lower() for d in docs)
     tl = _tokenize_query(terms, corpus, _STOP)
     if not tl:
-        tl = [w.lower() for w in terms]
+        tl = [w.lower() for w in terms if re.search(r"[a-zA-Z0-9一-鿿]", w)]
+    if doc_hint:
+        hint_terms = [str(doc_hint.get("title") or "").lower(), str(doc_hint.get("slug") or "").lower()]
+        tl = list(dict.fromkeys([x for x in hint_terms + tl if x]))
     flags = kb_flags()
     bymap = {d["local_path"]: d for d in docs}
 
     # 1) 五张实体表（匹配逻辑与各子命令一致；此处只收集不打印）
     ent_lines, ent_paths, ent_counts = [], [], {}
     def _hay_api(r):
-        return " ".join([str(r.get(k) or "") for k in ("title", "endpoint", "method", "permission_raw")]
+        return " ".join([str(r.get(k) or "") for k in
+                         ("title", "endpoint", "method", "permission_raw", "source_url", "doc_path")]
                         + list(r.get("permission_scopes") or []) + list(r.get("breadcrumb") or [])).lower()
     _api = load_jsonl("graph/api.jsonl")
-    q_join = " ".join(tl)
+    api_weak = {"设置", "请求", "请求参数", "参数", "执行", "执行动作", "动作", "获取", "相关",
+                "需要", "配置", "映射", "规则", "编写", "代码", "流程", "步骤", "信息", "应用", "用户"}
+    api_terms = [w for w in tl if w not in api_weak]
+    q_join = " ".join(api_terms)
     api_scored = []
-    raw_q = " ".join(terms).lower()
-    api_signal = any(k in raw_q for k in ("api", "接口", "endpoint", "http", "请求", "响应", "权限", "access_token"))
+    raw_q = raw_query.lower()
+    hard_api_signal = any(k in raw_q for k in
+                          ("api", "接口", "endpoint", "接口地址", "请求地址", "请求方式", "请求方法",
+                           "权限点", "api.dingtalk.com", "oapi.dingtalk.com"))
+    api_signal = hard_api_signal or "access_token" in raw_q
+    guide_query = intent["stage"] or (intent["semantic"] and not hard_api_signal)
+    if guide_query and not hard_api_signal:
+        api_signal = False
+    hint_path = doc_hint.get("local_path") if doc_hint else ""
     for r in _api:
+        hinted = bool(hint_path and r.get("doc_path") == hint_path)
+        if hint_path and not hinted:
+            continue
         hay = _hay_api(r)
-        hit = sum(1 for w in tl if w in hay)
-        if not hit:
+        hit = sum(1 for w in api_terms if w in hay)
+        if not hit and not hinted:
             continue
         title, endpoint = r["title"].lower(), (r.get("endpoint") or "").lower()
         exact = bool(q_join and (q_join == title or q_join == endpoint))
         strong_single = any(
             w in hay and ((re.fullmatch(r"[一-鿿]+", w) and len(w) >= 4)
                           or (re.fullmatch(r"[a-z0-9_.:/-]+", w) and len(w) >= 6))
-            for w in tl)
-        # 非 API 题里只因“事件/用户/应用”等单个泛词撞中 API 表，不得抢到 find 前面。
-        if not (exact or api_signal or hit >= 2 or strong_single):
+            for w in api_terms)
+        # 指南/流程题不能因“请求参数/配置/获取”等泛词被 API 表抢走；source_url 精确锚点例外。
+        if not (hinted or exact or api_signal or hit >= 2 or strong_single):
             continue
-        score = hit * 10 + sum(4 for w in tl if w in title) + sum(3 for w in tl if w in endpoint)
-        if any(w == title or w == endpoint for w in tl):
+        score = hit * 10 + sum(4 for w in api_terms if w in title) + sum(3 for w in api_terms if w in endpoint)
+        if any(w == title or w == endpoint for w in api_terms):
             score += 500
         if exact:
             score += 1000
+        if hinted:
+            score += 5000
         rr = dict(r)
         rr["_ctx_score"] = score
         api_scored.append((bool(r.get("archived")), -score, r["title"], r["doc_path"], rr))
@@ -504,37 +645,134 @@ def _ctx_impl(terms, n, force_full=False):
         hint = f" · 如 {apis[0]['title']} {apis[0]['doc_path']}" if apis else ""
         ent_lines.append(f"[perm] {r['permission_scope']} · 覆盖 {r['api_count']} 个接口{hint}")
 
-    # 2) find 篇目（排序逻辑与 cmd_find 一致）
-    scored = []
+    # 2) find 篇目（排序逻辑与 cmd_find 一致；跨阶段题额外核对连接平台正文）
+    stage_concepts = []
+    if intent["stage"]:
+        for concept, weight in (("鉴权请求参数", 100), ("执行动作", 100),
+                                ("入参映射", 70), ("映射", 50), ("鉴权", 30), ("参数", 10)):
+            if concept in raw_q:
+                stage_concepts.append((concept, weight))
+    scored, doc_nhit = [], {}
     for d in docs:
         title = d["title"].lower()
         crumb = " ".join(d.get("breadcrumb") or []).lower()
         rest = (" ".join(d.get("headings") or []) + " " + d.get("snippet", "") + " "
                 + d.get("slug", "") + " " + os.path.basename(d["local_path"])).lower()
         hay = " ".join((title, crumb, rest))
+        stage_body = ""
+        if stage_concepts and d["local_path"].startswith("docs/02-连接平台/"):
+            try:
+                stage_body = open(os.path.join(ROOT, d["local_path"]), encoding="utf-8", errors="ignore").read().lower()
+            except OSError:
+                stage_body = ""
         nhit = sum(1 for w in tl if w in hay)
         if nhit == 0:
             continue
         # AND 太严(自然问句拆词很难同时命中一篇),改为 OR + 命中词数优先。
         # 枚举题优先汇总/配置页，降权单事件叶子页，避免“有哪些事件”只返回某一个监听 API。
         score = nhit * 10 + sum(10 for w in tl if w in title) + sum(2 for w in tl if w in crumb)
+        if doc_hint and d["local_path"] == doc_hint["local_path"]:
+            score += 10000
+        if stage_concepts:
+            if "连接平台" in crumb:
+                score += 20
+            stage_text = stage_body or hay
+            for concept, weight in stage_concepts:
+                if concept in stage_text:
+                    score += weight
+                if concept in title:
+                    score += weight // 2
+            if "鉴权" in raw_q and "获取" in raw_q and "参数" in raw_q \
+                    and any(k in stage_body for k in ("$.body", "$.header")):
+                score += 120
+            # 通用流程题不让官方模板/三方教程凭共享标题抢走基础参考文档；点名模板时不降权。
+            title_terms = re.findall(r"[a-z0-9]+|[一-鿿]{2,}", title)
+            named = any(t in raw_q for t in title_terms if len(t) >= 2)
+            if any(k in crumb for k in ("官方模板鉴权", "三方连接器")) and not named:
+                score -= 80
         if intent["cross_doc"]:
             if any(k in title for k in ("配置", "概述", "总览", "说明", "列表", "事件类型")):
                 score += 30
             if any(title.startswith(k) for k in ("监听", "取消", "创建", "删除", "获取单个")):
                 score -= 8
+        if d["local_path"] in flags and not intent["version"]:
+            score -= 100
         tier_rank = 1 if d["local_path"] in flags else 0
+        doc_nhit[d["local_path"]] = nhit
         scored.append((-score, tier_rank, d["local_path"], d))
     scored.sort()
+    ranked_docs = [d for _, _, _, d in scored]
+    # 归档降权只为防旧版顶掉同主题现行版；但当问题的某个实体词（域限定词，如
+    # 「小程序」）在现行区 top 候选的标题/面包屑里整体缺席、只有归档篇覆盖时，
+    # 埋掉归档篇=换域强答（实录 Q147：小程序 Page 事件被事件订阅文档顶掉）。
+    # 此时把最强归档篇提回首位，⚠归档 标签保留，由模型按归档纪律声明时效。
+    if scored and not intent["version"] and len(tl) >= 2:
+        _tc = lambda d: (d["title"] + " " + " ".join(d.get("breadcrumb") or [])).lower()
+        act_top = [d for _, t, _, d in scored if t == 0][:8]
+        best_active_score = next((-s for s, t, _, _ in scored if t == 0), 0)
+        lost = [w for w in tl if len(w) >= 2 and not any(w in _tc(d) for d in act_top)]
+        arch_entry = next(((-s + 100, d) for s, t, _, d in scored
+                           if t == 1 and any(w in _tc(d) for w in lost)), None) if lost else None
+        if arch_entry and arch_entry[0] >= best_active_score:
+            ranked_docs.remove(arch_entry[1])
+            ranked_docs.insert(0, arch_entry[1])
+            scored.insert(0, (-(arch_entry[0]), 0, arch_entry[1]["local_path"], arch_entry[1]))
+    stage_reps = []
+    if intent["stage"]:
+        if "执行动作" in raw_q:
+            execution = [d for d in ranked_docs if "执行动作" in d["title"]]
+            if "映射" in raw_q or "参数" in raw_q:
+                execution.sort(key=lambda d: (not any(k in d["title"] for k in ("入参", "映射")),
+                                              ranked_docs.index(d)))
+            if execution:
+                stage_reps.append(execution[0])
+        if "鉴权" in raw_q:
+            auth = [d for d in ranked_docs if "鉴权" in d["title"] and d["local_path"] not in flags]
+            if auth:
+                stage_reps.append(auth[0])
+    flow_reps = []
+    auth_flow = intent["semantic"] and not intent["stage"] and any(
+        k in raw_q for k in ("免登", "oauth", "鉴权", "登录"))
+    if auth_flow:
+        active_docs = [d for d in ranked_docs if d["local_path"] not in flags]
+        if active_docs:
+            flow_reps.append(active_docs[0])
+        token_doc = next((d for d in active_docs if any(k in d["title"].lower()
+                                                        for k in ("token", "access", "凭证"))), None)
+        identity_doc = next((d for d in active_docs if any(k in d["title"]
+                                                           for k in ("用户信息", "身份信息", "用户身份"))), None)
+        if token_doc:
+            flow_reps.append(token_doc)
+        if identity_doc:
+            flow_reps.append(identity_doc)
+    # 「XX 权限怎么开通/申请」的操作路径在通用指南「添加接口调用权限」里；
+    # 权限点实体命中只证明权限存在，答不出开通入口，须机械补入该篇（slug 定位，非猜测）。
+    if "权限" in raw_q and any(k in raw_q for k in ("开通", "申请", "添加", "获取", "授权", "配置")):
+        perm_guide = next((d for d in docs if d.get("slug") == "add-api-permission"), None)
+        if perm_guide and perm_guide not in flow_reps:
+            flow_reps.append(perm_guide)
 
-    # 3) 候选合并：实体指向的文档优先，其后按 find 得分
+    # 3) 候选合并：显式 source_url 永远第一；流程题先覆盖教程、凭证和身份等阶段，再补相关正文。
     cand, seen = [], set()
-    for p in ent_paths:
-        if p in bymap and p not in seen:
-            cand.append(bymap[p]); seen.add(p)
-    for _, _, _, d in scored:
-        if d["local_path"] not in seen:
-            cand.append(d); seen.add(d["local_path"])
+    def add_doc(d):
+        if d and d["local_path"] not in seen:
+            cand.append(d)
+            seen.add(d["local_path"])
+    add_doc(doc_hint)
+    for d in stage_reps:
+        add_doc(d)
+    for d in flow_reps:
+        add_doc(d)
+    if guide_query or intent["cross_doc"] or intent["enumeration"]:
+        for _, _, _, d in scored:
+            add_doc(d)
+        for p in ent_paths:
+            add_doc(bymap.get(p))
+    else:
+        for p in ent_paths:
+            add_doc(bymap.get(p))
+        for _, _, _, d in scored:
+            add_doc(d)
 
     edges = load_jsonl("graph/links.jsonl") if cand else []
 
@@ -551,7 +789,7 @@ def _ctx_impl(terms, n, force_full=False):
     strong_anchor = top_score >= 1000 or any(
         w in top_hay and ((re.fullmatch(r"[一-鿿]+", w) and len(w) >= 4)
                           or (re.fullmatch(r"[a-z0-9_.:/-]+", w) and len(w) >= 6))
-        for w in tl)
+        for w in api_terms)
     card_scope = (top_score >= 1000 or any(k in raw_q for k in
                   ("接口地址", "文档地址", "endpoint", "http method", "请求方式", "请求方法",
                    "请求头", "请求体", "查询参数", "路径参数", "参数", "字段", "必填",
@@ -559,12 +797,21 @@ def _ctx_impl(terms, n, force_full=False):
     card_blocked = any(intent.values())
     card_fast = bool(api_card and api_card["full"] and not api_card.get("archived")
                      and confident and strong_anchor and card_scope and not card_blocked)
+    # 审计必须能区分「意图阻断」与「人为关卡」：--full/KB_NO_CARDS 下 card=0 却报
+    # blocked=none 会被误读成"本可 fast 而未 fast"。
+    blocked_reasons = [k for k, v in intent.items() if v]
+    if force_full:
+        blocked_reasons.append("forced_full")
+    elif os.environ.get("KB_NO_CARDS") == "1":
+        blocked_reasons.append("cards_disabled")
+    blocked_audit = ",".join(blocked_reasons) or "none"
 
     def render(top_k):
         parts = []
         if card_fast:
             parts.append("== API答案卡(card:full,首名明确,可直接作答) ==")
             parts.append(api_card["body"])
+        parts.append(_evidence_contract(api_card, intent, card_fast))
         if ent_lines:
             parts.append("== 实体命中 ==")
             parts.extend(ent_lines)
@@ -621,7 +868,7 @@ def _ctx_impl(terms, n, force_full=False):
         parts.append("已检索: card/api/err/event/jsapi/perm/find · 关键词: " + " ".join(terms)
                      + f" · 命中: card={int(bool(api_card))}(fast={int(card_fast)}) "
                      + " ".join(f"{k}={v}" for k, v in ent_counts.items())
-                     + f" find={len(scored)}")
+                     + f" find={len(scored)} · card_blocked={blocked_audit}")
         parts.append("== 继续 ==")
         tips = ["读候选: dkdoc cat <路径>", "深查: dkdoc links <路径>", "全文兜底: dkdoc grep '<词>'"]
         if card_fast:
@@ -633,22 +880,30 @@ def _ctx_impl(terms, n, force_full=False):
         parts.append(" · ".join(tips))
         return "\n".join(parts)
 
-    # 分层瘦身:实体表已精确命中时,简单题不需要两篇全文——1 篇+更小截断即可
+    # 简单实体题只带一篇；流程/跨阶段/汇总题需同时展开 2-3 篇，避免单 API 片段冒充完整流程。
     ent_total = sum(ent_counts.values())
     global _CTX_BODY_CAP
-    top_k_default = 1 if ent_total >= 1 else 2
-    if ent_total >= 1:
+    multi_doc = intent["stage"] or intent["semantic"] or intent["cross_doc"] or intent["enumeration"]
+    top_k_default = 3 if multi_doc else (1 if ent_total >= 1 else 2)
+    if ent_total >= 1 or multi_doc:
         _CTX_BODY_CAP = 5000
 
     if not cand and not ent_lines:
+        print(_evidence_contract(None, intent, False))
         print("== 检索审计 ==")
-        print("已检索: api/err/event/jsapi/perm/find · 关键词: " + " ".join(terms) + " · 命中: 0")
+        print("已检索: api/err/event/jsapi/perm/find · 关键词: " + " ".join(terms)
+              + f" · 命中: 0 · card_blocked={blocked_audit}")
         print("== 继续 ==")
         print(f"换同义词重试 ctx；或 dkdoc grep '{' '.join(terms)}'；否定前核对 meta/UNAVAILABLE.md")
         return 1
     text = render(0 if card_fast else top_k_default)
-    if len(text) > _CTX_TOTAL_CAP:
-        text = render(0 if card_fast else 1)
+    # 超限时先压单篇正文，再降篇数；流程/跨阶段题保底 2 篇——降到 1 篇会丢配置阶段，
+    # 拿单篇冒充完整流程（实录 Q75：正确的执行动作/鉴权文档被挤出正文位）。
+    if len(text) > _CTX_TOTAL_CAP and not card_fast:
+        _CTX_BODY_CAP = 3000
+        text = render(top_k_default)
+    if len(text) > _CTX_TOTAL_CAP and not card_fast:
+        text = render(2 if multi_doc else 1)
     if len(text) > _CTX_TOTAL_CAP:
         text = text[:_CTX_TOTAL_CAP] + "\n…[ctx 总量截断，用 dkdoc cat 读完整正文]"
     print(text)

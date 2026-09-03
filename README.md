@@ -28,6 +28,16 @@ python3 <路径>/bin/dkdoc err invalidDept        # 查错误码（未命中自�
 python3 <路径>/bin/dkdoc cat <路径|slug>        # 读正文
 ```
 
+### `ctx` 的证据契约与安全路由
+
+`ctx` 每次都会先输出「证据契约」，明确当前上下文能证明什么、不能证明什么：
+
+- 只有非归档 full 卡、首名强锚定，且索引和卡片正文都含 `completeness: full` 时才输出 `mode: card-only`；它仅覆盖卡内列出的 method、endpoint、应用类型、权限、请求头、路径/查询/Body 参数、响应字段、必填性和明确限额。
+- 因果/机制、数值、支持性、报错、版本、跨文档、流程、客户端展示、跨配置阶段、ID 格式、生命周期、枚举及疑似截断输入会自动变为 `mode: full-context-required`，并在审计行以 `card_blocked=` 说明原因。
+- 用户直接贴官方 `source_url` 时，即使 URL 带 query 或 fragment，也会优先锚定对应正文，避免 URL、标点或布尔参数污染实体检索。
+- 流程、跨阶段和多步骤问题会展开 2–3 篇代表正文，例如教程、凭证获取和身份换取，避免从单一接口外推完整流程。
+- 统一边界是：示例值不等于格式规范；字段存在不等于字段决定产品行为；不得跨 API、端、配置阶段、应用类型或版本外推，文档未直接证明就写“文档未说明”。
+
 ## 目录结构
 
 ```
@@ -77,7 +87,7 @@ python3 ops/scripts/diff_snapshot.py <新快照目录> --apply         # 3. 换�
 #  5. git commit —— diff 天然暴露本次快照的全部增删改
 ```
 
-完整协议（五条原则、变更决策表、新鲜度验收清单）见 [ops/INGEST.md](ops/INGEST.md)；日常体检 `python3 ops/scripts/lint.py`（7 项只读检查）。
+完整协议（五条原则、变更决策表、新鲜度验收清单）见 [ops/INGEST.md](ops/INGEST.md)；日常体检 `python3 ops/scripts/lint.py`（11 项只读检查，含 `dkdoc ctx` 快路径与证据契约回归）。
 
 ## 边界
 

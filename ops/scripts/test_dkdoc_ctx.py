@@ -146,6 +146,22 @@ def main():
     out = run("ctx", "通过免登码获取用户信息的接口地址和必填参数是什么")
     check("card=1(fast=1)" in out, "IDF/标识符索引改动后简单强锚点 API 题失去快路径")
 
+    out = run("ctx", "如何获取钉钉群消息的聊天图片")
+    check("messageFiles/download" in out or "downloadCode" in out,
+          "概念别名(聊天图片→downloadCode)未把机器人接收消息/文件下载文档带入上下文")
+    out = run("ctx", "钉钉知识库正文是否有接口")
+    check("否定前必读" in out and "块元素" in out.split("== 证据契约 ==", 1)[0],
+          "支持性题未前置存在性清单或未命中查询块元素")
+    out = run("ctx", "钉钉小程序 离开页面二次确认")
+    check("archived_only" in out and "离开二次确认配置" in out,
+          "归档独有主题未提示「归档页即依据」")
+    out = run("ctx", "机器人发送单聊消息给用户的文档,参数有哪些")
+    check("API参数卡" in out and "msgParam" in out,
+          "参数枚举题未附教程正链 API 参数卡(msgParam 缺失)")
+    out = run("ctx", "https://open.dingtalk.com/document/development/user-information-update?debug=true\n这个接口的 \"dept_position_list\": [\n739566083,\n\"资深产品经理\"\n]")
+    check("card=1(fast=0)" in out and "payload" in out,
+          "用户贴出闭合 JSON 报文仍走 card-only")
+
     out = run("card", "H2mylS6eke")
     check("completeness: full" in out and "== 证据契约 ==" in out,
           "card 子命令未保留完整性并追加证据契约")

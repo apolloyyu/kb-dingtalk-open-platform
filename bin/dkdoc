@@ -66,6 +66,7 @@ _INTENT_LABELS = {
     "lifecycle": "生命周期/触发时机",
     "enumeration": "枚举/全量列表",
     "truncated": "输入疑似截断",
+    "payload": "用户贴出报文/代码",
 }
 
 
@@ -472,13 +473,17 @@ def _looks_truncated_input(q):
 def _intent(terms):
     """问法预判：决定答案卡能否独立覆盖；高风险题必须带正文与相邻篇。"""
     q = " ".join(terms).lower()
-    support = (any(k in q for k in ("支持", "有没有", "有吗", "能不能", "可以吗", "是否", "会不会", "能否"))
+    support = (any(k in q for k in ("支持", "有没有", "有吗", "能不能", "可以吗", "是否", "会不会", "能否",
+                                    "是不是", "对吗", "对不对", "拉不到", "拿不到", "收不到", "查不到", "有接口"))
+               or bool(re.search(r"不是.{0,15}(?:吗|吧)|一样(?:吗|吧)", q))
                or bool(re.search(r"(?:能|可以).{0,3}(?:获取|查询|查看|拿到|做到|实现|解析|发送|创建|删除|使用|读取)", q)))
     has_id = "id" in q or any(k in q for k in ("标识", "实例号", "用户号", "会话号"))
     id_judgment = any(k in q for k in
                       ("格式", "合法", "有效", "无效", "正确", "长度", "前缀", "纯数字", "字符集", "uuid", "看起来像", "是不是"))
     return {
-        "why":     any(k in q for k in ("为什么", "原理", "机制", "不一致", "冲突", "怎么回事", "原因", "逻辑", "源码", "导致", "因为什么")),
+        "why":     any(k in q for k in ("为什么", "原理", "机制", "不一致", "冲突", "怎么回事", "原因", "逻辑", "源码", "导致", "因为什么",
+                                             "多个", "都能", "都会", "同时", "每个", "各自")),
+
         "howmany": any(k in q for k in ("多少", "上限", "限制", "有效期", "时效", "时效性", "过期", "配额", "频率", "几个", "多久", "时长")),
         "support": support,
         "error":   (any(k in q for k in ("报错", "错误", "失败", "异常", "errcode", "不通过", "提示", "无权限", "param_error"))
@@ -499,6 +504,9 @@ def _intent(terms):
         "enumeration": any(k in q for k in ("列出", "枚举", "有哪些", "哪些", "全部", "所有", "分别是什么", "支持以下", "事件列表", "生命周期函数",
                                                   "可选值", "取值范围", "枚举值", "有效值", "合法值", "都有什么")),
         "truncated": _looks_truncated_input(q),
+        # 贴了 JSON/报文(哪怕闭合)就是在核对自己的 payload:嵌套类型的子字段只在正文表格里,
+        # 卡片只有一行 `DeptPosition[]`,card-only 会逼模型臆测子字段(实录 Q65)。
+        "payload": bool(re.search(r"[{\[]\s*\n|\n\s*[}\]]|```|\"\w+\"\s*:", " ".join(terms))),
     }
 
 
@@ -511,6 +519,15 @@ def _limit_lines(body, n=12):
 
 _QUERY_ALIASES = {"page": "页面", "pages": "页面", "event": "事件", "events": "事件",
                   "permission": "权限", "permissions": "权限", "user": "用户"}
+# 概念→实现名:用户描述的是现象("群里的聊天图片"),文档标题用的是实现名(downloadCode/接收消息)。
+# 标题层检索永远对不上,正文标识符索引又只认 ASCII,故用一张小词典把现象词翻成可命中的实现词
+# (实录 Q28/29/30 三题全部命中归档"获取企业聊天数据";Q37"知识库正文"对应"查询块元素")。
+_CONCEPT_ALIASES = {
+    "聊天图片": ["downloadcode", "接收消息"], "群图片": ["downloadcode", "接收消息"],
+    "消息图片": ["downloadcode", "接收消息"], "图片消息": ["downloadcode", "接收消息"],
+    "聊天记录图片": ["downloadcode", "接收消息"], "聊天文件": ["downloadcode", "接收消息"],
+    "文档正文": ["块元素"], "知识库正文": ["块元素"], "文档内容": ["块元素"], "读取正文": ["块元素"],
+}
 
 
 def _tokenize_query(terms, corpus, stop):
@@ -583,6 +600,10 @@ def _ctx_impl(terms, n, force_full=False):
     tl = _tokenize_query(terms, corpus, _STOP)
     if not tl:
         tl = [w.lower() for w in terms if re.search(r"[a-zA-Z0-9一-鿿]", w)]
+    raw_low = raw_query.lower()
+    for concept, impl in _CONCEPT_ALIASES.items():
+        if concept in raw_low:
+            tl = list(dict.fromkeys(tl + impl))
     if doc_hint:
         hint_terms = [str(doc_hint.get("title") or "").lower(), str(doc_hint.get("slug") or "").lower()]
         tl = list(dict.fromkeys([x for x in hint_terms + tl if x]))
@@ -859,12 +880,39 @@ def _ctx_impl(terms, n, force_full=False):
         blocked_reasons.append("cards_disabled")
     blocked_audit = ",".join(blocked_reasons) or "none"
 
+    archived_first = bool(cand) and cand[0]["local_path"] in flags
+
     def render(top_k):
         parts = []
+        # 支持性/枚举题:先看到"库里有什么",再决定能不能说"没有"(实录 Q28-30/Q37/Q143 均为
+        # 正解在候选里却答"无此接口/文档未收录")。清单来自已算好的实体命中与篇目命中,不加检索。
+        if (intent["support"] or intent["enumeration"] or intent["cross_doc"]) and (ent_lines or cand):
+            parts.append("== 否定前必读：本轮命中的相关接口/文档（说「没有/未收录/不支持」前须逐条说明为何不满足所问）==")
+            parts.extend(ent_lines[:8])
+            for d in cand[:5]:
+                tag = " " + flags.get(d["local_path"], "") if flags.get(d["local_path"]) else ""
+                parts.append(f"[doc] {d['title']}{tag} · {' › '.join(d.get('breadcrumb') or [])[:40]} · {d['source_url']}")
+            parts.append("(以上为实体表/篇目精确命中，存在即事实；未列出≠不存在，仍须 find 换词再查后才可否定)")
         if card_fast:
             parts.append("== API答案卡(card:full,首名明确,可直接作答) ==")
             parts.append(api_card["body"])
+        elif intent["enumeration"] or "参数" in raw_q or "字段" in raw_q:
+            # 参数/字段枚举题:卡片是官方参数表的紧凑投影,正文 3500 上限常切掉表格尾部(实录 Q53)。
+            # API 表未激活时(问法无"接口"字样)退而取首篇正文对应的卡;卡片不直答,只作证据。
+            # 首篇是教程页时,参数表在它正链指向的 API 文档里(实录 Q53:教程页→批量发送单聊消息 API)。
+            evidence_card = api_card or (read_api_card(cand[0]["local_path"]) if cand else None)
+            if not evidence_card and cand:
+                for e in [e for e in edges if e["from"] == cand[0]["local_path"]][:10]:
+                    c = read_api_card(e["to"])
+                    if c and c.get("full"):
+                        evidence_card = c
+                        break
+            if evidence_card:
+                parts.append("== API参数卡(证据;结论仍以正文为准) ==")
+                parts.append(evidence_card["body"])
         parts.append(_evidence_contract(api_card, intent, card_fast))
+        if archived_first:
+            parts.append("archived_only: 首篇为 ⚠归档 页且现行区无同主题文档——归档页即本题唯一依据，须据其作答并标注「已归档」，不得因归档而答「文档未收录」")
         if ent_lines:
             parts.append("== 实体命中 ==")
             parts.extend(ent_lines)

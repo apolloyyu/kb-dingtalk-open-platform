@@ -125,6 +125,42 @@ def cmd_card(terms, n):
     return 0
 
 
+_TERM_INDEX = None
+
+
+def term_index():
+    """graph/terms.json：正文 ASCII 标识符 → [[doc_idx, count]]（build_term_index.py 生成）。"""
+    global _TERM_INDEX
+    if _TERM_INDEX is None:
+        p = os.path.join(ROOT, "graph", "terms.json")
+        try:
+            _TERM_INDEX = json.load(open(p, encoding="utf-8")) if os.path.exists(p) else {}
+        except ValueError:
+            _TERM_INDEX = {}
+    return _TERM_INDEX
+
+
+def term_doc_hits(tl, docs):
+    """查询里的 ASCII 标识符（字段名/JSAPI/错误码）在标题层常零命中，改查正文倒排索引。
+    返回 {local_path: score}；命中越多篇的泛词权重越低，dd.xxx 形式退化为末段再查。"""
+    idx = term_index()
+    if not idx:
+        return {}
+    hits = {}
+    for w in tl:
+        if not re.fullmatch(r"[a-z][a-z0-9_.]{4,}", w):
+            continue
+        entry = idx.get(w) or idx.get(w.rsplit(".", 1)[-1])
+        if not entry:
+            continue
+        df = len(entry)
+        for rank, (di, cnt) in enumerate(entry):
+            if 0 <= di < len(docs):
+                lp = docs[di]["local_path"]
+                hits[lp] = hits.get(lp, 0) + max(6, 40 - 4 * rank) + min(cnt, 10) - min(df, 10)
+    return hits
+
+
 def kb_flags():
     m = {}
     for r in load_jsonl("meta/kb_manifest.jsonl"):
@@ -409,7 +445,7 @@ def cmd_ctx(terms, n, force_full=False):
         return 1
 
 
-_CTX_BODY_CAP = 8000     # 单篇正文上限(字符)
+_CTX_BODY_CAP = 6000     # 单篇正文上限(字符)；R10.2.2 由 8000 收紧,无实体命中的泛问不该比实体题更长
 _CTX_TOTAL_CAP = 20000   # 总输出上限(字符)
 
 
@@ -653,12 +689,24 @@ def _ctx_impl(terms, n, force_full=False):
             if concept in raw_q:
                 stage_concepts.append((concept, weight))
     scored, doc_nhit = [], {}
+    term_hits = term_doc_hits(tl, docs)
+    # 词权重按 IDF：「小程序」出现在几百篇里，「导航栏」只在十几篇，二者不能同权
+    # （实录 Q139：泛词堆叠让通用教程页压过「设置导航栏」JSAPI 页）。与 dwsdoc 同口径。
+    hays = []
     for d in docs:
         title = d["title"].lower()
         crumb = " ".join(d.get("breadcrumb") or []).lower()
         rest = (" ".join(d.get("headings") or []) + " " + d.get("snippet", "") + " "
                 + d.get("slug", "") + " " + os.path.basename(d["local_path"])).lower()
-        hay = " ".join((title, crumb, rest))
+        hays.append((title, crumb, " ".join((title, crumb, rest))))
+    import math
+    n_docs = len(docs) or 1
+    tw = {}
+    for w in tl:
+        df = sum(1 for _, _, h in hays if w in h)
+        idf = math.log((n_docs + 1) / (df + 1))
+        tw[w] = 10 * min(2.5, max(0.4, idf / 2.0))
+    for d, (title, crumb, hay) in zip(docs, hays):
         stage_body = ""
         if stage_concepts and d["local_path"].startswith("docs/02-连接平台/"):
             try:
@@ -666,11 +714,16 @@ def _ctx_impl(terms, n, force_full=False):
             except OSError:
                 stage_body = ""
         nhit = sum(1 for w in tl if w in hay)
-        if nhit == 0:
+        tscore = term_hits.get(d["local_path"], 0)
+        if nhit == 0 and not tscore:
             continue
         # AND 太严(自然问句拆词很难同时命中一篇),改为 OR + 命中词数优先。
         # 枚举题优先汇总/配置页，降权单事件叶子页，避免“有哪些事件”只返回某一个监听 API。
-        score = nhit * 10 + sum(10 for w in tl if w in title) + sum(2 for w in tl if w in crumb)
+        # 正文标识符命中（cardData/downloadCode/navigateTo…）与标题命中同量级叠加。
+        score = (sum(tw[w] for w in tl if w in hay) + sum(tw[w] for w in tl if w in title)
+                 + sum(2 for w in tl if w in crumb) + tscore)
+        if tscore:
+            nhit += 1
         if doc_hint and d["local_path"] == doc_hint["local_path"]:
             score += 10000
         if stage_concepts:
@@ -830,7 +883,9 @@ def _ctx_impl(terms, n, force_full=False):
                 parts.append("== 相邻篇(links) ==")
                 # 支持性/存在性问法：正确答案常在相邻篇（如「创建公告」→「公告钉盘空间」），
                 # 只给标题会逼出第二轮 cat，故直接带摘要，一轮到位。
-                brief = intent["support"] or intent["why"]
+                # 相邻篇摘要只挂在首篇：三篇正文各带 3×800 字摘要曾让流程题上下文
+                # 膨胀到 19K（R10.2.1 实录 Q59），摘要本身是第二轮 cat 的替代品，首篇足够。
+                brief = (intent["support"] or intent["why"]) and i == 0
                 shown = 0
                 for e in out_e + inc_e:
                     tgt = e["to"] if e in out_e else e["from"]
@@ -840,7 +895,7 @@ def _ctx_impl(terms, n, force_full=False):
                             b = open(os.path.join(ROOT, tgt), encoding="utf-8", errors="ignore").read()
                         except OSError:
                             b = ""
-                        head = b[:800].replace("\n\n", "\n")
+                        head = b[:500].replace("\n\n", "\n")
                         parts.append(f"  {arrow} {tgt} — {bymap[tgt]['title']}")
                         parts.append(f"    摘要: {head}")
                         shown += 1
@@ -882,11 +937,16 @@ def _ctx_impl(terms, n, force_full=False):
 
     # 简单实体题只带一篇；流程/跨阶段/汇总题需同时展开 2-3 篇，避免单 API 片段冒充完整流程。
     ent_total = sum(ent_counts.values())
+    # 正文标识符命中(cardData/downloadCode…)本质是实体题：不收紧会两篇各 8000 撑到 19K。
+    if term_hits and not ent_total:
+        ent_total = 1
     global _CTX_BODY_CAP
     multi_doc = intent["stage"] or intent["semantic"] or intent["cross_doc"] or intent["enumeration"]
     top_k_default = 3 if multi_doc else (1 if ent_total >= 1 else 2)
     if ent_total >= 1 or multi_doc:
-        _CTX_BODY_CAP = 5000
+        # 多篇题每篇 3500：R10.2.1 实录 3 篇×5000 使 Q24/Q59 上下文 19K、正文时延 70–100s；
+        # 本地验证 3500 仍保留 ssoUserInfo/x-acs 头/执行动作/onLoad 等关键证据。
+        _CTX_BODY_CAP = 3500 if multi_doc else 5000
 
     if not cand and not ent_lines:
         print(_evidence_contract(None, intent, False))

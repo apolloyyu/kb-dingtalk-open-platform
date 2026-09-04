@@ -138,6 +138,14 @@ def main():
     check("onLoad" in out and "onShow" in out,
           "Page 事件枚举证据（onLoad/onShow）未进入正文")
 
+    out = run("ctx", "carddata从哪里获取")
+    check("cardParamMap" in out and out.count("== 正文[") <= 2 and len(out) < 12000,
+          "正文标识符索引未让 cardData 一次命中含 cardParamMap 的正文（或上下文未按实体题收紧）")
+    out = run("ctx", "钉钉小程序的路由层级有限制吗")
+    check("navigateTo" in out, "IDF 权重后小程序路由题仍未命中 navigateTo 正文")
+    out = run("ctx", "通过免登码获取用户信息的接口地址和必填参数是什么")
+    check("card=1(fast=1)" in out, "IDF/标识符索引改动后简单强锚点 API 题失去快路径")
+
     out = run("card", "H2mylS6eke")
     check("completeness: full" in out and "== 证据契约 ==" in out,
           "card 子命令未保留完整性并追加证据契约")

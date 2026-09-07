@@ -163,7 +163,7 @@ def main():
           "用户贴出闭合 JSON 报文仍走 card-only")
 
     out = run("ctx", "钉钉服务端 API 的 QPS 和每月调用量限制是多少")
-    check("禁止解码/改写为其 url= 内嵌地址" in out, "证据契约缺少链接原样引用纪律")
+    check("整条逐字照抄，禁止解码成 url= 内嵌地址" in out and "禁止只留文字不给链接" in out, "证据契约缺少链接原样引用纪律")
     out = run("cat", "how-to-process-api-throttling-on-the-dingtalk-server")
     check("dingtalk://dingtalkclient/page/link?url=" in out and "${corpId}" in out and "钉钉专业版" in out,
           "正文中的 dingtalk:// 深链须逐字原样保留(实录:解码成内嵌 html 地址后 ${corpId} 失效)")

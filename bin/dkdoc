@@ -88,7 +88,7 @@ def _evidence_contract(card=None, intent=None, fast=False):
         "proves: 卡片仅证明列出的 method/endpoint/应用类型/权限/请求头/路径、查询和Body参数/响应字段/必填性/明确限额；正文仅证明其逐字陈述",
         "not_proved: 未明示的 ID 格式或校验、其他接口/配置阶段的数据流、客户端分栏/排序/展示因果",
         "rule: 示例值不等于格式规范；字段存在不等于它决定产品行为；未直接证明则写“文档未说明”",
-        "links: 正文内联链接须逐字原样引用——dingtalk:// 深链整条照抄，禁止解码/改写为其 url= 内嵌地址、禁止替换 ${corpId} 等占位符；出处一律用各篇 source_url",
+        "links: 正文里的内联链接（含 dingtalk:// 客户端深链）应作为可点入口原样给用户：整条逐字照抄，禁止解码成 url= 内嵌地址、禁止改写或替换 ${corpId} 等占位符、禁止只留文字不给链接；文档出处另用各篇 source_url",
     ]
     return "== 证据契约 ==\n" + "\n".join(lines)
 

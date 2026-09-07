@@ -162,6 +162,13 @@ def main():
     check("card=1(fast=0)" in out and "payload" in out,
           "用户贴出闭合 JSON 报文仍走 card-only")
 
+    out = run("ctx", "钉钉服务端 API 的 QPS 和每月调用量限制是多少")
+    check("dingtalk://" not in out and "${corpId}" not in out,
+          "正文中的钉钉客户端深链/模板变量链接未被剥离(实录「钉钉专业版」死链)")
+    check("links: 给用户的入口只用各篇 source_url" in out, "证据契约缺少链接纪律")
+    out = run("cat", "how-to-process-api-throttling-on-the-dingtalk-server")
+    check("dingtalk://" not in out and "钉钉专业版" in out, "cat 输出未剥离深链或误删文案")
+
     out = run("card", "H2mylS6eke")
     check("completeness: full" in out and "== 证据契约 ==" in out,
           "card 子命令未保留完整性并追加证据契约")

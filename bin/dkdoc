@@ -88,8 +88,18 @@ def _evidence_contract(card=None, intent=None, fast=False):
         "proves: 卡片仅证明列出的 method/endpoint/应用类型/权限/请求头/路径、查询和Body参数/响应字段/必填性/明确限额；正文仅证明其逐字陈述",
         "not_proved: 未明示的 ID 格式或校验、其他接口/配置阶段的数据流、客户端分栏/排序/展示因果",
         "rule: 示例值不等于格式规范；字段存在不等于它决定产品行为；未直接证明则写“文档未说明”",
+        "links: 给用户的入口只用各篇 source_url；正文内联的客户端深链/带变量链接已剥离为纯文字，不得复原或杜撰其 URL",
     ]
     return "== 证据契约 ==\n" + "\n".join(lines)
+
+
+_BAD_LINK = re.compile(r"\[([^\]]*)\]\((?:dingtalk://[^)]*|[^)]*\$\{[^)]*)\)")
+
+
+def _sanitize_links(body):
+    """正文里的钉钉客户端深链(dingtalk://)与含 ${corpId} 等模板变量的链接只在官方文档页内可点,
+    抄进聊天消息就是死链(实录:「钉钉专业版」链接用户打不开)。剥成纯文字,保留文案。"""
+    return _BAD_LINK.sub(lambda m: f"{m.group(1)}(链接仅在官方文档页内可点,此处不可引用)", body)
 
 
 def cmd_card(terms, n):
@@ -399,7 +409,7 @@ def cmd_cat(terms, n):
         for c in (cands or [])[:10]:
             print("  " + c["local_path"])
         return 1
-    sys.stdout.write(open(os.path.join(ROOT, d["local_path"]), encoding="utf-8").read())
+    sys.stdout.write(_sanitize_links(open(os.path.join(ROOT, d["local_path"]), encoding="utf-8").read()))
     return 0
 
 
@@ -921,7 +931,7 @@ def _ctx_impl(terms, n, force_full=False):
             tag = " " + flags.get(lp, "") if flags.get(lp) else ""
             parts.append(f"\n== 正文[{i+1}/{min(top_k, len(cand))}] {d['title']}{tag} ({lp}) ==")
             parts.append(f"source_url: {d['source_url']} · updated_at: {d['updated_at'][:10]}")
-            body = open(os.path.join(ROOT, lp), encoding="utf-8", errors="ignore").read()
+            body = _sanitize_links(open(os.path.join(ROOT, lp), encoding="utf-8", errors="ignore").read())
             if len(body) > _CTX_BODY_CAP:
                 body = body[:_CTX_BODY_CAP] + f"\n…[已截断，完整: dkdoc cat {lp}]"
             parts.append(body)

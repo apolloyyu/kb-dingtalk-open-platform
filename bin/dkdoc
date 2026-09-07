@@ -88,18 +88,15 @@ def _evidence_contract(card=None, intent=None, fast=False):
         "proves: 卡片仅证明列出的 method/endpoint/应用类型/权限/请求头/路径、查询和Body参数/响应字段/必填性/明确限额；正文仅证明其逐字陈述",
         "not_proved: 未明示的 ID 格式或校验、其他接口/配置阶段的数据流、客户端分栏/排序/展示因果",
         "rule: 示例值不等于格式规范；字段存在不等于它决定产品行为；未直接证明则写“文档未说明”",
-        "links: 给用户的入口只用各篇 source_url；正文内联的客户端深链/带变量链接已剥离为纯文字，不得复原或杜撰其 URL",
+        "links: 正文内联链接须逐字原样引用——dingtalk:// 深链整条照抄，禁止解码/改写为其 url= 内嵌地址、禁止替换 ${corpId} 等占位符；出处一律用各篇 source_url",
     ]
     return "== 证据契约 ==\n" + "\n".join(lines)
 
 
-_BAD_LINK = re.compile(r"\[([^\]]*)\]\((?:dingtalk://[^)]*|[^)]*\$\{[^)]*)\)")
-
-
 def _sanitize_links(body):
-    """正文里的钉钉客户端深链(dingtalk://)与含 ${corpId} 等模板变量的链接只在官方文档页内可点,
-    抄进聊天消息就是死链(实录:「钉钉专业版」链接用户打不开)。剥成纯文字,保留文案。"""
-    return _BAD_LINK.sub(lambda m: f"{m.group(1)}(链接仅在官方文档页内可点,此处不可引用)", body)
+    """正文链接原样保留。dingtalk:// 深链(含 url= 内嵌地址与 ${corpId} 占位)在钉钉/浏览器里可直接打开,
+    问题出在模型把它解码成内嵌的 html 地址后占位符失效(实录「钉钉专业版」);故不剥离,只在契约里禁止改写。"""
+    return body
 
 
 def cmd_card(terms, n):

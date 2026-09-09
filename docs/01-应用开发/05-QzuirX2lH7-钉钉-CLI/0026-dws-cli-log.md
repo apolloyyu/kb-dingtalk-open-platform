@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "钉钉 CLI"
 breadcrumb: "更新日志"
 doc_id: "JqaPUpyWXl"
-updated_at: "2026-08-31 14:38:04"
+updated_at: "2026-09-08 10:56:12"
 ---
 
 > Source: https://open.dingtalk.com/document/development/dws-cli-log
 > Path: 应用开发 / 钉钉 CLI / 更新日志
-> Updated: 2026-08-31 14:38:04
+> Updated: 2026-09-08 10:56:12
 
 # 更新日志
 
@@ -40,6 +40,149 @@ dws upgrade --list
 - 钉钉 CLI 每周发布更新，开发者可扫描下方二维码加入"**dws 开源沟通群**"获取最新动态。
 
   ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/6160536871/p1094200.png)
+
+## **2026-08-31**
+
+### **更新说明**
+
+本周重点：**开放平台 MCP 服务/工具开发侧全生命周期可管理、公司标签与员工自定义字段全程命令行管理、事件订阅扩展至钉钉待办与钉钉语音通话**，群聊消息工作流全面补齐，在线电子表格批量操作扩容 2.4 倍。建议通过 `dws upgrade` 升级到最新版[v1.0.61](https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli/releases/tag/v1.0.61)。
+
+### **新增功能**
+
+#### 开发者专属：开放平台 MCP 服务/工具的开发侧全生命周期可管理
+
+MCP 服务开发迁移到显式命令面 `dws dev mcp`；新增 `dws mcp published` 命令组，支持检视与调用已发布的 MCP 工具——不做动态命令注入、不在本地缓存携带凭证的端点，Agent 接入 MCP 生态的方式变得可审查、可预期。
+
+```
+dws dev mcp --help
+dws mcp published --help
+```
+
+#### 通讯录：公司标签可改可删、成员批量增减，员工自定义字段全程管理
+
+- **标签（角色）管理补全**
+
+  新增 `contact label update / delete / add-members / remove-members / update-member-scope` 五个命令：标签可修改、删除，成员可批量增减，成员可见范围可调整。
+
+  ```
+  dws contact label add-members --id <LABEL_ID> --users <USER_ID_1>,<USER_ID_2>
+  ```
+- **员工自定义字段管理**
+
+  新增 `contact ext-field create / update / delete` 三个命令：组织自定义员工字段（花名册扩展字段）可全程命令行管理。
+
+  ```
+  dws contact ext-field create --name "职级"
+  ```
+
+#### 事件订阅：新增钉钉待办 + 语音通话
+
+个人事件流从 IM 消息扩展到两个新场景，「待办一创建就让 Agent 接手处理」「来电一到就自动记录跟进（写入待办）」类自动化工作流就此成立。
+
+- 钉钉待办的创建、更新、删除事件支持个人 Stream 订阅，含事件目录发现、创建者/执行者/参与者角色过滤与类型化扁平负载；
+- 钉钉语音通话的来电邀请事件 `user_voip_call_receive_invite` 可被消费，输出扁平化 NDJSON。
+
+```
+dws event list --format json    # 发现待办 / 语音通话事件 key
+dws event consume user_voip_call_receive_invite --flatten
+```
+
+#### 群聊：消息一次拉全，文件直传会话，消息一键变话题
+
+- **会话文件上传**
+
+  `chat conversation-file upload` 可以把本地文件上传到群聊或单聊的会话文件空间，返回可复用的 `dentryId` 与 `spaceId`，且**不发送任何聊天消息**，适合「先上传、后引用」的自动化流程；已退役的 `chat file upload` 路径保持不变。
+
+  ```
+  dws chat conversation-file upload --conversation-id <openConversationId> --file ./report.pdf --format json
+  ```
+- **消息列表一次拉全**
+
+  `dws chat message list` 新增 `--page-all`：按时间边界自动翻页，合并返回一个 `messages` 数组，并附翻页页数、停止原因、下一页游标与逐页失败诊断；`--page-limit`（默认 50）、`--max-items`、`--page-delay` 控制扫描节奏。不传 `--page-all` 时与旧版单页行为完全一致。
+
+  ```
+  dws chat message list --conversation-id <openConversationId> --page-all --page-limit 50 --format json
+  ```
+- **消息一键升级为话题**
+
+  新增 `chat thread promote`：把普通群里已有的消息升级为 Thread 根消息，热点消息可随时沉淀为可跟帖讨论的话题。
+
+  ```
+  dws chat thread promote --conversation-id <openConversationId> --message-id <openMessageId>
+  ```
+
+#### 表情收藏支持本地图片：来点好玩的
+
+「在千问办公中生成组织特色表情包，然后在钉钉中使用」类玩法就此成立：`dws chat emotion favorite` 新增 `--file-path`，可直接把本地图片（jpg/jpeg/png/gif/webp/bmp，最大 10MB）加入收藏：CLI 本地校验文件、自动上传换取 mediaId 后复用收藏流程；原 `--media-id` 用法不变。
+
+```
+dws chat emotion favorite --file-path ./meme.png
+```
+
+#### 在线电子表格：批量操作扩容 2.4 倍
+
+- **batch-update 扩容** ：`sheet batch-update` 支持的 CLI 操作从 16 个扩展到 39 个，新增输入带严格校验，服务端生成的创建 ID 保留在 `results[ ].data`，嵌套数字/布尔值安全通过 MCP 传输；
+- **行列坐标统一** ：批量中的 `delete-dimension`、`move-dimension` 接受与单命令一致的公开坐标（1 基行号或列字母），本地自动换算为批量接口的 0 基索引；
+- **CSV 写入保文本** ：`sheet csv-put` 新增 `--auto-convert=false`，所有非公式字段按文本原样写入（`=` 开头字段仍作公式），工号、订单号等长数字不再被转成数值。
+
+```
+dws sheet csv-put --node <NODE_ID> --sheet-id <SHEET_ID> --start-cell A1 --csv @data.csv --auto-convert=false
+```
+
+#### 钉盘：下载支持仅取链接模式
+
+`drive download` / `download-version` 新增 `--url-only`：只返回带签名的临时下载地址与所需请求头（`downloadUrl`/`headers`，附 `fileName`/`fileSize`/`version`），不写任何本地文件，由 Agent 运行时或外部系统自行完成下载；JSON 输出中的签名 URL 保留字面 `&` 分隔符，复制即用。该模式与 `--output`/`--overwrite`/`--part-size`/`--parallel`/`--no-resume` 互斥，非法组合立即失败。
+
+```
+dws drive download --node <dentryUuid> --url-only --format json
+```
+
+### **体验优化**
+
+#### **其他体验优化**
+
+- **Agent 友好的帮助体系**
+
+  根级 `dws --help` 新增 Agent Quickstart 与 Safety model 两个板块；所有 Agent 可见的叶子命令渲染完整安全语义（`effect/risk/confirmation/idempotency`）与审核过的命令选择指引，并链接到对应的内置 DWS Skill 与稳定深度文档——Agent 探索命令面的上下文更小、路由更可预期。
+- **委托授权更安全**
+
+  使用 `--principal-user-id` 委托身份时，逐工具能力校验现在携带具体操作参数：创建、上传、导入、复制/移动、权限管理、公开分享各自送出真实目标信息（文件名与大小、目标节点、目标成员、分享范围），「把文件设为互联网公开（WEB）」可在任何字节传输前被预检拒绝；权限成员新旧格式归一等价（旧 `--users` 自动转换为结构化成员）；`doc import`/`doc upload` 的 dry-run 预览与执行路径做同样的委托预检，被委托人无权限时预览直接阻断。
+- **钉钉待办工作流加固**
+
+  待办写操作统一增加严格写回执与读回验证、可执行参数约束、写 shortcut 的本地 dry-run 计划、有界列表脚本与批量创建的逐项验证台账——「批量建待办」类自动化的结果可信可审计。
+
+#### **兼容性说明（行为变更）**
+
+- **钉盘下载：默认存当前目录，覆盖已有同名文件需显式确认**
+
+  `dws drive download` / `download-version` 不再强制 `--output`：缺省时按响应中的原文件名保存到当前目录；目标文件已存在（含长下载期间新出现的同名文件）时不再静默覆盖——覆盖保护在传输开始前与原子发布时双重生效——而是返回结构化错误 `INPUT_FILE_ALREADY_EXISTS` 并附恢复指引，确认覆盖请显式传 `--overwrite`。续传产物（`.dwspart`/`.dwspart.meta`）不计入冲突。
+- **通讯录标签创建必须显式指定类型**
+
+  `dws contact label create` 现在必须传 `--type role|group`：`role` 须同时传真实标签组 ID 的 `--parent-id`；`group` 创建根级标签组、必须省略 `--parent-id`（CLI 传 `parentId=-1`）。
+
+### **问题优化**
+
+- **消息与会话结果可信**
+
+  - 引用回复不再误判：普通群中个人与机器人引用回复照常工作，话题圈目标继续正确阻断（#1210）；
+  - 消息列表结果与顶层字段对齐，编辑/撤回可直接使用稳定 `messageId`；
+  - Qoder Stream 回复改为类型化文本块并透传错误详情，不再出现「钉钉已送达但本地无文本输出」（#1217）。
+- **云盘与文档操作稳定**
+
+  - 并发下载互不污染：流式下载写入唯一临时文件，断点续传增加跨进程锁，第二个下载方快速失败；
+  - 云盘列表/搜索/最近访问结果自动翻页拉全，拒绝仅元数据的统计结果；
+  - 工作区上传授权前置：授权不通过时在任何文件传输前即被拒绝；文档导入恢复如实报告「未验证」，不假装成功；
+  - Markdown 上传正确判定钉盘/文档目的地，参数校验说明更清晰。
+- **AI 表格结果真实**
+
+  - 可见性延迟不再误报「部分成功」：组合校验接受服务端真实响应形态，仅对幂等操作重试；
+  - 工作流部署状态改报远端实测状态，不再镜像请求参数。
+- **平台与登录可靠**
+
+  - 考勤排班查询：仅日期输入自动展开为全天边界，倒置区间本地即拒绝（#1154）；
+  - 登录后自动清理无法解密的遗留凭证槽位，登录不再卡住（#1172）；Windows Skill 安装不再因 ACL 差异误报失败，失败时完整回滚（#1177）；
+  - 认证与网络类错误统一给出可执行的 `dws doctor` 恢复入口；HRbrain 人才池分页与邮件模板草稿输入修复（#1167）；
+  - DING 在机器人凭证无效时快速失败，撤回不再按前缀猜测资源类型；白板更新带本地校验与已提交写入证据。
 
 ## **2026-08-28**
 

@@ -7,6 +7,11 @@
 set -u
 REPO="${1:-$(cd "$(dirname "$0")/../.." && pwd)}"
 cd "$REPO" || { echo "ERR no repo $REPO"; exit 2; }
+# 与每日流水线(kb_pipeline.sh / dws_regen.py)互斥:它们 apply 阶段工作区有大量未提交改动,
+# 此时同步会 merge 失败或搅乱工作区(2026-09-05~09 实录)。流水线持有 .git/kb-pipeline.lock,
+# 这里 flock -n 探测到锁就让路;输出以 OK 开头,executor 不会当异常记日志。
+exec 9>"$REPO/.git/kb-pipeline.lock"
+flock -n 9 || { echo "OK skip(pipeline-running)"; exit 0; }
 GH=origin; GL=gitlab
 if ! git remote get-url "$GL" >/dev/null 2>&1; then
   git remote add "$GL" "${KB_GITLAB_NS:-git@code.alibaba-inc.com:dingtalk-openplatform-ai}/$(basename "$REPO").git" \

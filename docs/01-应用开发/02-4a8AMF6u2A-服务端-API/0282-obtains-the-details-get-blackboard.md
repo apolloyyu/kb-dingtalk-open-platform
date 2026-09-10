@@ -479,7 +479,7 @@ namespace AlibabaCloud.SDK.Sample
 | deptList | Array | 接收部门列表。 |
 | deptId | String | 部门id。 |
 | name | String | 部门名称。 |
-| attachments | Array | 附件列表      如需下载公告附件，请参考文档[获取文件下载信息](0678-obtains-the-download-information-about-a-file.md)，使用本接口返回的附件信息进行下载。 |
+| attachments | Array | 附件列表      如需下载公告附件，请参考文档[获取文件下载信息](0679-obtains-the-download-information-about-a-file.md)，使用本接口返回的附件信息进行下载。 |
 | fileName | String | 文件名称。 |
 | fileType | String | 文件类型。 |
 | dentryId | String | 文件id。 |

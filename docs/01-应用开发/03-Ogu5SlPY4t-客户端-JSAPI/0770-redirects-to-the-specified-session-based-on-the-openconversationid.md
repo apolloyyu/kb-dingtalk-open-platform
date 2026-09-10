@@ -46,7 +46,7 @@ dd.biz.chat.toConversationByOpenConversationId({
 
 | 参数 | 类型 | 说明 |
 | --- | --- | --- |
-| openConversationId | String | 会话的openConversationId。   - 企业内部应用，可调用[创建群会话](../02-4a8AMF6u2A-服务端-API/0738-create-common-group-new-version-v2.md)接口获取openConversationId参数值。 - 第三方企业应用，可调用[创建场景群](../02-4a8AMF6u2A-服务端-API/0746-create-a-scene-group.md)接口获取open\_conversation\_id参数值。 |
+| openConversationId | String | 会话的openConversationId。   - 企业内部应用，可调用[创建群会话](../02-4a8AMF6u2A-服务端-API/0739-create-common-group-new-version-v2.md)接口获取openConversationId参数值。 - 第三方企业应用，可调用[创建场景群](../02-4a8AMF6u2A-服务端-API/0747-create-a-scene-group.md)接口获取open\_conversation\_id参数值。 |
 | onSuccess | Fuction | 调用成功的回调函数。 |
 | onFail | Fuction | 调用失败的回调函数。 |
 

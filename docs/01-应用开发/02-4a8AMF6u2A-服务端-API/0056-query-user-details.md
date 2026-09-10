@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "通讯录管理 > 用户管理 > 查询用户详情"
 doc_id: "UbRx6mZowM"
-updated_at: "2026-06-08 09:28:32"
+updated_at: "2026-09-10 14:33:07"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-user-details
 > Path: 应用开发 / 服务端 API / 通讯录管理 > 用户管理 > 查询用户详情
-> Updated: 2026-06-08 09:28:32
+> Updated: 2026-09-10 14:33:07
 
 # 查询用户详情
 
@@ -45,7 +45,7 @@ updated_at: "2026-06-08 09:28:32"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | bE74xxxx | 调用该API的应用凭证。   - 企业内部应用，通过[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)接口获取。 - 第三方企业应用，通过[获取第三方企业的access\_token](1448-obtain-isvapp-token.md)接口获取。 |
+| access\_token | String | 是 | bE74xxxx | 调用该API的应用凭证。   - 企业内部应用，通过[获取企业内部应用的access\_token](1447-obtain-orgapp-token.md)接口获取。 - 第三方企业应用，通过[获取第三方企业的access\_token](1449-obtain-isvapp-token.md)接口获取。 |
 
 ### **请求体**
 
@@ -169,60 +169,77 @@ Console.WriteLine(rsp.Body);
 | corp\_id | String | dingxxx | 当前用户所属的组织的企业corpId。 |
 | dept\_position\_list | DeptPosition[] |  | 部门内任职信息。 |
 | extension\_i18n | Json | {"爱好":  {"zh\_ CN":  "旅游",  "en\_ US":  "travel",  "aJP":"旅  行"} | 扩展属性的国际化值。 |
+| ext\_attrs | EmpExtAttr[] | [] | 更新自定义字段列表信息。 |
 
 ### **响应体示例**
 
 ```
 {
-  "errcode":"0",
-  "result":{
-    "extension":"{\"爱好\":\"旅游\",\"年龄\":\"24\"}",
-    "unionid":"z21HjQliSzpw0YWxxxxx",
-    "boss":"true",
-    "role_list":{
-      "group_name":"职务",
-      "name":"总监",
-      "id":"100"
+  "errcode": "0",
+  "result": {
+    "extension": "{\"爱好\":\"旅游\",\"年龄\":\"24\"}",
+    "unionid": "z21HjQliSzpw0YWxxxxx",
+    "boss": "true",
+    "role_list": {
+      "group_name": "职务",
+      "name": "总监",
+      "id": "100"
     },
-    "exclusive_account":false,
-    "manager_userid":"manager240",
-    "admin":"true",
-    "remark":"备注备注",
-    "title":"技术总监",
-    "hired_date":"1597573616828",
-    "userid":"zhangsan",
-    "work_place":"未来park",
-    "dept_order_list":{
-      "dept_id":"2",
-      "order":"1"
+    "exclusive_account": false,
+    "manager_userid": "manager240",
+    "admin": "true",
+    "remark": "备注备注",
+    "title": "技术总监",
+    "hired_date": "1597573616828",
+    "userid": "zhangsan",
+    "work_place": "未来park",
+    "dept_order_list": {
+      "dept_id": "2",
+      "order": "1"
     },
-    "real_authed":"true",
-    "dept_id_list":"[2,3,4]",
-    "job_number":"4",
-    "email":"test@xxx.com",
-    "leader_in_dept":{
-      "leader":"true",
-      "dept_id":"2"
+    "real_authed": "true",
+    "dept_id_list": "[2,3,4]",
+    "job_number": "4",
+    "email": "test@xxx.com",
+    "leader_in_dept": {
+      "leader": "true",
+      "dept_id": "2"
     },
-    "mobile":"18513027676",
-    "active":"true",
-    "org_email":"test@xxx.com",
-    "telephone":"010-86123456-2345",
-    "avatar":"xxx",
-    "hide_mobile":"false",
-    "senior":"true",
-    "name":"张三",
-    "union_emp_ext":{
-      "union_emp_map_list":{
-        "userid":"5000",
-        "corp_id":"dingxxx"
+    "mobile": "18513027676",
+    "active": "true",
+    "org_email": "test@xxx.com",
+    "telephone": "010-86123456-2345",
+    "avatar": "xxx",
+    "hide_mobile": "false",
+    "senior": "true",
+    "name": "张三",
+    "union_emp_ext": {
+      "union_emp_map_list": {
+        "userid": "5000",
+        "corp_id": "dingxxx"
       },
-      "userid":"500",
-      "corp_id":"dingxxx"
+      "userid": "500",
+      "corp_id": "dingxxx"
     },
-    "state_code":"86"
+    "ext_attrs": [
+      {
+        "code": "emp:xxx",
+        "name": "主页",
+        "type": "link",
+        "value": {
+          "text": "点击前往钉钉官网",
+          "url": "www.dingtalk.com",
+          "images": {
+            "string": [
+              "https:xxxxx005006-2-tps-64-64.png"
+            ]
+          }
+        }
+      }
+    ],
+    "state_code": "86"
   },
-  "errmsg":"ok"
+  "errmsg": "ok"
 }
 ```
 

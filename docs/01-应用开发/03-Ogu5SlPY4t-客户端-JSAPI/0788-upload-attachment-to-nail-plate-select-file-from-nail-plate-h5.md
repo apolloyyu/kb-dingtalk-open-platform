@@ -32,8 +32,8 @@ updated_at: "2026-09-02 18:14:12"
 >
 > **使用场景说明：**
 >
-> 1. 存储空间：调用该jsapi前需要先创建存储空间并授予当前用户对该空间的上传操作权限，请参考[添加空间](../02-4a8AMF6u2A-服务端-API/0652-add-space.md)和[添加权限](../02-4a8AMF6u2A-服务端-API/0681-add-permissions-file.md)。
-> 2. 自定义空间：调用该jsapi前需先获取企业自定义空间并授予当前用户对该空间的上传操作权限，请参考[获取企业下的自定义空间](../02-4a8AMF6u2A-服务端-API/1558-obtain-user-space-under-the-enterprise.md)和[添加自定义空间权限](../02-4a8AMF6u2A-服务端-API/1581-add-custom-workspace-permissions.md)。
+> 1. 存储空间：调用该jsapi前需要先创建存储空间并授予当前用户对该空间的上传操作权限，请参考[添加空间](../02-4a8AMF6u2A-服务端-API/0652-add-space.md)和[添加权限](../02-4a8AMF6u2A-服务端-API/0682-add-permissions-file.md)。
+> 2. 自定义空间：调用该jsapi前需先获取企业自定义空间并授予当前用户对该空间的上传操作权限，请参考[获取企业下的自定义空间](../02-4a8AMF6u2A-服务端-API/1559-obtain-user-space-under-the-enterprise.md)和[添加自定义空间权限](../02-4a8AMF6u2A-服务端-API/1582-add-custom-workspace-permissions.md)。
 
 | **客户端** | **是否需要鉴权** | **Android** | **iOS** | **PC** |
 | --- | --- | --- | --- | --- |

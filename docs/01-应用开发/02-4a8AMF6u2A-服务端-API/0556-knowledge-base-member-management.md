@@ -61,7 +61,7 @@ updated_at: "2026-04-08 20:23:06"
    - 添加**用户**：调用[查询用户详情](0056-query-user-details.md)接口获取`userId`，或通过[获取部门用户userid列表](0065-query-the-list-of-department-userids.md)批量获取；
    - 添加**部门**：调用[获取部门列表](0082-user-management-acquires-the-list-departments.md)接口获取`deptId`；
    - 添加**群会话**：使用群的`chatId`。
-3. 调用[添加权限](0681-add-permissions-file.md)接口，根据业务需要选择合适的角色（如协作编辑选 **EDITOR**，只读访问选 **READER**），将成员加入知识库。
+3. 调用[添加权限](0682-add-permissions-file.md)接口，根据业务需要选择合适的角色（如协作编辑选 **EDITOR**，只读访问选 **READER**），将成员加入知识库。
 
    > **提示**：单次请求最多传 30 个成员，超出需分批调用。
 
@@ -82,8 +82,8 @@ updated_at: "2026-04-08 20:23:06"
 
 ## 场景二：调整成员在知识库中的角色
 
-1. 如需确认成员当前角色，可先调用[获取权限列表](0684-get-permission-list.md)接口查看。
-2. 调用[修改权限](0683-modify-permissions-file.md)接口，指定成员和目标角色，完成角色变更。
+1. 如需确认成员当前角色，可先调用[获取权限列表](0685-get-permission-list.md)接口查看。
+2. 调用[修改权限](0684-modify-permissions-file.md)接口，指定成员和目标角色，完成角色变更。
 
    > **说明**：同一成员在同一知识库只能拥有一个角色，变更后旧角色自动替换。
 
@@ -103,8 +103,8 @@ updated_at: "2026-04-08 20:23:06"
 
 ## 场景三：移除成员的知识库访问权限
 
-1. 确认成员当前持有的角色，调用[获取权限列表](0684-get-permission-list.md)接口，获取该成员当前的角色（`roleId`），移除时需与实际持有角色一致。
-2. 调用[删除权限](0682-delete-permissions-file.md)接口。
+1. 确认成员当前持有的角色，调用[获取权限列表](0685-get-permission-list.md)接口，获取该成员当前的角色（`roleId`），移除时需与实际持有角色一致。
+2. 调用[删除权限](0683-delete-permissions-file.md)接口。
 
    > **注意**：`roleId`必须与成员当前实际持有的角色一致，否则操作无效。**OWNER** 角色不可移除。
 
@@ -124,7 +124,7 @@ updated_at: "2026-04-08 20:23:06"
 
 ## 场景四：将知识库设置为企业全员可访问
 
-调用[添加权限](0681-add-permissions-file.md)接口，将成员类型设为 **ORG**，并指定对应的公开角色。
+调用[添加权限](0682-add-permissions-file.md)接口，将成员类型设为 **ORG**，并指定对应的公开角色。
 
 > **说明**：**ORG** 类型授权后，企业全员均可按指定角色访问该知识库。**ORG** 类型成员不会出现在成员列表查询结果中。若需撤销全员访问，同样调用移除接口，`type`传 **ORG** 即可。
 
@@ -144,7 +144,7 @@ Content-Type: application/json
 
 ## 场景五：查询知识库当前成员列表
 
-调用[获取权限列表](0684-get-permission-list.md)接口，支持按角色过滤，结果支持分页。
+调用[获取权限列表](0685-get-permission-list.md)接口，支持按角色过滤，结果支持分页。
 
 ```
 POST /v2.0/storage/spaces/dentries/{dentryUuid}/permissions/query?unionId={操作者unionId} HTTP/1.1

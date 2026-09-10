@@ -31,7 +31,7 @@ updated_at: "2026-07-02 10:35:53"
    > 只支持xlsx，xls，csv，txt格式文件。
 
    ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8903630871/p1075878.png)
-2. 调用[获取文件上传信息](0674-obtain-file-upload-informations.md)接口，获取media\_id。
+2. 调用[获取文件上传信息](0675-obtain-file-upload-informations.md)接口，获取media\_id。
 3. 调用本接口，获取转译任务ID。
 
    > **[!NOTE]**
@@ -73,7 +73,7 @@ updated_at: "2026-07-02 10:35:53"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| medias | Map<String, String> | 是 | 需要转译的文件信息。   - Map类型，key为钉盘文件media\_id，调用[获取文件上传信息](0674-obtain-file-upload-informations.md)接口获取。 - value为文件名，需要包含文件扩展名，与调用[获取文件上传信息](0674-obtain-file-upload-informations.md)接口时传入的文件名称保持一致。        - 只支持xlsx，xls，csv，txt类型文件。 - 最大数量20个文件。 |
+| medias | Map<String, String> | 是 | 需要转译的文件信息。   - Map类型，key为钉盘文件media\_id，调用[获取文件上传信息](0675-obtain-file-upload-informations.md)接口获取。 - value为文件名，需要包含文件扩展名，与调用[获取文件上传信息](0675-obtain-file-upload-informations.md)接口时传入的文件名称保持一致。        - 只支持xlsx，xls，csv，txt类型文件。 - 最大数量20个文件。 |
 | outputFileName | String | 否 | 转译完打包的文件名，不需带后缀。      若medias中文件个数大于1，则该参数必填。 |
 | unionId | String | 是 | 当前操作导出文档的用户的unionId，可以调用[通过免登码获取用户信息](0024-obtain-the-userid-of-a-user-by-using-the-log-free.md)接口获取。 |
 

@@ -45,7 +45,7 @@ updated_at: "2026-05-15 12:27:36"
 ## **开发流程**
 
 1. 调用[获取我的文档知识库信息](0563-get-my-documents.md)接口，获取“我的文档”根节点 ID，即返回参数`rootNodeId`（parentDentryUuid）。
-2. 调用[获取文件上传信息](0674-obtain-file-upload-informations.md)接口，获取上传文件所需的`resourceUrls`和`headers`参数值。
+2. 调用[获取文件上传信息](0675-obtain-file-upload-informations.md)接口，获取上传文件所需的`resourceUrls`和`headers`参数值。
 3. 使用 OSS 的 header 加签方式上传文件：
 
    Java
@@ -202,7 +202,7 @@ updated_at: "2026-05-15 12:27:36"
      console.log(err);
    });
    ```
-4. 调用[提交文件](0675-submittal-file.md)接口，上传文件到钉钉文档（我的文档）目录中。
+4. 调用[提交文件](0676-submittal-file.md)接口，上传文件到钉钉文档（我的文档）目录中。
 
 ## **步骤一：创建应用**
 

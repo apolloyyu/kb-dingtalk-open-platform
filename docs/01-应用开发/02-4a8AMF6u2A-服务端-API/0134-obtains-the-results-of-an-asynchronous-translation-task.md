@@ -33,7 +33,7 @@ updated_at: "2026-07-02 10:35:54"
    > 只支持xlsx，xls，csv，txt格式文件。
 
    ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/9903630871/p1075881.png)
-2. 调用[获取文件上传信息](0674-obtain-file-upload-informations.md)接口，获取media\_id。
+2. 调用[获取文件上传信息](0675-obtain-file-upload-informations.md)接口，获取media\_id。
 3. 调用[异步转译通讯录ID](0133-asynchronous-address-book-file-content-translation.md)接口，获取转译任务ID。
 
    > **[!NOTE]**

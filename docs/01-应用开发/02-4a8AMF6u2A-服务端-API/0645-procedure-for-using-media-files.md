@@ -44,7 +44,7 @@ updated_at: "2026-05-15 12:10:51"
 
 1. 通过免登方式获取当前登录人员的姓名、角色等信息，登录可参考[网页应用（H5微应用）免登](https://open.dingtalk.com/document/dingstart/enterprise-internal-application-logon-free)。
 2. 通过[上传媒体文件](0646-upload-media-files.md)接口，上传特定文件（当前教程的文件是本地文件，在实际过程中开发者可自定义文件），获取文件的media\_id（文件唯一标识）。
-3. 根据媒体文件media\_id，调用服务端API-[发送工作通知](0769-asynchronous-sending-of-enterprise-session-messages.md)接口，进行发送工作通知消息（本文提供了图片+action 两种类型的消息通知，在代码中可进行切换）。
+3. 根据媒体文件media\_id，调用服务端API-[发送工作通知](0770-asynchronous-sending-of-enterprise-session-messages.md)接口，进行发送工作通知消息（本文提供了图片+action 两种类型的消息通知，在代码中可进行切换）。
 
 ## **步骤一：创建应用**
 

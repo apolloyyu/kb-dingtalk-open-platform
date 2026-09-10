@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "通讯录管理 > 用户管理 > 更新用户信息"
 doc_id: "ECZ9YgDoW3"
-updated_at: "2026-06-08 09:28:29"
+updated_at: "2026-09-10 14:33:05"
 ---
 
 > Source: https://open.dingtalk.com/document/development/user-information-update
 > Path: 应用开发 / 服务端 API / 通讯录管理 > 用户管理 > 更新用户信息
-> Updated: 2026-06-08 09:28:29
+> Updated: 2026-09-10 14:33:05
 
 # 更新用户信息
 
@@ -38,7 +38,7 @@ updated_at: "2026-06-08 09:28:29"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | be3Fxxxx | 调用该接口的应用凭证，通过[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)接口获取。 |
+| access\_token | String | 是 | be3Fxxxx | 调用该接口的应用凭证，通过[获取企业内部应用的access\_token](1447-obtain-orgapp-token.md)接口获取。 |
 
 ### **请求体**
 
@@ -67,6 +67,7 @@ updated_at: "2026-06-08 09:28:29"
 | force\_update\_fields | String | 否 | manager\_userid | 强制更新的字段，支持清空指定的字段，多个字段之间使用逗号分隔。目前支持字段: `manager_userid`。 |
 | dept\_position\_list | DeptPosition[] | 否 |  | 部门内任职信息。 |
 | extension\_i18n | Json | 否 | {"爱好":  {"zh\_ CN":  "旅游",  "en\_ US":  "travel",  "aJP":"旅  行"} | 扩展属性的国际化值。 |
+| ext\_attrs | EmpExtAttr[] | false | "ext\_attrs": [{  "code": "emp:xxx",  "value": {  "text": "点击前往钉钉官网",  "url": "https://www.dingtalk.com",  "images": {  "string": ["https://imxxxxxtps-64-64.png"]}}}] | 更新自定义字段列表：   - **key**：自定义字段编码。 - **value**：更新自定义字段值，支持images（自定义字段图片）、text（自定义字段文本）、url（自定义字段链接）。 |
 
 ### **请求示例**
 
@@ -99,6 +100,16 @@ req.setOrgEmail("test@xxx.com");
 req.setWorkPlace("未来park");
 req.setRemark("备注备注");
 req.setDeptIdList("2,3,4");
+List<EmpExtAttr> list11 = new ArrayList<EmpExtAttr>();
+EmpExtAttr obj12 = new EmpExtAttr();
+list11.add(obj12);
+obj12.setCode("emp:xxx");
+EmpExtAttrValue obj14 = new EmpExtAttrValue();
+obj14.setImages("https://imxxxxxtps-64-64.png");
+obj14.setText("点击前往钉钉官网");
+obj14.setUrl("www.dingtalk.com");
+list11.setValue(obj14);
+req.setExtAttrs(list11);
 List<DeptOrder> list2 = new ArrayList<DeptOrder>();
 DeptOrder obj3 = new DeptOrder();
 list2.add(obj3);

@@ -95,7 +95,7 @@ sendMessageToGroup({
 | sendCardRequest | Object | 是 | 动态卡片的相关数据。 |
 | sendCardRequest.cardTemplateId | String | 是 | 互动卡片的消息模板ID。可通过[卡片平台](https://open-dev.dingtalk.com/fe/card)获取模板ID。image |
 | sendCardRequest.outTrackId | String | 是 | 唯一标示卡片的外部编码。  **[!NOTE]**  发送不同的卡片内容，需要使用不同的outTrackId。 |
-| sendCardRequest.cardData | Object | 是 | 卡片数据。详情参见[发送钉钉互动卡片（高级版）](../02-4a8AMF6u2A-服务端-API/1478-send-interactive-dynamic-cards-1.md)cardData字段。 |
+| sendCardRequest.cardData | Object | 是 | 卡片数据。详情参见[发送钉钉互动卡片（高级版）](../02-4a8AMF6u2A-服务端-API/1479-send-interactive-dynamic-cards-1.md)cardData字段。 |
 
 ## 返回结果
 

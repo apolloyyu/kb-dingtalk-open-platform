@@ -29,7 +29,7 @@ updated_at: "2026-09-02 18:13:35"
 # 支持的免登场景
 
 - [网页应用（H5微应用）免登](0018-enterprise-internal-application-logon-free.md)
-- [应用管理后台免登](0022-log-on-site-application-management-backend.md)
+- [应用管理后台免登](0023-log-on-site-application-management-backend.md)
 - [实现网页方式登录应用（登录第三方网站）](0019-tutorial-obtaining-user-personal-information.md)
 
   - 浏览器内实现
@@ -67,7 +67,7 @@ updated_at: "2026-09-02 18:13:35"
 
 当开发的应用需要企业管理员在[钉钉管理后台](https://oa.dingtalk.com/)对应用进行一些设置和管理功能时，你需要开发一套应用的后台管理系统，管理员在[钉钉管理后台](https://oa.dingtalk.com/)直接点应用管理后台，便可免输入账户密码实现自动登录你的应用管理后台系统。
 
-免登步骤，详情参见[应用管理后台免登](0022-log-on-site-application-management-backend.md)。
+免登步骤，详情参见[应用管理后台免登](0023-log-on-site-application-management-backend.md)。
 
 | 步骤 | 说明 |
 | --- | --- |

@@ -1,37 +1,76 @@
 ---
-title: "网页应用（H5微应用）免登"
+title: "企业内部网页应用免登"
 source_url: "https://open.dingtalk.com/document/development/enterprise-internal-application-logon-free"
 namespace: "development"
 slug: "enterprise-internal-application-logon-free"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "认证与授权 > 身份验证（免登） > 使用教程 > 钉钉内免登 > 网页应用（H5微应用）免登"
+breadcrumb: "认证与授权 > 身份验证（免登） > 使用教程 > 企业内部应用 > 企业内部网页应用免登"
 doc_id: "NtFrVltzL7"
-updated_at: "2026-07-02 10:35:18"
+updated_at: "2026-09-10 19:22:38"
 ---
 
 > Source: https://open.dingtalk.com/document/development/enterprise-internal-application-logon-free
-> Path: 应用开发 / 服务端 API / 认证与授权 > 身份验证（免登） > 使用教程 > 钉钉内免登 > 网页应用（H5微应用）免登
-> Updated: 2026-07-02 10:35:18
+> Path: 应用开发 / 服务端 API / 认证与授权 > 身份验证（免登） > 使用教程 > 企业内部应用 > 企业内部网页应用免登
+> Updated: 2026-09-10 19:22:38
 
-# 网页应用（H5微应用）免登
+# 企业内部网页应用免登
 
 实现企业内部应用网页应用免登，即企业员工在钉钉内使用企业内部应用时无需输入账号和密码。
 
-## **前提条件**
+## **概述**
 
-- 成为[钉钉开发者](../01-XOnnmGCTbn-开发指南/0006-get-developer-permissions.md)并创建[钉钉企业应用](../01-XOnnmGCTbn-开发指南/0007-create-application.md)，获取应用凭证信息 Client ID 和 Client Secret。
+### **业务背景**
+
+在企业数字化办公场景中，员工需要频繁通过浏览器访问各类内部业务系统（OA审批、CRM客户管理、HR人事系统、财务报销等）。传统网页登录方式存在显著弊端：
+
+- **用户体验差**： 每次访问需手动输入账号密码，操作繁琐，打断工作流。
+- **安全风险高**： 密码易被泄露、暴力破解或钓鱼攻击窃取。
+- **维护成本高**： 忘记密码重置、多系统账号同步增加IT运维负担。
+- **效率低下**： 登录流程平均耗时30-60秒，影响业务连续性。
+
+### **核心价值**
+
+- **零感知登录**： 打开应用自动认证，无需输入任何凭证。
+- **企业级安全**： 依托OAuth2.0协议和钉钉统一身份体系，确保验证可靠。
+- **快速集成**： 标准化JSAPI接口，降低开发门槛，缩短上线周期。
+- **统一管理**： 与企业通讯录、组织架构深度打通，权限自动配置。
+
+### **适用场景**
+
+本文档适用于具备服务端开发能力的钉钉开发者，用于实现企业内部应用在H5 微应用环境下的免登功能。需熟悉H5 微应用开发及后端接口调用流程。
+
+## 适用场景
+
+### 企业内部管理系统
+
+- **OA审批系统**： 员工在钉钉工作台点击审批应用，自动识别身份进入待办列表，无需重复登录。
+- **CRM客户管理**： 销售人员查看客户信息、录入跟进记录，身份信息自动关联。
+- **HR人事系统**： 员工查询薪资单、提交请假申请，数据自动关联个人档案。
+- **财务报销**： 员工提交报销单据，自动填充申请人信息，简化操作流程。
+
+### 典型业务流程
+
+- **实施前**
+
+  ![实施前登录流程](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8539309871/p1100932.png)
+- **实施后**
+
+  ![实施后登录流程](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8539309871/p1100933.png)
+
+## **实施指南**
+
+### **前置条件**
+
+- 成为[钉钉开发者](../01-XOnnmGCTbn-开发指南/0006-get-developer-permissions.md)。
+- 创建[钉钉企业应用](../01-XOnnmGCTbn-开发指南/0007-create-application.md)，获取应用凭证信息 Client ID 和 Client Secret。
 - 完成[添加网页应用](../01-XOnnmGCTbn-开发指南/0007-create-application.md)能力。
-- 已经安装了 IDE 或其他开发工具。
-- 已经安装了 [node.js](https://nodejs.org/en/download)，并完成了相关[环境的配置](https://m.runoob.com/nodejs/nodejs-install-setup.html)。
-- 已经安装了 [maven](https://maven.apache.org/)，并完成了相关[环境的配置](https://maven.apache.org/install.html)。
-- 已经安装了 [JDK](https://www.oracle.com/java/technologies/downloads/?er=221886)，并完成了相关[环境的配置](https://docs.oracle.com/en/java/javase/24/install/overview-jdk-installation.html)。
 
-## **开发流程**
+### **代码实现**
 
 建议用户信息保存在前端缓存中（dd.setStorage）或者cookie中，避免每次进入应用都调用钉钉接口进行免登。
 
-1. 引入 JS SDK。详情参考[客户端SDK介绍](../01-XOnnmGCTbn-开发指南/0031-webapp-read-before-development.md)。
+1. 引入 JS SDK，详情请参考[客户端SDK介绍](../01-XOnnmGCTbn-开发指南/0031-webapp-read-before-development.md)。
 
    ```
    npm install dingtalk-jsapi --save
@@ -61,9 +100,22 @@ updated_at: "2026-07-02 10:35:18"
 3. 调用[获取应用的 Access Token](0037-api-gettoken.md)接口，获取应用访问凭证。
 4. 根据免登授权码 code 和 应用 AccessToken，调用[通过免登码获取用户信息](0024-obtain-the-userid-of-a-user-by-using-the-log-free.md)接口，获取免登用户信息，包括用户userId、用户unionId等信息。
 
+> **[!NOTE]**
+>
 > 开发完成后，需要发布应用，免登操作需要在钉钉端内实现，端外无法正常调用免登组件。
 
-## **步骤一：创建应用**
+## **体验示例（Demo）**
+
+### **前置条件**
+
+- 已经安装了 IDE 或其他开发工具。
+- 已经安装了 [node.js](https://nodejs.org/en/download)，并完成了相关[环境的配置](https://m.runoob.com/nodejs/nodejs-install-setup.html)。
+- 已经安装了 [maven](https://maven.apache.org/)，并完成了相关[环境的配置](https://maven.apache.org/install.html)。
+- 已经安装了 [JDK](https://www.oracle.com/java/technologies/downloads/?er=221886)，并完成了相关[环境的配置](https://docs.oracle.com/en/java/javase/24/install/overview-jdk-installation.html)。
+
+### **操作步骤**
+
+#### **步骤一：创建应用**
 
 1. 登录[开发者后台](https://open-dev.dingtalk.com/#/)。
 2. 单击**应用开发** > **企业内部应用** > **钉钉应用** > **创建应用**。
@@ -82,7 +134,7 @@ updated_at: "2026-07-02 10:35:18"
 
    ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/3825544571/p994234.png)
 
-## **步骤二：配置网页应用**
+#### **步骤二：配置网页应用**
 
 1. 在应用详情页，单击**应用能力** > **添加应用能力**。
 2. 选择添加网页应用。
@@ -94,7 +146,7 @@ updated_at: "2026-07-02 10:35:18"
    | PC端首页地址 |
 4. 配置完成后，单击**保存**。
 
-## **步骤三：发布应用**
+#### **步骤三：发布应用**
 
 1. 应用配置完成后，你需要发布应用，在应用详情页，单击**应用发布** > **版本管理与发布**。
 
@@ -111,12 +163,12 @@ updated_at: "2026-07-02 10:35:18"
    配置完成后，单击下方保存。
 4. 在保存成功的弹框页面，单击直接发布。
 
-> *如果你不是企业管理员，发布应用时需要企业管理员审批，发布仅我可见则无需管理员审批。*
+   > *如果你不是企业管理员，发布应用时需要企业管理员审批，发布仅我可见则无需管理员审批。*
 
-## **步骤四：构建服务**
+#### **步骤四：构建服务**
 
 1. 确保完成上述准备工作，完成下方 Demo 运行的条件。
-2. 你可以下载示例Demo：[web-app-sso.zip](https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20251113/vrmiiu/web-app-sso.zip)。
+2. 你可以下载示例[web-app-sso.zip](https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20251113/vrmiiu/web-app-sso.zip)Demo。
 3. 打开 IDE，并导入已下载的 Demo。
 
    > *示例代码分为 backend（后端代码目录）和frontend（前端代码目录）。*
@@ -145,7 +197,7 @@ updated_at: "2026-07-02 10:35:18"
       > *windows 在启动时候，请使用*`npm run dev:raw`
 8. 至此，前端和后端服务已经启动成功。
 
-## **步骤五：测试应用**
+#### **步骤五：测试应用**
 
 1. 登录钉钉客户端，选择应用所在的组织。
 

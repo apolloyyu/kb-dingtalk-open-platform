@@ -28,4 +28,4 @@ permissions: Partner.Department.Read
 - none stated
 
 source_url: https://open.dingtalk.com/document/development/you-can-call-this-operation-to-retrieve-the-user-tag
-updated_at: 2026-06-04 19:09:57
+updated_at: 2026-09-10 14:33:12

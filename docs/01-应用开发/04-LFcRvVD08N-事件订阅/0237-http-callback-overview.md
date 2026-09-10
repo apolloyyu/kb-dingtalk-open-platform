@@ -38,7 +38,7 @@ HTTP事件回调流程如下图所示：
 1. 开发者需要在钉钉开放平台配置HTTP请求接收地址用于接收推送的回调事件。
 2. 钉钉会向应用配置的HTTP地址推送回调事件数据包。使用应用创建时开发者在开发者后台填写的应用加解密key来进行加密，开发者填写的应用Token进行签名。详情请参考[通用回调事件](0240-event-subscription-callback-test-url-event.md)。
 3. 应用在收到推送后需要进行验证签名和解密，并且返回包含经过加密的字符串的JSON数据。
-4. 调用[注册回调事件](../02-4a8AMF6u2A-服务端-API/1864-register-callback-events.md)接口接收回调事件。
+4. 调用[注册回调事件](../02-4a8AMF6u2A-服务端-API/1865-register-callback-events.md)接口接收回调事件。
 
 ![事件订阅 ](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/4167497061/p200499.png)
 

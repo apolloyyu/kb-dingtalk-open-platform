@@ -40,7 +40,7 @@ updated_at: "2026-09-01 09:17:04"
 >
 >   - 在小程序无后台进程时，使用[小程序 scheme](0441-scheme-of-mini-programs-1.md)访问小程序时，携带page参数不正确，会触发该监听事件。
 >   - 在小程序无后台进程时，通过点击使用[分享](0690-mini-program-jsapi-share.md)方法分享的信息进入小程序时，参数path内指定的页面路径错误，会触发该监听事件。
->   - 在小程序无后台进程时，使用工作消息的[消息链接说明](../02-4a8AMF6u2A-服务端-API/0776-message-link-description.md)跳转进入小程序时，page路径不正确，会触发该监听事件。
+>   - 在小程序无后台进程时，使用工作消息的[消息链接说明](../02-4a8AMF6u2A-服务端-API/0777-message-link-description.md)跳转进入小程序时，page路径不正确，会触发该监听事件。
 > - 该事件与[app.js注册小程序](0434-app-js-registration-mini-program-1.md)中**App.onPageNotFound**的回调时机一致。
 
 ## 示例代码

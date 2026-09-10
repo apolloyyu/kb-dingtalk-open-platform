@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "通讯录管理 > 企业账号 > 查询企业账号用户详情"
 doc_id: "7TMeqD6H0C"
-updated_at: "2026-05-27 13:09:07"
+updated_at: "2026-09-10 14:33:10"
 ---
 
 > Source: https://open.dingtalk.com/document/development/queries-the-details-of-a-dedicated-account
 > Path: 应用开发 / 服务端 API / 通讯录管理 > 企业账号 > 查询企业账号用户详情
-> Updated: 2026-05-27 13:09:07
+> Updated: 2026-09-10 14:33:10
 
 # 查询企业账号用户详情
 
@@ -44,7 +44,7 @@ updated_at: "2026-05-27 13:09:07"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | be3Fxxxx | 调用该API的应用凭证。   - 企业内部应用，通过[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)接口获取。 - 第三方企业应用，通过[获取第三方企业的access\_token](1448-obtain-isvapp-token.md)接口获取。 |
+| access\_token | String | 是 | be3Fxxxx | 调用该API的应用凭证。   - 企业内部应用，通过[获取企业内部应用的access\_token](1447-obtain-orgapp-token.md)接口获取。 - 第三方企业应用，通过[获取第三方企业的access\_token](1449-obtain-isvapp-token.md)接口获取。 |
 
 ### **请求体**
 
@@ -179,6 +179,7 @@ Console.WriteLine(rsp.Body);
 | exclusive\_account\_corp\_name | String | 组织名称 | 企业账号归属组织的组织名称。  **[!NOTE]**  仅适用于企业账号，返回创建该企业账号的组织。 |
 | exclusive\_account\_corp\_id | String | dingxxx | 企业账号归属组织的组织CorpId。  **[!NOTE]**  仅适用于企业账号，返回创建该企业账号的组织。 |
 | disable\_status | Boolean | false | 本组织企业账号的停用状态：   - **true**：停用 - **false**：启用   **[!NOTE]**  仅归属于本企业的钉钉企业账号返回该字段。 |
+| ext\_attrs | EmpExtAttr[] | false | 更新自定义字段列表。 |
 
 ### **响应体示例**
 
@@ -236,6 +237,22 @@ Console.WriteLine(rsp.Body);
       "userid":"500",
       "corp_id":"dingxxx"
     },
+        "ext_attrs": [
+      {
+        "code": "emp:xxx",
+        "name": "主页",
+        "type": "link",
+        "value": {
+          "text": "点击前往钉钉官网",
+          "url": "www.dingtalk.com",
+          "images": {
+            "string": [
+              "https:xxxxx005006-2-tps-64-64.png"
+            ]
+          }
+        }
+      }
+    ],
     "state_code":"86"
   },
   "errmsg":"ok"

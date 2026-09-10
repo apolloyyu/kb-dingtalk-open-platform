@@ -22,7 +22,7 @@ permissions: qyapi_manage_addresslist
 - exclusive_account (Boolean, required): 必须填true，表示要创建企业账号 **[!NOTE]** 仅适用于企业账号。
 - name (String, required): 员工名称，长度最大80个字符。
 - dept_id_list (String, required): 所属部门ID列表，多个部门ID使用`英文,`隔开，每次调用最多传100个部门ID。
-- optional: userid(String), exclusive_account_type(String), telephone(String), job_number(String), title(String), email(String), org_email(String), org_email_type(String), work_place(String), remark(String), dept_order_list(Object[]), dept_id(Number), order(Number), dept_title_list(Object[]), extension(Object), senior_mode(Boolean), hired_date(Number), manager_userid(String), exclusive_mobile(String), avatarMediaId(String), nickname(String)
+- optional: userid(String), exclusive_account_type(String), telephone(String), job_number(String), title(String), email(String), org_email(String), org_email_type(String), work_place(String), remark(String), dept_order_list(Object[]), dept_id(Number), order(Number), dept_title_list(Object[]), extension(Object), senior_mode(Boolean), hired_date(Number), manager_userid(String), exclusive_mobile(String), avatarMediaId(String), nickname(String), ext_attrs(EmpExtAttr[])
 
 ## Returns
 - optional: errcode(Number), errmsg(String), result(Object), userid(String), unionId(String)
@@ -38,4 +38,4 @@ permissions: qyapi_manage_addresslist
 - 员工的企业邮箱，长度最大100个字符。 **[!NOTE]** 需满足以下条件，此字段才生效：员工已开通企业邮箱。
 
 source_url: https://open.dingtalk.com/document/development/create-an-sso-account
-updated_at: 2026-07-08 14:13:45
+updated_at: 2026-09-10 14:33:08

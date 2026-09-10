@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "开发指南"
 breadcrumb: "开发酷应用 > 开发群聊酷应用 > 宜搭群聊酷应用（ISV应用） > 钉钉酷应用工厂介绍"
 doc_id: "o6DQ1sGlGO"
-updated_at: "2026-06-30 09:00:53"
+updated_at: "2026-09-10 14:29:10"
 ---
 
 > Source: https://open.dingtalk.com/document/dingstart/introduction-to-yida-group-chat-coolapp
 > Path: 应用开发 / 开发指南 / 开发酷应用 > 开发群聊酷应用 > 宜搭群聊酷应用（ISV应用） > 钉钉酷应用工厂介绍
-> Updated: 2026-06-30 09:00:53
+> Updated: 2026-09-10 14:29:10
 
 # 钉钉酷应用工厂介绍
 
@@ -74,7 +74,7 @@ updated_at: "2026-06-30 09:00:53"
 
 | 01酷应用介绍 | 02酷应用设计规范与指南 | 03酷应用开发指南 | 04 酷应用模板快速酷化及上架指南 |
 | --- | --- | --- | --- |
-| - [酷应用介绍](https://open.dingtalk.com/coolapp) - [宜搭通过低代码构建钉钉酷应用官方介绍](https://xmtrf1.aliwork.com/yidaCoolApp)    - [钉钉酷应用工厂（通过低代码构建酷应用）全新发布](https://alidocs.dingtalk.com/i/p/Y7kmbokZp3pgGLq2/docs/Xzr6RBgD3LYJnMe6MxLKVZPnyElvd7e9?utm_medium=dingdoc_doc_plugin_url&utm_source=dingdoc_doc)   - [宜搭应用具备酷应用能力介绍](https://alidocs.dingtalk.com/i/p/Y7kmbokZp3pgGLq2/docs/yZvMRzlLwOAWrkgXqYR9VnjY02pBqGox) - [《你好低代码-酷应用专题》直播介绍](https://h5.dingtalk.com/group-live-share/index.htm?type=2&liveFromType=6&liveUuid=5213a3b5-e054-48b9-b699-8b8dfb4547a7&bizType=kankan&dd_nav_bgcolor=FF2C2D2F#/union) | - [酷应用设计指南与通用规范](https://standard.dingtalk.com/#/cate/1/page/818) | - [低代码构建钉钉酷应用开发设计指南](https://alidocs.dingtalk.com/i/p/Y7kmbokZp3pgGLq2/docs/7Y36k14mK9AV35vAPyg185NqapjblR2D)    - [酷卡片设计](0053-yida-cool-card-design.md)   - [酷流程设计](0054-yida-cool-process-design.md)   - [酷应用发布](0055-yida-cool-application-release.md)   - [酷应用启用](0056-yida-cool-application-enabled.md) - [酷应用常见高频FAQ指南](https://alidocs.dingtalk.com/i/p/Y7kmbokZp3pgGLq2/docs/bxgzX5wq4YoJPe1lvQOp8Ry2OB79ALPD) | - [宜搭模板应用快速酷化&上架到钉钉酷应用市场SOP](https://xmtrf1.aliwork.com/o/cool_template_sop) |
+| - [酷应用介绍](https://open.dingtalk.com/coolapp) - [宜搭通过低代码构建钉钉酷应用官方介绍](https://xmtrf1.aliwork.com/yidaCoolApp)    - [钉钉酷应用工厂（通过低代码构建酷应用）全新发布](https://alidocs.dingtalk.com/i/p/Y7kmbokZp3pgGLq2/docs/Xzr6RBgD3LYJnMe6MxLKVZPnyElvd7e9?utm_medium=dingdoc_doc_plugin_url&utm_source=dingdoc_doc)   - [宜搭应用具备酷应用能力介绍](https://alidocs.dingtalk.com/i/p/Y7kmbokZp3pgGLq2/docs/yZvMRzlLwOAWrkgXqYR9VnjY02pBqGox) - [《你好低代码-酷应用专题》直播介绍](https://h5.dingtalk.com/group-live-share/index.htm?type=2&liveFromType=6&liveUuid=5213a3b5-e054-48b9-b699-8b8dfb4547a7&bizType=kankan&dd_nav_bgcolor=FF2C2D2F#/union) | - [酷应用设计指南与通用规范](https://standard.dingtalk.com/#/cate/1/page/818) | - 低代码构建钉钉酷应用开发设计指南    - [酷卡片设计](0053-yida-cool-card-design.md)   - [酷流程设计](0054-yida-cool-process-design.md)   - [酷应用发布](0055-yida-cool-application-release.md)   - [酷应用启用](0056-yida-cool-application-enabled.md) - [酷应用常见高频FAQ指南](https://xmtrf1.aliwork.com/o/cool_template_sop) | - [宜搭模板应用快速酷化&上架到钉钉酷应用市场SOP](https://xmtrf1.aliwork.com/o/cool_template_sop) |
 
 登录[宜搭](https://www.aliwork.com/)，进行应用流程开发：
 

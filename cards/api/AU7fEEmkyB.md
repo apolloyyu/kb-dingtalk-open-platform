@@ -25,7 +25,7 @@ permissions: qyapi_manage_addresslist
 - init_password (String, required): 钉钉自建企业账号的初始密码，初始密码至少8个字符。 **[!NOTE]** - 不能全是字母或者数字。 - 建议不要携带手机号、邮箱、链接等信息，避免注册短信被运营商管控拦截，
 - name (String, required): 员工名称，长度最大80个字符。
 - dept_id_list (String, required): 所属部门ID列表，多个部门ID使用`英文,`隔开，每次调用最多传100个部门ID。
-- optional: userid(String), send_password_to_user(Boolean), telephone(String), job_number(String), title(String), email(String), org_email(String), org_email_type(String), work_place(String), remark(String), dept_order_list(Object[]), dept_id(Number), order(Number), dept_title_list(Object[]), extension(String), senior_mode(Boolean), hired_date(Number), manager_userid(String), exclusive_mobile(String), avatarMediaId(String), nickname(String)
+- optional: userid(String), send_password_to_user(Boolean), telephone(String), job_number(String), title(String), email(String), org_email(String), org_email_type(String), work_place(String), remark(String), dept_order_list(Object[]), dept_id(Number), order(Number), dept_title_list(Object[]), extension(String), senior_mode(Boolean), hired_date(Number), manager_userid(String), exclusive_mobile(String), avatarMediaId(String), nickname(String), ext_attrs(EmpExtAttr[])
 
 ## Returns
 - optional: errcode(Number), errmsg(String), result(Object), userid(String), unionId(String)
@@ -41,4 +41,4 @@ permissions: qyapi_manage_addresslist
 - 员工个人邮箱，长度最大50个字符。 **[!NOTE]** 员工邮箱是唯一的，企业内不能重复。
 
 source_url: https://open.dingtalk.com/document/development/create-dingtalk-user-created-dedicated-account
-updated_at: 2026-05-27 13:09:03
+updated_at: 2026-09-10 14:33:09

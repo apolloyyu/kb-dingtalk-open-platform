@@ -36,7 +36,7 @@ updated_at: "2026-03-27 19:05:57"
 
 > **[!NOTE]**
 >
-> 接口请参考[获取文件上传信息](0674-obtain-file-upload-informations.md)文档说明，如何调用请参考[如何调用服务端API](https://open.dingtalk.com/document/development/how-to-call-apis)文档介绍。
+> 接口请参考[获取文件上传信息](0675-obtain-file-upload-informations.md)文档说明，如何调用请参考[如何调用服务端API](https://open.dingtalk.com/document/development/how-to-call-apis)文档介绍。
 
 **关键入参：**
 
@@ -176,7 +176,7 @@ OSS 上传完成后，调用接口 `POST /v2.0/storage/spaces/files/{parentDentr
 > **[!NOTE]**
 >
 > - 接口成功后会返回文件信息（`dentry`），包含文件 ID、uuid、所在空间等，上传完成。
-> - 接口请参考[提交文件](0675-submittal-file.md)文档说明，如何调用请参考[如何调用服务端API](https://open.dingtalk.com/document/development/how-to-call-apis)文档介绍。
+> - 接口请参考[提交文件](0676-submittal-file.md)文档说明，如何调用请参考[如何调用服务端API](https://open.dingtalk.com/document/development/how-to-call-apis)文档介绍。
 
 **关键入参：**
 

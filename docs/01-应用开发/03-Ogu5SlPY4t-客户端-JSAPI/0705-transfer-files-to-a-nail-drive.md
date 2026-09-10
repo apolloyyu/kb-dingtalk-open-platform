@@ -51,5 +51,5 @@ dd.saveFileToDingTalk({
 
 | **参数** | **类型** | **说明** |
 | --- | --- | --- |
-| url | String | 文件在第三方服务器上的url地址或通过[单步文件上传](../02-4a8AMF6u2A-服务端-API/1582-single-step-file-upload.md)获取到的media\_id。  **[!NOTE]**  如果是url地址，要求资源请求返回消息头中需要包含Content-Length字段，且>0。 |
+| url | String | 文件在第三方服务器上的url地址或通过[单步文件上传](../02-4a8AMF6u2A-服务端-API/1583-single-step-file-upload.md)获取到的media\_id。  **[!NOTE]**  如果是url地址，要求资源请求返回消息头中需要包含Content-Length字段，且>0。 |
 | name | String | 文件保存的名字。 |

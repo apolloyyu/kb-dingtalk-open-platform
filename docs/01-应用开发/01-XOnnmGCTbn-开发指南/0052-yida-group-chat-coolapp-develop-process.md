@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "开发指南"
 breadcrumb: "开发酷应用 > 开发群聊酷应用 > 宜搭群聊酷应用（ISV应用） > 酷应用开发流程"
 doc_id: "ec0VXBmxn9"
-updated_at: "2025-09-03 15:56:22"
+updated_at: "2026-09-10 14:29:11"
 ---
 
 > Source: https://open.dingtalk.com/document/dingstart/yida-group-chat-coolapp-develop-process
 > Path: 应用开发 / 开发指南 / 开发酷应用 > 开发群聊酷应用 > 宜搭群聊酷应用（ISV应用） > 酷应用开发流程
-> Updated: 2025-09-03 15:56:22
+> Updated: 2026-09-10 14:29:11
 
 # 酷应用开发流程
 
@@ -24,11 +24,8 @@ updated_at: "2025-09-03 15:56:22"
 
 ## 宜搭酷应用开发指引帮助指引
 
-钉钉酷应用整体的设计规范，详情参见[钉钉酷应用设计指南&通用设计规范](https://standard.dingtalk.com/#/cate/1/page/818)。
-
-| 01酷应用介绍 | 02酷应用设计规范与指南 | 03酷应用开发指南 | 04 酷应用模板快速酷化及上架指南 |
-| --- | --- | --- | --- |
-| - [酷应用介绍](https://open.dingtalk.com/coolapp) - [宜搭酷应用工厂介绍](https://alidocs.dingtalk.com/i/p/Y7kmbokZp3pgGLq2/docs/yZvMRzlLwOAWrkgXqYR9VnjY02pBqGox) - [《你好低代码-酷应用专题》直播介绍](https://h5.dingtalk.com/group-live-share/index.htm?type=2&liveFromType=6&liveUuid=5213a3b5-e054-48b9-b699-8b8dfb4547a7&bizType=kankan&dd_nav_bgcolor=FF2C2D2F#/union) | - [宜搭酷应用设计指南](https://alidocs.dingtalk.com/i/p/Y7kmbokZp3pgGLq2/docs/7Y36k14mK9AV35vAPyg185NqapjblR2D) - [酷应用设计指南与通用规范](https://standard.dingtalk.com/#/cate/1/page/818) | - [酷应用开发手册](https://alidocs.dingtalk.com/i/p/Y7kmbokZp3pgGLq2/docs/EGd6jK4Nvk3Jl9PMZZ0e8ZOP0LawMmQq) - [酷应用常见高频FAQ指南](https://alidocs.dingtalk.com/i/p/Y7kmbokZp3pgGLq2/docs/bxgzX5wq4YoJPe1lvQOp8Ry2OB79ALPD) | - [宜搭模板应用快速酷化&上架到钉钉酷应用市场SOP](https://xmtrf1.aliwork.com/o/cool_template_sop) |
+- 钉钉酷应用整体的设计规范，详情参见[钉钉酷应用设计指南&通用设计规范](https://standard.dingtalk.com/#/cate/1/page/818)。
+- 开发指引，详情参见[酷应用模板快速酷化及上架指南](https://xmtrf1.aliwork.com/o/cool_template_sop)。
 
 ## 宜搭酷应用模板专区
 

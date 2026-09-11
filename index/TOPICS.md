@@ -9,7 +9,7 @@
 
 - 用户标识对照：**userId**（企业内唯一、不可改）/ **unionId**（跨企业唯一）/ **工号 job_number**（企业自维护、可不唯一、非必填，不能作唯一标识）——[基础概念](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md) · [通讯录概述·名词解释](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0047-contacts-overview.md)
 - 注意：旧版（归档）JSAPI 文档里的"工号/emplId"多为 userid 的历史命名混用，勿按字面理解
-- 会话标识 openConversationId：获取 = [创建群返回](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0738-create-common-group-new-version-v2.md) / [chatId 转换接口](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0745-obtain-group-openconversationid.md) / [JSAPI 选择会话 chooseChat](../docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0318-jsapi-choose-chat.md) / [机器人接收消息回调](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0080-robot-receive-message.md)；`openChatByConversationId` 是**消费**该 ID 的跳转 JSAPI，不是获取途径
+- 会话标识 openConversationId：获取 = [创建群返回](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0739-create-common-group-new-version-v2.md) / [chatId 转换接口](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0746-obtain-group-openconversationid.md) / [JSAPI 选择会话 chooseChat](../docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0318-jsapi-choose-chat.md) / [机器人接收消息回调](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0080-robot-receive-message.md)；`openChatByConversationId` 是**消费**该 ID 的跳转 JSAPI，不是获取途径
 
 ## 凭证与鉴权
 
@@ -31,7 +31,7 @@
 - [添加接口调用权限](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0003-add-api-permission.md) · [敏感权限使用](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0004-use-sensitive-permissions.md)
 - 找某个接口 / 权限点 → 别翻目录，直接查 [graph/api.jsonl 与 permission.jsonl](../graph/GRAPH.md)
 - 新旧双轨：`api.dingtalk.com`（新版）与 `oapi.dingtalk.com`（旧版）并存，`graph/api.jsonl` 的 `version` 字段可判别
-- 限流/QPS/调用频率：[调用频率限制](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0012-call-frequency-limit.md)（规避实践/指数退避）+ [调用频次与限流](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1433-how-to-process-api-throttling-on-the-dingtalk-server.md)（应用/IP/组织/全局四维度阈值与 90018 等限流错误码；检索注意该文标题用「频次」不用「频率」），两篇一并给；按 appKey 维度为主，不按操作人；库内无"带宽"维度条目
+- 限流/QPS/调用频率：[调用频率限制](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0012-call-frequency-limit.md)（规避实践/指数退避）+ [调用频次与限流](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1434-how-to-process-api-throttling-on-the-dingtalk-server.md)（应用/IP/组织/全局四维度阈值与 90018 等限流错误码；检索注意该文标题用「频次」不用「频率」），两篇一并给；按 appKey 维度为主，不按操作人；库内无"带宽"维度条目
 
 ## 错误码排查
 
@@ -46,14 +46,14 @@
 
 ## 群文件与媒体
 
-- 机器人收到的消息文件/图片：回调里拿 `downloadCode` → [下载机器人接收消息的文件内容](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0719-download-the-file-content-of-the-robot-receiving-message.md)
+- 机器人收到的消息文件/图片：回调里拿 `downloadCode` → [下载机器人接收消息的文件内容](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0720-download-the-file-content-of-the-robot-receiving-message.md)
 - **负面清单**：开放平台没有"拉取群历史消息/历史聊天图片"的服务端接口——只能经机器人回调实时接收（downloadCode 线），别给用户编造 `im/conversations/*/messages/query` 类接口
-- 群文件下载三步链：[查询群存储空间](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0640-obtain-group-storage-space-information.md) → 获取文件列表(dentries) → [获取文件下载信息](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0678-obtains-the-download-information-about-a-file.md)
+- 群文件下载三步链：[查询群存储空间](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0640-obtain-group-storage-space-information.md) → 获取文件列表(dentries) → [获取文件下载信息](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0679-obtains-the-download-information-about-a-file.md)
 - media_id 时效：见[媒体文件概述](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0644-apsara-file-storage-for-hdfs-overview.md)——存储有效期无限制、可一直使用（旧版"3 天过期"说法已过时）
 
 ## 待办（Todo）
 
-- [概述](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0792-dingtalk-todo-task-overview.md)（工作待办/个人待办与客户端 tab 展示机制）· [FAQ](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0802-todo-faq.md) · [创建待办](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0793-add-dingtalk-to-do-task.md)（注意 detailUrl 等必填口径以该文参数表为准；bizTag 是响应字段不是入参）
+- [概述](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0793-dingtalk-todo-task-overview.md)（工作待办/个人待办与客户端 tab 展示机制）· [FAQ](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0803-todo-faq.md) · [创建待办](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0794-add-dingtalk-to-do-task.md)（注意 detailUrl 等必填口径以该文参数表为准；bizTag 是响应字段不是入参）
 
 ## OA 审批高频
 
@@ -69,7 +69,7 @@
 ## 应用开发入门
 
 - [基础概念](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md) · [应用类型与能力说明](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0002-application-type-introduction.md) · [应用创建与配置](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md)
-- 小程序：[客户端 SDK 介绍](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0024-mini-app-client-jsapi-overview.md) · [开发前端](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0028-develop-miniapp-fe.md) · [上传发布](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0029-upload-miniapp.md)
+- 小程序：[客户端 SDK 介绍](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0024-mini-app-client-jsapi-overview.md) · [开发前端](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0025-develop-miniapp-fe.md) · [上传发布](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0027-upload-miniapp.md)
 - 导航栏定制：现行 [setNavigationBar](../docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0046-jsapi-set-navigation-bar.md)；归档参考[导航栏透明（H5）](../docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0829-the-microapplication-navigation-bar-is-transparent.md)、[左侧导航按钮文字](../docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0754-set-left-navigation-button-text.md)；查任意 JSAPI 名用 `dkdoc jsapi <名>`（如 setOptionMenu 快照未收录——下否定结论前先查表再声明"快照未见"）
 - 网页应用（H5）：[开发前必读](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0031-webapp-read-before-development.md) · [配置](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0032-configure-web-application.md) · [前端](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0033-develop-webapp-frontend.md) · [服务端](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0034-develop-webapp-backend.md)
 - [酷应用概述](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0044-coolapp-overview.md)（群聊/单聊内嵌应用形态）
@@ -78,7 +78,7 @@
 
 - [通讯录概述](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0047-contacts-overview.md) · [查询用户详情](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0056-query-user-details.md) · [获取部门用户 userid 列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0065-query-the-list-of-department-userids.md)
 - 全量接口清单见 [服务端API/通讯录管理](01-应用开发/02-服务端API/05-通讯录管理.md)（115 篇）
-- "主部门"无独立读写接口：文档承载字段是[智能人事员工调岗](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0954-intelligent-personnel-staff-transfer.md)的 `mainDeptIdAfterTransfer`（职位管理升级后修改主部门的文档支持途径）；[用户详情](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0056-query-user-details.md)的 `dept_id_list` 只是"所属部门id列表"，**文档未定义"第一个是主部门"之类语义**
+- "主部门"无独立读写接口：文档承载字段是[智能人事员工调岗](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0955-intelligent-personnel-staff-transfer.md)的 `mainDeptIdAfterTransfer`（职位管理升级后修改主部门的文档支持途径）；[用户详情](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0056-query-user-details.md)的 `dept_id_list` 只是"所属部门id列表"，**文档未定义"第一个是主部门"之类语义**
 
 ## 互动卡片
 

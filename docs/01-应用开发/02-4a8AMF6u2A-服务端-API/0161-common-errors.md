@@ -152,4 +152,4 @@ updated_at: "2026-07-02 10:35:57"
 
   答：调用[更新用户信息](0057-user-information-update.md)接口出现上述错误可能原因如下：
 
-  已开启智能人事职位管理的场景，若需更新用户信息中职位（title）或部门（deptid）就需要根据[智能人事员工调岗](0954-intelligent-personnel-staff-transfer.md)来更新。
+  已开启智能人事职位管理的场景，若需更新用户信息中职位（title）或部门（deptid）就需要根据[智能人事员工调岗](0955-intelligent-personnel-staff-transfer.md)来更新。

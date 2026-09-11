@@ -24,7 +24,7 @@ updated_at: "2026-09-02 18:14:59"
 
 - HTTP回调
 
-  ISV向钉钉开放平台注册一个HTTP URL，以及要监听的事件，事件发生后调用ISV指定的HTTP URL 通知ISV。调用[注册回调事件](../02-4a8AMF6u2A-服务端-API/1864-register-callback-events.md)监听场景群事件。
+  ISV向钉钉开放平台注册一个HTTP URL，以及要监听的事件，事件发生后调用ISV指定的HTTP URL 通知ISV。调用[注册回调事件](../02-4a8AMF6u2A-服务端-API/1865-register-callback-events.md)监听场景群事件。
 - RDS数据推送ISV在RDS上按照钉钉的Schema创建一个数据库，当事件发生后，钉钉会将最新的数据写入这个数据库，由ISV自行使用最新的数据。
 
   > **[!IMPORTANT]**

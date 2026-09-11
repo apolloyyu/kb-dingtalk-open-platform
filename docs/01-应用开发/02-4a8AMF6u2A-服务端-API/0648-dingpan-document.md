@@ -51,9 +51,9 @@ updated_at: "2026-05-15 12:27:22"
       > **[!NOTE]**
       >
       > 在调用该接口时，请先确保钉盘空间内只有一个名为“测试文件夹”的文件夹，否则可能会报错。
-   2. 根据`dentryUuid`调用[获取文件上传信息](0674-obtain-file-upload-informations.md)接口，获取文件的上传信息，包括`resourceUrls`和`headers`参数值。
-   3. 使用OSS的header加签方式上传文件，如何上传，可参考[获取文件上传信息](0674-obtain-file-upload-informations.md)接口中步骤 2。
-   4. 调用[提交文件](0675-submittal-file.md)接口，提交当前文件到钉盘，并获取返回的`spaceId`、`parentId`、`path`、`uuid`等参数值。
+   2. 根据`dentryUuid`调用[获取文件上传信息](0675-obtain-file-upload-informations.md)接口，获取文件的上传信息，包括`resourceUrls`和`headers`参数值。
+   3. 使用OSS的header加签方式上传文件，如何上传，可参考[获取文件上传信息](0675-obtain-file-upload-informations.md)接口中步骤 2。
+   4. 调用[提交文件](0676-submittal-file.md)接口，提交当前文件到钉盘，并获取返回的`spaceId`、`parentId`、`path`、`uuid`等参数值。
 3. 钉盘文件预览
 
    1. 通过钉盘文件上传中最后提交时获取的 `uuid`，拼接并打开文件，进行预览。
@@ -61,8 +61,8 @@ updated_at: "2026-05-15 12:27:22"
 
    1. 通过调用[获取空间列表](0636-queries-a-space-list.md)接口，获取钉盘空间信息，获取`spaceId`。
    2. 通过 spaceId 调用[获取文件或文件夹列表](0666-get-a-list-of-files-or-folders.md)接口，获取文件的 `fileId` 和文件名称 `name`。
-   3. 通过获取的 filedId 和 name [获取文件下载信息](0678-obtains-the-download-information-about-a-file.md)接口，获取文件的下载信息，包括`internalResourceUrls` 和 `headers` 参数值。
-   4. 通过以上的内容， 执行下载操作，下载代码请参考[获取文件下载信息](0678-obtains-the-download-information-about-a-file.md)步骤 2。
+   3. 通过获取的 filedId 和 name [获取文件下载信息](0679-obtains-the-download-information-about-a-file.md)接口，获取文件的下载信息，包括`internalResourceUrls` 和 `headers` 参数值。
+   4. 通过以上的内容， 执行下载操作，下载代码请参考[获取文件下载信息](0679-obtains-the-download-information-about-a-file.md)步骤 2。
 
       说明
 
@@ -195,7 +195,7 @@ updated_at: "2026-05-15 12:27:22"
 
    > **[!IMPORTANT]**
    >
-   > 在文件下载时若出现“**auth level of org is not enough**”错误信息，则证明当前企业认证等级过低，需要升级后使用，详情请参考[获取文件下载信息](0678-obtains-the-download-information-about-a-file.md)接口中的错误码说明。
+   > 在文件下载时若出现“**auth level of org is not enough**”错误信息，则证明当前企业认证等级过低，需要升级后使用，详情请参考[获取文件下载信息](0679-obtains-the-download-information-about-a-file.md)接口中的错误码说明。
 
    ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/3825544571/p994253.png)
 

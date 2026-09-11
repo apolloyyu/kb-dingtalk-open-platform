@@ -81,48 +81,48 @@ updated_at: "2026-05-15 18:19:58"
 
 | **API版本** | **API版本** | **API版本** |
 | --- | --- | --- |
-| [获取文件上传信息](0674-obtain-file-upload-informations.md) | 获取文件上传信息。 | 新版 |
-| [提交文件](0675-submittal-file.md) | 提交文件完成文件上传。 | 新版 |
-| [初始化文件分片上传](0676-initialize-a-multipart-upload-object.md) | 初始化文件分片上传。 | 新版 |
-| [获取文件分片上传信息](0677-obtains-the-information-about-multipart-uploads-of-an-object.md) | 获取文件分片后每片文件的上传信息。 | 新版 |
-| [获取文件下载信息](0678-obtains-the-download-information-about-a-file.md) | 获取存储空间内文件的下载信息。 | 新版 |
+| [获取文件上传信息](0675-obtain-file-upload-informations.md) | 获取文件上传信息。 | 新版 |
+| [提交文件](0676-submittal-file.md) | 提交文件完成文件上传。 | 新版 |
+| [初始化文件分片上传](0677-initialize-a-multipart-upload-object.md) | 初始化文件分片上传。 | 新版 |
+| [获取文件分片上传信息](0678-obtains-the-information-about-multipart-uploads-of-an-object.md) | 获取文件分片后每片文件的上传信息。 | 新版 |
+| [获取文件下载信息](0679-obtains-the-download-information-about-a-file.md) | 获取存储空间内文件的下载信息。 | 新版 |
 
 ### **权限管理**
 
 | **API版本** | **API版本** | **API版本** |
 | --- | --- | --- |
-| [添加权限](0681-add-permissions-file.md) | 添加存储空间的权限。 | 新版 |
-| [删除权限](0682-delete-permissions-file.md) | 删除存储空间的权限。 | 新版 |
-| [修改权限](0683-modify-permissions-file.md) | 修改存储空间的权限。 | 新版 |
-| [获取权限列表](0684-get-permission-list.md) | 获取存储空间的权限列表。 | 新版 |
-| [设置权限继承模式](0685-set-permission-inheritance-mode.md) | 根据文件uuid、操作者unonId和权限继承模式inheritance，设置权限的继承模式。 | 新版 |
-| [获取权限继承模式](0686-get-permission-inheritance-mode.md) | 根据文件uuid和操作者unionId，获取权限继承模式信息。 | 新版 |
+| [添加权限](0682-add-permissions-file.md) | 添加存储空间的权限。 | 新版 |
+| [删除权限](0683-delete-permissions-file.md) | 删除存储空间的权限。 | 新版 |
+| [修改权限](0684-modify-permissions-file.md) | 修改存储空间的权限。 | 新版 |
+| [获取权限列表](0685-get-permission-list.md) | 获取存储空间的权限列表。 | 新版 |
+| [设置权限继承模式](0686-set-permission-inheritance-mode.md) | 根据文件uuid、操作者unonId和权限继承模式inheritance，设置权限的继承模式。 | 新版 |
+| [获取权限继承模式](0687-get-permission-inheritance-mode.md) | 根据文件uuid和操作者unionId，获取权限继承模式信息。 | 新版 |
 
 ### **回收站管理**
 
 | **API版本** | **API版本** | **API版本** |
 | --- | --- | --- |
-| [获取回收站信息](0687-obtain-information-about-the-recycle-bin.md) | 获取回收站信息。 | 新版 |
-| [获取回收项列表](0688-gets-the-list-of-recycle-items.md) | 获取回收站内的回收项信息列表。 | 新版 |
-| [获取回收项信息](0689-obtain-recycling-item-information.md) | 获取回收项信息。 | 新版 |
-| [还原回收项](0690-restore-recycle-items.md) | 还原回收项。 | 新版 |
-| [批量还原回收项](0691-batch-restore-recycled-items.md) | 批量还原回收项。 | 新版 |
-| [删除回收项](0692-delete-recycle-item.md) | 删除回收站内的某个回收项。 | 新版 |
-| [批量删除回收项](0693-batch-delete-recycle-items.md) | 批量删除回收站内的回收项。 | 新版 |
-| [清空回收站](0694-empty-the-recycle-bin.md) | 根据回收站Id清空回收站。 | 新版 |
+| [获取回收站信息](0688-obtain-information-about-the-recycle-bin.md) | 获取回收站信息。 | 新版 |
+| [获取回收项列表](0689-gets-the-list-of-recycle-items.md) | 获取回收站内的回收项信息列表。 | 新版 |
+| [获取回收项信息](0690-obtain-recycling-item-information.md) | 获取回收项信息。 | 新版 |
+| [还原回收项](0691-restore-recycle-items.md) | 还原回收项。 | 新版 |
+| [批量还原回收项](0692-batch-restore-recycled-items.md) | 批量还原回收项。 | 新版 |
+| [删除回收项](0693-delete-recycle-item.md) | 删除回收站内的某个回收项。 | 新版 |
+| [批量删除回收项](0694-batch-delete-recycle-items.md) | 批量删除回收站内的回收项。 | 新版 |
+| [清空回收站](0695-empty-the-recycle-bin.md) | 根据回收站Id清空回收站。 | 新版 |
 
 ### **任务管理**
 
 | **API版本** | **API版本** | **API版本** |
 | --- | --- | --- |
-| [获取存储中异步任务信息](0695-get-the-asynchronous-task-information-in-storage.md) | 获取存储中异步任务信息。 | 新版 |
+| [获取存储中异步任务信息](0696-get-the-asynchronous-task-information-in-storage.md) | 获取存储中异步任务信息。 | 新版 |
 
 ### **事件订阅**
 
 | **API版本** | **API版本** | **API版本** |
 | --- | --- | --- |
-| [订阅文件变更事件](0696-subscribe-to-file-change-events.md) | 订阅存储文件变更事件。 | 新版 |
-| [取消订阅文件变更事件](0697-unsubscribe-from-file-change-events.md) | 取消订阅存储文件变更事件。 | 新版 |
+| [订阅文件变更事件](0697-subscribe-to-file-change-events.md) | 订阅存储文件变更事件。 | 新版 |
+| [取消订阅文件变更事件](0698-unsubscribe-from-file-change-events.md) | 取消订阅存储文件变更事件。 | 新版 |
 
 ## **使用教程**
 
@@ -162,7 +162,7 @@ updated_at: "2026-05-15 18:19:58"
 
   | 属性 | 类型 | 说明 |
   | --- | --- | --- |
-  | id | string | 权限成员id。  - 如果type参数值为**ORG**，该参数值传企业**corpId**。 - 如果type参数值为**DEPT**，该参数值传部门**deptId**，调用[获取部门列表](0082-user-management-acquires-the-list-departments.md)接口获取dept\_id参数值。 - 如果type参数值为**TAG**，该参数值传**tag名称**。 - 如果type参数值为**CONVERSATION**，该参数值传会话**openConversationId**，通过[创建群会话](1483-session-management-creates-groups.md)接口或[创建场景群](1486-create-a-scene-group-v2.md)接口获取。 - 如果type参数值为**USER**，该参数传用户**unionId**，可调用[查询用户详情](0056-query-user-details.md)接口获取unionid参数值。 |
+  | id | string | 权限成员id。  - 如果type参数值为**ORG**，该参数值传企业**corpId**。 - 如果type参数值为**DEPT**，该参数值传部门**deptId**，调用[获取部门列表](0082-user-management-acquires-the-list-departments.md)接口获取dept\_id参数值。 - 如果type参数值为**TAG**，该参数值传**tag名称**。 - 如果type参数值为**CONVERSATION**，该参数值传会话**openConversationId**，通过[创建群会话](1484-session-management-creates-groups.md)接口或[创建场景群](1487-create-a-scene-group-v2.md)接口获取。 - 如果type参数值为**USER**，该参数传用户**unionId**，可调用[查询用户详情](0056-query-user-details.md)接口获取unionid参数值。 |
   | roleId | string | 权限角色Id。  - **OWNER**：拥有者 - **MANAGER**：管理者 - **EDITOR**：编辑者 - **DOWNLOADER**：下载者 - **READER**：查看者 |
   | type | string | 权限成员类型：  - **ORG**：企业 - **DEPT**：部门 - **TAG**：自定义tag - **CONVERSATION**：会话 - **USER**：用户 |
   | duration | string | 授权有效时长，单位秒，默认值为-1，表示永久有效。  - 被添加权限的空间类型是APP时，授权有效时长生效。 - 被添加权限的空间类型是USER时，授权有效时长无效，默认为永久有效。 |

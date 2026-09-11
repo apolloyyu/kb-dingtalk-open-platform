@@ -76,8 +76,8 @@ openApp({
 
 在调用DingTalk OpenAPI中的工作台相关接口前，必须从开放平台获取访问凭证API Token，这个访问凭证包含你的企业信息以及可调用的接口权限，目前可调用工作台相关的接口如下：
 
-- [获取工作台插件检验的规则信息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1001-you-can-call-this-operation-to-obtain-the-information-about.md)
-- [获取工作台插件权限点](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1000-obtain-the-permissions-of-the-workbench-plug-in.md)
+- [获取工作台插件检验的规则信息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1002-you-can-call-this-operation-to-obtain-the-information-about.md)
+- [获取工作台插件权限点](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1001-obtain-the-permissions-of-the-workbench-plug-in.md)
 
 ### **获取访问凭证API Token**
 

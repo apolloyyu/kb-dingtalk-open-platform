@@ -26,14 +26,14 @@ updated_at: "2026-08-25 09:45:09"
 >
 > 应用内购当前不支持优惠券、满赠等优惠能力。
 
-1. [应用内购概述](../02-4a8AMF6u2A-服务端-API/0876-application-market-overview.md)
-2. [内购商品购买与核销](../02-4a8AMF6u2A-服务端-API/0878-lg1nb7.md)
-3. [创建内购商品](../02-4a8AMF6u2A-服务端-API/0877-byb8fg.md)
-4. [获取内购商品SKU页面地址](../02-4a8AMF6u2A-服务端-API/0883-obtain-the-address-of-the-product-sku-details-page.md)
-5. [内购商品订单处理完成](../02-4a8AMF6u2A-服务端-API/0884-internal-purchase-order-processing-completed.md)
-6. [获取内购订单信息](../02-4a8AMF6u2A-服务端-API/0885-obtain-information-about-internal-purchase-orders.md)
-7. [应用内购商品核销](../02-4a8AMF6u2A-服务端-API/0886-application-of-in-house-purchase-verification.md)
-8. [获取未处理的已支付订单](../02-4a8AMF6u2A-服务端-API/0887-obtaining-isv-unfinished-processing-order.md)
+1. [应用内购概述](../02-4a8AMF6u2A-服务端-API/0877-application-market-overview.md)
+2. [内购商品购买与核销](../02-4a8AMF6u2A-服务端-API/0879-lg1nb7.md)
+3. [创建内购商品](../02-4a8AMF6u2A-服务端-API/0878-byb8fg.md)
+4. [获取内购商品SKU页面地址](../02-4a8AMF6u2A-服务端-API/0884-obtain-the-address-of-the-product-sku-details-page.md)
+5. [内购商品订单处理完成](../02-4a8AMF6u2A-服务端-API/0885-internal-purchase-order-processing-completed.md)
+6. [获取内购订单信息](../02-4a8AMF6u2A-服务端-API/0886-obtain-information-about-internal-purchase-orders.md)
+7. [应用内购商品核销](../02-4a8AMF6u2A-服务端-API/0887-application-of-in-house-purchase-verification.md)
+8. [获取未处理的已支付订单](../02-4a8AMF6u2A-服务端-API/0888-obtaining-isv-unfinished-processing-order.md)
 
 ## 2、交易信息推送接入
 
@@ -75,12 +75,12 @@ updated_at: "2026-08-25 09:45:09"
 
 当用户因组织架构调整或其它原因，在当前规格周期到期后，想选择更高版本或更低版本的规格来满足业务需要。**如果不选择接入续费变配能力，则客户在续期操作时将只能继续选择同规格的版本。**
 
-续费变配接入流程，请参考[续费变配接入](../02-4a8AMF6u2A-服务端-API/0881-renewal-and-configuration-change-access.md)。
+续费变配接入流程，请参考[续费变配接入](../02-4a8AMF6u2A-服务端-API/0882-renewal-and-configuration-change-access.md)。
 
 ## 4、应用内授权开通接入
 
-应用内开通接入流程，请参考[移动端应用内授权](../02-4a8AMF6u2A-服务端-API/0879-in-app-authorization-to-open-access.md#3b0cf6efb5pp9)。
+应用内开通接入流程，请参考[移动端应用内授权](../02-4a8AMF6u2A-服务端-API/0880-in-app-authorization-to-open-access.md#3b0cf6efb5pp9)。
 
 ## 5、个人版&免费规格接入
 
-应用内授权&个人版&免费规格接入流程，请参考[成员授权接入](../02-4a8AMF6u2A-服务端-API/0880-document-on-authorization-of-application-market-members.md)。
+应用内授权&个人版&免费规格接入流程，请参考[成员授权接入](../02-4a8AMF6u2A-服务端-API/0881-document-on-authorization-of-application-market-members.md)。

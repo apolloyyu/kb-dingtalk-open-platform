@@ -22,7 +22,7 @@ updated_at: "2026-09-02 18:13:48"
 
 根据上传钉盘空间的不同，调用本接口时注意：
 
-- 如果上传时使用的**spaceId**是企业自定义钉盘空间，调用该jsapi之前，需要授予当前用户对该空间的上传操作权限。参见[获取企业下的自定义空间](../02-4a8AMF6u2A-服务端-API/1558-obtain-user-space-under-the-enterprise.md)和[授权用户访问企业的自定义空间](../02-4a8AMF6u2A-服务端-API/1559-authorize-a-user-to-access-a-custom-workspace-of-an.md)接口。
+- 如果上传时使用的**spaceId**是企业自定义钉盘空间，调用该jsapi之前，需要授予当前用户对该空间的上传操作权限。参见[获取企业下的自定义空间](../02-4a8AMF6u2A-服务端-API/1559-obtain-user-space-under-the-enterprise.md)和[授权用户访问企业的自定义空间](../02-4a8AMF6u2A-服务端-API/1560-authorize-a-user-to-access-a-custom-workspace-of-an.md)接口。
 - 如果上传时使用的**spaceId**是审批附件钉盘空间，调用该jsapi之前，需要再次使用当前操作上传员工的userid调用一次获取审批钉盘空间接口，参见[获取审批钉盘空间信息](../02-4a8AMF6u2A-服务端-API/0502-obtains-the-information-about-approval-nail-disk.md)。
 
 ## 示例代码

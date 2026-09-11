@@ -71,7 +71,7 @@ updated_at: "2026-07-22 16:55:15"
 
    ![4.完成机器人添加.png](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/7731072871/p722561.png)
 
-机器人添加完成后，获取企业应用机器人的 Webhook 地址，具体操作详见[企业机器人 Webhook 地址](../02-4a8AMF6u2A-服务端-API/0791-faq-robot.md)。
+机器人添加完成后，获取企业应用机器人的 Webhook 地址，具体操作详见[企业机器人 Webhook 地址](../02-4a8AMF6u2A-服务端-API/0792-faq-robot.md)。
 
 ### **酷应用**
 

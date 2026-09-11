@@ -63,13 +63,13 @@ updated_at: "2026-08-03 09:13:56"
 2. 在开发者后台申请对应的 OpenAPI 权限点，例如`qyapi_hrm_read_user`。
 3. 集成统一授权 JS SDK，调用`openAuth`唤起授权弹窗，需企业管理员确认。
 4. 授权完成后，调用[获取第三方应用授权企业的accessToken](0034-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口，获取应用级`access_token`。
-5. 使用`access_token`调用 [获取离职员工列表](0947-obtain-the-list-of-employees-who-have-left.md)接口，获取授权企业离职员工的 userId 列表。
+5. 使用`access_token`调用 [获取离职员工列表](0948-obtain-the-list-of-employees-who-have-left.md)接口，获取授权企业离职员工的 userId 列表。
 
 ### **接入步骤**
 
 #### **步骤一：确认使用场景**
 
-1. 明确你的应用希望调用的 OpenAPI。例如，若需获取离职员工列表，则应调用[获取离职员工列表](0947-obtain-the-list-of-employees-who-have-left.md)接口，该接口属于组织授权接口。
+1. 明确你的应用希望调用的 OpenAPI。例如，若需获取离职员工列表，则应调用[获取离职员工列表](0948-obtain-the-list-of-employees-who-have-left.md)接口，该接口属于组织授权接口。
 2. 在开发者后台权限管理页面搜索并申请权限`qyapi_hrm_read_user`。
 
    ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/9079592871/p961813.png)
@@ -131,7 +131,7 @@ openAuth({
 
 #### **步骤四：获取离职员工列表**
 
-根据访问凭证 Access Token 调用[获取离职员工列表](0947-obtain-the-list-of-employees-who-have-left.md)接口，即可获取离职员工的 userId 列表信息。
+根据访问凭证 Access Token 调用[获取离职员工列表](0948-obtain-the-list-of-employees-who-have-left.md)接口，即可获取离职员工的 userId 列表信息。
 
 ## **个人授权（委托授权）**
 

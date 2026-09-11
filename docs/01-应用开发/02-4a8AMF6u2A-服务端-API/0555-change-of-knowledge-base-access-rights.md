@@ -62,7 +62,7 @@ updated_at: "2026-04-08 20:23:51"
 
 > **[!NOTE]**
 >
-> 接口请参考[添加权限](0681-add-permissions-file.md)文档说明，如何调用请参考[如何调用服务端API](https://open.dingtalk.com/document/development/how-to-call-apis)文档介绍。
+> 接口请参考[添加权限](0682-add-permissions-file.md)文档说明，如何调用请参考[如何调用服务端API](https://open.dingtalk.com/document/development/how-to-call-apis)文档介绍。
 
 **需要传入：**
 
@@ -98,11 +98,11 @@ Content-Type: application/json
 **降低权限时的重要限制**：如果成员的当前权限是**继承自父节点**，且父节点继承来的权限角色**高于**目前想要设置的目标角色，则修改不会生效。
 
 - **示例**：父目录给某用户授予了**EDITOR**权限，在子文件夹上将其修改为**READER**会失败，因为继承的 **EDITOR** 权限仍然生效。
-- **解决方案**：需要先对该文件/文件夹调用[设置权限继承模式](0685-set-permission-inheritance-mode.md)接口，将继承模式设为**BREAK**（打断），切断父节点权限的传递，再进行权限修改。
+- **解决方案**：需要先对该文件/文件夹调用[设置权限继承模式](0686-set-permission-inheritance-mode.md)接口，将继承模式设为**BREAK**（打断），切断父节点权限的传递，再进行权限修改。
 
 > **[!NOTE]**
 >
-> 接口请参考[修改权限](0683-modify-permissions-file.md)文档说明，如何调用请参考[如何调用服务端API](https://open.dingtalk.com/document/development/how-to-call-apis)文档介绍。
+> 接口请参考[修改权限](0684-modify-permissions-file.md)文档说明，如何调用请参考[如何调用服务端API](https://open.dingtalk.com/document/development/how-to-call-apis)文档介绍。
 
 **需要传入：**
 
@@ -137,7 +137,7 @@ Content-Type: application/json
 
 > **[!NOTE]**
 >
-> 接口请参考[删除权限](0682-delete-permissions-file.md)文档说明，如何调用请参考[如何调用服务端API](https://open.dingtalk.com/document/development/how-to-call-apis)文档介绍。
+> 接口请参考[删除权限](0683-delete-permissions-file.md)文档说明，如何调用请参考[如何调用服务端API](https://open.dingtalk.com/document/development/how-to-call-apis)文档介绍。
 
 **需要传入：**
 
@@ -178,7 +178,7 @@ Content-Type: application/json
 > **[!NOTE]**
 >
 > - `BREAK`模式不支持对`OWNER`和`MANAGER`角色打断。
-> - 接口请参考[设置权限继承模式](0685-set-permission-inheritance-mode.md)文档说明，如何调用请参考[如何调用服务端API](https://open.dingtalk.com/document/development/how-to-call-apis)文档介绍。
+> - 接口请参考[设置权限继承模式](0686-set-permission-inheritance-mode.md)文档说明，如何调用请参考[如何调用服务端API](https://open.dingtalk.com/document/development/how-to-call-apis)文档介绍。
 
 **需要传入：**
 
@@ -206,7 +206,7 @@ Content-Type: application/json
 > **[!NOTE]**
 >
 > - 接口会返回`inheritance`字段，值为**PASS\_ON**（传递）或**BREAK**（打断）。
-> - 接口请参考[获取权限继承模式](0686-get-permission-inheritance-mode.md)文档说明，如何调用请参考[如何调用服务端API](https://open.dingtalk.com/document/development/how-to-call-apis)文档介绍。
+> - 接口请参考[获取权限继承模式](0687-get-permission-inheritance-mode.md)文档说明，如何调用请参考[如何调用服务端API](https://open.dingtalk.com/document/development/how-to-call-apis)文档介绍。
 
 **需要传入：**
 
@@ -228,25 +228,25 @@ Content-Type: application/json
 
 1. 通过[搜索文件](0638-search-for-files.md)接口，获取目标文件的 `dentryUuid`；
 2. 通过[查询用户详情](0056-query-user-details.md)接口，获取目标用户的`userId`和操作者的`unionId`
-3. 调用[添加权限](0681-add-permissions-file.md)接口，`roleId = "EDITOR"`，`members[0].type = "USER"`，`members[0].id = 目标用户 userId`。
+3. 调用[添加权限](0682-add-permissions-file.md)接口，`roleId = "EDITOR"`，`members[0].type = "USER"`，`members[0].id = 目标用户 userId`。
 
 ### 场景二：将某用户的权限从编辑者降级为只读
 
 1. 通过[搜索文件](0638-search-for-files.md)接口，获取目标文件的 `dentryUuid`；
 2. 通过[查询用户详情](0056-query-user-details.md)接口，获取目标用户的`userId`；
-3. 调用[修改权限](0683-modify-permissions-file.md)接口，`roleId = "READER"`，`members`指定目标用户。
+3. 调用[修改权限](0684-modify-permissions-file.md)接口，`roleId = "READER"`，`members`指定目标用户。
 
 ### 场景三：移除某用户对文件的所有权限
 
 1. 通过[搜索文件](0638-search-for-files.md)接口，获取目标文件的 `dentryUuid`；
 2. 通过[查询用户详情](0056-query-user-details.md)接口，获取目标用户的`userId`；
-3. 调用[删除权限](0682-delete-permissions-file.md)接口，`roleId` 填写该用户当前持有的权限角色，`members` 指定目标用户。
+3. 调用[删除权限](0683-delete-permissions-file.md)接口，`roleId` 填写该用户当前持有的权限角色，`members` 指定目标用户。
 
 ### 场景四：为某个子文件夹设置独立权限（不继承父目录）
 
 1. 通过[搜索文件](0638-search-for-files.md)接口，获取子文件夹的 `dentryUuid`；
-2. 调用[设置权限继承模式](0685-set-permission-inheritance-mode.md)接口，`inheritance = "BREAK"`打断权限继承；
-3. 再调用[添加权限](0681-add-permissions-file.md)接口，单独为该文件夹配置所需的权限成员和角色。
+2. 调用[设置权限继承模式](0686-set-permission-inheritance-mode.md)接口，`inheritance = "BREAK"`打断权限继承；
+3. 再调用[添加权限](0682-add-permissions-file.md)接口，单独为该文件夹配置所需的权限成员和角色。
 
 ## 注意事项
 

@@ -68,7 +68,7 @@ public static void main(String[] args) {
 
 > **[!NOTE]**
 >
-> 如果文件过大，需要分段获取资源，可在上述示例中添加headers字段：`headers.put("Range","bytes=0-499");`，具体请参考[通过指定Range下载部分内容](0679-use-range-download-a-part-of-content.md)。
+> 如果文件过大，需要分段获取资源，可在上述示例中添加headers字段：`headers.put("Range","bytes=0-499");`，具体请参考[通过指定Range下载部分内容](0680-use-range-download-a-part-of-content.md)。
 
 ## 请求
 

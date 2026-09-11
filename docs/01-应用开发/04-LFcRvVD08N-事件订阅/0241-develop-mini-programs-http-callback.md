@@ -164,9 +164,9 @@ updated_at: "2026-09-02 18:14:30"
    ```
 5. 接收到授权开通事件后，需要依次调用以下三个接口完成应用激活，激活完成后才算授权成功：
 
-   1. 调用[获取第三方企业应用的suite\_access\_token](../02-4a8AMF6u2A-服务端-API/1447-obtain-application-suite-ticket.md)接口获取第三方应用凭证（suite\_access\_token）。
-   2. 调用[获取授权企业的永久授权码](../02-4a8AMF6u2A-服务端-API/1870-obtain-a-permanent-authorization-code.md)接口获取永久授权码。
-   3. 调用[激活应用](../02-4a8AMF6u2A-服务端-API/1863-activate-suite.md)接口激活企业授权的应用。
+   1. 调用[获取第三方企业应用的suite\_access\_token](../02-4a8AMF6u2A-服务端-API/1448-obtain-application-suite-ticket.md)接口获取第三方应用凭证（suite\_access\_token）。
+   2. 调用[获取授权企业的永久授权码](../02-4a8AMF6u2A-服务端-API/1871-obtain-a-permanent-authorization-code.md)接口获取永久授权码。
+   3. 调用[激活应用](../02-4a8AMF6u2A-服务端-API/1864-activate-suite.md)接口激活企业授权的应用。
 6. 在开发者后台，单击**安全设置**，并设置HTTP 可信域名。
 
    本示例中输入内网穿透工具中配置的域名。

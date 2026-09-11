@@ -1,20 +1,20 @@
 ---
-title: "（可选）开发小程序服务端"
+title: "开发小程序服务端"
 source_url: "https://open.dingtalk.com/document/dingstart/optional-develop-a-small-program-server"
 namespace: "dingstart"
 slug: "optional-develop-a-small-program-server"
 group: "应用开发"
 tab: "开发指南"
-breadcrumb: "开发小程序应用 > （可选）开发小程序服务端"
+breadcrumb: "开发小程序应用 > 开发小程序服务端"
 doc_id: "q0OjrkNfMA"
-updated_at: "2026-06-30 09:00:29"
+updated_at: "2026-09-10 14:29:08"
 ---
 
 > Source: https://open.dingtalk.com/document/dingstart/optional-develop-a-small-program-server
-> Path: 应用开发 / 开发指南 / 开发小程序应用 > （可选）开发小程序服务端
-> Updated: 2026-06-30 09:00:29
+> Path: 应用开发 / 开发指南 / 开发小程序应用 > 开发小程序服务端
+> Updated: 2026-09-10 14:29:08
 
-# （可选）开发小程序服务端
+# 开发小程序服务端
 
 本文档适用于**企业内部应用**和**第三方企业应用**的开发者，用于指导如何搭建和配置小程序服务端，实现免登、事件订阅及调用钉钉服务端 API。在开始前，请确保您具备以下权限与信息：
 

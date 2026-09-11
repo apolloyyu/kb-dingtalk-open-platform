@@ -2164,18 +2164,18 @@ updated_at: "2026-05-06 10:20:52"
 | 33008 | 无效的微应用OA后台的主页 | 无效的微应用OA后台的主页。校验下微应用的后台管理的主页失败，必须以http开头或https开头。 |  |
 | 33012 | 无效的USERID | 无效的USERID。请检查userid是否正确，可通过[获取部门用户userid列表](0065-query-the-list-of-department-userids.md)接口获取。 |  |
 | 33013 | 企业自建微应用的个数过多，通过接口创建微应用受限 | 企业自建微应用的个数过多，通过接口创建微应用受限。此限制只针对企业自建微应用，对ISV应用没有限制。 |  |
-| 34001 | 无效的会话id | 无效的会话id。检查下所传的chatId字段是否为空。可通过[创建群](1483-session-management-creates-groups.md)接口获取chatId。 |  |
+| 34001 | 无效的会话id | 无效的会话id。检查下所传的chatId字段是否为空。可通过[创建群](1484-session-management-creates-groups.md)接口获取chatId。 |  |
 | 34002 | 无效的会话消息的发送者 | 无效的会话消息的发送者。检查下sender字段是否为空。 |  |
 | 34003 | 无效的会话消息的发送者的企业Id | 无效的会话消息的发送者的企业Id。检查下发送者的企业Id。可在[开发者后台](https://open-dev.dingtalk.com/#/index)首页获取。 |  |
-| 34004 | 无效的会话消息的类型 | 无效的会话消息的类型。检查下msgtype字段，是否为空，是否是定义的类型。msgtype请参考[消息通知类型](0775-message-types-and-data-format.md)。 |  |
+| 34004 | 无效的会话消息的类型 | 无效的会话消息的类型。检查下msgtype字段，是否为空，是否是定义的类型。msgtype请参考[消息通知类型](0776-message-types-and-data-format.md)。 |  |
 | 34006 | 发送者不在企业中 | 发送者不在企业中。检查下发送者是否在企业中。可通过[获取部门用户基础信息](0066-queries-the-simple-information-of-a-department-user.md)查看。 |  |
-| 34007 | 发送者不在会话中 | 发送者不在会话中。检查下发送者是否在会话id中。可通过[查询群成员](0751-query-group-members.md)接口查看。 |  |
+| 34007 | 发送者不在会话中 | 发送者不在会话中。检查下发送者是否在会话id中。可通过[查询群成员](0752-query-group-members.md)接口查看。 |  |
 | 34008 | 图片不能为空 | 图片不能为空。如果发的是图片消息，检查下图片是否为空。 |  |
 | 34009 | 链接内容不能为空 | 链接内容不能为空。检查下messageUrl字段是否为空。 |  |
 | 34010 | 文件不能为空 | 文件不能为空。检查下media\_id字段是否为空。可通过[上传媒体文件](0646-upload-media-files.md)接口获取。 |  |
 | 34011 | 音频文件不能为空 | 音频文件不能为空。检查下media\_id字段是否为空。可通过[上传媒体文件](0646-upload-media-files.md)接口获取。 |  |
 | 34012 | 找不到发送者的企业 | 找不到发送者的企业。检查下发送者是否是真实的。可通过[获取部门用户userid列表](0065-query-the-list-of-department-userids.md)接口获取。 |  |
-| 34013 | 找不到群会话对象 | 找不到群会话对象。检查下chatid是否真实存在。可通过[查询群信息](0740-obtain-a-group-session.md)接口查看。 |  |
+| 34013 | 找不到群会话对象 | 找不到群会话对象。检查下chatid是否真实存在。可通过[查询群信息](0741-obtain-a-group-session.md)接口查看。 |  |
 | 34014 | 会话消息的json结构无效或不完整 | 会话消息的json结构无效或不完整。检查下消息的json格式是否正确，json的key对应msgtype的value值。 |  |
 | 34015 | 发送群会话消息失败 | 发送群会话消息失败。消息发送失败，建议稍后再重试下。 |  |
 | 34016 | 会话消息的内容超长 | 会话消息的内容超长。检查下消息的content字段长度是否超过5000，title字段长度是否超过64，markdown字段长度是否超过5000，single\_title字段长度是否超过20，single\_url字段长度是否超过500，btn\_json\_list字段长度是否超过1000。 |  |
@@ -2195,8 +2195,8 @@ updated_at: "2026-05-06 10:20:52"
 | 400023 | 用户不存在 | 用户不存在。无。 |  |
 | 40003 | 不合法的UserID | 不合法的UserID。确保该id在通讯录中存在，且是在你所传access\_token对应的企业里。可通过[获取部门用户userid列表](0065-query-the-list-of-department-userids.md)接口获取。 |  |
 | 40004 | 不合法的媒体文件类型 | 不合法的媒体文件类型。检查下type字段，只支持image、voice、file。 |  |
-| 400040 | 回调不存在 | 回调不存在。检查是否注册回调事件。可通过[查询订阅事件](1867-query-subscribed-events.md)接口获取。 |  |
-| 400041 | 回调已经存在 | 回调已经存在。检查该回调事件是否已注册过。可通过[查询订阅事件](1867-query-subscribed-events.md)接口获取。 |  |
+| 400040 | 回调不存在 | 回调不存在。检查是否注册回调事件。可通过[查询订阅事件](1868-query-subscribed-events.md)接口获取。 |  |
+| 400041 | 回调已经存在 | 回调已经存在。检查该回调事件是否已注册过。可通过[查询订阅事件](1868-query-subscribed-events.md)接口获取。 |  |
 | 400042 | 企业不存在 | 企业不存在。无。 |  |
 | 400043 | 企业不合法 | 企业不合法。无。 |  |
 | 40005 | 不合法的文件类型 | 不合法的文件类型。如果是文件类型，检查下是否是支持。目前只支持doc、docx、xls、xlsx、ppt、pptx、zip、pdf、rar。 |  |
@@ -2210,7 +2210,7 @@ updated_at: "2026-05-06 10:20:52"
 | 400057 | 回调访问设备不存在 | 回调访问设备不存在。无。 |  |
 | 40006 | 不合法的文件大小 | 不合法的文件大小。检查下文件大小，image类型最大1MB，file类型最大10MB，voice类型最大2MB。 |  |
 | 40007 | 不合法的媒体文件id | 不合法的媒体文件id。检查下mediaId是否为空，是否真实存在。可通过[上传媒体文件](0646-upload-media-files.md)接口获取。 |  |
-| 40008 | 不合法的消息类型 | 不合法的消息类型。检查下msgtype是否为空，确保它在开放平台定义的几种类型里，msgtype请参考[消息通知类型](0775-message-types-and-data-format.md)。 |  |
+| 40008 | 不合法的消息类型 | 不合法的消息类型。检查下msgtype是否为空，确保它在开放平台定义的几种类型里，msgtype请参考[消息通知类型](0776-message-types-and-data-format.md)。 |  |
 | 40009 | 不合法的部门id | 不合法的部门id。检查下部门id是否为空，是否为数字且大于0。可通过[获取部门列表](0082-user-management-acquires-the-list-departments.md)接口查看。 |  |
 | 40010 | 不合法的父部门id | 不合法的父部门id。检查父部门id是否为一个数字。可通过[获取指定用户的所有父部门列表](0085-queries-the-list-of-all-parent-departments-of-a-user.md)或[获取指定部门的所有父部门列表](0084-query-the-list-of-all-parent-departments-of-a-department.md)接口获取。 |  |
 | 40011 | 不合法的排序order | 不合法的排序order。检查下order字段是否为空，是否为数字且大于0。 |  |
@@ -2369,7 +2369,7 @@ updated_at: "2026-05-06 10:20:52"
 | 48002 | Api禁用 | Api禁用。无。 |  |
 | 48003 | suitetoken无效 | suitetoken无效。请检查该suitetoken是否已经过期或不正确。 |  |
 | 48004 | 授权关系无效 | 授权关系无效。无。 |  |
-| 49000 | 缺少chatid | 缺少chatid。请检查参数中是否有chatid。可通过[创建群](1483-session-management-creates-groups.md)接口获取chatId。 |  |
+| 49000 | 缺少chatid | 缺少chatid。请检查参数中是否有chatid。可通过[创建群](1484-session-management-creates-groups.md)接口获取chatId。 |  |
 | 49001 | 绑定的微应用超过个数限制 | 绑定的微应用超过个数限制。绑定群会话和微应用超过5个。 |  |
 | 49002 | 一个群只能被一个ISV套件绑定一次 | 一个群只能被一个ISV套件绑定一次。无。 |  |
 | 49003 | 操作者必须为群主 | 操作者必须为群主。无。 |  |
@@ -2411,7 +2411,7 @@ updated_at: "2026-05-06 10:20:52"
 | 52020 | 未找到服务窗授权 | 未找到服务窗授权。无。 |  |
 | 52021 | 未找到微应用授权 | 未找到微应用授权。无。 |  |
 | 52022 | 无效的jsapi类型 | 无效的jsapi类型。无。 |  |
-| 52023 | 无效的服务窗agentid | 无效的服务窗agentid。检查服务窗微应用是否停用或者删除，可通过 [查询服务号列表](0812-query-service-number-list.md)接口查询。 |  |
+| 52023 | 无效的服务窗agentid | 无效的服务窗agentid。检查服务窗微应用是否停用或者删除，可通过 [查询服务号列表](0813-query-service-number-list.md)接口查询。 |  |
 | 52024 | 无效的jsapi tag | 无效的jsapi tag。无。 |  |
 | 52025 | 无效的安全微应用 | 无效的安全微应用。无。 |  |
 | 52026 | 无效的安全微应用URL | 无效的安全微应用URL。无。 |  |
@@ -2502,8 +2502,8 @@ updated_at: "2026-05-06 10:20:52"
 | 900002 | 加密时间戳参数非法 | 加密时间戳参数非法。加密时间戳不能为空。 |  |
 | 900003 | 加密随机字符串参数非法 | 加密随机字符串参数非法。加密随机字符串不能为空。 |  |
 | 900004 | 不合法的aeskey | 不合法的aeskey。检查aeskey是否符合规格，长度固定为43个字符，从a-z, A-Z, 0-9共62个字符中选取，是AESKey的Base64编码。解码后即为32字节长的AESKey。 |  |
-| 900005 | 签名不匹配 | 签名不匹配。检查签名计算的参数是否正确。 \* 个人免登：[个人免登场景的签名计算方法](1428-signature-personal-registration.md) \* 第三方企业：[第三方访问接口的签名计算方法](1429-the-signature-calculation-method-of-the-third-party-access-interface.md) |  |
-| 900006 | 计算签名错误 | 计算签名错误。检查签名计算的参数是否正确。 \* 个人免登：[个人免登场景的签名计算方法](1428-signature-personal-registration.md) \* 第三方企业：[第三方访问接口的签名计算方法](1429-the-signature-calculation-method-of-the-third-party-access-interface.md) |  |
+| 900005 | 签名不匹配 | 签名不匹配。检查签名计算的参数是否正确。 \* 个人免登：[个人免登场景的签名计算方法](1429-signature-personal-registration.md) \* 第三方企业：[第三方访问接口的签名计算方法](1430-the-signature-calculation-method-of-the-third-party-access-interface.md) |  |
+| 900006 | 计算签名错误 | 计算签名错误。检查签名计算的参数是否正确。 \* 个人免登：[个人免登场景的签名计算方法](1429-signature-personal-registration.md) \* 第三方企业：[第三方访问接口的签名计算方法](1430-the-signature-calculation-method-of-the-third-party-access-interface.md) |  |
 | 900007 | 计算加密文字错误 | 计算加密文字错误。检查是否安装JRE补丁或者对应的JRE版本是否正常。 |  |
 | 900008 | 计算解密文字错误 | 计算解密文字错误。检查是否安装JRE补丁或者对应的JRE版本是否正常。 |  |
 | 900009 | 计算解密文字长度不匹配 | 计算解密文字长度不匹配。检查aeskey是否符合规格。长度固定为43个字符，从a-z, A-Z, 0-9共62个字符中选取，是AESKey的Base64编码。 |  |

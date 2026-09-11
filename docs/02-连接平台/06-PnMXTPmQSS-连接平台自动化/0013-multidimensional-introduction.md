@@ -7,12 +7,12 @@ group: "连接平台"
 tab: "连接平台自动化"
 breadcrumb: "多维表自动化 > 介绍"
 doc_id: "KqDHfDnxjY"
-updated_at: "2026-08-03 13:58:48"
+updated_at: "2026-09-10 14:33:15"
 ---
 
 > Source: https://open.dingtalk.com/document/connection/multidimensional-introduction
 > Path: 连接平台 / 连接平台自动化 / 多维表自动化 > 介绍
-> Updated: 2026-08-03 13:58:48
+> Updated: 2026-09-10 14:33:15
 
 # 介绍
 
@@ -32,15 +32,11 @@ updated_at: "2026-08-03 13:58:48"
 
 在项目管理AI 表格中，当任务状态从"未开始"变更为"进行中"或"已完成"时，自动化流程会自动触发，向该任务的负责人发送一条进度更新通知。通知内容包含变更的任务名称、变更后的进度状态以及任务重要程度等关键信息，确保负责人第一时间掌握任务动态，无需手动刷新表格或反复询问进度。适用于项目跟踪、任务协同、进度汇报等场景，让信息流转更及时、沟通更高效。
 
-[更多场景模板>>](https://alidocs.dingtalk.com/i/p/Y7kmbokZp3pgGLq2/docs/ydxXB52LJq7lmGwvsbbRKzvZWqjMp697?dontjump=true)
-
 ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/7773735071/p758025.png)
 
 ### 高优任务自动创建待办
 
 在AI 表格中，当某条任务的重要程度被修改为"重要且紧急"时，自动化流程会自动为该任务的负责人创建一个钉钉待办事项。待办中清晰展示任务内容、当前进度、截止时间等关键信息，并支持添加提醒和参与人，确保高优先级任务不会被遗漏或延误。适用于任务分级管理、紧急事项跟进、责任人督办等场景，让重要事务得到应有的关注和及时处理。
-
-[更多场景模板>>](https://alidocs.dingtalk.com/i/p/Y7kmbokZp3pgGLq2/docs/ydxXB52LJq7lmGwvsbbRKzvZWqjMp697?dontjump=true)
 
 ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/7773735071/p758027.png)
 

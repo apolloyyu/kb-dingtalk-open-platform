@@ -26,7 +26,7 @@ updated_at: "2026-06-30 09:00:36"
    > **[!NOTE]**
    >
    > 服务端出口 IP：指调用钉钉服务端 API 时，必须在开发者后台配置的合法服务器 IP 地址列表，用于建立安全白名单机制。若未配置或请求 IP 不在列表中，接口调用将报错“访问 ip 不在白名单之中”。需填入企业服务器的公网 IP（支持 IPv4，多个 IP 用逗号分隔，部分场景支持通配符）。
-3. 实现免登，企业内部应用请参考[网页应用（H5微应用）免登](../02-4a8AMF6u2A-服务端-API/0018-enterprise-internal-application-logon-free.md)，第三方企业应用请参考[开发并测试第三方企业网页应用（H5）免登](../02-4a8AMF6u2A-服务端-API/0020-web-applications-h5.md)。
+3. 实现免登，企业内部应用请参考[网页应用（H5微应用）免登](../02-4a8AMF6u2A-服务端-API/0018-enterprise-internal-application-logon-free.md)，第三方企业应用请参考[开发并测试第三方企业网页应用（H5）免登](../02-4a8AMF6u2A-服务端-API/0021-web-applications-h5.md)。
 4. 申请接口调用权限。详情参考[添加接口调用权限](../02-4a8AMF6u2A-服务端-API/0003-add-api-permission.md)。
 5. 选择合适的事件推送方式并完成接入。
 

@@ -33,8 +33,8 @@ updated_at: "2026-08-19 09:15:25"
 | **API** | **使用场景** | **用户价值** | **开发文档** |
 | --- | --- | --- | --- |
 | 免登 | 统一钉钉账号登录，不允许在应用内要求用户输入登录凭据，不允许通过其他的账号体系登录。 | 统一完整的用户体验 | [免登概述](../02-4a8AMF6u2A-服务端-API/0016-sso-overview.md) |
-| 内购 | 在应用内购买高级功能或者产品服务 | 统一购买渠道，安全有保障 | [应用内购](../02-4a8AMF6u2A-服务端-API/0876-application-market-overview.md) |
-| 消息通知 | 应用内任务或状态变更，需要告知用户，在钉钉内发工作通知 | 在钉钉里接收所有应用的提醒 | [使用模板发送工作通知消息](../02-4a8AMF6u2A-服务端-API/0774-work-notification-templating-send-notification-interface.md) |
+| 内购 | 在应用内购买高级功能或者产品服务 | 统一购买渠道，安全有保障 | [应用内购](../02-4a8AMF6u2A-服务端-API/0877-application-market-overview.md) |
+| 消息通知 | 应用内任务或状态变更，需要告知用户，在钉钉内发工作通知 | 在钉钉里接收所有应用的提醒 | [使用模板发送工作通知消息](../02-4a8AMF6u2A-服务端-API/0775-work-notification-templating-send-notification-interface.md) |
 | 待办/工作流 | 应用内有审批或工作流 | 在钉钉里统一处理所有工作流，效率高，速度快，体验好 | [OA工作流概述](../02-4a8AMF6u2A-服务端-API/0473-workflow-overview.md) |
 | 通讯录基础信息 | 获取成员在组织内部的基本信息 | 统一管理组织内用户信息 | [通讯录基础信息](../02-4a8AMF6u2A-服务端-API/0056-query-user-details.md) |
 | 通讯录角色 | 获取成员在组织内部的角色 | 统一管理组织内用户信息 | [角色详情](../02-4a8AMF6u2A-服务端-API/0090-queries-role-details.md) |

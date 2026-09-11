@@ -28,7 +28,7 @@ updated_at: "2026-09-02 18:14:13"
 
 > **[!NOTE]**
 >
-> 在调用本接口预览钉盘文件之前，你需要先调用[授权预览审批附件](../02-4a8AMF6u2A-服务端-API/0503-official-authorized-preview-approval-attachment.md)或[授权用户访问企业的自定义空间](../02-4a8AMF6u2A-服务端-API/1559-authorize-a-user-to-access-a-custom-workspace-of-an.md)进行授权。
+> 在调用本接口预览钉盘文件之前，你需要先调用[授权预览审批附件](../02-4a8AMF6u2A-服务端-API/0503-official-authorized-preview-approval-attachment.md)或[授权用户访问企业的自定义空间](../02-4a8AMF6u2A-服务端-API/1560-authorize-a-user-to-access-a-custom-workspace-of-an.md)进行授权。
 
 | **客户端** | 是否需要鉴权 | **Android** | **iOS** | **PC** |
 | --- | --- | --- | --- | --- |

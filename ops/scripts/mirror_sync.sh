@@ -20,12 +20,15 @@ fi
 git fetch -q "$GH" main && git fetch -q "$GL" main || { echo "ERR fetch failed"; exit 1; }
 gh=$(git rev-parse "$GH/main"); gl=$(git rev-parse "$GL/main")
 if [ "$gh" = "$gl" ]; then echo "OK in-sync ${gh:0:7}"; git merge -q --ff-only "$GH/main" 2>/dev/null; exit 0; fi
-if git merge-base --is-ancestor "$gl" "$gh"; then          # GitHub 领先(流水线提交) → 补到 GitLab
-  git push -q "$GL" "$gh:refs/heads/main" && echo "OK github->gitlab ${gl:0:7}..${gh:0:7}"
-elif git merge-base --is-ancestor "$gh" "$gl"; then        # GitLab 领先(人工提交) → 推到 GitHub
+# 设计:GitLab 是人的写入口,GitHub 是完整历史(人 + ECS 每日 ingest/构建)。ECS 只做 GitLab→GitHub
+# 单向搬运,**不往 GitLab 推**(无写权限,且 ECS 提交邮箱过不了推送规则)。
+# 因此"GitHub 领先"是正常态:人在下次推 GitLab 前先 fetch origin 并合并,GitLab 便重新领先。
+if git merge-base --is-ancestor "$gl" "$gh"; then          # GitHub 领先(ECS 日常提交)→ 正常,不动
+  git merge -q --ff-only "$GH/main" 2>/dev/null; echo "OK github-ahead ${gl:0:7}..${gh:0:7}"; exit 0
+elif git merge-base --is-ancestor "$gh" "$gl"; then        # GitLab 领先(人工提交)→ 推到 GitHub
   git push -q "$GH" "$gl:refs/heads/main" && echo "OK gitlab->github ${gh:0:7}..${gl:0:7}"
 else
-  echo "ALERT diverged github=${gh:0:7} gitlab=${gl:0:7} —— 两边各有独立提交,需人工 rebase,本脚本不强推"; exit 3
+  echo "ALERT diverged github=${gh:0:7} gitlab=${gl:0:7} —— 有人推 GitLab 前没并入 GitHub 最新提交。在 Mac 上执行: git fetch origin && git checkout -B main gitlab/main && git merge --no-ff origin/main && git push gitlab main"; exit 3
 fi
 rc=$?
 if [ $rc -ne 0 ]; then

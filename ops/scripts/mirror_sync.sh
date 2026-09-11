@@ -27,4 +27,10 @@ elif git merge-base --is-ancestor "$gh" "$gl"; then        # GitLab 领先(人�
 else
   echo "ALERT diverged github=${gh:0:7} gitlab=${gl:0:7} —— 两边各有独立提交,需人工 rebase,本脚本不强推"; exit 3
 fi
-rc=$?; [ $rc -eq 0 ] && git merge -q --ff-only "$GL/main" 2>/dev/null; exit $rc
+rc=$?
+if [ $rc -ne 0 ]; then
+  # 推送被拒(典型:ECS 对 GitLab 只读,rc=128 "access rights")也按分叉级别告警,
+  # 否则只刷日志无人知晓,日积月累必分叉(2026-09-05~11 实录)
+  echo "ALERT push rejected rc=$rc github=${gh:0:7} gitlab=${gl:0:7} —— 检查该机器对目标远端的写权限"; exit 3
+fi
+git merge -q --ff-only "$GL/main" 2>/dev/null; exit 0

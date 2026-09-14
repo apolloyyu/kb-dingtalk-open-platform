@@ -3,7 +3,7 @@
 > 25 篇 · 上级：[服务端 API 功能域索引](_index.md)
 
 - [概述](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0369-agoal-overview.md) · 2026-07-10
-- [通用数据结构](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0370-api-generic-data-structure-agoal.md) · 2026-08-12
+- [通用数据结构](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0370-api-generic-data-structure-agoal.md) · 2026-09-14
 - [创建业务实体](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0371-api-agoalentitycreate.md) · 业务实体 · 2026-06-15
 - [更新业务实体](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0372-api-agoalentityupdate.md) · 业务实体 · 2026-06-15
 - [Agoal业务数据查询](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0373-agoal-business-biz-data-query.md) · 业务实体 · 2026-06-02

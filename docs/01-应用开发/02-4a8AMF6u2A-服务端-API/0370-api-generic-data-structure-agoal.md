@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "Agoal > 通用数据结构"
 doc_id: "sox5fILkNn"
-updated_at: "2026-08-12 09:16:17"
+updated_at: "2026-09-14 12:08:35"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-generic-data-structure-agoal
 > Path: 应用开发 / 服务端 API / Agoal > 通用数据结构
-> Updated: 2026-08-12 09:16:17
+> Updated: 2026-09-14 12:08:35
 
 # 通用数据结构
 

@@ -169,16 +169,12 @@ def main():
           "正文中的 dingtalk:// 深链须逐字原样保留(实录:解码成内嵌 html 地址后 ${corpId} 失效)")
 
     out = run("cat", "use-containers-to-build-a-data-board-card")
+    check(out.count("![") == 8 and "[图略:" not in out, "默认不裁图:8 张图应原样保留")
+    out = run("cat", "use-containers-to-build-a-data-board-card", env={"KB_IMG_KEEP": "3"})
     check(out.count("![") == 3 and out.count("[图略:") == 5,
-          "配图护栏未把 8 张图裁到 3 张(首/中/尾)并留下 [图略] 标记")
-    out = run("cat", "use-containers-to-build-a-data-board-card", env={"KB_ALL_IMAGES": "1"})
-    check(out.count("![") == 8 and "[图略:" not in out, "KB_ALL_IMAGES=1 未关闭配图护栏")
-    out = run("cat", "add-trigger-event-1")
-    check(out.count("![") == 3 and out.count("[图略:") == 2, "5 张图的篇目未按首/中/尾保留 3 张")
+          "KB_IMG_KEEP=3 未把 8 张图裁到 3 张(首/中/尾)并留下 [图略] 标记")
     out = run("ctx", "使用容器搭建数据看板卡片的具体操作步骤是什么")
-    check("images: 正文配图已按每篇最多 3 张护栏保留" in out
-          and out.count("![") <= 3 * max(1, out.count("== 正文[")) and "[图略:" in out,
-          "ctx 正文未应用配图护栏(每篇 ≤3 张)或契约缺 images 行")
+    check("images: 正文配图只配必要的" in out, "契约缺 images 行(只配必要的图)")
 
     out = run("card", "H2mylS6eke")
     check("completeness: full" in out and "== 证据契约 ==" in out,

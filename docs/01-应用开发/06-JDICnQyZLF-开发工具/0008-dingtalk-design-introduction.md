@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "开发工具"
 breadcrumb: "开发者工具 > DingTalk Design CLI > 简介"
 doc_id: "9iWoMDbhRT"
-updated_at: "2026-08-18 09:13:14"
+updated_at: "2026-09-15 09:35:30"
 ---
 
 > Source: https://open.dingtalk.com/document/download/dingtalk-design-introduction
 > Path: 应用开发 / 开发工具 / 开发者工具 > DingTalk Design CLI > 简介
-> Updated: 2026-08-18 09:13:14
+> Updated: 2026-09-15 09:35:30
 
 # 简介
 
@@ -75,7 +75,7 @@ $ ding <command> [options]
 
 `--miniAppId <miniAppId>`：（可选）钉钉小程序或工作台组件的**miniAppId**。默认从当前工作目录下的 ding.config.json 中读取
 
-`--token <token>`：（可选）API访问凭证，默认从当前工作目录下的`ding.config.json`中读取，生成方式参考[获取工作台API访问凭证](https://open.dingtalk.com/document/app/used-to-obtain-the-application-authorization-without-api-token)。
+`--token <token>`：（可选）API访问凭证，默认从当前工作目录下的`ding.config.json`中读取，生成方式参考[获取工作台API访问凭证](../02-4a8AMF6u2A-服务端-API/0999-used-to-obtain-the-application-authorization-without-api-token.md)。
 
 `-d, --debug`：（可选）生成真机调试二维码，可配合**ChromeDevtools**进行真机调试
 
@@ -97,7 +97,7 @@ $ ding <command> [options]
 
 `--miniAppId <miniAppId>`：（可选）钉钉小程序或工作台组件的**miniAppId**。默认从当前工作目录下的 ding.config.json 中读取
 
-`--token <token>`：（可选）API访问凭证，默认从当前工作目录下的`ding.config.json`中读取，生成方式参考[调用工作台 API](../../08-工作台/02-Qzb8Lpee2t-使用教程/0013-call-the-workbench-api.md)。
+`--token <token>`：（可选）API访问凭证，默认从当前工作目录下的`ding.config.json`中读取，生成方式参考[调用工作台 API](../../08-工作台/02-Qzb8Lpee2t-使用教程/0013-call-the-workbench-api.md#a1b8677ca7pih)。
 
 `--cwd [cwd]`：（可选）当前的工作目录, 默认值是`process.cwd()`。
 

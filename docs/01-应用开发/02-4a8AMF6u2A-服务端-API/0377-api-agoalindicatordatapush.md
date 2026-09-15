@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "Agoal > 指标库 > 通过指标编码推送指标时间维度数据"
 doc_id: "IAUi3JKxJr"
-updated_at: "2026-06-15 10:39:08"
+updated_at: "2026-09-15 09:12:16"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-agoalindicatordatapush
 > Path: 应用开发 / 服务端 API / Agoal > 指标库 > 通过指标编码推送指标时间维度数据
-> Updated: 2026-06-15 10:39:08
+> Updated: 2026-09-15 09:12:16
 
 # 通过指标编码推送指标时间维度数据
 
@@ -39,9 +39,10 @@ updated_at: "2026-06-15 10:39:08"
 | --- | --- | --- | --- |
 | code | String | 否 | 指标编码。 |
 | data | Array | 否 | 维度数据对象列表。 |
-| periodType | String | 否 | 支持以下时间维度类型：   - YEAR：年度 - HALF\_YEAR：半年度 - QUARTER：季度 - DOUBLE\_MONTH：双月 - MONTH：单月 - WEEK：单周 |
+| periodType | String | 否 | 支持以下时间维度类型：   - **YEAR**：年度 - **HALF\_YEAR**：半年度 - **QUARTER**：季度 - **DOUBLE\_MONTH**：双月 - **MONTH**：单月 - **WEEK**：单周 |
 | period | String | 否 | 时间维度取值。 |
 | data | String | 否 | 维度数据值。 |
+| bizCode | String | 否 | 财年方案编码。 |
 
 ### **请求示例**
 
@@ -58,7 +59,8 @@ Content-Type:application/json
   "data" : [ {
     "periodType" : "MONTH",
     "period" : "2025-11-01 11:01:00",
-    "data" : "111"
+    "data" : "111",
+    "bizCode":"bizhgjdkng"
   } ]
 }
 ```

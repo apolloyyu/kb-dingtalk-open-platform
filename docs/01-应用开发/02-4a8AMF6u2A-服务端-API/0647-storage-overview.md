@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "文档/文件 > 存储管理 > 概述"
 doc_id: "4oIFepqCbm"
-updated_at: "2026-05-15 18:19:58"
+updated_at: "2026-09-15 09:12:17"
 ---
 
 > Source: https://open.dingtalk.com/document/development/storage-overview
 > Path: 应用开发 / 服务端 API / 文档/文件 > 存储管理 > 概述
-> Updated: 2026-05-15 18:19:58
+> Updated: 2026-09-15 09:12:17
 
 # 概述
 
@@ -76,6 +76,9 @@ updated_at: "2026-05-15 18:19:58"
 | [更新文件或文件夹的应用属性](0668-update-file-application-properties.md) | 更新文件或文件夹的应用属性。 | 新版 |
 | [删除文件或文件夹的应用属性](0669-delete-file-app-attribute.md) | 删除文件或文件夹的应用属性。 | 新版 |
 | [批量获取文件缩略图](0671-get-file-thumbnails-in-bulk.md) | 批量获取文件的缩略图信息。 | 新版 |
+| [获取 dentryUuid 信息](0672-api-getuuidbydentryid.md) | 根据文件的 spaceId 和 dentryId 获取文件的 dentryUuid 信息。 | 新版 |
+| [根据 dentryUuid 获取 spaceId](0673-api-getdentryidbyuuid.md) | 根据文件 dentryUuid 获取当前文件的 spaceId 和 dentryId。 | 新版 |
+| [根据文档id或URL获取文件DentryUuid](0674-api-getuuidbyidorurl.md) | 通过文档标识或URL查询节点dentryUuid。 | 新版 |
 
 ### **文件传输**
 

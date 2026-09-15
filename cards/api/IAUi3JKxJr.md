@@ -19,7 +19,7 @@ permissions: Agoal.Indicator.Data.Write
 - none
 
 ## Body
-- optional: code(String), data(Array), periodType(String), period(String)
+- optional: code(String), data(Array), periodType(String), period(String), bizCode(String)
 
 ## Returns
 - optional: success(Boolean), result(Boolean)
@@ -28,4 +28,4 @@ permissions: Agoal.Indicator.Data.Write
 - none stated
 
 source_url: https://open.dingtalk.com/document/development/api-agoalindicatordatapush
-updated_at: 2026-06-15 10:39:08
+updated_at: 2026-09-15 09:12:16

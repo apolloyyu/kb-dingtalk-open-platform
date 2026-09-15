@@ -3,14 +3,14 @@
 > 25 篇 · 上级：[服务端 API 功能域索引](_index.md)
 
 - [概述](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0369-agoal-overview.md) · 2026-07-10
-- [通用数据结构](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0370-api-generic-data-structure-agoal.md) · 2026-09-14
+- [通用数据结构](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0370-api-generic-data-structure-agoal.md) · 2026-09-15
 - [创建业务实体](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0371-api-agoalentitycreate.md) · 业务实体 · 2026-06-15
 - [更新业务实体](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0372-api-agoalentityupdate.md) · 业务实体 · 2026-06-15
 - [Agoal业务数据查询](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0373-agoal-business-biz-data-query.md) · 业务实体 · 2026-06-02
 - [获取计分卡指标详情](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0374-api-getindicatordetail.md) · 计分卡 · 2026-06-15
 - [获取Agoal指定部门下的计分卡维度和指标id](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0375-api-getdeptscorecardindicator.md) · 计分卡 · 2026-06-04
 - [通过指标编码批量查询指标列表](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0376-api-agoalindicatorbatchquery.md) · 指标库 · 2026-06-15
-- [通过指标编码推送指标时间维度数据](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0377-api-agoalindicatordatapush.md) · 指标库 · 2026-06-15
+- [通过指标编码推送指标时间维度数据](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0377-api-agoalindicatordatapush.md) · 指标库 · 2026-09-15
 - [创建目标规则下的考核任务](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0378-api-agoalperftaskcreate.md) · 绩效考核 · 2026-06-15
 - [更新目标规则下的考核任务](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0379-api-agoalperftaskupdate.md) · 绩效考核 · 2026-06-15
 - [查询企业下的所有考核计划](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0380-api-agoalorgperfplanquery.md) · 绩效考核 · 2026-06-02

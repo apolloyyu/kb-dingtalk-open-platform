@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "开发工具"
 breadcrumb: "开发者工具 > 小程序开发工具"
 doc_id: "5kL5FY6Ljl"
-updated_at: "2026-01-22 19:53:06"
+updated_at: "2026-09-15 09:35:33"
 ---
 
 > Source: https://open.dingtalk.com/document/download/miniapp-tool
 > Path: 应用开发 / 开发工具 / 开发者工具 > 小程序开发工具
-> Updated: 2026-01-22 19:53:06
+> Updated: 2026-09-15 09:35:33
 
 # 小程序开发工具
 
@@ -27,7 +27,7 @@ updated_at: "2026-01-22 19:53:06"
 ### **版本信息**
 
 - **兼容版本（兼容免登）**：3.9.22
-- **版本稳定性**：建议根据不同操作系统使用指定版本，切勿轻易升级。后续更新情况可持续关注[工具资源更新日志](https://open.dingtalk.com/document/dinglog/tools-log)。
+- **版本稳定性**：建议根据不同操作系统使用指定版本，切勿轻易升级。
 
 ### **下载安装**
 

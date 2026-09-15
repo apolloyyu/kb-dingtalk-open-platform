@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "Agoal > 通用数据结构"
 doc_id: "sox5fILkNn"
-updated_at: "2026-09-14 12:08:35"
+updated_at: "2026-09-15 09:36:08"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-generic-data-structure-agoal
 > Path: 应用开发 / 服务端 API / Agoal > 通用数据结构
-> Updated: 2026-09-14 12:08:35
+> Updated: 2026-09-15 09:36:08
 
 # 通用数据结构
 
@@ -192,11 +192,12 @@ Agoal 周期
 
 | 参数名称 | 类型 | 示例值 | 描述 |
 | --- | --- | --- | --- |
-| periodId | String | 6444f5e9a4261c6e699dxxxx | 周期id |
+| periodId | String | 6444fxxxxc6e699 | 周期id |
 | name | String | 2024年度 | 周期名称 |
 | startDate | Long | 1711900800000 | 开始时间 |
 | endDate | Long | 1743436799000 | 结束时间 |
 | periodType | String | season | 周期类型 |
+| bizCode | String | 6a5dbxxxx9e5 | 业务特定编码 |
 
 ## OpenAgoalProgressDTO
 
@@ -232,6 +233,21 @@ Agoal用户DTO
 | userId | String | 6444f5e9a4261c6e699dxxxx | Agoal用户id |
 | dingUserId | String | 211042291978xxxx | 用户dingUserId |
 | name | String | 测试 | 用户名称 |
+
+## OpenFiscalYearSchemeDTO
+
+财年方案数据
+
+| 参数名称 | 类型 | 示例值 | 描述 |
+| --- | --- | --- | --- |
+| startMonth | Long | 12 | 开始月 |
+| subPeriodConfigs | Array |  | 子周期配置 |
+| enabled | Boolean | true | 是否启用 |
+| intervalMonth | Long | 3 | 间隔月份 |
+| subPeriodType | String | FY\_HALF\_YEAR | 子周期类型 |
+| enabled | Boolean | true | 是否启用 |
+| schemeName | String | 12起财年方案 | 方案名称 |
+| schemeUid | String | xxxxxxxx | 方案编码 |
 
 ## OpenObjectiveRuleDTO
 

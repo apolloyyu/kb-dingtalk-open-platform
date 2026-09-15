@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "开发工具"
 breadcrumb: "开发者工具 > 服务端API开发工具 > 服务端API统计工具"
 doc_id: "z07RQ1rHnf"
-updated_at: "2026-01-22 19:53:10"
+updated_at: "2026-09-15 09:35:32"
 ---
 
 > Source: https://open.dingtalk.com/document/download/api-development-tools
 > Path: 应用开发 / 开发工具 / 开发者工具 > 服务端API开发工具 > 服务端API统计工具
-> Updated: 2026-01-22 19:53:10
+> Updated: 2026-09-15 09:35:32
 
 # 服务端API统计工具
 
@@ -66,17 +66,12 @@ updated_at: "2026-01-22 19:53:10"
 
 ## 常见问题（FAQ）
 
-**Q1：为什么看不到某些应用的统计数据？**
+- **Q1：为什么看不到某些应用的统计数据？**
 
-A：请确认您是否为该应用的创建者或管理员，且应用未被停用或删除。
+  A：请确认您是否为该应用的创建者或管理员，且应用未被停用或删除。
+- **Q2：数据为何不是实时更新？**
 
-**Q2：数据为何不是实时更新？**
+  A：统计基于离线计算，默认延迟一天，最新仅能查看到昨日数据。
+- **Q3：错误码含义在哪里查询？**
 
-A：统计基于离线计算，默认延迟一天，最新仅能查看到昨日数据。
-
-**Q3：错误码含义在哪里查询？**
-
-A：可参考文档：
-
-- [新版接口错误码](https://open.dingtalk.com/document/development/error-code)
-- [旧版接口错误码](../02-4a8AMF6u2A-服务端-API/0013-server-api-error-codes-1.md)
+  A：可参考文档：[全局错误码](../02-4a8AMF6u2A-服务端-API/0013-server-api-error-codes-1.md)

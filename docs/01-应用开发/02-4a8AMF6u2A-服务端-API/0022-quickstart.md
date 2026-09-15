@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "认证与授权 > 身份验证（免登） > 使用教程 > 第三方个人应用 > 第三方个人应用免登"
 doc_id: "75Mh6g9M28"
-updated_at: "2026-09-10 19:22:40"
+updated_at: "2026-09-15 09:36:22"
 ---
 
 > Source: https://open.dingtalk.com/document/development/quickstart
 > Path: 应用开发 / 服务端 API / 认证与授权 > 身份验证（免登） > 使用教程 > 第三方个人应用 > 第三方个人应用免登
-> Updated: 2026-09-10 19:22:40
+> Updated: 2026-09-15 09:36:22
 
 # 第三方个人应用免登并获取用户信息
 
@@ -72,7 +72,7 @@ updated_at: "2026-09-10 19:22:40"
 - 注册了钉钉管理员账号。如果没有注册，请单击[这里](https://oa.dingtalk.com/register_new.htm?source=1008_OA&lwfrom=2018122711522903000&succJump=oa#/)完成注册。
 - 安装小程序开发者工具IDE，单击[这里](../06-JDICnQyZLF-开发工具/0001-miniapp-tool.md)下载安装。
 - 安装了Java开发环境（JDK1.6及以上）以及Java项目构建工具Maven。
-- 参考[第三方个人应用学习指南](../01-XOnnmGCTbn-开发指南/0005-create-and-configure-an-application.md)创建第三方企业应用，并完成[安全域名配置](../01-XOnnmGCTbn-开发指南/0029-configure-secure-domain-name.md)。
+- 参考[第三方个人应用学习指南](../01-XOnnmGCTbn-开发指南/0005-create-and-configure-an-application.md)创建第三方个人应用，并完成[安全域名配置](../01-XOnnmGCTbn-开发指南/0029-configure-secure-domain-name.md)。
 
   > **[!NOTE]**
   >

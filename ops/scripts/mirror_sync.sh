@@ -28,7 +28,17 @@ if git merge-base --is-ancestor "$gl" "$gh"; then          # GitHub 领先(ECS �
 elif git merge-base --is-ancestor "$gh" "$gl"; then        # GitLab 领先(人工提交)→ 推到 GitHub
   git push -q "$GH" "$gl:refs/heads/main" && echo "OK gitlab->github ${gh:0:7}..${gl:0:7}"
 else
-  echo "ALERT diverged github=${gh:0:7} gitlab=${gl:0:7} —— 有人推 GitLab 前没并入 GitHub 最新提交。在 Mac 上执行: git fetch origin && git checkout -B main gitlab/main && git merge --no-ff origin/main && git push gitlab main"; exit 3
+  # 分叉(人推 GitLab 前没并 GitHub):按设计 GitHub 是完整历史,直接在本机合并后推 GitHub,
+  # 无需人工;GitLab 落后属正常态。只有真正的合并冲突才告警。
+  # 前提:工作区干净(流水线持锁时本脚本已让路;其它脏文件视为异常,不动)
+  if [ -n "$(git status --porcelain)" ]; then echo "ALERT dirty worktree, skip auto-merge"; exit 3; fi
+  git checkout -q -B main "$gh" 2>/dev/null
+  if git merge -q --no-ff "$gl" -m "merge: 自动并入 GitLab 侧人工提交 ${gl:0:7}(镜像分叉自动收敛) to #85045988"; then
+    git push -q "$GH" HEAD:refs/heads/main && echo "OK auto-merged gitlab=${gl:0:7} into github=${gh:0:7} -> $(git rev-parse --short HEAD)"; exit 0
+  else
+    git merge --abort 2>/dev/null; git checkout -q -B main "$gh"
+    echo "ALERT merge conflict github=${gh:0:7} gitlab=${gl:0:7} —— 人工改动与 ECS 生成物撞了同一文件,需人工解决"; exit 3
+  fi
 fi
 rc=$?
 if [ $rc -ne 0 ]; then

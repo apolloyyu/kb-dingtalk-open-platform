@@ -89,14 +89,35 @@ def _evidence_contract(card=None, intent=None, fast=False):
         "not_proved: 未明示的 ID 格式或校验、其他接口/配置阶段的数据流、客户端分栏/排序/展示因果",
         "rule: 示例值不等于格式规范；字段存在不等于它决定产品行为；未直接证明则写“文档未说明”",
         "links: 正文里的内联链接（含 dingtalk:// 客户端深链）应作为可点入口原样给用户：整条逐字照抄，禁止解码成 url= 内嵌地址、禁止改写或替换 ${corpId} 等占位符、禁止只留文字不给链接；文档出处另用各篇 source_url",
+        "images: 正文配图已按每篇最多 3 张护栏保留（首/中/尾），[图略] 处不得凭空补图或引用其他篇的图；一题总配图不超过 3 张",
     ]
     return "== 证据契约 ==\n" + "\n".join(lines)
 
 
+_IMG_RE = re.compile(r"!\[[^\]]*\]\((https?://[^)\s]+)\)")
+_IMG_KEEP = 3
+
+
 def _sanitize_links(body):
     """正文链接原样保留。dingtalk:// 深链(含 url= 内嵌地址与 ${corpId} 占位)在钉钉/浏览器里可直接打开,
-    问题出在模型把它解码成内嵌的 html 地址后占位符失效(实录「钉钉专业版」);故不剥离,只在契约里禁止改写。"""
-    return body
+    问题出在模型把它解码成内嵌的 html 地址后占位符失效(实录「钉钉专业版」);故不剥离,只在契约里禁止改写。
+
+    配图护栏:每篇正文最多保留 3 张图(首/中/尾,对应入口定位/关键表单/结果确认),其余替换为 [图略] 标记。
+    实录:每步一图的教程让助理一题配 8~12 张,prompt 上限「最多 3 张」压不住(预发 16 题 7 题超量);
+    模型拿不到多余的图才是确定性的上限。KB_ALL_IMAGES=1 关闭护栏。"""
+    if os.environ.get("KB_ALL_IMAGES") == "1":
+        return body
+    imgs = list(_IMG_RE.finditer(body))
+    if len(imgs) <= _IMG_KEEP:
+        return body
+    keep = {0, len(imgs) // 2, len(imgs) - 1}
+    out, last = [], 0
+    for i, m in enumerate(imgs):
+        out.append(body[last:m.start()])
+        out.append(m.group(0) if i in keep else f"[图略:第{i + 1}/{len(imgs)}张,完整配图见 source_url]")
+        last = m.end()
+    out.append(body[last:])
+    return "".join(out)
 
 
 def cmd_card(terms, n):

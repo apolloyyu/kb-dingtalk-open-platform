@@ -2162,20 +2162,20 @@ updated_at: "2026-05-06 10:20:52"
 | 33006 | 无效的微应用的PC端主页 | 无效的微应用的PC端主页。校验微应用的PC端主页，必须以http开头或https开头。 |  |
 | 33007 | 微应用的移动端的主页与PC端主页不同 | 微应用的移动端的主页与PC端主页不同。校验微应用的PC端主页，确保它和移动端主页的域名保持一致。 |  |
 | 33008 | 无效的微应用OA后台的主页 | 无效的微应用OA后台的主页。校验下微应用的后台管理的主页失败，必须以http开头或https开头。 |  |
-| 33012 | 无效的USERID | 无效的USERID。请检查userid是否正确，可通过[获取部门用户userid列表](0065-query-the-list-of-department-userids.md)接口获取。 |  |
+| 33012 | 无效的USERID | 无效的USERID。请检查userid是否正确，可通过[获取部门用户userid列表](0064-query-the-list-of-department-userids.md)接口获取。 |  |
 | 33013 | 企业自建微应用的个数过多，通过接口创建微应用受限 | 企业自建微应用的个数过多，通过接口创建微应用受限。此限制只针对企业自建微应用，对ISV应用没有限制。 |  |
-| 34001 | 无效的会话id | 无效的会话id。检查下所传的chatId字段是否为空。可通过[创建群](1484-session-management-creates-groups.md)接口获取chatId。 |  |
+| 34001 | 无效的会话id | 无效的会话id。检查下所传的chatId字段是否为空。可通过[创建群](1480-session-management-creates-groups.md)接口获取chatId。 |  |
 | 34002 | 无效的会话消息的发送者 | 无效的会话消息的发送者。检查下sender字段是否为空。 |  |
 | 34003 | 无效的会话消息的发送者的企业Id | 无效的会话消息的发送者的企业Id。检查下发送者的企业Id。可在[开发者后台](https://open-dev.dingtalk.com/#/index)首页获取。 |  |
-| 34004 | 无效的会话消息的类型 | 无效的会话消息的类型。检查下msgtype字段，是否为空，是否是定义的类型。msgtype请参考[消息通知类型](0776-message-types-and-data-format.md)。 |  |
-| 34006 | 发送者不在企业中 | 发送者不在企业中。检查下发送者是否在企业中。可通过[获取部门用户基础信息](0066-queries-the-simple-information-of-a-department-user.md)查看。 |  |
-| 34007 | 发送者不在会话中 | 发送者不在会话中。检查下发送者是否在会话id中。可通过[查询群成员](0752-query-group-members.md)接口查看。 |  |
+| 34004 | 无效的会话消息的类型 | 无效的会话消息的类型。检查下msgtype字段，是否为空，是否是定义的类型。msgtype请参考[消息通知类型](0775-message-types-and-data-format.md)。 |  |
+| 34006 | 发送者不在企业中 | 发送者不在企业中。检查下发送者是否在企业中。可通过[获取部门用户基础信息](0065-queries-the-simple-information-of-a-department-user.md)查看。 |  |
+| 34007 | 发送者不在会话中 | 发送者不在会话中。检查下发送者是否在会话id中。可通过[查询群成员](0751-query-group-members.md)接口查看。 |  |
 | 34008 | 图片不能为空 | 图片不能为空。如果发的是图片消息，检查下图片是否为空。 |  |
 | 34009 | 链接内容不能为空 | 链接内容不能为空。检查下messageUrl字段是否为空。 |  |
-| 34010 | 文件不能为空 | 文件不能为空。检查下media\_id字段是否为空。可通过[上传媒体文件](0646-upload-media-files.md)接口获取。 |  |
-| 34011 | 音频文件不能为空 | 音频文件不能为空。检查下media\_id字段是否为空。可通过[上传媒体文件](0646-upload-media-files.md)接口获取。 |  |
-| 34012 | 找不到发送者的企业 | 找不到发送者的企业。检查下发送者是否是真实的。可通过[获取部门用户userid列表](0065-query-the-list-of-department-userids.md)接口获取。 |  |
-| 34013 | 找不到群会话对象 | 找不到群会话对象。检查下chatid是否真实存在。可通过[查询群信息](0741-obtain-a-group-session.md)接口查看。 |  |
+| 34010 | 文件不能为空 | 文件不能为空。检查下media\_id字段是否为空。可通过[上传媒体文件](0645-upload-media-files.md)接口获取。 |  |
+| 34011 | 音频文件不能为空 | 音频文件不能为空。检查下media\_id字段是否为空。可通过[上传媒体文件](0645-upload-media-files.md)接口获取。 |  |
+| 34012 | 找不到发送者的企业 | 找不到发送者的企业。检查下发送者是否是真实的。可通过[获取部门用户userid列表](0064-query-the-list-of-department-userids.md)接口获取。 |  |
+| 34013 | 找不到群会话对象 | 找不到群会话对象。检查下chatid是否真实存在。可通过[查询群信息](0740-obtain-a-group-session.md)接口查看。 |  |
 | 34014 | 会话消息的json结构无效或不完整 | 会话消息的json结构无效或不完整。检查下消息的json格式是否正确，json的key对应msgtype的value值。 |  |
 | 34015 | 发送群会话消息失败 | 发送群会话消息失败。消息发送失败，建议稍后再重试下。 |  |
 | 34016 | 会话消息的内容超长 | 会话消息的内容超长。检查下消息的content字段长度是否超过5000，title字段长度是否超过64，markdown字段长度是否超过5000，single\_title字段长度是否超过20，single\_url字段长度是否超过500，btn\_json\_list字段长度是否超过1000。 |  |
@@ -2193,10 +2193,10 @@ updated_at: "2026-05-06 10:20:52"
 | 400021 | 密钥错误 | 密钥错误。无。 |  |
 | 400022 | 设备不存在 | 设备不存在。无。 |  |
 | 400023 | 用户不存在 | 用户不存在。无。 |  |
-| 40003 | 不合法的UserID | 不合法的UserID。确保该id在通讯录中存在，且是在你所传access\_token对应的企业里。可通过[获取部门用户userid列表](0065-query-the-list-of-department-userids.md)接口获取。 |  |
+| 40003 | 不合法的UserID | 不合法的UserID。确保该id在通讯录中存在，且是在你所传access\_token对应的企业里。可通过[获取部门用户userid列表](0064-query-the-list-of-department-userids.md)接口获取。 |  |
 | 40004 | 不合法的媒体文件类型 | 不合法的媒体文件类型。检查下type字段，只支持image、voice、file。 |  |
-| 400040 | 回调不存在 | 回调不存在。检查是否注册回调事件。可通过[查询订阅事件](1868-query-subscribed-events.md)接口获取。 |  |
-| 400041 | 回调已经存在 | 回调已经存在。检查该回调事件是否已注册过。可通过[查询订阅事件](1868-query-subscribed-events.md)接口获取。 |  |
+| 400040 | 回调不存在 | 回调不存在。检查是否注册回调事件。可通过[查询订阅事件](1864-query-subscribed-events.md)接口获取。 |  |
+| 400041 | 回调已经存在 | 回调已经存在。检查该回调事件是否已注册过。可通过[查询订阅事件](1864-query-subscribed-events.md)接口获取。 |  |
 | 400042 | 企业不存在 | 企业不存在。无。 |  |
 | 400043 | 企业不合法 | 企业不合法。无。 |  |
 | 40005 | 不合法的文件类型 | 不合法的文件类型。如果是文件类型，检查下是否是支持。目前只支持doc、docx、xls、xlsx、ppt、pptx、zip、pdf、rar。 |  |
@@ -2209,10 +2209,10 @@ updated_at: "2026-05-06 10:20:52"
 | 400056 | 回调访问设备失败 | 回调访问设备失败。无。 |  |
 | 400057 | 回调访问设备不存在 | 回调访问设备不存在。无。 |  |
 | 40006 | 不合法的文件大小 | 不合法的文件大小。检查下文件大小，image类型最大1MB，file类型最大10MB，voice类型最大2MB。 |  |
-| 40007 | 不合法的媒体文件id | 不合法的媒体文件id。检查下mediaId是否为空，是否真实存在。可通过[上传媒体文件](0646-upload-media-files.md)接口获取。 |  |
-| 40008 | 不合法的消息类型 | 不合法的消息类型。检查下msgtype是否为空，确保它在开放平台定义的几种类型里，msgtype请参考[消息通知类型](0776-message-types-and-data-format.md)。 |  |
-| 40009 | 不合法的部门id | 不合法的部门id。检查下部门id是否为空，是否为数字且大于0。可通过[获取部门列表](0082-user-management-acquires-the-list-departments.md)接口查看。 |  |
-| 40010 | 不合法的父部门id | 不合法的父部门id。检查父部门id是否为一个数字。可通过[获取指定用户的所有父部门列表](0085-queries-the-list-of-all-parent-departments-of-a-user.md)或[获取指定部门的所有父部门列表](0084-query-the-list-of-all-parent-departments-of-a-department.md)接口获取。 |  |
+| 40007 | 不合法的媒体文件id | 不合法的媒体文件id。检查下mediaId是否为空，是否真实存在。可通过[上传媒体文件](0645-upload-media-files.md)接口获取。 |  |
+| 40008 | 不合法的消息类型 | 不合法的消息类型。检查下msgtype是否为空，确保它在开放平台定义的几种类型里，msgtype请参考[消息通知类型](0775-message-types-and-data-format.md)。 |  |
+| 40009 | 不合法的部门id | 不合法的部门id。检查下部门id是否为空，是否为数字且大于0。可通过[获取部门列表](0081-user-management-acquires-the-list-departments.md)接口查看。 |  |
+| 40010 | 不合法的父部门id | 不合法的父部门id。检查父部门id是否为一个数字。可通过[获取指定用户的所有父部门列表](0084-queries-the-list-of-all-parent-departments-of-a-user.md)或[获取指定部门的所有父部门列表](0083-query-the-list-of-all-parent-departments-of-a-department.md)接口获取。 |  |
 | 40011 | 不合法的排序order | 不合法的排序order。检查下order字段是否为空，是否为数字且大于0。 |  |
 | 40012 | 不合法的发送者 | 不合法的发送者。检查下sender字段是否为空，是否真实存在。 |  |
 | 40013 | 不合法的corpid | 不合法的corpid。检查下corpid是否有效。corpid参数可在[开发者后台](https://open-dev.dingtalk.com/#/index)首页获取。 |  |
@@ -2251,7 +2251,7 @@ updated_at: "2026-05-06 10:20:52"
 | 40073 | 不存在的openid | 不存在的openid。openid不能为空。可通过[根据sns临时授权码获取用户信息](https://open.dingtalk.com/document/orgapp/obtain-the-user-information-based-on-the-sns-temporary-authorization)接口获取。 |  |
 | 40077 | 不存在的预授权码 | 不存在的预授权码。无。 |  |
 | 40078 | 不存在的临时授权码 | 不存在的临时授权码。临时授权码不能为空，且只能被使用一次，可参见以下接口： \* 小程序：[免登授权码](https://open.dingtalk.com/document/orgapp/mini-program-free-login) \* H5微应用：[免登流程](https://open.dingtalk.com/document/orgapp/logon-free-process) |  |
-| 40079 | 不存在的授权信息 | 不存在的授权信息。检查下企业是否授权，授权方法参考[应用授权](0041-overview-of-application-licensing.md)。 |  |
+| 40079 | 不存在的授权信息 | 不存在的授权信息。检查下企业是否授权，授权方法参考[应用授权](0040-overview-of-application-licensing.md)。 |  |
 | 40080 | 不合法的suitesecret | 不合法的suitesecret。无。 |  |
 | 40082 | 不合法的suitetoken | 不合法的suitetoken。检查下token。 |  |
 | 40083 | 不合法的suiteid | 不合法的suiteid。suiteKey字段不合法。 |  |
@@ -2274,13 +2274,13 @@ updated_at: "2026-05-06 10:20:52"
 | 41003 | 缺少refresh\_token参数 | 缺少refresh\_token参数。检查下refresh\_token是否为空。 |  |
 | 41004 | 缺少secret参数 | 检查下secret参数是否为空。检查下secret参数是否为空。 |  |
 | 41005 | 缺少多媒体文件数据 | 缺少多媒体文件数据。无。 |  |
-| 41006 | 缺少media\_id参数 | 缺少media\_id参数。检查下media\_id参数是否为空。可通过[上传媒体文件](0646-upload-media-files.md)接口获取。 |  |
+| 41006 | 缺少media\_id参数 | 缺少media\_id参数。检查下media\_id参数是否为空。可通过[上传媒体文件](0645-upload-media-files.md)接口获取。 |  |
 | 41007 | 无效的ssocode | 无效的ssocode。sso的永久授权code无效，检查下是否为空，可参见[获取微应用后台免登的access\_token](https://open.dingtalk.com/document/orgapp/obtain-the-ssotoken-for-micro-application-background-logon-free)。 |  |
 | 41008 | 缺少oauth | 缺少oauth。无。 |  |
 | 41009 | 缺少UserID | 缺少UserID。检查下UserID是否为空。 |  |
 | 41010 | 缺少url | 缺少url。检查下url是否为空。 |  |
 | 41011 | 缺少agentid | 缺少agentid。检查下agentid是否为空。 |  |
-| 41012 | 缺少应用头像mediaid | 缺少应用头像mediaid。检查下mediaid是否为空。可通过[上传媒体文件](0646-upload-media-files.md)接口获取。 |  |
+| 41012 | 缺少应用头像mediaid | 缺少应用头像mediaid。检查下mediaid是否为空。可通过[上传媒体文件](0645-upload-media-files.md)接口获取。 |  |
 | 41013 | 缺少应用名字 | 缺少应用名字。检查应用名字是否为空。 |  |
 | 41014 | 缺少应用描述 | 缺少应用描述。检查应用描述是否为空。 |  |
 | 41015 | 缺少JSON参数 | 缺少JSON参数。检查JSON参数是否为空。 |  |
@@ -2346,7 +2346,7 @@ updated_at: "2026-05-06 10:20:52"
 | 43007 | 需要授权 | 需要授权。该接口需要access\_token才能调用。 |  |
 | 43008 | 参数需要multipart类型 | 参数需要multipart类型。检查提交参数中的ENCTYPE是否是multipart类型。 |  |
 | 43009 | post参数需要json类型 | post参数需要json类型。请检查post参数数据是否是json类型。 |  |
-| 44001 | 多媒体文件为空 | 多媒体文件为空。请检查多媒体文件数据是否为空。可通过[上传媒体文件](0646-upload-media-files.md)接口获取。 |  |
+| 44001 | 多媒体文件为空 | 多媒体文件为空。请检查多媒体文件数据是否为空。可通过[上传媒体文件](0645-upload-media-files.md)接口获取。 |  |
 | 44002 | POST的数据包为空 | POST的数据包为空。请检查POST的数据包是否为空。 |  |
 | 44003 | 图文消息内容为空 | 图文消息内容为空。请检查图文消息参数是否为空。 |  |
 | 44004 | 文本消息内容为空 | 文本消息内容为空。请检查文本消息参数是否为空 |  |
@@ -2369,7 +2369,7 @@ updated_at: "2026-05-06 10:20:52"
 | 48002 | Api禁用 | Api禁用。无。 |  |
 | 48003 | suitetoken无效 | suitetoken无效。请检查该suitetoken是否已经过期或不正确。 |  |
 | 48004 | 授权关系无效 | 授权关系无效。无。 |  |
-| 49000 | 缺少chatid | 缺少chatid。请检查参数中是否有chatid。可通过[创建群](1484-session-management-creates-groups.md)接口获取chatId。 |  |
+| 49000 | 缺少chatid | 缺少chatid。请检查参数中是否有chatid。可通过[创建群](1480-session-management-creates-groups.md)接口获取chatId。 |  |
 | 49001 | 绑定的微应用超过个数限制 | 绑定的微应用超过个数限制。绑定群会话和微应用超过5个。 |  |
 | 49002 | 一个群只能被一个ISV套件绑定一次 | 一个群只能被一个ISV套件绑定一次。无。 |  |
 | 49003 | 操作者必须为群主 | 操作者必须为群主。无。 |  |
@@ -2386,9 +2386,9 @@ updated_at: "2026-05-06 10:20:52"
 | 49014 | 非法的群主类型，只能为emp或者ext | 非法的群主类型，只能为emp或者ext。无。 |  |
 | 49015 | 不合法的群名称 | 不合法的群名称。无。 |  |
 | 49016 | 查询企业员工不存在 | 查询企业员工不存在。无。 |  |
-| 49017 | 查询企业外部联系人不存在 | 查询企业外部联系人不存在。可通过[获取外部联系人列表](0100-obtain-the-external-contact-list.md)接口获取。 |  |
+| 49017 | 查询企业外部联系人不存在 | 查询企业外部联系人不存在。可通过[获取外部联系人列表](0099-obtain-the-external-contact-list.md)接口获取。 |  |
 | 49018 | 群主非企业员工 | 群主非企业员工。无。 |  |
-| 49019 | 群主非企业外部通讯录人员 | 群主非企业外部通讯录人员。可通过[获取外部联系人列表](0100-obtain-the-external-contact-list.md)接口获取。 |  |
+| 49019 | 群主非企业外部通讯录人员 | 群主非企业外部通讯录人员。可通过[获取外部联系人列表](0099-obtain-the-external-contact-list.md)接口获取。 |  |
 | 49020 | 某人处于勿扰模式，拒绝加入群聊；请先与TA建立好友关系 | 某人处于勿扰模式，拒绝加入群聊；请先与TA建立好友关系。无。 |  |
 | 49021 | 非好友建立群聊，认证用户一天只能拉50个人，非认证用户一天只能拉10个人 | 非好友建立群聊，认证用户一天只能拉50个人，非认证用户一天只能拉10个人。无。 |  |
 | 49022 | 某人拒绝加入群聊 | 某人拒绝加入群聊。无。 |  |
@@ -2411,16 +2411,16 @@ updated_at: "2026-05-06 10:20:52"
 | 52020 | 未找到服务窗授权 | 未找到服务窗授权。无。 |  |
 | 52021 | 未找到微应用授权 | 未找到微应用授权。无。 |  |
 | 52022 | 无效的jsapi类型 | 无效的jsapi类型。无。 |  |
-| 52023 | 无效的服务窗agentid | 无效的服务窗agentid。检查服务窗微应用是否停用或者删除，可通过 [查询服务号列表](0813-query-service-number-list.md)接口查询。 |  |
+| 52023 | 无效的服务窗agentid | 无效的服务窗agentid。检查服务窗微应用是否停用或者删除，可通过 [查询服务号列表](0812-query-service-number-list.md)接口查询。 |  |
 | 52024 | 无效的jsapi tag | 无效的jsapi tag。无。 |  |
 | 52025 | 无效的安全微应用 | 无效的安全微应用。无。 |  |
 | 52026 | 无效的安全微应用URL | 无效的安全微应用URL。无。 |  |
 | 60001 | 不合法的部门名称 | 不合法的部门名称。请检查部门名称是否正确，长度不能超过64个字符。 |  |
 | 60002 | 部门层级深度超过限制 | 部门层级深度超过限制。无。 |  |
-| 60003 | 部门不存在 | 部门不存在。可通过[获取部门列表](0082-user-management-acquires-the-list-departments.md)接口获取。 |  |
-| 60004 | 父亲部门不存在 | 父亲部门不存在。可通过[获取指定用户的所有父部门列表](0085-queries-the-list-of-all-parent-departments-of-a-user.md)接口获取。 |  |
-| 60005 | 不允许删除有成员的部门 | 不允许删除有成员的部门。可通过[获取部门用户userid列表](0065-query-the-list-of-department-userids.md)接口查看。 |  |
-| 60006 | 不允许删除有子部门的部门 | 不允许删除有子部门的部门。可通过[获取子部门ID列表](0083-obtain-the-list-of-sub-department-ids.md)接口查看。 |  |
+| 60003 | 部门不存在 | 部门不存在。可通过[获取部门列表](0081-user-management-acquires-the-list-departments.md)接口获取。 |  |
+| 60004 | 父亲部门不存在 | 父亲部门不存在。可通过[获取指定用户的所有父部门列表](0084-queries-the-list-of-all-parent-departments-of-a-user.md)接口获取。 |  |
+| 60005 | 不允许删除有成员的部门 | 不允许删除有成员的部门。可通过[获取部门用户userid列表](0064-query-the-list-of-department-userids.md)接口查看。 |  |
+| 60006 | 不允许删除有子部门的部门 | 不允许删除有子部门的部门。可通过[获取子部门ID列表](0082-obtain-the-list-of-sub-department-ids.md)接口查看。 |  |
 | 60007 | 不允许删除根部门 | 不允许删除根部门。无。 |  |
 | 60009 | 部门名称含有非法字符 | 部门名称含有非法字符。无。 |  |
 | 60010 | 部门存在循环关系 | 部门存在循环关系。无。 |  |
@@ -2429,12 +2429,12 @@ updated_at: "2026-05-06 10:20:52"
 | 60013 | 不允许关闭应用 | 不允许关闭应用。无。 |  |
 | 60014 | 不允许开启应用 | 不允许开启应用。无。 |  |
 | 60015 | 不允许修改默认应用可见范围 | 不允许修改默认应用可见范围。无。 |  |
-| 60016 | 部门id已经存在 | 部门id已经存在。可通过[获取部门详情](0081-query-department-details0-v2.md)接口查看详情。 |  |
+| 60016 | 部门id已经存在 | 部门id已经存在。可通过[获取部门详情](0080-query-department-details0-v2.md)接口查看详情。 |  |
 | 60017 | 不允许设置企业 | 不允许设置企业。无。 |  |
 | 60018 | 不允许更新根部门 | 不允许更新根部门。无。 |  |
-| 60019 | 从部门查询人员失败 | 从部门查询人员失败。请检查该成员是否在该部门中。可通过[获取部门用户userid列表](0065-query-the-list-of-department-userids.md)接口获取。 |  |
+| 60019 | 从部门查询人员失败 | 从部门查询人员失败。请检查该成员是否在该部门中。可通过[获取部门用户userid列表](0064-query-the-list-of-department-userids.md)接口获取。 |  |
 | 60020 | 访问ip不在白名单之中 | 访问ip不在白名单之中。企业应用：检查配置的服务器出口ip地址是否和请求ip地址一致。 isv应用：检查套件ip白名单和请求ip是否一致。 |  |
-| 60021 | 父部门下该部门名称已存在 | 父部门下该部门名称已存在。可通过[获取部门列表](0082-user-management-acquires-the-list-departments.md)接口查看。 |  |
+| 60021 | 父部门下该部门名称已存在 | 父部门下该部门名称已存在。可通过[获取部门列表](0081-user-management-acquires-the-list-departments.md)接口查看。 |  |
 | 60022 | 包含敏感内容，请检查修改后重试！ | 包含敏感内容，请检查修改后重试！。无。 |  |
 | 60067 | 部门的企业群群主不存在 | 部门的企业群群主不存在。无。 |  |
 | 60068 | 部门的管理员不存在 | 部门的管理员不存在。无。 |  |
@@ -2502,8 +2502,8 @@ updated_at: "2026-05-06 10:20:52"
 | 900002 | 加密时间戳参数非法 | 加密时间戳参数非法。加密时间戳不能为空。 |  |
 | 900003 | 加密随机字符串参数非法 | 加密随机字符串参数非法。加密随机字符串不能为空。 |  |
 | 900004 | 不合法的aeskey | 不合法的aeskey。检查aeskey是否符合规格，长度固定为43个字符，从a-z, A-Z, 0-9共62个字符中选取，是AESKey的Base64编码。解码后即为32字节长的AESKey。 |  |
-| 900005 | 签名不匹配 | 签名不匹配。检查签名计算的参数是否正确。 \* 个人免登：[个人免登场景的签名计算方法](1429-signature-personal-registration.md) \* 第三方企业：[第三方访问接口的签名计算方法](1430-the-signature-calculation-method-of-the-third-party-access-interface.md) |  |
-| 900006 | 计算签名错误 | 计算签名错误。检查签名计算的参数是否正确。 \* 个人免登：[个人免登场景的签名计算方法](1429-signature-personal-registration.md) \* 第三方企业：[第三方访问接口的签名计算方法](1430-the-signature-calculation-method-of-the-third-party-access-interface.md) |  |
+| 900005 | 签名不匹配 | 签名不匹配。检查签名计算的参数是否正确。 \* 个人免登：[个人免登场景的签名计算方法](1425-signature-personal-registration.md) \* 第三方企业：[第三方访问接口的签名计算方法](1426-the-signature-calculation-method-of-the-third-party-access-interface.md) |  |
+| 900006 | 计算签名错误 | 计算签名错误。检查签名计算的参数是否正确。 \* 个人免登：[个人免登场景的签名计算方法](1425-signature-personal-registration.md) \* 第三方企业：[第三方访问接口的签名计算方法](1426-the-signature-calculation-method-of-the-third-party-access-interface.md) |  |
 | 900007 | 计算加密文字错误 | 计算加密文字错误。检查是否安装JRE补丁或者对应的JRE版本是否正常。 |  |
 | 900008 | 计算解密文字错误 | 计算解密文字错误。检查是否安装JRE补丁或者对应的JRE版本是否正常。 |  |
 | 900009 | 计算解密文字长度不匹配 | 计算解密文字长度不匹配。检查aeskey是否符合规格。长度固定为43个字符，从a-z, A-Z, 0-9共62个字符中选取，是AESKey的Base64编码。 |  |

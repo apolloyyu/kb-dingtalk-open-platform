@@ -40,4 +40,4 @@ dd.getAuthCode({
 
 ## 通过免登授权码换取用户身份
 
-- [网页应用（H5微应用）免登](../02-4a8AMF6u2A-服务端-API/0018-enterprise-internal-application-logon-free.md)
+- [网页应用（H5微应用）免登](../02-4a8AMF6u2A-服务端-API/0017-enterprise-internal-application-logon-free.md)

@@ -80,8 +80,8 @@ updated_at: "2026-07-02 10:35:05"
 
 | 权限信息 | 接口/字段  列表 | 授权的信息示例 | scope(权限点code) | 数据类型 | 权限类型 |
 | --- | --- | --- | --- | --- | --- |
-| 通讯录个人信息读权限 | 接口：[获取用户通讯录个人信息](0054-dingtalk-retrieve-user-information.md) | 用户个人的钉钉昵称、头像、个人邮箱等 | Contact.User.Read | 个人信息 | 接口权限  rpcScope |
-| 个人手机号信息 | 字段：[获取用户通讯录个人信息-mobile字段](0054-dingtalk-retrieve-user-information.md) | 用户的个人手机号 | Contact.User.mobile | 个人信息 | 字段权限  fieldScope |
+| 通讯录个人信息读权限 | 接口：[获取用户通讯录个人信息](0053-dingtalk-retrieve-user-information.md) | 用户个人的钉钉昵称、头像、个人邮箱等 | Contact.User.Read | 个人信息 | 接口权限  rpcScope |
+| 个人手机号信息 | 字段：[获取用户通讯录个人信息-mobile字段](0053-dingtalk-retrieve-user-information.md) | 用户的个人手机号 | Contact.User.mobile | 个人信息 | 字段权限  fieldScope |
 
 **术语说明：**
 
@@ -92,13 +92,13 @@ updated_at: "2026-07-02 10:35:05"
 
 #### **示例一：获取用户个人手机号**
 
-第三方企业应用希望调用[获取用户通讯录个人信息](0054-dingtalk-retrieve-user-information.md)接口，获取用户个人手机号信息，需要申请哪些权限？
+第三方企业应用希望调用[获取用户通讯录个人信息](0053-dingtalk-retrieve-user-information.md)接口，获取用户个人手机号信息，需要申请哪些权限？
 
 > **[!NOTE]**
 >
 > 个人手机号信息需要单独申请字段权限，因此开发者需要同时申请接口权限和字段权限。
 
-- 需要申请接口权限-[获取用户通讯录个人信息](0054-dingtalk-retrieve-user-information.md)
+- 需要申请接口权限-[获取用户通讯录个人信息](0053-dingtalk-retrieve-user-information.md)
 - 需要申请字段权限-个人手机号信息权限
 
   如下图所示，对应开发者后台需添加的权限项：
@@ -107,13 +107,13 @@ updated_at: "2026-07-02 10:35:05"
 
 #### **示例二：获取用户个人邮箱与钉钉头像**
 
-第三方企业应用希望调用[获取用户通讯录个人信息](0054-dingtalk-retrieve-user-information.md)接口，获取用户个人邮箱、钉钉头像等信息，需要申请哪些权限？
+第三方企业应用希望调用[获取用户通讯录个人信息](0053-dingtalk-retrieve-user-information.md)接口，获取用户个人邮箱、钉钉头像等信息，需要申请哪些权限？
 
 > **[!NOTE]**
 >
 > 个人邮箱、钉钉头像等信息不涉及独立字段权限，仅需申请接口权限即可。
 
-- 需要申请接口权限-[获取用户通讯录个人信息](0054-dingtalk-retrieve-user-information.md)
+- 需要申请接口权限-[获取用户通讯录个人信息](0053-dingtalk-retrieve-user-information.md)
 
   如下图所示，对应开发者后台需配置的权限项：
 

@@ -27,12 +27,12 @@ updated_at: "2026-07-22 16:55:18"
 
 ### **钉钉客户端 JSAPI 鉴权**
 
-1. 调用[获取企业内部应用的accessToken](../02-4a8AMF6u2A-服务端-API/0033-obtain-the-access-token-of-an-internal-app.md)接口，获取应用凭证 AccessToken。
-2. 根据应用凭证 AccessToken，调用[获取jsapiTicket](../02-4a8AMF6u2A-服务端-API/0039-create-a-jsapi-ticket.md)接口，获取返回参数 jsapiTicket 字段值。
+1. 调用[获取企业内部应用的accessToken](../02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md)接口，获取应用凭证 AccessToken。
+2. 根据应用凭证 AccessToken，调用[获取jsapiTicket](../02-4a8AMF6u2A-服务端-API/0038-create-a-jsapi-ticket.md)接口，获取返回参数 jsapiTicket 字段值。
 
    > **[!NOTE]**
    >
-   > 获取 jsapiTicket 后，如果 jsapiTicket 尚未过期，再次调用[获取jsapiTicket](../02-4a8AMF6u2A-服务端-API/0039-create-a-jsapi-ticket.md)接口时，返回的 jsapiTicket 值与之前的相同，只是续期了 2 小时。需要注意的是，从 jsapiTicket 生成起，最大过期时间为 24 小时，即使续期后，最大过期时间仍从 jsapiTicket 生成起计算。
+   > 获取 jsapiTicket 后，如果 jsapiTicket 尚未过期，再次调用[获取jsapiTicket](../02-4a8AMF6u2A-服务端-API/0038-create-a-jsapi-ticket.md)接口时，返回的 jsapiTicket 值与之前的相同，只是续期了 2 小时。需要注意的是，从 jsapiTicket 生成起，最大过期时间为 24 小时，即使续期后，最大过期时间仍从 jsapiTicket 生成起计算。
    >
    > > 例如：当你早上 9 点，生成一个 jsapiTicket 时，即使一直续期，第二天早上9点，jsapiTicket 也会过期，需要重新生成一个新的 jsapiTicket。
 3. 根据 jsapiTicket，计算签名 signature 字段，计算签名的各项参数如下：
@@ -286,16 +286,16 @@ updated_at: "2026-07-22 16:55:18"
 
 确保服务端开发者已完成以下操作：
 
-1. 调用[获取第三方应用授权企业的accessToken](../02-4a8AMF6u2A-服务端-API/0034-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口，获取应用凭证 AccessToken。
+1. 调用[获取第三方应用授权企业的accessToken](../02-4a8AMF6u2A-服务端-API/0033-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口，获取应用凭证 AccessToken。
 
    > **[!NOTE]**
    >
    > 必须使用当前网页应用的参数获取access\_token。
-2. 根据应用凭证 AccessToken，调用[获取jsapiTicket](../02-4a8AMF6u2A-服务端-API/0039-create-a-jsapi-ticket.md)接口，获取返回参数`jsapiTicket`字段值。
+2. 根据应用凭证 AccessToken，调用[获取jsapiTicket](../02-4a8AMF6u2A-服务端-API/0038-create-a-jsapi-ticket.md)接口，获取返回参数`jsapiTicket`字段值。
 
    > **[!NOTE]**
    >
-   > 获取 jsapiTicket 后，如果 jsapiTicket 尚未过期，再次调用[获取jsapiTicket](../02-4a8AMF6u2A-服务端-API/0039-create-a-jsapi-ticket.md)接口时，返回的 jsapiTicket 值与之前的相同，只是续期了 2 小时。需要注意的是，从 jsapiTicket 生成起，最大过期时间为 24 小时，即使续期后，最大过期时间仍从 jsapiTicket 生成起计算。
+   > 获取 jsapiTicket 后，如果 jsapiTicket 尚未过期，再次调用[获取jsapiTicket](../02-4a8AMF6u2A-服务端-API/0038-create-a-jsapi-ticket.md)接口时，返回的 jsapiTicket 值与之前的相同，只是续期了 2 小时。需要注意的是，从 jsapiTicket 生成起，最大过期时间为 24 小时，即使续期后，最大过期时间仍从 jsapiTicket 生成起计算。
    >
    > > 例如：当你早上 9 点，生成一个 jsapiTicket 时，即使一直续期，第二天早上9点，jsapiTicket 也会过期，需要重新生成一个新的 jsapiTicket。
 3. 根据 jsapiTicket，计算签名 signature 字段，计算签名的各项参数如下：

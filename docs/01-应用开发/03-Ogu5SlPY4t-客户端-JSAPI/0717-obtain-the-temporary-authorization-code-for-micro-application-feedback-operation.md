@@ -45,7 +45,7 @@ dd.runtime.permission.requestOperateAuthCode({
 | 参数 | 类型 | 是否必填 | 说明 |
 | --- | --- | --- | --- |
 | corpId | String | 是 | 企业的corpId。  **[!NOTE]**  第三方企业应用可以在微应用的首页URL中使用**$CORPID$**做为参数占位符，钉钉容器会将**$CORPID$**替换为当前访问用户的企业corpId。 |
-| agentId | String | 是 | 微应用agentId，   - 企业内部应用，可以从应用信息中获取，参考[基础概念-AgentId](../01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md)。 - 第三方企业应用，可以从授权信息中获取到，调用[获取企业授权信息](../02-4a8AMF6u2A-服务端-API/0042-obtains-the-basic-information-of-an-enterprise.md)接口获取，必须与dd.config的agentId一致。 |
+| agentId | String | 是 | 微应用agentId，   - 企业内部应用，可以从应用信息中获取，参考[基础概念-AgentId](../01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md)。 - 第三方企业应用，可以从授权信息中获取到，调用[获取企业授权信息](../02-4a8AMF6u2A-服务端-API/0041-obtains-the-basic-information-of-an-enterprise.md)接口获取，必须与dd.config的agentId一致。 |
 
 ## 返回结果
 

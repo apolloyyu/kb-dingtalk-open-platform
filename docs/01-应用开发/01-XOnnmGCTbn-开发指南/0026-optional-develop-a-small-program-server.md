@@ -20,7 +20,7 @@ updated_at: "2026-09-10 14:29:08"
 
 - 已登录[开发者后台](https://open-dev.dingtalk.com/#/)并拥有目标应用的管理权限；
 - 能够获取应用的关键凭证（如 `Client ID`、`Client Secret`）；
-- 理解 `access_token` 的作用及其获取方式：详见[获取访问凭证（accessToken）](../02-4a8AMF6u2A-服务端-API/0028-authorization-overview.md)；
+- 理解 `access_token` 的作用及其获取方式：详见[获取访问凭证（accessToken）](../02-4a8AMF6u2A-服务端-API/0027-authorization-overview.md)；
 - 了解用户唯一标识 `unionId` 的含义与获取路径：详见 [unionId介绍](0001-basic-concepts-beta.md#9dc00a3569e13)。
 
 ## 适用对象与权限说明
@@ -51,7 +51,7 @@ updated_at: "2026-09-10 14:29:08"
 
    用户无需输入账号密码即可完成身份验证。推荐使用“扫码登录”或“静默授权”模式。
 
-   详细流程请参考：[网页应用（H5微应用）免登](../02-4a8AMF6u2A-服务端-API/0018-enterprise-internal-application-logon-free.md)。
+   详细流程请参考：[网页应用（H5微应用）免登](../02-4a8AMF6u2A-服务端-API/0017-enterprise-internal-application-logon-free.md)。
 4. 申请接口调用权限。
 
    根据业务需求，在应用详情页中为应用添加所需的 API 权限。例如：发送机器人消息、读取组织架构、创建日程等。

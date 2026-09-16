@@ -25,7 +25,7 @@ updated_at: "2026-09-02 18:14:36"
 
 ## 功能描述
 
-eventType为org\_suite\_change，表示企业变更第三方企业应用的授权范围。其中authCorpInfo, authInfo和authUserInfo三段结构信息请参考[获取企业授权信息](../02-4a8AMF6u2A-服务端-API/0042-obtains-the-basic-information-of-an-enterprise.md)。authScope结构信息清参考[获取通讯录权限范围](../02-4a8AMF6u2A-服务端-API/0053-obtain-corpsecret-authorization-scope.md)。
+eventType为org\_suite\_change，表示企业变更第三方企业应用的授权范围。其中authCorpInfo, authInfo和authUserInfo三段结构信息请参考[获取企业授权信息](../02-4a8AMF6u2A-服务端-API/0041-obtains-the-basic-information-of-an-enterprise.md)。authScope结构信息清参考[获取通讯录权限范围](../02-4a8AMF6u2A-服务端-API/0052-obtain-corpsecret-authorization-scope.md)。
 
 ## 支持应用类型
 

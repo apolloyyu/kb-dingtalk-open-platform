@@ -57,7 +57,7 @@ updated_at: "2026-09-02 18:14:23"
 
   答：调用[预览钉盘文件](0784-preview-nail-plate-file.md)出现上述错误的原因可能如下:
 
-  查看上传的审批附件时:excel、word文件格式不需要授权即可预览，但图片格式需[授权预览审批附件](../02-4a8AMF6u2A-服务端-API/0503-official-authorized-preview-approval-attachment.md)才可以正常预览。
+  查看上传的审批附件时:excel、word文件格式不需要授权即可预览，但图片格式需[授权预览审批附件](../02-4a8AMF6u2A-服务端-API/0502-official-authorized-preview-approval-attachment.md)才可以正常预览。
 - **调用H5微应用接口报错{errorCode: "7",errorMessage: "API not authed"}**
 
   答：调用微应用jsapi接口报上述错误的原因可能如下:

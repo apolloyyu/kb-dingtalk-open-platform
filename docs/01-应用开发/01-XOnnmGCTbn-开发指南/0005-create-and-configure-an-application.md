@@ -102,7 +102,7 @@ updated_at: "2026-07-22 16:55:13"
 
 #### **服务端调用接口获取用户信息**
 
-应用后端接收到`authCode`后，调用钉钉服务端接口 `sns/getuserinfo_bycode`[获取用户基本信息](../02-4a8AMF6u2A-服务端-API/0052-queries-basic-user-information.md)，完成登录流程。
+应用后端接收到`authCode`后，调用钉钉服务端接口 `sns/getuserinfo_bycode`[获取用户基本信息](../02-4a8AMF6u2A-服务端-API/0051-queries-basic-user-information.md)，完成登录流程。
 
 > **[!NOTE]**
 >

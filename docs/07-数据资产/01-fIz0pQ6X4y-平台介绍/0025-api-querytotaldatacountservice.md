@@ -31,7 +31,7 @@ updated_at: "2026-06-15 10:33:49"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，通过调用[获取企业内部应用的accessToken](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0033-obtain-the-access-token-of-an-internal-app.md)接口获取。 |
+| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，通过调用[获取企业内部应用的accessToken](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md)接口获取。 |
 
 ### 请求体
 

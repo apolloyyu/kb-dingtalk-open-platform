@@ -122,9 +122,9 @@ biz\_data数据如下：
   > **[!NOTE]**
   >
   > **org\_suite\_auth**，**org\_suite\_change**两个事件都表示企业对于第三方企业应用的授权信息，需要等同处理，在很短时间内发生的两个事件，有可能会覆盖，保证只给出最新的授权信息
-- auth\_corp\_info, auth\_info和auth\_user\_info 三段结构信息请参考[获取企业授权信息](../02-4a8AMF6u2A-服务端-API/0042-obtains-the-basic-information-of-an-enterprise.md)。
-- auth\_scope结构信息请参考[获取通讯录权限范围](../02-4a8AMF6u2A-服务端-API/0053-obtain-corpsecret-authorization-scope.md)。
-- permanent\_code已废弃。兼容老接口[获取第三方应用授权企业的accessToken](../02-4a8AMF6u2A-服务端-API/0034-obtain-the-access-token-of-the-authorized-enterprise-1.md)。
+- auth\_corp\_info, auth\_info和auth\_user\_info 三段结构信息请参考[获取企业授权信息](../02-4a8AMF6u2A-服务端-API/0041-obtains-the-basic-information-of-an-enterprise.md)。
+- auth\_scope结构信息请参考[获取通讯录权限范围](../02-4a8AMF6u2A-服务端-API/0052-obtain-corpsecret-authorization-scope.md)。
+- permanent\_code已废弃。兼容老接口[获取第三方应用授权企业的accessToken](../02-4a8AMF6u2A-服务端-API/0033-obtain-the-access-token-of-the-authorized-enterprise-1.md)。
 - ch\_permanent\_code已废弃。兼容老接口service/get\_channel\_corp\_token。
 
 ## biz\_type=7

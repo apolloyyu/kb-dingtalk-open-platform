@@ -19,13 +19,13 @@ permissions: qyapi_chat_manage
 - none
 
 ## Body
-- openConversationId (String, required): 群ID：基于群模板创建的群，调用创建群接口获取`open_conversation_id`参数值。
+- openConversationId (String, required): 群ID：基于群模板创建的群，调用创建场景群接口获取`open_conversation_id`参数值。
 
 ## Returns
-- optional: chatbotInstanceVOList(Array), robotCode(String), name(String), downloadIconURL(String), openRobotType(Integer)
+- optional: chatbotInstanceVOList(Array), robotCode(String), name(String), creatorUserId(String), downloadIconURL(String), openRobotType(Integer)
 
 ## Limits
 - none stated
 
 source_url: https://open.dingtalk.com/document/development/obtain-the-list-of-robots-in-the-group
-updated_at: 2026-06-05 13:49:07
+updated_at: 2026-09-16 09:06:26

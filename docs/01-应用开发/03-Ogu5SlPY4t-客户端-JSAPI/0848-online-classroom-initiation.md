@@ -45,7 +45,7 @@ dd.biz.live.startClassRoom({
 
 | 参数 | 类型 | 说明 |
 | --- | --- | --- |
-| startParam | Object | 直播的uuid，可以调用[创建直播](../02-4a8AMF6u2A-服务端-API/0429-create-live-streaming.md)接口获取。 |
+| startParam | Object | 直播的uuid，可以调用[创建直播](../02-4a8AMF6u2A-服务端-API/0428-create-live-streaming.md)接口获取。 |
 | onSuccess | Function | 调用成功的回调函数。 |
 | onFail | Function | 调用失败的回调函数。 |
 

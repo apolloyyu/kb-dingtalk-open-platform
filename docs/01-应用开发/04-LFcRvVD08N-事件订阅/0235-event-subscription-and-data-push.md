@@ -26,7 +26,7 @@ updated_at: "2026-07-22 16:25:41"
   答：出现上述情况可能原因包括但不限于以下情况：
 
   - 未勾选对应订阅事件导致。在[开发者后台](https://open-dev.dingtalk.com/#/)**> 企业内部应用 > 事件与回调**的事件订阅中需勾选要触发的订阅事件，订阅事件勾选图例如下:![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8343897661/p495398.png)
-  - 设置请求网址(回调URL)对应的服务异常导致。可通过[获取推送失败的事件列表](../02-4a8AMF6u2A-服务端-API/0015-obtain-the-event-list-of-failed-push-messages.md)进行查验，初次调用该接口如产生failed\_list的返回数据列表(不为空)则说明接收事件的服务异常，需自行排查服务原因。
+  - 设置请求网址(回调URL)对应的服务异常导致。可通过[获取推送失败的事件列表](https://open.dingtalk.com/document/development/obtain-the-event-list-of-failed-push-messages)进行查验，初次调用该接口如产生failed\_list的返回数据列表(不为空)则说明接收事件的服务异常，需自行排查服务原因。
 
     > **[!IMPORTANT]**
     >

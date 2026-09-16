@@ -25,7 +25,7 @@ updated_at: "2026-07-02 10:34:59"
 ## **前置工作**
 
 1. **基础概念**：已了解钉钉开放平台的基础概念及各产品块文档说明，详见[基础概念](../01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md)文档说明。
-2. **接口频率限制：**已了解API的调用频率限制，详见[调用频次与限流](1434-how-to-process-api-throttling-on-the-dingtalk-server.md)文档说明。
+2. **接口频率限制：**已了解API的调用频率限制，详见[调用频次与限流](1430-how-to-process-api-throttling-on-the-dingtalk-server.md)文档说明。
 3. **开发者权限**：具有[开发者后台](https://open-dev.dingtalk.com/?spm=dd_developers.header.unLogin.openDevBtn&hash=%23%2F#/)子管理员和开发者权限，也可以登录钉钉开发者完成新用户的注册与激活。
 4. **获取用户**`UserId`：登录[钉钉管理后台](http://oa.dingtalk.com/)并在**通讯录 > 成员管理**下查看`UserId`，详见[基础概念](../01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md)说明。
 
@@ -75,7 +75,7 @@ updated_at: "2026-07-02 10:34:59"
 
 #### **调用接口获取Token**
 
-1. 访问[获取企业内部应用的accessToken](0033-obtain-the-access-token-of-an-internal-app.md)接口，通过右侧的**API调试**按钮打开[服务端调试工具](../06-JDICnQyZLF-开发工具/0005-api-explorer.md)。
+1. 访问[获取企业内部应用的accessToken](0032-obtain-the-access-token-of-an-internal-app.md)接口，通过右侧的**API调试**按钮打开[服务端调试工具](../06-JDICnQyZLF-开发工具/0005-api-explorer.md)。
 2. 在调试工具中，替换`appkey（参数值替换为提前获取的Client ID）`和`appSecret（参数值替换为提前获取的Client Secret）`的值，并点击**发起调试**按钮。
 
    > **[!IMPORTANT]**
@@ -121,13 +121,13 @@ updated_at: "2026-07-02 10:34:59"
 
 #### **接入授权套件**
 
-申请敏感权限后，需要接入[授权套件](0007-function-description.md)，用户在授权弹窗中同意授权时，返回`authCode`，然后调用[获取用户token](0032-obtain-user-token.md)接口，换取用户级`access_token`。
+申请敏感权限后，需要接入[授权套件](0007-function-description.md)，用户在授权弹窗中同意授权时，返回`authCode`，然后调用[获取用户token](0031-obtain-user-token.md)接口，换取用户级`access_token`。
 
 ## **步骤四：调用用户详情API**
 
 ### **普通权限API**
 
-获取用户详情需要通过调用[查询用户详情](0056-query-user-details.md)接口，获取方式可直接使用钉钉SDK或通过HTTP方式直接获取，可根据实际需求进行选择。
+获取用户详情需要通过调用[查询用户详情](0055-query-user-details.md)接口，获取方式可直接使用钉钉SDK或通过HTTP方式直接获取，可根据实际需求进行选择。
 
 #### **方式一：使用钉钉SDK（推荐）**
 
@@ -232,7 +232,7 @@ curl -i 'https://oapi.dingtalk.com/topapi/v2/user/get' \
 
 ### **敏感权限API**
 
-通过`authCode`换取用户级`access_token`后，调用[获取用户通讯录个人信息](0054-dingtalk-retrieve-user-information.md)获取用户的昵称、unionId 等信息。
+通过`authCode`换取用户级`access_token`后，调用[获取用户通讯录个人信息](0053-dingtalk-retrieve-user-information.md)获取用户的昵称、unionId 等信息。
 
 若接口返回200，则代表接口执行成功，返回结果如下：
 

@@ -76,8 +76,8 @@ openApp({
 
 在调用DingTalk OpenAPI中的工作台相关接口前，必须从开放平台获取访问凭证API Token，这个访问凭证包含你的企业信息以及可调用的接口权限，目前可调用工作台相关的接口如下：
 
-- [获取工作台插件检验的规则信息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1002-you-can-call-this-operation-to-obtain-the-information-about.md)
-- [获取工作台插件权限点](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1001-obtain-the-permissions-of-the-workbench-plug-in.md)
+- [获取工作台插件检验的规则信息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/1000-you-can-call-this-operation-to-obtain-the-information-about.md)
+- [获取工作台插件权限点](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0999-obtain-the-permissions-of-the-workbench-plug-in.md)
 
 ### **获取访问凭证API Token**
 
@@ -117,8 +117,8 @@ API Token是由钉钉开放平台颁发，用来调用钉钉开放平台提供�
 1. 添加接口调用权限。应用创建后默认只开放登录和消息通知接口的调用权限，您需要根据开发需要，添加对应的接口使用权限。
 2. 获取应用的access\_token。access\_token相当于是身份凭证。调用接口时，通过access\_token来鉴权调用者身份。
 
-   - 企业内部应用请参考[获取企业内部应用的accessToken](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0033-obtain-the-access-token-of-an-internal-app.md)。
-   - 第三方企业应用请参考[获取第三方应用授权企业的accessToken](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0034-obtain-the-access-token-of-the-authorized-enterprise-1.md)。
+   - 企业内部应用请参考[获取企业内部应用的accessToken](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md)。
+   - 第三方企业应用请参考[获取第三方应用授权企业的accessToken](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0033-obtain-the-access-token-of-the-authorized-enterprise-1.md)。
 
      ![调用流程](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/5025515361/p132205.png)
 

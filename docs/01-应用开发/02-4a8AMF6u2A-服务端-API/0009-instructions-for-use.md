@@ -62,14 +62,14 @@ updated_at: "2026-08-03 09:13:56"
 1. 确认使用场景，明确目标接口是否属于组织授权。
 2. 在开发者后台申请对应的 OpenAPI 权限点，例如`qyapi_hrm_read_user`。
 3. 集成统一授权 JS SDK，调用`openAuth`唤起授权弹窗，需企业管理员确认。
-4. 授权完成后，调用[获取第三方应用授权企业的accessToken](0034-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口，获取应用级`access_token`。
-5. 使用`access_token`调用 [获取离职员工列表](0948-obtain-the-list-of-employees-who-have-left.md)接口，获取授权企业离职员工的 userId 列表。
+4. 授权完成后，调用[获取第三方应用授权企业的accessToken](0033-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口，获取应用级`access_token`。
+5. 使用`access_token`调用 [获取离职员工列表](0946-obtain-the-list-of-employees-who-have-left.md)接口，获取授权企业离职员工的 userId 列表。
 
 ### **接入步骤**
 
 #### **步骤一：确认使用场景**
 
-1. 明确你的应用希望调用的 OpenAPI。例如，若需获取离职员工列表，则应调用[获取离职员工列表](0948-obtain-the-list-of-employees-who-have-left.md)接口，该接口属于组织授权接口。
+1. 明确你的应用希望调用的 OpenAPI。例如，若需获取离职员工列表，则应调用[获取离职员工列表](0946-obtain-the-list-of-employees-who-have-left.md)接口，该接口属于组织授权接口。
 2. 在开发者后台权限管理页面搜索并申请权限`qyapi_hrm_read_user`。
 
    ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/9079592871/p961813.png)
@@ -127,11 +127,11 @@ openAuth({
 
 #### **步骤三：****授权码兑换用户委托的访问凭证**
 
-授权组织管理员授权完成后，可直接调用[获取第三方应用授权企业的accessToken](0034-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口，获取应用访问凭证。
+授权组织管理员授权完成后，可直接调用[获取第三方应用授权企业的accessToken](0033-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口，获取应用访问凭证。
 
 #### **步骤四：获取离职员工列表**
 
-根据访问凭证 Access Token 调用[获取离职员工列表](0948-obtain-the-list-of-employees-who-have-left.md)接口，即可获取离职员工的 userId 列表信息。
+根据访问凭证 Access Token 调用[获取离职员工列表](0946-obtain-the-list-of-employees-who-have-left.md)接口，即可获取离职员工的 userId 列表信息。
 
 ## **个人授权（委托授权）**
 
@@ -148,14 +148,14 @@ openAuth({
 1. 确认使用场景，明确目标接口是否属于个人授权。
 2. 在开发者后台申请对应的 OpenAPI 权限点，例如`Contact.User.Read`。
 3. 集成统一授权 JS SDK，调用`openAuth`唤起授权弹窗，用户同意后获得`authCode`。
-4. 使用`authCode`调用[获取用户token](0032-obtain-user-token.md)接口，换取用户级`access_token`。
-5. 使用用户`access_token`调用 [获取用户通讯录个人信息](0054-dingtalk-retrieve-user-information.md)接口,获取用户昵称、unionId 等信息。
+4. 使用`authCode`调用[获取用户token](0031-obtain-user-token.md)接口，换取用户级`access_token`。
+5. 使用用户`access_token`调用 [获取用户通讯录个人信息](0053-dingtalk-retrieve-user-information.md)接口,获取用户昵称、unionId 等信息。
 
 ### **接入步骤**
 
 #### **步骤一：确认使用场景**
 
-1. 明确你的应用希望调用的 OpenAPI。例如，若需获取用户个人信息，则应调用 [获取用户通讯录个人信息](0054-dingtalk-retrieve-user-information.md)接口，该接口属于个人权限。
+1. 明确你的应用希望调用的 OpenAPI。例如，若需获取用户个人信息，则应调用 [获取用户通讯录个人信息](0053-dingtalk-retrieve-user-information.md)接口，该接口属于个人权限。
 2. 登录开发者后台，为应用申请相关权限。
 
    ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/9079592871/p961760.png)
@@ -213,13 +213,13 @@ openAuth({
 #### **步骤三：****授权码兑换用户委托的访问凭证**
 
 1. 委托（个人）授权完成后，会成功返回 authCode 授权码。
-2. 根据授权码，调用[获取用户token](0032-obtain-user-token.md)接口，获取访问凭证。
+2. 根据授权码，调用[获取用户token](0031-obtain-user-token.md)接口，获取访问凭证。
 
 #### **步骤四：获取用户个人信息**
 
-根据访问凭证 Access Token 调用[获取用户通讯录个人信息](0054-dingtalk-retrieve-user-information.md)接口，即可获取用户昵称、用户unionId等信息。
+根据访问凭证 Access Token 调用[获取用户通讯录个人信息](0053-dingtalk-retrieve-user-information.md)接口，即可获取用户昵称、用户unionId等信息。
 
-> [获取用户通讯录个人信息](0054-dingtalk-retrieve-user-information.md)接口如需获取当前访问用户的个人信息，参数 unionId 参数传 me 即可。
+> [获取用户通讯录个人信息](0053-dingtalk-retrieve-user-information.md)接口如需获取当前访问用户的个人信息，参数 unionId 参数传 me 即可。
 
 ## **快速体验（Demo）**
 

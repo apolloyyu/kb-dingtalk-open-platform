@@ -25,7 +25,7 @@ updated_at: "2026-09-02 18:14:42"
 
 ## 功能描述
 
-该数据为在授权的第三方企业应用中，当eventType为org\_dept\_create时，表示企业增加部门的推送信息，字段值来自于[获取部门详情](../02-4a8AMF6u2A-服务端-API/0081-query-department-details0-v2.md)接口。
+该数据为在授权的第三方企业应用中，当eventType为org\_dept\_create时，表示企业增加部门的推送信息，字段值来自于[获取部门详情](../02-4a8AMF6u2A-服务端-API/0080-query-department-details0-v2.md)接口。
 
 ## 支持应用类型
 

@@ -46,7 +46,7 @@ updated_at: "2026-09-02 18:14:55"
 | biz\_id | 员工的userid。 |
 | biz\_data | 数据为Json格式。 |
 
-biz\_data数据为如下两种Json格式，企业增加或修改员工，字段值来自于[查询用户详情](../02-4a8AMF6u2A-服务端-API/0056-query-user-details.md)接口 。
+biz\_data数据为如下两种Json格式，企业增加或修改员工，字段值来自于[查询用户详情](../02-4a8AMF6u2A-服务端-API/0055-query-user-details.md)接口 。
 
 - 增加企业员工：
 
@@ -112,7 +112,7 @@ biz\_data数据为如下两种Json格式，企业增加或修改员工，字段�
 | biz\_id | 部门ID。 |
 | biz\_data | 数据为Json格式。 |
 
-biz\_data数据为如下两种Json格式，企业增加或修改部门，字段值来自于[获取部门详情](../02-4a8AMF6u2A-服务端-API/0081-query-department-details0-v2.md)接口 。
+biz\_data数据为如下两种Json格式，企业增加或修改部门，字段值来自于[获取部门详情](../02-4a8AMF6u2A-服务端-API/0080-query-department-details0-v2.md)接口 。
 
 - 企业增加部门：
 

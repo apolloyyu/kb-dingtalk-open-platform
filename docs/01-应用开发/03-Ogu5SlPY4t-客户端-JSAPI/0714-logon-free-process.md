@@ -40,4 +40,4 @@ dd.ready(function() {
 
 ## 通过免登授权码换取用户身份
 
-可以通过免登授权码和access\_token获取用户的userid，然后通过userid获取用户的详细信息，详情请参考[网页应用（H5微应用）免登](../02-4a8AMF6u2A-服务端-API/0018-enterprise-internal-application-logon-free.md)。
+可以通过免登授权码和access\_token获取用户的userid，然后通过userid获取用户的详细信息，详情请参考[网页应用（H5微应用）免登](../02-4a8AMF6u2A-服务端-API/0017-enterprise-internal-application-logon-free.md)。

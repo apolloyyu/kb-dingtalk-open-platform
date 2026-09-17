@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "钉钉 CLI"
 breadcrumb: "更新日志"
 doc_id: "JqaPUpyWXl"
-updated_at: "2026-09-08 10:56:12"
+updated_at: "2026-09-17 14:16:57"
 ---
 
 > Source: https://open.dingtalk.com/document/development/dws-cli-log
 > Path: 应用开发 / 钉钉 CLI / 更新日志
-> Updated: 2026-09-08 10:56:12
+> Updated: 2026-09-17 14:16:57
 
 # 更新日志
 
@@ -40,6 +40,162 @@ dws upgrade --list
 - 钉钉 CLI 每周发布更新，开发者可扫描下方二维码加入"**dws 开源沟通群**"获取最新动态。
 
   ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/6160536871/p1094200.png)
+
+## **2026-09-16**
+
+### **更新说明**
+
+本周重点：**Agent Skills-公共安装通道开放**、**新增白板开放、钉钉文档读写增强**、**AI 表格 Shortcut 套件与记录评论**等。建议通过 `dws upgrade` 升级到最新版[v1.0.62](https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli/releases/tag/v1.0.62)。
+
+### **新增功能**
+
+#### **开发者专属：Agent Skills-公共安装通道开放**
+
+Agent Skills 可以通过 npx 一键安装：确认技能清单、目标目录与同名内容处理策略后，安装按产品拆分的 `dingtalk-*` skills；all-in-one mono `dws` skill 标记为内部、不作为默认可安装项；`dws skill setup` 仍是中国区/升级/归属场景的首选通道。
+
+- 示例：`npx skills add DingTalk-Real-AI/dingtalk-workspace-cli -g`
+
+#### **白板：独立白板可创建、可读写、可导出**
+
+- **独立白板创建与读写**
+
+  白板可以脱离文档独立使用：新增基于 OpenNodes 的独立白板创建；省略 `--part-id` 时查询/更新自动面向独立白板，显式传入时保留文档内嵌流程；写入带修订版本与稳定请求 ID 守卫，并做同类型读回验证。
+
+  - 相关命令：`dws whiteboard create-with-content`、`dws whiteboard query`、`dws whiteboard update`
+- **白板导出**
+
+  白板可以导出为图片文件：支持导出并下载 PNG/PDF 结果，可 dry-run 预览；文件名不受签名 URL 参数影响，下载前校验文件签名并原子落盘、不覆盖已有文件，失败任务保留任务 ID 与恢复指引；重定向与实际连接强制 HTTPS/443，声明与流式响应双 512 MiB 上限。
+
+  - 相关命令：`dws whiteboard export`、`dws whiteboard export-get`
+
+#### **钉钉文档：读写、媒体、批量删除全面升级**
+
+- **创建带附件与确认覆盖下载**
+
+  钉钉文档可以带确认地完成创建与下载闭环：创建文档时经确认上传本地图片或附件（普通创建入口行为不变、不接受媒体），下载时可经确认覆盖本地文件；既有媒体、预览与封面下载保留防覆盖安全契约。
+
+  - 相关命令：`dws doc +create-with-media --media-files`、`dws doc +download-overwrite --source media|cover`
+- **结构检查与媒体上传**
+
+  钉钉文档可以先检查再写入：支持对本地与在线文档做结构检查，提供经验证的独立媒体上传，并支持可选标题回退与创建文档时的有序媒体附件。
+
+  - 相关命令：`dws doc +script`、`dws doc +media-upload`
+- **读取与编辑增强**
+
+  钉钉文档可以精准定位与编辑：支持文件夹直查过滤、可读日期过滤、章节与正则块上下文读取、文档评论查询，以及经验证的同文档块复制与范围编辑（范围编辑按顺序执行、非原子），既有命令与别名全部保留。
+- **媒体控制增强**
+
+  钉钉文档媒体能力更顺手：支持剪贴板图片输入、附件预览/摘要选择、封面垂直定位、持久化预览输出与显式下载覆盖；标签过滤已修复，上传进度不再污染 JSON 输出。
+- **内容块批量删除**
+
+  钉钉文档可以一次删除多个内容块：`--block-id` 支持逗号分隔（单次最多 50 个），采用尽力而为语义，单个块未找到不阻塞其余删除，未找到的块在 `notFoundBlockIds` 中返回。
+
+  - 相关命令：`dws doc block delete`
+
+#### **AI 表格：Shortcut 套件、应用模式、记录评论、SQL 只读直查**
+
+- **Shortcut 套件**
+
+  AI 表格快捷操作覆盖高频全链路：支持字段/视图精确解析、有界记录读取与 NDJSON 导出、批量记录/字段创建（带读回与恢复）、App 页面与 Widget、表单、仪表盘、聚合与附件下载；既有入口与等价别名保留，不完整分页、写入校验不一致与未确认的 AI 提交回执一律拒绝而非报成功。
+- **应用模式命令**
+
+  AI 表格可以直接搭建和维护表格应用：支持应用获取与更新，页面和 Widget 的创建、查询、更新、删除与排序。
+
+  - 相关命令：`dws aitable app`、`dws aitable app page`、`dws aitable app widget`
+- **记录评论**
+
+  AI 表格可以围绕记录展开讨论：支持评论分页查询、创建、回复、完整更新与删除，内容支持纯文本、@人员与已上传图片。
+- **PostgreSQL 只读查询**
+
+  AI 表格可以用 SQL 直接查询分析数据：支持发现逻辑表与列类型、执行只读 SELECT，含同一 Base 内多表 JOIN。
+
+  - 相关命令：`dws aitable psql`
+
+#### **群聊：最近会话一次拉全**
+
+群聊可以一次拉全跨会话消息：支持按时间范围自动翻页、按会话去重聚合，返回会话名称、最新消息时间与完整性元数据；`--start` 可省略（默认取结束前 24 小时），提供总时长预算，超时或部分失败时保留已完成页并可按游标续拉。
+
+- 相关命令：`dws chat +recent-conversations`（原 `+active-conversations` 保留为隐藏兼容入口）
+- 新增参数：`--total-timeout`（默认 300 秒，范围 1-3600）
+
+#### **日历：全天日程与在线会议选项**
+
+日历日程可以声明全天并挂在线会议：创建/更新新增 `--is-all-day` 与 `--add-online-meeting`，布尔更新省略时保留原状态；显式切换全天状态必须同时提供开始与结束值，并按所选状态校验为日期或带时区时间。
+
+- 相关命令：`dws calendar event create`、`dws calendar event update`
+
+#### **OA 审批：模板管理**
+
+OA 审批可以查询可管理的审批模板：支持模板列表与按模板编码查询表单 Schema 与流程配置，为发起审批和表单统计提供前置发现。
+
+- 相关命令：`dws oa approval template list`、`dws oa approval template detail --template-code <code>`
+
+#### **事件订阅：互动卡片回调事件**
+
+事件订阅可以监听互动卡片回调：复用个人事件订阅生命周期与 IM/OA 相同的空对象过滤规则；扁平化 Schema 提供 `payload.body.actionData.context` 内的类型化回答与问题、`payload.body` 内的业务/会话/操作者字段与毫秒时间戳，未知字段保留以向前兼容。
+
+- 相关命令：`dws event consume user_card_action_triggered`
+
+#### **通讯录：邀请与入群申请管理**
+
+通讯录可以管理组织邀请与入群申请：支持邀请开关、邀请审核与信息/列表查询，入群申请列表、批准、拒绝、拉黑与删除，以及部门级入群审核和企业专属账号禁用/启用。
+
+- 相关命令：`dws contact org invite-switch`、`invite-audit`、`invite-info`、`invite-list`、`apply-list`、`apply-approve`、`apply-reject`、`apply-block`、`apply-remove`、`dws contact dept invite-audit`、`dws contact exclusive-account disable|enable`
+
+#### **钉钉云盘：HTML 文件原生读写**
+
+钉盘与文档空间可以像 Markdown 一样管理 HTML 文件：支持创建（字面量、`@file`、stdin、本地文件）、下载读取、整文件覆盖（带前后预览的 `--dry-run`）与字面量或 RE2 局部替换，零匹配不写入。
+
+- 相关命令：`dws html create`、`dws html fetch`、`dws html overwrite`、`dws html patch`
+
+#### **Markdown 文件：创建与覆盖支持主题**
+
+Markdown 文件可以套用主题美化：创建与覆盖新增 `--theme` 参数，保留既有 Front Matter，将所选主题安全写入上传副本。
+
+- 相关命令：`dws markdown create --theme`、`dws markdown overwrite --theme`
+
+#### **聊天消息：密文消息可按策略解密读取**
+
+聊天消息可以解密读取：核心聊天读路径支持策略驱动的 DING + SafeChat（安恒密盾）消息解密，并提供显式诊断入口（需管理员申请）。
+
+- 相关命令：`dws chat crypto decrypt`
+
+#### **HR Brain：人才池保存与成员移动**
+
+HR Brain 可以直接管理人才池：支持创建或更新人才池（名称、描述、自动进出规则、标签），以及按工号批量将员工移入或移出人才池，写入前需确认。
+
+- 相关命令：`dws hrbrain talent-pool save`、`dws hrbrain talent-pool move-members`
+
+### **体验优化**
+
+#### **授权申请与拒绝提示更清晰**
+
+浏览器授权申请现在落到专门的"审批等待页"，轮询并在审批通过后自动跳转，重复申请幂等，回调页统一 `Cache-Control: no-store`；终端拒绝原因按"是否可申请"区分：`cli_not_enabled` 保留申请流程并提示个人数据权限未开通、审批人选择改为"选择审批人"，`user_forbidden`/`user_not_allowed` 统一为"该组织未开启 CLI 数据访问"。
+
+#### **Chat Shortcut 优先发现与对齐**
+
+`dws chat --help` 优先展示精选 Shortcut，完整规范目录仍可发现，重叠的原子命令帮助指向已评审的 Shortcut 所有者；补充兼容别名、创建默认值、消息上下文定位、文本与 Thread 回复、筛选排序及分页控制，严格区分空集合、不完整结果与失败，增加资源分段重试、版本校验和原子落盘。
+
+#### **单可执行文件交付与包体瘦身**
+
+平台运行时负载打包进 `dws` 单一可执行文件，新安装包移除 sidecar 目录树（既有安装保留发现）；构建与运行时提取移除辅助 ps 文件，单二进制包体减小；遥测 SDK 升级到 v0.4.0，完成的命令事件由有界后台进程发送，网络等待不再占用命令执行时间。
+
+#### **运行时请求上下文**
+
+支持打包可选运行时负载，`dws doctor` 报告脱敏后的就绪状态，受支持的业务请求会附带精简上下文元数据。
+
+### **问题优化**
+
+- **AI 表格可靠性修正**：记录查询空尾页正常结束分页、应用模式字段校验失败归为 `validation`/退出码 3、视图更新可持久化单个顶层 or 组、数据源更新可省略 `--source-config` 复用既有配置、并发多 profile 发现相互隔离，Agent 契约与机器输出统一到已评审结果契约。
+- **AI 表格文件导入安全收紧**：上传白名单收紧为精确 OSS Bucket 主机与导入对象路径，拒绝同区域其他 Bucket、区域根域与路径式 URL，上传前阻止共享/保留地址段与特殊 IPv6 目标。
+- **文档 @人写后回读误报修复**：写入含 @人链接的 markdown 不再误报 `doc_write_verification_failed`，回读改为按位置配对，@目标身份无法本地核验时如实声明 `verificationScope="partial"`。
+- **日历邀请回执误报修复**：参与者响应缺用户 ID 或显示名与通讯录名不一致时不再误报 `readback_attendee_missing`，邀请显式报告 `verified=false` 并新增 `acknowledged`/`attendeesAcknowledged` 标记。
+- **群聊消息读取可靠性**：区分正常有界截断与终局分页/投影/富化/下载失败，不完整读取保留部分结果与类型化重试诊断；富文本链接 URL 随标签一并保留，`messageAiSendFlag` 全程保留。
+- **听记权限与导出安全**：`minutes permission add` 与 `minutes +share` 新增 `--member-staff-ids`（保留前导零工号）；导出文本移除签名凭据，区分空行动项、不支持响应与发言人任务终态。
+- **OA 审批与通讯录列表契约**：审批列表 `success` 归一布尔、错误码归一 `errorCode`，兼容省略 `hasMore` 的空尾页；通讯录入群申请声明 write/destructive 安全语义并统一 cursor 分页契约。
+- **登录授权与端点解析修复**：手动 OAuth/设备链接附带运行时上下文且不再追加 `lang`；恢复环境感知的 `mcpdev` 端点，`dws dev mcp` 不再报 `endpoint_not_resolved`；开源普通模式缺 AppKey 元数据时自动补全托管元数据、不改已存凭据。
+- **构建、安装与调用可靠性**：官方六平台默认含 SafeChat 后端并拒绝 stub 二进制，Linux 锁定 glibc 2.17、musl 发行版下载前明确中止；MCP 调用停止隐式 HTTP 重试以防远程写重复，自动翻页取消竞态修复。
+- **安全加固与危险操作门禁**：MCP 调用校验新鲜有界输入 schema、限制端点信任与重定向防止重放；Dlink 快捷目标经 `linkSourceInfo` 解析；合同归档与主体/项目/账号删除须显式 `--yes` 确认。
 
 ## **2026-08-31**
 
@@ -164,9 +320,9 @@ dws drive download --node <dentryUuid> --url-only --format json
 
 - **消息与会话结果可信**
 
-  - 引用回复不再误判：普通群中个人与机器人引用回复照常工作，话题圈目标继续正确阻断（#1210）；
+  - 引用回复不再误判：普通群中个人与机器人引用回复照常工作，话题圈目标继续正确阻断；
   - 消息列表结果与顶层字段对齐，编辑/撤回可直接使用稳定 `messageId`；
-  - Qoder Stream 回复改为类型化文本块并透传错误详情，不再出现「钉钉已送达但本地无文本输出」（#1217）。
+  - Qoder Stream 回复改为类型化文本块并透传错误详情，不再出现「钉钉已送达但本地无文本输出」。
 - **云盘与文档操作稳定**
 
   - 并发下载互不污染：流式下载写入唯一临时文件，断点续传增加跨进程锁，第二个下载方快速失败；
@@ -179,9 +335,9 @@ dws drive download --node <dentryUuid> --url-only --format json
   - 工作流部署状态改报远端实测状态，不再镜像请求参数。
 - **平台与登录可靠**
 
-  - 考勤排班查询：仅日期输入自动展开为全天边界，倒置区间本地即拒绝（#1154）；
-  - 登录后自动清理无法解密的遗留凭证槽位，登录不再卡住（#1172）；Windows Skill 安装不再因 ACL 差异误报失败，失败时完整回滚（#1177）；
-  - 认证与网络类错误统一给出可执行的 `dws doctor` 恢复入口；HRbrain 人才池分页与邮件模板草稿输入修复（#1167）；
+  - 考勤排班查询：仅日期输入自动展开为全天边界，倒置区间本地即拒绝；
+  - 登录后自动清理无法解密的遗留凭证槽位，登录不再卡住；Windows Skill 安装不再因 ACL 差异误报失败，失败时完整回滚；
+  - 认证与网络类错误统一给出可执行的 `dws doctor` 恢复入口；HRbrain 人才池分页与邮件模板草稿输入修复；
   - DING 在机器人凭证无效时快速失败，撤回不再按前缀猜测资源类型；白板更新带本地校验与已提交写入证据。
 
 ## **2026-08-28**
@@ -299,7 +455,7 @@ AI 搜问与通讯录人员搜索统一走审核过的 `person` 数据源，�
 
 #### 误报消除与结果可信
 
-- AI 听记列表/搜索/转写的分页连续性与耗尽证据统一经 `meta.pagination` 发布（#1112）；
+- AI 听记列表/搜索/转写的分页连续性与耗尽证据统一经 `meta.pagination` 发布；
 - 日程空窗查询、待办截止时间更新不再误报失败，日志"最新一篇"查找修复首个续页即失败；
 - 文档导入前先解析默认文档目标；评论表情回应收窄为钉钉官方表情名；命令拼写错误给出最多 3 个相近建议与父级 `--help` 入口。
 

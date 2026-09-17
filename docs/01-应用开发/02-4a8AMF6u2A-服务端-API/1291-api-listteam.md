@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "更多开放 > 视听智能服务 > 获取团队信息"
 doc_id: "yUweyHGITv"
-updated_at: "2026-07-08 14:13:52"
+updated_at: "2026-09-17 09:36:41"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-listteam
 > Path: 应用开发 / 服务端 API / 更多开放 > 视听智能服务 > 获取团队信息
-> Updated: 2026-07-08 14:13:52
+> Updated: 2026-09-17 09:36:41
 
 # 查询团队列表
 
@@ -455,6 +455,7 @@ namespace AlibabaCloud.SDK.Sample
 | valueList | Array | 标签值列表 当前团队配置的标签。 |
 | name | String | 标签值展示信息，当前团队配置的标签。 |
 | code | String | 标签值代码 ，标签对应的代码。 |
+| parentTeamCode | String | 上级团队编码。 |
 | totalCount | Integer | 查询总量。 |
 | nextToken | String | 下一页的查询token，5分钟内有效。 |
 
@@ -475,7 +476,8 @@ Content-Type:application/json
         "name" : "文一路店",
         "code" : "888888"
       } ]
-    } ]
+    } ],
+    "parentTeamCode" : "pacode"
   } ],
   "totalCount" : 15,
   "nextToken" : "5b44e"

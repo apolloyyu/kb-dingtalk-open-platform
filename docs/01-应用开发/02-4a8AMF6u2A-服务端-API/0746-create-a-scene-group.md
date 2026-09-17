@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "即时通信 > 会话管理 > 场景群 > 群管理 > 创建场景群"
 doc_id: "BxFNKyJ1tp"
-updated_at: "2026-06-10 18:24:18"
+updated_at: "2026-09-17 09:36:41"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-a-scene-group
 > Path: 应用开发 / 服务端 API / 即时通信 > 会话管理 > 场景群 > 群管理 > 创建场景群
-> Updated: 2026-06-10 18:24:18
+> Updated: 2026-09-17 09:36:41
 
 # 创建场景群
 
@@ -20,9 +20,7 @@ updated_at: "2026-06-10 18:24:18"
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/im/sceneGroup/create |
 | HTTP Method | POST |
@@ -43,7 +41,7 @@ updated_at: "2026-06-10 18:24:18"
 | icon | String | 否 | 群头像，调用[上传媒体文件](0645-upload-media-files.md)接口上传头像后获取mediaId。 |
 | template\_id | String | 是 | 群模板ID，登录[开发者后台 > 开放能力 > 场景群 > 群模板](https://open-dev.dingtalk.com/fe/im?spm=ding_open_doc.document.0.0.704e5d03QQBnaX#/group/list)查看id。 |
 | owner\_user\_id | String | 是 | 群主userId。 |
-| user\_ids | Array of String | 否 | 群成员userId列表。 |
+| user\_ids | Array of String | 否 | 群成员userId列表，一次性添加群成员userId列表最多100个。 |
 | subadmin\_ids | Array of String | 否 | 群管理员userId列表。 |
 | uuid | String | 否 | 建群去重的业务ID。 |
 | management\_options | Object | 否 | 创建属性。 |

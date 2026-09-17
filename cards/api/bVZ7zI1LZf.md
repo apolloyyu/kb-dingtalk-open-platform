@@ -32,4 +32,4 @@ permissions: qyapi_chat_manage
 - 新成员是否可查看100条历史消息，如果不传值，代表不可查看。 - **1**：可查看 - **0**：不可查看
 
 source_url: https://open.dingtalk.com/document/development/create-common-group-new-version-v2
-updated_at: 2026-06-04 19:09:49
+updated_at: 2026-09-17 09:36:40

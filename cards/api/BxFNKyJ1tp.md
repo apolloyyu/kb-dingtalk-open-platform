@@ -29,6 +29,7 @@ permissions: qyapi_chat_manage
 
 ## Limits
 - 群名称，最长不超过30字符，建议长度在10字符以内。
+- 群成员userId列表，一次性添加群成员userId列表最多100个。
 
 source_url: https://open.dingtalk.com/document/development/create-a-scene-group
-updated_at: 2026-06-10 18:24:18
+updated_at: 2026-09-17 09:36:41

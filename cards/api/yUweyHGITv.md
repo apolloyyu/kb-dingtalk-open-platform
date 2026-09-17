@@ -22,11 +22,11 @@ permissions: Dvi.Sale.Meta.Read
 - none
 
 ## Returns
-- optional: result(Array), code(String), name(String), tagList(Array), valueList(Array), totalCount(Integer), nextToken(String)
+- optional: result(Array), code(String), name(String), tagList(Array), valueList(Array), parentTeamCode(String), totalCount(Integer), nextToken(String)
 
 ## Limits
 - 每页数据数量,最大50，默认10。
 - 下一页的查询token，5分钟内有效。
 
 source_url: https://open.dingtalk.com/document/development/api-listteam
-updated_at: 2026-07-08 14:13:52
+updated_at: 2026-09-17 09:36:41

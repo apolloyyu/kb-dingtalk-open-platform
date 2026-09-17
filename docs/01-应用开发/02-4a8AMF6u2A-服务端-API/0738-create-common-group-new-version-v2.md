@@ -7,26 +7,20 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "即时通信 > 会话管理 > 群管理 > 创建群会话"
 doc_id: "bVZ7zI1LZf"
-updated_at: "2026-06-04 19:09:49"
+updated_at: "2026-09-17 09:36:40"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-common-group-new-version-v2
 > Path: 应用开发 / 服务端 API / 即时通信 > 会话管理 > 群管理 > 创建群会话
-> Updated: 2026-06-04 19:09:49
+> Updated: 2026-09-17 09:36:40
 
 # 创建群会话
 
-调用本接口，创建内部群跟普通群会话，适用于企业需要快速创建群聊的场景。
-
-## 接口调用说明
-
-本接口默认只支持创建内部群，如果需要创建普通群需要找技术支持加白。
+调用本接口，创建内部群会话，适用于企业需要快速创建群聊的场景。
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/im/group/create |
 | HTTP Method | POST |
@@ -47,7 +41,7 @@ updated_at: "2026-06-04 19:09:49"
 | owner | String | 是 | 群主的userId，可通过根据手机号查询用户接口获取userId。 |
 | ownerType | String | 否 | 群主类型。   - **emp**：企业员工 - **ext**：外部联系人 |
 | useridlist | Array of String | 是 | 用户的StaffId。 |
-| conversationTag | Long | 否 | 会话类型标记。默认内部群，普通群创建需要找技术支持加白   - **0**：普通群 - **2**：内部群 |
+| conversationTag | Long | 否 | 会话类型标记：   - **2**：内部群 |
 | extidlist | Array of String | 否 | 外部联系人 |
 | icon | String | 否 | 群头像，需要传递mediaId，可通过[上传媒体文件](0645-upload-media-files.md)接口获取。 |
 | managementOptions | Object | 否 | 创建群其他属性 |
@@ -607,7 +601,7 @@ namespace AlibabaCloud.SDK.Sample
 
 | 名称 | 类型 | 描述 |
 | --- | --- | --- |
-| conversationTag | Long | 群类型：   - **0**：普通群 - **2**：内部群 |
+| conversationTag | Long | 群类型。 |
 | openConversationId | String | 群会话ID。 |
 | chatid | String | 群会话ID，旧参数字段。 |
 

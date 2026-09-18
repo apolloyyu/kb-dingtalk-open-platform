@@ -29,4 +29,4 @@ permissions: not_stated
 - none stated
 
 source_url: https://open.dingtalk.com/document/development/download-the-server-side-sdk
-updated_at: 2026-09-15 09:36:25
+updated_at: 2026-09-18 09:11:25

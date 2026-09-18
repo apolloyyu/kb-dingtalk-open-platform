@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "行业与生态 > 生态开放 > 金智CRM > 概述"
 doc_id: "SrnbpYnIB0"
-updated_at: "2026-07-20 09:25:34"
+updated_at: "2026-09-18 09:11:29"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jinzhi-crm-interface-call-description
 > Path: 应用开发 / 服务端 API / 行业与生态 > 生态开放 > 金智CRM > 概述
-> Updated: 2026-07-20 09:25:34
+> Updated: 2026-09-18 09:11:29
 
 # 概述
 
@@ -60,13 +60,6 @@ updated_at: "2026-07-20 09:25:34"
 | [合同订单](1057-add-or-edit-contract-orders.md) | 新增或编辑合同订单。 | 新版 |
 | [发货单](1058-add-or-edit-invoices.md) | 新增或编辑发货单。 | 新版 |
 | [销售换货单](1059-add-or-edit-a-sales-order.md) | 新增或编辑销售换货单。 | 新版 |
-
-#### **销售**
-
-| **API** | **API说明** | **API版本** |
-| --- | --- | --- |
-| [销售机会](https://open.dingtalk.com/document/development/add-or-edit-opportunities) | 新增或编辑销售机会。 | 新版 |
-| [报价记录](https://open.dingtalk.com/document/development/add-or-edit-quotation-records) | 新增或编辑报价记录。 | 新版 |
 
 #### **采购**
 

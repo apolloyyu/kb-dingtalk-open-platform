@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "专属钉钉 > 概述"
 doc_id: "chN58Xrk2p"
-updated_at: "2026-07-14 09:09:58"
+updated_at: "2026-09-18 09:11:26"
 ---
 
 > Source: https://open.dingtalk.com/document/development/dedicated-dingtalk-overview
 > Path: 应用开发 / 服务端 API / 专属钉钉 > 概述
-> Updated: 2026-07-14 09:09:58
+> Updated: 2026-09-18 09:11:26
 
 # 概述
 
@@ -162,7 +162,6 @@ updated_at: "2026-07-14 09:09:58"
 | [获取企业专属钉钉权益列表](0855-api-queryexclusivebenefits.md) | 获取企业专属钉钉的权益列表。 | 新版 |
 | [更新发送文件的检测状态](0856-update-the-detection-status-of-a-sent-file.md) | 更改发送文件的检测状态。 | 新版 |
 | [企业员工专属安全管控功能命中查询](0857-api-checkcontrolhitstatus.md) | 查询企业员工专属安全管控功能命中情况。 | 新版 |
-| [获取视频会议详情](https://open.dingtalk.com/document/development/get-video-meeting-details) | 获取视频会议详情，包含参会人员列表和各个参会人员的参会时长。 | 新版 |
 
 ### 回调事件列表
 

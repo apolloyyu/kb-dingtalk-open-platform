@@ -12,10 +12,10 @@
     "maintenance": "ops/INGEST.md"
   },
   "snapshot": {
-    "crawl_time": "2026-09-20T07:03:44+08:00",
-    "documents": 3610,
-    "applied_at": "2026-09-20",
-    "diff_report": "ops/changes/2026-09-20-dingtalk-open-platform-docs-20260920-0700.md"
+    "crawl_time": "2026-09-21T07:05:08+08:00",
+    "documents": 3613,
+    "applied_at": "2026-09-21",
+    "diff_report": "ops/changes/2026-09-21-dingtalk-open-platform-docs-20260921-0701.md"
   },
   "layers": {
     "raw": [

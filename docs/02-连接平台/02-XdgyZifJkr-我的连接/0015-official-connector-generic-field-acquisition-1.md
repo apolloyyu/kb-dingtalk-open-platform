@@ -51,7 +51,7 @@ updated_at: "2026-07-24 09:20:47"
 
 ## **文件Id（mediaId）**
 
-获取方式参见[上传媒体文件](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0645-upload-media-files.md)。
+获取方式参见[上传媒体文件](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0648-upload-media-files.md)。
 
 ### **SDK方式**
 
@@ -224,7 +224,7 @@ public static void main(String[] args) throws ApiException {
 
 ## **审批钉盘空间ID（spaceId）**
 
-获取方式参见[获取审批钉盘空间信息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0501-obtains-the-information-about-approval-nail-disk.md)接口。
+获取方式参见[获取审批钉盘空间信息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0504-obtains-the-information-about-approval-nail-disk.md)接口。
 
 **Maven地址：**
 

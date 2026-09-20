@@ -27,7 +27,7 @@ updated_at: "2026-09-10 14:33:04"
 
   - [创建SSO企业账号](0103-create-an-sso-account.md)
   - [创建钉钉自建企业账号](0105-create-dingtalk-user-created-dedicated-account.md)
-  - [邀请其他组织企业账号加入](0114-invite-other-organization-specific-accounts-to-join.md)
+  - [邀请其他组织企业账号加入](0117-invite-other-organization-specific-accounts-to-join.md)
 
 ## **请求**
 
@@ -42,7 +42,7 @@ updated_at: "2026-09-10 14:33:04"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | BE3xxxx | 调用该接口的应用凭证，通过[获取企业内部应用的access\_token](1443-obtain-orgapp-token.md)接口获取。 |
+| access\_token | String | 是 | BE3xxxx | 调用该接口的应用凭证，通过[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)接口获取。 |
 
 ### **请求体**
 

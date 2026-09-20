@@ -45,7 +45,7 @@ SSO类型的企业账号，目前只支持通过接口管理。如果是自建�
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| userId | String | 是 | 企业账号的userid，可通过以下四种方式获得：   - [根据手机号查询企业账号用户](0116-obtain-the-userid-of-your-mobile-phone-number.md) - [创建SSO企业账号](0103-create-an-sso-account.md) - [创建钉钉自建企业账号](0105-create-dingtalk-user-created-dedicated-account.md) - [邀请其他组织企业账号加入](0114-invite-other-organization-specific-accounts-to-join.md) |
+| userId | String | 是 | 企业账号的userid，可通过以下四种方式获得：   - [根据手机号查询企业账号用户](0119-obtain-the-userid-of-your-mobile-phone-number.md) - [创建SSO企业账号](0103-create-an-sso-account.md) - [创建钉钉自建企业账号](0105-create-dingtalk-user-created-dedicated-account.md) - [邀请其他组织企业账号加入](0117-invite-other-organization-specific-accounts-to-join.md) |
 | reason | String | 否 | 企业账号停用原因。 |
 
 ### 请求示例

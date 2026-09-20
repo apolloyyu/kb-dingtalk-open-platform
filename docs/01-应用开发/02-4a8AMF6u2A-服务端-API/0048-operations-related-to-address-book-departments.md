@@ -117,7 +117,7 @@ updated_at: "2026-09-15 09:36:15"
 
 1. 获取应用凭证信息，获取应用 Client ID 和 Client Secret。
 2. 申请接口权限，申请通讯录管理相关接口权限。
-3. 获取应用访问凭证[获取企业内部应用的access\_token](1443-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
+3. 获取应用访问凭证[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
 4. 调用通讯录相关API：
 
    1. 调用服务端API-[创建部门](0076-address-book-creation-department-established-department.md)接口，实现创建部门，获取部门`dept_id`**。**
@@ -155,7 +155,7 @@ updated_at: "2026-09-15 09:36:15"
 
 ### **步骤三：获取访问凭证（access\_token）**
 
-根据步骤一中的 `Client ID` 和 `Client Secret`，调用[获取企业内部应用的access\_token](1443-obtain-orgapp-token.md)接口，获取应用访问凭证。
+根据步骤一中的 `Client ID` 和 `Client Secret`，调用[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)接口，获取应用访问凭证。
 
 ```
 public void getAccessToken() throws ApiException {

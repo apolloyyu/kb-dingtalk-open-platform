@@ -148,80 +148,80 @@ updated_at: "2026-07-02 10:35:39"
 | [停用企业账号](0109-disable-an-exclusive-account.md) | 停用指定的企业账号。 | 新版 |
 | [强制登出企业账号](0110-force-logout-from-dedicated-account.md) | 强制登出指定的企业账号。 | 新版 |
 | [查询企业账号状态](0111-query-dedicated-account-status-1.md) | 查询某企业账号的启用状态。 | 新版 |
-| [查询企业账号拥有的组织](0112-you-can-call-this-operation-to-query-the-organization-that.md) | 查询企业账号在哪些企业下拥有创建者身份，并获取这些企业信息。 | 新版 |
-| [授权企业账号可加入多组织](0113-authorize-a-dedicated-account-to-join-multiple-organizations.md) | 授权企业账号可以加入多个组织。 | 新版 |
-| [邀请其他组织企业账号加入](0114-invite-other-organization-specific-accounts-to-join.md) | 加入其他组织企业账号进入本组织。 | 旧版 |
-| [获取部门企业账号用户详情](0115-queries-account-details.md) | 获取指定部门中的用户详细信息。 | 旧版 |
-| [根据手机号查询企业账号用户](0116-obtain-the-userid-of-your-mobile-phone-number.md) | 根据手机号获取企业账号用户的userId。 | 旧版 |
-| [企业账号转交主管理员（创建者）](0117-transfer-exclusive-account-to-main-administrator-creator.md) | 将本组织内某企业账号有所有权的组织，转交给另一企业账号。 | 新版 |
-| [根据迁移后的dingId查询原dingId](0118-query-the-original-dingid-based-on-the-dingid-after-migration.md) | 根据迁移后的dingId查询原dingId。 | 新版 |
-| [根据迁移后的unionId查询原unionId](0119-query-the-original-union-id-based-on-the-union-id.md) | 根据迁移后的unionId查询原unionId。 | 新版 |
-| [根据原dingId查询迁移后的dingId](0120-query-the-new-dingid-based-on-the-original-dingid.md) | 根据原dingId查询迁移后的dingId。 | 新版 |
-| [根据原unionId查询迁移后的unionId](0121-the-union-id-that-you-want-to-query-you-can.md) | 根据原unionId查询迁移后的unionId。 | 新版 |
-| [授权其他组织查看本组织的企业账号信息](0122-api-orgaccountmobilevisibleinotherorg.md) | 其他组织查看本组织的企业账号信息的具体字段。 | 新版 |
+| [查询企业账号拥有的组织](0115-you-can-call-this-operation-to-query-the-organization-that.md) | 查询企业账号在哪些企业下拥有创建者身份，并获取这些企业信息。 | 新版 |
+| [授权企业账号可加入多组织](0116-authorize-a-dedicated-account-to-join-multiple-organizations.md) | 授权企业账号可以加入多个组织。 | 新版 |
+| [邀请其他组织企业账号加入](0117-invite-other-organization-specific-accounts-to-join.md) | 加入其他组织企业账号进入本组织。 | 旧版 |
+| [获取部门企业账号用户详情](0118-queries-account-details.md) | 获取指定部门中的用户详细信息。 | 旧版 |
+| [根据手机号查询企业账号用户](0119-obtain-the-userid-of-your-mobile-phone-number.md) | 根据手机号获取企业账号用户的userId。 | 旧版 |
+| [企业账号转交主管理员（创建者）](0120-transfer-exclusive-account-to-main-administrator-creator.md) | 将本组织内某企业账号有所有权的组织，转交给另一企业账号。 | 新版 |
+| [根据迁移后的dingId查询原dingId](0121-query-the-original-dingid-based-on-the-dingid-after-migration.md) | 根据迁移后的dingId查询原dingId。 | 新版 |
+| [根据迁移后的unionId查询原unionId](0122-query-the-original-union-id-based-on-the-union-id.md) | 根据迁移后的unionId查询原unionId。 | 新版 |
+| [根据原dingId查询迁移后的dingId](0123-query-the-new-dingid-based-on-the-original-dingid.md) | 根据原dingId查询迁移后的dingId。 | 新版 |
+| [根据原unionId查询迁移后的unionId](0124-the-union-id-that-you-want-to-query-you-can.md) | 根据原unionId查询迁移后的unionId。 | 新版 |
+| [授权其他组织查看本组织的企业账号信息](0125-api-orgaccountmobilevisibleinotherorg.md) | 其他组织查看本组织的企业账号信息的具体字段。 | 新版 |
 
 #### **企业管理**
 
 | API | 说明 | API 版本 |
 | --- | --- | --- |
-| [获取企业认证信息](0123-obtain-enterprise-authentication-information.md) | 获取企业认证信息。 | 新版 |
-| [获取企业邀请信息](0124-obtain-invitation-information.md) | 获取企业的邀请信息。 | 新版 |
-| [获取企业最新钉钉指数信息](0125-queries-the-latest-dingtalk-index-information.md) | 获取企业最新钉钉指数信息。 | 新版 |
-| [查询管理员是否有应用管理权限](0126-check-whether-the-administrator-has-application-management-permissions.md) | 查询企业管理员是否有应用的管理权限。 | 新版 |
+| [获取企业认证信息](0126-obtain-enterprise-authentication-information.md) | 获取企业认证信息。 | 新版 |
+| [获取企业邀请信息](0127-obtain-invitation-information.md) | 获取企业的邀请信息。 | 新版 |
+| [获取企业最新钉钉指数信息](0128-queries-the-latest-dingtalk-index-information.md) | 获取企业最新钉钉指数信息。 | 新版 |
+| [查询管理员是否有应用管理权限](0129-check-whether-the-administrator-has-application-management-permissions.md) | 查询企业管理员是否有应用的管理权限。 | 新版 |
 
 #### **行业通讯录**
 
 | API | 说明 | API 版本 |
 | --- | --- | --- |
-| [获取部门详情](0128-industry-address-book-api-for-obtaining-department-information.md) | 根据部门ID获取部门详情。 | 旧版 |
-| [获取部门下人员列表](0129-obtains-the-list-of-people-under-a-department.md) | 获取部门下的人员列表信息。 | 旧版 |
-| [获取部门列表](0127-obtains-a-list-of-industry-departments.md) | 根据部门ID获取行业通讯录部门列表。 | 旧版 |
-| [获取部门用户详情](0130-queries-department-user-details.md) | 获取部门用户详情。 | 旧版 |
-| [获取企业信息](0131-obtain-enterprise-information.md) | 获取行业通讯录的企业信息。 | 旧版 |
+| [获取部门详情](0131-industry-address-book-api-for-obtaining-department-information.md) | 根据部门ID获取部门详情。 | 旧版 |
+| [获取部门下人员列表](0132-obtains-the-list-of-people-under-a-department.md) | 获取部门下的人员列表信息。 | 旧版 |
+| [获取部门列表](0130-obtains-a-list-of-industry-departments.md) | 根据部门ID获取行业通讯录部门列表。 | 旧版 |
+| [获取部门用户详情](0133-queries-department-user-details.md) | 获取部门用户详情。 | 旧版 |
+| [获取企业信息](0134-obtain-enterprise-information.md) | 获取行业通讯录的企业信息。 | 旧版 |
 
 #### **通讯录ID转译**
 
 | API | 说明 | API 版本 |
 | --- | --- | --- |
-| [异步转译通讯录ID](0132-asynchronous-address-book-file-content-translation.md) | 起异步通讯录ID内容转译，替换产品方案商通讯录权限范围内的用户ID和部门ID。 | 新版 |
-| [获取异步转译任务结果](0133-obtains-the-results-of-an-asynchronous-translation-task.md) | 获取查询已经提交过的转译任务结果。 | 新版 |
+| [异步转译通讯录ID](0135-asynchronous-address-book-file-content-translation.md) | 起异步通讯录ID内容转译，替换产品方案商通讯录权限范围内的用户ID和部门ID。 | 新版 |
+| [获取异步转译任务结果](0136-obtains-the-results-of-an-asynchronous-translation-task.md) | 获取查询已经提交过的转译任务结果。 | 新版 |
 
 #### **通讯录可见性管理**
 
 | API | 说明 | API 版本 |
 | --- | --- | --- |
-| [获取通讯录隐藏设置](0135-obtains-the-hide-settings-of-the-address-book.md) | 批量获取通讯录隐藏的设置列表。 | 新版 |
-| [删除通讯录隐藏设置](0136-delete-hide-settings.md) | 删除通讯录隐藏设置。 | 新版 |
-| [新增或更新通讯录隐藏设置](0138-update-address-book-hide-settings.md) | 新增或更新通讯录隐藏设置。 | 新版 |
-| [设置部门可见性优先级](0137-set-address-book-visibility-sub-department-settings-to-take-precedence.md) | 设置通讯录部门可见性优先级。 | 新版 |
-| [新增或修改限制查看通讯录设置](0139-add-or-modify-visibility-settings-for-address-book-restrictions.md) | 新增或修改限制查看通讯录设置。 | 新版 |
-| [获取限制查看通讯录设置列表](0140-gets-a-list-of-address-book-limit-visibility-settings.md) | 获取限制查看通讯录的设置列表。 | 新版 |
-| [删除限制查看通讯录设置](0141-delete-visible-restrictions.md) | 删除限制查看通讯录设置 | 新版 |
+| [获取通讯录隐藏设置](0138-obtains-the-hide-settings-of-the-address-book.md) | 批量获取通讯录隐藏的设置列表。 | 新版 |
+| [删除通讯录隐藏设置](0139-delete-hide-settings.md) | 删除通讯录隐藏设置。 | 新版 |
+| [新增或更新通讯录隐藏设置](0141-update-address-book-hide-settings.md) | 新增或更新通讯录隐藏设置。 | 新版 |
+| [设置部门可见性优先级](0140-set-address-book-visibility-sub-department-settings-to-take-precedence.md) | 设置通讯录部门可见性优先级。 | 新版 |
+| [新增或修改限制查看通讯录设置](0142-add-or-modify-visibility-settings-for-address-book-restrictions.md) | 新增或修改限制查看通讯录设置。 | 新版 |
+| [获取限制查看通讯录设置列表](0143-gets-a-list-of-address-book-limit-visibility-settings.md) | 获取限制查看通讯录的设置列表。 | 新版 |
+| [删除限制查看通讯录设置](0144-delete-visible-restrictions.md) | 删除限制查看通讯录设置 | 新版 |
 
 #### **上下游组织**
 
 | API | 说明 | API 版本 |
 | --- | --- | --- |
-| [创建上下游组织](0143-create-a-cooperation-space.md) | 创建上下游组织。 | 新版 |
-| [解除关联组织](0144-disassociate-upstream-and-downstream-organizations.md) | 解除关联组织关系。 | 新版 |
-| [获取上下游组织的邀请信息](0145-obtain-the-invitation-information-of-a-cooperation-space.md) | 获取上下游组织的邀请链接。 | 新版 |
-| [批量通过伙伴组织的加入申请](0146-apply-for-batch-addition-through-upstream-and-downstream-organizations.md) | 批量通过伙伴组织加入上下游组织申请。 | 新版 |
-| [更新伙伴组织在上下游组织内的属性信息](0147-update-properties-of-branches-in-alibaba-group-1.md) | 更新伙伴组织在上下游组织内内的属性信息。 | 新版 |
-| [设置伙伴组织在上下游组织内的可见范围](0148-set-the-visible-range-of-the-branch-in-the-group-1.md) | 设置伙伴组织在上下游组织内的可见范围。 | 新版 |
-| [获取企业已经加入的或申请加入中的上下游组织的信息](0149-obtains-information-about-the-workspaces-that-the-enterprise-has-joined.md) | 获取企业已经加入的上下游组织信息或获取企业已经加入的上下游组织信息。 | 新版 |
-| [获取已加入或正在申请加入上下游组织的组织和个人信息](0150-obtains-the-information-about-how-to-join-or-apply-to.md) | 通过上下游组织组织ID获取加入或申请加入上下游组织的组织和个人信息。 | 新版 |
+| [创建上下游组织](0146-create-a-cooperation-space.md) | 创建上下游组织。 | 新版 |
+| [解除关联组织](0147-disassociate-upstream-and-downstream-organizations.md) | 解除关联组织关系。 | 新版 |
+| [获取上下游组织的邀请信息](0148-obtain-the-invitation-information-of-a-cooperation-space.md) | 获取上下游组织的邀请链接。 | 新版 |
+| [批量通过伙伴组织的加入申请](0149-apply-for-batch-addition-through-upstream-and-downstream-organizations.md) | 批量通过伙伴组织加入上下游组织申请。 | 新版 |
+| [更新伙伴组织在上下游组织内的属性信息](0150-update-properties-of-branches-in-alibaba-group-1.md) | 更新伙伴组织在上下游组织内内的属性信息。 | 新版 |
+| [设置伙伴组织在上下游组织内的可见范围](0151-set-the-visible-range-of-the-branch-in-the-group-1.md) | 设置伙伴组织在上下游组织内的可见范围。 | 新版 |
+| [获取企业已经加入的或申请加入中的上下游组织的信息](0152-obtains-information-about-the-workspaces-that-the-enterprise-has-joined.md) | 获取企业已经加入的上下游组织信息或获取企业已经加入的上下游组织信息。 | 新版 |
+| [获取已加入或正在申请加入上下游组织的组织和个人信息](0153-obtains-the-information-about-how-to-join-or-apply-to.md) | 通过上下游组织组织ID获取加入或申请加入上下游组织的组织和个人信息。 | 新版 |
 
 #### 上下级组织
 
 | API | 说明 | API 版本 |
 | --- | --- | --- |
-| [解除关联组织](0152-disassociate-an-organization.md) | 解除关联组织关系。 | 新版 |
-| [获取主干组织列表](0153-obtain-backbone-organization-list.md) | 获取主干组织列表。 | 新版 |
-| [获取分支组织列表](0154-obtains-the-branch-organization-list.md) | 获取分支组织列表。 | 新版 |
-| [批量通过伙伴组织的加入申请](0155-batch-through-the-application-of-partner-organizations-to-join-contact.md) | 批量通过分支组织加入主干组织申请。 | 新版 |
-| [获取上下级组织分支授权的数据](0156-data-authorized-by-a-branch-of-an-associated-organization.md) | 获取上下级组织分支授权的数据。 | 新版 |
-| [设置分支组织在主干组织内的可见范围](0157-sets-the-visible-range-of-branch-organizations-within-the-group.md) | 设置分支组织在主干组织内的可见范围。 | 新版 |
-| [更新分支组织在主干组织内的属性信息](0158-updates-the-property-information-of-a-branch-organization-in-a.md) | 更新分支组织在主干组织内的属性信息。 | 新版 |
+| [解除关联组织](0155-disassociate-an-organization.md) | 解除关联组织关系。 | 新版 |
+| [获取主干组织列表](0156-obtain-backbone-organization-list.md) | 获取主干组织列表。 | 新版 |
+| [获取分支组织列表](0157-obtains-the-branch-organization-list.md) | 获取分支组织列表。 | 新版 |
+| [批量通过伙伴组织的加入申请](0158-batch-through-the-application-of-partner-organizations-to-join-contact.md) | 批量通过分支组织加入主干组织申请。 | 新版 |
+| [获取上下级组织分支授权的数据](0159-data-authorized-by-a-branch-of-an-associated-organization.md) | 获取上下级组织分支授权的数据。 | 新版 |
+| [设置分支组织在主干组织内的可见范围](0160-sets-the-visible-range-of-branch-organizations-within-the-group.md) | 设置分支组织在主干组织内的可见范围。 | 新版 |
+| [更新分支组织在主干组织内的属性信息](0161-updates-the-property-information-of-a-branch-organization-in-a.md) | 更新分支组织在主干组织内的属性信息。 | 新版 |
 
 ### 回调事件列表
 

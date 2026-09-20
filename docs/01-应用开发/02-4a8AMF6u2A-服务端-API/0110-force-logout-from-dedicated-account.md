@@ -47,7 +47,7 @@ updated_at: "2026-06-01 15:50:16"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| userId | String | 是 | 企业账号的userid，可通过以下四种方式获得：   - [根据手机号查询企业账号用户](0116-obtain-the-userid-of-your-mobile-phone-number.md) - [创建SSO企业账号](0103-create-an-sso-account.md) - [创建钉钉自建企业账号](0105-create-dingtalk-user-created-dedicated-account.md) - [邀请其他组织企业账号加入](0114-invite-other-organization-specific-accounts-to-join.md) |
+| userId | String | 是 | 企业账号的userid，可通过以下四种方式获得：   - [根据手机号查询企业账号用户](0119-obtain-the-userid-of-your-mobile-phone-number.md) - [创建SSO企业账号](0103-create-an-sso-account.md) - [创建钉钉自建企业账号](0105-create-dingtalk-user-created-dedicated-account.md) - [邀请其他组织企业账号加入](0117-invite-other-organization-specific-accounts-to-join.md) |
 | reason | String | 否 | 企业账号强制登出的原因(显示在钉钉管理后台审计日志) |
 | reasonI18nForEmployee | Map<String, String> | 否 | - 企业账号强制登出的原因(显示给员工查看) - 例子：{"zh\_CN":"登出原因","en\_US":"Reason for logging out"} - 支持的语言参考钉钉客户端当前的语言。例如："zh\_CN", "zh\_HK", "zh\_TW", "en\_US", "ja\_JP","vi\_VN", "fr\_FR", "ru\_RU", "ko\_KR", "es\_LA","tr\_TR", "pt\_BR", "ms\_MY", "id\_ID", "th\_TH" |
 

@@ -37,25 +37,25 @@ updated_at: "2025-09-10 19:27:25"
 
 | API | 说明 | 新版规范（新版服务端API） | 旧版规范（服务端API） |
 | --- | --- | --- | --- |
-| 创建企业账号用户 | 创建企业账号新用户。 | - | [创建企业账号用户](https://open.dingtalk.com/document/orgapp/create-dedicated-accounts)  **[!NOTE]**  文档已迁移至历史文档目录下。   - 如果未使用本接口，推荐根据账号类型选择使用[创建SSO企业账号](0103-create-an-sso-account.md)或者[创建钉钉自建企业账号](0105-create-dingtalk-user-created-dedicated-account.md)或者[邀请其他组织企业账号加入](0114-invite-other-organization-specific-accounts-to-join.md)接口。 - 如果已使用本接口，建议您根据自身实际情况评估是否切换至推荐接口。 |
+| 创建企业账号用户 | 创建企业账号新用户。 | - | [创建企业账号用户](https://open.dingtalk.com/document/orgapp/create-dedicated-accounts)  **[!NOTE]**  文档已迁移至历史文档目录下。   - 如果未使用本接口，推荐根据账号类型选择使用[创建SSO企业账号](0103-create-an-sso-account.md)或者[创建钉钉自建企业账号](0105-create-dingtalk-user-created-dedicated-account.md)或者[邀请其他组织企业账号加入](0117-invite-other-organization-specific-accounts-to-join.md)接口。 - 如果已使用本接口，建议您根据自身实际情况评估是否切换至推荐接口。 |
 | 创建SSO企业账号 | 创建SSO企业账号新用户。 | - | [创建SSO企业账号](0103-create-an-sso-account.md) |
 | 创建钉钉自建企业账号 | 创建钉钉自建企业账号新用户。 | - | [创建钉钉自建企业账号](0105-create-dingtalk-user-created-dedicated-account.md) |
-| 邀请其他组织企业账号加入 | 邀请其他组织企业账号加入。 | - | [邀请其他组织企业账号加入](0114-invite-other-organization-specific-accounts-to-join.md) |
+| 邀请其他组织企业账号加入 | 邀请其他组织企业账号加入。 | - | [邀请其他组织企业账号加入](0117-invite-other-organization-specific-accounts-to-join.md) |
 | 更新企业账号用户信息 | 更新指定的企业账号用户信息。 | - | [更新企业账号用户信息](0106-update-dedicated-accounts-information.md) |
 | 查询企业账号用户详情 | 获取指定企业账号用户的详细信息。 | - | [查询企业账号用户详情](0107-queries-the-details-of-a-dedicated-account.md) |
-| 获取部门企业账号用户详情 | 获取指定部门中的用户详细信息。 | - | [获取部门企业账号用户详情](0115-queries-account-details.md) |
-| 根据手机号查询企业账号用户 | 根据手机号获取企业账号用户的userId。 | - | [根据手机号查询企业账号用户](0116-obtain-the-userid-of-your-mobile-phone-number.md) |
+| 获取部门企业账号用户详情 | 获取指定部门中的用户详细信息。 | - | [获取部门企业账号用户详情](0118-queries-account-details.md) |
+| 根据手机号查询企业账号用户 | 根据手机号获取企业账号用户的userId。 | - | [根据手机号查询企业账号用户](0119-obtain-the-userid-of-your-mobile-phone-number.md) |
 | 启用企业账号 | 启用指定企业账号。 | [启用企业这账号](0108-enable-a-dedicated-account.md) | - |
 | 停用企业账号 | 停用指定的企业账号。 | [停用企业账号](0109-disable-an-exclusive-account.md) | - |
 | 强制登出企业账号 | 强制登出指定的企业账号。 | [强制登出企业账号](0110-force-logout-from-dedicated-account.md) | - |
 | 查询企业账号状态 | 查询某企业账号的启用状态。 | [查询企业账号状态](0111-query-dedicated-account-status-1.md) | - |
-| 授权企业账号可加入多组织 | 授权企业账号可以加入多个组织。 | [授权企业账号可加入多组织](0113-authorize-a-dedicated-account-to-join-multiple-organizations.md) | - |
-| 查询企业账号拥有的组织 | 查询企业账号在哪些企业下拥有创建者身份，并获取这些企业信息。 | [查询企业账号拥有的组织](0112-you-can-call-this-operation-to-query-the-organization-that.md) | - |
-| 企业账号转交主管理员（创建者） | 将本组织内某企业账号有所有权的组织，转交给另一企业账号，如果接收的账号不在该组织内则自动加入。 | [企业账号转交主管理员（创建者）](0117-transfer-exclusive-account-to-main-administrator-creator.md) | - |
-| 根据迁移后的dingId查询原dingId | 根据迁移后的dingId查询原dingId。 | [根据迁移后的dingId查询原dingId](0118-query-the-original-dingid-based-on-the-dingid-after-migration.md) | - |
-| 根据迁移后的unionId查询原unionId | 根据迁移后的unionId查询原unionId。 | [根据迁移后的unionId查询原unionId](https://open.dingtalk.com/document/orgapp/query-the-original-union-id-based-on-the-union-id)[根据迁移后的unionId查询原unionId](0119-query-the-original-union-id-based-on-the-union-id.md) | - |
-| 根据原dingId查询迁移后的dingId | 根据原dingId查询迁移后的dingId。 | [根据原dingId查询迁移后的dingId](0120-query-the-new-dingid-based-on-the-original-dingid.md) | - |
-| 根据原unionId查询迁移后的unionId | 根据原unionId查询迁移后的unionId。 | [根据原unionId查询迁移后的unionId](0121-the-union-id-that-you-want-to-query-you-can.md) | - |
+| 授权企业账号可加入多组织 | 授权企业账号可以加入多个组织。 | [授权企业账号可加入多组织](0116-authorize-a-dedicated-account-to-join-multiple-organizations.md) | - |
+| 查询企业账号拥有的组织 | 查询企业账号在哪些企业下拥有创建者身份，并获取这些企业信息。 | [查询企业账号拥有的组织](0115-you-can-call-this-operation-to-query-the-organization-that.md) | - |
+| 企业账号转交主管理员（创建者） | 将本组织内某企业账号有所有权的组织，转交给另一企业账号，如果接收的账号不在该组织内则自动加入。 | [企业账号转交主管理员（创建者）](0120-transfer-exclusive-account-to-main-administrator-creator.md) | - |
+| 根据迁移后的dingId查询原dingId | 根据迁移后的dingId查询原dingId。 | [根据迁移后的dingId查询原dingId](0121-query-the-original-dingid-based-on-the-dingid-after-migration.md) | - |
+| 根据迁移后的unionId查询原unionId | 根据迁移后的unionId查询原unionId。 | [根据迁移后的unionId查询原unionId](https://open.dingtalk.com/document/orgapp/query-the-original-union-id-based-on-the-union-id)[根据迁移后的unionId查询原unionId](0122-query-the-original-union-id-based-on-the-union-id.md) | - |
+| 根据原dingId查询迁移后的dingId | 根据原dingId查询迁移后的dingId。 | [根据原dingId查询迁移后的dingId](0123-query-the-new-dingid-based-on-the-original-dingid.md) | - |
+| 根据原unionId查询迁移后的unionId | 根据原unionId查询迁移后的unionId。 | [根据原unionId查询迁移后的unionId](0124-the-union-id-that-you-want-to-query-you-can.md) | - |
 
 ## 名词解释
 

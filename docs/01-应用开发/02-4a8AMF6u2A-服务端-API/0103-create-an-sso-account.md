@@ -31,7 +31,7 @@ updated_at: "2026-09-10 14:33:08"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | BE3xxxx | 调用该接口的应用凭证，通过[获取企业内部应用的access\_token](1443-obtain-orgapp-token.md)接口获取。 |
+| access\_token | String | 是 | BE3xxxx | 调用该接口的应用凭证，通过[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)接口获取。 |
 
 ### **请求体**
 
@@ -61,7 +61,7 @@ updated_at: "2026-09-10 14:33:08"
 | hired\_date | Number | 否 | 1597573616828 | 入职时间，Unix时间戳，单位毫秒。 |
 | manager\_userid | String | 否 | 001 | 直属主管的userId。 |
 | exclusive\_mobile | String | 否 | +86-13412341234 | 企业账号手机号。  **[!NOTE]**  仅适用于企业账号。 |
-| avatarMediaId | String | 否 | @lALPDfmVUw19YdrNA-jNA-g | 创建本组织企业账号时可指定头像MediaId，只支持jpg/png。  可调用[上传媒体文件](0645-upload-media-files.md)接口获取。  **[!NOTE]**  仅适用于企业账号。 |
+| avatarMediaId | String | 否 | @lALPDfmVUw19YdrNA-jNA-g | 创建本组织企业账号时可指定头像MediaId，只支持jpg/png。  可调用[上传媒体文件](0648-upload-media-files.md)接口获取。  **[!NOTE]**  仅适用于企业账号。 |
 | nickname | String | 否 | 昵称 | 创建本组织企业账号时可指定昵称。  **[!NOTE]**  仅适用于企业账号。 |
 | ext\_attrs | EmpExtAttr[] | false | "ext\_attrs": [{  "code": "emp:xxx",  "value": {  "text": "点击前往钉钉官网",  "url": "https://www.dingtalk.com",  "images": {  "string": ["https://imxxxxxtps-64-64.png"]}}}] | 更新自定义字段列表：   - **key**：自定义字段编码。 - **value**：更新自定义字段值，支持images（自定义字段图片）、text（自定义字段文本）、url（自定义字段链接）。 |
 

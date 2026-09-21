@@ -7,57 +7,41 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "通讯录管理 > 企业账号 > 删除企业账号工作状态"
 doc_id: "VKTVsfFeqA"
-updated_at: "2026-09-20 17:17:18"
+updated_at: "2026-09-21 17:06:38"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-delorgaccuserownness
 > Path: 应用开发 / 服务端 API / 通讯录管理 > 企业账号 > 删除企业账号工作状态
-> Updated: 2026-09-20 17:17:18
+> Updated: 2026-09-21 17:06:38
 
 # 删除企业账号工作状态
 
 调用本接口，根据用户ID、业务标识ID和状态类型，进行删除企业账号工作状态。
 
-## 权限
+## **请求**
 
-要调用此API，需要以下权限之一。
+| **基本信息** | |
+| --- | --- |
+| HTTP URL | https://api.dingtalk.com/v1.0/contact/orgAccounts/ownness |
+| HTTP Method | DELETE |
+| 支持的应用类型 | appType-企业内部应用appType-第三方企业应用 |
+| 权限要求 | permission-Contact.OrgAccountOwnness.Write-企业账号工作状态修改权限 |
 
-| 应用类型 | 是否支持 | 权限 | API Explorer调试 |
-| --- | --- | --- | --- |
-| 企业内部应用 | 支持 | 企业账号工作状态修改权限 | [API Explorer](https://open-dev.dingtalk.com/apiExplorer#/?devType=org&api=contact_1.0%23DelOrgAccUserOwnness) |
-
-## 请求方法
-
-```
-DELETE /v1.0/contact/orgAccounts/ownness?userId=String&ownnessId=Long&ownenssType=Long HTTP/1.1
-Host:api.dingtalk.com
-x-acs-dingtalk-access-token:String
-Content-Type:application/json
-```
-
-## Header参数
+### **请求头**
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证：   - 企业内部应用可调用[获取企业内部应用的accessToken](https://open.dingtalk.com/document/orgapp/obtain-the-access_token-of-an-internal-app)接口获取。 |
+| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，通过以下获取：   - 企业内部应用，调用[获取企业内部应用的accessToken](0032-obtain-the-access-token-of-an-internal-app.md)接口获取。 - 第三方企业应用，调用[获取第三方应用授权企业的accessToken](0033-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口获取。 |
 
-## Query参数
+### **查询参数**
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
 | userId | String | 是 | 员工id。 |
 | ownnessId | Long | 是 | 业务标识ID，同增加时候录入的ownnessId。 |
-| ownenssType | Long | 是 | 状态类型，取值：   - 1：请假中 - 3：出差中 - 4：会议中 - 7：外出中 |
+| ownenssType | Long | 是 | 状态类型，取值：   - **1**：请假中 - **3**：出差中 - **4**：会议中 - **7**：外出中 |
 
-## 返回参数
-
-| 名称 | 类型 | 描述 |
-| --- | --- | --- |
-| result | Boolean | true表示删除成功。 |
-
-## 示例
-
-**请求示例**
+### **请求示例**
 
 HTTP
 
@@ -71,7 +55,6 @@ Content-Type:application/json
 Java
 
 ```
-// This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sample;
 
 import com.aliyun.tea.*;
@@ -79,8 +62,10 @@ import com.aliyun.tea.*;
 public class Sample {
 
     /**
-     * 使用 Token 初始化账号Client
+     * <b>description</b> :
+     * <p>使用 Token 初始化账号Client</p>
      * @return Client
+     * 
      * @throws Exception
      */
     public static com.aliyun.dingtalkcontact_1_0.Client createClient() throws Exception {
@@ -91,7 +76,7 @@ public class Sample {
     }
 
     public static void main(String[] args_) throws Exception {
-        java.util.List<String> args = java.util.Arrays.asList(args_);
+        
         com.aliyun.dingtalkcontact_1_0.Client client = Sample.createClient();
         com.aliyun.dingtalkcontact_1_0.models.DelOrgAccUserOwnnessHeaders delOrgAccUserOwnnessHeaders = new com.aliyun.dingtalkcontact_1_0.models.DelOrgAccUserOwnnessHeaders();
         delOrgAccUserOwnnessHeaders.xAcsDingtalkAccessToken = "<your access token>";
@@ -124,6 +109,7 @@ Python
 # This file is auto-generated, don't edit it. Thanks.
 import os
 import sys
+import json
 
 from typing import List
 
@@ -258,10 +244,12 @@ Sample::main(array_slice($argv, 1));
 Go
 
 ```
-// This file is auto-generated, don't edit it. Thanks.
 package main
 
 import (
+  "encoding/json"
+  "strings"
+  "fmt"
   "os"
   util  "github.com/alibabacloud-go/tea-utils/v2/service"
   dingtalkcontact_1_0  "github.com/alibabacloud-go/dingtalk/contact_1_0"
@@ -269,11 +257,13 @@ import (
   "github.com/alibabacloud-go/tea/tea"
 )
 
-/**
- * 使用 Token 初始化账号Client
- * @return Client
- * @throws Exception
- */
+// Description:
+// 
+// 使用 Token 初始化账号Client
+// 
+// @return Client
+// 
+// @throws Exception
 func CreateClient () (_result *dingtalkcontact_1_0.Client, _err error) {
   config := &openapi.Config{}
   config.Protocol = tea.String("https")
@@ -336,39 +326,40 @@ func main() {
 Node.js
 
 ```
+'use strict';
 // This file is auto-generated, don't edit it
-import Util, * as $Util from '@alicloud/tea-util';
-import dingtalkcontact_1_0, * as $dingtalkcontact_1_0 from '@alicloud/dingtalk/contact_1_0';
-import OpenApi, * as $OpenApi from '@alicloud/openapi-client';
-import * as $tea from '@alicloud/tea-typescript';
+const Util = require('@alicloud/tea-util');
+const dingtalkcontact_1_0 = require('@alicloud/dingtalk/contact_1_0');
+const OpenApi = require('@alicloud/openapi-client');
+const Tea = require('@alicloud/tea-typescript');
 
-export default class Client {
+class Client {
 
   /**
    * 使用 Token 初始化账号Client
    * @return Client
    * @throws Exception
    */
-  static createClient(): dingtalkcontact_1_0 {
-    let config = new $OpenApi.Config({ });
-    config.protocol = "https";
-    config.regionId = "central";
-    return new dingtalkcontact_1_0(config);
+  static createClient() {
+    let config = new OpenApi.Config({ });
+    config.protocol = 'https';
+    config.regionId = 'central';
+    return new dingtalkcontact_1_0.default(config);
   }
 
-  static async main(args: string[]): Promise<void> {
+  static async main(args) {
     let client = Client.createClient();
-    let delOrgAccUserOwnnessHeaders = new $dingtalkcontact_1_0.DelOrgAccUserOwnnessHeaders({ });
-    delOrgAccUserOwnnessHeaders.xAcsDingtalkAccessToken = "<your access token>";
-    let delOrgAccUserOwnnessRequest = new $dingtalkcontact_1_0.DelOrgAccUserOwnnessRequest({
-      userId: "123",
+    let delOrgAccUserOwnnessHeaders = new dingtalkcontact_1_0.DelOrgAccUserOwnnessHeaders({ });
+    delOrgAccUserOwnnessHeaders.xAcsDingtalkAccessToken = '<your access token>';
+    let delOrgAccUserOwnnessRequest = new dingtalkcontact_1_0.DelOrgAccUserOwnnessRequest({
+      userId: '123',
       ownnessId: 123456,
       ownenssType: 3,
     });
     try {
-      await client.delOrgAccUserOwnnessWithOptions(delOrgAccUserOwnnessRequest, delOrgAccUserOwnnessHeaders, new $Util.RuntimeOptions({ }));
+      await client.delOrgAccUserOwnnessWithOptions(delOrgAccUserOwnnessRequest, delOrgAccUserOwnnessHeaders, new Util.RuntimeOptions({ }));
     } catch (err) {
-      if (!Util.empty(err.code) && !Util.empty(err.message)) {
+      if (!Util.default.empty(err.code) && !Util.default.empty(err.message)) {
         // err 中含有 code 和 message 属性，可帮助开发定位问题
       }
 
@@ -377,14 +368,14 @@ export default class Client {
 
 }
 
+exports.Client = Client;
 Client.main(process.argv.slice(2));
 ```
 
 C#
 
 ```
-// This file is auto-generated, don't edit it. Thanks.
-
+using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -399,11 +390,17 @@ namespace AlibabaCloud.SDK.Sample
     public class Sample 
     {
 
-        /**
-         * 使用 Token 初始化账号Client
-         * @return Client
-         * @throws Exception
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用 Token 初始化账号Client</para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// Client
+        /// </returns>
+        /// 
+        /// <term><b>Exception:</b></term>
+        /// Exception
         public static AlibabaCloud.SDK.Dingtalkcontact_1_0.Client CreateClient()
         {
             AlibabaCloud.OpenApiClient.Models.Config config = new AlibabaCloud.OpenApiClient.Models.Config();
@@ -451,7 +448,15 @@ namespace AlibabaCloud.SDK.Sample
 }
 ```
 
-**返回示例**
+## **响应**
+
+### **响应体**
+
+| 名称 | 类型 | 描述 |
+| --- | --- | --- |
+| result | Boolean | true表示删除成功。 |
+
+### **响应体示例**
 
 ```
 HTTP/1.1 200 OK
@@ -462,7 +467,9 @@ Content-Type:application/json
 }
 ```
 
-## 错误码
+### **错误码**
+
+若调用该接口报错，可根据错误信息在[全局错误码](0013-server-api-error-codes-1.md)文档中查找解决方案。
 
 | HttpCode | 错误码 | 错误信息 | 说明 |
 | --- | --- | --- | --- |

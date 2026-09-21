@@ -26,7 +26,9 @@ permissions: not_stated
 - none
 
 ## Limits
-- none stated
+- - **低成本快速接入**：仅需调用2个核心API即可完成对接，开发成本低。
+- - **缓存策略**：`access_token`有效期为2小时，建议在内存或Redis中缓存，过期前5分钟主动刷新。
+- - **异常重试**：网络波动时自动重试，最多3次，间隔递增（1s → 2s → 4s）。
 
 source_url: https://open.dingtalk.com/document/development/attendance-synchronizes-information
-updated_at: 2026-07-02 10:36:14
+updated_at: 2026-09-21 11:23:55

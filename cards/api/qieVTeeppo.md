@@ -5,7 +5,7 @@ completeness: partial
 partial_reason: missing_basic_table,missing_method,missing_request_section,missing_response_section
 archived: false
 method: —
-endpoint: https://oapi.dingtalk.com/topapi/attendance/approve/duration/calculate
+endpoint: https://oapi.dingtalk.com/topapi/attendance/approve/cancel
 api_version: v1-oapi
 app_types: not_stated
 permissions: not_stated
@@ -36,4 +36,4 @@ permissions: not_stated
 - - **自动累加排班**：调用预计算接口，自动返回跨天请假的最大可提交时长，消除人工计算错误。
 
 source_url: https://open.dingtalk.com/document/development/enterprise-s-own-oa-approval-system-synchronized-to-dingtalk-during-holidays
-updated_at: 2026-09-20 09:32:35
+updated_at: 2026-09-21 11:23:53

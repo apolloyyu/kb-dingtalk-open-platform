@@ -7,18 +7,20 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "考勤 > 使用教程 > 企业自有假勤审批同步到钉钉"
 doc_id: "qieVTeeppo"
-updated_at: "2026-09-20 09:32:35"
+updated_at: "2026-09-21 11:23:53"
 ---
 
 > Source: https://open.dingtalk.com/document/development/enterprise-s-own-oa-approval-system-synchronized-to-dingtalk-during-holidays
 > Path: 应用开发 / 服务端 API / 考勤 > 使用教程 > 企业自有假勤审批同步到钉钉
-> Updated: 2026-09-20 09:32:35
+> Updated: 2026-09-21 11:23:53
 
 # 企业自有假勤审批同步到钉钉
 
 本文档介绍企业使用自有OA审批系统如何同步到钉钉的OA审批，支持企业自研系统的加班、出差和请假信息与钉钉考勤模块打通。
 
 ## 概述
+
+本方案提供一套完整的假勤审批数据同步解决方案，通过钉钉开放平台的假勤审批API，实现将企业自有系统中的假勤审批数据自动同步至钉钉。
 
 ### 方案背景
 
@@ -90,6 +92,8 @@ updated_at: "2026-09-20 09:32:35"
 
 ## 实施指南
 
+### **技术架构**
+
 本方案基于钉钉开放平台的考勤相关OpenAPI构建，核心技术组件包括：
 
 - **身份鉴权层**：通过 `Client ID` / `Client Secret` 获取 `access_token`，确保接口调用安全性。
@@ -123,8 +127,8 @@ updated_at: "2026-09-20 09:32:35"
 >
 > 该功能支持企业自研系统的加班、出差和请假信息与钉钉同步。
 
-1. 调用服务端API-[预计算时长](1545-calculate-duration-based-on-attendance-scheduling.md)接口，实现根据考勤系统的排班情况，预计算员工加班、出差及请假的时长信息。
-2. 在企业自有审批系统提交了假勤申请，审批通过后通过该接口通知钉钉考勤，调用服务端API-[通知审批通过](1546-notice-of-approval.md)接口，实现钉钉考勤同步通过。保存自定义审批单ID`approve_id`。
+1. 调用服务端API-[预计算时长](0227-api-calculateduration.md)接口，实现根据考勤系统的排班情况，预计算员工加班、出差及请假的时长信息。
+2. 在企业自有审批系统提交了假勤申请，审批通过后通过该接口通知钉钉考勤，调用服务端API-[通知审批通过](0228-api-processapprovefinish.md)接口，实现钉钉考勤同步通过。保存自定义审批单ID`approve_id`。
 3. 在企业自有审批系统提交了撤销假勤申请，根据自定义审批单ID`approve_id`，调用服务端API-[通知审批撤销](0229-notify-the-attendance-to-modify-the-punch-result-when-the.md)接口，实现钉钉考勤同步撤销。
 
 ## 实施步骤
@@ -176,7 +180,7 @@ public void getAccessToken() throws ApiException {
 
 ### **步骤四：**核心API调用
 
-1. **预计算时长**：调用服务端API-[预计算时长](1545-calculate-duration-based-on-attendance-scheduling.md)接口，实现根据考勤系统的排班情况，预计算员工加班、出差及请假的时长信息。
+1. **预计算时长**：调用服务端API-[预计算时长](0227-api-calculateduration.md)接口，实现根据考勤系统的排班情况，预计算员工加班、出差及请假的时长信息。
 
    > **[!NOTE]**
    >
@@ -186,22 +190,31 @@ public void getAccessToken() throws ApiException {
    > - 情况二，选择请假开始时间是10月15日，结束时间是10月16日，调用[预计算时长](1545-calculate-duration-based-on-attendance-scheduling.md)接口，获取的可提交请假时长最大是12小时。
 
    ```
-   public void durationCalculate() throws ApiException {
-       DingTalkClient client = new DefaultDingTalkClient("https://oapi.dingtalk.com/topapi/attendance/approve/duration/calculate");
-
-       OapiAttendanceApproveDurationCalculateRequest req = new OapiAttendanceApproveDurationCalculateRequest();
-       req.setUserid("01472825524039877041");
-       req.setBizType(2L);
-       req.setFromTime("2022-10-13 09:00");
-       req.setToTime("2022-10-13 18:00");
-       req.setDurationUnit("hour");
-       req.setCalculateModel(1L);
-
-       OapiAttendanceApproveDurationCalculateResponse rsp = client.execute(req, "access_token");
-       System.out.println(rsp.getBody());
+   public CalculateDurationResponseBody durationCalculate(){
+     com.aliyun.teaopenapi.models.Config config = new com.aliyun.teaopenapi.models.Config();
+     config.protocol = "https";
+     config.regionId = "central";
+     try {
+       com.aliyun.dingtalkattendance_1_0.Client client = new  com.aliyun.dingtalkattendance_1_0.Client(config);
+       CalculateDurationHeaders calculateDurationHeaders = new CalculateDurationHeaders();
+       calculateDurationHeaders.xAcsDingtalkAccessToken = "<your access token>";
+       CalculateDurationRequest calculateDurationRequest = new CalculateDurationRequest()
+         .setUserId("01472825524039877041")
+         .setBizType(3L)
+         .setFromTime("2022-10-13 09:00")
+         .setToTime("2022-10-13 18:00")
+         .setDurationUnit("day")
+         .setCalculateModel(1L)
+         .setLeaveCode("e2dsad-34dfa-2vas23da");
+       CalculateDurationResponse calculateDurationResponse = client.calculateDurationWithOptions(calculateDurationRequest, calculateDurationHeaders, new com.aliyun.teautil.models.RuntimeOptions());
+       System.out.println(calculateDurationResponse.getBody());
+       return calculateDurationResponse.getBody();
+     } catch (Exception e) {
+       throw new RuntimeException(e);
+     }
    }
    ```
-2. **通知审批通过**：在企业自有审批系统提交了假勤申请，审批通过后通过该接口通知钉钉考勤，调用服务端API-[通知审批通过](1546-notice-of-approval.md)接口，实现钉钉考勤同步通过。
+2. **通知审批通过**：在企业自有审批系统提交了假勤申请，审批通过后通过该接口通知钉钉考勤，调用服务端API-[通知审批通过](0228-api-processapprovefinish.md)接口，实现钉钉考勤同步通过。
 
    > **[!NOTE]**
    >
@@ -209,25 +222,35 @@ public void getAccessToken() throws ApiException {
    > - 保存自定义审批单ID `approve_id`，后续如需撤销审批时需使用该ID。
 
    ```
-   public void approveFinish() throws ApiException {
-       DingTalkClient client = new DefaultDingTalkClient("https://oapi.dingtalk.com/topapi/attendance/approve/finish");
-
-       OapiAttendanceApproveFinishRequest req = new OapiAttendanceApproveFinishRequest();
-       req.setUserid("01472825524039877041");
-       req.setBizType(2L); // 本示例使用外出
-       req.setFromTime("2022-10-13 09:00");
-       req.setToTime("2022-10-13 19:00");
-       req.setDurationUnit("hour");
-       req.setCalculateModel(1L);
-       req.setTagName("外出");
-       req.setApproveId("dingTalk");
-       req.setJumpUrl("https://xxx.xxx");
-
-       OapiAttendanceApproveFinishResponse rsp = client.execute(req, "access_token");
-       System.out.println(rsp.getBody());
+   public ProcessApproveFinishResponseBody approveFinish(){
+     com.aliyun.teaopenapi.models.Config config = new com.aliyun.teaopenapi.models.Config();
+     config.protocol = "https";
+     config.regionId = "central";
+     try {
+       com.aliyun.dingtalkattendance_1_0.Client client = new  com.aliyun.dingtalkattendance_1_0.Client(config);
+       ProcessApproveFinishHeaders processApproveFinishHeaders = new ProcessApproveFinishHeaders();
+       processApproveFinishHeaders.xAcsDingtalkAccessToken = "<your access token>";
+       ProcessApproveFinishRequest.ProcessApproveFinishRequestTopCalculateApproveDurationParam topCalculateApproveDurationParam = new ProcessApproveFinishRequest.ProcessApproveFinishRequestTopCalculateApproveDurationParam()
+         .setBizType(2L)
+         .setFromTime("2022-10-13 09:00")
+         .setToTime("2022-10-13 19:00")
+         .setDurationUnit("hour")
+         .setCalculateModel(1L);
+       com.aliyun.dingtalkattendance_1_0.models.ProcessApproveFinishRequest processApproveFinishRequest = new com.aliyun.dingtalkattendance_1_0.models.ProcessApproveFinishRequest()
+         .setUserId("manager123")
+         .setTopCalculateApproveDurationParam(topCalculateApproveDurationParam)
+         .setTagName("外出")
+         .setApproveId("dingTalk")
+         .setJumpUrl("https://open.dingtalk.com/");
+       ProcessApproveFinishResponse processApproveFinishResponse = client.processApproveFinishWithOptions(processApproveFinishRequest, processApproveFinishHeaders, new com.aliyun.teautil.models.RuntimeOptions());
+       System.out.println(processApproveFinishResponse.getBody());
+       return processApproveFinishResponse.getBody();
+     } catch (Exception e) {
+       throw new RuntimeException(e);
+     }
    }
    ```
-3. **通知审批撤销**：在企业自有审批系统提交了撤销假勤申请，根据自定义审批单ID `approve_id`，调用服务端API-通知审批撤销接口，实现钉钉考勤同步撤销。
+3. **通知审批撤销**：在企业自有审批系统提交了撤销假勤申请，根据自定义审批单ID `approve_id`，调用服务端API-[通知审批撤销](0229-notify-the-attendance-to-modify-the-punch-result-when-the.md)接口，实现钉钉考勤同步撤销。
 
    ```
    public void approveCancel() throws ApiException {

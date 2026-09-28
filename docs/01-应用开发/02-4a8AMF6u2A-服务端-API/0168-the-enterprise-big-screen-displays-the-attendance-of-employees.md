@@ -1,20 +1,20 @@
 ---
-title: "企业大屏展示员工考勤"
+title: "考勤数据可视化：实时到岗监控与异常预警展示"
 source_url: "https://open.dingtalk.com/document/development/the-enterprise-big-screen-displays-the-attendance-of-employees"
 namespace: "development"
 slug: "the-enterprise-big-screen-displays-the-attendance-of-employees"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "考勤 > 使用教程 > 企业大屏展示员工考勤"
+breadcrumb: "考勤 > 使用教程 > 考勤数据可视化：实时到岗监控与异常预警展示"
 doc_id: "KyPWUiGk6g"
-updated_at: "2026-09-20 09:32:32"
+updated_at: "2026-09-23 12:04:29"
 ---
 
 > Source: https://open.dingtalk.com/document/development/the-enterprise-big-screen-displays-the-attendance-of-employees
-> Path: 应用开发 / 服务端 API / 考勤 > 使用教程 > 企业大屏展示员工考勤
-> Updated: 2026-09-20 09:32:32
+> Path: 应用开发 / 服务端 API / 考勤 > 使用教程 > 考勤数据可视化：实时到岗监控与异常预警展示
+> Updated: 2026-09-23 12:04:29
 
-# 企业大屏展示员工考勤
+# 考勤数据可视化：实时到岗监控与异常预警展示
 
 通过钉钉Stream推送机制与考勤API，实现员工打卡数据实时采集与智能分析，为企业大屏、BI系统提供标准化数据接口，解决传统人工导出滞后、系统集成困难、状态判定复杂等核心痛点。
 

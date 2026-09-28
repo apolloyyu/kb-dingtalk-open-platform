@@ -34,4 +34,4 @@ permissions: Storage.File.Write
 - 属性可见性。 - **PUBLIC**：所有应用都可见 - **PRIVATE**：仅限当前应用可见
 
 source_url: https://open.dingtalk.com/document/development/submittal-file
-updated_at: 2026-08-19 17:20:26
+updated_at: 2026-09-23 11:54:14

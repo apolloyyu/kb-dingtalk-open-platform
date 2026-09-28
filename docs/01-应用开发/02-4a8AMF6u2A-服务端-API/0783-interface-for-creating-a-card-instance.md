@@ -42,7 +42,7 @@ updated_at: "2026-07-14 09:22:13"
 | userId | String | 否 | 卡片创建者的userId。 |
 | cardTemplateId | String | 是 | 卡片内容模板ID，可通过登录[开发者后台 > 卡片平台](https://open-dev.dingtalk.com/fe/card)获取。  image |
 | outTrackId | String | 是 | 外部卡片实例Id。       - 开发者自己生成并作为入参传递给钉钉的，钉钉只在对应使用到 outTrackId 的场景，帮助开发者对TrackId进行记录 - 一个 outTrackId 唯一标识一张卡片，如果需要使用新的 cardTemplateId 或 cardData 等参数创建一张新的卡片，需要设置全新的 outTrackId，否则更改不会生效。 |
-| callbackType | String | 否 | 卡片回调的类型：   - STREAM：stream模式 - HTTP：http模式       注意参数均为大写。    详情参见[卡片互动-事件回调](../../05-互动卡片/01-N4KJ5HbqnQ-开发指南/0007-event-callback-card.md)文档。 |
+| callbackType | String | 否 | 卡片回调的类型：   - STREAM：stream模式 - HTTP：http模式       注意参数均为大写。    详情参见[卡片互动-事件回调](../../05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md)文档。 |
 | callbackRouteKey | String | 否 | 卡片回调HTTP模式时的路由 Key，用于查询注册的 callbackUrl，可通过调用服务端API-[注册卡片回调地址](0789-register-card-callback-address.md)接口，根据填写的`callbackRouteKey`入参字段获取。 |
 | cardData | Object | 是 | 卡片数据，示例：   ``` "cardData": {     "cardParamMap": {       "intParam": "1",				   // 整数类型属性       "floatParam": "1.2.3",	                   // 浮点类型属性       "trueParam": "true",		           // 布尔类型属性，对应 TRUE       "falseParam": "false"			   // 布尔类型属性，对应 FALSE     } } ``` |
 | cardParamMap | Map<String, String> | 否 | 卡片模板内容替换参数：   - key：参数名（最长不超过100B） - value: 参数值（最长不超过1KB）        - 属性字段只支持 String 类型，非 String 类型的属性填写请参考文档：[API 卡片数据的填写说明](0792-instructions-for-filling-in-api-card-data.md)。 - 务必确保属性值的类型与卡片搭建器中所配置的变量类型相匹配，否则可能出现属性不生效，或者在移动端无法显示等问题。 |

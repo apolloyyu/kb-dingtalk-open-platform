@@ -1,4 +1,4 @@
-# 企业通讯录部门管理自动化
+# 组织架构维护：部门信息的批量创建与智能更新
 
 doc_id: Rqv5HvWlb3
 completeness: partial
@@ -32,4 +32,4 @@ permissions: not_stated
 - - **批量处理效率**：百部门级批量导入应在5分钟内完成，否则检查网络或分批策略。
 
 source_url: https://open.dingtalk.com/document/development/operations-related-to-address-book-departments
-updated_at: 2026-09-15 09:36:15
+updated_at: 2026-09-23 12:04:21

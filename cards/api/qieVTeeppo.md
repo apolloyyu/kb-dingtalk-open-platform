@@ -1,4 +1,4 @@
-# 企业自有假勤审批同步到钉钉
+# 打卡数据同步：硬件打卡记录自动上传至钉钉
 
 doc_id: qieVTeeppo
 completeness: partial
@@ -36,4 +36,4 @@ permissions: not_stated
 - - **自动累加排班**：调用预计算接口，自动返回跨天请假的最大可提交时长，消除人工计算错误。
 
 source_url: https://open.dingtalk.com/document/development/enterprise-s-own-oa-approval-system-synchronized-to-dingtalk-during-holidays
-updated_at: 2026-09-21 11:23:53
+updated_at: 2026-09-23 12:04:31

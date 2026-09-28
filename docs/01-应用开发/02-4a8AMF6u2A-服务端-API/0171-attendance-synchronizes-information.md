@@ -1,20 +1,20 @@
 ---
-title: "企业自有系统考勤打卡信息同步到钉钉"
+title: "假勤审批集成：假勤数据自动同步至钉钉考勤"
 source_url: "https://open.dingtalk.com/document/development/attendance-synchronizes-information"
 namespace: "development"
 slug: "attendance-synchronizes-information"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "考勤 > 使用教程 > 企业自有系统考勤打卡信息同步到钉钉"
+breadcrumb: "考勤 > 使用教程 > 假勤审批集成：假勤数据自动同步至钉钉考勤"
 doc_id: "ANOoKtLNB2"
-updated_at: "2026-09-21 11:23:55"
+updated_at: "2026-09-23 12:04:32"
 ---
 
 > Source: https://open.dingtalk.com/document/development/attendance-synchronizes-information
-> Path: 应用开发 / 服务端 API / 考勤 > 使用教程 > 企业自有系统考勤打卡信息同步到钉钉
-> Updated: 2026-09-21 11:23:55
+> Path: 应用开发 / 服务端 API / 考勤 > 使用教程 > 假勤审批集成：假勤数据自动同步至钉钉考勤
+> Updated: 2026-09-23 12:04:32
 
-# 企业自有系统考勤打卡信息同步到钉钉
+# 假勤审批集成：假勤数据自动同步至钉钉考勤
 
 本文档介绍企业使用自有考勤系统或第三方考勤设备如何同步打卡记录到钉钉考勤模块，支持将门禁刷卡、指纹机、人脸识别等设备的打卡数据自动汇聚至钉钉，实现统一考勤管理。
 

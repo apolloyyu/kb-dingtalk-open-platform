@@ -1,20 +1,20 @@
 ---
-title: "考勤组管理自动化"
+title: "考勤规则配置：考勤组的批量创建与动态调整"
 source_url: "https://open.dingtalk.com/document/development/operation-related-to-attendance-group"
 namespace: "development"
 slug: "operation-related-to-attendance-group"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "考勤 > 使用教程 > 考勤组管理自动化方案"
+breadcrumb: "考勤 > 使用教程 > 考勤规则配置：考勤组的批量创建与动态调整"
 doc_id: "9xgadQlBCR"
-updated_at: "2026-09-17 09:36:36"
+updated_at: "2026-09-23 12:04:24"
 ---
 
 > Source: https://open.dingtalk.com/document/development/operation-related-to-attendance-group
-> Path: 应用开发 / 服务端 API / 考勤 > 使用教程 > 考勤组管理自动化方案
-> Updated: 2026-09-17 09:36:36
+> Path: 应用开发 / 服务端 API / 考勤 > 使用教程 > 考勤规则配置：考勤组的批量创建与动态调整
+> Updated: 2026-09-23 12:04:24
 
-# 考勤组管理自动化
+# 考勤规则配置：考勤组的批量创建与动态调整
 
 通过钉钉开放平台考勤组管理API，实现HR/OA系统与钉钉考勤体系的无缝集成，解决传统人工维护考勤组效率低、易出错、无法批量操作等核心痛点。
 

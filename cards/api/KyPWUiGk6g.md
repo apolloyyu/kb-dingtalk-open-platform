@@ -1,4 +1,4 @@
-# 企业大屏展示员工考勤
+# 考勤数据可视化：实时到岗监控与异常预警展示
 
 doc_id: KyPWUiGk6g
 completeness: partial
@@ -36,4 +36,4 @@ permissions: not_stated
 - - **迟到**：员工有打卡记录，但打卡时间晚于排班规定的上班时间+迟到阈值（通常10-30分钟，可在考勤组配置中设置）。
 
 source_url: https://open.dingtalk.com/document/development/the-enterprise-big-screen-displays-the-attendance-of-employees
-updated_at: 2026-09-20 09:32:32
+updated_at: 2026-09-23 12:04:29

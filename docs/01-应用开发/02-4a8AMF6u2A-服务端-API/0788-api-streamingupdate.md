@@ -44,8 +44,8 @@ updated_at: "2026-06-04 14:08:38"
 | key | String | 是 | 需要进行流式更新的变量。 |
 | content | String | 是 | 此更新的流式内容。  **[!NOTE]**   - 由于 markdown 需要服务端进行格式转换，必须要保证是全量的内容及markdown 语法的完整性。 - 内容 size 单次不要超过 1 K，总大小建议不要超过 3 K。 |
 | isFull | Boolean | 否 | 是否全量：   - **true**：全量 - **false**：非全量（默认）   **[!NOTE]**   - 如果是true，则内部以覆盖的方式进行更新，如果是 false，则内部以增量的方式进行更新。 - 如果流式变量绑定的是 markdown，该参数必须设置为 true，否则会报错。 |
-| isFinalize | Boolean | 否 | 是否是最后一帧：   - **true**：最后一帧 - **false**：不是最后一帧（默认）   **[!NOTE]**  如果设置为 true，AI卡片将从「输入中」状态切换为「完成」状态。卡片状态信息请参考文档[AI 卡片模板](../../05-互动卡片/01-N4KJ5HbqnQ-开发指南/0002-ai-card-template.md)。 |
-| isError | Boolean | 否 | 是否出错：   - **true**：出错 - **false**：没有出错（默认）   **[!NOTE]**  如果设置为 true，AI卡片将从「输入中」状态切换为「出错」状态，卡片状态信息请参考文档[AI 卡片模板](../../05-互动卡片/01-N4KJ5HbqnQ-开发指南/0002-ai-card-template.md)。 |
+| isFinalize | Boolean | 否 | 是否是最后一帧：   - **true**：最后一帧 - **false**：不是最后一帧（默认）   **[!NOTE]**  如果设置为 true，AI卡片将从「输入中」状态切换为「完成」状态。卡片状态信息请参考文档[AI 卡片模板](../../05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0002-ai-card-template.md)。 |
+| isError | Boolean | 否 | 是否出错：   - **true**：出错 - **false**：没有出错（默认）   **[!NOTE]**  如果设置为 true，AI卡片将从「输入中」状态切换为「出错」状态，卡片状态信息请参考文档[AI 卡片模板](../../05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0002-ai-card-template.md)。 |
 
 ### 请求示例
 

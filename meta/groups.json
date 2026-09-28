@@ -133,24 +133,9 @@
     "sort": 5,
     "tabs": [
       {
-        "tabCode": "N4KJ5HbqnQ",
-        "tabName": "开发指南",
-        "sort": 1
-      },
-      {
-        "tabCode": "ukxqoQhFaf",
-        "tabName": "搭建平台",
-        "sort": 2
-      },
-      {
         "tabCode": "MhNX42mFB1",
-        "tabName": "模板搭建器",
-        "sort": 3
-      },
-      {
-        "tabCode": "zGou6m9pee",
-        "tabName": "卡片规范设计",
-        "sort": 4
+        "tabName": "模板搭建卡片",
+        "sort": 1
       }
     ]
   },

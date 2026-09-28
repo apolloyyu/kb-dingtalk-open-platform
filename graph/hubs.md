@@ -4,14 +4,14 @@
 > 生成物（ops/scripts/build_links.py），勿手改。
 
 - 1196 ← [全局错误码](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0013-server-api-error-codes-1.md)（服务端 API）
-- 1090 ← [获取企业内部应用的accessToken](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md)（服务端 API）
+- 1092 ← [获取企业内部应用的accessToken](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md)（服务端 API）
 - 769 ← [获取第三方应用授权企业的accessToken](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0033-obtain-the-access-token-of-the-authorized-enterprise-1.md)（服务端 API）
-- 385 ← [获取企业内部应用的access_token](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1446-obtain-orgapp-token.md)（服务端 API）
+- 383 ← [获取企业内部应用的access_token](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1446-obtain-orgapp-token.md)（服务端 API）
 - 270 ← [查询用户详情](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0055-query-user-details.md)（服务端 API）
 - 246 ← [服务商获取第三方应用授权企业的access_token](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1448-obtain-isvapp-token.md)（服务端 API）
 - 93 ← [应用创建与配置](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md)（开发指南）
 - 78 ← [获取用户token](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0031-obtain-user-token.md)（服务端 API）
-- 57 ← [服务端SDK下载](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0002-download-the-server-side-sdk.md)（服务端 API）
+- 58 ← [服务端SDK下载](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0002-download-the-server-side-sdk.md)（服务端 API）
 - 52 ← [基础概念](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md)（开发指南）
 - 50 ← [获取部门用户userid列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0064-query-the-list-of-department-userids.md)（服务端 API）
 - 47 ← [获取开发者权限](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0006-get-developer-permissions.md)（开发指南）
@@ -23,7 +23,7 @@
 - 37 ← [获取用户通讯录个人信息](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0053-dingtalk-retrieve-user-information.md)（服务端 API）
 - 37 ← [添加空间](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0654-add-space.md)（服务端 API）
 - 34 ← [获取文件或文件夹列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0668-get-a-list-of-files-or-folders.md)（服务端 API）
-- 32 ← [添加接口调用权限](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0003-add-api-permission.md)（服务端 API）
+- 30 ← [添加接口调用权限](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0003-add-api-permission.md)（服务端 API）
 - 30 ← [获取部门列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1156-obtains-the-department-node-list.md)（服务端 API）
 - 27 ← [发起审批实例](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0499-create-an-approval-instance.md)（服务端 API）
 - 27 ← [概述](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0555-knowledge-base-overview.md)（服务端 API）

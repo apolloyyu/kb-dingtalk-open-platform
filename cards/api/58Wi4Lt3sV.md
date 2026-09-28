@@ -1,4 +1,4 @@
-# 企业通讯录员工管理自动化
+# 员工信息同步：从HR系统到钉钉通讯录的实时联动
 
 doc_id: 58Wi4Lt3sV
 completeness: partial
@@ -31,4 +31,4 @@ permissions: not_stated
 - - 批量处理效率：千人级批量导入应在30分钟内完成，否则检查网络或分批策略。
 
 source_url: https://open.dingtalk.com/document/development/address-book-employee-operations
-updated_at: 2026-09-15 09:36:19
+updated_at: 2026-09-23 12:04:19

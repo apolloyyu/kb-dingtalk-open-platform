@@ -1,20 +1,20 @@
 ---
-title: "企业OA系统与钉钉通讯录双向同步"
+title: "企业OA与钉钉通讯录双向同步：实现多系统数据闭环"
 source_url: "https://open.dingtalk.com/document/development/synchronization-between-enterprise-oa-system-and-dingtalk-address-book"
 namespace: "development"
 slug: "synchronization-between-enterprise-oa-system-and-dingtalk-address-book"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "通讯录管理 > 使用教程 > 企业OA系统与钉钉通讯录双向同步"
+breadcrumb: "通讯录管理 > 使用教程 > 企业OA与钉钉通讯录双向同步：实现多系统数据闭环"
 doc_id: "uYLZbIXHIn"
-updated_at: "2026-09-15 09:36:12"
+updated_at: "2026-09-23 12:04:22"
 ---
 
 > Source: https://open.dingtalk.com/document/development/synchronization-between-enterprise-oa-system-and-dingtalk-address-book
-> Path: 应用开发 / 服务端 API / 通讯录管理 > 使用教程 > 企业OA系统与钉钉通讯录双向同步
-> Updated: 2026-09-15 09:36:12
+> Path: 应用开发 / 服务端 API / 通讯录管理 > 使用教程 > 企业OA与钉钉通讯录双向同步：实现多系统数据闭环
+> Updated: 2026-09-23 12:04:22
 
-# 企业OA系统与钉钉通讯录双向同步
+# 企业OA与钉钉通讯录双向同步：实现多系统数据闭环
 
 ## 概述
 
@@ -136,7 +136,7 @@ HR或管理员直接在钉钉中调整了组织架构（如部门重命名、员
 
 **实施步骤：**
 
-1. 先参考[企业通讯录员工管理自动化](0047-address-book-employee-operations.md)文档，把当前钉钉组织架构信息全部获取到企业OA系统通讯录内。
+1. 先参考[员工信息同步：从HR系统到钉钉通讯录的实时联动](0047-address-book-employee-operations.md)文档，把当前钉钉组织架构信息全部获取到企业OA系统通讯录内。
 2. 使用钉钉提供的[事件订阅](0014-event-subscription-overview.md)功能，并订阅通讯录事件，钉钉通讯录内的变动会对应推送相关的回调事件信息。通讯录事件推送信息格式参考[通讯录](../04-LFcRvVD08N-事件订阅/0002-org-event-overview.md#ab90dc1084bai)。
 
    ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8875958071/p769119.png)

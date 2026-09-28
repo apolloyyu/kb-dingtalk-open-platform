@@ -1,14 +1,14 @@
 {
   "name": "钉钉开放平台文档中心知识库",
   "source_entry": "https://open.dingtalk.com/document/dingstart/basic-concepts-beta",
-  "crawl_time": "2026-09-23T07:04:21+08:00",
+  "crawl_time": "2026-09-28T15:06:06+08:00",
   "source_apis": [
     "https://open.dingtalk.com/api/docCenter/getDocPageGroupList",
     "https://open.dingtalk.com/api/docCenter/getDocInfoList",
     "https://icms-document.oss-cn-beijing.aliyuncs.com/zh-CN/dingtalk"
   ],
   "groups": 8,
-  "tabs": 33,
+  "tabs": 30,
   "documents_discovered": 3613,
   "documents_written": 3613,
   "failures": 0,
@@ -43,10 +43,7 @@
     "硬件开发 / 门禁/考勤机接入": 4,
     "硬件开发 / 门禁 Linux 接入": 4,
     "硬件开发 / Android 设备接入": 4,
-    "互动卡片 / 开发指南": 10,
-    "互动卡片 / 搭建平台": 12,
-    "互动卡片 / 模板搭建器": 16,
-    "互动卡片 / 卡片规范设计": 4,
+    "互动卡片 / 模板搭建卡片": 42,
     "专属版客户端插件 / 功能介绍": 11,
     "专属版客户端插件 / Android 插件": 16,
     "专属版客户端插件 / iOS 插件": 8,

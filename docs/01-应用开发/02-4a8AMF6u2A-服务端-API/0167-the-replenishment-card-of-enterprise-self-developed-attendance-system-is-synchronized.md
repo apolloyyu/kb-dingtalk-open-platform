@@ -1,20 +1,20 @@
 ---
-title: "企业自研考勤系统补卡同步"
+title: "补卡自动同步：审批通过实时更新钉钉考勤状态"
 source_url: "https://open.dingtalk.com/document/development/the-replenishment-card-of-enterprise-self-developed-attendance-system-is-synchronized"
 namespace: "development"
 slug: "the-replenishment-card-of-enterprise-self-developed-attendance-system-is-synchronized"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "考勤 > 使用教程 > 企业自研考勤系统补卡同步"
+breadcrumb: "考勤 > 使用教程 > 补卡自动同步：审批通过实时更新钉钉考勤状态"
 doc_id: "nTMMOfrMW3"
-updated_at: "2026-09-20 09:32:30"
+updated_at: "2026-09-23 12:04:28"
 ---
 
 > Source: https://open.dingtalk.com/document/development/the-replenishment-card-of-enterprise-self-developed-attendance-system-is-synchronized
-> Path: 应用开发 / 服务端 API / 考勤 > 使用教程 > 企业自研考勤系统补卡同步
-> Updated: 2026-09-20 09:32:30
+> Path: 应用开发 / 服务端 API / 考勤 > 使用教程 > 补卡自动同步：审批通过实时更新钉钉考勤状态
+> Updated: 2026-09-23 12:04:28
 
-# 企业自研考勤系统补卡同步
+# 补卡自动同步：审批通过实时更新钉钉考勤状态
 
 通过API实现自有OA/假勤系统与钉钉考勤的补卡信息自动同步，审批通过后实时更新钉钉考勤状态为"补卡通过"，撤销后自动恢复原始打卡状态，消除双系统并行带来的数据不一致与人工重复操作。
 

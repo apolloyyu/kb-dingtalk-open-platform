@@ -1,4 +1,4 @@
-# 按天获取员工考勤报表信息
+# 考勤日报生成：按天统计与多维度数据分析
 
 doc_id: 0nxu85pR9m
 completeness: partial
@@ -34,4 +34,4 @@ permissions: not_stated
 - 1. **分批并行**：将员工列表分为10-20个批次，每批50-100人，使用线程池并行查询。
 
 source_url: https://open.dingtalk.com/document/development/obtain-the-employee-attendance-report-information
-updated_at: 2026-09-20 09:32:33
+updated_at: 2026-09-23 12:04:30

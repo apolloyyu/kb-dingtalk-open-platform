@@ -1,4 +1,4 @@
-# 企业OA系统与钉钉通讯录双向同步
+# 企业OA与钉钉通讯录双向同步：实现多系统数据闭环
 
 doc_id: uYLZbIXHIn
 completeness: partial
@@ -36,4 +36,4 @@ permissions: not_stated
 - - ✅ OA系统中变更后，钉钉在10秒内完成同步。
 
 source_url: https://open.dingtalk.com/document/development/synchronization-between-enterprise-oa-system-and-dingtalk-address-book
-updated_at: 2026-09-15 09:36:12
+updated_at: 2026-09-23 12:04:22

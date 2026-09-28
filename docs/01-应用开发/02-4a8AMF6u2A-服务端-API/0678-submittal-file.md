@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "文档/文件 > 存储管理 > 文件传输 > 提交文件"
 doc_id: "XazD1mswsn"
-updated_at: "2026-08-19 17:20:26"
+updated_at: "2026-09-23 11:54:14"
 ---
 
 > Source: https://open.dingtalk.com/document/development/submittal-file
 > Path: 应用开发 / 服务端 API / 文档/文件 > 存储管理 > 文件传输 > 提交文件
-> Updated: 2026-08-19 17:20:26
+> Updated: 2026-09-23 11:54:14
 
 # 提交文件
 
@@ -780,7 +780,7 @@ namespace AlibabaCloud.SDK.Sample
 | dentry | Object | 文件信息。 |
 | id | String | 文件id。 |
 | spaceId | String | 所在空间id。 |
-| parentId | String | 父目录Id。根目录时，该参数是0。    空值代表根目录的parentId不存在。 |
+| parentId | String | 父目录Id。根目录时，该参数是0。      空值代表根目录的parentId不存在。 |
 | type | String | 类型，目录或文件，枚举值:   - **FILE**：文件 - **FOLDER**：文件夹 |
 | name | String | 文件名称。 |
 | size | Long | 文件大小, 单位:Byte。 |

@@ -1,4 +1,4 @@
-# 考勤组成员管理自动化
+# 考勤人员分配：成员批量加入与精准管理
 
 doc_id: HpgAC8DZHF
 completeness: partial
@@ -34,4 +34,4 @@ permissions: not_stated
 - - **异常重试**：网络波动时自动重试，最多3次，间隔递增（1s → 2s → 4s）。
 
 source_url: https://open.dingtalk.com/document/development/attendance-group-member-operations
-updated_at: 2026-09-17 09:36:38
+updated_at: 2026-09-23 12:04:26

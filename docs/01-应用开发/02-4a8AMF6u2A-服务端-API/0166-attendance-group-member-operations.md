@@ -1,20 +1,20 @@
 ---
-title: "考勤组成员管理自动化"
+title: "考勤人员分配：成员批量加入与精准管理"
 source_url: "https://open.dingtalk.com/document/development/attendance-group-member-operations"
 namespace: "development"
 slug: "attendance-group-member-operations"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "考勤 > 使用教程 > 考勤组成员管理自动化"
+breadcrumb: "考勤 > 使用教程 > 考勤人员分配：成员批量加入与精准管理"
 doc_id: "HpgAC8DZHF"
-updated_at: "2026-09-17 09:36:38"
+updated_at: "2026-09-23 12:04:26"
 ---
 
 > Source: https://open.dingtalk.com/document/development/attendance-group-member-operations
-> Path: 应用开发 / 服务端 API / 考勤 > 使用教程 > 考勤组成员管理自动化
-> Updated: 2026-09-17 09:36:38
+> Path: 应用开发 / 服务端 API / 考勤 > 使用教程 > 考勤人员分配：成员批量加入与精准管理
+> Updated: 2026-09-23 12:04:26
 
-# 考勤组成员管理自动化
+# 考勤人员分配：成员批量加入与精准管理
 
 通过钉钉开放平台考勤组成员管理API，实现HR/OA系统与钉钉考勤成员体系的无缝集成，解决传统人工维护考勤组成员效率低、易出错、无法批量操作等核心痛点。
 
@@ -177,7 +177,7 @@ public void getAccessToken() throws ApiException {
 
 > **[!NOTE]**
 >
-> 考勤组管理的操作流程，详情参见[考勤组管理自动化](0165-operation-related-to-attendance-group.md)。
+> 考勤组管理的操作流程，详情参见[考勤规则配置：考勤组的批量创建与动态调整](0165-operation-related-to-attendance-group.md)。
 
 1. **批量新增参与考勤人员**：调用服务端API-[批量新增参与考勤人员](0183-batch-add-employees-under-the-attendance-group.md)接口，实现新增考勤组参与考勤人员。
 

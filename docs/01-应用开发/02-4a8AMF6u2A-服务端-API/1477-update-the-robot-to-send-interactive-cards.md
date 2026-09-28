@@ -23,7 +23,7 @@ updated_at: "2026-08-25 09:37:12"
 > - 本接口已完成升级，后续将维持现有功能且不再新增能力。
 > - 未接入的开发者建议使用新版[更新卡片](0785-interactive-card-update-interface.md)接口，已接入用户不受影响。
 
-如何发送互动卡片普通版流程，详情参见[互动卡片普通版接入流程](../../05-互动卡片/02-ukxqoQhFaf-搭建平台/0010-ding-card-interactive-card-operation-process.md)。
+如何发送互动卡片普通版流程，详情参见[互动卡片普通版接入流程](../../05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0020-ding-card-interactive-card-operation-process.md)。
 
 互动卡片示例一：
 

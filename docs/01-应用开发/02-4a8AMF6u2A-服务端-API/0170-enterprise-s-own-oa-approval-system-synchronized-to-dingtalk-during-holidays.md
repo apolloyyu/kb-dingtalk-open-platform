@@ -1,20 +1,20 @@
 ---
-title: "企业自有假勤审批同步到钉钉"
+title: "打卡数据同步：硬件打卡记录自动上传至钉钉"
 source_url: "https://open.dingtalk.com/document/development/enterprise-s-own-oa-approval-system-synchronized-to-dingtalk-during-holidays"
 namespace: "development"
 slug: "enterprise-s-own-oa-approval-system-synchronized-to-dingtalk-during-holidays"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "考勤 > 使用教程 > 企业自有假勤审批同步到钉钉"
+breadcrumb: "考勤 > 使用教程 > 打卡数据同步：硬件打卡记录自动上传至钉钉"
 doc_id: "qieVTeeppo"
-updated_at: "2026-09-21 11:23:53"
+updated_at: "2026-09-23 12:04:31"
 ---
 
 > Source: https://open.dingtalk.com/document/development/enterprise-s-own-oa-approval-system-synchronized-to-dingtalk-during-holidays
-> Path: 应用开发 / 服务端 API / 考勤 > 使用教程 > 企业自有假勤审批同步到钉钉
-> Updated: 2026-09-21 11:23:53
+> Path: 应用开发 / 服务端 API / 考勤 > 使用教程 > 打卡数据同步：硬件打卡记录自动上传至钉钉
+> Updated: 2026-09-23 12:04:31
 
-# 企业自有假勤审批同步到钉钉
+# 打卡数据同步：硬件打卡记录自动上传至钉钉
 
 本文档介绍企业使用自有OA审批系统如何同步到钉钉的OA审批，支持企业自研系统的加班、出差和请假信息与钉钉考勤模块打通。
 

@@ -1,4 +1,4 @@
-# 企业自研考勤系统补卡同步
+# 补卡自动同步：审批通过实时更新钉钉考勤状态
 
 doc_id: nTMMOfrMW3
 completeness: partial
@@ -34,4 +34,4 @@ permissions: not_stated
 - 3. **异常监控**：对连续3次同步失败的员工触发告警，通知HR管理员手动核查（可能原因：员工离职未移除考勤组、排班未配置等）。
 
 source_url: https://open.dingtalk.com/document/development/the-replenishment-card-of-enterprise-self-developed-attendance-system-is-synchronized
-updated_at: 2026-09-20 09:32:30
+updated_at: 2026-09-23 12:04:28

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """按 slug 重映射认知层引用(index/TOPICS.md 链接与 evals/questions.jsonl 的 ref_docs)。
 
-覆盖两类变化:① 重编号(文件名前缀变) ② 移动(分类目录变,文件名不变)。
+覆盖三类变化:① 重编号(文件名前缀变) ② 移动(分类目录变,文件名不变)\n③ 分类重组导致生成索引页改名(见 fix_index_link)。
 两者判据统一为"整条相对路径是否可达",与 lint[9] 一致。
 
 上游快照有插入时,同目录后续文档的 NNNN- 序号整体顺移,认知层引用的带序号路径随之
@@ -47,9 +47,39 @@ def fix_topics(by_slug):
         return "(../" + cand[0] + ")"
 
     new = re.sub(r"\((\.\./docs/[^)]+?\.md)\)", repl, text)
+    new = "\n".join(fix_index_link(line, fixed) for line in new.split("\n"))
     if fixed:
         open(p, "w", encoding="utf-8").write(new)
     return fixed
+
+
+def fix_index_link(line, fixed):
+    """③ 分类重组:指向生成索引页(index/<组>/<NN-tab>.md)的链接没有 slug 可查。
+    按同一行文档链接(已完成①②重映射)所在的 tab 目录推导新索引页:
+    docs/<组>/<NN-ID-名>/ → index/<组>/<NN-名>.md(>SPLIT 时为 <NN-名>/_index.md)。
+    同行文档须全部落在同一 tab、推导出的索引页须真实存在才替换,否则不动留给 lint。
+    (2026-09-24 上游把互动卡片 4 个 tab 并成「模板搭建卡片」,01-开发指南.md 消失,
+    流水线因此连续 5 天回滚)"""
+    tabs = {tuple(m.split("/")[1:3]) for m in re.findall(r"\(\.\./(docs/[^)]+?\.md)\)", line)
+            if m.count("/") >= 3}
+    if len(tabs) != 1:
+        return line
+    group, tdir = tabs.pop()
+    name = re.sub(r"^(\d+)-[A-Za-z0-9]+-", r"\1-", tdir)
+    cands = [c for c in (f"{group}/{name}.md", f"{group}/{name}/_index.md")
+             if os.path.exists(os.path.join(ROOT, "index", c))]
+    if len(cands) != 1:
+        return line
+
+    def repl(match):
+        target = match.group(1)
+        if target.startswith(("../", "http")) or not target.startswith(group + "/") \
+                or os.path.exists(os.path.join(ROOT, "index", target)):
+            return match.group(0)
+        fixed.append((target, cands[0]))
+        return "(" + cands[0] + ")"
+
+    return re.sub(r"\(([^)\s]+?\.md)\)", repl, line)
 
 
 def fix_evals(by_slug):

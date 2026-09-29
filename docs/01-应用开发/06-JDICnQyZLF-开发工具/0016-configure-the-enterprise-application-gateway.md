@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "开发工具"
 breadcrumb: "内网穿透工具 > 企业应用网关（正式版） > 企业应用网关配置流程"
 doc_id: "1bu1ca1V4j"
-updated_at: "2026-09-15 09:35:28"
+updated_at: "2026-09-29 15:37:50"
 ---
 
 > Source: https://open.dingtalk.com/document/download/configure-the-enterprise-application-gateway
 > Path: 应用开发 / 开发工具 / 内网穿透工具 > 企业应用网关（正式版） > 企业应用网关配置流程
-> Updated: 2026-09-15 09:35:28
+> Updated: 2026-09-29 15:37:50
 
 # 企业应用网关配置流程
 
@@ -26,7 +26,7 @@ updated_at: "2026-09-15 09:35:28"
 - 已创建企业内部应用或第三方企业应用，并为该应用配置了首页地址；
 - 操作人员具备管理员权限，可访问钉钉开发者后台及企业应用网关管理平台；如果未开通，需要使用移动端钉钉扫描下方二维码，并安装**钉钉企业应用网关**应用。
 
-  ![下载二维码](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2219082361/p328981.png)
+  ![下载二维码](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8237660971/p328981.png)
 - 若服务器出口IP受限制，需提前将相关IP加入钉钉API调用白名单。
 
 ## 流程简介

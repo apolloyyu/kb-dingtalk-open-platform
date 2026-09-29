@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "开发工具"
 breadcrumb: "内网穿透工具 > 企业应用网关（正式版） > 企业应用网关介绍"
 doc_id: "4G53HYzIqX"
-updated_at: "2026-01-22 19:53:03"
+updated_at: "2026-09-29 15:37:35"
 ---
 
 > Source: https://open.dingtalk.com/document/download/dingtalk-on-the-security-of-intranet-applications
 > Path: 应用开发 / 开发工具 / 内网穿透工具 > 企业应用网关（正式版） > 企业应用网关介绍
-> Updated: 2026-01-22 19:53:03
+> Updated: 2026-09-29 15:37:35
 
 # 企业应用网关介绍
 
@@ -71,7 +71,7 @@ updated_at: "2026-01-22 19:53:03"
 
 钉钉组织企业，需要使用移动端钉钉扫描下方二维码，并安装**钉钉企业应用网关**应用。
 
-![下载二维码](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2219082361/p328981.png)
+![下载二维码](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8237660971/p328981.png)
 
 ## 服务支持
 

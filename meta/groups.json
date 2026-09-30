@@ -136,6 +136,11 @@
         "tabCode": "MhNX42mFB1",
         "tabName": "模板搭建卡片",
         "sort": 1
+      },
+      {
+        "tabCode": "lHGhOeTVdR",
+        "tabName": "JSON 构建卡片（AI）",
+        "sort": 2
       }
     ]
   },

@@ -10520,6 +10520,39 @@
 {"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0038-markdown-variable-new.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0041-list-of-dingtalk-expressions.md", "text": "钉钉表情列表", "n": 1}
 {"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0041-list-of-dingtalk-expressions.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0027-variable-type.md", "text": "普通变量", "n": 1}
 {"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0042-configure-widescreen-cards.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0786-create-and-deliver-cards.md", "text": "创建并投放卡片", "n": 1}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0002-message-structure-and-lifecycle.md", "text": "协议版本与 Catalog", "n": 3}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0003-json-card-component-overview.md", "text": "组件", "n": 1}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0008-json-card-core-functions.md", "text": "函数", "n": 1}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0013-json-card-usage-examples.md", "text": "使用示例", "n": 2}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0014-json-card-dws-create-and-validate.md", "text": "DWS 创建与校验", "n": 1}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0015-json-card-agent-skill-create-and-validate.md", "text": "Agent Skill 创建与校验", "n": 2}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0016-json-card-listen-to-interaction-events.md", "text": "监听交互事件", "n": 1}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0017-json-card-dws-send-and-update.md", "text": "DWS 发送与更新", "n": 3}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0002-message-structure-and-lifecycle.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0011-json-card-client-actions.md", "text": "客户端动作", "n": 1}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0003-json-card-component-overview.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0004-json-card-basic-components.md", "text": "文本（Text）", "n": 10}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0003-json-card-component-overview.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0005-json-card-input-components.md", "text": "输入框（TextField）", "n": 14}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0003-json-card-component-overview.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0006-json-card-display-components.md", "text": "图片列表（ImageList）", "n": 12}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0003-json-card-component-overview.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0007-json-card-layout-and-composite-components.md", "text": "链接（Link）", "n": 11}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0004-json-card-basic-components.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0010-json-card-common-types.md", "text": "ComponentId", "n": 61}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0005-json-card-input-components.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0010-json-card-common-types.md", "text": "ComponentId", "n": 92}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0006-json-card-display-components.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0010-json-card-common-types.md", "text": "ComponentId", "n": 68}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0007-json-card-layout-and-composite-components.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0010-json-card-common-types.md", "text": "ComponentId", "n": 61}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0008-json-card-core-functions.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0010-json-card-common-types.md", "text": "DynamicString", "n": 25}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0009-json-card-expressions-and-operators.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0010-json-card-common-types.md", "text": "DynamicNumber", "n": 34}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0011-json-card-client-actions.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0010-json-card-common-types.md", "text": "DataBinding", "n": 34}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0013-json-card-usage-examples.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0017-json-card-dws-send-and-update.md", "text": "DWS 发送与更新", "n": 1}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0014-json-card-dws-create-and-validate.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "text": "最小示例：创建与更新", "n": 1}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0014-json-card-dws-create-and-validate.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0003-json-card-component-overview.md", "text": "组件", "n": 1}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0014-json-card-dws-create-and-validate.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0008-json-card-core-functions.md", "text": "函数", "n": 1}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0014-json-card-dws-create-and-validate.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0010-json-card-common-types.md", "text": "公共类型", "n": 1}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0014-json-card-dws-create-and-validate.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0013-json-card-usage-examples.md", "text": "使用示例", "n": 1}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0014-json-card-dws-create-and-validate.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0017-json-card-dws-send-and-update.md", "text": "DWS 发送与更新", "n": 2}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0015-json-card-agent-skill-create-and-validate.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0013-json-card-usage-examples.md", "text": "使用示例", "n": 1}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0017-json-card-dws-send-and-update.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "text": "完整示例", "n": 1}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0017-json-card-dws-send-and-update.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0014-json-card-dws-create-and-validate.md", "text": "DWS 创建与校验", "n": 1}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0019-json-card-building-faq.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md", "text": "模板搭建", "n": 1}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0019-json-card-building-faq.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0002-ai-card-template.md", "text": "AI 卡片模板", "n": 1}
+{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0019-json-card-building-faq.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0013-json-card-usage-examples.md", "text": "现成的卡片结构", "n": 1}
 {"from": "docs/06-专属版客户端插件/01-XYCsE5MGJh-功能介绍/0002-creating-a-client-plug-in-1.md", "to": "docs/06-专属版客户端插件/01-XYCsE5MGJh-功能介绍/0003-upload-and-publish-plug-ins-1.md", "text": "上传并发布插件", "n": 1}
 {"from": "docs/06-专属版客户端插件/01-XYCsE5MGJh-功能介绍/0002-creating-a-client-plug-in-1.md", "to": "docs/06-专属版客户端插件/02-sakFIe9HDV-Android-插件/0001-process-overview.md", "text": "开发 Android 插件", "n": 1}
 {"from": "docs/06-专属版客户端插件/01-XYCsE5MGJh-功能介绍/0002-creating-a-client-plug-in-1.md", "to": "docs/06-专属版客户端插件/03-gh7c55BOlV-iOS-插件/0001-an-overview-of-the-exclusive-client-plugin-process.md", "text": "开发 iOS 插件", "n": 1}

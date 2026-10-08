@@ -126,7 +126,7 @@ updated_at: "2026-09-23 12:04:36"
 
 步骤二：申请接口权限，申请公告相关接口权限。
 
-步骤三：获取应用访问凭证[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
+步骤三：获取应用访问凭证[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
 
 步骤四：调用服务端公告相关API。
 

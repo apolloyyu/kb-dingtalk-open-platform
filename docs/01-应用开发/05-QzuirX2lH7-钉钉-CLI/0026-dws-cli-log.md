@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "钉钉 CLI"
 breadcrumb: "更新日志"
 doc_id: "JqaPUpyWXl"
-updated_at: "2026-09-17 14:16:57"
+updated_at: "2026-10-08 17:38:17"
 ---
 
 > Source: https://open.dingtalk.com/document/development/dws-cli-log
 > Path: 应用开发 / 钉钉 CLI / 更新日志
-> Updated: 2026-09-17 14:16:57
+> Updated: 2026-10-08 17:38:17
 
 # 更新日志
 
@@ -40,6 +40,193 @@ dws upgrade --list
 - 钉钉 CLI 每周发布更新，开发者可扫描下方二维码加入"**dws 开源沟通群**"获取最新动态。
 
   ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/6160536871/p1094200.png)
+
+## **2026-10-03**
+
+### **更新说明**
+
+本周重点：**创建AI卡片全链路上线**、**创建数字员工管理**、**白板预览**、**OA 审批模板创建与更新**四大方向，同步新增通讯录与邮箱查人、考勤审批辅助、云盘与知识库分享范围管理、AI 表格访问密钥管理与写入结果恢复等能力。建议通过 `dws upgrade` 升级到最新版[v1.0.63](https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli/releases/tag/v1.0.63)。
+
+### **新增功能**
+
+#### **AI 卡片上线**
+
+AI 卡片（A2UI）是钉钉会话中的可交互富卡片：一张卡上可组合文本、按钮、输入框、进度面板等组件，数据与流转状态随任务推进动态刷新，适合 Agent 汇报任务进度、展示执行结果等场景。创建一张卡片分四步：编写卡片文件 → 本地校验 → 预览渲染效果 → 发送并持续更新。
+
+- **卡片的创建**
+
+  卡片文件是一组按顺序执行的 JSON 消息（保存为 `card.a2ui.json`）：新建时先 `createSurface` 声明 Catalog，再 `updateDataModel` 初始化数据、`updateComponents` 定义组件；更新已有卡片沿用原 `surfaceId`，只发变化的部分。
+
+  编写时可安装配套卡片编写 Skill，并用 `dws aicard explain <name>` 离线查询卡片组件、函数、常用类型与 Token 字段的契约和示例，内置全部 47 个组件的最小示例均通过片段校验，不依赖本机 Python 环境。
+
+  - Skill 安装：`dws skill setup --mode multi -s dingtalk-aicard`
+  - 相关命令：`dws aicard explain`
+  - 示例：`dws aicard explain Text --compact`
+  - 新增参数：`--compact`（输出精简结果）
+- **卡片结构校验**
+
+  `dws aicard lint` 支持对本地卡片文件、内置样例、片段与资源做本地结构校验：`--file` 校验完整卡片文件，`--self-check` 运行内置自检，`--fragment` 校验片段，`--preflight new-card|resources` 做发送前预检，`--emit` 输出对应 A2UI 消息。本地校验只验证结构，结果中 `renderingVerified` 恒为 `false`。
+
+  - 相关命令：`dws aicard lint`
+  - 示例：`dws aicard lint --file card.json`
+- **卡片预览**
+
+  `dws aicard preview --file` 校验完整的新卡片文件并发送到当前用户单聊；`--summary` 指定预览消息摘要（默认 `Card preview`），`--dry-run` 只校验不发送。返回结果将“请求被接受”与“客户端渲染证据”分开报告（`deliveryVerified`、`renderingVerified` 为 `false`）。
+
+  - 相关命令：`dws aicard preview`
+  - 示例：`dws aicard preview --file card.json`
+- **卡片发送与更新**
+
+  `dws chat message send-a2ui-card` 可在同事单聊（`--open-dingtalk-id`）或群（`--conversation-id`）中创建并推送校验通过的卡片，内容以 JSON 字符串数组交付，发送成功后保存返回的 `bizId` 用于后续更新。两条命令自 v1.0.62 起可用。
+
+  - 相关命令：`dws chat message send-a2ui-card`、`dws chat message update-a2ui-card`
+  - 示例：`dws chat message send-a2ui-card --open-dingtalk-id <openDingTalkId> --content '<A2UI 消息 JSON 字符串数组>'`
+  - 示例：`dws chat message update-a2ui-card --biz-id <bizId> --flow-status FINISH --content '<A2UI 消息 JSON 字符串数组>'`
+
+  相关文档：
+
+  - [DWS 创建与校验](../../05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0014-json-card-dws-create-and-validate.md)
+  - [使用示例](../../05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0013-json-card-usage-examples.md)
+  - [Agent Skill 创建与校验](../../05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0015-json-card-agent-skill-create-and-validate.md)
+  - [DWS 发送与更新](../../05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0017-json-card-dws-send-and-update.md)
+
+#### **数字员工（灰度中）：管理、发布、身份登录与本地接入全链路打通**
+
+数字员工从创建、草稿、发布到身份登录、本地 Agent 接入与运行追踪全链路打通。功能灰度中，如需使用请在表单中提交相关信息：
+
+[钉钉数字员工创建灰度申请（DWS 内&&界面功能）](https://alidocs.dingtalk.com/notable/share/form/v013BMqYy5D4dLEmqwZ_MPojg9m_23zNs0R?source=link)
+
+- **创建、配置与发布**
+
+  新增 `dws dingtalk-tag manage`，覆盖创建、草稿保存、发布、详情、列表与删除：创建时 `--main-program-type` 必填（`open_code` 或 `local_agent`），部门可省略，`--prompt` 为可选提示词；`--avatar-url` 支持公网 HTTP(S) 与本地图片（本地文件复用上传封装并自动回写）；响应模式缺省为 `mention_only`，更新未传时保留原值。详情查询改用 `--snapshot draft|published`（保留历史参数兼容），可见范围通过 `set-visibility` 用 `--user-ids`（`ALL` / `PARTIAL`，整表替换）。草稿配置与发布分别执行，写入不自动发布。`capability skill` 与 `capability mcp` 管理员工挂载的技能与 MCP 资源，支持 Skill ZIP 上传，选择语义为省略保留、空数组清空、非空数组替换；MCP 创建会自动追加草稿依赖。
+
+  - 相关命令：`dws dingtalk-tag manage`（`create` / `save-draft` / `publish` / `detail` / `list` / `delete` / `set-visibility`）、`dws dingtalk-tag capability skill|mcp`
+  - 示例：`dws dingtalk-tag manage create --main-program-type open_code --avatar-url ./avatar.png`
+  - 新增参数：`--snapshot draft|published`、`--avatar-url`（支持本地图片）、`--prompt`（可选）
+- **运行追踪**
+
+  `dws dingtalk-tag run` 提供员工运行状态与执行轨迹查询（`run-status`、`trace`），可用 `--source-id` 与 `--source-type` 定位执行来源。
+
+  - 相关命令：`dws dingtalk-tag run run-status`、`dws dingtalk-tag run trace`
+- **员工身份登录与本地接入**
+
+  数字员工可以以自己的身份登录，并把本地 Agent 接入钉钉：`dws dingtalk-tag manage login` 一条命令完成授权码申请、换票与 Profile 保存，不影响主管当前登录；`dws dingtalk-tag connect` 把本地 Agent 或 DSH 以该员工身份接入，支持事件处理、设备绑定与断线恢复，并提供 `status` / `stop` / `restart` 等管理子命令。
+
+  - 相关命令：`dws dingtalk-tag manage login`、`dws auth exchange`、`dws dingtalk-tag connect`
+  - 示例：`dws dingtalk-tag connect --agent-uuid <uuid> --channel dsh --daemon --alwayson`
+  - 新增参数：`--agent-uuid`（必填）、`--channel dsh|codex|qoder`、`--daemon`、`--alwayson`
+
+#### **白板：本地预览、差异确认与模板体系**
+
+白板补上“先在本地看清楚、再确认提交”的闭环，并新增个人、团队与模板中心模板。
+
+- **白板模板**
+
+  `dws doc whiteboard template` 支持个人、团队与模板中心三个来源的模板创建、列表与保存：个人模板保存可用 `--node` 指定来源节点，团队模板可用 `--template-workspace` 指定模板空间。
+
+  - 相关命令：`dws doc whiteboard template personal|team|public create|list|save`
+  - 新增参数：`--node`、`--template-workspace`
+- **本地预览与安全更新**
+
+  `dws doc whiteboard render` 在本地把白板渲染为 SVG 预览，全程不联网；`dws doc whiteboard +diff` 在提交前对比变更，`+update` 用 `--expected-revision` 与 `--request-id` 防止并发覆盖与重复提交。
+
+  - 相关命令：`dws doc whiteboard render`、`dws doc whiteboard +diff`、`dws doc whiteboard +update`
+  - 示例：`dws doc whiteboard render --source board.json --output preview.svg`
+
+#### **OA 审批：审批模板可创建、可更新**
+
+新增审批模板创建与更新命令行： `dws oa approval template create` 与 `dws oa approval template update`（企业管理员能力）：`create` 必填 `--name`、`--schema-content`，`update` 必填 `--process-code`、`--name`、`--schema-content`、`--process-config`；也可用 `--from-document` 传入完整 JSON 文档的绝对路径整体配置，两种模式互斥。
+
+- 相关命令：`dws oa approval template create`、`dws oa approval template update`、`dws oa approval template detail`
+- 示例：`dws oa approval template create --name 报销审批 --schema-content @schema.json --dry-run`
+
+#### **通讯录：按 dingtalkId 查询员工 userId**
+
+`dws contact user get-by-dingtalk-id --id <dingtalkId>`（别名 `search-dingtalk`）可由 dingtalkId 换取员工 `userId`，方便串联后续接口。
+
+- 相关命令：`dws contact user get-by-dingtalk-id --id <dingtalkId>`（别名 `search-dingtalk`）
+
+#### **钉钉邮箱：按企业邮箱单个与批量查人**
+
+新增 `dws mail user get --org-email` 与 `dws mail user batch-get --org-emails`：按企业邮箱单个或批量（1–100 个，自动去重）查询员工，返回匹配结果与未匹配地址。
+
+- 相关命令：`dws mail user get --org-email`、`dws mail user batch-get --org-emails`
+
+#### **考勤：审批提交前的时长计算与校验**
+
+新增考勤审批辅助命令：`+calculate-approve-duration` 计算审批时长（覆盖 8 类业务类型、5 种时长口径）、`+check-companion-schedules` 校验出差/外出的配套日程、`+get-complex-overtime-setting` 查询员工生效的复杂加班设置。
+
+- 相关命令：`dws attendance +calculate-approve-duration`、`dws attendance +check-companion-schedules`、`dws attendance +get-complex-overtime-setting`
+
+#### **登录鉴权：不联网的只读状态快照**
+
+`dws auth status --readonly` 不加锁、不联网、不写凭据，读取本地登录状态快照，适合脚本与只读检查。
+
+- 相关命令：`dws auth status --readonly`
+
+#### **钉钉云盘：节点分享范围管理**
+
+`dws drive permission set-share-scope --node` 管理节点级分享范围（`PRIVATE` / `ORGANIZATION` / `PUBLIC`），支持角色、密码与有效期设置；仅 `OWNER` / `MANAGER` 可操作。
+
+- 相关命令：`dws drive permission set-share-scope`
+- 示例：`dws drive permission set-share-scope --node <nodeId> --dry-run`
+
+#### **知识库：空间分享范围管理**
+
+`dws wiki permission set-share-scope --workspace` 管理知识库空间级分享范围：`PUBLIC` 时 `--role` 仅支持 `READER` / `DOWNLOADER`；`PRIVATE` 关闭公开且不可逆；仅 `MANAGER` / `OWNER` 可操作。
+
+- 相关命令：`dws wiki permission set-share-scope`
+
+#### **AI 表格：访问密钥管理与写入结果恢复**
+
+- **访问密钥管理**
+
+  新增 AI 表格访问密钥（SQL Sheet API Key）的创建、查询与撤销命令：完整凭据仅在创建时返回，创建结果未知时先查询状态再决定是否重建，不盲目重试。
+
+  - 相关命令：`dws aitable api-key create`、`dws aitable api-key list`、`dws aitable api-key revoke`
+- **写入结果查询与恢复**
+
+  `dws aitable +record-write-result`（只读）核对一次记录写入的实际结果：`+table-copy` 与 `+record-batch-create` 为每个批次生成 `clientToken` 并只提交一次，写入结果不确定时沿用原 `clientToken` 对账恢复，不盲目重试。
+
+  - 相关命令：`dws aitable +record-write-result`
+  - 示例：`dws aitable +record-write-result --base-id b --table-id t --client-token 123e4567-e89b-42d3-a456-426614174000 --dry-run --format json`
+
+#### **等待能力：声明式轮询、事件与自动回退**
+
+框架新增声明式等待（`Contract.Wait`）：`poll` 按节奏轮询、`event` 消费事件流、`auto` 先事件后轮询自动回退；声明支持的命令自动注册 `--wait` / `--wait-timeout` 框架级参数。当前尚无业务命令接入，审批/导出/批量的接入将另行发布。
+
+### **体验优化**
+
+#### **Schema 生成、缓存与启动性能**
+
+Schema 内置在单一 `dws` 可执行文件中交付：支持的平台（darwin / linux / windows 的 amd64 / arm64）在安装或首次执行 `dws schema` 时由本机从实时声明生成身份，将经认证的 protobuf 分片写入共享或用户级缓存目录，后续校验摘要命中后直接读取；缓存缺失或损坏时从实时装配修复，共享缓存存在但无法加锁修复（典型为 root 只读）时回退到用户级缓存。存在插件等运行时扩展时，缓存的装配与修复由隔离子进程完成（使用未注册插件的原始环境），持久缓存保持有效且不继承插件运行时副作用，插件命令不进入 Schema 命令面。运行期每次执行保持完整、实时的命令树（根帮助渲染完整命令树，补充注册的命令与产品、工具命令一同可见），并减少元数据与初始化分配。
+
+#### **聊天消息密文解密扩展到读路径**
+
+智能消息读取快捷命令（`+chat-messages`、`+at-me`、`+search-msg`、`+thread-replies`）在加密策略允许时先解密第三方加密消息再投影：消息投影新增 `contentDecrypted`、`cryptoLayer`、`dingKeyVersion`（大于 0 时），payload 增加解密台账（`decryptCandidateCount`、`decryptAllowedCount`、`decryptedCount`、`decryptFailedCount`、`decryptFailures[ ]`）；单项解密失败记录台账并标记 `partial: true`，不改变退出码。策略关闭时保留密文并逐候选记录 `policy_disabled` 失败。加密策略缓存遵循服务端 TTL：同一会话在窗口内只取一次策略，不再每条消息都请求。
+
+#### **大整数 ID 输出保精度**
+
+解码 MCP 文本响应以及在 `--jq`、`--fields` 与格式化输出中保留超出 `float64` 精确范围的大整数 ID，不再发生精度丢失。
+
+#### **参数校验错误分类统一**
+
+框架自身的参数校验失败统一按验证错误处理（退出码 3），API 错误、显式退出码、取消与超时的原有语义不变；父命令遍历与 wiki 代理解析失败走同一校验边界并保留目标命令提示。必填参数缺失的报错统一为 `missing required flag(s): --name` 格式（原始错误仍作为 cause 可查）。
+
+#### **AI 搜问结果附带证据链**
+
+AI 搜问（`dws aisearch`）搜索结果补充证据与解析详情，配套使用说明要求先核对证据再给出结论或交接后续操作。
+
+#### **内置 Skill 与场景文档精进**
+
+内置 Skill 与场景文档同步精进：OA 模板写入路由从 `oa.md` 拆分为独立的 `oa-template-write.md`（渐进披露），新增连接器审批人规则 `target_connect_approval.md`，补充 50+ 个控件 schema、流程节点与选人规则子文档；数字员工可见范围文档补齐 `ALL` / `PARTIAL`，主程序类型、Skill/MCP 输入的字段契约更明确；文档列表路由覆盖 Devapp / Devdoc 流程与搜索预算；AI 搜问补充意图引导（intent-guide）与轻量配方（lite-recipes）。
+
+### **问题优化**
+
+- **跨平台发布**：修复 Windows SafeChat CGO 运行库崩溃与 Darwin amd64 产物无法启动的问题（#1441），发布前对签名资产静态检查并实际启动每个可执行产物。
+- **消息与事件**：修复单聊引用回复误拒绝；`event consume --flatten` 为全部 7 类 OA 审批事件保留 `staff_id` 等关键字段，抄送事件提供 `cc_time`；个人 Stream 不再把系统控制帧投递为业务消息；数字员工连接改进断线重连（升级后需重启员工 worker 生效）。
+- **模板与协议修复**：修正 OA TableField 的 Skill 示例（#1347）；修复 Windows 自动转换 CRLF 后 AI 卡片协议哈希校验失败、卡片查询与校验命令不可用的问题。
+- **登录恢复**：本地登录加密密钥缺失或旧密文确认不匹配时允许重新授权，旧密文在新凭据可用前保持不动。
 
 ## **2026-09-16**
 

@@ -24,7 +24,7 @@ AI表格中包含如下基本结构：
 
   - `baseId`唯一标识了一篇AI表格文档。`baseId`可以通过以下方法获取。
 
-    | **通过URL获取**  image.png | **通过文档信息面板获取**  imageimage | **通过其它API获取**  - 可通过[获取节点列表](0573-get-node-list.md)接口获取。 **[!NOTE]**  创建AI表格时，`docType`值为`BASE`。 |
+    | **通过URL获取**  image.png | **通过文档信息面板获取**  imageimage | **通过其它API获取**  - 可通过[获取节点列表](0571-get-node-list.md)接口获取。 **[!NOTE]**  创建AI表格时，`docType`值为`BASE`。 |
     | --- | --- | --- |
 - Sheet（即数据表），一篇AI表格文档中通常有多个数据表，且至少有一个数据表。
 

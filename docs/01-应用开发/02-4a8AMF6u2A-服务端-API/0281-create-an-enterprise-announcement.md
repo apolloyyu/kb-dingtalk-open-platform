@@ -31,7 +31,7 @@ updated_at: "2026-07-14 09:21:48"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | 6d1bxxxx | 调用该接口的应用凭证，通过[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)接口获取。 |
+| access\_token | String | 是 | 6d1bxxxx | 调用该接口的应用凭证，通过[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)接口获取。 |
 
 ### **请求体**
 
@@ -49,7 +49,7 @@ updated_at: "2026-07-14 09:21:48"
 | push\_top | Boolean | 否 | true | 公告是否置顶。   - **true**：置顶 - **false**：不置顶 |
 | content | String | 是 | 欢迎加入我们的大家庭 | 公告内容。 |
 | category\_id | String | 否 | 987uy66t5rt54er | 公告分类ID。 |
-| coverpic\_mediaid | String | 否 | @lAxxxxeRzMqM0BLA | 封面图，格式为`@mediaId`。  可以通过[上传媒体文件](0648-upload-media-files.md)接口上传图片，获取media\_id参数值。 |
+| coverpic\_mediaid | String | 否 | @lAxxxxeRzMqM0BLA | 封面图，格式为`@mediaId`。  可以通过[上传媒体文件](0646-upload-media-files.md)接口上传图片，获取media\_id参数值。 |
 
 ### **请求示例**
 

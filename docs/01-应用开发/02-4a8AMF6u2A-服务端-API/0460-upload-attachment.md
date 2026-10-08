@@ -24,7 +24,7 @@ updated_at: "2025-09-10 19:35:01"
 
 上传附件需要三步：
 
-1. 获取上传信息，请参考[获取资源上传信息](0583-api-getresourceuploadinfo.md)接口。
+1. 获取上传信息，请参考[获取资源上传信息](0581-api-getresourceuploadinfo.md)接口。
 2. 将本地文件上传到第一步返回的`uploadUrl`中，可以使用 `PUT` 请求上传本地文件。
 
    下面是一个使用`cURL`命令的示例（示例中的@符号不可省略）。

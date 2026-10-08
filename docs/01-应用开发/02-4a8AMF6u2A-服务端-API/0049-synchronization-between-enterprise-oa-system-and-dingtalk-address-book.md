@@ -119,7 +119,7 @@ HR或管理员直接在钉钉中调整了组织架构（如部门重命名、员
 
 步骤二：申请接口权限，申请通讯录管理相关接口权限。
 
-步骤三：获取应用访问凭证[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
+步骤三：获取应用访问凭证[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
 
 步骤四：调用通讯录相关API：
 
@@ -158,7 +158,7 @@ HR或管理员直接在钉钉中调整了组织架构（如部门重命名、员
    > **[!NOTE]**
    >
    > 不同业务场景可能需要不同的权限组合，请根据实际需求申请。例如批量导入场景还需申请批量操作用户的相关权限。
-3. 根据获取的 `Client ID` 和 `Client Secret`，调用[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)接口，获取应用访问凭证。
+3. 根据获取的 `Client ID` 和 `Client Secret`，调用[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)接口，获取应用访问凭证。
 
    ```
    public void getAccessToken() throws ApiException {

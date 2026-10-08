@@ -33,7 +33,7 @@ OA高级版，是钉钉 OA 审批团队新推出的商业化版本，详情请�
 
 为满足广大开发者在个性化应用开发方面的需求，钉钉OA审批新增了一批面向[OA审批高级版](dingtalk://dingtalkclient/page/link?url=https%3A%2F%2Fpage.dingtalk.com%2Fwow%2Fdingtalk%2Fdefault%2Fdingtalk%2FlnfR8GaRSWqNncZHSvLLx%3Fdd_mini_app_id%3D5000000004997171&web_wnd=general&width=480&height=800)客户的专享OpenAPI&解决方案。这些专享OpenAPI&解决方案将提供更丰富的能力，响应更个性化的业务需求，支持不同场景下的企业内部应用开发，建议开发者更合理、有效地使用OpenAPI，打造更健康的钉钉开放生态。
 
-专享开放能力介绍详情请参见：[关于新增OA审批高级版专享OpenAPI和解决方案的说明](1442-description-of-new-oa-approval-premium-exclusive-openapi-and-solutions.md)。
+专享开放能力介绍详情请参见：[关于新增OA审批高级版专享OpenAPI和解决方案的说明](1440-description-of-new-oa-approval-premium-exclusive-openapi-and-solutions.md)。
 
 - OA 高级版提供 30+专享开放API，包含批量同意或拒绝等高效的 API
 - OA 高级版提供 2 个专享流程中心对接方案，支持使用三方流程+钉钉 OA 页面对接和自建应用集成钉钉 OA 审批来实现业务定制。
@@ -50,39 +50,39 @@ OA审批提供了丰富的接口开放能力，开发者通过API接口可以实
 
 | **API** | **API说明** | **API版本** |
 | --- | --- | --- |
-| [创建或更新审批表单模板](0493-create-an-approval-form-template.md) | 创建或更新一个OA审批的流程表单模板，可指定表单控件列表并生成默认审批流程。 | 新版 |
-| [获取表单 schema](0494-obtain-the-form-schema.md) | 通过 processCode 获取对应表单的 schema 信息。 | 新版 |
-| [获取审批单流程中的节点信息](0495-approval-process-prediction.md) | 获取审批单流程中的节点信息。 | 新版 |
-| [获取指定用户可见的审批表单列表](0496-obtains-a-list-of-approval-forms-visible-to-the-specified.md) | 根据员工的userid分页获取该用户可见的审批表单列表。 | 新版 |
-| [获取当前企业所有可管理的表单](0497-get-all-manageable-forms-for-the-current-enterprise.md) | 获取当前企业所有可管理的审批表单。 | 新版 |
-| [查询已设置为条件的表单组件](0498-query-form-components-that-have-been-set-as-criteria-1.md) | 获取用户在当前企业所有可管理的审批表单。 | 新版 |
+| [创建或更新审批表单模板](0491-create-an-approval-form-template.md) | 创建或更新一个OA审批的流程表单模板，可指定表单控件列表并生成默认审批流程。 | 新版 |
+| [获取表单 schema](0492-obtain-the-form-schema.md) | 通过 processCode 获取对应表单的 schema 信息。 | 新版 |
+| [获取审批单流程中的节点信息](0493-approval-process-prediction.md) | 获取审批单流程中的节点信息。 | 新版 |
+| [获取指定用户可见的审批表单列表](0494-obtains-a-list-of-approval-forms-visible-to-the-specified.md) | 根据员工的userid分页获取该用户可见的审批表单列表。 | 新版 |
+| [获取当前企业所有可管理的表单](0495-get-all-manageable-forms-for-the-current-enterprise.md) | 获取当前企业所有可管理的审批表单。 | 新版 |
+| [查询已设置为条件的表单组件](0496-query-form-components-that-have-been-set-as-criteria-1.md) | 获取用户在当前企业所有可管理的审批表单。 | 新版 |
 
 ##### **审批实例**
 
 | **API** | **API说明** | **API版本** |
 | --- | --- | --- |
-| [发起审批实例](0499-create-an-approval-instance.md) | 发起OA审批实例。 | 新版 |
-| [获取单个审批实例详情](0500-obtains-the-details-of-a-single-approval-instance-pop.md) | 根据审批实例ID，获取审批实例详情。 | 新版 |
-| [撤销审批实例](0501-revoke-an-approval-instance.md) | 撤销发起的审批实例。 | 新版 |
-| [添加审批评论](0502-official-approval-adds-approval-comments.md) | 对审批实例添加评论。 | 新版 |
-| [获取审批实例ID列表](0503-obtain-an-approval-list-of-instance-ids.md) | 获取权限范围内的相关部门审批实例ID列表。 | 新版 |
+| [发起审批实例](0497-create-an-approval-instance.md) | 发起OA审批实例。 | 新版 |
+| [获取单个审批实例详情](0498-obtains-the-details-of-a-single-approval-instance-pop.md) | 根据审批实例ID，获取审批实例详情。 | 新版 |
+| [撤销审批实例](0499-revoke-an-approval-instance.md) | 撤销发起的审批实例。 | 新版 |
+| [添加审批评论](0500-official-approval-adds-approval-comments.md) | 对审批实例添加评论。 | 新版 |
+| [获取审批实例ID列表](0501-obtain-an-approval-list-of-instance-ids.md) | 获取权限范围内的相关部门审批实例ID列表。 | 新版 |
 
 ##### **审批钉盘空间&附件**
 
 | **API** | **API说明** | **API版本** |
 | --- | --- | --- |
-| [获取审批钉盘空间信息](0504-obtains-the-information-about-approval-nail-disk.md) | 获取审批钉盘空间的ID并授予当前用户上传附件的权限。 | 新版 |
-| [授权预览审批附件](0505-official-authorized-preview-approval-attachment.md) | 授权预览审批附件。 | 新版 |
-| [授权下载审批钉盘文件](0506-download-the-approval-nail-file.md) | 根据钉盘空间spaceId和文件fileId对钉盘文件进行授权审批钉盘空间下载权限。 | 新版 |
-| [下载审批附件](0507-download-an-approval-attachment.md) | 获取审批文件下载授权，并且生成下载链接。 | 新版 |
+| [获取审批钉盘空间信息](0502-obtains-the-information-about-approval-nail-disk.md) | 获取审批钉盘空间的ID并授予当前用户上传附件的权限。 | 新版 |
+| [授权预览审批附件](0503-official-authorized-preview-approval-attachment.md) | 授权预览审批附件。 | 新版 |
+| [授权下载审批钉盘文件](0504-download-the-approval-nail-file.md) | 根据钉盘空间spaceId和文件fileId对钉盘文件进行授权审批钉盘空间下载权限。 | 新版 |
+| [下载审批附件](0505-download-an-approval-attachment.md) | 获取审批文件下载授权，并且生成下载链接。 | 新版 |
 
 ##### **审批任务**
 
 | **API** | **API说明** | **API版本** |
 | --- | --- | --- |
-| [同意或拒绝审批任务](0508-approve-or-reject-the-approval-task.md) | 根据指定模板ID、实例ID、审批节点ID和审批人，对单个审批任务进行处理。 | 新版 |
-| [获取用户待审批数量](0510-queries-the-number-of-requests-to-be-approved-by-users.md) | 根据用户的userid获取该用户待处理的审批数量。 | 新版 |
-| [转交OA审批任务](0509-transfer-the-oa-approval-task.md) | 转交OA审批任务。 | 新版 |
+| [同意或拒绝审批任务](0506-approve-or-reject-the-approval-task.md) | 根据指定模板ID、实例ID、审批节点ID和审批人，对单个审批任务进行处理。 | 新版 |
+| [获取用户待审批数量](0508-queries-the-number-of-requests-to-be-approved-by-users.md) | 根据用户的userid获取该用户待处理的审批数量。 | 新版 |
+| [转交OA审批任务](0507-transfer-the-oa-approval-task.md) | 转交OA审批任务。 | 新版 |
 
 #### **自有OA审批**
 
@@ -90,31 +90,31 @@ OA审批提供了丰富的接口开放能力，开发者通过API接口可以实
 
 | **API** | **API说明** | **API版本** |
 | --- | --- | --- |
-| [创建或更新审批模板](0512-create-orupdate-the-approval-template-new.md) | 创建或更新审批模板。 | 新版 |
-| [获取模板code](0513-obtain-the-template-code.md) | 根据模板名称查询process\_code。 | 新版 |
-| [删除模板](0514-self-owned-approval-deletion-template.md) | 删除为企业创建的审批模板，同时删除该模板下创建的实例和待办任务。 | 新版 |
+| [创建或更新审批模板](0510-create-orupdate-the-approval-template-new.md) | 创建或更新审批模板。 | 新版 |
+| [获取模板code](0511-obtain-the-template-code.md) | 根据模板名称查询process\_code。 | 新版 |
+| [删除模板](0512-self-owned-approval-deletion-template.md) | 删除为企业创建的审批模板，同时删除该模板下创建的实例和待办任务。 | 新版 |
 
 ##### **审批实例**
 
 | **API** | **API说明** | **API版本** |
 | --- | --- | --- |
-| [创建实例](0515-create-a-ticket-approval-instance.md) | 创建不带流程的审批实例。 | 新版 |
-| [更新实例状态](0516-update-instance-status.md) | 更新实例状态。 | 新版 |
-| [批量更新实例状态](0517-self-owned-batch-update-of-instance-status.md) | 批量更新实例状态。 | 新版 |
+| [创建实例](0513-create-a-ticket-approval-instance.md) | 创建不带流程的审批实例。 | 新版 |
+| [更新实例状态](0514-update-instance-status.md) | 更新实例状态。 | 新版 |
+| [批量更新实例状态](0515-self-owned-batch-update-of-instance-status.md) | 批量更新实例状态。 | 新版 |
 
 ##### **流程中心任务**
 
 | **API** | **API说明** | **API版本** |
 | --- | --- | --- |
-| [创建流程中心待处理任务](0518-create-pending-tasks-in-process-center.md) | 创建OA审批的待办任务。 | 新版 |
-| [查询通过流程中心集成的OA审批任务](0519-query-oa-approval-tasks-integrated-through-process-center.md) | 可以查询到用户运行中的审批任务。 | 新版 |
-| [更新流程中心任务状态](0520-update-process-center-task-status.md) | 更新待办任务的状态。 | 新版 |
-| [批量取消流程中心待处理任务](0521-cancel-multiple-oa-approval-tasks.md) | 批量取消流程中心待处理任务。 | 新版 |
-| [清理OA审批数据](0522-clear-oa-approval-data.md) | 清理审批相关数据。 | 新版 |
+| [创建流程中心待处理任务](0516-create-pending-tasks-in-process-center.md) | 创建OA审批的待办任务。 | 新版 |
+| [查询通过流程中心集成的OA审批任务](0517-query-oa-approval-tasks-integrated-through-process-center.md) | 可以查询到用户运行中的审批任务。 | 新版 |
+| [更新流程中心任务状态](0518-update-process-center-task-status.md) | 更新待办任务的状态。 | 新版 |
+| [批量取消流程中心待处理任务](0519-cancel-multiple-oa-approval-tasks.md) | 批量取消流程中心待处理任务。 | 新版 |
+| [清理OA审批数据](0520-clear-oa-approval-data.md) | 清理审批相关数据。 | 新版 |
 
 ### **专享开放**
 
-专享开放介绍详情请参见：[关于新增OA审批高级版专享OpenAPI和解决方案的说明](1442-description-of-new-oa-approval-premium-exclusive-openapi-and-solutions.md)。
+专享开放介绍详情请参见：[关于新增OA审批高级版专享OpenAPI和解决方案的说明](1440-description-of-new-oa-approval-premium-exclusive-openapi-and-solutions.md)。
 
 ### 回调事件列表
 
@@ -143,10 +143,10 @@ OA审批提供了丰富的接口开放能力，开发者通过API接口可以实
 
 **钉钉应用标准链接协议，可以让钉钉的应用或功能直接通过链接即可访问**，如跳转某个审批页面、打开审批详情页、发起页等功能等。
 
-- [打开审批首页](1424-open-approval-home-page.md)
-- [打开审批筛选页](1426-open-approval-filter-page.md)
-- [发起审批](1423-initiate-approval.md)
-- [打开审批详情](1425-open-approval-details.md)
+- [打开审批首页](1422-open-approval-home-page.md)
+- [打开审批筛选页](1424-open-approval-filter-page.md)
+- [发起审批](1421-initiate-approval.md)
+- [打开审批详情](1423-open-approval-details.md)
 
 > **[!IMPORTANT]**
 >
@@ -158,21 +158,21 @@ OA审批提供了丰富的接口开放能力，开发者通过API接口可以实
 
 ### **标准版**
 
-- [官方OA审批：钉钉流程与页面对接](0491-use-the-dingtalk-oa-approval-process-and-page-interface.md)
-- [自有OA审批：三方流程与页面对接](0479-use-three-party-process-and-page-docking.md)
+- [官方OA审批：钉钉流程与页面对接](0482-use-the-dingtalk-oa-approval-process-and-page-interface.md)
+- [自有OA审批：三方流程与页面对接](0483-use-three-party-process-and-page-docking.md)
 
 ### **高级版专享**
 
 钉钉 OA 审批提供多种企业流程接入方案，满足企业各类业务管理和对接诉求。
 
-- [官方OA审批：钉钉流程与页面对接](0491-use-the-dingtalk-oa-approval-process-and-page-interface.md)
-- [自有OA审批：三方流程与页面对接](0479-use-three-party-process-and-page-docking.md)
-- [审批页面托管：三方流程与钉钉页面对接](0484-use-the-three-party-process-to-interface-with-the-dingtalk-oa.md)
-- [企业自建应用：专享OpenAPI集成审批](0481-use-the-exclusive-openapi-capability-to-dingtalk-oa-approval-through.md)
-- [企业自建审批中心：批量快捷审批](0480-enterprise-self-built-approval-center-supports-batch-quick-approval-and-other.md)
-- [自定义快捷审批：三方任务待办卡片审批](0482-custom-quick-approval-supports-quick-approval-of-pending-tasks-from.md)
-- [自定义审批业务分组：待办中心业务分类](0483-user-defined-approval-business-group-supports-custom-business-classification-in-the.md)
-- [审批流程托管：钉钉流程与三方页面对接](0492-approval-process-hosting-integration-mode-use-the-dingtalk-official-oa.md)
+- [官方OA审批：钉钉流程与页面对接](0482-use-the-dingtalk-oa-approval-process-and-page-interface.md)
+- [自有OA审批：三方流程与页面对接](0483-use-three-party-process-and-page-docking.md)
+- [审批页面托管：三方流程与钉钉页面对接](0489-use-the-three-party-process-to-interface-with-the-dingtalk-oa.md)
+- [企业自建应用：专享OpenAPI集成审批](0486-use-the-exclusive-openapi-capability-to-dingtalk-oa-approval-through.md)
+- [企业自建审批中心：批量快捷审批](0485-enterprise-self-built-approval-center-supports-batch-quick-approval-and-other.md)
+- [自定义快捷审批：三方任务待办卡片审批](0487-custom-quick-approval-supports-quick-approval-of-pending-tasks-from.md)
+- [自定义审批业务分组：待办中心业务分类](0488-user-defined-approval-business-group-supports-custom-business-classification-in-the.md)
+- [审批流程托管：钉钉流程与三方页面对接](0484-approval-process-hosting-integration-mode-use-the-dingtalk-official-oa.md)
 
 ## **接入方案**
 
@@ -192,10 +192,10 @@ OA审批提供了丰富的接口开放能力，开发者通过API接口可以实
 
 | **接入方式** | **方案说明** | **方案特点&价值** |
 | --- | --- | --- |
-| 三方流程+页面（钉钉端内打开） | [自有OA审批：三方流程与页面对接](0479-use-three-party-process-and-page-docking.md)  可在业务系统发起流程，调用钉钉**自有OA审批相关接口**创建钉钉OA审批流程，在钉钉端打开业务系统审批详情页处理流程。 | **更轻量**  1、接入简单，直接在钉钉端内打开业务系统页面审批  2、只有同意拒绝等基础操作，无和钉钉连接操作，如拉群  3、延续用户原来使用的流程和页面习惯，低成本快速使用 |
-| 钉钉OA审批流程+页面 | [官方OA审批：钉钉流程与页面对接](0491-use-the-dingtalk-oa-approval-process-and-page-interface.md)  可在业务系统发起流程，调用钉钉**官方OA审批相关接口**创建钉钉OA审批流程，在钉钉端打开钉钉官方审批详情页处理流程。 | **更标准**  1、标准化对接，使用钉钉OA流程和页面能力，无缝和钉钉聊天、待办、通知连接，高效审批  2、复用钉钉官方OA审批流程引擎和表单组件能力，帮助不同业务的审批流程上钉，为用户在钉钉上提供一站式、多端统一的OA 审批产品体验 |
-| 三方流程+钉钉OA审批页面（钉钉OA审批高级版专享） | [审批页面托管：三方流程与钉钉页面对接](0484-use-the-three-party-process-to-interface-with-the-dingtalk-oa.md)  可在业务系统发起流程，基于钉钉官方OA审批提供的**审批单据详情页搭建能力**，调用钉钉接口**用三方流程业务数据渲染钉钉OA审批页面**，在钉钉端打开钉钉官方OA审批详情页处理流程。 | **更灵活**  1、灵活对接，将不同业务系统的审批单结构、样式统一，为用户提供多端（移动端/PC/平板）一致体验  2、审批操作区按钮可自定义，同意、拒绝、转交、打印等等  3、托管后三方审批流转情况将汇集到钉钉官方审批效率看板中，管理层可通过流程效率统计报告全方位诊断企业的审批效率和合理性。 |
-| 自建应用，集成钉钉OA审批（钉钉OA审批高级版专享） | [企业自建应用：专享OpenAPI集成审批](0481-use-the-exclusive-openapi-capability-to-dingtalk-oa-approval-through.md)  通过**钉钉OA审批高级版专享开放接口和前端页面AppLink协议**，支持企业自建应用，来实现业务应用的流程和钉钉侧流程**在自建应用统一批量处理**，帮助**实现企业自建审批中心**等个性化业务需求。 | **更定制**  1、定制对接，企业可根据业务，实现页面和功能逻辑的定制  2、专享OpenAPI和前端页面AppLink协议开放，将提供更丰富的能力，响应更个性化的业务需求，支持企业自建审批中心、流程交接等业务解决方案 |
+| 三方流程+页面（钉钉端内打开） | [自有OA审批：三方流程与页面对接](0483-use-three-party-process-and-page-docking.md)  可在业务系统发起流程，调用钉钉**自有OA审批相关接口**创建钉钉OA审批流程，在钉钉端打开业务系统审批详情页处理流程。 | **更轻量**  1、接入简单，直接在钉钉端内打开业务系统页面审批  2、只有同意拒绝等基础操作，无和钉钉连接操作，如拉群  3、延续用户原来使用的流程和页面习惯，低成本快速使用 |
+| 钉钉OA审批流程+页面 | [官方OA审批：钉钉流程与页面对接](0482-use-the-dingtalk-oa-approval-process-and-page-interface.md)  可在业务系统发起流程，调用钉钉**官方OA审批相关接口**创建钉钉OA审批流程，在钉钉端打开钉钉官方审批详情页处理流程。 | **更标准**  1、标准化对接，使用钉钉OA流程和页面能力，无缝和钉钉聊天、待办、通知连接，高效审批  2、复用钉钉官方OA审批流程引擎和表单组件能力，帮助不同业务的审批流程上钉，为用户在钉钉上提供一站式、多端统一的OA 审批产品体验 |
+| 三方流程+钉钉OA审批页面（钉钉OA审批高级版专享） | [审批页面托管：三方流程与钉钉页面对接](0489-use-the-three-party-process-to-interface-with-the-dingtalk-oa.md)  可在业务系统发起流程，基于钉钉官方OA审批提供的**审批单据详情页搭建能力**，调用钉钉接口**用三方流程业务数据渲染钉钉OA审批页面**，在钉钉端打开钉钉官方OA审批详情页处理流程。 | **更灵活**  1、灵活对接，将不同业务系统的审批单结构、样式统一，为用户提供多端（移动端/PC/平板）一致体验  2、审批操作区按钮可自定义，同意、拒绝、转交、打印等等  3、托管后三方审批流转情况将汇集到钉钉官方审批效率看板中，管理层可通过流程效率统计报告全方位诊断企业的审批效率和合理性。 |
+| 自建应用，集成钉钉OA审批（钉钉OA审批高级版专享） | [企业自建应用：专享OpenAPI集成审批](0486-use-the-exclusive-openapi-capability-to-dingtalk-oa-approval-through.md)  通过**钉钉OA审批高级版专享开放接口和前端页面AppLink协议**，支持企业自建应用，来实现业务应用的流程和钉钉侧流程**在自建应用统一批量处理**，帮助**实现企业自建审批中心**等个性化业务需求。 | **更定制**  1、定制对接，企业可根据业务，实现页面和功能逻辑的定制  2、专享OpenAPI和前端页面AppLink协议开放，将提供更丰富的能力，响应更个性化的业务需求，支持企业自建审批中心、流程交接等业务解决方案 |
 
 ## **名词解释**
 
@@ -252,7 +252,7 @@ OA审批提供了丰富的接口开放能力，开发者通过API接口可以实
 
 ### **bizCategoryId**
 
-审批表单所属的业务分类标识。可通过[OA审批事件的事件体](../04-LFcRvVD08N-事件订阅/0039-event-bpms-instance-change.md)或[获取表单 schema](0494-obtain-the-form-schema.md)接口获取。常用的套件业务分类标识参见下方**OA审批****套件业务分类标识**内容。
+审批表单所属的业务分类标识。可通过[OA审批事件的事件体](../04-LFcRvVD08N-事件订阅/0039-event-bpms-instance-change.md)或[获取表单 schema](0492-obtain-the-form-schema.md)接口获取。常用的套件业务分类标识参见下方**OA审批****套件业务分类标识**内容。
 
 ### **OA审批****套件业务分类标识**
 

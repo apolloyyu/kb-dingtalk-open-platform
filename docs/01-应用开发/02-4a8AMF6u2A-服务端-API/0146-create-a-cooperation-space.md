@@ -40,7 +40,7 @@ updated_at: "2026-06-02 09:24:46"
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
 | orgName | String | 是 | 上下游组织名称。 |
-| logoMediaId | String | 否 | 上下游组织的logo，调用[上传媒体文件](0648-upload-media-files.md)接口获取图片的media\_id参数值。 |
+| logoMediaId | String | 否 | 上下游组织的logo，调用[上传媒体文件](0646-upload-media-files.md)接口获取图片的media\_id参数值。 |
 | industryCode | Long | 否 | 行业code。 |
 
 ### 请求示例

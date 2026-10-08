@@ -4,88 +4,87 @@
 > 生成物（ops/scripts/build_links.py），勿手改。
 
 - 1196 ← [全局错误码](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0013-server-api-error-codes-1.md)（服务端 API）
-- 1092 ← [获取企业内部应用的accessToken](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md)（服务端 API）
+- 1091 ← [获取企业内部应用的accessToken](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md)（服务端 API）
 - 769 ← [获取第三方应用授权企业的accessToken](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0033-obtain-the-access-token-of-the-authorized-enterprise-1.md)（服务端 API）
-- 383 ← [获取企业内部应用的access_token](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1446-obtain-orgapp-token.md)（服务端 API）
+- 383 ← [获取企业内部应用的access_token](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1444-obtain-orgapp-token.md)（服务端 API）
 - 270 ← [查询用户详情](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0055-query-user-details.md)（服务端 API）
-- 246 ← [服务商获取第三方应用授权企业的access_token](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1448-obtain-isvapp-token.md)（服务端 API）
-- 93 ← [应用创建与配置](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md)（开发指南）
+- 246 ← [服务商获取第三方应用授权企业的access_token](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1446-obtain-isvapp-token.md)（服务端 API）
+- 91 ← [应用创建与配置](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md)（开发指南）
 - 78 ← [获取用户token](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0031-obtain-user-token.md)（服务端 API）
-- 58 ← [服务端SDK下载](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0002-download-the-server-side-sdk.md)（服务端 API）
-- 52 ← [基础概念](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md)（开发指南）
+- 57 ← [服务端SDK下载](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0002-download-the-server-side-sdk.md)（服务端 API）
+- 51 ← [基础概念](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md)（开发指南）
 - 50 ← [获取部门用户userid列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0064-query-the-list-of-department-userids.md)（服务端 API）
 - 47 ← [获取开发者权限](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0006-get-developer-permissions.md)（开发指南）
 - 47 ← [通过免登码获取用户信息](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0023-obtain-the-userid-of-a-user-by-using-the-log-free.md)（服务端 API）
-- 44 ← [创建知识库文档](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0569-create-team-space-document.md)（服务端 API）
-- 40 ← [上传媒体文件](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0648-upload-media-files.md)（服务端 API）
+- 44 ← [创建知识库文档](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0567-create-team-space-document.md)（服务端 API）
+- 40 ← [上传媒体文件](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0646-upload-media-files.md)（服务端 API）
 - 39 ← [获取部门列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0081-user-management-acquires-the-list-departments.md)（服务端 API）
 - 38 ← [获取企业授权信息](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0041-obtains-the-basic-information-of-an-enterprise.md)（服务端 API）
 - 37 ← [获取用户通讯录个人信息](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0053-dingtalk-retrieve-user-information.md)（服务端 API）
-- 37 ← [添加空间](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0654-add-space.md)（服务端 API）
-- 34 ← [获取文件或文件夹列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0668-get-a-list-of-files-or-folders.md)（服务端 API）
+- 37 ← [添加空间](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0652-add-space.md)（服务端 API）
+- 34 ← [获取文件或文件夹列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0666-get-a-list-of-files-or-folders.md)（服务端 API）
 - 30 ← [添加接口调用权限](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0003-add-api-permission.md)（服务端 API）
-- 30 ← [获取部门列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1156-obtains-the-department-node-list.md)（服务端 API）
-- 27 ← [发起审批实例](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0499-create-an-approval-instance.md)（服务端 API）
-- 27 ← [概述](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0555-knowledge-base-overview.md)（服务端 API）
-- 26 ← [获取所有工作表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0597-obtain-all-worksheets.md)（服务端 API）
+- 30 ← [获取部门列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1154-obtains-the-department-node-list.md)（服务端 API）
+- 27 ← [发起审批实例](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0497-create-an-approval-instance.md)（服务端 API）
+- 27 ← [概述](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0553-knowledge-base-overview.md)（服务端 API）
+- 26 ← [获取所有工作表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0595-obtain-all-worksheets.md)（服务端 API）
 - 26 ← [dd.canIUse](../docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0477-dd-caniuse.md)（客户端 JSAPI）
-- 24 ← [创建场景群](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0749-create-a-scene-group.md)（服务端 API）
-- 22 ← [创建并投放卡片](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0786-create-and-deliver-cards.md)（服务端 API）
-- 21 ← [获取单个审批实例详情](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0500-obtains-the-details-of-a-single-approval-instance-pop.md)（服务端 API）
+- 24 ← [创建场景群](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0747-create-a-scene-group.md)（服务端 API）
+- 22 ← [创建并投放卡片](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0784-create-and-deliver-cards.md)（服务端 API）
+- 21 ← [获取单个审批实例详情](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0498-obtains-the-details-of-a-single-approval-instance-pop.md)（服务端 API）
 - 21 ← [创建连接器](../docs/02-连接平台/02-XdgyZifJkr-我的连接/0010-create-connector.md)（我的连接）
-- 20 ← [创建群](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1486-create-a-scene-group-v2.md)（服务端 API）
+- 20 ← [创建群](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1484-create-a-scene-group-v2.md)（服务端 API）
 - 19 ← [客户端SDK介绍](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0031-webapp-read-before-development.md)（开发指南）
-- 19 ← [获取审批实例ID列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0503-obtain-an-approval-list-of-instance-ids.md)（服务端 API）
-- 19 ← [获取文件上传信息](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0677-obtain-file-upload-informations.md)（服务端 API）
-- 19 ← [查询服务号列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0815-query-service-number-list.md)（服务端 API）
+- 19 ← [获取审批实例ID列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0501-obtain-an-approval-list-of-instance-ids.md)（服务端 API）
+- 19 ← [获取文件上传信息](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0675-obtain-file-upload-informations.md)（服务端 API）
+- 19 ← [查询服务号列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0813-query-service-number-list.md)（服务端 API）
 - 19 ← [事件订阅总览](../docs/01-应用开发/04-LFcRvVD08N-事件订阅/0002-org-event-overview.md)（事件订阅）
 - 18 ← [创建视频会议](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0401-create-a-video-conference.md)（服务端 API）
-- 18 ← [获取空间列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0638-queries-a-space-list.md)（服务端 API）
+- 18 ← [获取空间列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0636-queries-a-space-list.md)（服务端 API）
 - 18 ← [技术支持](../docs/01-应用开发/07-TjCzIgfQs3-平台服务/0044-ngliko.md)（平台服务）
-- 17 ← [获取审批钉盘空间信息](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0504-obtains-the-information-about-approval-nail-disk.md)（服务端 API）
-- 17 ← [根据 dentryUuid 获取 spaceId](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0675-api-getdentryidbyuuid.md)（服务端 API）
+- 17 ← [获取审批钉盘空间信息](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0502-obtains-the-information-about-approval-nail-disk.md)（服务端 API）
+- 17 ← [根据 dentryUuid 获取 spaceId](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0673-api-getdentryidbyuuid.md)（服务端 API）
 - 16 ← [查询日程列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0256-query-an-event-list.md)（服务端 API）
-- 16 ← [概述](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md)（服务端 API）
-- 16 ← [提交文件](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0678-submittal-file.md)（服务端 API）
-- 16 ← [添加权限](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0684-add-permissions-file.md)（服务端 API）
-- 16 ← [创建钉钉客联钉外账号](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1847-create-bc-account-association.md)（服务端 API）
+- 16 ← [提交文件](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0676-submittal-file.md)（服务端 API）
+- 16 ← [添加权限](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0682-add-permissions-file.md)（服务端 API）
+- 16 ← [创建钉钉客联钉外账号](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1845-create-bc-account-association.md)（服务端 API）
 - 16 ← [配置事件推送方式](../docs/01-应用开发/04-LFcRvVD08N-事件订阅/0003-configure-stream-push.md)（事件订阅）
 - 15 ← [配置企业机器人](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0078-configure-the-robot-application.md)（开发指南）
 - 15 ← [概述](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0007-function-description.md)（服务端 API）
 - 15 ← [获取第三方企业应用的suiteAccessToken](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0035-obtains-the-suite-acess-token-of-third-party-enterprise-applications.md)（服务端 API）
-- 15 ← [创建或更新审批表单模板](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0493-create-an-approval-form-template.md)（服务端 API）
-- 15 ← [查询项目中的任务](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1229-query-tasks-in-a-project.md)（服务端 API）
+- 15 ← [概述](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md)（服务端 API）
+- 15 ← [创建或更新审批表单模板](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0491-create-an-approval-form-template.md)（服务端 API）
+- 15 ← [查询项目中的任务](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1227-query-tasks-in-a-project.md)（服务端 API）
 - 14 ← [获取角色列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0088-obtains-a-list-of-enterprise-roles.md)（服务端 API）
 - 14 ← [获取外部联系人列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0099-obtain-the-external-contact-list.md)（服务端 API）
 - 14 ← [数据说明](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0459-data-structure.md)（服务端 API）
 - 14 ← [获取所有数据表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0463-api-notable-getallsheets.md)（服务端 API）
-- 14 ← [发送工作通知](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0772-asynchronous-sending-of-enterprise-session-messages.md)（服务端 API）
+- 14 ← [发送工作通知](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0770-asynchronous-sending-of-enterprise-session-messages.md)（服务端 API）
 - 14 ← [步骤一：入驻成为产品方案商](../docs/01-应用开发/07-TjCzIgfQs3-平台服务/0028-become-an-application-service-provider.md)（平台服务）
 - 13 ← [获取部门详情](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0080-query-department-details0-v2.md)（服务端 API）
 - 13 ← [groupId转换为groupKey](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0179-groupid-to-groupkey.md)（服务端 API）
 - 13 ← [获取多个表单实例ID](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0326-api-searchformdataidlist-v2.md)（服务端 API）
-- 13 ← [概述](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0701-development-robot-overview.md)（服务端 API）
-- 13 ← [消息发送与接收类型](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0702-robot-message-type.md)（服务端 API）
-- 13 ← [创建课程](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1137-create-course.md)（服务端 API）
+- 13 ← [概述](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0699-development-robot-overview.md)（服务端 API）
+- 13 ← [消息发送与接收类型](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0700-robot-message-type.md)（服务端 API）
+- 13 ← [创建课程](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1135-create-course.md)（服务端 API）
 - 13 ← [uploadAttachmentToDingTalk](../docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0332-jsapi-upload-attachment-to-ding-talk.md)（客户端 JSAPI）
-- 13 ← [小程序开发工具](../docs/01-应用开发/06-JDICnQyZLF-开发工具/0001-miniapp-tool.md)（开发工具）
 - 13 ← [添加执行动作](../docs/02-连接平台/02-XdgyZifJkr-我的连接/0012-add-execution-action-1.md)（我的连接）
 - 12 ← [发布应用](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0019-publish-dingtalk-application.md)（开发指南）
 - 12 ← [根据手机号查询用户](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0062-query-users-by-phone-number.md)（服务端 API）
 - 12 ← [获取数据表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0462-api-notable-getsheet.md)（服务端 API）
-- 12 ← [获取模板code](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0513-obtain-the-template-code.md)（服务端 API）
-- 12 ← [搜索文件](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0640-search-for-files.md)（服务端 API）
-- 12 ← [创建群会话](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0741-create-common-group-new-version-v2.md)（服务端 API）
-- 12 ← [创建卡片](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0783-interface-for-creating-a-card-instance.md)（服务端 API）
-- 12 ← [注册卡片回调地址](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0789-register-card-callback-address.md)（服务端 API）
-- 12 ← [获取人员列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1157-obtains-a-list-of-home-school-user-identities.md)（服务端 API）
+- 12 ← [搜索文件](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0638-search-for-files.md)（服务端 API）
+- 12 ← [创建群会话](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0739-create-common-group-new-version-v2.md)（服务端 API）
+- 12 ← [创建卡片](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0781-interface-for-creating-a-card-instance.md)（服务端 API）
+- 12 ← [注册卡片回调地址](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0787-register-card-callback-address.md)（服务端 API）
+- 12 ← [获取人员列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1155-obtains-a-list-of-home-school-user-identities.md)（服务端 API）
+- 12 ← [小程序开发工具](../docs/01-应用开发/06-JDICnQyZLF-开发工具/0001-miniapp-tool.md)（开发工具）
 - 11 ← [获取部门用户详情](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0061-queries-the-complete-information-of-a-department-user.md)（服务端 API）
 - 11 ← [获取实例ID列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0312-api-getinstanceidlist-v2.md)（服务端 API）
 - 11 ← [查询会议室分组列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0450-query-meeting-rooms-groups.md)（服务端 API）
-- 11 ← [创建实例](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0515-create-a-ticket-approval-instance.md)（服务端 API）
-- 11 ← [常见问题](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0793-faq-card.md)（服务端 API）
-- 11 ← [查询项目](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1207-query-enterprise-all-projects.md)（服务端 API）
-- 11 ← [创建自由任务](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1242-create-a-free-task.md)（服务端 API）
+- 11 ← [获取模板code](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0511-obtain-the-template-code.md)（服务端 API）
+- 11 ← [常见问题](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-faq-card.md)（服务端 API）
+- 11 ← [查询项目](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1205-query-enterprise-all-projects.md)（服务端 API）
+- 11 ← [创建自由任务](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1240-create-a-free-task.md)（服务端 API）
 - 11 ← [事件与回调流程](../docs/01-应用开发/04-LFcRvVD08N-事件订阅/0329-third-party-enterprise-application-address-book-change-event-subscription-process.md)（事件订阅）
 - 11 ← [创建连接流](../docs/02-连接平台/02-XdgyZifJkr-我的连接/0001-create-a-connection-flow-1.md)（我的连接）
 - 10 ← [获取通讯录权限范围](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0052-obtain-corpsecret-authorization-scope.md)（服务端 API）
@@ -94,12 +93,13 @@
 - 10 ← [邀请其他组织企业账号加入](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0117-invite-other-organization-specific-accounts-to-join.md)（服务端 API）
 - 10 ← [获取班次摘要信息](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0205-enterprise-shift-query-in-batches.md)（服务端 API）
 - 10 ← [查询会议室列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0439-check-the-meeting-room-list.md)（服务端 API）
-- 10 ← [更新流程中心任务状态](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0520-update-process-center-task-status.md)（服务端 API）
-- 10 ← [批量取消流程中心待处理任务](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0521-cancel-multiple-oa-approval-tasks.md)（服务端 API）
-- 10 ← [获取花名册元数据](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0939-intelligent-personnel-roster-metadata-query.md)（服务端 API）
-- 10 ← [获取申请单列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1027-search-enterprise-approval-form-data.md)（服务端 API）
-- 10 ← [获取个人或企业客户的元数据](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1347-obtain-the-metadata-of-individual-enterprise-customers.md)（服务端 API）
-- 10 ← [新建知识库](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1586-create-a-team-space.md)（服务端 API）
-- 10 ← [查询用户有权限的知识库列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1588-querying-the-list-of-user-team-spaces.md)（服务端 API）
-- 10 ← [创建钉钉客联普通互通群](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1848-create-common-group-new-version.md)（服务端 API）
-- 10 ← [创建钉钉客联两人互通群](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1849-creating-two-groups-of-people.md)（服务端 API）
+- 10 ← [创建实例](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0513-create-a-ticket-approval-instance.md)（服务端 API）
+- 10 ← [获取花名册元数据](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0937-intelligent-personnel-roster-metadata-query.md)（服务端 API）
+- 10 ← [获取申请单列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1025-search-enterprise-approval-form-data.md)（服务端 API）
+- 10 ← [获取个人或企业客户的元数据](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1345-obtain-the-metadata-of-individual-enterprise-customers.md)（服务端 API）
+- 10 ← [新建知识库](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1584-create-a-team-space.md)（服务端 API）
+- 10 ← [查询用户有权限的知识库列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1586-querying-the-list-of-user-team-spaces.md)（服务端 API）
+- 10 ← [创建钉钉客联普通互通群](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1846-create-common-group-new-version.md)（服务端 API）
+- 10 ← [创建钉钉客联两人互通群](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1847-creating-two-groups-of-people.md)（服务端 API）
+- 10 ← [getAuthCode](../docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0006-jsapi-get-auth-code.md)（客户端 JSAPI）
+- 10 ← [数据格式](../docs/01-应用开发/04-LFcRvVD08N-事件订阅/0005-development-data-format-help.md)（事件订阅）

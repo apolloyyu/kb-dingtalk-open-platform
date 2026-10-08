@@ -121,7 +121,7 @@ updated_at: "2026-09-23 12:04:30"
 
 1. 步骤一：获取应用凭证信息，获取应用 Client ID 和 Client Secret。
 
-   步骤二：获取应用访问凭证[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
+   步骤二：获取应用访问凭证[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
 
    步骤三：调用考勤相关API：
 
@@ -145,7 +145,7 @@ updated_at: "2026-09-23 12:04:30"
 
 ### **步骤二**：获取访问凭证（access\_token）
 
-根据步骤一中 的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)。
+根据步骤一中 的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)。
 
 ```
 public void getAccessToken() throws ApiException {

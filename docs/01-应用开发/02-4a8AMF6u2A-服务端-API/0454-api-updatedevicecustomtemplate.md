@@ -40,11 +40,11 @@ updated_at: "2026-06-02 13:18:22"
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
 | templateName | String | 是 | 模板名称。 |
-| logo | String | 否 | 模板logo，可调用[上传媒体文件](0648-upload-media-files.md)接口获取meidaId，图片尺寸：240\*240，单个图片大小不超过1M。 |
+| logo | String | 否 | 模板logo，可调用[上传媒体文件](0646-upload-media-files.md)接口获取meidaId，图片尺寸：240\*240，单个图片大小不超过1M。 |
 | orgName | String | 否 | 模板企业名称。 |
 | customDoc | String | 否 | 模板自定义文字内容。 |
 | bgUrl | String | 否 | 模板自定义背景网址。 |
-| bgImgList | Array of String | 否 | 图片mediaId，可调用[上传媒体文件](0648-upload-media-files.md)接口获取出参`media_id`参数，最多可上传9张图片，单个图片大小不超过5M。 |
+| bgImgList | Array of String | 否 | 图片mediaId，可调用[上传媒体文件](0646-upload-media-files.md)接口获取出参`media_id`参数，最多可上传9张图片，单个图片大小不超过5M。 |
 | instruction | Boolean | 否 | 显示使用说明，默认false。取值：   - true：显示 - false：不显示 |
 | bgType | Integer | 否 | 模板自定义背景类型，默认1。取值：   - 1：图片 - 2：网址 |
 | isPicTop | Integer | 否 | 展示首页信息栏，默认 1。取值：   - 0：展示 - 1：不展示 |

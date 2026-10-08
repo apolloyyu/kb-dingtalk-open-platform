@@ -38,7 +38,7 @@ updated_at: "2026-05-27 17:06:33"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | 6d1bxxxx | 调用该接口的应用凭证，通过[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)接口获取。 |
+| access\_token | String | 是 | 6d1bxxxx | 调用该接口的应用凭证，通过[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)接口获取。 |
 
 ### **请求体**
 
@@ -53,7 +53,7 @@ updated_at: "2026-05-27 17:06:33"
 | category\_id | String | 否 | 89uuy7ytg6bnnjh7 | 公告分类ID，可以通过[获取公告分类列表](0286-obtains-the-list-of-categories-not-deleted-for-enterprise-announcements.md)接口获取id参数值。 |
 | notify | Boolean | 否 | true | 修改后是否再次通知接收人。   - **true**：通知 - **false**：不通知 |
 | operation\_userid | String | 是 | manager01 | 操作人userid，必须是公告管理员。 |
-| coverpic\_mediaid | String | 否 | @lADPDeC2ufXOeRzMqM0BLA | 封面图，格式为`@mediaId`。  可以通过[上传媒体文件](0648-upload-media-files.md)接口上传图片，获取media\_id参数值。 |
+| coverpic\_mediaid | String | 否 | @lADPDeC2ufXOeRzMqM0BLA | 封面图，格式为`@mediaId`。  可以通过[上传媒体文件](0646-upload-media-files.md)接口上传图片，获取media\_id参数值。 |
 
 ### **请求示例**
 

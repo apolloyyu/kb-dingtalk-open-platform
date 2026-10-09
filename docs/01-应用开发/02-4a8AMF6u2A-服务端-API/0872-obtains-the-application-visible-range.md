@@ -1,20 +1,20 @@
 ---
-title: "获取企业内部应用的可使用范围"
+title: "获取企业应用的可使用范围"
 source_url: "https://open.dingtalk.com/document/development/obtains-the-application-visible-range"
 namespace: "development"
 slug: "obtains-the-application-visible-range"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "钉钉应用 > 使用范围 > 获取企业内部应用的可使用范围"
+breadcrumb: "钉钉应用 > 使用范围 > 获取企业应用的可使用范围"
 doc_id: "LPNPkwlsMI"
-updated_at: "2026-06-03 11:49:38"
+updated_at: "2026-10-09 18:08:49"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtains-the-application-visible-range
-> Path: 应用开发 / 服务端 API / 钉钉应用 > 使用范围 > 获取企业内部应用的可使用范围
-> Updated: 2026-06-03 11:49:38
+> Path: 应用开发 / 服务端 API / 钉钉应用 > 使用范围 > 获取企业应用的可使用范围
+> Updated: 2026-10-09 18:08:49
 
-# 获取企业内部应用的可使用范围
+# 获取企业应用的可使用范围
 
 通过此接口获取企业内部应用的可使用范围信息，包括允许访问该应用的用户、部门和角色列表。
 
@@ -26,20 +26,20 @@ updated_at: "2026-06-03 11:49:38"
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/microApp/apps/{agentId}/scopes |
 | HTTP Method | GET |
-| 支持的应用类型 | appType-企业内部应用 |
+| 支持的应用类型 | appType-企业内部应用appType-第三方企业应用 |
 | 权限要求 | permission-qyapi\_microapp\_manage-管理微应用的权限 |
 
 ### 请求头
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，通过调用[获取企业内部应用的accessToken](0032-obtain-the-access-token-of-an-internal-app.md)接口获取。 |
+| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，通过以下获取：   - 企业内部应用，调用[获取企业内部应用的accessToken](0032-obtain-the-access-token-of-an-internal-app.md)接口获取。 - 第三方企业应用，调用[获取第三方应用授权企业的accessToken](0033-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口获取。 |
 
 ### 路径参数
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| agentId | Long | 是 | 应用agentId，参考[基础概念-AgentId](https://open.dingtalk.com/document/development/basic-concepts-beta#813cbd7067yn0)。 |
+| agentId | Long | 是 | 应用agentId，参考[AgentId](../01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md#ef841f7f37kba)。 |
 
 ### 请求示例
 

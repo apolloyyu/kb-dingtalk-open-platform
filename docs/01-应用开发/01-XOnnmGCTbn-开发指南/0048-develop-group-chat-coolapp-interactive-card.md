@@ -35,10 +35,10 @@ updated_at: "2026-08-07 14:52:46"
 | 搭建平台 | 适用场景 | 组件类型 | 布局方式 | 卡片形式 |
 | --- | --- | --- | --- | --- |
 | [**互动卡片普通版**](https://card.dingtalk.com/card-builder)搭建平台 | 面向所有开发者，开箱即用，开发成本低，适用于无定制化需求的场景。官方提供一系列面向具体场景的模板来帮助开发者更方便地接入。 | 区块组件 | - 上下布局 | JSON Schema |
-| [互动卡片高级版](../../05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md#8ea07cac63f7j)搭建平台 | 面向进阶和有强定制化需求的开发者，能力丰富强大，支持自定义布局和更精细力度的组件属性配置，有一定的上手门槛。 | 原子组件 | - 上下布局 - 左右布局 - 嵌套布局 | 模板+数据 |
+| [互动卡片高级版](../../05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md#8ea07cac63f7j)搭建平台 | 面向进阶和有强定制化需求的开发者，能力丰富强大，支持自定义布局和更精细力度的组件属性配置，有一定的上手门槛。 | 原子组件 | - 上下布局 - 左右布局 - 嵌套布局 | 模板+数据 |
 
-- 互动卡片搭建平台更多详情参见[互动卡片普通版](../../05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md#ab8c41d55devu)。
-- 互动卡片高级版搭建平台更多详情参见[互动卡片高级版](../../05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md#8ea07cac63f7j)。
+- 互动卡片搭建平台更多详情参见[互动卡片普通版](../../05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md#ab8c41d55devu)。
+- 互动卡片高级版搭建平台更多详情参见[互动卡片高级版](../../05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md#8ea07cac63f7j)。
 
 ## 开发互动卡片
 
@@ -64,6 +64,6 @@ updated_at: "2026-08-07 14:52:46"
 
 ## 互动卡片高级版发送吊顶卡片
 
-1. 了解[高级版编辑器](../../05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0021-interactive-card-editor.md)详细信息，通过[互动卡片高级版](../../05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md#8ea07cac63f7j)创建吊顶卡片模板。![创建吊顶卡片 ](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0521872871/p421667.png)
+1. 了解[高级版编辑器](../../05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0021-interactive-card-editor.md)详细信息，通过[互动卡片高级版](../../05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md#8ea07cac63f7j)创建吊顶卡片模板。![创建吊顶卡片 ](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0521872871/p421667.png)
 2. 调用[创建并开启互动卡片吊顶](../02-4a8AMF6u2A-服务端-API/0762-send-group-helper-message.md)接口创建并开启卡片吊顶。![iShot2022-12-26 14](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0521872871/p539017.png)
 3. 调用[关闭互动卡片吊顶](../02-4a8AMF6u2A-服务端-API/0763-close-interactive-card-ceiling.md)接口，关闭卡片吊顶。

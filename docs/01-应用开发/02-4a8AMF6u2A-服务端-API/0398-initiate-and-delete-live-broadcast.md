@@ -5,13 +5,13 @@ namespace: "development"
 slug: "initiate-and-delete-live-broadcast"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "音视频 > 使用教程 > 直播全链路：创建、追踪、归档一体化"
+breadcrumb: "音视频 > 使用教程 > 直播全链路：自动创建培训与观看数据实时追踪"
 doc_id: "Syba6uq8dM"
 updated_at: "2026-09-23 12:04:44"
 ---
 
 > Source: https://open.dingtalk.com/document/development/initiate-and-delete-live-broadcast
-> Path: 应用开发 / 服务端 API / 音视频 > 使用教程 > 直播全链路：创建、追踪、归档一体化
+> Path: 应用开发 / 服务端 API / 音视频 > 使用教程 > 直播全链路：自动创建培训与观看数据实时追踪
 > Updated: 2026-09-23 12:04:44
 
 # 直播全链路：自动创建培训与观看数据实时追踪

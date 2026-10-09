@@ -85,10 +85,10 @@ AI 卡片（A2UI）是钉钉会话中的可交互富卡片：一张卡上可组�
 
   相关文档：
 
-  - [DWS 创建与校验](../../05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0014-json-card-dws-create-and-validate.md)
-  - [使用示例](../../05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0013-json-card-usage-examples.md)
-  - [Agent Skill 创建与校验](../../05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0015-json-card-agent-skill-create-and-validate.md)
-  - [DWS 发送与更新](../../05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0017-json-card-dws-send-and-update.md)
+  - [DWS 创建与校验](../../05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0014-json-card-dws-create-and-validate.md)
+  - [使用示例](../../05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0013-json-card-usage-examples.md)
+  - [Agent Skill 创建与校验](../../05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0015-json-card-agent-skill-create-and-validate.md)
+  - [DWS 发送与更新](../../05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0017-json-card-dws-send-and-update.md)
 
 #### **数字员工（灰度中）：管理、发布、身份登录与本地接入全链路打通**
 

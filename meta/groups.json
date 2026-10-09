@@ -133,14 +133,19 @@
     "sort": 5,
     "tabs": [
       {
+        "tabCode": "Vtaq5N3UH0",
+        "tabName": "功能介绍",
+        "sort": 1
+      },
+      {
         "tabCode": "MhNX42mFB1",
         "tabName": "模板搭建卡片",
-        "sort": 1
+        "sort": 2
       },
       {
         "tabCode": "lHGhOeTVdR",
         "tabName": "JSON 构建卡片（AI）",
-        "sort": 2
+        "sort": 3
       }
     ]
   },

@@ -1,23 +1,23 @@
 {
   "name": "钉钉开放平台文档中心知识库",
   "source_entry": "https://open.dingtalk.com/document/dingstart/basic-concepts-beta",
-  "crawl_time": "2026-10-09T07:04:53+08:00",
+  "crawl_time": "2026-10-10T07:05:23+08:00",
   "source_apis": [
     "https://open.dingtalk.com/api/docCenter/getDocPageGroupList",
     "https://open.dingtalk.com/api/docCenter/getDocInfoList",
     "https://icms-document.oss-cn-beijing.aliyuncs.com/zh-CN/dingtalk"
   ],
   "groups": 8,
-  "tabs": 31,
-  "documents_discovered": 3630,
-  "documents_written": 3630,
+  "tabs": 32,
+  "documents_discovered": 3633,
+  "documents_written": 3633,
   "failures": 0,
   "counts_by_group": {
     "应用开发": 3299,
     "连接平台": 102,
     "AI PaaS": 25,
     "硬件开发": 15,
-    "互动卡片": 61,
+    "互动卡片": 64,
     "专属版客户端插件": 48,
     "数据资产": 50,
     "工作台": 30
@@ -43,6 +43,7 @@
     "硬件开发 / 门禁/考勤机接入": 4,
     "硬件开发 / 门禁 Linux 接入": 4,
     "硬件开发 / Android 设备接入": 4,
+    "互动卡片 / 功能介绍": 3,
     "互动卡片 / 模板搭建卡片": 42,
     "互动卡片 / JSON 构建卡片（AI）": 19,
     "专属版客户端插件 / 功能介绍": 11,

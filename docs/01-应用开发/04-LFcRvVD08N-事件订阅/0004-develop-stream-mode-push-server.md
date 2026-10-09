@@ -106,7 +106,7 @@ public static void main(String[] args) {
   | topic | 机器人回调名称，固定值：`/v1.0/im/bot/messages/get`。 |
 - **卡片回调**
 
-  详情参见[互动卡片-事件回调](../../05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md)。
+  详情参见[互动卡片-事件回调](../../05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md)。
 
   ```
   public static void main(String[] args) throws Exception {

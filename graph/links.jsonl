@@ -76,7 +76,7 @@
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0032-configure-web-application.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0033-develop-webapp-frontend.md", "text": "开发网页应用前端", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0032-configure-web-application.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0034-develop-webapp-backend.md", "text": "开发网页应用服务端", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0032-configure-web-application.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0068-access-link-enhancements-coolapp.md", "text": "接入链接增强", "n": 1}
-{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0032-configure-web-application.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0023-card-template-overview.md", "text": "互动卡片模板编辑器", "n": 1}
+{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0032-configure-web-application.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0023-card-template-overview.md", "text": "互动卡片模板编辑器", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0033-develop-webapp-frontend.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md", "text": "Client ID", "n": 3}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0033-develop-webapp-frontend.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0006-get-developer-permissions.md", "text": "钉钉开发者", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0033-develop-webapp-frontend.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "应用创建与配置", "n": 1}
@@ -125,8 +125,8 @@
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0048-develop-group-chat-coolapp-interactive-card.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0762-send-group-helper-message.md", "text": "创建并开启互动卡片吊顶", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0048-develop-group-chat-coolapp-interactive-card.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0763-close-interactive-card-ceiling.md", "text": "关闭互动卡片吊顶", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0048-develop-group-chat-coolapp-interactive-card.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0784-create-and-deliver-cards.md", "text": "创建并投放卡片", "n": 2}
-{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0048-develop-group-chat-coolapp-interactive-card.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "text": "互动卡片高级版", "n": 4}
-{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0048-develop-group-chat-coolapp-interactive-card.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0021-interactive-card-editor.md", "text": "高级版编辑器", "n": 1}
+{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0048-develop-group-chat-coolapp-interactive-card.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "text": "互动卡片高级版", "n": 4}
+{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0048-develop-group-chat-coolapp-interactive-card.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0021-interactive-card-editor.md", "text": "高级版编辑器", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0049-grounding-group-chat-coolapp.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0046-configuration-group-chat-quick-entry.md", "text": "接入群聊酷应用", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0050-manage-group-chat-coolapp.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0274-add-group-members.md", "text": "添加群成员", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0050-manage-group-chat-coolapp.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0275-install-coothe-group.md", "text": "安装酷应用入群", "n": 1}
@@ -163,8 +163,8 @@
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0068-access-link-enhancements-coolapp.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "创建酷应用", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0068-access-link-enhancements-coolapp.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0019-publish-dingtalk-application.md", "text": "发布应用", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0068-access-link-enhancements-coolapp.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0781-interface-for-creating-a-card-instance.md", "text": "创建卡片", "n": 1}
-{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0068-access-link-enhancements-coolapp.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0008-dynamic-data-source.md", "text": "动态数据源", "n": 1}
-{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0068-access-link-enhancements-coolapp.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "text": "互动卡片高级版", "n": 1}
+{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0068-access-link-enhancements-coolapp.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0008-dynamic-data-source.md", "text": "动态数据源", "n": 1}
+{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0068-access-link-enhancements-coolapp.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "text": "互动卡片高级版", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0070-access-member-profile-coolapp.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0019-publish-dingtalk-application.md", "text": "发布应用", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0070-access-member-profile-coolapp.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0071-create-contact-card.md", "text": "创建通讯录卡片", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0070-access-member-profile-coolapp.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0072-member-information-page-expands-interactive-card-capability-beta.md", "text": "成员资料页扩展互动卡片能力", "n": 1}
@@ -2233,8 +2233,8 @@
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0399-conference-room-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0438-update-meeting-room-information.md", "text": "更新会议室信息", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0399-conference-room-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0439-check-the-meeting-room-list.md", "text": "查询会议室列表", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0399-conference-room-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0440-check-meeting-room-details.md", "text": "查询会议室详情", "n": 2}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0400-meeting-room-grouping-operation-process.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "应用创建与配置", "n": 2}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0400-meeting-room-grouping-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0002-download-the-server-side-sdk.md", "text": "新版API VS 旧版API", "n": 2}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0400-meeting-room-grouping-operation-process.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "应用创建与配置", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0400-meeting-room-grouping-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0002-download-the-server-side-sdk.md", "text": "服务端SDK下载", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0400-meeting-room-grouping-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md", "text": "获取企业内部应用的accessToken", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0400-meeting-room-grouping-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0446-create-meeting-room-groups.md", "text": "创建会议室分组", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0400-meeting-room-grouping-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0447-delete-a-conference-room-group.md", "text": "删除会议室分组", "n": 2}
@@ -2606,9 +2606,14 @@
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0474-api-noatable-deleterecords.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0463-api-notable-getallsheets.md", "text": "获取所有数据表", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0474-api-noatable-deleterecords.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0470-api-notable-insertrecords.md", "text": "新增记录", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0474-api-noatable-deleterecords.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0472-api-notable-listrecords.md", "text": "列出多行记录", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0482-use-the-dingtalk-oa-approval-process-and-page-interface.md", "text": "官方OA审批：钉钉流程与页面对接", "n": 3}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0483-use-three-party-process-and-page-docking.md", "text": "自有OA审批：三方流程与页面对接", "n": 3}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0484-approval-process-hosting-integration-mode-use-the-dingtalk-official-oa.md", "text": "审批流程托管：钉钉流程与三方页面对接", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0477-new-version-of-initiate-and-cancel-approval-flow.md", "text": "发起及撤销审批流", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0478-comment-and-revoke-approval-flow.md", "text": "评论及撤销审批流", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0479-approve-or-reject-the-new-version.md", "text": "同意或拒绝审批流程", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0480-new-version-of-attachment-approval-process.md", "text": "审批附件的操作流程", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0481-user-form-and-approval-form-query.md", "text": "用户表单及审批单查询操作", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0482-use-the-dingtalk-oa-approval-process-and-page-interface.md", "text": "官方OA审批：钉钉流程与页面对接", "n": 2}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0483-use-three-party-process-and-page-docking.md", "text": "自有OA审批：三方流程与页面对接", "n": 2}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0484-approval-process-hosting-integration-mode-use-the-dingtalk-official-oa.md", "text": "审批流程托管：钉钉流程与三方页面对接", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0485-enterprise-self-built-approval-center-supports-batch-quick-approval-and-other.md", "text": "企业自建审批中心：批量快捷审批", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0486-use-the-exclusive-openapi-capability-to-dingtalk-oa-approval-through.md", "text": "企业自建应用：专享OpenAPI集成审批", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0487-custom-quick-approval-supports-quick-approval-of-pending-tasks-from.md", "text": "自定义快捷审批：三方任务待办卡片审批", "n": 1}
@@ -2648,10 +2653,10 @@
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1423-open-approval-details.md", "text": "打开审批详情", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1424-open-approval-filter-page.md", "text": "打开审批筛选页", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1440-description-of-new-oa-approval-premium-exclusive-openapi-and-solutions.md", "text": "关于新增OA审批高级版专享OpenAPI和解决方案的说明", "n": 2}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0033-event-workflow-instance-change-broadcast.md", "text": "审批实例状态变更(广播)", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0034-event-workflow-task-change-broadcast.md", "text": "审批任务状态变更(广播)", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0035-event-workflow-instance-change-directed.md", "text": "审批实例状态变更(定向)", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0036-event-workflow-task-change-directed.md", "text": "审批任务状态变更(定向)", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0033-event-workflow-instance-change-broadcast.md", "text": "审批实例状态变更", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0034-event-workflow-task-change-broadcast.md", "text": "审批任务状态变更", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0035-event-workflow-instance-change-directed.md", "text": "审批实例状态变更", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0036-event-workflow-task-change-directed.md", "text": "审批任务状态变更", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0037-events-oa-timeout-plugin-task-msg.md", "text": "OA限时审批事件变更", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0038-event-bpms-task-change.md", "text": "审批任务开始，结束，转交", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0039-event-bpms-instance-change.md", "text": "审批实例开始、结束、终止、删除", "n": 2}
@@ -2723,17 +2728,17 @@
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0482-use-the-dingtalk-oa-approval-process-and-page-interface.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0038-event-bpms-task-change.md", "text": "审批任务开始，结束，转交", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0482-use-the-dingtalk-oa-approval-process-and-page-interface.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0039-event-bpms-instance-change.md", "text": "审批实例开始、结束、终止、删除", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0483-use-three-party-process-and-page-docking.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "应用创建与配置", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0483-use-three-party-process-and-page-docking.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md", "text": "获取企业内部应用的accessToken", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0483-use-three-party-process-and-page-docking.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0510-create-orupdate-the-approval-template-new.md", "text": "创建或更新审批模板", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0483-use-three-party-process-and-page-docking.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0511-obtain-the-template-code.md", "text": "获取模板code", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0483-use-three-party-process-and-page-docking.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0512-self-owned-approval-deletion-template.md", "text": "删除模板", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0483-use-three-party-process-and-page-docking.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0513-create-a-ticket-approval-instance.md", "text": "创建实例", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0483-use-three-party-process-and-page-docking.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0514-update-instance-status.md", "text": "更新实例状态", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0483-use-three-party-process-and-page-docking.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0515-self-owned-batch-update-of-instance-status.md", "text": "批量更新实例状态", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0483-use-three-party-process-and-page-docking.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0516-create-pending-tasks-in-process-center.md", "text": "创建流程中心待处理任务", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0483-use-three-party-process-and-page-docking.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0517-query-oa-approval-tasks-integrated-through-process-center.md", "text": "查询通过流程中心集成的OA审批任务", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0483-use-three-party-process-and-page-docking.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0518-update-process-center-task-status.md", "text": "更新流程中心任务状态", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0483-use-three-party-process-and-page-docking.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0519-cancel-multiple-oa-approval-tasks.md", "text": "批量取消流程中心待处理任务", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0483-use-three-party-process-and-page-docking.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md", "text": "获取企业内部应用的accessToken", "n": 2}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0483-use-three-party-process-and-page-docking.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0510-create-orupdate-the-approval-template-new.md", "text": "创建或更新审批模板", "n": 2}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0483-use-three-party-process-and-page-docking.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0511-obtain-the-template-code.md", "text": "获取模板code", "n": 3}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0483-use-three-party-process-and-page-docking.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0512-self-owned-approval-deletion-template.md", "text": "删除模板", "n": 2}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0483-use-three-party-process-and-page-docking.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0513-create-a-ticket-approval-instance.md", "text": "创建实例", "n": 2}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0483-use-three-party-process-and-page-docking.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0514-update-instance-status.md", "text": "更新实例状态", "n": 2}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0483-use-three-party-process-and-page-docking.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0515-self-owned-batch-update-of-instance-status.md", "text": "批量更新实例状态", "n": 2}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0483-use-three-party-process-and-page-docking.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0516-create-pending-tasks-in-process-center.md", "text": "创建流程中心待处理任务", "n": 2}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0483-use-three-party-process-and-page-docking.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0517-query-oa-approval-tasks-integrated-through-process-center.md", "text": "查询通过流程中心集成的OA审批任务", "n": 2}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0483-use-three-party-process-and-page-docking.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0518-update-process-center-task-status.md", "text": "更新流程中心任务状态", "n": 2}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0483-use-three-party-process-and-page-docking.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0519-cancel-multiple-oa-approval-tasks.md", "text": "批量取消流程中心待处理任务", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0484-approval-process-hosting-integration-mode-use-the-dingtalk-official-oa.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "应用创建与配置", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0484-approval-process-hosting-integration-mode-use-the-dingtalk-official-oa.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0014-event-subscription-overview.md", "text": "事件订阅操作指南", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0484-approval-process-hosting-integration-mode-use-the-dingtalk-official-oa.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md", "text": "获取企业内部应用的accessToken", "n": 1}
@@ -2924,6 +2929,7 @@
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0508-queries-the-number-of-requests-to-be-approved-by-users.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0013-server-api-error-codes-1.md", "text": "全局错误码", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0508-queries-the-number-of-requests-to-be-approved-by-users.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md", "text": "获取企业内部应用的accessToken", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0508-queries-the-number-of-requests-to-be-approved-by-users.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0187-jsapi-open-link.md", "text": "打开目标", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0509-oa-access-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0483-use-three-party-process-and-page-docking.md", "text": "自有OA审批：三方流程与页面对接", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0510-create-orupdate-the-approval-template-new.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0013-server-api-error-codes-1.md", "text": "全局错误码", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0510-create-orupdate-the-approval-template-new.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0476-oa-formcomponent-message.md", "text": "FormComponent参数说明", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0510-create-orupdate-the-approval-template-new.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0511-obtain-the-template-code.md", "text": "获取模板code", "n": 1}
@@ -4370,13 +4376,13 @@
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0778-overview-card.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0787-register-card-callback-address.md", "text": "注册卡片回调地址", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0778-overview-card.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0788-add-field-interface.md", "text": "新增或者更新卡片的场域信息", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0778-overview-card.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0789-api-copytemplate.md", "text": "卡片平台模板复制", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0778-overview-card.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md", "text": "普通卡片模板", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0778-overview-card.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0003-create-a-card-instance-from-the-card-platform.md", "text": "卡片平台创建卡片实例", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0778-overview-card.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md", "text": "开放接口创建卡片实例", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0778-overview-card.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0005-card-delivery-instance-for-card-platform.md", "text": "卡片平台投放卡片实例", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0778-overview-card.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0006-open-interface-card-delivery-instance.md", "text": "开放接口投放卡片实例", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0778-overview-card.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "text": "事件回调", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0778-overview-card.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0008-dynamic-data-source.md", "text": "动态数据源", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0778-overview-card.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md", "text": "普通卡片模板", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0778-overview-card.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0003-create-a-card-instance-from-the-card-platform.md", "text": "卡片平台创建卡片实例", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0778-overview-card.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md", "text": "开放接口创建卡片实例", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0778-overview-card.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0005-card-delivery-instance-for-card-platform.md", "text": "卡片平台投放卡片实例", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0778-overview-card.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0006-open-interface-card-delivery-instance.md", "text": "开放接口投放卡片实例", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0778-overview-card.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "text": "事件回调", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0778-overview-card.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0008-dynamic-data-source.md", "text": "动态数据源", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0778-overview-card.md", "to": "docs/08-工作台/02-Qzb8Lpee2t-使用教程/0006-add-self-built-interactive-cards-to-the-workbench.md", "text": "自建工作台卡片的创建和使用", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0779-example-of-calling-the-card-api-interface.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0781-interface-for-creating-a-card-instance.md", "text": "创建卡片", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0779-example-of-calling-the-card-api-interface.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0782-delivery-card-interface.md", "text": "投放卡片", "n": 1}
@@ -4388,7 +4394,7 @@
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0781-interface-for-creating-a-card-instance.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0787-register-card-callback-address.md", "text": "注册卡片回调地址", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0781-interface-for-creating-a-card-instance.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0790-instructions-for-filling-in-api-card-data.md", "text": "API 卡片数据的填写说明", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0781-interface-for-creating-a-card-instance.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-faq-card.md", "text": "userIdType 字段的填写说明", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0781-interface-for-creating-a-card-instance.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "text": "卡片互动-事件回调", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0781-interface-for-creating-a-card-instance.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "text": "卡片互动-事件回调", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0782-delivery-card-interface.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0013-server-api-error-codes-1.md", "text": "全局错误码", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0782-delivery-card-interface.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md", "text": "获取企业内部应用的accessToken", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0782-delivery-card-interface.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0033-obtain-the-access-token-of-the-authorized-enterprise-1.md", "text": "获取第三方应用授权企业的accessToken", "n": 1}
@@ -4407,7 +4413,7 @@
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0784-create-and-deliver-cards.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0787-register-card-callback-address.md", "text": "注册卡片回调地址", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0784-create-and-deliver-cards.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0790-instructions-for-filling-in-api-card-data.md", "text": "API 卡片数据的填写说明", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0784-create-and-deliver-cards.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-faq-card.md", "text": "userIdType 字段的填写说明", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0784-create-and-deliver-cards.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "text": "卡片互动-事件回调", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0784-create-and-deliver-cards.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "text": "卡片互动-事件回调", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0785-api-closetopcard.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0060-group-chat-coolapp-event.md", "text": "感知群变化（事件订阅）", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0785-api-closetopcard.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0013-server-api-error-codes-1.md", "text": "全局错误码", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0785-api-closetopcard.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md", "text": "获取企业内部应用的accessToken", "n": 1}
@@ -4420,7 +4426,7 @@
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0786-api-streamingupdate.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0033-obtain-the-access-token-of-the-authorized-enterprise-1.md", "text": "获取第三方应用授权企业的accessToken", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0786-api-streamingupdate.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0781-interface-for-creating-a-card-instance.md", "text": "创建卡片", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0786-api-streamingupdate.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0784-create-and-deliver-cards.md", "text": "创建并投放卡片", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0786-api-streamingupdate.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0002-ai-card-template.md", "text": "AI 卡片模板", "n": 2}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0786-api-streamingupdate.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0002-ai-card-template.md", "text": "AI 卡片模板", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0787-register-card-callback-address.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0013-server-api-error-codes-1.md", "text": "全局错误码", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0787-register-card-callback-address.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md", "text": "获取企业内部应用的accessToken", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0787-register-card-callback-address.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0033-obtain-the-access-token-of-the-authorized-enterprise-1.md", "text": "获取第三方应用授权企业的accessToken", "n": 1}
@@ -4800,8 +4806,10 @@
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0871-update-the-visible-range-of-micro-applications.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0013-server-api-error-codes-1.md", "text": "全局错误码", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0871-update-the-visible-range-of-micro-applications.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md", "text": "获取企业内部应用的accessToken", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0871-update-the-visible-range-of-micro-applications.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0088-obtains-a-list-of-enterprise-roles.md", "text": "获取角色列表", "n": 2}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0872-obtains-the-application-visible-range.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md", "text": "AgentId", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0872-obtains-the-application-visible-range.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0013-server-api-error-codes-1.md", "text": "全局错误码", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0872-obtains-the-application-visible-range.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md", "text": "获取企业内部应用的accessToken", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0872-obtains-the-application-visible-range.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0033-obtain-the-access-token-of-the-authorized-enterprise-1.md", "text": "获取第三方应用授权企业的accessToken", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0873-api-createagent.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0013-server-api-error-codes-1.md", "text": "全局错误码", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0873-api-createagent.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md", "text": "获取企业内部应用的accessToken", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0874-api-submitcreateenterpriseagent.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0013-server-api-error-codes-1.md", "text": "全局错误码", "n": 1}
@@ -7366,14 +7374,14 @@
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1474-robots-send-interactive-cards.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0737-pure-pull-mode-process-guide.md", "text": "实现置顶卡片纯拉模式", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1474-robots-send-interactive-cards.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0784-create-and-deliver-cards.md", "text": "创建并投放卡片", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1474-robots-send-interactive-cards.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1484-create-a-scene-group-v2.md", "text": "创建群", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1474-robots-send-interactive-cards.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "text": "互动卡片普通版", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1474-robots-send-interactive-cards.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "text": "互动卡片普通版", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1475-update-the-robot-to-send-interactive-cards.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md", "text": "获取企业内部应用的accessToken", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1475-update-the-robot-to-send-interactive-cards.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0033-obtain-the-access-token-of-the-authorized-enterprise-1.md", "text": "获取第三方应用授权企业的accessToken", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1475-update-the-robot-to-send-interactive-cards.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0723-chatbot-queries-the-read-status-of-a-message.md", "text": "查询企业机器人群聊消息用户已读状态", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1475-update-the-robot-to-send-interactive-cards.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0726-enterprise-chatbot-withdraws-internal-group-messages.md", "text": "企业机器人撤回内部群消息", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1475-update-the-robot-to-send-interactive-cards.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0783-interactive-card-update-interface.md", "text": "更新卡片", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1475-update-the-robot-to-send-interactive-cards.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1474-robots-send-interactive-cards.md", "text": "机器人发送互动卡片（普通版）", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1475-update-the-robot-to-send-interactive-cards.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0020-ding-card-interactive-card-operation-process.md", "text": "互动卡片普通版接入流程", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1475-update-the-robot-to-send-interactive-cards.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0020-ding-card-interactive-card-operation-process.md", "text": "互动卡片普通版接入流程", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1476-send-interactive-dynamic-cards-1.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md", "text": "获取企业内部应用的accessToken", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1476-send-interactive-dynamic-cards-1.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0033-obtain-the-access-token-of-the-authorized-enterprise-1.md", "text": "获取第三方应用授权企业的accessToken", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1476-send-interactive-dynamic-cards-1.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0699-development-robot-overview.md", "text": "机器人名词表-robotCode", "n": 1}
@@ -7383,7 +7391,7 @@
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1476-send-interactive-dynamic-cards-1.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-faq-card.md", "text": "常见问题", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1476-send-interactive-dynamic-cards-1.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1484-create-a-scene-group-v2.md", "text": "创建群", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1476-send-interactive-dynamic-cards-1.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0308-install-group-extension-event-in-the-group-stream.md", "text": "群内安装酷应用事件", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1476-send-interactive-dynamic-cards-1.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0025-relationship-between-variables-and-cards.md", "text": "变量与卡片的关系", "n": 2}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1476-send-interactive-dynamic-cards-1.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0025-relationship-between-variables-and-cards.md", "text": "变量与卡片的关系", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1477-update-dingtalk-interactive-cards.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md", "text": "获取企业内部应用的accessToken", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1477-update-dingtalk-interactive-cards.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0033-obtain-the-access-token-of-the-authorized-enterprise-1.md", "text": "获取第三方应用授权企业的accessToken", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1477-update-dingtalk-interactive-cards.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0784-create-and-deliver-cards.md", "text": "创建并投放卡片", "n": 1}
@@ -8264,7 +8272,7 @@
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1742-cool-app-faq.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0003-add-api-permission.md", "text": "添加接口调用权限", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1742-cool-app-faq.md", "to": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0028-become-an-application-service-provider.md", "text": "产品方案商", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1742-cool-app-faq.md", "to": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0045-mr22h2.md", "text": "运营支持", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1742-cool-app-faq.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0019-ding-card-interactive-card-building-platform-new.md", "text": "互动卡片普通版搭建平台", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1742-cool-app-faq.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0019-ding-card-interactive-card-building-platform-new.md", "text": "互动卡片普通版搭建平台", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1743-queries-the-number-of-dingtalk-movement-steps-of-multiple-users.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1444-obtain-orgapp-token.md", "text": "获取企业内部应用的access\\_token", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1743-queries-the-number-of-dingtalk-movement-steps-of-multiple-users.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1446-obtain-isvapp-token.md", "text": "服务商获取第三方应用授权企业的access\\_token", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1744-queries-individual-or-department-dingtalk-exercise-steps.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0980-check-whether-dingtalk-is-enabled.md", "text": "查询用户是否参与企业步数排行榜", "n": 1}
@@ -9798,7 +9806,7 @@
 {"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0004-develop-stream-mode-push-server.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md", "text": "Client ID/Client Secret", "n": 8}
 {"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0004-develop-stream-mode-push-server.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0003-configure-stream-push.md", "text": "配置 HTTP 推送（不推荐）", "n": 3}
 {"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0004-develop-stream-mode-push-server.md", "to": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0044-ngliko.md", "text": "技术支持", "n": 1}
-{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0004-develop-stream-mode-push-server.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "text": "互动卡片-事件回调", "n": 1}
+{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0004-develop-stream-mode-push-server.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "text": "互动卡片-事件回调", "n": 1}
 {"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0005-development-data-format-help.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0033-obtain-the-access-token-of-the-authorized-enterprise-1.md", "text": "获取第三方应用授权企业的accessToken", "n": 1}
 {"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0005-development-data-format-help.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0041-obtains-the-basic-information-of-an-enterprise.md", "text": "获取企业授权信息", "n": 1}
 {"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0005-development-data-format-help.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0052-obtain-corpsecret-authorization-scope.md", "text": "获取通讯录权限范围", "n": 1}
@@ -9932,10 +9940,10 @@
 {"from": "docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0018-create-dingtalk-intelligent-agent-application.md", "to": "docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0010-open-claw-nail-insertion-plugin.md", "text": "Open Claw钉钉插件", "n": 1}
 {"from": "docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0018-create-dingtalk-intelligent-agent-application.md", "to": "docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0017-deepseek-harness-dingtalk-integration.md", "text": "DeepSeek Harness 钉钉插件", "n": 1}
 {"from": "docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0025-dws-cli-frequently-asked-questions.md", "to": "docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0005-ai-bot-configuration-guide.md", "text": "5分钟配置：给自己配个嘴替AI 机器人", "n": 1}
-{"from": "docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0026-dws-cli-log.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0013-json-card-usage-examples.md", "text": "使用示例", "n": 1}
-{"from": "docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0026-dws-cli-log.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0014-json-card-dws-create-and-validate.md", "text": "DWS 创建与校验", "n": 1}
-{"from": "docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0026-dws-cli-log.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0015-json-card-agent-skill-create-and-validate.md", "text": "Agent Skill 创建与校验", "n": 1}
-{"from": "docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0026-dws-cli-log.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0017-json-card-dws-send-and-update.md", "text": "DWS 发送与更新", "n": 1}
+{"from": "docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0026-dws-cli-log.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0013-json-card-usage-examples.md", "text": "使用示例", "n": 1}
+{"from": "docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0026-dws-cli-log.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0014-json-card-dws-create-and-validate.md", "text": "DWS 创建与校验", "n": 1}
+{"from": "docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0026-dws-cli-log.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0015-json-card-agent-skill-create-and-validate.md", "text": "Agent Skill 创建与校验", "n": 1}
+{"from": "docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0026-dws-cli-log.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0017-json-card-dws-send-and-update.md", "text": "DWS 发送与更新", "n": 1}
 {"from": "docs/01-应用开发/06-JDICnQyZLF-开发工具/0003-api-development-tools.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0013-server-api-error-codes-1.md", "text": "全局错误码", "n": 1}
 {"from": "docs/01-应用开发/06-JDICnQyZLF-开发工具/0005-api-explorer.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0055-query-user-details.md", "text": "查询用户详情", "n": 2}
 {"from": "docs/01-应用开发/06-JDICnQyZLF-开发工具/0006-micro-application-four-terminal-debugging-tool-web-edition.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "创建应用", "n": 1}
@@ -10395,150 +10403,162 @@
 {"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0002-automatically-generate-an-ai-assistant-1.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0004-create-an-ai-assistant-workflow-1.md", "text": "新建工作流", "n": 1}
 {"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0002-automatically-generate-an-ai-assistant-1.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0007-manage-ai-assistant-workflow-1.md", "text": "自定义 MCP", "n": 1}
 {"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0012-create-your-first-ai-assistant-1.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0011-dingtalk-ai-model-security-policy-description-1.md", "text": "钉钉 AI 模型安全策略说明", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0006-get-developer-permissions.md", "text": "成为钉钉开发者", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0778-overview-card.md", "text": "卡片类型", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0023-card-template-overview.md", "text": "卡片模板搭建器", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0002-ai-card-template.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0786-api-streamingupdate.md", "text": "AI卡片流式更新", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0002-ai-card-template.md", "to": "docs/03-AI-PaaS/01-pm4vgiS9Br-平台介绍/0001-introduction-to-dingtalk-ai-paas-1.md", "text": "钉钉 AI PaaS 介绍", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0002-ai-card-template.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0012-typewriter-effect-streaming-ai-card.md", "text": "打字机效果流式 AI 卡片", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0003-create-a-card-instance-from-the-card-platform.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md", "text": "卡片模板搭建及发布", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0781-interface-for-creating-a-card-instance.md", "text": "创建卡片", "n": 3}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0788-add-field-interface.md", "text": "新增或者更新卡片的场域信息", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0790-instructions-for-filling-in-api-card-data.md", "text": "API 卡片数据的填写说明", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-faq-card.md", "text": "卡片数据与参数配置-userIdType 字段的填写说明", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md", "text": "卡片模板搭建及发布", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0006-open-interface-card-delivery-instance.md", "text": "开放接口投放卡片实例", "n": 2}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0008-dynamic-data-source.md", "text": "动态数据源", "n": 2}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0009-card-update.md", "text": "卡片更新", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0023-card-template-overview.md", "text": "卡片模板搭建及发布", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0005-card-delivery-instance-for-card-platform.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md", "text": "卡片模板搭建及发布", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0005-card-delivery-instance-for-card-platform.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0003-create-a-card-instance-from-the-card-platform.md", "text": "卡片平台创建卡片实例", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0005-card-delivery-instance-for-card-platform.md", "to": "docs/08-工作台/02-Qzb8Lpee2t-使用教程/0006-add-self-built-interactive-cards-to-the-workbench.md", "text": "自建工作台卡片的创建和使用", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0006-open-interface-card-delivery-instance.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0746-obtain-group-openconversationid.md", "text": "获取群会话的OpenConversationId", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0006-open-interface-card-delivery-instance.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0781-interface-for-creating-a-card-instance.md", "text": "创建卡片", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0006-open-interface-card-delivery-instance.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0782-delivery-card-interface.md", "text": "投放卡片", "n": 2}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0006-open-interface-card-delivery-instance.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0788-add-field-interface.md", "text": "新增或者更新卡片的场域信息", "n": 2}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0006-open-interface-card-delivery-instance.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-faq-card.md", "text": "卡片数据与参数配置-userIdType 字段的填写说明", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0006-open-interface-card-delivery-instance.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md", "text": "卡片模板搭建及发布", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0006-open-interface-card-delivery-instance.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md", "text": "开放接口创建卡片实例", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0783-interactive-card-update-interface.md", "text": "更新卡片", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0787-register-card-callback-address.md", "text": "注册卡片回调地址", "n": 3}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0790-instructions-for-filling-in-api-card-data.md", "text": "API 卡片数据的填写说明", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-faq-card.md", "text": "常见问题", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0004-develop-stream-mode-push-server.md", "text": "开发 Stream 模式（推荐）", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md", "text": "卡片模板搭建及发布", "n": 2}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0003-create-a-card-instance-from-the-card-platform.md", "text": "卡片平台创建卡片实例", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md", "text": "开放接口创建卡片实例", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0006-open-interface-card-delivery-instance.md", "text": "开放接口投放卡片实例", "n": 2}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0032-interactive-components.md", "text": "交互组件", "n": 2}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0008-dynamic-data-source.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0781-interface-for-creating-a-card-instance.md", "text": "创建卡片", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0008-dynamic-data-source.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0783-interactive-card-update-interface.md", "text": "更新卡片", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0008-dynamic-data-source.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0787-register-card-callback-address.md", "text": "注册卡片回调地址", "n": 2}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0008-dynamic-data-source.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md", "text": "卡片模板搭建及发布", "n": 2}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0008-dynamic-data-source.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0003-create-a-card-instance-from-the-card-platform.md", "text": "卡片平台创建卡片实例", "n": 2}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0008-dynamic-data-source.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md", "text": "开放接口创建卡片实例", "n": 2}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0008-dynamic-data-source.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0005-card-delivery-instance-for-card-platform.md", "text": "卡片平台投放卡片实例", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0008-dynamic-data-source.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0006-open-interface-card-delivery-instance.md", "text": "开放接口投放卡片实例", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0009-card-update.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0783-interactive-card-update-interface.md", "text": "更新卡片", "n": 4}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0009-card-update.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0790-instructions-for-filling-in-api-card-data.md", "text": "API 卡片数据的填写说明", "n": 3}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0009-card-update.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-faq-card.md", "text": "卡片数据与参数配置-userIdType 字段的填写说明", "n": 3}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0009-card-update.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0008-dynamic-data-source.md", "text": "动态数据源", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0010-message-card-sending-and-updating.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0783-interactive-card-update-interface.md", "text": "更新卡片", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0010-message-card-sending-and-updating.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0784-create-and-deliver-cards.md", "text": "创建并投放卡片", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0010-message-card-sending-and-updating.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0787-register-card-callback-address.md", "text": "注册卡片回调地址", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0010-message-card-sending-and-updating.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md", "text": "普通卡片模板", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0010-message-card-sending-and-updating.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0003-create-a-card-instance-from-the-card-platform.md", "text": "卡片平台创建卡片实例", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0010-message-card-sending-and-updating.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0005-card-delivery-instance-for-card-platform.md", "text": "卡片平台投放卡片实例", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0010-message-card-sending-and-updating.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "text": "卡片事件回调", "n": 2}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0762-send-group-helper-message.md", "text": "创建并开启互动卡片吊顶", "n": 2}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0763-close-interactive-card-ceiling.md", "text": "关闭互动卡片吊顶", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0783-interactive-card-update-interface.md", "text": "更新钉钉互动卡片", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1474-robots-send-interactive-cards.md", "text": "机器人发送互动卡片（普通版）", "n": 3}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1475-update-the-robot-to-send-interactive-cards.md", "text": "更新机器人发送互动卡片（普通版）", "n": 2}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1476-send-interactive-dynamic-cards-1.md", "text": "发送钉钉互动卡片（高级版）", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1478-registration-card-interaction-callback-address-1.md", "text": "注册互动卡片回调地址", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1480-send-lightweight-interactive-cards.md", "text": "发送轻量级互动卡片", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0019-ding-card-interactive-card-building-platform-new.md", "text": "普通版编辑器", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0020-ding-card-interactive-card-operation-process.md", "text": "接入流程", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0021-interactive-card-editor.md", "text": "高级版编辑器", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0022-interactive-card-usage-example.md", "text": "接入流程", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0012-typewriter-effect-streaming-ai-card.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md", "text": "Client ID", "n": 2}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0012-typewriter-effect-streaming-ai-card.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0078-configure-the-robot-application.md", "text": "创建企业内部应用机器人", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0012-typewriter-effect-streaming-ai-card.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0079-add-robot-to-group.md", "text": "添加机器人入群", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0012-typewriter-effect-streaming-ai-card.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0786-api-streamingupdate.md", "text": "AI卡片流式更新", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0013-intelligent-assistant-with-interactive-card-use-tutorial.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md", "text": "Client ID", "n": 2}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0013-intelligent-assistant-with-interactive-card-use-tutorial.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0078-configure-the-robot-application.md", "text": "创建企业内部应用机器人", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0013-intelligent-assistant-with-interactive-card-use-tutorial.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0079-add-robot-to-group.md", "text": "添加机器人入群", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0013-intelligent-assistant-with-interactive-card-use-tutorial.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "text": "事件回调", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0020-ding-card-interactive-card-operation-process.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "企业内部应用", "n": 2}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0020-ding-card-interactive-card-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0002-download-the-server-side-sdk.md", "text": "服务端SDK下载", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0020-ding-card-interactive-card-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0003-add-api-permission.md", "text": "成为钉钉开发者", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0020-ding-card-interactive-card-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md", "text": "获取企业内部应用的accessToken", "n": 2}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0020-ding-card-interactive-card-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1474-robots-send-interactive-cards.md", "text": "机器人发送互动卡片（普通版）", "n": 3}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0020-ding-card-interactive-card-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1475-update-the-robot-to-send-interactive-cards.md", "text": "更新机器人发送互动卡片（普通版）", "n": 2}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0024-outline-tree-panel.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0003-create-a-card-instance-from-the-card-platform.md", "text": "卡片平台创建卡片实例", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0024-outline-tree-panel.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md", "text": "开放接口创建卡片实例", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0024-outline-tree-panel.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0005-card-delivery-instance-for-card-platform.md", "text": "卡片平台投放卡片实例", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0024-outline-tree-panel.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0006-open-interface-card-delivery-instance.md", "text": "开放接口投放卡片实例", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0024-outline-tree-panel.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0026-binding-variables.md", "text": "绑定变量", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0024-outline-tree-panel.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0027-variable-type.md", "text": "变量类型", "n": 2}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0024-outline-tree-panel.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0030-public-private-and-local-data.md", "text": "公有、私有和本地数据", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0025-relationship-between-variables-and-cards.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0024-outline-tree-panel.md", "text": "数据源面板", "n": 2}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0025-relationship-between-variables-and-cards.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0026-binding-variables.md", "text": "绑定变量", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0025-relationship-between-variables-and-cards.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0028-conditional-rendering-card.md", "text": "条件渲染", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0025-relationship-between-variables-and-cards.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0029-loop-rendering.md", "text": "循环渲染", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0026-binding-variables.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0024-outline-tree-panel.md", "text": "组件属性设置面板", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0026-binding-variables.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0028-conditional-rendering-card.md", "text": "条件渲染", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0026-binding-variables.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0029-loop-rendering.md", "text": "循环渲染", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0027-variable-type.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0030-public-private-and-local-data.md", "text": "公有、私有和本地数据", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0027-variable-type.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0034-chart-variable.md", "text": "图表变量", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0027-variable-type.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0035-table-variables.md", "text": "表格变量", "n": 2}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0027-variable-type.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0036-form-variables.md", "text": "表单变量", "n": 2}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0027-variable-type.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0037-user-information-variables.md", "text": "用户信息变量", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0027-variable-type.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0038-markdown-variable-new.md", "text": "Markdown 变量", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0030-public-private-and-local-data.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0003-create-a-card-instance-from-the-card-platform.md", "text": "卡片平台创建卡片实例", "n": 2}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0030-public-private-and-local-data.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0024-outline-tree-panel.md", "text": "数据源面板", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0030-public-private-and-local-data.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0026-binding-variables.md", "text": "展示动态化内容", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0031-interactive-mode.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0040-link-jump-specification.md", "text": "链接跳转规范", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0032-interactive-components.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0031-interactive-mode.md", "text": "交互方式", "n": 4}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0033-chain-of-events.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "text": "事件回调", "n": 2}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0033-chain-of-events.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0027-variable-type.md", "text": "表达式变量", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0038-markdown-variable-new.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0041-list-of-dingtalk-expressions.md", "text": "钉钉表情列表", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0041-list-of-dingtalk-expressions.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0027-variable-type.md", "text": "普通变量", "n": 1}
-{"from": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0042-configure-widescreen-cards.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0784-create-and-deliver-cards.md", "text": "创建并投放卡片", "n": 1}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0002-message-structure-and-lifecycle.md", "text": "协议版本与 Catalog", "n": 3}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0003-json-card-component-overview.md", "text": "组件", "n": 1}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0008-json-card-core-functions.md", "text": "函数", "n": 1}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0013-json-card-usage-examples.md", "text": "使用示例", "n": 2}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0014-json-card-dws-create-and-validate.md", "text": "DWS 创建与校验", "n": 1}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0015-json-card-agent-skill-create-and-validate.md", "text": "Agent Skill 创建与校验", "n": 2}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0016-json-card-listen-to-interaction-events.md", "text": "监听交互事件", "n": 1}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0017-json-card-dws-send-and-update.md", "text": "DWS 发送与更新", "n": 3}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0002-message-structure-and-lifecycle.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0011-json-card-client-actions.md", "text": "客户端动作", "n": 1}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0003-json-card-component-overview.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0004-json-card-basic-components.md", "text": "文本（Text）", "n": 10}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0003-json-card-component-overview.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0005-json-card-input-components.md", "text": "输入框（TextField）", "n": 14}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0003-json-card-component-overview.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0006-json-card-display-components.md", "text": "图片列表（ImageList）", "n": 12}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0003-json-card-component-overview.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0007-json-card-layout-and-composite-components.md", "text": "链接（Link）", "n": 11}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0004-json-card-basic-components.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0010-json-card-common-types.md", "text": "ComponentId", "n": 61}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0005-json-card-input-components.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0010-json-card-common-types.md", "text": "ComponentId", "n": 92}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0006-json-card-display-components.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0010-json-card-common-types.md", "text": "ComponentId", "n": 68}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0007-json-card-layout-and-composite-components.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0010-json-card-common-types.md", "text": "ComponentId", "n": 61}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0008-json-card-core-functions.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0010-json-card-common-types.md", "text": "DynamicString", "n": 25}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0009-json-card-expressions-and-operators.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0010-json-card-common-types.md", "text": "DynamicNumber", "n": 34}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0011-json-card-client-actions.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0010-json-card-common-types.md", "text": "DataBinding", "n": 34}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0013-json-card-usage-examples.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0017-json-card-dws-send-and-update.md", "text": "DWS 发送与更新", "n": 1}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0014-json-card-dws-create-and-validate.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "text": "最小示例：创建与更新", "n": 1}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0014-json-card-dws-create-and-validate.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0003-json-card-component-overview.md", "text": "组件", "n": 1}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0014-json-card-dws-create-and-validate.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0008-json-card-core-functions.md", "text": "函数", "n": 1}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0014-json-card-dws-create-and-validate.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0010-json-card-common-types.md", "text": "公共类型", "n": 1}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0014-json-card-dws-create-and-validate.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0013-json-card-usage-examples.md", "text": "使用示例", "n": 1}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0014-json-card-dws-create-and-validate.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0017-json-card-dws-send-and-update.md", "text": "DWS 发送与更新", "n": 2}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0015-json-card-agent-skill-create-and-validate.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0013-json-card-usage-examples.md", "text": "使用示例", "n": 1}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0017-json-card-dws-send-and-update.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "text": "完整示例", "n": 1}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0017-json-card-dws-send-and-update.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0014-json-card-dws-create-and-validate.md", "text": "DWS 创建与校验", "n": 1}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0019-json-card-building-faq.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md", "text": "模板搭建", "n": 1}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0019-json-card-building-faq.md", "to": "docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0002-ai-card-template.md", "text": "AI 卡片模板", "n": 1}
-{"from": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0019-json-card-building-faq.md", "to": "docs/05-互动卡片/02-lHGhOeTVdR-JSON-构建卡片（AI）/0013-json-card-usage-examples.md", "text": "现成的卡片结构", "n": 1}
+{"from": "docs/05-互动卡片/01-Vtaq5N3UH0-功能介绍/0001-what-is-a-card-platform.md", "to": "docs/05-互动卡片/01-Vtaq5N3UH0-功能介绍/0002-card-building-methods.md", "text": "构建方式", "n": 1}
+{"from": "docs/05-互动卡片/01-Vtaq5N3UH0-功能介绍/0001-what-is-a-card-platform.md", "to": "docs/05-互动卡片/01-Vtaq5N3UH0-功能介绍/0003-organization.md", "text": "名词释义", "n": 2}
+{"from": "docs/05-互动卡片/01-Vtaq5N3UH0-功能介绍/0001-what-is-a-card-platform.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md", "text": "模板搭建卡片", "n": 3}
+{"from": "docs/05-互动卡片/01-Vtaq5N3UH0-功能介绍/0001-what-is-a-card-platform.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "text": "JSON 构建卡片", "n": 3}
+{"from": "docs/05-互动卡片/01-Vtaq5N3UH0-功能介绍/0002-card-building-methods.md", "to": "docs/05-互动卡片/01-Vtaq5N3UH0-功能介绍/0003-organization.md", "text": "名词释义", "n": 1}
+{"from": "docs/05-互动卡片/01-Vtaq5N3UH0-功能介绍/0002-card-building-methods.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0002-ai-card-template.md", "text": "AI 卡片模板", "n": 1}
+{"from": "docs/05-互动卡片/01-Vtaq5N3UH0-功能介绍/0002-card-building-methods.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0006-open-interface-card-delivery-instance.md", "text": "开放接口投放卡片实例", "n": 1}
+{"from": "docs/05-互动卡片/01-Vtaq5N3UH0-功能介绍/0002-card-building-methods.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0009-card-update.md", "text": "卡片更新", "n": 1}
+{"from": "docs/05-互动卡片/01-Vtaq5N3UH0-功能介绍/0002-card-building-methods.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "text": "JSON 构建卡片", "n": 1}
+{"from": "docs/05-互动卡片/01-Vtaq5N3UH0-功能介绍/0002-card-building-methods.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0016-json-card-listen-to-interaction-events.md", "text": "监听交互事件", "n": 1}
+{"from": "docs/05-互动卡片/01-Vtaq5N3UH0-功能介绍/0002-card-building-methods.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0017-json-card-dws-send-and-update.md", "text": "卡片状态", "n": 1}
+{"from": "docs/05-互动卡片/01-Vtaq5N3UH0-功能介绍/0003-organization.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0017-json-card-dws-send-and-update.md", "text": "DWS 发送与更新", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0006-get-developer-permissions.md", "text": "成为钉钉开发者", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0778-overview-card.md", "text": "卡片类型", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0023-card-template-overview.md", "text": "卡片模板搭建器", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0002-ai-card-template.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0786-api-streamingupdate.md", "text": "AI卡片流式更新", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0002-ai-card-template.md", "to": "docs/03-AI-PaaS/01-pm4vgiS9Br-平台介绍/0001-introduction-to-dingtalk-ai-paas-1.md", "text": "钉钉 AI PaaS 介绍", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0002-ai-card-template.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0012-typewriter-effect-streaming-ai-card.md", "text": "打字机效果流式 AI 卡片", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0003-create-a-card-instance-from-the-card-platform.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md", "text": "卡片模板搭建及发布", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0781-interface-for-creating-a-card-instance.md", "text": "创建卡片", "n": 3}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0788-add-field-interface.md", "text": "新增或者更新卡片的场域信息", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0790-instructions-for-filling-in-api-card-data.md", "text": "API 卡片数据的填写说明", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-faq-card.md", "text": "卡片数据与参数配置-userIdType 字段的填写说明", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md", "text": "卡片模板搭建及发布", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0006-open-interface-card-delivery-instance.md", "text": "开放接口投放卡片实例", "n": 2}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0008-dynamic-data-source.md", "text": "动态数据源", "n": 2}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0009-card-update.md", "text": "卡片更新", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0023-card-template-overview.md", "text": "卡片模板搭建及发布", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0005-card-delivery-instance-for-card-platform.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md", "text": "卡片模板搭建及发布", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0005-card-delivery-instance-for-card-platform.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0003-create-a-card-instance-from-the-card-platform.md", "text": "卡片平台创建卡片实例", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0005-card-delivery-instance-for-card-platform.md", "to": "docs/08-工作台/02-Qzb8Lpee2t-使用教程/0006-add-self-built-interactive-cards-to-the-workbench.md", "text": "自建工作台卡片的创建和使用", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0006-open-interface-card-delivery-instance.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0746-obtain-group-openconversationid.md", "text": "获取群会话的OpenConversationId", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0006-open-interface-card-delivery-instance.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0781-interface-for-creating-a-card-instance.md", "text": "创建卡片", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0006-open-interface-card-delivery-instance.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0782-delivery-card-interface.md", "text": "投放卡片", "n": 2}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0006-open-interface-card-delivery-instance.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0788-add-field-interface.md", "text": "新增或者更新卡片的场域信息", "n": 2}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0006-open-interface-card-delivery-instance.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-faq-card.md", "text": "卡片数据与参数配置-userIdType 字段的填写说明", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0006-open-interface-card-delivery-instance.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md", "text": "卡片模板搭建及发布", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0006-open-interface-card-delivery-instance.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md", "text": "开放接口创建卡片实例", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0783-interactive-card-update-interface.md", "text": "更新卡片", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0787-register-card-callback-address.md", "text": "注册卡片回调地址", "n": 3}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0790-instructions-for-filling-in-api-card-data.md", "text": "API 卡片数据的填写说明", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-faq-card.md", "text": "常见问题", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0004-develop-stream-mode-push-server.md", "text": "开发 Stream 模式（推荐）", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md", "text": "卡片模板搭建及发布", "n": 2}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0003-create-a-card-instance-from-the-card-platform.md", "text": "卡片平台创建卡片实例", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md", "text": "开放接口创建卡片实例", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0006-open-interface-card-delivery-instance.md", "text": "开放接口投放卡片实例", "n": 2}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0032-interactive-components.md", "text": "交互组件", "n": 2}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0008-dynamic-data-source.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0781-interface-for-creating-a-card-instance.md", "text": "创建卡片", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0008-dynamic-data-source.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0783-interactive-card-update-interface.md", "text": "更新卡片", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0008-dynamic-data-source.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0787-register-card-callback-address.md", "text": "注册卡片回调地址", "n": 2}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0008-dynamic-data-source.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md", "text": "卡片模板搭建及发布", "n": 2}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0008-dynamic-data-source.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0003-create-a-card-instance-from-the-card-platform.md", "text": "卡片平台创建卡片实例", "n": 2}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0008-dynamic-data-source.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md", "text": "开放接口创建卡片实例", "n": 2}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0008-dynamic-data-source.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0005-card-delivery-instance-for-card-platform.md", "text": "卡片平台投放卡片实例", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0008-dynamic-data-source.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0006-open-interface-card-delivery-instance.md", "text": "开放接口投放卡片实例", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0009-card-update.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0783-interactive-card-update-interface.md", "text": "更新卡片", "n": 4}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0009-card-update.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0790-instructions-for-filling-in-api-card-data.md", "text": "API 卡片数据的填写说明", "n": 3}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0009-card-update.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-faq-card.md", "text": "卡片数据与参数配置-userIdType 字段的填写说明", "n": 3}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0009-card-update.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0008-dynamic-data-source.md", "text": "动态数据源", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0010-message-card-sending-and-updating.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0783-interactive-card-update-interface.md", "text": "更新卡片", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0010-message-card-sending-and-updating.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0784-create-and-deliver-cards.md", "text": "创建并投放卡片", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0010-message-card-sending-and-updating.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0787-register-card-callback-address.md", "text": "注册卡片回调地址", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0010-message-card-sending-and-updating.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md", "text": "普通卡片模板", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0010-message-card-sending-and-updating.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0003-create-a-card-instance-from-the-card-platform.md", "text": "卡片平台创建卡片实例", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0010-message-card-sending-and-updating.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0005-card-delivery-instance-for-card-platform.md", "text": "卡片平台投放卡片实例", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0010-message-card-sending-and-updating.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "text": "卡片事件回调", "n": 2}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0762-send-group-helper-message.md", "text": "创建并开启互动卡片吊顶", "n": 2}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0763-close-interactive-card-ceiling.md", "text": "关闭互动卡片吊顶", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0783-interactive-card-update-interface.md", "text": "更新钉钉互动卡片", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1474-robots-send-interactive-cards.md", "text": "机器人发送互动卡片（普通版）", "n": 3}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1475-update-the-robot-to-send-interactive-cards.md", "text": "更新机器人发送互动卡片（普通版）", "n": 2}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1476-send-interactive-dynamic-cards-1.md", "text": "发送钉钉互动卡片（高级版）", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1478-registration-card-interaction-callback-address-1.md", "text": "注册互动卡片回调地址", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1480-send-lightweight-interactive-cards.md", "text": "发送轻量级互动卡片", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0019-ding-card-interactive-card-building-platform-new.md", "text": "普通版编辑器", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0020-ding-card-interactive-card-operation-process.md", "text": "接入流程", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0021-interactive-card-editor.md", "text": "高级版编辑器", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0022-interactive-card-usage-example.md", "text": "接入流程", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0012-typewriter-effect-streaming-ai-card.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md", "text": "Client ID", "n": 2}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0012-typewriter-effect-streaming-ai-card.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0078-configure-the-robot-application.md", "text": "创建企业内部应用机器人", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0012-typewriter-effect-streaming-ai-card.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0079-add-robot-to-group.md", "text": "添加机器人入群", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0012-typewriter-effect-streaming-ai-card.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0786-api-streamingupdate.md", "text": "AI卡片流式更新", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0013-intelligent-assistant-with-interactive-card-use-tutorial.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md", "text": "Client ID", "n": 2}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0013-intelligent-assistant-with-interactive-card-use-tutorial.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0078-configure-the-robot-application.md", "text": "创建企业内部应用机器人", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0013-intelligent-assistant-with-interactive-card-use-tutorial.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0079-add-robot-to-group.md", "text": "添加机器人入群", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0013-intelligent-assistant-with-interactive-card-use-tutorial.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "text": "事件回调", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0020-ding-card-interactive-card-operation-process.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "企业内部应用", "n": 2}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0020-ding-card-interactive-card-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0002-download-the-server-side-sdk.md", "text": "服务端SDK下载", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0020-ding-card-interactive-card-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0003-add-api-permission.md", "text": "成为钉钉开发者", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0020-ding-card-interactive-card-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md", "text": "获取企业内部应用的accessToken", "n": 2}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0020-ding-card-interactive-card-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1474-robots-send-interactive-cards.md", "text": "机器人发送互动卡片（普通版）", "n": 3}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0020-ding-card-interactive-card-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1475-update-the-robot-to-send-interactive-cards.md", "text": "更新机器人发送互动卡片（普通版）", "n": 2}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0024-outline-tree-panel.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0003-create-a-card-instance-from-the-card-platform.md", "text": "卡片平台创建卡片实例", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0024-outline-tree-panel.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md", "text": "开放接口创建卡片实例", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0024-outline-tree-panel.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0005-card-delivery-instance-for-card-platform.md", "text": "卡片平台投放卡片实例", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0024-outline-tree-panel.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0006-open-interface-card-delivery-instance.md", "text": "开放接口投放卡片实例", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0024-outline-tree-panel.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0026-binding-variables.md", "text": "绑定变量", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0024-outline-tree-panel.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0027-variable-type.md", "text": "变量类型", "n": 2}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0024-outline-tree-panel.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0030-public-private-and-local-data.md", "text": "公有、私有和本地数据", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0025-relationship-between-variables-and-cards.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0024-outline-tree-panel.md", "text": "数据源面板", "n": 2}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0025-relationship-between-variables-and-cards.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0026-binding-variables.md", "text": "绑定变量", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0025-relationship-between-variables-and-cards.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0028-conditional-rendering-card.md", "text": "条件渲染", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0025-relationship-between-variables-and-cards.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0029-loop-rendering.md", "text": "循环渲染", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0026-binding-variables.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0024-outline-tree-panel.md", "text": "组件属性设置面板", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0026-binding-variables.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0028-conditional-rendering-card.md", "text": "条件渲染", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0026-binding-variables.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0029-loop-rendering.md", "text": "循环渲染", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0027-variable-type.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0030-public-private-and-local-data.md", "text": "公有、私有和本地数据", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0027-variable-type.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0034-chart-variable.md", "text": "图表变量", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0027-variable-type.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0035-table-variables.md", "text": "表格变量", "n": 2}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0027-variable-type.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0036-form-variables.md", "text": "表单变量", "n": 2}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0027-variable-type.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0037-user-information-variables.md", "text": "用户信息变量", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0027-variable-type.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0038-markdown-variable-new.md", "text": "Markdown 变量", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0030-public-private-and-local-data.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0003-create-a-card-instance-from-the-card-platform.md", "text": "卡片平台创建卡片实例", "n": 2}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0030-public-private-and-local-data.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0024-outline-tree-panel.md", "text": "数据源面板", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0030-public-private-and-local-data.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0026-binding-variables.md", "text": "展示动态化内容", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0031-interactive-mode.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0040-link-jump-specification.md", "text": "链接跳转规范", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0032-interactive-components.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0031-interactive-mode.md", "text": "交互方式", "n": 4}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0033-chain-of-events.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0007-event-callback-card.md", "text": "事件回调", "n": 2}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0033-chain-of-events.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0027-variable-type.md", "text": "表达式变量", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0038-markdown-variable-new.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0041-list-of-dingtalk-expressions.md", "text": "钉钉表情列表", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0041-list-of-dingtalk-expressions.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0027-variable-type.md", "text": "普通变量", "n": 1}
+{"from": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0042-configure-widescreen-cards.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0784-create-and-deliver-cards.md", "text": "创建并投放卡片", "n": 1}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0002-message-structure-and-lifecycle.md", "text": "协议版本与 Catalog", "n": 3}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0003-json-card-component-overview.md", "text": "组件", "n": 1}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0008-json-card-core-functions.md", "text": "函数", "n": 1}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0013-json-card-usage-examples.md", "text": "使用示例", "n": 2}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0014-json-card-dws-create-and-validate.md", "text": "DWS 创建与校验", "n": 1}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0015-json-card-agent-skill-create-and-validate.md", "text": "Agent Skill 创建与校验", "n": 2}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0016-json-card-listen-to-interaction-events.md", "text": "监听交互事件", "n": 1}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0017-json-card-dws-send-and-update.md", "text": "DWS 发送与更新", "n": 3}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0002-message-structure-and-lifecycle.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0011-json-card-client-actions.md", "text": "客户端动作", "n": 1}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0003-json-card-component-overview.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0004-json-card-basic-components.md", "text": "文本（Text）", "n": 10}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0003-json-card-component-overview.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0005-json-card-input-components.md", "text": "输入框（TextField）", "n": 14}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0003-json-card-component-overview.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0006-json-card-display-components.md", "text": "图片列表（ImageList）", "n": 12}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0003-json-card-component-overview.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0007-json-card-layout-and-composite-components.md", "text": "链接（Link）", "n": 11}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0004-json-card-basic-components.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0010-json-card-common-types.md", "text": "ComponentId", "n": 61}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0005-json-card-input-components.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0010-json-card-common-types.md", "text": "ComponentId", "n": 92}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0006-json-card-display-components.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0010-json-card-common-types.md", "text": "ComponentId", "n": 68}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0007-json-card-layout-and-composite-components.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0010-json-card-common-types.md", "text": "ComponentId", "n": 61}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0008-json-card-core-functions.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0010-json-card-common-types.md", "text": "DynamicString", "n": 25}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0009-json-card-expressions-and-operators.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0010-json-card-common-types.md", "text": "DynamicNumber", "n": 34}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0011-json-card-client-actions.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0010-json-card-common-types.md", "text": "DataBinding", "n": 34}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0013-json-card-usage-examples.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0017-json-card-dws-send-and-update.md", "text": "DWS 发送与更新", "n": 1}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0014-json-card-dws-create-and-validate.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "text": "最小示例：创建与更新", "n": 1}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0014-json-card-dws-create-and-validate.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0003-json-card-component-overview.md", "text": "组件", "n": 1}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0014-json-card-dws-create-and-validate.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0008-json-card-core-functions.md", "text": "函数", "n": 1}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0014-json-card-dws-create-and-validate.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0010-json-card-common-types.md", "text": "公共类型", "n": 1}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0014-json-card-dws-create-and-validate.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0013-json-card-usage-examples.md", "text": "使用示例", "n": 1}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0014-json-card-dws-create-and-validate.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0017-json-card-dws-send-and-update.md", "text": "DWS 发送与更新", "n": 2}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0015-json-card-agent-skill-create-and-validate.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0013-json-card-usage-examples.md", "text": "使用示例", "n": 1}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0017-json-card-dws-send-and-update.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0001-json-build-card.md", "text": "完整示例", "n": 1}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0017-json-card-dws-send-and-update.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0014-json-card-dws-create-and-validate.md", "text": "DWS 创建与校验", "n": 1}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0019-json-card-building-faq.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md", "text": "模板搭建", "n": 1}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0019-json-card-building-faq.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0002-ai-card-template.md", "text": "AI 卡片模板", "n": 1}
+{"from": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0019-json-card-building-faq.md", "to": "docs/05-互动卡片/03-lHGhOeTVdR-JSON-构建卡片（AI）/0013-json-card-usage-examples.md", "text": "现成的卡片结构", "n": 1}
 {"from": "docs/06-专属版客户端插件/01-XYCsE5MGJh-功能介绍/0002-creating-a-client-plug-in-1.md", "to": "docs/06-专属版客户端插件/01-XYCsE5MGJh-功能介绍/0003-upload-and-publish-plug-ins-1.md", "text": "上传并发布插件", "n": 1}
 {"from": "docs/06-专属版客户端插件/01-XYCsE5MGJh-功能介绍/0002-creating-a-client-plug-in-1.md", "to": "docs/06-专属版客户端插件/02-sakFIe9HDV-Android-插件/0001-process-overview.md", "text": "开发 Android 插件", "n": 1}
 {"from": "docs/06-专属版客户端插件/01-XYCsE5MGJh-功能介绍/0002-creating-a-client-plug-in-1.md", "to": "docs/06-专属版客户端插件/03-gh7c55BOlV-iOS-插件/0001-an-overview-of-the-exclusive-client-plugin-process.md", "text": "开发 iOS 插件", "n": 1}

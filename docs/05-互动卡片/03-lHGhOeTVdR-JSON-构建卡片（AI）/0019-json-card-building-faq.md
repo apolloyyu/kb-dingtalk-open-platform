@@ -29,7 +29,7 @@ updated_at: "2026-09-30 09:13:59"
   它是**字符串数组**，每一项是 A2UI 消息对象**再做一次 JSON 序列化**后的字符串，不是直接嵌套的对象。用 `dws aicard lint --emit` 可以直接生成这个格式，不要手写转义。
 - **发送时要不要传模板 ID？**
 
-  不需要。JSON 构建的卡片结构全部由消息携带，不依赖卡片平台上的模板。需要模板 ID 的是[模板搭建](../01-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md)的链路。
+  不需要。JSON 构建的卡片结构全部由消息携带，不依赖卡片平台上的模板。需要模板 ID 的是[模板搭建](../02-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md)的链路。
 - **更新时能不能重发 createSurface？**
 
   不能。更新**只发** `updateComponents` **和** `updateDataModel` ，`createSurface` 属于创建阶段，一个卡片生命周期内只能出现一次。
@@ -56,7 +56,7 @@ updated_at: "2026-09-30 09:13:59"
 
 - **「AI 卡片模板」和这里讲的是一回事吗？**
 
-  不是。[AI 卡片模板](../01-MhNX42mFB1-模板搭建卡片/0002-ai-card-template.md)是模板搭建链路里的一种模板类型，在卡片平台创建，内置处理中、输入中、完成、失败四个状态，靠 `isFinalize`、`isError` 切换。JSON 构建不需要模板。
+  不是。[AI 卡片模板](../02-MhNX42mFB1-模板搭建卡片/0002-ai-card-template.md)是模板搭建链路里的一种模板类型，在卡片平台创建，内置处理中、输入中、完成、失败四个状态，靠 `isFinalize`、`isError` 切换。JSON 构建不需要模板。
 - **文档里的「模板」到底指什么？**
 
   有三个不同含义：**卡片模板**指平台搭建、发布后有 ID 的那种；**子项模板**指 `Loop`、`Table` 里用一个组件按数据重复渲染的 `template` 字段；**场景模板**指[现成的卡片结构](0013-json-card-usage-examples.md)，复制即用。

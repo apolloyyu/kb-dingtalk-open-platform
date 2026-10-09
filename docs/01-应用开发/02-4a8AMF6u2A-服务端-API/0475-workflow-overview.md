@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "OA 审批 > 概述"
 doc_id: "8oAXqBg2Oq"
-updated_at: "2026-07-10 10:07:21"
+updated_at: "2026-10-09 14:43:07"
 ---
 
 > Source: https://open.dingtalk.com/document/development/workflow-overview
 > Path: 应用开发 / 服务端 API / OA 审批 > 概述
-> Updated: 2026-07-10 10:07:21
+> Updated: 2026-10-09 14:43:07
 
 # 概述
 
@@ -127,10 +127,10 @@ OA审批提供了丰富的接口开放能力，开发者通过API接口可以实
 
 第三方企业应用参考：
 
-- [审批实例状态变更(广播)](../04-LFcRvVD08N-事件订阅/0033-event-workflow-instance-change-broadcast.md)
-- [审批任务状态变更(广播)](../04-LFcRvVD08N-事件订阅/0034-event-workflow-task-change-broadcast.md)
-- [审批实例状态变更(定向)](../04-LFcRvVD08N-事件订阅/0035-event-workflow-instance-change-directed.md)
-- [审批任务状态变更(定向)](../04-LFcRvVD08N-事件订阅/0036-event-workflow-task-change-directed.md)
+- [审批实例状态变更](../04-LFcRvVD08N-事件订阅/0033-event-workflow-instance-change-broadcast.md)
+- [审批任务状态变更](../04-LFcRvVD08N-事件订阅/0034-event-workflow-task-change-broadcast.md)
+- [审批实例状态变更](../04-LFcRvVD08N-事件订阅/0035-event-workflow-instance-change-directed.md)
+- [审批任务状态变更](../04-LFcRvVD08N-事件订阅/0036-event-workflow-task-change-directed.md)
 
 #### **高级版专享**
 
@@ -158,15 +158,19 @@ OA审批提供了丰富的接口开放能力，开发者通过API接口可以实
 
 ### **标准版**
 
+- [发起及撤销审批流](0477-new-version-of-initiate-and-cancel-approval-flow.md)
+- [评论及撤销审批流](0478-comment-and-revoke-approval-flow.md)
+- [同意或拒绝审批流程](0479-approve-or-reject-the-new-version.md)
+- [审批附件的操作流程](0480-new-version-of-attachment-approval-process.md)
+- [用户表单及审批单查询操作](0481-user-form-and-approval-form-query.md)
 - [官方OA审批：钉钉流程与页面对接](0482-use-the-dingtalk-oa-approval-process-and-page-interface.md)
 - [自有OA审批：三方流程与页面对接](0483-use-three-party-process-and-page-docking.md)
+- [审批流程托管：钉钉流程与三方页面对接](0484-approval-process-hosting-integration-mode-use-the-dingtalk-official-oa.md)
 
 ### **高级版专享**
 
 钉钉 OA 审批提供多种企业流程接入方案，满足企业各类业务管理和对接诉求。
 
-- [官方OA审批：钉钉流程与页面对接](0482-use-the-dingtalk-oa-approval-process-and-page-interface.md)
-- [自有OA审批：三方流程与页面对接](0483-use-three-party-process-and-page-docking.md)
 - [审批页面托管：三方流程与钉钉页面对接](0489-use-the-three-party-process-to-interface-with-the-dingtalk-oa.md)
 - [企业自建应用：专享OpenAPI集成审批](0486-use-the-exclusive-openapi-capability-to-dingtalk-oa-approval-through.md)
 - [企业自建审批中心：批量快捷审批](0485-enterprise-self-built-approval-center-supports-batch-quick-approval-and-other.md)

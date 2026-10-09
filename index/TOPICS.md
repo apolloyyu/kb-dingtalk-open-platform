@@ -82,8 +82,8 @@
 
 ## 互动卡片
 
-- [普通卡片模板](../docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md) · [AI 卡片模板（流式）](../docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0002-ai-card-template.md)
-- [开放接口创建卡片实例](../docs/05-互动卡片/01-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md) · 其余见 [互动卡片索引](05-互动卡片/01-模板搭建卡片.md)
+- [普通卡片模板](../docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md) · [AI 卡片模板（流式）](../docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0002-ai-card-template.md)
+- [开放接口创建卡片实例](../docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md) · 其余见 [互动卡片索引](05-互动卡片/02-模板搭建卡片.md)
 
 ## AI 助理（AI PaaS）
 

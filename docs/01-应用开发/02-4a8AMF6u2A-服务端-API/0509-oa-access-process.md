@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "OA 审批 > 自有 OA 审批 > 概述"
 doc_id: "MOsft2J7pC"
-updated_at: "2026-07-20 09:25:24"
+updated_at: "2026-10-09 14:27:31"
 ---
 
 > Source: https://open.dingtalk.com/document/development/oa-access-process
 > Path: 应用开发 / 服务端 API / OA 审批 > 自有 OA 审批 > 概述
-> Updated: 2026-07-20 09:25:24
+> Updated: 2026-10-09 14:27:31
 
 # 概述
 
@@ -116,7 +116,7 @@ OA审批是钉钉产品中做适合承载PaaS化的能力之一，因此基于�
 
 ## **开发者侧接入教程**
 
-详细接入流程步骤请参考：[OA审批流程中心操作流程](https://open.dingtalk.com/document/development/oa-approval-process-center-access-example)
+详细接入方案参考：[自有OA审批：三方流程与页面对接](0483-use-three-party-process-and-page-docking.md)
 
 - 流程中心API相比原自有流程API的变化
 
@@ -134,7 +134,7 @@ OA审批是钉钉产品中做适合承载PaaS化的能力之一，因此基于�
 
 ### **具体接入方式**
 
-企业内部应用/三方应用可以调用钉钉开放平台的自有OA审批下的流程中心相关接口，将审批数据同步到钉钉审批流程中心，为企业提供了统一的审批处理入口。详细接入流程步骤参考：[OA审批流程中心操作流程](https://open.dingtalk.com/document/development/oa-approval-process-center-access-example)
+企业内部应用/三方应用可以调用钉钉开放平台的自有OA审批下的流程中心相关接口，将审批数据同步到钉钉审批流程中心，为企业提供了统一的审批处理入口，详细接入方案参考：[自有OA审批：三方流程与页面对接](0483-use-three-party-process-and-page-docking.md)
 
 1. 创建审批表单。
 

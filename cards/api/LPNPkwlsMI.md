@@ -28,4 +28,4 @@ permissions: qyapi_microapp_manage
 - none stated
 
 source_url: https://open.dingtalk.com/document/development/obtains-the-application-visible-range
-updated_at: 2026-10-09 18:08:49
+updated_at: 2026-10-10 18:01:12

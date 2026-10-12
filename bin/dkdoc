@@ -94,6 +94,15 @@ def _evidence_contract(card=None, intent=None, fast=False):
     return "== 证据契约 ==\n" + "\n".join(lines)
 
 
+_DIGITAL_EMPLOYEE_RE = re.compile(r"数字员工|dingtalk-tag|agentuuid|agent-uuid")
+_DIGITAL_EMPLOYEE_HINT = (
+    "cross_kb: 本题涉及数字员工——dws 数字员工(dingtalk-tag,标识 agentUuid)的创建、可见范围、群里谁能对话、"
+    "本地 Agent 接入及命令参数，以 dws 知识库为准，须同时用 dws-cli-qa 检索(dwsdoc ctx)；本库只作开通/灰度申请等平台侧依据。"
+    "DEAP 智能体/AI 助理、开发者后台的「数字员工」发布类型、企业自建 Agent 接口与 dws 数字员工的对应关系文档未写明，"
+    "不得互相套用，也不得把它们列为 dws 数字员工的创建或入群方式"
+)
+
+
 _IMG_RE = re.compile(r"!\[[^\]]*\]\((https?://[^)\s]+)\)")
 _IMG_KEEP = int(os.environ.get("KB_IMG_KEEP") or 0)  # 每篇保留图数;0=不裁(默认)。曾默认 3,用户裁定"只要必要的图",改为按语义由契约约束
 
@@ -938,6 +947,10 @@ def _ctx_impl(terms, n, force_full=False):
                 parts.append("== API参数卡(证据;结论仍以正文为准) ==")
                 parts.append(evidence_card["body"])
         parts.append(_evidence_contract(api_card, intent, card_fast))
+        # dws 数字员工的命令面只在 dws 库;只查本库时模型会把 DEAP 智能体/企业自建 Agent 接口
+        # 当成数字员工的创建或入群方式(实录 2026-10-10、10-12 正式群)。
+        if _DIGITAL_EMPLOYEE_RE.search(raw_q):
+            parts.append(_DIGITAL_EMPLOYEE_HINT)
         if archived_first:
             parts.append("archived_only: 首篇为 ⚠归档 页且现行区无同主题文档——归档页即本题唯一依据，须据其作答并标注「已归档」，不得因归档而答「文档未收录」")
         if ent_lines:

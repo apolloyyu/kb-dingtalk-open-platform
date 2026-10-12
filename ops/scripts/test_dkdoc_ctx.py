@@ -222,6 +222,7 @@ def main():
     for query in ("DEAP创建的智能体就是你所谓的数字员工吗", "数字员工到底在哪儿创建的", "dingtalk-tag 提示 DIGITAL_EMPLOYEE_NOT_ENABLED 怎么开通"):
         out = run("ctx", query)
         check("cross_kb: 本题涉及数字员工" in out, f"数字员工题缺跨库提示: {query}")
+        check("不得写任何 dws 命令的参数" in out, f"跨库提示缺参数禁令: {query}")
     out = run("ctx", "通过免登码获取用户信息的接口地址和必填参数是什么")
     check("cross_kb:" not in out, "非数字员工题不应出现跨库提示")
 

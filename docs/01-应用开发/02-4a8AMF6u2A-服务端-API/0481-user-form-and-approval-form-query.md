@@ -1,28 +1,113 @@
 ---
-title: "用户表单及审批单查询操作"
+title: "OA审批流接入：查询用户可见表单与待审批数量"
 source_url: "https://open.dingtalk.com/document/development/user-form-and-approval-form-query"
 namespace: "development"
 slug: "user-form-and-approval-form-query"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "OA 审批 > 使用教程 > 标准版 > 用户表单及审批单查询操作"
+breadcrumb: "OA 审批 > 使用教程 > 标准版 > OA审批流接入：查询用户可见表单与待审批数量"
 doc_id: "OIBT32AHaY"
-updated_at: "2026-07-10 10:11:36"
+updated_at: "2026-10-12 18:04:48"
 ---
 
 > Source: https://open.dingtalk.com/document/development/user-form-and-approval-form-query
-> Path: 应用开发 / 服务端 API / OA 审批 > 使用教程 > 标准版 > 用户表单及审批单查询操作
-> Updated: 2026-07-10 10:11:36
+> Path: 应用开发 / 服务端 API / OA 审批 > 使用教程 > 标准版 > OA审批流接入：查询用户可见表单与待审批数量
+> Updated: 2026-10-12 18:04:48
 
-# 用户表单及审批单查询操作
+# OA审批流接入：查询用户可见表单与待审批数量
 
-本文介绍了如何调用官方OA审批接口创建审批模板、发起审批、查询获取当前企业所有可管理的审批表单、获取指定用户可见的审批表单、用户待审批数量等流程。
+## **概述**
 
-## 接入流程简介
+本方案通过调用钉钉OA审批新版服务端API，实现业务系统与钉钉审批能力的深度集成。开发者可在自有系统中动态查询企业可管理表单、用户可见表单及待审批数量，无需硬编码表单配置，支持审批入口的动态渲染和个性化待办提醒，适用于统一工作台、智能推荐、消息推送等多种业务场景。
 
-本文档展示了，创建一个企业内部应用，使用官方OA审批提供的API，实现创建审批模板、发起审批、查询获取当前企业所有可管理的审批表单、获取指定用户可见的审批表单、用户待审批数量等流程：
+### **方案背景**
 
-前提条件：完成[应用创建与配置](../01-XOnnmGCTbn-开发指南/0007-create-application.md)的流程。
+在企业自有业务系统中集成钉钉OA审批能力时，常需动态获取当前企业所有可管理的审批表单列表、指定用户可见的审批表单，以及用户的待审批数量，以实现审批入口的动态渲染和待办提醒功能。钉钉开放平台提供了"获取当前企业所有可管理的表单""获取指定用户可见的审批表单列表""获取用户待审批数量"等新版服务端API，支持业务系统按需查询表单元数据和待办统计信息，无需硬编码表单配置。
+
+### **核心价值**
+
+本方案的核心价值体现在以下三个方面：
+
+- **表单列表动态获取：** 通过API实时拉取企业内所有可管理或指定用户可见的审批表单，避免在业务系统中维护静态表单配置表。
+- **待办数量精准统计：** 基于用户userId精确查询其待处理审批数量，支持在业务系统首页或消息中心展示个性化待办提醒。
+- **权限隔离可控：** 获取表单列表时自动遵循钉钉OA审批的权限体系，仅返回调用者有权访问的表单，保障数据安全。
+
+### **适用场景**
+
+本方案适用于需要在自有业务系统中动态展示审批表单入口、实时显示用户待办数量的场景，典型包括：
+
+- **统一审批工作台：** 在业务系统首页聚合展示用户可见的所有审批表单入口及待办数量，实现一站式审批入口。
+- **智能表单推荐：** 根据用户角色和部门动态过滤可见表单列表，仅展示与其职责相关的审批类型。
+- **待办消息推送：** 定时轮询用户待审批数量变化，触发站内信或移动端推送通知。
+
+## 典型业务场景
+
+### 场景一：制造企业统一审批工作台（制造业）
+
+#### **痛点分析**
+
+某大型制造企业使用自研ERP系统管理生产、采购、人事等多条业务线，各业务线的审批表单分散在不同子系统中。原有流程存在以下问题：
+
+- **表单入口分散：** 员工需在ERP、MES、HR等多个系统中分别查找对应审批表单，无法在一个页面集中发起各类审批。
+- **待办感知滞后：** 审批人无法在ERP首页看到自己的待审批数量，需逐个进入各子系统查看，容易遗漏紧急审批。
+- **表单配置僵化：** 新增审批类型时需手动在各子系统中添加入口链接，运维成本高且易遗漏。
+
+#### **价值验证**
+
+- **自动化流程**
+
+  ![制造企业统一审批工作台场景图_20261012_102626](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8849971971/p1105101.png)
+- **关键优势**
+
+  - **表单入口一键聚合：** 员工在ERP首页即可看到所有可用审批表单，点击直接跳转钉钉端内发起审批，无需切换系统。
+  - **待办数量实时刷新：** 首页顶部展示用户待审批数量徽章，每5分钟自动轮询更新，确保审批人不遗漏任何待办。
+  - **权限自动适配：** 不同角色的员工看到的表单列表自动过滤，普通员工仅见请假/报销类表单，管理层额外可见采购/合同类表单，审批周期缩短40%以上。
+
+### **场景二：高校教职工移动办公门户（教育行业）**
+
+#### **痛点分析**
+
+某重点大学使用自研教职工移动办公APP处理日常事务，教师需提交调课申请、科研经费报销、设备采购等多种审批。原有流程存在以下问题：
+
+- **表单查找困难：** APP内审批入口采用固定菜单结构，新上线的审批类型需发版更新才能添加入口，响应速度慢。
+- **跨校区待办遗漏：** 主校区和分校区教师的待审批通知依赖邮件推送，移动端无实时提醒，偏远校区教师平均延迟2天处理审批。
+- **个性化体验差：** 所有教师看到相同的审批表单列表，行政人员频繁看到教学类表单，教授频繁看到财务类表单，干扰核心操作。
+
+#### **价值验证**
+
+- **自动化流程**
+
+  ![高校教职工移动办公门户场景图_20261012_102729](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8849971971/p1105103.png)
+- **关键优势**
+
+  - **表单列表千人千面：** 教师登录后仅看到与其岗位相关的审批表单，行政岗优先显示公文流转，教学岗优先显示调课申请，减少无效浏览时间。
+  - **待办提醒即时触达：** APP后台静默轮询待审批数量，超过阈值时推送本地通知，跨校区教师审批响应速度提升60%。
+  - **新表单零配置上线：** 管理员在钉钉后台新建审批模板后，APP下次启动自动拉取并展示，无需发版更新。
+
+## 实施指南
+
+### 技术架构
+
+本方案的技术架构包含以下核心组件：
+
+- **身份鉴权层：** 负责应用凭证管理和访问令牌获取，确保所有API调用的身份合法性。
+- **表单查询层：** 负责调用获取企业可管理表单、用户可见表单、待审批数量等查询接口，返回结构化表单元数据。
+- **权限过滤层：** 基于钉钉OA审批的权限体系，自动过滤调用者无权访问的表单，保障数据安全。
+- **缓存加速层：** 对表单列表和待办数量进行短时缓存，降低API调用频率，提升前端渲染性能。
+
+### 前置条件
+
+- **应用准备**： 已完成[应用创建与配置](../01-XOnnmGCTbn-开发指南/0007-create-application.md)流程，获取应用 Client ID 和 Client Secret。
+- **权限要求：** 拥有钉钉企业管理员或子管理员权限，并申请以下接口权限：
+
+  - `Workflow.Form.Write`（工作流模板写权限）
+  - `Workflow.Form.Read`（工作流模板读权限）
+  - `Workflow.Instance.Write`（工作流实例写权限）
+  - `Workflow.Instance.Read`（工作流实例读权限）
+- **开发环境**： 已安装Java开发环境（JDK1.6及以上）及Maven构建工具。
+- **SDK准备**： 下载钉钉服务端SDK，支持Java/Python/Go等多语言。
+
+### 代码实现
 
 步骤一：获取应用凭证信息，获取应用 Client ID 和 Client Secret。
 
@@ -32,57 +117,71 @@ updated_at: "2026-07-10 10:11:36"
 
 步骤四：调用OA审批相关API：
 
-1. 调用新版服务端API-[创建或更新审批表单模板](0491-create-an-approval-form-template.md)接口，获取模板的唯一编码`processCode`。
-2. 创建多个审批表单模板后，可调用新版服务端API-[获取当前企业所有可管理的表单](0495-get-all-manageable-forms-for-the-current-enterprise.md)接口，获取用户在当前企业所有可管理的审批表单列表。调用本接口，userId对应的人员必须拥有该企业OA审批的权限。
-3. 创建多个审批表单模板后，可调用新版服务端API-[获取指定用户可见的审批表单列表](0494-obtains-a-list-of-approval-forms-visible-to-the-specified.md)接口，获取该用户可见的审批表单列表。
-4. 根据模板编码`processCode`，调用新版服务端API-[发起审批实例](0497-create-an-approval-instance.md)接口发起审批实例，获取审批实例`instanceId`。
-5. 发起多个审批实例后，可根据模板编码`processCode`，调用新版服务端API-[获取审批实例ID列表](0501-obtain-an-approval-list-of-instance-ids.md)接口，获取权限范围内的相关部门审批实例ID列表。
-6. 发起多个审批实例后，也可根据用户userId，调用新版服务端API-[获取用户待审批数量](0508-queries-the-number-of-requests-to-be-approved-by-users.md)接口，获取该用户待处理的审批数量。
+1. 调用新版服务端API-[创建或更新审批表单模板](0490-create-an-approval-form-template.md)接口，获取模板的唯一编码`processCode`。
+2. 创建多个审批表单模板后，可调用新版服务端API-[获取当前企业所有可管理的表单](0494-get-all-manageable-forms-for-the-current-enterprise.md)接口，获取用户在当前企业所有可管理的审批表单列表。调用本接口，userId对应的人员必须拥有该企业OA审批的权限。
+3. 创建多个审批表单模板后，可调用新版服务端API-[获取指定用户可见的审批表单列表](0493-obtains-a-list-of-approval-forms-visible-to-the-specified.md)接口，获取该用户可见的审批表单列表。
+4. 根据模板编码`processCode`，调用新版服务端API-[发起审批实例](0496-create-an-approval-instance.md)接口发起审批实例，获取审批实例`instanceId`。
+5. 发起多个审批实例后，可根据模板编码`processCode`，调用新版服务端API-[获取审批实例ID列表](0500-obtain-an-approval-list-of-instance-ids.md)接口，获取权限范围内的相关部门审批实例ID列表。
+6. 发起多个审批实例后，也可根据用户userId，调用新版服务端API-[获取用户待审批数量](0507-queries-the-number-of-requests-to-be-approved-by-users.md)接口，获取该用户待处理的审批数量。
 
-## **前提条件**
+## 实施步骤
 
-完成[应用创建与配置](../01-XOnnmGCTbn-开发指南/0007-create-application.md)的流程。
+### **步骤一：****获取应用凭证**
 
-## **步骤一：获取应用凭证**
-
-1. 选择目标应用，进入应用详情页，单击**基础信息** > **凭证与基础信息**。
-2. 获取应用 Client ID 和 Client Secret。
-
-## 步骤二：添加接口权限
-
-单击**开发配置** > **权限管理**，在权限搜索框中分别输入`Workflow.Form.Write`、 `Workflow.Form.Read`、`Workflow.Instance.Write`和`Workflow.Instance.Read`，并申请权限。
-
-## 步骤三：获取应用访问凭证accessToken
-
-> **[!IMPORTANT]**
->
-> 服务端API差异详情参见[新版API VS 旧版API](0002-download-the-server-side-sdk.md#section-8lr-id4-rbz)。以下接口均使用服务端API接口，SDK下载详情参见[服务端SDK下载](0002-download-the-server-side-sdk.md)。
-
-根据步骤一中的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的accessToken](0032-obtain-the-access-token-of-an-internal-app.md)。
-
-```
- public void getAccessToken() throws Exception {
-        Config config = new Config();
-        config.protocol = "https";
-        config.regionId = "central";
-        com.aliyun.dingtalkoauth2_1_0.Client client = new com.aliyun.dingtalkoauth2_1_0.Client(config);
-        GetAccessTokenRequest accessTokenRequest = new GetAccessTokenRequest()
-                .setAppKey("din*********hgn")
-                .setAppSecret("9G_O************mBkhgGIO");
-        GetAccessTokenResponse accessToken = client.getAccessToken(accessTokenRequest);
-        System.out.println(JSON.toJSONString(accessToken.getBody()));
-    }
-```
-
-## 步骤四：调用服务端OA相关API
-
-1. 调用新版服务端API-[创建或更新审批表单模板](0491-create-an-approval-form-template.md)接口，获取模板的唯一编码`processCode`。
+1. 登录[钉钉开发者后台](https://open-dev.dingtalk.com/)。
+2. 选择目标应用，进入应用详情页。
+3. 单击**基础信息** > **凭证与基础信息**。
+4. 记录应用的`Client ID`和`Client Secret`。
 
    > **[!NOTE]**
    >
-   > 若没有保存接口返回的模板编码`processCode`，钉钉管理后台版本不同，获取processCode的方式不同。登录钉钉管理后台，在首页查看版本。如下图所示，页面展示**回到旧版**和**新版反馈**，说明当前是新版。![审批获取processCode ](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/6144871461/p381720.png)
+   > 请妥善保管 `Client Secret`，不要泄露给第三方。建议将其存储在环境变量或密钥管理系统中，避免硬编码在代码里。
 
-   **新版钉钉管理后台**：在审批模板编辑页-基础设置-**页面底部**查看。![OA审批-使用案例-审批附件-新增获取processcode新旧版方式 ](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/9849463871/p443734.png)**旧版钉钉管理后台**：在审批模板编辑页的URL中查看。![processCode](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/9849463871/p344894.png)
+### **步骤二：添加接口权限**
+
+1. 在应用详情页，单击**权限管理**。
+2. 在权限搜索框中输入以下权限标识并申请：
+
+   - `Workflow.Form.Write`（工作流模板写权限）：用于创建或更新审批表单模板。
+   - `Workflow.Form.Read`（工作流模板读权限）：用于获取企业可管理表单和用户可见表单列表。
+   - `Workflow.Instance.Write`（工作流实例写权限）：用于发起审批实例。
+   - `Workflow.Instance.Read`（工作流实例读权限）：用于获取用户待审批数量。
+
+> **[!NOTE]**
+>
+> 不同业务场景可能需要不同的权限组合，请根据实际需求申请。
+
+### 步骤三：获取访问凭证（accessToken）
+
+根据步骤一中 的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的accessToken](0032-obtain-the-access-token-of-an-internal-app.md)。
+
+```
+public void getAccessToken() throws Exception {
+  Config config = new Config();
+  config.protocol = "https";
+  config.regionId = "central";
+  com.aliyun.dingtalkoauth2_1_0.Client client = new com.aliyun.dingtalkoauth2_1_0.Client(config);
+  GetAccessTokenRequest accessTokenRequest = new GetAccessTokenRequest()
+    .setAppKey("din*********hgn")
+    .setAppSecret("9G_O************mBkhgGIO");
+  GetAccessTokenResponse accessToken = client.getAccessToken(accessTokenRequest);
+  System.out.println(JSON.toJSONString(accessToken.getBody()));
+}
+```
+
+**最佳实践**：
+
+- **缓存策略**：`accessToken`有效期为2小时，建议在内存或Redis中缓存，过期前5分钟主动刷新。
+- **并发控制**：避免多个线程同时刷新token导致冲突，可使用分布式锁机制。
+- **异常重试**：网络波动时自动重试，最多3次，间隔递增（1s → 2s → 4s）。
+
+### 步骤四：核心API调用
+
+1. 创建或更新审批表单模板：调用新版服务端API-[创建或更新审批表单模板](0490-create-an-approval-form-template.md)接口，获取模板的唯一编码`processCode`。
+
+   > **[!NOTE]**
+   >
+   > 若没有保存接口返回的模板编码`processCode`，可通过[processCode](0475-workflow-overview.md#6fada3928c317)说明查询。
 
    ```
      public void createProcessTemplate() throws Exception {
@@ -274,7 +373,16 @@ updated_at: "2026-07-10 10:11:36"
            }
        }
    ```
-2. 创建多个审批表单模板后，可调用新版服务端API-[获取当前企业所有可管理的表单](0495-get-all-manageable-forms-for-the-current-enterprise.md)接口，获取用户在当前企业所有可管理的审批表单列表。
+
+   **请求参数：**
+
+   - `name`：审批表单名称。
+   - `description`：表单描述信息。
+
+   **返回字段：**
+
+   - `processCode`：审批表单模板唯一编码。
+2. **获取当前企业所有可管理的表单**：创建多个审批表单模板后，可调用新版服务端API-[获取当前企业所有可管理的表单](0494-get-all-manageable-forms-for-the-current-enterprise.md)接口，获取用户在当前企业所有可管理的审批表单列表。
 
    > **[!NOTE]**
    >
@@ -309,7 +417,15 @@ updated_at: "2026-07-10 10:11:36"
            }
        }
    ```
-3. 创建多个审批表单模板后，可调用新版服务端API-[获取指定用户可见的审批表单列表](0494-obtains-a-list-of-approval-forms-visible-to-the-specified.md)接口，获取该用户可见的审批表单列表。
+
+   **请求参数：**
+
+   - `userId`：查询人员的userid，该人员必须拥有企业OA审批权限。
+
+   **返回字段：**
+
+   - `result`：可管理审批表单列表，含processCode、iconName、iconUrl、flowTitle等字段。
+3. **获取指定用户可见的审批表单列表**：调用新版服务端API-[获取指定用户可见的审批表单列表](0493-obtains-a-list-of-approval-forms-visible-to-the-specified.md)接口，获取该用户可见的审批表单列表。
 
    ```
    public void processUserVisibilitieTemplates() throws Exception {
@@ -342,7 +458,15 @@ updated_at: "2026-07-10 10:11:36"
            }
        }
    ```
-4. 根据模板编码`processCode`，调用新版服务端API-[发起审批实例](0497-create-an-approval-instance.md)接口发起审批实例，获取审批实例`instanceId`。
+
+   **请求参数：**
+
+   - `userId`：目标用户的userid。
+
+   **返回字段：**
+
+   - `processList`：用户可见审批表单列表，包含processCode、name、iconUrl等字段。
+4. **发起审批实例**：根据模板编码`processCode`，调用新版服务端API-[发起审批实例](0496-create-an-approval-instance.md)接口发起审批实例，获取审批实例`instanceId`。
 
    ```
    public void ProcessInstances() throws Exception {
@@ -475,7 +599,18 @@ updated_at: "2026-07-10 10:11:36"
            }
        }
    ```
-5. 发起多个审批实例后，可根据模板编码`processCode`，调用新版服务端API-[获取审批实例ID列表](0501-obtain-an-approval-list-of-instance-ids.md)接口，获取权限范围内的相关部门审批实例ID列表。
+
+   **请求参数：**
+
+   - `processCode`：审批表单模板唯一编码。
+   - `originatorUserId`：发起人userid。
+   - `deptId`：发起人所属部门ID。
+   - `microappAgentId`：应用标识AgentId。
+
+   **返回字段：**
+
+   - `instanceId`：审批实例唯一ID。
+5. **获取审批实例ID列表**：发起多个审批实例后，可根据模板编码`processCode`，调用新版服务端API-[获取审批实例ID列表](0500-obtain-an-approval-list-of-instance-ids.md)接口，获取权限范围内的相关部门审批实例ID列表。
 
    ```
    public void processInstanceIdsQuery() throws Exception {
@@ -513,7 +648,18 @@ updated_at: "2026-07-10 10:11:36"
            }
        }
    ```
-6. 发起多个审批实例后，也可根据用户userId，调用新版服务端API-[获取用户待审批数量](0508-queries-the-number-of-requests-to-be-approved-by-users.md)接口，获取该用户待处理的审批数量。
+
+   **请求参数：**
+
+   - `processCode`：审批表单模板唯一编码。
+   - `startTime`：查询起始时间戳（毫秒）。
+   - `endTime`：查询结束时间戳（毫秒）。
+   - `userIds`：发起人userId列表，最大列表长度为10。
+
+   **返回字段：**
+
+   - `list`：审批实例ID。
+6. **获取用户待审批数量**：发起多个审批实例后，也可根据用户userId，调用新版服务端API-[获取用户待审批数量](0507-queries-the-number-of-requests-to-be-approved-by-users.md)接口，获取该用户待处理的审批数量。
 
    ```
    public void processTodoTasksNumbers() throws Exception {
@@ -544,3 +690,40 @@ updated_at: "2026-07-10 10:11:36"
            }
        }
    ```
+
+   **请求参数：**
+
+   - `userid`：待查询用户的userid。
+
+   **返回字段：**
+
+   - `result`：该用户待处理的审批数量。
+
+**实施完成检查清单**
+
+- ✅ 应用已完成创建并获取Client ID和Client Secret。
+- ✅ 已申请`Workflow.Form.Write`、 `Workflow.Form.Read`、`Workflow.Instance.Write`和`Workflow.Instance.Read`权限。
+- ✅ accessToken获取成功且缓存策略已配置。
+- ✅ 获取企业可管理表单列表接口调用成功。
+- ✅ 获取用户可见表单列表接口调用成功。
+- ✅ 获取用户待审批数量接口调用成功。
+- ✅ 前端已实现表单列表动态渲染和待办数量徽章展示。
+- ✅ 权限过滤生效，不同角色用户看到差异化表单列表。
+
+## 常见问题（FAQ）
+
+- **Q：为什么调用获取表单列表接口返回空结果？**
+
+  请确认传入的userId对应的用户是否拥有该企业OA审批的管理权限。只有具备OA审批权限的用户才能查询到可管理的表单列表。
+- **Q：获取用户可见表单列表和获取企业可管理表单列表有什么区别？**
+
+  获取企业可管理表单列表返回的是userId用户有权管理的所有表单（通常是管理员视角）；获取用户可见表单列表返回的是该用户作为申请人可以发起的表单（通常是普通员工视角），两者权限范围不同。
+- **Q：待审批数量接口返回的count包含哪些状态的审批？**
+
+  仅包含当前处于"待审批"状态的实例数量，不包括已同意、已拒绝、已撤销或已终止的审批实例。
+- **Q：表单列表接口的返回结果是否需要缓存？**
+
+  建议缓存。表单元数据变更频率低，可在业务系统侧缓存5-10分钟，减少API调用次数。但待审批数量接口不建议长时间缓存，建议每1-5分钟轮询一次以保证时效性。
+- **Q：如果用户属于多个部门，获取可见表单列表时会重复返回吗？**
+
+  不会。接口返回的是去重后的表单列表，即使同一表单因多部门权限被多次匹配，结果中也只出现一次。

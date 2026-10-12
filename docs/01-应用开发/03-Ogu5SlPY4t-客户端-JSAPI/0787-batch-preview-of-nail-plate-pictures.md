@@ -58,8 +58,8 @@ dd.biz.cspace.previewDentryImages({
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
 | images | Array<Object> | 是 | 钉盘图片列表。目前无数量限制。 |
-| spaceId | String | 是 | 图片所在的钉盘空间ID，调用[获取文件或文件夹列表](../02-4a8AMF6u2A-服务端-API/0666-get-a-list-of-files-or-folders.md)接口获取spaceId参数值。 |
-| dentryId | String | 是 | 图片在钉盘空间内的节点ID，可调用[获取文件或文件夹列表](../02-4a8AMF6u2A-服务端-API/0666-get-a-list-of-files-or-folders.md)接口获取id参数值。 |
+| spaceId | String | 是 | 图片所在的钉盘空间ID，调用[获取文件或文件夹列表](../02-4a8AMF6u2A-服务端-API/0665-get-a-list-of-files-or-folders.md)接口获取spaceId参数值。 |
+| dentryId | String | 是 | 图片在钉盘空间内的节点ID，可调用[获取文件或文件夹列表](../02-4a8AMF6u2A-服务端-API/0665-get-a-list-of-files-or-folders.md)接口获取id参数值。 |
 | index | Number | 否 | 从第几张开始预览。第一张index等于0，依次类推。  **[!NOTE]**  如果index超出images中图片的数量，默认从第一张开始预览。 |
 | onSuccess | Function | 否 | 调用成功的回调函数。 |
 | onFail | Function | 否 | 调用失败的回调函数。 |

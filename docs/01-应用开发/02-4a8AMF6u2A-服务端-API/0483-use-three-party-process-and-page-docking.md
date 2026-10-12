@@ -127,16 +127,16 @@ HR系统独立管理请假审批，但考勤打卡数据在钉钉中，两套系
 
 步骤四：调用服务端审批相关API。
 
-1. 调用新版服务端API-[创建或更新审批模板](0510-create-orupdate-the-approval-template-new.md)接口，获取模板的唯一编码`processCode`。
-2. 如果没有保存`processCode`，可以通过调用[获取模板code](0511-obtain-the-template-code.md)接口获取`processCode`。
+1. 调用新版服务端API-[创建或更新审批模板](0509-create-orupdate-the-approval-template-new.md)接口，获取模板的唯一编码`processCode`。
+2. 如果没有保存`processCode`，可以通过调用[获取模板code](0510-obtain-the-template-code.md)接口获取`processCode`。
 3. 创建审批模板成功后，用户可以在钉钉OA审批管理后台，查看三方自有审批单模板、查看/搜索模板数据、导出/删除模板数据等。
-4. 根据模板编码`processCode`，调用新版服务端API-[创建实例](0513-create-a-ticket-approval-instance.md)接口发起审批实例，获取审批实例`processInstanceId`。
+4. 根据模板编码`processCode`，调用新版服务端API-[创建实例](0512-create-a-ticket-approval-instance.md)接口发起审批实例，获取审批实例`processInstanceId`。
 5. 创建审批实例成功后，用户也可以进入钉钉OA审批中心，查看审批四大列表（待处理、已处理、已发起、我收到的）、搜索审批实例数据、执行审批等操作。
-6. 根据审批实例`processInstanceId`和待办事项列表tasks，调用[创建流程中心待处理任务](0516-create-pending-tasks-in-process-center.md)接口，可以将三方系统内的审批节点信息同步到钉钉OA审批，获取待办事项的taskId并生成对应的钉钉待办任务。
-7. 创建待处理任务成功后，调用[查询通过流程中心集成的OA审批任务](0517-query-oa-approval-tasks-integrated-through-process-center.md)接口，可以查询到用户运行中的审批任务。
-8. 根据审批实例`processInstanceId`和审批待办任务taskId，可以调用[更新流程中心任务状态](0518-update-process-center-task-status.md)接口，同步完成自有审批待办状态的更新。在或签等场景，可以调用[批量取消流程中心待处理任务](0519-cancel-multiple-oa-approval-tasks.md)接口，批量将审批实例下正在运行中的待办事项设置为CANCELED。
-9. 根据审批实例`processInstanceId`和实例状态status、实例结果result等，可以调用[更新实例状态](0514-update-instance-status.md)或 [批量更新实例状态](0515-self-owned-batch-update-of-instance-status.md)接口，更新实例状态。
-10. 最后，若需要对审批模板数据进行清理，可以调用[删除模板](0512-self-owned-approval-deletion-template.md)接口，删除为企业创建的审批模板，同时删除该模板下创建的实例和待办任务。
+6. 根据审批实例`processInstanceId`和待办事项列表tasks，调用[创建流程中心待处理任务](0515-create-pending-tasks-in-process-center.md)接口，可以将三方系统内的审批节点信息同步到钉钉OA审批，获取待办事项的taskId并生成对应的钉钉待办任务。
+7. 创建待处理任务成功后，调用[查询通过流程中心集成的OA审批任务](0516-query-oa-approval-tasks-integrated-through-process-center.md)接口，可以查询到用户运行中的审批任务。
+8. 根据审批实例`processInstanceId`和审批待办任务taskId，可以调用[更新流程中心任务状态](0517-update-process-center-task-status.md)接口，同步完成自有审批待办状态的更新。在或签等场景，可以调用[批量取消流程中心待处理任务](0518-cancel-multiple-oa-approval-tasks.md)接口，批量将审批实例下正在运行中的待办事项设置为CANCELED。
+9. 根据审批实例`processInstanceId`和实例状态status、实例结果result等，可以调用[更新实例状态](0513-update-instance-status.md)或 [批量更新实例状态](0514-self-owned-batch-update-of-instance-status.md)接口，更新实例状态。
+10. 最后，若需要对审批模板数据进行清理，可以调用[删除模板](0511-self-owned-approval-deletion-template.md)接口，删除为企业创建的审批模板，同时删除该模板下创建的实例和待办任务。
 
 ## 实施步骤
 
@@ -192,7 +192,7 @@ public void getAccessToken() throws Exception {
 
 ### 步骤四：核心API调用
 
-1. **创建或更新审批模板**：调用新版服务端API-[创建或更新审批模板](0510-create-orupdate-the-approval-template-new.md)接口，获取模板的唯一编码`processCode`。
+1. **创建或更新审批模板**：调用新版服务端API-[创建或更新审批模板](0509-create-orupdate-the-approval-template-new.md)接口，获取模板的唯一编码`processCode`。
 
    > **[!NOTE]**
    >
@@ -433,8 +433,8 @@ public void getAccessToken() throws Exception {
    - `processCode`：审批模板的唯一编码，后续所有操作均需使用此编码。
    > **[!NOTE]**
    >
-   > 若没有保存接口返回的模板编码`processCode`，可以通过调用[获取模板code](0511-obtain-the-template-code.md)接口获取`processCode`。
-2. **获取模板code（备选）：**如果未保存`processCode`，可调用[获取模板code](0511-obtain-the-template-code.md)接口获取`processCode`。
+   > 若没有保存接口返回的模板编码`processCode`，可以通过调用[获取模板code](0510-obtain-the-template-code.md)接口获取`processCode`。
+2. **获取模板code（备选）：**如果未保存`processCode`，可调用[获取模板code](0510-obtain-the-template-code.md)接口获取`processCode`。
 
    ```
    public void getProcessCodeByName() throws Exception {
@@ -476,7 +476,7 @@ public void getAccessToken() throws Exception {
 3. 创建审批模板成功后，用户可以在钉钉OA审批管理后台，查看三方自有审批单模板、查看/搜索模板数据、导出/删除模板数据等。
 
    ![未标题-1](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/7193809661/p517459.gif)
-4. **同步审批实例数据到钉钉：**根据模板编码`processCode`，调用新版服务端API-[创建实例](0513-create-a-ticket-approval-instance.md)接口发起审批实例，获取审批实例`processInstanceId`。
+4. **同步审批实例数据到钉钉：**根据模板编码`processCode`，调用新版服务端API-[创建实例](0512-create-a-ticket-approval-instance.md)接口发起审批实例，获取审批实例`processInstanceId`。
 
    ```
    public void saveIntegratedInstance() throws Exception {
@@ -630,7 +630,7 @@ public void getAccessToken() throws Exception {
 
    - `processInstanceId`：审批实例ID。
 5. 创建审批实例成功后，用户也可以进入钉钉OA审批中心，查看审批四大列表（待处理、已处理、已发起、我收到的）、搜索审批实例数据、执行审批等操作。
-6. **创建流程中心待处理任务**：根据审批实例processInstanceId和待办事项列表tasks，调用[创建流程中心待处理任务](0516-create-pending-tasks-in-process-center.md)接口，将三方系统内的审批节点信息同步到钉钉OA审批，获取待办事项的taskId并生成对应的钉钉待办任务。
+6. **创建流程中心待处理任务**：根据审批实例processInstanceId和待办事项列表tasks，调用[创建流程中心待处理任务](0515-create-pending-tasks-in-process-center.md)接口，将三方系统内的审批节点信息同步到钉钉OA审批，获取待办事项的taskId并生成对应的钉钉待办任务。
 
    ```
    public void createIntegratedTask() throws Exception {
@@ -685,7 +685,7 @@ public void getAccessToken() throws Exception {
    **返回字段：**
 
    - `taskId`：OA审批任务ID。
-7. **查询OA审批任务**：创建待处理任务成功后，调用[查询通过流程中心集成的OA审批任务](0517-query-oa-approval-tasks-integrated-through-process-center.md)接口，查询用户运行中的审批任务。
+7. **查询OA审批任务**：创建待处理任务成功后，调用[查询通过流程中心集成的OA审批任务](0516-query-oa-approval-tasks-integrated-through-process-center.md)接口，查询用户运行中的审批任务。
 
    ```
    public void  queryIntegratedTodoTask() throws Exception {
@@ -731,7 +731,7 @@ public void getAccessToken() throws Exception {
    - `list`：任务列表。
 8. **更新流程中心任务状态**：根据审批实例`processInstanceId`和审批待办任务taskId，完成待办状态的更新或将审批实例下正在运行中的待办事项设置为CANCELED。
 
-   - 调用[更新流程中心任务状态](0518-update-process-center-task-status.md)接口，同步完成自有审批待办状态的更新。
+   - 调用[更新流程中心任务状态](0517-update-process-center-task-status.md)接口，同步完成自有审批待办状态的更新。
 
      ```
      public void  updateIntegratedTask() throws Exception {
@@ -777,7 +777,7 @@ public void getAccessToken() throws Exception {
      - `taskId`：OA审批任务ID。
      - `status`：更新为目标任务状态：CANCELED表示撤销，COMPLETED表示完成。
      - `result`：任务结果：AGREE表示同意，REFUSE表示拒绝。
-   - 在或签等场景，调用[批量取消流程中心待处理任务](0519-cancel-multiple-oa-approval-tasks.md)接口，批量将审批实例下正在运行中的待办事项设置为CANCELED。
+   - 在或签等场景，调用[批量取消流程中心待处理任务](0518-cancel-multiple-oa-approval-tasks.md)接口，批量将审批实例下正在运行中的待办事项设置为CANCELED。
 
      ```
      public void  cancelIntegratedTask() throws Exception {
@@ -825,7 +825,7 @@ public void getAccessToken() throws Exception {
      - `activityIds`：待办组ID列表。
 9. **更新实例状态**：根据审批实例`processInstanceId`和实例状态status、实例结果result等，更新实例状态。
 
-   - 调用[更新实例状态](0514-update-instance-status.md)，更新实例状态。
+   - 调用[更新实例状态](0513-update-instance-status.md)，更新实例状态。
 
      ```
      public void  updateProcessInstance() throws Exception {
@@ -870,7 +870,7 @@ public void getAccessToken() throws Exception {
      - `status`：实例状态：COMPLETED表示结束审批流，TERMINATED表示终止审批流。
      - `result`：实例结果：agree表示同意，refuse表示拒绝。
      - `notifiers`：抄送人userId列表，最多30个。
-   - 调用[批量更新实例状态](0515-self-owned-batch-update-of-instance-status.md)接口，批量更新实例状态。
+   - 调用[批量更新实例状态](0514-self-owned-batch-update-of-instance-status.md)接口，批量更新实例状态。
 
      ```
      public void  batchUpdateProcessInstances() throws Exception {
@@ -919,7 +919,7 @@ public void getAccessToken() throws Exception {
      - `processInstanceId`：实例ID。
      - `status`：实例状态：COMPLETED表示结束审批流，TERMINATED表示终止审批流。
      - `result`：实例结果：agree表示同意，refuse表示拒绝。
-10. **删除审批模板**：若需要对审批模板数据进行清理，调用[删除模板](0512-self-owned-approval-deletion-template.md)接口，删除为企业创建的审批模板，同时删除该模板下创建的实例和待办任务。
+10. **删除审批模板**：若需要对审批模板数据进行清理，调用[删除模板](0511-self-owned-approval-deletion-template.md)接口，删除为企业创建的审批模板，同时删除该模板下创建的实例和待办任务。
 
     ```
     public void  deleteProcess() throws Exception {

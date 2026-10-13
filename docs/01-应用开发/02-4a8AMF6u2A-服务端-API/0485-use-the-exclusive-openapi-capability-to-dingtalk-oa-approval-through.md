@@ -5,13 +5,13 @@ namespace: "development"
 slug: "use-the-exclusive-openapi-capability-to-dingtalk-oa-approval-through"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "OA 审批 > 使用教程 > 高级专享版 > 深度集成钉钉OA审批：专享OpenAPI与AppLink协议对接"
+breadcrumb: "OA 审批 > 集成方案 > 高级专享版 > 深度集成钉钉OA审批：专享OpenAPI与AppLink协议对接"
 doc_id: "qK67vMgGCX"
 updated_at: "2026-10-12 18:04:50"
 ---
 
 > Source: https://open.dingtalk.com/document/development/use-the-exclusive-openapi-capability-to-dingtalk-oa-approval-through
-> Path: 应用开发 / 服务端 API / OA 审批 > 使用教程 > 高级专享版 > 深度集成钉钉OA审批：专享OpenAPI与AppLink协议对接
+> Path: 应用开发 / 服务端 API / OA 审批 > 集成方案 > 高级专享版 > 深度集成钉钉OA审批：专享OpenAPI与AppLink协议对接
 > Updated: 2026-10-12 18:04:50
 
 # 深度集成钉钉OA审批：专享OpenAPI与AppLink协议对接

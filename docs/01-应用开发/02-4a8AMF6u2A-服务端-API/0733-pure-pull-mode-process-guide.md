@@ -70,7 +70,7 @@ updated_at: "2026-08-07 14:50:56"
 
 ## 步骤三：创建并开启互动卡片置顶
 
-调用[创建并开启互动卡片吊顶](0761-send-group-helper-message.md)接口，实现开启卡片置顶。
+调用[创建并开启互动卡片吊顶](0759-send-group-helper-message.md)接口，实现开启卡片置顶。
 
 > **[!NOTE]**
 >

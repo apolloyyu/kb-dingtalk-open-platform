@@ -56,7 +56,7 @@ updated_at: "2026-07-20 09:21:33"
 | noticeSingle | Boolean | 否 | 是否发送单聊通知。   - **true**：发送 - **false**：不发送       如果该参数传true，荣誉接收人会收到发送人的单聊消息。 |
 | noticeAnnouncer | Boolean | 否 | 是否使用官宣号通知获奖人。   - **true**：通知 - **false**：不通知       如果该参数传true，荣誉接收人会收到工作通知消息。 |
 | receiverUserIds | Array of String | 是 | 接受人userId列表，最大值10。 |
-| openConversationIds | Array of String | 否 | 接收荣誉消息的群openConversationId列表，最大值。   - 企业内部应用，可调用[创建群会话](0738-create-common-group-new-version-v2.md)接口获取openConversationId。 - 第三方企业应用，可调用[创建场景群](0746-create-a-scene-group.md)接口获取openConversationId。       荣誉发送人senderUserId，必须是群成员。 |
+| openConversationIds | Array of String | 否 | 接收荣誉消息的群openConversationId列表，最大值。   - 企业内部应用，可调用[创建群会话](0736-create-common-group-new-version-v2.md)接口获取openConversationId。 - 第三方企业应用，可调用[创建场景群](0744-create-a-scene-group.md)接口获取openConversationId。       荣誉发送人senderUserId，必须是群成员。 |
 
 ### 请求示例
 

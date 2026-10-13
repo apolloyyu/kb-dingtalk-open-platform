@@ -5,13 +5,13 @@ namespace: "development"
 slug: "use-three-party-process-and-page-docking"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "OA 审批 > 使用教程 > 标准版 > 自有OA审批：三方流程与页面对接"
+breadcrumb: "OA 审批 > 集成方案 > 标准版 > 自有OA审批：三方流程与页面对接"
 doc_id: "jRJBkTCOOK"
 updated_at: "2026-10-09 14:27:07"
 ---
 
 > Source: https://open.dingtalk.com/document/development/use-three-party-process-and-page-docking
-> Path: 应用开发 / 服务端 API / OA 审批 > 使用教程 > 标准版 > 自有OA审批：三方流程与页面对接
+> Path: 应用开发 / 服务端 API / OA 审批 > 集成方案 > 标准版 > 自有OA审批：三方流程与页面对接
 > Updated: 2026-10-09 14:27:07
 
 # 自有OA审批：三方流程与页面对接

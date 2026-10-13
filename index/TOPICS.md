@@ -9,7 +9,7 @@
 
 - 用户标识对照：**userId**（企业内唯一、不可改）/ **unionId**（跨企业唯一）/ **工号 job_number**（企业自维护、可不唯一、非必填，不能作唯一标识）——[基础概念](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md) · [通讯录概述·名词解释](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0046-contacts-overview.md)
 - 注意：旧版（归档）JSAPI 文档里的"工号/emplId"多为 userid 的历史命名混用，勿按字面理解
-- 会话标识 openConversationId：获取 = [创建群返回](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0738-create-common-group-new-version-v2.md) / [chatId 转换接口](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0745-obtain-group-openconversationid.md) / [JSAPI 选择会话 chooseChat](../docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0318-jsapi-choose-chat.md) / [机器人接收消息回调](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0080-robot-receive-message.md)；`openChatByConversationId` 是**消费**该 ID 的跳转 JSAPI，不是获取途径
+- 会话标识 openConversationId：获取 = [创建群返回](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0736-create-common-group-new-version-v2.md) / [chatId 转换接口](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0743-obtain-group-openconversationid.md) / [JSAPI 选择会话 chooseChat](../docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0318-jsapi-choose-chat.md) / [机器人接收消息回调](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0080-robot-receive-message.md)；`openChatByConversationId` 是**消费**该 ID 的跳转 JSAPI，不是获取途径
 
 ## 凭证与鉴权
 

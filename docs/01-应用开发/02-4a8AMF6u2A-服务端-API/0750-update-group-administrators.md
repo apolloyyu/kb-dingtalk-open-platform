@@ -20,7 +20,7 @@ updated_at: "2026-08-14 09:41:54"
 
 ## 接口调用说明
 
-支持基于群模板创建的群，详情参见[创建场景群](0746-create-a-scene-group.md)。
+支持基于群模板创建的群，详情参见[创建场景群](0744-create-a-scene-group.md)。
 
 ## 请求
 
@@ -43,7 +43,7 @@ updated_at: "2026-08-14 09:41:54"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| openConversationId | String | 是 | 群ID，调用[创建场景群](0746-create-a-scene-group.md)接口获取`open_conversation_id`参数值。 |
+| openConversationId | String | 是 | 群ID，调用[创建场景群](0744-create-a-scene-group.md)接口获取`open_conversation_id`参数值。 |
 | userIds | Array of String | 否 | 用户userid列表。      最多传12个。 |
 | role | Long | 是 | 群成员类型：   - **2**：群管理员 - **3**：普通群成员 |
 | unionIds | Array of String | 否 | 外部联系人unionId列表。 |

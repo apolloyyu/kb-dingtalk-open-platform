@@ -5,13 +5,13 @@ namespace: "development"
 slug: "attendance-synchronizes-information"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "考勤 > 使用教程 > 假勤审批集成：假勤数据自动同步至钉钉考勤"
+breadcrumb: "考勤 > 集成方案 > 假勤审批集成：假勤数据自动同步至钉钉考勤"
 doc_id: "ANOoKtLNB2"
 updated_at: "2026-09-23 12:04:32"
 ---
 
 > Source: https://open.dingtalk.com/document/development/attendance-synchronizes-information
-> Path: 应用开发 / 服务端 API / 考勤 > 使用教程 > 假勤审批集成：假勤数据自动同步至钉钉考勤
+> Path: 应用开发 / 服务端 API / 考勤 > 集成方案 > 假勤审批集成：假勤数据自动同步至钉钉考勤
 > Updated: 2026-09-23 12:04:32
 
 # 假勤审批集成：假勤数据自动同步至钉钉考勤

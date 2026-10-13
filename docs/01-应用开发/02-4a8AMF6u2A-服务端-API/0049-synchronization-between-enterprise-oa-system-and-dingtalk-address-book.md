@@ -5,13 +5,13 @@ namespace: "development"
 slug: "synchronization-between-enterprise-oa-system-and-dingtalk-address-book"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "通讯录管理 > 使用教程 > 企业OA与钉钉通讯录双向同步：实现多系统数据闭环"
+breadcrumb: "通讯录管理 > 集成方案 > 企业OA与钉钉通讯录双向同步：实现多系统数据闭环"
 doc_id: "uYLZbIXHIn"
 updated_at: "2026-09-23 12:04:22"
 ---
 
 > Source: https://open.dingtalk.com/document/development/synchronization-between-enterprise-oa-system-and-dingtalk-address-book
-> Path: 应用开发 / 服务端 API / 通讯录管理 > 使用教程 > 企业OA与钉钉通讯录双向同步：实现多系统数据闭环
+> Path: 应用开发 / 服务端 API / 通讯录管理 > 集成方案 > 企业OA与钉钉通讯录双向同步：实现多系统数据闭环
 > Updated: 2026-09-23 12:04:22
 
 # 企业OA与钉钉通讯录双向同步：实现多系统数据闭环

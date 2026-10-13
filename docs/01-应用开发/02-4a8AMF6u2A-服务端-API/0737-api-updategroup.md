@@ -39,7 +39,7 @@ updated_at: "2026-06-02 19:00:12"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| chatid | String | 是 | 群会话ID，可通过调用[创建群会话](0738-create-common-group-new-version-v2.md)接口获取的chatid参数值。  **[!NOTE]**    不支持通过调用前端JSAPI获取的chatid。 |
+| chatid | String | 是 | 群会话ID，可通过调用[创建群会话](0736-create-common-group-new-version-v2.md)接口获取的chatid参数值。  **[!NOTE]**    不支持通过调用前端JSAPI获取的chatid。 |
 | name | String | 否 | 群名称，长度限制为1~20个字符。 |
 | owner | String | 否 | 群主的userId，可通过[根据手机号查询用户](0062-query-users-by-phone-number.md)接口获取userId。  **[!NOTE]**    该员工必须为会话useridlist的成员之一。 |
 | ownerType | String | 否 | 群主类型。   - **emp**：企业员工 - **ext**：外部联系人 |

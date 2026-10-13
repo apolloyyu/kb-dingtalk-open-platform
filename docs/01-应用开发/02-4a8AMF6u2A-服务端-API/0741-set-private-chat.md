@@ -37,7 +37,7 @@ updated_at: "2026-07-14 09:22:03"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| chatid | String | 是 | chatdafe234xxxx | 企业会话ID。可以通过以下方式获取。   - 调用服务端[创建群会话](0738-create-common-group-new-version-v2.md)接口获取chatid参数值。 - 调用客户端[chooseChat](../03-Ogu5SlPY4t-客户端-JSAPI/0318-jsapi-choose-chat.md)获取chatId参数值。 |
+| chatid | String | 是 | chatdafe234xxxx | 企业会话ID。可以通过以下方式获取。   - 调用服务端[创建群会话](0736-create-common-group-new-version-v2.md)接口获取chatid参数值。 - 调用客户端[chooseChat](../03-Ogu5SlPY4t-客户端-JSAPI/0318-jsapi-choose-chat.md)获取chatId参数值。 |
 | is\_prohibit | Boolean | 是 | true | 是否开启禁止开关。   - **true**：开启禁止开关 - **false**：关闭禁止开关 |
 
 ### **请求示例**

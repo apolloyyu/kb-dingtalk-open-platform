@@ -87,7 +87,7 @@ updated_at: "2026-07-14 09:22:00"
 
 ### **方式一：接口创建群聊会话**
 
-调用[创建场景群](0746-create-a-scene-group.md)接口创建**群聊会话**。第三方企业应用[创建场景群](0746-create-a-scene-group.md)接口前，需要设置灰度企业。
+调用[创建场景群](0744-create-a-scene-group.md)接口创建**群聊会话**。第三方企业应用[创建场景群](0744-create-a-scene-group.md)接口前，需要设置灰度企业。
 
 ![企业灰度](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0212993871/p368591.png)
 
@@ -193,8 +193,8 @@ public class Sample {
 
 #### **方式二：**通过调用API启用群模板
 
-调用[启用群模板](0759-enable-a-group-template.md)接口，实现群升级为群聊会话。
+调用[启用群模板](0757-enable-a-group-template.md)接口，实现群升级为群聊会话。
 
 > **[!IMPORTANT]**
 >
-> 调用[启用群模板](0759-enable-a-group-template.md)接口前，需要设置灰度企业。![企业灰度](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0212993871/p368591.png)
+> 调用[启用群模板](0757-enable-a-group-template.md)接口前，需要设置灰度企业。![企业灰度](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0212993871/p368591.png)

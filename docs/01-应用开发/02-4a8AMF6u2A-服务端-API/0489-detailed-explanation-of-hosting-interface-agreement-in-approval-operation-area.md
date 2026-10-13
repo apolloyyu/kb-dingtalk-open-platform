@@ -5,13 +5,13 @@ namespace: "development"
 slug: "detailed-explanation-of-hosting-interface-agreement-in-approval-operation-area"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "OA 审批 > 使用教程 > 高级专享版 > 审批页面托管 > 审批操作区托管接口协议详解"
+breadcrumb: "OA 审批 > 集成方案 > 高级专享版 > 审批页面托管 > 审批操作区托管接口协议详解"
 doc_id: "yUlBMf9JNL"
 updated_at: "2026-07-10 10:11:27"
 ---
 
 > Source: https://open.dingtalk.com/document/development/detailed-explanation-of-hosting-interface-agreement-in-approval-operation-area
-> Path: 应用开发 / 服务端 API / OA 审批 > 使用教程 > 高级专享版 > 审批页面托管 > 审批操作区托管接口协议详解
+> Path: 应用开发 / 服务端 API / OA 审批 > 集成方案 > 高级专享版 > 审批页面托管 > 审批操作区托管接口协议详解
 > Updated: 2026-07-10 10:11:27
 
 # 审批操作区托管接口协议详解

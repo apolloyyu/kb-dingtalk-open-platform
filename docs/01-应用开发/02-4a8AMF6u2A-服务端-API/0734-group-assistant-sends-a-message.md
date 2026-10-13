@@ -5,13 +5,13 @@ namespace: "development"
 slug: "group-assistant-sends-a-message"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "即时通信 > 会话管理 > 使用教程 > 群助手发送消息"
+breadcrumb: "即时通信 > 会话管理 > 集成方案 > 群助手发送消息"
 doc_id: "ItyRrLUMsj"
 updated_at: "2026-07-14 09:21:59"
 ---
 
 > Source: https://open.dingtalk.com/document/development/group-assistant-sends-a-message
-> Path: 应用开发 / 服务端 API / 即时通信 > 会话管理 > 使用教程 > 群助手发送消息
+> Path: 应用开发 / 服务端 API / 即时通信 > 会话管理 > 集成方案 > 群助手发送消息
 > Updated: 2026-07-14 09:21:59
 
 # 群助手发送消息
@@ -30,8 +30,8 @@ updated_at: "2026-07-14 09:21:59"
 6. 在开发者后台-场景群页面，创建[群模板](https://open-dev.dingtalk.com/fe/im#/group/list)，获取群模板id参数**template\_id**。
 7. 绑定[场景群-机器人](https://open-dev.dingtalk.com/fe/im#/robot/list)到[场景群-群模板](https://open-dev.dingtalk.com/fe/im#/group/list)，保存编辑，返回群场景列表。
 8. 进入对应群模板，提交审核，点击发布。
-9. 依据**template\_id**调用[创建场景群](0746-create-a-scene-group.md)接口，获取`open_conversation_id`。
-10. 调用[发送群助手消息](0763-group-template-robot-message.md)接口，实现机器人群消息的发送。
+9. 依据**template\_id**调用[创建场景群](0744-create-a-scene-group.md)接口，获取`open_conversation_id`。
+10. 调用[发送群助手消息](0761-group-template-robot-message.md)接口，实现机器人群消息的发送。
 
 ## **前提条件**
 
@@ -66,5 +66,5 @@ updated_at: "2026-07-14 09:21:59"
    > 审核自动通过，无需审批。
 
    ![发布流程](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2473821461/p379282.png)
-10. 通过**template\_id**调用[创建场景群](0746-create-a-scene-group.md)接口，获取`open_conversation_id`。
-11. 调用[发送群助手消息](0763-group-template-robot-message.md)接口，实现机器人群消息的发送。
+10. 通过**template\_id**调用[创建场景群](0744-create-a-scene-group.md)接口，获取`open_conversation_id`。
+11. 调用[发送群助手消息](0761-group-template-robot-message.md)接口，实现机器人群消息的发送。

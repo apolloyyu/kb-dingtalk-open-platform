@@ -37,8 +37,8 @@ updated_at: "2026-07-14 09:22:03"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| userid | String | 是 | user123 | 要更改群昵称的群成员userId，可通过[查询群信息](0740-obtain-a-group-session.md)接口获取群成员userId。 |
-| chatid | String | 是 | chate3929fxxxx | 群会话ID，可通过[创建群会话](0738-create-common-group-new-version-v2.md)接口获取chatid参数值。 |
+| userid | String | 是 | user123 | 要更改群昵称的群成员userId，可通过[查询群信息](0738-obtain-a-group-session.md)接口获取群成员userId。 |
+| chatid | String | 是 | chate3929fxxxx | 群会话ID，可通过[创建群会话](0736-create-common-group-new-version-v2.md)接口获取chatid参数值。 |
 | group\_nick | String | 是 | 钉钉小二 | 该成员在群中的昵称。 |
 
 ### **请求示例**

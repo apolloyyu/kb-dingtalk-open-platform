@@ -5,13 +5,13 @@ namespace: "development"
 slug: "use-the-three-party-process-to-interface-with-the-dingtalk-oa"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "OA 审批 > 使用教程 > 高级专享版 > 审批页面托管 > 审批页面托管：三方流程与钉钉页面对接"
+breadcrumb: "OA 审批 > 集成方案 > 高级专享版 > 审批页面托管 > 三方流程审批页面托管：官方详情页与自定义操作区对接"
 doc_id: "LCCWJvMCnZ"
 updated_at: "2026-07-10 10:11:25"
 ---
 
 > Source: https://open.dingtalk.com/document/development/use-the-three-party-process-to-interface-with-the-dingtalk-oa
-> Path: 应用开发 / 服务端 API / OA 审批 > 使用教程 > 高级专享版 > 审批页面托管 > 审批页面托管：三方流程与钉钉页面对接
+> Path: 应用开发 / 服务端 API / OA 审批 > 集成方案 > 高级专享版 > 审批页面托管 > 三方流程审批页面托管：官方详情页与自定义操作区对接
 > Updated: 2026-07-10 10:11:25
 
 # 审批页面托管：三方流程与钉钉页面对接

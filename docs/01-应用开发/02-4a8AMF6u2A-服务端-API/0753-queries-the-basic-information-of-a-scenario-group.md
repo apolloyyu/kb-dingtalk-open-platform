@@ -41,7 +41,7 @@ updated_at: "2026-08-14 09:41:58"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| open\_conversation\_id | String | 是 | cid9FTRQSLo+s\*\*\*\*\*== | 群ID，调用[创建场景群](0746-create-a-scene-group.md)接口获取`open_conversation_id`参数值。 |
+| open\_conversation\_id | String | 是 | cid9FTRQSLo+s\*\*\*\*\*== | 群ID，调用[创建场景群](0744-create-a-scene-group.md)接口获取`open_conversation_id`参数值。 |
 
 ### **请求示例**
 

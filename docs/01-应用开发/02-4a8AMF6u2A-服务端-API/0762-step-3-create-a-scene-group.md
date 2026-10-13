@@ -20,7 +20,7 @@ updated_at: "2026-07-14 09:21:58"
 
 ## **前提条件**
 
-完成[创建群聊会话（场景群）](0734-create-a-group-chat-session.md)的流程。
+完成[创建群聊会话（场景群）](0731-create-a-group-chat-session.md)的流程。
 
 ## **操作步骤**
 
@@ -28,7 +28,7 @@ updated_at: "2026-07-14 09:21:58"
 2. 选择目标群模板，单击目标群模板右下角**灰度，**填写[企业CorpId](../01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md#91c2ae57b23p9)。
 3. 存量群升级场景群：
 
-   - 调用[启用群模板](0759-enable-a-group-template.md)接口，你可以将存量群升级为场景群。
+   - 调用[启用群模板](0757-enable-a-group-template.md)接口，你可以将存量群升级为场景群。
    - 你可以登录钉钉客户端：
 
      1. 找到目标群会话，单击右上角群设置标识。
@@ -37,4 +37,4 @@ updated_at: "2026-07-14 09:21:58"
 
         ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/1820719071/p771006.png)
 
-> 如果你需要通过接口直接创建场景群，请参考[创建场景群](0746-create-a-scene-group.md)接口。
+> 如果你需要通过接口直接创建场景群，请参考[创建场景群](0744-create-a-scene-group.md)接口。

@@ -5,13 +5,13 @@ namespace: "development"
 slug: "use-the-dingtalk-oa-approval-process-and-page-interface"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "OA 审批 > 使用教程 > 标准版 > 官方OA审批：钉钉流程与页面对接"
+breadcrumb: "OA 审批 > 集成方案 > 标准版 > 官方OA审批：钉钉流程与页面对接"
 doc_id: "Dv4RnLILxO"
 updated_at: "2026-10-12 18:04:36"
 ---
 
 > Source: https://open.dingtalk.com/document/development/use-the-dingtalk-oa-approval-process-and-page-interface
-> Path: 应用开发 / 服务端 API / OA 审批 > 使用教程 > 标准版 > 官方OA审批：钉钉流程与页面对接
+> Path: 应用开发 / 服务端 API / OA 审批 > 集成方案 > 标准版 > 官方OA审批：钉钉流程与页面对接
 > Updated: 2026-10-12 18:04:36
 
 # 官方OA审批：钉钉流程与页面对接

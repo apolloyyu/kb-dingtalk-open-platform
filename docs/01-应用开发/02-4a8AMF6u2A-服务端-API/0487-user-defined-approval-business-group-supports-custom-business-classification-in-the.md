@@ -5,13 +5,13 @@ namespace: "development"
 slug: "user-defined-approval-business-group-supports-custom-business-classification-in-the"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "OA 审批 > 使用教程 > 高级专享版 > 自定义审批业务分组：待办中心业务分类"
+breadcrumb: "OA 审批 > 集成方案 > 高级专享版 > 三方业务审批分类集成：待办中心自定义业务分组"
 doc_id: "NHfanAGPFC"
 updated_at: "2026-07-10 10:11:23"
 ---
 
 > Source: https://open.dingtalk.com/document/development/user-defined-approval-business-group-supports-custom-business-classification-in-the
-> Path: 应用开发 / 服务端 API / OA 审批 > 使用教程 > 高级专享版 > 自定义审批业务分组：待办中心业务分类
+> Path: 应用开发 / 服务端 API / OA 审批 > 集成方案 > 高级专享版 > 三方业务审批分类集成：待办中心自定义业务分组
 > Updated: 2026-07-10 10:11:23
 
 # 自定义审批业务分组：待办中心业务分类

@@ -5,13 +5,13 @@ namespace: "development"
 slug: "custom-quick-approval-supports-quick-approval-of-pending-tasks-from"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "OA 审批 > 使用教程 > 高级专享版 > 三方系统快捷审批集成：待办中心与消息卡片一键审批"
+breadcrumb: "OA 审批 > 集成方案 > 高级专享版 > 三方系统快捷审批集成：待办中心与消息卡片一键审批"
 doc_id: "qadJyJX9rv"
 updated_at: "2026-10-12 18:04:52"
 ---
 
 > Source: https://open.dingtalk.com/document/development/custom-quick-approval-supports-quick-approval-of-pending-tasks-from
-> Path: 应用开发 / 服务端 API / OA 审批 > 使用教程 > 高级专享版 > 三方系统快捷审批集成：待办中心与消息卡片一键审批
+> Path: 应用开发 / 服务端 API / OA 审批 > 集成方案 > 高级专享版 > 三方系统快捷审批集成：待办中心与消息卡片一键审批
 > Updated: 2026-10-12 18:04:52
 
 # 三方系统快捷审批集成：待办中心与消息卡片一键审批

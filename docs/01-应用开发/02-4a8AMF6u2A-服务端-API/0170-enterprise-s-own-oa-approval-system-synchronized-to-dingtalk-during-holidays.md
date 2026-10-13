@@ -5,13 +5,13 @@ namespace: "development"
 slug: "enterprise-s-own-oa-approval-system-synchronized-to-dingtalk-during-holidays"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "考勤 > 使用教程 > 打卡数据同步：硬件打卡记录自动上传至钉钉"
+breadcrumb: "考勤 > 集成方案 > 打卡数据同步：硬件打卡记录自动上传至钉钉"
 doc_id: "qieVTeeppo"
 updated_at: "2026-09-23 12:04:31"
 ---
 
 > Source: https://open.dingtalk.com/document/development/enterprise-s-own-oa-approval-system-synchronized-to-dingtalk-during-holidays
-> Path: 应用开发 / 服务端 API / 考勤 > 使用教程 > 打卡数据同步：硬件打卡记录自动上传至钉钉
+> Path: 应用开发 / 服务端 API / 考勤 > 集成方案 > 打卡数据同步：硬件打卡记录自动上传至钉钉
 > Updated: 2026-09-23 12:04:31
 
 # 打卡数据同步：硬件打卡记录自动上传至钉钉

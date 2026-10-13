@@ -29,7 +29,7 @@
 - 27 ← [概述](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0552-knowledge-base-overview.md)（服务端 API）
 - 26 ← [获取所有工作表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0594-obtain-all-worksheets.md)（服务端 API）
 - 26 ← [dd.canIUse](../docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0477-dd-caniuse.md)（客户端 JSAPI）
-- 24 ← [创建场景群](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0746-create-a-scene-group.md)（服务端 API）
+- 24 ← [创建场景群](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0744-create-a-scene-group.md)（服务端 API）
 - 22 ← [创建并投放卡片](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0783-create-and-deliver-cards.md)（服务端 API）
 - 21 ← [获取单个审批实例详情](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0497-obtains-the-details-of-a-single-approval-instance-pop.md)（服务端 API）
 - 21 ← [创建连接器](../docs/02-连接平台/02-XdgyZifJkr-我的连接/0010-create-connector.md)（我的连接）
@@ -73,7 +73,7 @@
 - 12 ← [根据手机号查询用户](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0062-query-users-by-phone-number.md)（服务端 API）
 - 12 ← [获取数据表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0462-api-notable-getsheet.md)（服务端 API）
 - 12 ← [搜索文件](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0637-search-for-files.md)（服务端 API）
-- 12 ← [创建群会话](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0738-create-common-group-new-version-v2.md)（服务端 API）
+- 12 ← [创建群会话](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0736-create-common-group-new-version-v2.md)（服务端 API）
 - 12 ← [创建卡片](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0780-interface-for-creating-a-card-instance.md)（服务端 API）
 - 12 ← [注册卡片回调地址](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0786-register-card-callback-address.md)（服务端 API）
 - 12 ← [获取人员列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1154-obtains-a-list-of-home-school-user-identities.md)（服务端 API）

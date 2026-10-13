@@ -142,7 +142,7 @@ updated_at: "2026-08-04 09:07:27"
 
        ![image.png](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/6312993871/p792088.png)
      - **方式二**：使用图片直接搭建，布局参考方式 一 的模板布局。
-  2. **第二步：通过调用服务端API-**[关闭互动卡片吊顶](0762-close-interactive-card-ceiling.md)**实现关闭。**
+  2. **第二步：通过调用服务端API-**[关闭互动卡片吊顶](0760-close-interactive-card-ceiling.md)**实现关闭。**
 
      > **[!IMPORTANT]**
      >

@@ -5,13 +5,13 @@ namespace: "development"
 slug: "group-session-operation-process"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "即时通信 > 会话管理 > 使用教程 > 创建、查询、修改及管理群会话"
+breadcrumb: "即时通信 > 会话管理 > 集成方案 > 创建、查询、修改及管理群会话"
 doc_id: "2JVIs4IAgf"
 updated_at: "2026-07-14 09:22:01"
 ---
 
 > Source: https://open.dingtalk.com/document/development/group-session-operation-process
-> Path: 应用开发 / 服务端 API / 即时通信 > 会话管理 > 使用教程 > 创建、查询、修改及管理群会话
+> Path: 应用开发 / 服务端 API / 即时通信 > 会话管理 > 集成方案 > 创建、查询、修改及管理群会话
 > Updated: 2026-07-14 09:22:01
 
 # 创建、查询、修改及管理群会话
@@ -28,16 +28,16 @@ updated_at: "2026-07-14 09:22:01"
 
 步骤四：调用服务端群会话相关API。
 
-1. 调用服务端API-[创建群会话](0738-create-common-group-new-version-v2.md)接口，进行创建群会话，获取群会话`chatId`。
-2. 根据群会话`chatId`，调用服务端API-[查询群信息](0740-obtain-a-group-session.md)接口，获取群会话的信息。
+1. 调用服务端API-[创建群会话](0736-create-common-group-new-version-v2.md)接口，进行创建群会话，获取群会话`chatId`。
+2. 根据群会话`chatId`，调用服务端API-[查询群信息](0738-obtain-a-group-session.md)接口，获取群会话的信息。
 3. 根据群会话chatId进行群会话管理操作。
 
-   - 根据群会话`chatId`，调用新版服务端API-[获取群会话的OpenConversationId](0745-obtain-group-openconversationid.md)接口，获取群会话`openConversationId`。
-   - 根据群会话`chatId`，调用服务端API-[批量设置企业群管理员](0742-batch-setup-group-administrator.md)接口，进行群会话管理员的设置。
-   - 根据群会话`chatId`，调用服务端API-[设置禁止群成员私聊](0743-set-private-chat.md)接口，设置群会话群成员间是否可以私聊。
-   - 根据群会话`chatId`，调用服务端API-[更新群成员的群昵称](0741-set-a-group-nickname.md)接口，进行设置群会话成员的昵称。
-   - 根据群会话`chatId`，调用服务端API-[获取入群二维码链接](0744-obtain-a-qr-code-link.md)接口，其他的企业成员点击链接即可申请加入群聊。
-4. 根据群会话`chatId`，调用服务端API-[更新群会话](0739-api-updategroup.md)接口，进行群会话信息的修改。
+   - 根据群会话`chatId`，调用新版服务端API-[获取群会话的OpenConversationId](0743-obtain-group-openconversationid.md)接口，获取群会话`openConversationId`。
+   - 根据群会话`chatId`，调用服务端API-[批量设置企业群管理员](0740-batch-setup-group-administrator.md)接口，进行群会话管理员的设置。
+   - 根据群会话`chatId`，调用服务端API-[设置禁止群成员私聊](0741-set-private-chat.md)接口，设置群会话群成员间是否可以私聊。
+   - 根据群会话`chatId`，调用服务端API-[更新群成员的群昵称](0739-set-a-group-nickname.md)接口，进行设置群会话成员的昵称。
+   - 根据群会话`chatId`，调用服务端API-[获取入群二维码链接](0742-obtain-a-qr-code-link.md)接口，其他的企业成员点击链接即可申请加入群聊。
+4. 根据群会话`chatId`，调用服务端API-[更新群会话](0737-api-updategroup.md)接口，进行群会话信息的修改。
 
 ## **前提条件**
 
@@ -76,7 +76,7 @@ updated_at: "2026-07-14 09:22:01"
 
 ## 步骤四：调用服务端群会话相关API
 
-1. 调用服务端API-[创建群会话](0738-create-common-group-new-version-v2.md)接口，进行创建群会话，获取群会话chatId。
+1. 调用服务端API-[创建群会话](0736-create-common-group-new-version-v2.md)接口，进行创建群会话，获取群会话chatId。
 
    ```
    package com.aliyun.sample;
@@ -141,7 +141,7 @@ updated_at: "2026-07-14 09:22:01"
      }
    }
    ```
-2. 根据群会话chatId，调用服务端API-[查询群信息](0740-obtain-a-group-session.md)接口，获取群会话的信息。
+2. 根据群会话chatId，调用服务端API-[查询群信息](0738-obtain-a-group-session.md)接口，获取群会话的信息。
 
    ```
    public void getChatInfo() {
@@ -153,7 +153,7 @@ updated_at: "2026-07-14 09:22:01"
            System.out.println(rsp.getChatInfo());
        }
    ```
-3. 根据群会话`chatId`，调用新版服务端API-[获取群会话的OpenConversationId](0745-obtain-group-openconversationid.md)接口，获取群会话`openConversationId`。
+3. 根据群会话`chatId`，调用新版服务端API-[获取群会话的OpenConversationId](0743-obtain-group-openconversationid.md)接口，获取群会话`openConversationId`。
 
    ```
    public void ConversationId() throws Exception {
@@ -183,7 +183,7 @@ updated_at: "2026-07-14 09:22:01"
            }
        }
    ```
-4. 根据群会话`openConversationId`，调用新版服务端API-[批量设置企业群管理员](0742-batch-setup-group-administrator.md)接口，批量设置群管理员。
+4. 根据群会话`openConversationId`，调用新版服务端API-[批量设置企业群管理员](0740-batch-setup-group-administrator.md)接口，批量设置群管理员。
 
    ```
    public void subAdministrators() throws Exception {
@@ -219,7 +219,7 @@ updated_at: "2026-07-14 09:22:01"
        }
    ```
 
-   - 根据群会话`chatId`，调用服务端API-[设置禁止群成员私聊](0743-set-private-chat.md)接口，设置群会话群成员间是否可以私聊。
+   - 根据群会话`chatId`，调用服务端API-[设置禁止群成员私聊](0741-set-private-chat.md)接口，设置群会话群成员间是否可以私聊。
 
      ```
      public void updateChatMemberFriendswitch() {
@@ -231,7 +231,7 @@ updated_at: "2026-07-14 09:22:01"
              System.out.println(rsp.getBody());
          }
      ```
-   - 根据群会话`chatId`，调用服务端API-[更新群成员的群昵称](0741-set-a-group-nickname.md)接口，进行设置群会话成员的昵称。
+   - 根据群会话`chatId`，调用服务端API-[更新群成员的群昵称](0739-set-a-group-nickname.md)接口，进行设置群会话成员的昵称。
 
      ```
      public void updateChatMemberNick() {
@@ -244,7 +244,7 @@ updated_at: "2026-07-14 09:22:01"
              System.out.println(rsp.getBody());
          }
      ```
-   - 根据群会话`chatId`，调用服务端API-[获取入群二维码链接](0744-obtain-a-qr-code-link.md)接口，其他的企业成员点击链接即可申请加入群聊。
+   - 根据群会话`chatId`，调用服务端API-[获取入群二维码链接](0742-obtain-a-qr-code-link.md)接口，其他的企业成员点击链接即可申请加入群聊。
 
      ```
      public void getChatURL() {
@@ -256,7 +256,7 @@ updated_at: "2026-07-14 09:22:01"
              System.out.println(rsp.getBody());
          }
      ```
-5. 根据群会话`chatId`，调用服务端API-[更新群会话](0739-api-updategroup.md)接口，进行群会话信息的修改。
+5. 根据群会话`chatId`，调用服务端API-[更新群会话](0737-api-updategroup.md)接口，进行群会话信息的修改。
 
    ```
    package com.aliyun.sample;

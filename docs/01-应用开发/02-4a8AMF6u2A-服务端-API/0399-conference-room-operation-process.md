@@ -5,13 +5,13 @@ namespace: "development"
 slug: "conference-room-operation-process"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "音视频 > 使用教程 > 构建会议室资源池：数据上钉实现会议室高效调度"
+breadcrumb: "音视频 > 集成方案 > 构建会议室资源池：数据上钉实现会议室高效调度"
 doc_id: "HXCX70UL9r"
 updated_at: "2026-09-23 12:04:45"
 ---
 
 > Source: https://open.dingtalk.com/document/development/conference-room-operation-process
-> Path: 应用开发 / 服务端 API / 音视频 > 使用教程 > 构建会议室资源池：数据上钉实现会议室高效调度
+> Path: 应用开发 / 服务端 API / 音视频 > 集成方案 > 构建会议室资源池：数据上钉实现会议室高效调度
 > Updated: 2026-09-23 12:04:45
 
 # 构建会议室资源池：数据上钉实现会议室高效调度

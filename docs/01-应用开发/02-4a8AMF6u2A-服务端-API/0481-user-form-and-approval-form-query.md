@@ -5,13 +5,13 @@ namespace: "development"
 slug: "user-form-and-approval-form-query"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "OA 审批 > 使用教程 > 标准版 > OA审批流接入：查询用户可见表单与待审批数量"
+breadcrumb: "OA 审批 > 集成方案 > 标准版 > OA审批流接入：查询用户可见表单与待审批数量"
 doc_id: "OIBT32AHaY"
 updated_at: "2026-10-12 18:04:48"
 ---
 
 > Source: https://open.dingtalk.com/document/development/user-form-and-approval-form-query
-> Path: 应用开发 / 服务端 API / OA 审批 > 使用教程 > 标准版 > OA审批流接入：查询用户可见表单与待审批数量
+> Path: 应用开发 / 服务端 API / OA 审批 > 集成方案 > 标准版 > OA审批流接入：查询用户可见表单与待审批数量
 > Updated: 2026-10-12 18:04:48
 
 # OA审批流接入：查询用户可见表单与待审批数量

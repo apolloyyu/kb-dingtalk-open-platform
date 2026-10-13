@@ -5,13 +5,13 @@ namespace: "development"
 slug: "operations-related-to-address-book-departments"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "通讯录管理 > 使用教程 > 组织架构维护：部门信息的批量创建与智能更新"
+breadcrumb: "通讯录管理 > 集成方案 > 组织架构维护：部门信息的批量创建与智能更新"
 doc_id: "Rqv5HvWlb3"
 updated_at: "2026-09-23 12:04:21"
 ---
 
 > Source: https://open.dingtalk.com/document/development/operations-related-to-address-book-departments
-> Path: 应用开发 / 服务端 API / 通讯录管理 > 使用教程 > 组织架构维护：部门信息的批量创建与智能更新
+> Path: 应用开发 / 服务端 API / 通讯录管理 > 集成方案 > 组织架构维护：部门信息的批量创建与智能更新
 > Updated: 2026-09-23 12:04:21
 
 # 组织架构维护：部门信息的批量创建与智能更新

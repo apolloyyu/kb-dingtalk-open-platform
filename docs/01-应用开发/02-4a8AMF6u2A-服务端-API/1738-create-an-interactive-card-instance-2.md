@@ -21,7 +21,7 @@ updated_at: "2026-08-27 14:06:59"
 > **[!IMPORTANT]**
 >
 > - 本接口已完成升级，后续将维持现有功能且不再新增能力。
-> - 未接入的开发者建议使用新版[创建并开启互动卡片吊顶](0761-send-group-helper-message.md)接口，已接入用户不受影响。
+> - 未接入的开发者建议使用新版[创建并开启互动卡片吊顶](0759-send-group-helper-message.md)接口，已接入用户不受影响。
 
 ## 权限
 
@@ -99,7 +99,7 @@ Content-Type:application/json
 | cardMediaIdParamMap | Map<String, String> | 否 | 卡片模板内容替换参数，多媒体类型。 |
 | chatBotId | String | 否 | 机器人编码（群模板机器人）。  **[!NOTE]**  **robotCode**和**chatBotId**二选一必填。 |
 | userIdType | Integer | 否 | 用户ID类型：   - **1**：userid模式（默认） - **2**：unionId模式   **[!NOTE]**  对应**receiverUserIdList**、**privateData**字段关于用户userid的值填写方式。 |
-| pullStrategy | Boolean | 否 | 是否开启卡片纯拉模式：（默认不开启卡片纯拉模式）   - **true**：开启卡片纯拉模式 - **false**：不开启卡片纯拉模式   **[!NOTE]**  纯拉模式，请参考[实现置顶卡片纯拉模式](0736-pure-pull-mode-process-guide.md)。 |
+| pullStrategy | Boolean | 否 | 是否开启卡片纯拉模式：（默认不开启卡片纯拉模式）   - **true**：开启卡片纯拉模式 - **false**：不开启卡片纯拉模式   **[!NOTE]**  纯拉模式，请参考[实现置顶卡片纯拉模式](0733-pure-pull-mode-process-guide.md)。 |
 
 ## 返回参数
 

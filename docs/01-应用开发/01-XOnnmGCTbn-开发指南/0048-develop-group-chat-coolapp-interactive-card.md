@@ -65,5 +65,5 @@ updated_at: "2026-08-07 14:52:46"
 ## 互动卡片高级版发送吊顶卡片
 
 1. 了解[高级版编辑器](../../05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0021-interactive-card-editor.md)详细信息，通过[互动卡片高级版](../../05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md#8ea07cac63f7j)创建吊顶卡片模板。![创建吊顶卡片 ](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0521872871/p421667.png)
-2. 调用[创建并开启互动卡片吊顶](../02-4a8AMF6u2A-服务端-API/0761-send-group-helper-message.md)接口创建并开启卡片吊顶。![iShot2022-12-26 14](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0521872871/p539017.png)
-3. 调用[关闭互动卡片吊顶](../02-4a8AMF6u2A-服务端-API/0762-close-interactive-card-ceiling.md)接口，关闭卡片吊顶。
+2. 调用[创建并开启互动卡片吊顶](../02-4a8AMF6u2A-服务端-API/0759-send-group-helper-message.md)接口创建并开启卡片吊顶。![iShot2022-12-26 14](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0521872871/p539017.png)
+3. 调用[关闭互动卡片吊顶](../02-4a8AMF6u2A-服务端-API/0760-close-interactive-card-ceiling.md)接口，关闭卡片吊顶。

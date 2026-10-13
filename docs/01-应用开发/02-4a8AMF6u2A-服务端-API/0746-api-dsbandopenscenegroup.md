@@ -1,22 +1,22 @@
 ---
-title: "添加场景群成员"
-source_url: "https://open.dingtalk.com/document/development/api-addscenegroupmember"
+title: "解散场景群"
+source_url: "https://open.dingtalk.com/document/development/api-dsbandopenscenegroup"
 namespace: "development"
-slug: "api-addscenegroupmember"
+slug: "api-dsbandopenscenegroup"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "即时通信 > 会话管理 > 场景群 > 群管理 > 添加场景群成员"
-doc_id: "mEyjOlnkTo"
-updated_at: "2026-08-14 09:41:51"
+breadcrumb: "即时通信 > 会话管理 > 场景群 > 群管理 > 解散场景群"
+doc_id: "MfTls3182y"
+updated_at: "2026-08-14 09:41:50"
 ---
 
-> Source: https://open.dingtalk.com/document/development/api-addscenegroupmember
-> Path: 应用开发 / 服务端 API / 即时通信 > 会话管理 > 场景群 > 群管理 > 添加场景群成员
-> Updated: 2026-08-14 09:41:51
+> Source: https://open.dingtalk.com/document/development/api-dsbandopenscenegroup
+> Path: 应用开发 / 服务端 API / 即时通信 > 会话管理 > 场景群 > 群管理 > 解散场景群
+> Updated: 2026-08-14 09:41:50
 
-# 添加场景群成员
+# 解散场景群
 
-调用本接口用于向群内新增群成员（群成员人数上限1000），适用于企业需要批量添加成员到群聊的场景，如项目组扩充人员、活动组织新增参与者等。
+调用本接口，根据群ID解散指定群。
 
 ## 请求
 
@@ -24,39 +24,35 @@ updated_at: "2026-08-14 09:41:51"
 
 | 字段 | 值 |
 | --- | --- |
-| HTTP URL | https://api.dingtalk.com/v1.0/im/sceneGroup/member/add |
+| HTTP URL | https://api.dingtalk.com/v1.0/im/chat/scenegroup/disband |
 | HTTP Method | POST |
-| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
+| 支持的应用类型 | appType-企业内部应用 |
 | 权限要求 | permission-qyapi\_chat\_manage-钉钉群基础信息管理权限 |
 
 ### 请求头
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| x-acs-dingtalk-access-token | String | 是 | 调用该API的应用凭证。   - 企业内部应用，通过[获取企业内部应用的accessToken](0032-obtain-the-access-token-of-an-internal-app.md)接口获取。 - 第三方企业应用，通过[获取第三方应用授权企业的accessToken](0033-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口获取。 |
+| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，可通过[获取企业内部应用的accessToken](0032-obtain-the-access-token-of-an-internal-app.md)接口获取。 |
 
 ### 请求体
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| open\_conversation\_id | String | 是 | 群会话Id，可通过[创建场景群](0746-create-a-scene-group.md)接口获取。 |
-| user\_ids | Array of String | 否 | userid列表。 |
-| union\_ids | Array of String | 否 | unionId列表。 |
+| openConversationId | String | 是 | 群ID，调用[创建场景群](0744-create-a-scene-group.md)接口获取`open_conversation_id`参数值。 |
 
 ### 请求示例
 
 HTTP
 
 ```
-POST /v1.0/im/sceneGroup/member/add HTTP/1.1
+POST /v1.0/im/chat/scenegroup/disband HTTP/1.1
 Host:api.dingtalk.com
 x-acs-dingtalk-access-token:6d1b*****
 Content-Type:application/json
 
 {
-  "open_conversation_id" : "cidxxxxxx==",
-  "user_ids" : [ "1107****2120" ],
-  "union_ids" : [ "1107****2120" ]
+  "openConversationId" : "cidxxxx"
 }
 ```
 
@@ -86,18 +82,12 @@ public class Sample {
     public static void main(String[] args_) throws Exception {
         
         com.aliyun.dingtalkim_1_0.Client client = Sample.createClient();
-        com.aliyun.dingtalkim_1_0.models.AddSceneGroupMemberHeaders addSceneGroupMemberHeaders = new com.aliyun.dingtalkim_1_0.models.AddSceneGroupMemberHeaders();
-        addSceneGroupMemberHeaders.xAcsDingtalkAccessToken = "<your access token>";
-        com.aliyun.dingtalkim_1_0.models.AddSceneGroupMemberRequest addSceneGroupMemberRequest = new com.aliyun.dingtalkim_1_0.models.AddSceneGroupMemberRequest()
-                .setOpenConversationId("cidxxxxxx==")
-                .setUserIds(java.util.Arrays.asList(
-                    "1107****2120"
-                ))
-                .setUnionIds(java.util.Arrays.asList(
-                    "1107****2120"
-                ));
+        com.aliyun.dingtalkim_1_0.models.DsbandOpenSceneGroupHeaders dsbandOpenSceneGroupHeaders = new com.aliyun.dingtalkim_1_0.models.DsbandOpenSceneGroupHeaders();
+        dsbandOpenSceneGroupHeaders.xAcsDingtalkAccessToken = "<your access token>";
+        com.aliyun.dingtalkim_1_0.models.DsbandOpenSceneGroupRequest dsbandOpenSceneGroupRequest = new com.aliyun.dingtalkim_1_0.models.DsbandOpenSceneGroupRequest()
+                .setOpenConversationId("cidxxxx");
         try {
-            client.addSceneGroupMemberWithOptions(addSceneGroupMemberRequest, addSceneGroupMemberHeaders, new com.aliyun.teautil.models.RuntimeOptions());
+            client.dsbandOpenSceneGroupWithOptions(dsbandOpenSceneGroupRequest, dsbandOpenSceneGroupHeaders, new com.aliyun.teautil.models.RuntimeOptions());
         } catch (TeaException err) {
             if (!com.aliyun.teautil.Common.empty(err.code) && !com.aliyun.teautil.Common.empty(err.message)) {
                 // err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -152,19 +142,13 @@ class Sample:
         args: List[str],
     ) -> None:
         client = Sample.create_client()
-        add_scene_group_member_headers = dingtalkim__1__0_models.AddSceneGroupMemberHeaders()
-        add_scene_group_member_headers.x_acs_dingtalk_access_token = '<your access token>'
-        add_scene_group_member_request = dingtalkim__1__0_models.AddSceneGroupMemberRequest(
-            open_conversation_id='cidxxxxxx==',
-            user_ids=[
-                '1107****2120'
-            ],
-            union_ids=[
-                '1107****2120'
-            ]
+        dsband_open_scene_group_headers = dingtalkim__1__0_models.DsbandOpenSceneGroupHeaders()
+        dsband_open_scene_group_headers.x_acs_dingtalk_access_token = '<your access token>'
+        dsband_open_scene_group_request = dingtalkim__1__0_models.DsbandOpenSceneGroupRequest(
+            open_conversation_id='cidxxxx'
         )
         try:
-            client.add_scene_group_member_with_options(add_scene_group_member_request, add_scene_group_member_headers, util_models.RuntimeOptions())
+            client.dsband_open_scene_group_with_options(dsband_open_scene_group_request, dsband_open_scene_group_headers, util_models.RuntimeOptions())
         except Exception as err:
             if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
                 # err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -175,19 +159,13 @@ class Sample:
         args: List[str],
     ) -> None:
         client = Sample.create_client()
-        add_scene_group_member_headers = dingtalkim__1__0_models.AddSceneGroupMemberHeaders()
-        add_scene_group_member_headers.x_acs_dingtalk_access_token = '<your access token>'
-        add_scene_group_member_request = dingtalkim__1__0_models.AddSceneGroupMemberRequest(
-            open_conversation_id='cidxxxxxx==',
-            user_ids=[
-                '1107****2120'
-            ],
-            union_ids=[
-                '1107****2120'
-            ]
+        dsband_open_scene_group_headers = dingtalkim__1__0_models.DsbandOpenSceneGroupHeaders()
+        dsband_open_scene_group_headers.x_acs_dingtalk_access_token = '<your access token>'
+        dsband_open_scene_group_request = dingtalkim__1__0_models.DsbandOpenSceneGroupRequest(
+            open_conversation_id='cidxxxx'
         )
         try:
-            await client.add_scene_group_member_with_options_async(add_scene_group_member_request, add_scene_group_member_headers, util_models.RuntimeOptions())
+            await client.dsband_open_scene_group_with_options_async(dsband_open_scene_group_request, dsband_open_scene_group_headers, util_models.RuntimeOptions())
         except Exception as err:
             if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
                 # err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -211,8 +189,8 @@ use AlibabaCloud\Tea\Exception\TeaError;
 use AlibabaCloud\Tea\Utils\Utils;
 
 use Darabonba\OpenApi\Models\Config;
-use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\AddSceneGroupMemberHeaders;
-use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\AddSceneGroupMemberRequest;
+use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\DsbandOpenSceneGroupHeaders;
+use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\DsbandOpenSceneGroupRequest;
 use AlibabaCloud\Tea\Utils\Utils\RuntimeOptions;
 
 class Sample {
@@ -234,19 +212,13 @@ class Sample {
      */
     public static function main($args){
         $client = self::createClient();
-        $addSceneGroupMemberHeaders = new AddSceneGroupMemberHeaders([]);
-        $addSceneGroupMemberHeaders->xAcsDingtalkAccessToken = "<your access token>";
-        $addSceneGroupMemberRequest = new AddSceneGroupMemberRequest([
-            "openConversationId" => "cidxxxxxx==",
-            "userIds" => [
-                "1107****2120"
-            ],
-            "unionIds" => [
-                "1107****2120"
-            ]
+        $dsbandOpenSceneGroupHeaders = new DsbandOpenSceneGroupHeaders([]);
+        $dsbandOpenSceneGroupHeaders->xAcsDingtalkAccessToken = "<your access token>";
+        $dsbandOpenSceneGroupRequest = new DsbandOpenSceneGroupRequest([
+            "openConversationId" => "cidxxxx"
         ]);
         try {
-            $client->addSceneGroupMemberWithOptions($addSceneGroupMemberRequest, $addSceneGroupMemberHeaders, new RuntimeOptions([]));
+            $client->dsbandOpenSceneGroupWithOptions($dsbandOpenSceneGroupRequest, $dsbandOpenSceneGroupHeaders, new RuntimeOptions([]));
         }
         catch (Exception $err) {
             if (!($err instanceof TeaError)) {
@@ -303,12 +275,10 @@ func _main (args []*string) (_err error) {
     return _err
   }
 
-  addSceneGroupMemberHeaders := &dingtalkim_1_0.AddSceneGroupMemberHeaders{}
-  addSceneGroupMemberHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
-  addSceneGroupMemberRequest := &dingtalkim_1_0.AddSceneGroupMemberRequest{
-    OpenConversationId: tea.String("cidxxxxxx=="),
-    UserIds: []*string{tea.String("1107****2120")},
-    UnionIds: []*string{tea.String("1107****2120")},
+  dsbandOpenSceneGroupHeaders := &dingtalkim_1_0.DsbandOpenSceneGroupHeaders{}
+  dsbandOpenSceneGroupHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
+  dsbandOpenSceneGroupRequest := &dingtalkim_1_0.DsbandOpenSceneGroupRequest{
+    OpenConversationId: tea.String("cidxxxx"),
   }
   tryErr := func()(_e error) {
     defer func() {
@@ -316,7 +286,7 @@ func _main (args []*string) (_err error) {
         _e = r
       }
     }()
-    _, _err = client.AddSceneGroupMemberWithOptions(addSceneGroupMemberRequest, addSceneGroupMemberHeaders, &util.RuntimeOptions{})
+    _, _err = client.DsbandOpenSceneGroupWithOptions(dsbandOpenSceneGroupRequest, dsbandOpenSceneGroupHeaders, &util.RuntimeOptions{})
     if _err != nil {
       return _err
     }
@@ -373,19 +343,13 @@ class Client {
 
   static async main(args) {
     let client = Client.createClient();
-    let addSceneGroupMemberHeaders = new dingtalkim_1_0.AddSceneGroupMemberHeaders({ });
-    addSceneGroupMemberHeaders.xAcsDingtalkAccessToken = '<your access token>';
-    let addSceneGroupMemberRequest = new dingtalkim_1_0.AddSceneGroupMemberRequest({
-      openConversationId: 'cidxxxxxx==',
-      userIds: [
-        '1107****2120'
-      ],
-      unionIds: [
-        '1107****2120'
-      ],
+    let dsbandOpenSceneGroupHeaders = new dingtalkim_1_0.DsbandOpenSceneGroupHeaders({ });
+    dsbandOpenSceneGroupHeaders.xAcsDingtalkAccessToken = '<your access token>';
+    let dsbandOpenSceneGroupRequest = new dingtalkim_1_0.DsbandOpenSceneGroupRequest({
+      openConversationId: 'cidxxxx',
     });
     try {
-      await client.addSceneGroupMemberWithOptions(addSceneGroupMemberRequest, addSceneGroupMemberHeaders, new Util.RuntimeOptions({ }));
+      await client.dsbandOpenSceneGroupWithOptions(dsbandOpenSceneGroupRequest, dsbandOpenSceneGroupHeaders, new Util.RuntimeOptions({ }));
     } catch (err) {
       if (!Util.default.empty(err.code) && !Util.default.empty(err.message)) {
         // err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -440,23 +404,15 @@ namespace AlibabaCloud.SDK.Sample
         public static void Main(string[] args)
         {
             AlibabaCloud.SDK.Dingtalkim_1_0.Client client = CreateClient();
-            AlibabaCloud.SDK.Dingtalkim_1_0.Models.AddSceneGroupMemberHeaders addSceneGroupMemberHeaders = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.AddSceneGroupMemberHeaders();
-            addSceneGroupMemberHeaders.XAcsDingtalkAccessToken = "<your access token>";
-            AlibabaCloud.SDK.Dingtalkim_1_0.Models.AddSceneGroupMemberRequest addSceneGroupMemberRequest = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.AddSceneGroupMemberRequest
+            AlibabaCloud.SDK.Dingtalkim_1_0.Models.DsbandOpenSceneGroupHeaders dsbandOpenSceneGroupHeaders = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.DsbandOpenSceneGroupHeaders();
+            dsbandOpenSceneGroupHeaders.XAcsDingtalkAccessToken = "<your access token>";
+            AlibabaCloud.SDK.Dingtalkim_1_0.Models.DsbandOpenSceneGroupRequest dsbandOpenSceneGroupRequest = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.DsbandOpenSceneGroupRequest
             {
-                OpenConversationId = "cidxxxxxx==",
-                UserIds = new List<string>
-                {
-                    "1107****2120"
-                },
-                UnionIds = new List<string>
-                {
-                    "1107****2120"
-                },
+                OpenConversationId = "cidxxxx",
             };
             try
             {
-                client.AddSceneGroupMemberWithOptions(addSceneGroupMemberRequest, addSceneGroupMemberHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
+                client.DsbandOpenSceneGroupWithOptions(dsbandOpenSceneGroupRequest, dsbandOpenSceneGroupHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
             }
             catch (TeaException err)
             {
@@ -488,7 +444,7 @@ namespace AlibabaCloud.SDK.Sample
 
 | 名称 | 类型 | 描述 |
 | --- | --- | --- |
-| success | Boolean | 调用是否成功：   - **true**：成功 - **false**：失败 |
+| success | Boolean | 删除结果：   - **true**：执行成功 - **false**：执行失败 |
 
 ### 响应体示例
 
@@ -507,7 +463,6 @@ Content-Type:application/json
 
 | HttpCode | 错误码 | 错误信息 | 说明 |
 | --- | --- | --- | --- |
-| 400 | parameter.invalid | 输入参数错误 | 根据接口要求，传入必要参数。 |
-| 400 | permession.checkFailed | 权限校验失败 | 权限校验失败 |
+| 400 | paramIllegal | paramIllegal | 参数错误，请检查 |
 | 400 | permession.checkFailed | 群主不在应用可见性内 | 群主不在应用可见性内 |
-| 500 | system.error | 请重试，若始终失败请提交工单 | 请重试，若始终失败请提交工单 |
+| 500 | system.error | system.error | 系统错误 |

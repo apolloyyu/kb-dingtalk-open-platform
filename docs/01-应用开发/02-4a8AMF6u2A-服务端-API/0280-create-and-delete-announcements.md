@@ -5,13 +5,13 @@ namespace: "development"
 slug: "create-and-delete-announcements"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "公告 > 使用教程 > 通知自动发布：从自有系统到钉钉公告的触达闭环"
+breadcrumb: "公告 > 集成方案 > 通知自动发布：从自有系统到钉钉公告的触达闭环"
 doc_id: "DXnHG9nq6w"
 updated_at: "2026-09-23 12:04:36"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-and-delete-announcements
-> Path: 应用开发 / 服务端 API / 公告 > 使用教程 > 通知自动发布：从自有系统到钉钉公告的触达闭环
+> Path: 应用开发 / 服务端 API / 公告 > 集成方案 > 通知自动发布：从自有系统到钉钉公告的触达闭环
 > Updated: 2026-09-23 12:04:36
 
 # 通知自动发布：从自有系统到钉钉公告的触达闭环

@@ -5,13 +5,13 @@ namespace: "development"
 slug: "new-version-of-attachment-approval-process"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "OA 审批 > 使用教程 > 标准版 > OA审批流接入：附件审批的下载与预览"
+breadcrumb: "OA 审批 > 集成方案 > 标准版 > OA审批流接入：附件审批的下载与预览"
 doc_id: "gCYVw2ivlo"
 updated_at: "2026-10-12 18:04:46"
 ---
 
 > Source: https://open.dingtalk.com/document/development/new-version-of-attachment-approval-process
-> Path: 应用开发 / 服务端 API / OA 审批 > 使用教程 > 标准版 > OA审批流接入：附件审批的下载与预览
+> Path: 应用开发 / 服务端 API / OA 审批 > 集成方案 > 标准版 > OA审批流接入：附件审批的下载与预览
 > Updated: 2026-10-12 18:04:46
 
 # OA审批流接入：附件审批的下载与预览

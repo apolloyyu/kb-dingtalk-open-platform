@@ -5,13 +5,13 @@ namespace: "development"
 slug: "third-party-personal-applet-to-obtain-login-user-information-tutorial"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "通讯录管理 > 使用教程 > 第三方个人小程序获取登录用户信息"
+breadcrumb: "通讯录管理 > 集成方案 > 第三方个人小程序获取登录用户信息"
 doc_id: "uYxi6nrUyo"
 updated_at: "2026-09-15 09:36:10"
 ---
 
 > Source: https://open.dingtalk.com/document/development/third-party-personal-applet-to-obtain-login-user-information-tutorial
-> Path: 应用开发 / 服务端 API / 通讯录管理 > 使用教程 > 第三方个人小程序获取登录用户信息
+> Path: 应用开发 / 服务端 API / 通讯录管理 > 集成方案 > 第三方个人小程序获取登录用户信息
 > Updated: 2026-09-15 09:36:10
 
 # 第三方个人小程序获取登录用户信息

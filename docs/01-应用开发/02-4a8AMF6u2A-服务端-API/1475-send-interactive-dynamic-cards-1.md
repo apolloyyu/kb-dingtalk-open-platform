@@ -136,7 +136,7 @@ Content-Type:application/json
 | atOpenIds | Map<String, String> | 否 | 消息@人。格式：`{"key":"value"}`。   - **key**：用户ID，根据userIdType设置。 - **value**：用户名。   例如：{123456:"钉三多"}  **[!NOTE]**  如果key、value都为\*\*@ALL\*\*则判断@所有人。 |
 | cardOptions | Object | 否 | 卡片操作。 |
 | supportForward | Boolean | 否 | 是否支持转发。   - **true**：支持 - **false**：不支持 |
-| pullStrategy | Boolean | 否 | 是否开启卡片纯拉模式，   - true：开启卡片纯拉模式 - false：不开启卡片纯拉模式   **[!NOTE]**  纯拉模式，参见[实现置顶卡片纯拉模式](0736-pure-pull-mode-process-guide.md)。 |
+| pullStrategy | Boolean | 否 | 是否开启卡片纯拉模式，   - true：开启卡片纯拉模式 - false：不开启卡片纯拉模式   **[!NOTE]**  纯拉模式，参见[实现置顶卡片纯拉模式](0733-pure-pull-mode-process-guide.md)。 |
 
 ## 返回参数
 

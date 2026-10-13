@@ -5,13 +5,13 @@ namespace: "development"
 slug: "create-and-delete-an-event"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "日程 > 使用教程 > 日程全生命周期管理：从创建到删除的完整流程"
+breadcrumb: "日程 > 集成方案 > 日程全生命周期管理：从创建到删除的完整流程"
 doc_id: "OwdmZThLzn"
 updated_at: "2026-09-23 12:04:33"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-and-delete-an-event
-> Path: 应用开发 / 服务端 API / 日程 > 使用教程 > 日程全生命周期管理：从创建到删除的完整流程
+> Path: 应用开发 / 服务端 API / 日程 > 集成方案 > 日程全生命周期管理：从创建到删除的完整流程
 > Updated: 2026-09-23 12:04:33
 
 # 日程全生命周期管理：从创建到删除的完整流程

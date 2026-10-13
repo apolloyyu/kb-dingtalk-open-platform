@@ -1,22 +1,26 @@
 ---
-title: "解散场景群"
-source_url: "https://open.dingtalk.com/document/development/api-dsbandopenscenegroup"
+title: "获取群会话的OpenConversationId"
+source_url: "https://open.dingtalk.com/document/development/obtain-group-openconversationid"
 namespace: "development"
-slug: "api-dsbandopenscenegroup"
+slug: "obtain-group-openconversationid"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "即时通信 > 会话管理 > 场景群 > 群管理 > 解散场景群"
-doc_id: "MfTls3182y"
-updated_at: "2026-08-14 09:41:50"
+breadcrumb: "即时通信 > 会话管理 > 群管理 > 获取群会话的OpenConversationId"
+doc_id: "tYVT3gUuIb"
+updated_at: "2026-08-13 09:03:31"
 ---
 
-> Source: https://open.dingtalk.com/document/development/api-dsbandopenscenegroup
-> Path: 应用开发 / 服务端 API / 即时通信 > 会话管理 > 场景群 > 群管理 > 解散场景群
-> Updated: 2026-08-14 09:41:50
+> Source: https://open.dingtalk.com/document/development/obtain-group-openconversationid
+> Path: 应用开发 / 服务端 API / 即时通信 > 会话管理 > 群管理 > 获取群会话的OpenConversationId
+> Updated: 2026-08-13 09:03:31
 
-# 解散场景群
+# 获取群会话的OpenConversationId
 
-调用本接口，根据群ID解散指定群。
+调用本接口，通过chatId查询OpenConversationId，适用于在创建群会话时未保存 OpenConversationId，后续业务需要使用该 ID 的场景。
+
+## 接口调用说明
+
+如果在调用[创建群会话](0736-create-common-group-new-version-v2.md)接口时没有保存OpenConversationId，可以通过调用本接口通过chatId获取OpenConversationId。
 
 ## 请求
 
@@ -24,70 +28,68 @@ updated_at: "2026-08-14 09:41:50"
 
 | 字段 | 值 |
 | --- | --- |
-| HTTP URL | https://api.dingtalk.com/v1.0/im/chat/scenegroup/disband |
+| HTTP URL | https://api.dingtalk.com/v1.0/im/chat/{chatId}/convertToOpenConversationId |
 | HTTP Method | POST |
 | 支持的应用类型 | appType-企业内部应用 |
-| 权限要求 | permission-qyapi\_chat\_manage-钉钉群基础信息管理权限 |
+| 权限要求 | permission-qyapi\_chat\_read-钉钉群基础信息读权限 |
 
 ### 请求头
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，可通过[获取企业内部应用的accessToken](0032-obtain-the-access-token-of-an-internal-app.md)接口获取。 |
+| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，通过调用[获取企业内部应用的accessToken](0032-obtain-the-access-token-of-an-internal-app.md)接口获取。 |
 
-### 请求体
+### 路径参数
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| openConversationId | String | 是 | 群ID，调用[创建场景群](0746-create-a-scene-group.md)接口获取`open_conversation_id`参数值。 |
+| chatId | String | 是 | 群会话chatId：   - **服务端**：通过[创建群会话](0736-create-common-group-new-version-v2.md)接口获取。 - **客户端**：通过[chooseChat](../03-Ogu5SlPY4t-客户端-JSAPI/0318-jsapi-choose-chat.md)JSAPI获取。 |
 
 ### 请求示例
 
 HTTP
 
 ```
-POST /v1.0/im/chat/scenegroup/disband HTTP/1.1
+POST /v1.0/im/chat/chatfaaxxxx3f061e/convertToOpenConversationId HTTP/1.1
 Host:api.dingtalk.com
-x-acs-dingtalk-access-token:6d1b*****
 Content-Type:application/json
-
-{
-  "openConversationId" : "cidxxxx"
-}
 ```
 
 Java
 
 ```
+// This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sample;
 
 import com.aliyun.tea.*;
+import com.aliyun.teautil.*;
+import com.aliyun.teautil.models.*;
+import com.aliyun.dingtalkim_1_0.*;
+import com.aliyun.dingtalkim_1_0.models.*;
+import com.aliyun.teaopenapi.*;
+import com.aliyun.teaopenapi.models.*;
 
 public class Sample {
 
     /**
-     * <b>description</b> :
-     * <p>使用 Token 初始化账号Client</p>
+     * 使用 Token 初始化账号Client
      * @return Client
-     * 
      * @throws Exception
      */
     public static com.aliyun.dingtalkim_1_0.Client createClient() throws Exception {
-        com.aliyun.teaopenapi.models.Config config = new com.aliyun.teaopenapi.models.Config();
+        Config config = new Config();
         config.protocol = "https";
         config.regionId = "central";
         return new com.aliyun.dingtalkim_1_0.Client(config);
     }
 
     public static void main(String[] args_) throws Exception {
-        
+        java.util.List<String> args = java.util.Arrays.asList(args_);
         com.aliyun.dingtalkim_1_0.Client client = Sample.createClient();
-        com.aliyun.dingtalkim_1_0.models.DsbandOpenSceneGroupHeaders dsbandOpenSceneGroupHeaders = new com.aliyun.dingtalkim_1_0.models.DsbandOpenSceneGroupHeaders();
-        dsbandOpenSceneGroupHeaders.xAcsDingtalkAccessToken = "<your access token>";
-        com.aliyun.dingtalkim_1_0.models.DsbandOpenSceneGroupRequest dsbandOpenSceneGroupRequest = new com.aliyun.dingtalkim_1_0.models.DsbandOpenSceneGroupRequest()
-                .setOpenConversationId("cidxxxx");
+        ChatIdToOpenConversationIdHeaders chatIdToOpenConversationIdHeaders = new ChatIdToOpenConversationIdHeaders();
+        chatIdToOpenConversationIdHeaders.xAcsDingtalkAccessToken = "<your access token>";
         try {
-            client.dsbandOpenSceneGroupWithOptions(dsbandOpenSceneGroupRequest, dsbandOpenSceneGroupHeaders, new com.aliyun.teautil.models.RuntimeOptions());
+            client.chatIdToOpenConversationIdWithOptions("chatfaabe59a460527f5fb72fbbdfe3f061e", chatIdToOpenConversationIdHeaders, new RuntimeOptions());
         } catch (TeaException err) {
             if (!com.aliyun.teautil.Common.empty(err.code) && !com.aliyun.teautil.Common.empty(err.message)) {
                 // err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -109,9 +111,7 @@ Python
 ```
 # -*- coding: utf-8 -*-
 # This file is auto-generated, don't edit it. Thanks.
-import os
 import sys
-import json
 
 from typing import List
 
@@ -142,13 +142,10 @@ class Sample:
         args: List[str],
     ) -> None:
         client = Sample.create_client()
-        dsband_open_scene_group_headers = dingtalkim__1__0_models.DsbandOpenSceneGroupHeaders()
-        dsband_open_scene_group_headers.x_acs_dingtalk_access_token = '<your access token>'
-        dsband_open_scene_group_request = dingtalkim__1__0_models.DsbandOpenSceneGroupRequest(
-            open_conversation_id='cidxxxx'
-        )
+        chat_id_to_open_conversation_id_headers = dingtalkim__1__0_models.ChatIdToOpenConversationIdHeaders()
+        chat_id_to_open_conversation_id_headers.x_acs_dingtalk_access_token = '<your access token>'
         try:
-            client.dsband_open_scene_group_with_options(dsband_open_scene_group_request, dsband_open_scene_group_headers, util_models.RuntimeOptions())
+            client.chat_id_to_open_conversation_id_with_options('chatfaabe59a460527f5fb72fbbdfe3f061e', chat_id_to_open_conversation_id_headers, util_models.RuntimeOptions())
         except Exception as err:
             if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
                 # err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -159,13 +156,10 @@ class Sample:
         args: List[str],
     ) -> None:
         client = Sample.create_client()
-        dsband_open_scene_group_headers = dingtalkim__1__0_models.DsbandOpenSceneGroupHeaders()
-        dsband_open_scene_group_headers.x_acs_dingtalk_access_token = '<your access token>'
-        dsband_open_scene_group_request = dingtalkim__1__0_models.DsbandOpenSceneGroupRequest(
-            open_conversation_id='cidxxxx'
-        )
+        chat_id_to_open_conversation_id_headers = dingtalkim__1__0_models.ChatIdToOpenConversationIdHeaders()
+        chat_id_to_open_conversation_id_headers.x_acs_dingtalk_access_token = '<your access token>'
         try:
-            await client.dsband_open_scene_group_with_options_async(dsband_open_scene_group_request, dsband_open_scene_group_headers, util_models.RuntimeOptions())
+            await client.chat_id_to_open_conversation_id_with_options_async('chatfaabe59a460527f5fb72fbbdfe3f061e', chat_id_to_open_conversation_id_headers, util_models.RuntimeOptions())
         except Exception as err:
             if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
                 # err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -189,8 +183,7 @@ use AlibabaCloud\Tea\Exception\TeaError;
 use AlibabaCloud\Tea\Utils\Utils;
 
 use Darabonba\OpenApi\Models\Config;
-use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\DsbandOpenSceneGroupHeaders;
-use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\DsbandOpenSceneGroupRequest;
+use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\ChatIdToOpenConversationIdHeaders;
 use AlibabaCloud\Tea\Utils\Utils\RuntimeOptions;
 
 class Sample {
@@ -212,13 +205,10 @@ class Sample {
      */
     public static function main($args){
         $client = self::createClient();
-        $dsbandOpenSceneGroupHeaders = new DsbandOpenSceneGroupHeaders([]);
-        $dsbandOpenSceneGroupHeaders->xAcsDingtalkAccessToken = "<your access token>";
-        $dsbandOpenSceneGroupRequest = new DsbandOpenSceneGroupRequest([
-            "openConversationId" => "cidxxxx"
-        ]);
+        $chatIdToOpenConversationIdHeaders = new ChatIdToOpenConversationIdHeaders([]);
+        $chatIdToOpenConversationIdHeaders->xAcsDingtalkAccessToken = "<your access token>";
         try {
-            $client->dsbandOpenSceneGroupWithOptions($dsbandOpenSceneGroupRequest, $dsbandOpenSceneGroupHeaders, new RuntimeOptions([]));
+            $client->chatIdToOpenConversationIdWithOptions("chatfaabe59a460527f5fb72fbbdfe3f061e", $chatIdToOpenConversationIdHeaders, new RuntimeOptions([]));
         }
         catch (Exception $err) {
             if (!($err instanceof TeaError)) {
@@ -240,26 +230,22 @@ Sample::main(array_slice($argv, 1));
 Go
 
 ```
+// This file is auto-generated, don't edit it. Thanks.
 package main
 
 import (
-  "encoding/json"
-  "strings"
-  "fmt"
   "os"
-  util  "github.com/alibabacloud-go/tea-utils/v2/service"
+  util  "github.com/alibabacloud-go/tea-utils/service"
   dingtalkim_1_0  "github.com/alibabacloud-go/dingtalk/im_1_0"
-  openapi  "github.com/alibabacloud-go/darabonba-openapi/v2/client"
+  openapi  "github.com/alibabacloud-go/darabonba-openapi/client"
   "github.com/alibabacloud-go/tea/tea"
 )
 
-// Description:
-// 
-// 使用 Token 初始化账号Client
-// 
-// @return Client
-// 
-// @throws Exception
+/**
+ * 使用 Token 初始化账号Client
+ * @return Client
+ * @throws Exception
+ */
 func CreateClient () (_result *dingtalkim_1_0.Client, _err error) {
   config := &openapi.Config{}
   config.Protocol = tea.String("https")
@@ -275,18 +261,15 @@ func _main (args []*string) (_err error) {
     return _err
   }
 
-  dsbandOpenSceneGroupHeaders := &dingtalkim_1_0.DsbandOpenSceneGroupHeaders{}
-  dsbandOpenSceneGroupHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
-  dsbandOpenSceneGroupRequest := &dingtalkim_1_0.DsbandOpenSceneGroupRequest{
-    OpenConversationId: tea.String("cidxxxx"),
-  }
+  chatIdToOpenConversationIdHeaders := &dingtalkim_1_0.ChatIdToOpenConversationIdHeaders{}
+  chatIdToOpenConversationIdHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
   tryErr := func()(_e error) {
     defer func() {
       if r := tea.Recover(recover()); r != nil {
         _e = r
       }
     }()
-    _, _err = client.DsbandOpenSceneGroupWithOptions(dsbandOpenSceneGroupRequest, dsbandOpenSceneGroupHeaders, &util.RuntimeOptions{})
+    _, _err = client.ChatIdToOpenConversationIdWithOptions(tea.String("chatfaabe59a460527f5fb72fbbdfe3f061e"), chatIdToOpenConversationIdHeaders, &util.RuntimeOptions{})
     if _err != nil {
       return _err
     }
@@ -320,38 +303,34 @@ func main() {
 Node.js
 
 ```
-'use strict';
 // This file is auto-generated, don't edit it
-const Util = require('@alicloud/tea-util');
-const dingtalkim_1_0 = require('@alicloud/dingtalk/im_1_0');
-const OpenApi = require('@alicloud/openapi-client');
-const Tea = require('@alicloud/tea-typescript');
+import Util, * as $Util from '@alicloud/tea-util';
+import dingtalkim_1_0, * as $dingtalkim_1_0 from '@alicloud/dingtalk/im_1_0';
+import OpenApi, * as $OpenApi from '@alicloud/openapi-client';
+import * as $tea from '@alicloud/tea-typescript';
 
-class Client {
+export default class Client {
 
   /**
    * 使用 Token 初始化账号Client
    * @return Client
    * @throws Exception
    */
-  static createClient() {
-    let config = new OpenApi.Config({ });
-    config.protocol = 'https';
-    config.regionId = 'central';
-    return new dingtalkim_1_0.default(config);
+  static createClient(): dingtalkim_1_0 {
+    let config = new $OpenApi.Config({ });
+    config.protocol = "https";
+    config.regionId = "central";
+    return new dingtalkim_1_0(config);
   }
 
-  static async main(args) {
+  static async main(args: string[]): Promise<void> {
     let client = Client.createClient();
-    let dsbandOpenSceneGroupHeaders = new dingtalkim_1_0.DsbandOpenSceneGroupHeaders({ });
-    dsbandOpenSceneGroupHeaders.xAcsDingtalkAccessToken = '<your access token>';
-    let dsbandOpenSceneGroupRequest = new dingtalkim_1_0.DsbandOpenSceneGroupRequest({
-      openConversationId: 'cidxxxx',
-    });
+    let chatIdToOpenConversationIdHeaders = new $dingtalkim_1_0.ChatIdToOpenConversationIdHeaders({ });
+    chatIdToOpenConversationIdHeaders.xAcsDingtalkAccessToken = "<your access token>";
     try {
-      await client.dsbandOpenSceneGroupWithOptions(dsbandOpenSceneGroupRequest, dsbandOpenSceneGroupHeaders, new Util.RuntimeOptions({ }));
+      await client.chatIdToOpenConversationIdWithOptions("chatfaabe59a460527f5fb72fbbdfe3f061e", chatIdToOpenConversationIdHeaders, new $Util.RuntimeOptions({ }));
     } catch (err) {
-      if (!Util.default.empty(err.code) && !Util.default.empty(err.message)) {
+      if (!Util.empty(err.code) && !Util.empty(err.message)) {
         // err 中含有 code 和 message 属性，可帮助开发定位问题
       }
 
@@ -360,14 +339,14 @@ class Client {
 
 }
 
-exports.Client = Client;
 Client.main(process.argv.slice(2));
 ```
 
 C#
 
 ```
-using Newtonsoft.Json;
+// This file is auto-generated, don't edit it. Thanks.
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -382,17 +361,11 @@ namespace AlibabaCloud.SDK.Sample
     public class Sample 
     {
 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>使用 Token 初始化账号Client</para>
-        /// </description>
-        /// 
-        /// <returns>
-        /// Client
-        /// </returns>
-        /// 
-        /// <term><b>Exception:</b></term>
-        /// Exception
+        /**
+         * 使用 Token 初始化账号Client
+         * @return Client
+         * @throws Exception
+         */
         public static AlibabaCloud.SDK.Dingtalkim_1_0.Client CreateClient()
         {
             AlibabaCloud.OpenApiClient.Models.Config config = new AlibabaCloud.OpenApiClient.Models.Config();
@@ -404,15 +377,11 @@ namespace AlibabaCloud.SDK.Sample
         public static void Main(string[] args)
         {
             AlibabaCloud.SDK.Dingtalkim_1_0.Client client = CreateClient();
-            AlibabaCloud.SDK.Dingtalkim_1_0.Models.DsbandOpenSceneGroupHeaders dsbandOpenSceneGroupHeaders = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.DsbandOpenSceneGroupHeaders();
-            dsbandOpenSceneGroupHeaders.XAcsDingtalkAccessToken = "<your access token>";
-            AlibabaCloud.SDK.Dingtalkim_1_0.Models.DsbandOpenSceneGroupRequest dsbandOpenSceneGroupRequest = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.DsbandOpenSceneGroupRequest
-            {
-                OpenConversationId = "cidxxxx",
-            };
+            AlibabaCloud.SDK.Dingtalkim_1_0.Models.ChatIdToOpenConversationIdHeaders chatIdToOpenConversationIdHeaders = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.ChatIdToOpenConversationIdHeaders();
+            chatIdToOpenConversationIdHeaders.XAcsDingtalkAccessToken = "<your access token>";
             try
             {
-                client.DsbandOpenSceneGroupWithOptions(dsbandOpenSceneGroupRequest, dsbandOpenSceneGroupHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
+                client.ChatIdToOpenConversationIdWithOptions("chatfaabe59a460527f5fb72fbbdfe3f061e", chatIdToOpenConversationIdHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
             }
             catch (TeaException err)
             {
@@ -438,13 +407,49 @@ namespace AlibabaCloud.SDK.Sample
 }
 ```
 
+C++
+
+```
+// This file is auto-generated, don't edit it. Thanks.
+
+#include <alibabacloud/dingtalkim__1__0.hpp>
+#include <alibabacloud/open_api.hpp>
+#include <darabonba/core.hpp>
+#include <darabonba/util.hpp>
+#include <iostream>
+
+using namespace std;
+
+Alibabacloud_Dingtalkim_1_0::Client createClient() {
+  shared_ptr<Alibabacloud_OpenApi::Config> config = make_shared<Alibabacloud_OpenApi::Config>();
+  config->protocol = make_shared<string>("https");
+  config->regionId = make_shared<string>("central");
+  return Alibabacloud_Dingtalkim_1_0::Client(config);
+}
+
+int main(int argc, char *args[]) {
+  args++;
+  shared_ptr<Alibabacloud_Dingtalkim_1_0::Client> client = make_shared<Alibabacloud_Dingtalkim_1_0::Client>(createClient());
+  shared_ptr<Alibabacloud_Dingtalkim_1_0::ChatIdToOpenConversationIdHeaders> chatIdToOpenConversationIdHeaders = make_shared<Alibabacloud_Dingtalkim_1_0::ChatIdToOpenConversationIdHeaders>();
+  chatIdToOpenConversationIdHeaders->xAcsDingtalkAccessToken = make_shared<string>("<your access token>");
+  try {
+    client->chatIdToOpenConversationIdWithOptions(make_shared<string>("chatfaabe59a460527f5fb72fbbdfe3f061e"), chatIdToOpenConversationIdHeaders, make_shared<Darabonba_Util::RuntimeOptions>(Darabonba_Util::RuntimeOptions()));
+  }
+  catch (std::exception &err) {
+    if (!Darabonba_Util::Client::empty(err.code) && !Darabonba_Util::Client::empty(err.message)) {
+      // err 中含有 code 和 message 属性，可帮助开发定位问题
+    }
+  }
+}
+```
+
 ## 响应
 
 ### 响应体
 
 | 名称 | 类型 | 描述 |
 | --- | --- | --- |
-| success | Boolean | 删除结果：   - **true**：执行成功 - **false**：执行失败 |
+| openConversationId | String | 群会话openConversationId。 |
 
 ### 响应体示例
 
@@ -453,7 +458,7 @@ HTTP/1.1 200 OK
 Content-Type:application/json
 
 {
-  "success" : true
+  "openConversationId" : "cidl1B8RVUFmkO50OC9uEbySQ=="
 }
 ```
 
@@ -463,6 +468,5 @@ Content-Type:application/json
 
 | HttpCode | 错误码 | 错误信息 | 说明 |
 | --- | --- | --- | --- |
-| 400 | paramIllegal | paramIllegal | 参数错误，请检查 |
+| 400 | invalideChatId | 不合法的chatId | 不合法的chatId |
 | 400 | permession.checkFailed | 群主不在应用可见性内 | 群主不在应用可见性内 |
-| 500 | system.error | system.error | 系统错误 |

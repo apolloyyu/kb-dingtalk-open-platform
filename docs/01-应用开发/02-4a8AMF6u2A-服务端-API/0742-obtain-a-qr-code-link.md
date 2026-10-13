@@ -37,7 +37,7 @@ updated_at: "2026-07-14 09:22:04"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| chatid | String | 是 | chat3234dfs423a | 群会话的chatid，可调用[创建群会话](0738-create-common-group-new-version-v2.md)接口获取chatid参数值。 |
+| chatid | String | 是 | chat3234dfs423a | 群会话的chatid，可调用[创建群会话](0736-create-common-group-new-version-v2.md)接口获取chatid参数值。 |
 | userid | String | 是 | manager4220 | 分享二维码用户的userId。 |
 
 ### **请求示例**

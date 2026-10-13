@@ -21,7 +21,7 @@ updated_at: "2026-08-25 09:37:13"
 > **[!IMPORTANT]**
 >
 > - 本接口已完成升级，后续将维持现有功能且不再新增能力。
-> - 未接入的开发者建议使用新版[创建群会话](0738-create-common-group-new-version-v2.md)接口，已接入用户不受影响。
+> - 未接入的开发者建议使用新版[创建群会话](0736-create-common-group-new-version-v2.md)接口，已接入用户不受影响。
 
 ## 权限
 

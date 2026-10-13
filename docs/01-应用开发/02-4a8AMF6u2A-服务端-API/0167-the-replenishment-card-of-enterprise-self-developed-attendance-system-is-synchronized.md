@@ -5,13 +5,13 @@ namespace: "development"
 slug: "the-replenishment-card-of-enterprise-self-developed-attendance-system-is-synchronized"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "考勤 > 使用教程 > 补卡自动同步：审批通过实时更新钉钉考勤状态"
+breadcrumb: "考勤 > 集成方案 > 补卡自动同步：审批通过实时更新钉钉考勤状态"
 doc_id: "nTMMOfrMW3"
 updated_at: "2026-09-23 12:04:28"
 ---
 
 > Source: https://open.dingtalk.com/document/development/the-replenishment-card-of-enterprise-self-developed-attendance-system-is-synchronized
-> Path: 应用开发 / 服务端 API / 考勤 > 使用教程 > 补卡自动同步：审批通过实时更新钉钉考勤状态
+> Path: 应用开发 / 服务端 API / 考勤 > 集成方案 > 补卡自动同步：审批通过实时更新钉钉考勤状态
 > Updated: 2026-09-23 12:04:28
 
 # 补卡自动同步：审批通过实时更新钉钉考勤状态

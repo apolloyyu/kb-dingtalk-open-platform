@@ -20,7 +20,7 @@ updated_at: "2026-07-14 09:22:06"
 
 ## **接口调用说明**
 
-支持场景：基于群模板创建的群，详情参见[创建场景群](0746-create-a-scene-group.md)。
+支持场景：基于群模板创建的群，详情参见[创建场景群](0744-create-a-scene-group.md)。
 
 ## **请求**
 
@@ -43,7 +43,7 @@ updated_at: "2026-07-14 09:22:06"
 | --- | --- | --- | --- | --- |
 | owner\_user\_id | String | 是 | 013\*\*\*\*\* | 群主的userid。 |
 | template\_id | String | 是 | c354\*\*\*-\*\*\*-\*\*\*-b4ea-6f1ab\*\*\*65 | 群模板id，登录[开发者后台 > 开放能力 > 场景群 > 群模板](https://open-dev.dingtalk.com/fe/im#/group/list)查看id：群开放-场景群-群模板-启用群模板-获取群模板ID  **[!NOTE]**  调用本接口前，需要在[钉钉开发者后台](https://open-dev.dingtalk.com/#/)为群模板设置灰度企业。企业灰度 |
-| open\_conversation\_id | String | 是 | cid9FTRQSLo+sK\*\*\*\*\*== | 群ID，调用[创建场景群](0746-create-a-scene-group.md)接口获取`open_conversation_id`参数值。 |
+| open\_conversation\_id | String | 是 | cid9FTRQSLo+sK\*\*\*\*\*== | 群ID，调用[创建场景群](0744-create-a-scene-group.md)接口获取`open_conversation_id`参数值。 |
 
 ### **请求示例**
 

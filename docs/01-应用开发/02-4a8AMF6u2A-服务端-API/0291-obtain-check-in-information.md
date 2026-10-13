@@ -5,13 +5,13 @@ namespace: "development"
 slug: "obtain-check-in-information"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "签到 > 使用教程 > 签到数据自动采集：从钉钉签到到业务系统实时同步"
+breadcrumb: "签到 > 集成方案 > 签到数据自动采集：从钉钉签到到业务系统实时同步"
 doc_id: "ApvXyICPxJ"
 updated_at: "2026-09-23 12:04:38"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-check-in-information
-> Path: 应用开发 / 服务端 API / 签到 > 使用教程 > 签到数据自动采集：从钉钉签到到业务系统实时同步
+> Path: 应用开发 / 服务端 API / 签到 > 集成方案 > 签到数据自动采集：从钉钉签到到业务系统实时同步
 > Updated: 2026-09-23 12:04:38
 
 # 签到数据自动采集：从钉钉签到到业务系统实时同步

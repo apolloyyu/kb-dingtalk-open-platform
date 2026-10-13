@@ -5,13 +5,13 @@ namespace: "development"
 slug: "comment-and-revoke-approval-flow"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "OA 审批 > 使用教程 > 标准版 > OA审批流接入：添加审批评论与终止审批"
+breadcrumb: "OA 审批 > 集成方案 > 标准版 > OA审批流接入：添加审批评论与终止审批"
 doc_id: "bgZxXfNCbv"
 updated_at: "2026-10-12 18:04:42"
 ---
 
 > Source: https://open.dingtalk.com/document/development/comment-and-revoke-approval-flow
-> Path: 应用开发 / 服务端 API / OA 审批 > 使用教程 > 标准版 > OA审批流接入：添加审批评论与终止审批
+> Path: 应用开发 / 服务端 API / OA 审批 > 集成方案 > 标准版 > OA审批流接入：添加审批评论与终止审批
 > Updated: 2026-10-12 18:04:42
 
 # OA审批流接入：添加审批评论与终止审批

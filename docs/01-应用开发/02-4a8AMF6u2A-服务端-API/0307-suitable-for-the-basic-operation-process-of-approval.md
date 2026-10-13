@@ -5,13 +5,13 @@ namespace: "development"
 slug: "suitable-for-the-basic-operation-process-of-approval"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "宜搭 > 使用教程 > 宜搭审批流程：从业务系统到宜搭审批无缝集成"
+breadcrumb: "宜搭 > 集成方案 > 宜搭审批流程：从业务系统到宜搭审批无缝集成"
 doc_id: "F3JUb2d9be"
 updated_at: "2026-09-23 12:04:40"
 ---
 
 > Source: https://open.dingtalk.com/document/development/suitable-for-the-basic-operation-process-of-approval
-> Path: 应用开发 / 服务端 API / 宜搭 > 使用教程 > 宜搭审批流程：从业务系统到宜搭审批无缝集成
+> Path: 应用开发 / 服务端 API / 宜搭 > 集成方案 > 宜搭审批流程：从业务系统到宜搭审批无缝集成
 > Updated: 2026-09-23 12:04:40
 
 # 宜搭审批流程：从业务系统到宜搭审批无缝集成

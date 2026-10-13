@@ -5,13 +5,13 @@ namespace: "development"
 slug: "tutorial-obtaining-user-personal-information"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "认证与授权 > 身份验证（免登） > 使用教程 > 企业内部应用 > 网页方式登录应用（第三方网站）"
+breadcrumb: "认证与授权 > 身份验证（免登） > 集成方案 > 企业内部应用 > 网页方式登录应用（第三方网站）"
 doc_id: "fhfqc76nqi"
 updated_at: "2026-09-10 14:32:58"
 ---
 
 > Source: https://open.dingtalk.com/document/development/tutorial-obtaining-user-personal-information
-> Path: 应用开发 / 服务端 API / 认证与授权 > 身份验证（免登） > 使用教程 > 企业内部应用 > 网页方式登录应用（第三方网站）
+> Path: 应用开发 / 服务端 API / 认证与授权 > 身份验证（免登） > 集成方案 > 企业内部应用 > 网页方式登录应用（第三方网站）
 > Updated: 2026-09-10 14:32:58
 
 # 网页方式登录应用（第三方网站）

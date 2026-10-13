@@ -1,60 +1,61 @@
 ---
-title: "查询场景群内群模板机器人"
-source_url: "https://open.dingtalk.com/document/development/search-group-scene-template-robot"
+title: "批量设置企业群管理员"
+source_url: "https://open.dingtalk.com/document/development/batch-setup-group-administrator"
 namespace: "development"
-slug: "search-group-scene-template-robot"
+slug: "batch-setup-group-administrator"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "即时通信 > 会话管理 > 场景群 > 群管理 > 查询场景群内群模板机器人"
-doc_id: "AC6kVRH98Y"
-updated_at: "2026-08-14 09:42:01"
+breadcrumb: "即时通信 > 会话管理 > 群管理 > 批量设置企业群管理员"
+doc_id: "2e31sgGFPZ"
+updated_at: "2026-06-15 10:56:53"
 ---
 
-> Source: https://open.dingtalk.com/document/development/search-group-scene-template-robot
-> Path: 应用开发 / 服务端 API / 即时通信 > 会话管理 > 场景群 > 群管理 > 查询场景群内群模板机器人
-> Updated: 2026-08-14 09:42:01
+> Source: https://open.dingtalk.com/document/development/batch-setup-group-administrator
+> Path: 应用开发 / 服务端 API / 即时通信 > 会话管理 > 群管理 > 批量设置企业群管理员
+> Updated: 2026-06-15 10:56:53
 
-# 查询场景群内群模板机器人
+# 批量设置企业群管理员
 
-调用本接口，查询群内群模板机器人信息，适用于需要获取群内群模板机器人信息的场景，如在群管理界面展示机器人信息，或者在业务处理中需要使用机器人的 userId 和 unionId 等情况。
-
-## **接口调用说明**
-
-支持以下场景使用：基于群模板创建的群，详情参见[创建场景群](0746-create-a-scene-group.md)。
+调用本接口，可以批量设置企业群内用户为管理员身份， 也可以批量取消企业群内用户的管理员身份。本接口适用于企业群规模较大，需要批量调整群管理员以提高管理效率的场景或者企业组织架构调整，需要重新设置群管理员的场景。
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
-| HTTP URL | https://api.dingtalk.com/v1.0/im/sceneGroups/templates/robots |
-| HTTP Method | GET |
-| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
+| HTTP URL | https://api.dingtalk.com/v1.0/im/subAdministrators |
+| HTTP Method | POST |
+| 支持的应用类型 | appType-企业内部应用 |
 | 权限要求 | permission-qyapi\_chat\_manage-钉钉群基础信息管理权限 |
 
 ### 请求头
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，通过以下获取：   - 企业内部应用，调用[获取企业内部应用的accessToken](0032-obtain-the-access-token-of-an-internal-app.md)接口获取。 - 第三方企业应用，调用[获取第三方应用授权企业的accessToken](0033-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口获取。 |
+| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，调用[获取企业内部应用的accessToken](0032-obtain-the-access-token-of-an-internal-app.md)接口获取。 |
 
-### 查询参数
+### 请求体
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| robotCode | String | 否 | 机器人的编码。 登录[开发者后台 > 开放能力 > 场景群 > 机器人](https://open-dev.dingtalk.com/fe/im#/robot/list)查看id。 |
-| openConversationId | String | 否 | 群ID，可调用[创建场景群](0746-create-a-scene-group.md)接口获取`open_conversation_id`参数值。 |
+| openConversationId | String | 是 | 开放群ID。可以调用[创建群会话](0736-create-common-group-new-version-v2.md)接口获取openConversationId参数值。 |
+| userIds | Array of String | 是 | 企业员工userid列表。可以调用[获取部门用户userid列表](0064-query-the-list-of-department-userids.md)接口获取userid\_list参数值。 |
+| role | Integer | 是 | 设置类型，取值：   - **2**：添加为管理员 - **3**：删除该管理员 |
 
 ### 请求示例
 
 HTTP
 
 ```
-GET /v1.0/im/sceneGroups/templates/robots?robotCode=jLyahpLSgXXXXXXXXXXX79521009&openConversationId=cidCtneF+XyQjcyF2ROdgSeIg== HTTP/1.1
+POST /v1.0/im/subAdministrators HTTP/1.1
 Host:api.dingtalk.com
-x-acs-dingtalk-access-token:basgdasxxxxx
+x-acs-dingtalk-access-token:862bcxxx
 Content-Type:application/json
+
+{
+  "openConversationId" : "cidVwhmrlxsR3sL3+JdH1LjUA==",
+  "userIds" : [ "wZ1vjnPOIdKrq_5c7As20B9RMTGJGy" ],
+  "role" : 2
+}
 ```
 
 Java
@@ -88,13 +89,16 @@ public class Sample {
     public static void main(String[] args_) throws Exception {
         java.util.List<String> args = java.util.Arrays.asList(args_);
         com.aliyun.dingtalkim_1_0.Client client = Sample.createClient();
-        QuerySceneGroupTemplateRobotHeaders querySceneGroupTemplateRobotHeaders = new QuerySceneGroupTemplateRobotHeaders();
-        querySceneGroupTemplateRobotHeaders.xAcsDingtalkAccessToken = "<your access token>";
-        QuerySceneGroupTemplateRobotRequest querySceneGroupTemplateRobotRequest = new QuerySceneGroupTemplateRobotRequest()
-                .setRobotCode("jLyahpLSgXXXXXXXXXXX79521009")
-                .setOpenConversationId("cidCtneF+XyQjcyF2ROdgSeIg==");
+        ChatSubAdminUpdateHeaders chatSubAdminUpdateHeaders = new ChatSubAdminUpdateHeaders();
+        chatSubAdminUpdateHeaders.xAcsDingtalkAccessToken = "<your access token>";
+        ChatSubAdminUpdateRequest chatSubAdminUpdateRequest = new ChatSubAdminUpdateRequest()
+                .setOpenConversationId("cidVwhmrlxsR3sL3+JdH1LjUA==")
+                .setUserIds(java.util.Arrays.asList(
+                    "wZ1vjnPOIdKrq_5c7As20B9RMTGJGy"
+                ))
+                .setRole(2);
         try {
-            client.querySceneGroupTemplateRobotWithOptions(querySceneGroupTemplateRobotRequest, querySceneGroupTemplateRobotHeaders, new RuntimeOptions());
+            client.chatSubAdminUpdateWithOptions(chatSubAdminUpdateRequest, chatSubAdminUpdateHeaders, new RuntimeOptions());
         } catch (TeaException err) {
             if (!com.aliyun.teautil.Common.empty(err.code) && !com.aliyun.teautil.Common.empty(err.message)) {
                 // err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -147,14 +151,17 @@ class Sample:
         args: List[str],
     ) -> None:
         client = Sample.create_client()
-        query_scene_group_template_robot_headers = dingtalkim__1__0_models.QuerySceneGroupTemplateRobotHeaders()
-        query_scene_group_template_robot_headers.x_acs_dingtalk_access_token = '<your access token>'
-        query_scene_group_template_robot_request = dingtalkim__1__0_models.QuerySceneGroupTemplateRobotRequest(
-            robot_code='jLyahpLSgXXXXXXXXXXX79521009',
-            open_conversation_id='cidCtneF+XyQjcyF2ROdgSeIg=='
+        chat_sub_admin_update_headers = dingtalkim__1__0_models.ChatSubAdminUpdateHeaders()
+        chat_sub_admin_update_headers.x_acs_dingtalk_access_token = '<your access token>'
+        chat_sub_admin_update_request = dingtalkim__1__0_models.ChatSubAdminUpdateRequest(
+            open_conversation_id='cidVwhmrlxsR3sL3+JdH1LjUA==',
+            user_ids=[
+                'wZ1vjnPOIdKrq_5c7As20B9RMTGJGy'
+            ],
+            role=2
         )
         try:
-            client.query_scene_group_template_robot_with_options(query_scene_group_template_robot_request, query_scene_group_template_robot_headers, util_models.RuntimeOptions())
+            client.chat_sub_admin_update_with_options(chat_sub_admin_update_request, chat_sub_admin_update_headers, util_models.RuntimeOptions())
         except Exception as err:
             if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
                 # err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -165,14 +172,17 @@ class Sample:
         args: List[str],
     ) -> None:
         client = Sample.create_client()
-        query_scene_group_template_robot_headers = dingtalkim__1__0_models.QuerySceneGroupTemplateRobotHeaders()
-        query_scene_group_template_robot_headers.x_acs_dingtalk_access_token = '<your access token>'
-        query_scene_group_template_robot_request = dingtalkim__1__0_models.QuerySceneGroupTemplateRobotRequest(
-            robot_code='jLyahpLSgXXXXXXXXXXX79521009',
-            open_conversation_id='cidCtneF+XyQjcyF2ROdgSeIg=='
+        chat_sub_admin_update_headers = dingtalkim__1__0_models.ChatSubAdminUpdateHeaders()
+        chat_sub_admin_update_headers.x_acs_dingtalk_access_token = '<your access token>'
+        chat_sub_admin_update_request = dingtalkim__1__0_models.ChatSubAdminUpdateRequest(
+            open_conversation_id='cidVwhmrlxsR3sL3+JdH1LjUA==',
+            user_ids=[
+                'wZ1vjnPOIdKrq_5c7As20B9RMTGJGy'
+            ],
+            role=2
         )
         try:
-            await client.query_scene_group_template_robot_with_options_async(query_scene_group_template_robot_request, query_scene_group_template_robot_headers, util_models.RuntimeOptions())
+            await client.chat_sub_admin_update_with_options_async(chat_sub_admin_update_request, chat_sub_admin_update_headers, util_models.RuntimeOptions())
         except Exception as err:
             if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
                 # err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -196,8 +206,8 @@ use AlibabaCloud\Tea\Exception\TeaError;
 use AlibabaCloud\Tea\Utils\Utils;
 
 use Darabonba\OpenApi\Models\Config;
-use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\QuerySceneGroupTemplateRobotHeaders;
-use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\QuerySceneGroupTemplateRobotRequest;
+use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\ChatSubAdminUpdateHeaders;
+use AlibabaCloud\SDK\Dingtalk\Vim_1_0\Models\ChatSubAdminUpdateRequest;
 use AlibabaCloud\Tea\Utils\Utils\RuntimeOptions;
 
 class Sample {
@@ -219,14 +229,17 @@ class Sample {
      */
     public static function main($args){
         $client = self::createClient();
-        $querySceneGroupTemplateRobotHeaders = new QuerySceneGroupTemplateRobotHeaders([]);
-        $querySceneGroupTemplateRobotHeaders->xAcsDingtalkAccessToken = "<your access token>";
-        $querySceneGroupTemplateRobotRequest = new QuerySceneGroupTemplateRobotRequest([
-            "robotCode" => "jLyahpLSgXXXXXXXXXXX79521009",
-            "openConversationId" => "cidCtneF+XyQjcyF2ROdgSeIg=="
+        $chatSubAdminUpdateHeaders = new ChatSubAdminUpdateHeaders([]);
+        $chatSubAdminUpdateHeaders->xAcsDingtalkAccessToken = "<your access token>";
+        $chatSubAdminUpdateRequest = new ChatSubAdminUpdateRequest([
+            "openConversationId" => "cidVwhmrlxsR3sL3+JdH1LjUA==",
+            "userIds" => [
+                "wZ1vjnPOIdKrq_5c7As20B9RMTGJGy"
+            ],
+            "role" => 2
         ]);
         try {
-            $client->querySceneGroupTemplateRobotWithOptions($querySceneGroupTemplateRobotRequest, $querySceneGroupTemplateRobotHeaders, new RuntimeOptions([]));
+            $client->chatSubAdminUpdateWithOptions($chatSubAdminUpdateRequest, $chatSubAdminUpdateHeaders, new RuntimeOptions([]));
         }
         catch (Exception $err) {
             if (!($err instanceof TeaError)) {
@@ -254,7 +267,7 @@ package main
 import (
   "os"
   util  "github.com/alibabacloud-go/tea-utils/service"
-  dingtalkim_1_0  "github.com/alibabacloud-go/dingtalk/im_1_0/client"
+  dingtalkim_1_0  "github.com/alibabacloud-go/dingtalk/im_1_0"
   openapi  "github.com/alibabacloud-go/darabonba-openapi/client"
   "github.com/alibabacloud-go/tea/tea"
 )
@@ -279,11 +292,12 @@ func _main (args []*string) (_err error) {
     return _err
   }
 
-  querySceneGroupTemplateRobotHeaders := &dingtalkim_1_0.QuerySceneGroupTemplateRobotHeaders{}
-  querySceneGroupTemplateRobotHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
-  querySceneGroupTemplateRobotRequest := &dingtalkim_1_0.QuerySceneGroupTemplateRobotRequest{
-    RobotCode: tea.String("jLyahpLSgXXXXXXXXXXX79521009"),
-    OpenConversationId: tea.String("cidCtneF+XyQjcyF2ROdgSeIg=="),
+  chatSubAdminUpdateHeaders := &dingtalkim_1_0.ChatSubAdminUpdateHeaders{}
+  chatSubAdminUpdateHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
+  chatSubAdminUpdateRequest := &dingtalkim_1_0.ChatSubAdminUpdateRequest{
+    OpenConversationId: tea.String("cidVwhmrlxsR3sL3+JdH1LjUA=="),
+    UserIds: []*string{tea.String("wZ1vjnPOIdKrq_5c7As20B9RMTGJGy")},
+    Role: tea.Int32(2),
   }
   tryErr := func()(_e error) {
     defer func() {
@@ -291,7 +305,7 @@ func _main (args []*string) (_err error) {
         _e = r
       }
     }()
-    _, _err = client.QuerySceneGroupTemplateRobotWithOptions(querySceneGroupTemplateRobotRequest, querySceneGroupTemplateRobotHeaders, &util.RuntimeOptions{})
+    _, _err = client.ChatSubAdminUpdateWithOptions(chatSubAdminUpdateRequest, chatSubAdminUpdateHeaders, &util.RuntimeOptions{})
     if _err != nil {
       return _err
     }
@@ -347,14 +361,17 @@ export default class Client {
 
   static async main(args: string[]): Promise<void> {
     let client = Client.createClient();
-    let querySceneGroupTemplateRobotHeaders = new $dingtalkim_1_0.QuerySceneGroupTemplateRobotHeaders({ });
-    querySceneGroupTemplateRobotHeaders.xAcsDingtalkAccessToken = "<your access token>";
-    let querySceneGroupTemplateRobotRequest = new $dingtalkim_1_0.QuerySceneGroupTemplateRobotRequest({
-      robotCode: "jLyahpLSgXXXXXXXXXXX79521009",
-      openConversationId: "cidCtneF+XyQjcyF2ROdgSeIg==",
+    let chatSubAdminUpdateHeaders = new $dingtalkim_1_0.ChatSubAdminUpdateHeaders({ });
+    chatSubAdminUpdateHeaders.xAcsDingtalkAccessToken = "<your access token>";
+    let chatSubAdminUpdateRequest = new $dingtalkim_1_0.ChatSubAdminUpdateRequest({
+      openConversationId: "cidVwhmrlxsR3sL3+JdH1LjUA==",
+      userIds: [
+        "wZ1vjnPOIdKrq_5c7As20B9RMTGJGy"
+      ],
+      role: 2,
     });
     try {
-      await client.querySceneGroupTemplateRobotWithOptions(querySceneGroupTemplateRobotRequest, querySceneGroupTemplateRobotHeaders, new $Util.RuntimeOptions({ }));
+      await client.chatSubAdminUpdateWithOptions(chatSubAdminUpdateRequest, chatSubAdminUpdateHeaders, new $Util.RuntimeOptions({ }));
     } catch (err) {
       if (!Util.empty(err.code) && !Util.empty(err.message)) {
         // err 中含有 code 和 message 属性，可帮助开发定位问题
@@ -403,16 +420,20 @@ namespace AlibabaCloud.SDK.Sample
         public static void Main(string[] args)
         {
             AlibabaCloud.SDK.Dingtalkim_1_0.Client client = CreateClient();
-            AlibabaCloud.SDK.Dingtalkim_1_0.Models.QuerySceneGroupTemplateRobotHeaders querySceneGroupTemplateRobotHeaders = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.QuerySceneGroupTemplateRobotHeaders();
-            querySceneGroupTemplateRobotHeaders.XAcsDingtalkAccessToken = "<your access token>";
-            AlibabaCloud.SDK.Dingtalkim_1_0.Models.QuerySceneGroupTemplateRobotRequest querySceneGroupTemplateRobotRequest = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.QuerySceneGroupTemplateRobotRequest
+            AlibabaCloud.SDK.Dingtalkim_1_0.Models.ChatSubAdminUpdateHeaders chatSubAdminUpdateHeaders = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.ChatSubAdminUpdateHeaders();
+            chatSubAdminUpdateHeaders.XAcsDingtalkAccessToken = "<your access token>";
+            AlibabaCloud.SDK.Dingtalkim_1_0.Models.ChatSubAdminUpdateRequest chatSubAdminUpdateRequest = new AlibabaCloud.SDK.Dingtalkim_1_0.Models.ChatSubAdminUpdateRequest
             {
-                RobotCode = "jLyahpLSgXXXXXXXXXXX79521009",
-                OpenConversationId = "cidCtneF+XyQjcyF2ROdgSeIg==",
+                OpenConversationId = "cidVwhmrlxsR3sL3+JdH1LjUA==",
+                UserIds = new List<string>
+                {
+                    "wZ1vjnPOIdKrq_5c7As20B9RMTGJGy"
+                },
+                Role = 2,
             };
             try
             {
-                client.QuerySceneGroupTemplateRobotWithOptions(querySceneGroupTemplateRobotRequest, querySceneGroupTemplateRobotHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
+                client.ChatSubAdminUpdateWithOptions(chatSubAdminUpdateRequest, chatSubAdminUpdateHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
             }
             catch (TeaException err)
             {
@@ -438,16 +459,58 @@ namespace AlibabaCloud.SDK.Sample
 }
 ```
 
+C++
+
+```
+// This file is auto-generated, don't edit it. Thanks.
+
+#include <alibabacloud/dingtalkim__1__0.hpp>
+#include <alibabacloud/open_api.hpp>
+#include <boost/any.hpp>
+#include <darabonba/core.hpp>
+#include <darabonba/util.hpp>
+#include <iostream>
+#include <map>
+
+using namespace std;
+
+Alibabacloud_Dingtalkim_1_0::Client createClient() {
+  shared_ptr<Alibabacloud_OpenApi::Config> config = make_shared<Alibabacloud_OpenApi::Config>();
+  config->protocol = make_shared<string>("https");
+  config->regionId = make_shared<string>("central");
+  return Alibabacloud_Dingtalkim_1_0::Client(config);
+}
+
+int main(int argc, char *args[]) {
+  args++;
+  shared_ptr<Alibabacloud_Dingtalkim_1_0::Client> client = make_shared<Alibabacloud_Dingtalkim_1_0::Client>(createClient());
+  shared_ptr<Alibabacloud_Dingtalkim_1_0::ChatSubAdminUpdateHeaders> chatSubAdminUpdateHeaders = make_shared<Alibabacloud_Dingtalkim_1_0::ChatSubAdminUpdateHeaders>();
+  chatSubAdminUpdateHeaders->xAcsDingtalkAccessToken = make_shared<string>("<your access token>");
+  shared_ptr<Alibabacloud_Dingtalkim_1_0::ChatSubAdminUpdateRequest> chatSubAdminUpdateRequest = make_shared<Alibabacloud_Dingtalkim_1_0::ChatSubAdminUpdateRequest>(map<string, boost::any>({
+    {"openConversationId", boost::any(string("cidVwhmrlxsR3sL3+JdH1LjUA=="))},
+    {"userIds", boost::any(vector<string>({
+      "wZ1vjnPOIdKrq_5c7As20B9RMTGJGy"
+    }))},
+    {"role", boost::any(2)}
+  }));
+  try {
+    client->chatSubAdminUpdateWithOptions(chatSubAdminUpdateRequest, chatSubAdminUpdateHeaders, make_shared<Darabonba_Util::RuntimeOptions>(Darabonba_Util::RuntimeOptions()));
+  }
+  catch (std::exception &err) {
+    if (!Darabonba_Util::Client::empty(err.code) && !Darabonba_Util::Client::empty(err.message)) {
+      // err 中含有 code 和 message 属性，可帮助开发定位问题
+    }
+  }
+}
+```
+
 ## 响应
 
 ### 响应体
 
 | 名称 | 类型 | 描述 |
 | --- | --- | --- |
-| success | Boolean | 调用是否成功。 |
-| result | Object | 返回结果。 |
-| userId | String | 机器人的userId。 |
-| unionId | String | 机器人的unionId。      仅当userId无值时才返回unionId。 |
+| success | String | 调用是否成功。true表示调用成功。 |
 
 ### 响应体示例
 
@@ -456,11 +519,7 @@ HTTP/1.1 200 OK
 Content-Type:application/json
 
 {
-  "success" : true,
-  "result" : {
-    "userId" : "0321326XXXXXXX",
-    "unionId" : "EGKJhXXXXXXXFAiE"
-  }
+  "success" : "true"
 }
 ```
 
@@ -470,14 +529,11 @@ Content-Type:application/json
 
 | HttpCode | 错误码 | 错误信息 | 说明 |
 | --- | --- | --- | --- |
-| 400 | invalidParam.openConversationIdEmpry | 会话ID为空 | 会话ID为空 |
-| 400 | invalidParam.robotCodeEmpry | 机器人编码为空 | 机器人编码为空 |
-| 400 | invalidParam.sceneGroupPermissionDenied | 无权限访问此群数据 | 无权限，该群未安装群模板，或者安装的群模板不属于当前token对应的应用名下 |
-| 400 | robotDisabled | 机器人已停用 | 机器人已停用 |
-| 400 | robotNotFound | 机器人不存在 | 机器人不存在 |
-| 400 | invalidParam | %s | 参数为空或参数不合法 |
-| 400 | not.found | %s | 群聊不存在，请检查openConversationId是否正确 |
-| 400 | unauthorized | %s | 权限不足，群聊所属企业不匹配 |
-| 400 | unavailable | %s | 群内未安装群模板 |
-| 400 | auth.failed | %s | 无权限，群内安装的群模板不属于当前token对应的应用名下 |
-| 500 | systemInnerError | 系统繁忙 | 系统繁忙，请稍后再试 |
+| 400 | invalidParameter.openConversationId.invalid | 无效的会话id | 无效的会话id |
+| 400 | invalidParameter.orgId.invalid | 无效的企业ID | 无效的企业ID |
+| 400 | invalid.staffid | 无效的userId | 无效的userId |
+| 400 | subadmin.exceed | 管理员超限 | 管理员超限 |
+| 400 | invalidParamter.role | 无效的role | 无效的role |
+| 400 | staff.not.found | 员工不存在 | 员工不存在 |
+| 400 | group.diaband | 群已经解散 | 群已经解散 |
+| 500 | system.error | 系统错误 | 系统错误 |

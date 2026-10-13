@@ -50,7 +50,7 @@ updated_at: "2026-08-04 09:07:24"
 
 > **[!NOTE]**
 >
-> - 调用创建群会话接口若未保存`OpenConversationId`，可使用`chatId`调用[获取群会话的OpenConversationId](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0745-obtain-group-openconversationid.md)接口获取。
+> - 调用创建群会话接口若未保存`OpenConversationId`，可使用`chatId`调用[获取群会话的OpenConversationId](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0743-obtain-group-openconversationid.md)接口获取。
 > - `userIdType` 字段填写，请参考[卡片数据与参数配置-userIdType 字段的填写说明](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0790-faq-card.md#8607bdd785avq)。
 
 ### **卡片场域属性**

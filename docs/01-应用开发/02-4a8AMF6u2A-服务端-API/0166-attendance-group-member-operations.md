@@ -5,13 +5,13 @@ namespace: "development"
 slug: "attendance-group-member-operations"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "考勤 > 使用教程 > 考勤人员分配：成员批量加入与精准管理"
+breadcrumb: "考勤 > 集成方案 > 考勤人员分配：成员批量加入与精准管理"
 doc_id: "HpgAC8DZHF"
 updated_at: "2026-09-23 12:04:26"
 ---
 
 > Source: https://open.dingtalk.com/document/development/attendance-group-member-operations
-> Path: 应用开发 / 服务端 API / 考勤 > 使用教程 > 考勤人员分配：成员批量加入与精准管理
+> Path: 应用开发 / 服务端 API / 考勤 > 集成方案 > 考勤人员分配：成员批量加入与精准管理
 > Updated: 2026-09-23 12:04:26
 
 # 考勤人员分配：成员批量加入与精准管理

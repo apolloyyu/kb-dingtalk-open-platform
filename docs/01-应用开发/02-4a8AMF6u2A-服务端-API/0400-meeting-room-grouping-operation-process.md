@@ -5,13 +5,13 @@ namespace: "development"
 slug: "meeting-room-grouping-operation-process"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "音视频 > 使用教程 > 构建会议室分级体系：数据上钉实现会议室批量调度"
+breadcrumb: "音视频 > 集成方案 > 构建会议室分级体系：数据上钉实现会议室批量调度"
 doc_id: "UPf5bLxcdW"
 updated_at: "2026-10-09 14:25:50"
 ---
 
 > Source: https://open.dingtalk.com/document/development/meeting-room-grouping-operation-process
-> Path: 应用开发 / 服务端 API / 音视频 > 使用教程 > 构建会议室分级体系：数据上钉实现会议室批量调度
+> Path: 应用开发 / 服务端 API / 音视频 > 集成方案 > 构建会议室分级体系：数据上钉实现会议室批量调度
 > Updated: 2026-10-09 14:25:50
 
 # 构建会议室分级体系：数据上钉实现会议室批量调度

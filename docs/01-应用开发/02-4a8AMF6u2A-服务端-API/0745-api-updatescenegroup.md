@@ -39,7 +39,7 @@ updated_at: "2026-06-10 18:24:31"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| open\_conversation\_id | String | 是 | 群ID，调用[创建场景群](0746-create-a-scene-group.md)接口获取open\_conversation\_id参数值。 |
+| open\_conversation\_id | String | 是 | 群ID，调用[创建场景群](0744-create-a-scene-group.md)接口获取open\_conversation\_id参数值。 |
 | title | String | 否 | 群名称，最长不超过30字符，建议长度在10字符以内。 |
 | icon | String | 否 | 群头像，通过[上传媒体文件](0645-upload-media-files.md)接口上传头像后获取mediaId。 |
 | owner\_user\_id | String | 否 | 群主userId。 |

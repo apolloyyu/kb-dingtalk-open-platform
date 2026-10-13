@@ -97,7 +97,7 @@ Content-Type:application/json
 | atAll | Boolean | 否 | 是否@所有人。 |
 | receiverListJson | String | 否 | 消息仅部分人可见的接收人列表。  **[!NOTE]**    为空时则群所有人可见。  JSON格式：   ``` [     {         "userId": "userId0001"     },     {         "unionId": "unionId001"     } ] ``` |
 | cardPropertyJson | String | 否 | 卡片特殊属性json字符串。 |
-| pullStrategy | Boolean | 否 | 是否开启卡片纯拉模式：   - true：开启卡片纯拉模式 - false：不开启卡片纯拉模式   **[!NOTE]**  纯拉模式，参见[实现置顶卡片纯拉模式](0736-pure-pull-mode-process-guide.md)。 |
+| pullStrategy | Boolean | 否 | 是否开启卡片纯拉模式：   - true：开启卡片纯拉模式 - false：不开启卡片纯拉模式   **[!NOTE]**  纯拉模式，参见[实现置顶卡片纯拉模式](0733-pure-pull-mode-process-guide.md)。 |
 
 ## 返回参数
 

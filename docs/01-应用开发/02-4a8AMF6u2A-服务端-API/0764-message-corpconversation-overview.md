@@ -76,8 +76,8 @@ updated_at: "2026-07-14 09:08:48"
 
 钉钉提供了消息通知接口接入流程示例。
 
-- [点击工作通知跳转到钉钉小程序](0766-send-personal-work-notifications.md)
-- [点击工作通知跳转到网页应用](0767-redirect-micro-applications-to-work-messages.md)
+- [点击工作通知跳转到钉钉小程序](0767-send-personal-work-notifications.md)
+- [点击工作通知跳转到网页应用](0766-redirect-micro-applications-to-work-messages.md)
 - [发送、查询、撤回工作通知](0768-work-notice-option.md)
 
 ## 名词解释

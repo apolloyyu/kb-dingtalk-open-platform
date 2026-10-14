@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "OA 审批 > 集成方案 > 标准版 > OA审批流接入：附件审批的下载与预览"
 doc_id: "gCYVw2ivlo"
-updated_at: "2026-10-12 18:04:46"
+updated_at: "2026-10-14 09:16:49"
 ---
 
 > Source: https://open.dingtalk.com/document/development/new-version-of-attachment-approval-process
 > Path: 应用开发 / 服务端 API / OA 审批 > 集成方案 > 标准版 > OA审批流接入：附件审批的下载与预览
-> Updated: 2026-10-12 18:04:46
+> Updated: 2026-10-14 09:16:49
 
 # OA审批流接入：附件审批的下载与预览
 
@@ -101,7 +101,7 @@ updated_at: "2026-10-12 18:04:46"
 - **应用准备**： 已完成[应用创建与配置](../01-XOnnmGCTbn-开发指南/0007-create-application.md)流程，获取应用 Client ID 和 Client Secret。
 - **权限要求**： 拥有钉钉企业管理员或子管理员权限，并申请以下接口权限：
 
-  - `Workflow.Form.Write`（审批表单写入权限）
+  - `Workflow.Form.Write`（工作流模板写权限）
   - `Workflow.Instance.Write`（审批实例写入权限）
   - `Workflow.Instance.Read`（审批实例读取权限）
 - **开发环境**： 已安装Java开发环境（JDK1.6及以上）及Maven构建工具。
@@ -154,7 +154,7 @@ updated_at: "2026-10-12 18:04:46"
 1. 在应用详情页，单击**权限管理**。
 2. 在权限搜索框中输入以下权限标识并申请：
 
-   - `Workflow.Form.Write`（审批表单写入权限）：用于创建和更新审批表单模板
+   - `Workflow.Form.Write`（工作流模板写权限）：用于创建和更新审批表单模板
    - `Workflow.Instance.Write`（审批实例写入权限）：用于发起和执行审批实例
    - `Workflow.Instance.Read`（审批实例读取权限）：用于查询审批实例详情
 

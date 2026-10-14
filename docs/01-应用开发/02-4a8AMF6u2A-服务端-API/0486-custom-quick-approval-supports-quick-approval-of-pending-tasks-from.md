@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "OA 审批 > 集成方案 > 高级专享版 > 三方系统快捷审批集成：待办中心与消息卡片一键审批"
 doc_id: "qadJyJX9rv"
-updated_at: "2026-10-12 18:04:52"
+updated_at: "2026-10-14 09:16:51"
 ---
 
 > Source: https://open.dingtalk.com/document/development/custom-quick-approval-supports-quick-approval-of-pending-tasks-from
 > Path: 应用开发 / 服务端 API / OA 审批 > 集成方案 > 高级专享版 > 三方系统快捷审批集成：待办中心与消息卡片一键审批
-> Updated: 2026-10-12 18:04:52
+> Updated: 2026-10-14 09:16:51
 
 # 三方系统快捷审批集成：待办中心与消息卡片一键审批
 
@@ -108,7 +108,7 @@ updated_at: "2026-10-12 18:04:52"
   - `Premium.Workflow.ReadWrite.All`（OA审批工作流读写权限（OA高级版专享））
 - **开发环境：** 已安装Java开发环境（JDK1.6及以上）及Maven构建工具。
 - **SDK准备：** 下载钉钉服务端SDK，支持Java/Python/Go等多语言。
-- **网关准备：** 三方系统回调接口需在钉钉"数据源管理"中注册为网关，详细使用说明参考[创建数据源](t3058972.html)。
+- **网关准备：** 三方系统回调接口需在钉钉"数据源管理"中注册为网关，详细使用说明参考[数据源](../../08-工作台/02-Qzb8Lpee2t-使用教程/0009-dashboard-create-data-source.md)。
 
 ### **代码实现**
 
@@ -155,8 +155,8 @@ updated_at: "2026-10-12 18:04:52"
 2. 在权限搜索框中输入以下权限标识并申请：
 
    - `qyapi_aflow`(审批流数据管理权限)：用于更新流程中心任务状态。
-   - `Workflow.Form.Write`（工作流模板读权限）：用于获取模板code。
-   - `Workflow.Form.Read`（工作流实例写权限）：用于创建/更新审批实例。
+   - `Workflow.Form.Write`（工作流模板写权限）：用于获取模板code。
+   - `Workflow.Form.Read`（工作流模板读权限）：用于创建/更新审批实例。
    - `Workflow.Instance.Write`（工作流实例写权限）：用于批量取消流程中心待处理任务。
    - `Premium.Workflow.ReadWrite.All`（OA审批工作流读写权限（OA高级版专享））：用于获取用户在钉钉审批中心的待处理、已处理、已发起、已收到列表数据。
 
@@ -194,7 +194,7 @@ public void getAccessToken() throws Exception {
 
    > **[!NOTE]**
    >
-   > 网关回调钉钉外数据接口需要统一在“数据源管理”中注册成网关，详细的使用说明请参考[创建数据源](../../08-工作台/02-Qzb8Lpee2t-使用教程/0009-dashboard-create-data-source.md)。
+   > 网关回调钉钉外数据接口需要统一在“数据源管理”中注册成网关，详细的使用说明请参考[数据源](../../08-工作台/02-Qzb8Lpee2t-使用教程/0009-dashboard-create-data-source.md)。
 2. **同步审批模板数据到钉钉：**调用新版服务端API-[保存流程中心外部集成审批模板](0541-api-premiumsaveintegratedprocess.md)接口，获取模板的唯一编码`processCode`。**该场景下无需进行processFeatureConfig流程中心集成配置。**
 
    ```

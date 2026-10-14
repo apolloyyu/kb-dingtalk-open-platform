@@ -12,7 +12,7 @@
 - 90 ← [应用创建与配置](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md)（开发指南）
 - 78 ← [获取用户token](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0031-obtain-user-token.md)（服务端 API）
 - 52 ← [基础概念](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md)（开发指南）
-- 52 ← [服务端SDK下载](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0002-download-the-server-side-sdk.md)（服务端 API）
+- 51 ← [服务端SDK下载](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0002-download-the-server-side-sdk.md)（服务端 API）
 - 50 ← [获取部门用户userid列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0064-query-the-list-of-department-userids.md)（服务端 API）
 - 47 ← [获取开发者权限](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0006-get-developer-permissions.md)（开发指南）
 - 47 ← [通过免登码获取用户信息](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0023-obtain-the-userid-of-a-user-by-using-the-log-free.md)（服务端 API）

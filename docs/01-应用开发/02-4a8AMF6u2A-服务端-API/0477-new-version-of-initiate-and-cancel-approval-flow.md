@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "OA 审批 > 集成方案 > 标准版 > OA审批流接入：发起与撤销审批实例"
 doc_id: "s7yjG9gPJc"
-updated_at: "2026-10-12 18:04:41"
+updated_at: "2026-10-14 09:16:45"
 ---
 
 > Source: https://open.dingtalk.com/document/development/new-version-of-initiate-and-cancel-approval-flow
 > Path: 应用开发 / 服务端 API / OA 审批 > 集成方案 > 标准版 > OA审批流接入：发起与撤销审批实例
-> Updated: 2026-10-12 18:04:41
+> Updated: 2026-10-14 09:16:45
 
 # OA审批流接入：发起与撤销审批实例
 
@@ -667,7 +667,7 @@ public void getAccessToken() throws Exception {
 
    - `result`：操作结果标识。
 
-## 实施完成检查清单
+**实施完成检查清单**
 
 - ✅应用Client ID和Client Secret已获取并妥善保管。
 - ✅OA审批相关权限（模板读写、实例读写、实例读）已申请并通过。

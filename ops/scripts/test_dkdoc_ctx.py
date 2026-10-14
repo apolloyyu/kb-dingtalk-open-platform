@@ -226,6 +226,31 @@ def main():
     out = run("ctx", "通过免登码获取用户信息的接口地址和必填参数是什么")
     check("cross_kb:" not in out, "非数字员工题不应出现跨库提示")
 
+    # 实录 10-13 社区群：问 sheet 最大行数只展开「创建工作表」，模型编出 usedRange 参数。
+    for query in ("钉钉文档的信息里 文件数据中的 各个表格sheet的 最大行数怎么获取 似乎你会给我塞空行",
+                  "GetRange 会跳过空行吗 usedRange"):
+        out = run("ctx", query)
+        check("获取工作表" in first_body_heading(out), f"sheet 行数题首篇不是获取工作表: {query}")
+        check("== 原文直取" in out and "| lastNonEmptyRow |" in out,
+              f"sheet 行数题缺 lastNonEmptyRow 原文: {query}")
+        check("Range范围内的所有行" in out, f"sheet 行数题缺 GetRange 返回所有行的原文: {query}")
+    for query in ("机器人markdown消息怎么空行", "AI表格最后一行记录怎么取"):
+        out = run("ctx", query)
+        check("== 原文直取" not in out and "lastNonEmptyRow" not in out,
+              f"非电子表格题被行数别名污染: {query}")
+
+    # 实录 10-14 dws 群：把 OpenAPI 的 QPS/月配额/90018 套到 dws 产品命令上（产品命令走 MCP 网关）。
+    for query in ("dws发送消息限流规则是什么", "dws使用的 也是 钉钉 OpenAPI 吗"):
+        out = run("ctx", query)
+        check("cross_kb_ratelimit:" in out and "MCP 网关" in out, f"dws 限流题缺跨库提示: {query}")
+    # 零命中路径以 rc=1 表示「没找到」，提示仍须给出
+    zero = subprocess.run(["python3", DKDOC, "ctx", "RATE_LIMIT_ERROR 是什么意思"], cwd=ROOT,
+                          capture_output=True, text=True, timeout=30)
+    check("cross_kb_ratelimit:" in zero.stdout, "零命中的 RATE_LIMIT_ERROR 题缺 dws 限流提示")
+    for query in ("钉钉服务端 API 的 QPS 限制是多少", "通过免登码获取用户信息的接口地址和必填参数是什么"):
+        out = run("ctx", query)
+        check("cross_kb_ratelimit:" not in out, f"非 dws 题不应出现 dws 限流提示: {query}")
+
     print("OK: dkdoc ctx fast-path/evidence-contract regression")
     return 0
 

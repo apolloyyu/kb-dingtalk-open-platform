@@ -104,6 +104,20 @@ _DIGITAL_EMPLOYEE_HINT = (
 )
 
 
+# dws 产品命令走 MCP 网关,本库「调用频次与限流」只约束直调 OpenAPI(含 dws api);
+# 实录 10-14 dws 群 14 条回复把 QPS/月配额/90018 整套套给了 dws 命令。
+_DWS_RATELIMIT_RE = re.compile(r"(?:dws|钉钉\s*cli|dingtalk\s*cli|rate_limit_error).*(?:限流|频控|限频|频率|qps|调用量|配额|并发|rate_limit)"
+                               r"|(?:限流|频控|限频|频率|qps|调用量|配额|并发).*(?:dws|钉钉\s*cli|dingtalk\s*cli)"
+                               r"|rate_limit_error"
+                               r"|(?:dws|钉钉\s*cli).{0,12}(?:openapi|open api)\s*(?:吗|么|嘛|呢|\?|？)"
+                               r"|(?:dws|钉钉\s*cli).{0,20}(?:openapi|open api).{0,8}(?:共享|一样|一套|同一|区别|关系)")
+_DWS_RATELIMIT_HINT = (
+    "cross_kb_ratelimit: 本题涉及 dws 的限流——dws 产品命令(chat/doc/aitable 等)走钉钉 MCP 网关，不走开放平台 OpenAPI，"
+    "本库「调用频次与限流」的 QPS、月调用量、IP 维度、90018/90002/90020、升级专业版扩容只适用于直接调 OpenAPI 或 dws api，"
+    "不得套用到 dws 产品命令；RATE_LIMIT_ERROR 由 MCP 服务端返回，以 dws 知识库为准，须同时用 dws-cli-qa 检索(dwsdoc ctx)"
+)
+
+
 _IMG_RE = re.compile(r"!\[[^\]]*\]\((https?://[^)\s]+)\)")
 _IMG_KEEP = int(os.environ.get("KB_IMG_KEEP") or 0)  # 每篇保留图数;0=不裁(默认)。曾默认 3,用户裁定"只要必要的图",改为按语义由契约约束
 
@@ -564,6 +578,19 @@ _CONCEPT_ALIASES = {
     "消息图片": ["downloadcode", "接收消息"], "图片消息": ["downloadcode", "接收消息"],
     "聊天记录图片": ["downloadcode", "接收消息"], "聊天文件": ["downloadcode", "接收消息"],
     "文档正文": ["块元素"], "知识库正文": ["块元素"], "文档内容": ["块元素"], "读取正文": ["块元素"],
+    # 实录 10-13：问「各 sheet 最大行数/别塞空行」只展开「创建工作表」，模型用 Excel 的 usedRange 补成假参数；
+    # 答案在「获取工作表」响应字段 lastNonEmptyRow，GetRange 原文是返回 Range 内所有行。
+    "最大行数": ["lastnonemptyrow", "getrange"], "最后一行": ["lastnonemptyrow", "getrange"],
+    "最后一列": ["lastnonemptyrow"], "有数据的行": ["lastnonemptyrow", "getrange"],
+    "非空行": ["lastnonemptyrow", "getrange"], "空行": ["lastnonemptyrow", "getrange"],
+    "有效行": ["lastnonemptyrow", "getrange"], "usedrange": ["lastnonemptyrow", "getrange"],
+}
+_SHEET_DOMAIN_RE = re.compile(r"表格|sheet|工作表|workbook|getrange|usedrange|axls")
+_NOTABLE_RE = re.compile(r"ai\s*表格|多维表|notable|数据表|记录")
+# 别名命中后从指定篇逐字摘取证据行：答案常在长文档的响应表里，正文截断会切掉（0594 响应表在 430 行后）。
+_CONCEPT_FACTS = {
+    "lastnonemptyrow": [("obtain-worksheet-properties", r"\| (?:lastNonEmptyRow|lastNonEmptyColumn|rowCount|columnCount) \|")],
+    "getrange": [("get-cell-properties", r"\| values \|.*Range范围内的所有行")],
 }
 
 
@@ -638,9 +665,16 @@ def _ctx_impl(terms, n, force_full=False):
     if not tl:
         tl = [w.lower() for w in terms if re.search(r"[a-zA-Z0-9一-鿿]", w)]
     raw_low = raw_query.lower()
+    concept_terms = []
     for concept, impl in _CONCEPT_ALIASES.items():
         if concept in raw_low:
+            # 行数/空行是泛词（markdown 空行、审批表单最后一行），只在问题明确是电子表格时翻译。
+            # AI 表格（notable）是另一套接口，lastNonEmptyRow 不适用，不能跨对象套用。
+            if any(w in _CONCEPT_FACTS for w in impl) and (
+                    not _SHEET_DOMAIN_RE.search(raw_low) or _NOTABLE_RE.search(raw_low)):
+                continue
             tl = list(dict.fromkeys(tl + impl))
+            concept_terms = list(dict.fromkeys(concept_terms + impl))
     if doc_hint:
         hint_terms = [str(doc_hint.get("title") or "").lower(), str(doc_hint.get("slug") or "").lower()]
         tl = list(dict.fromkeys([x for x in hint_terms + tl if x]))
@@ -668,13 +702,19 @@ def _ctx_impl(terms, n, force_full=False):
     if guide_query and not hard_api_signal:
         api_signal = False
     hint_path = doc_hint.get("local_path") if doc_hint else ""
+    # 概念别名翻出的实现标识符（lastNonEmptyRow…）只在正文/响应字段里，API 表的标题层永远对不上；
+    # 按正文倒排索引给对应接口加分，否则泛词「表格/sheet/获取」会让无关接口占首位。
+    # 只对带原文直取的别名生效：旧别名（图片消息→downloadcode）维持原排序，不扩大影响面。
+    fact_terms = [w for w in concept_terms if w in _CONCEPT_FACTS]
+    concept_api = term_doc_hits(fact_terms, docs) if fact_terms else {}
     for r in _api:
         hinted = bool(hint_path and r.get("doc_path") == hint_path)
         if hint_path and not hinted:
             continue
         hay = _hay_api(r)
         hit = sum(1 for w in api_terms if w in hay)
-        if not hit and not hinted:
+        concept_bonus = concept_api.get(r.get("doc_path"), 0)
+        if not hit and not hinted and not concept_bonus:
             continue
         title, endpoint = r["title"].lower(), (r.get("endpoint") or "").lower()
         exact = bool(q_join and (q_join == title or q_join == endpoint))
@@ -683,9 +723,10 @@ def _ctx_impl(terms, n, force_full=False):
                           or (re.fullmatch(r"[a-z0-9_.:/-]+", w) and len(w) >= 6))
             for w in api_terms)
         # 指南/流程题不能因“请求参数/配置/获取”等泛词被 API 表抢走；source_url 精确锚点例外。
-        if not (hinted or exact or api_signal or hit >= 2 or strong_single):
+        if not (hinted or exact or api_signal or hit >= 2 or strong_single or concept_bonus):
             continue
-        score = hit * 10 + sum(4 for w in api_terms if w in title) + sum(3 for w in api_terms if w in endpoint)
+        score = (hit * 10 + sum(4 for w in api_terms if w in title) + sum(3 for w in api_terms if w in endpoint)
+                 + (100 + concept_bonus if concept_bonus else 0))
         if any(w == title or w == endpoint for w in api_terms):
             score += 500
         if exact:
@@ -887,6 +928,22 @@ def _ctx_impl(terms, n, force_full=False):
 
     edges = load_jsonl("graph/links.jsonl") if cand else []
 
+    concept_facts = []
+    by_slug = {d.get("slug"): d for d in docs}
+    for term in concept_terms:
+        for slug, pat in _CONCEPT_FACTS.get(term, []):
+            d = by_slug.get(slug)
+            if not d:
+                continue
+            try:
+                body = open(os.path.join(ROOT, d["local_path"]), encoding="utf-8", errors="ignore").read()
+            except OSError:
+                continue
+            lines = [l.strip() for l in body.splitlines() if re.search(pat, l)]
+            if lines and not any(d["source_url"] in x for x in concept_facts):
+                concept_facts.append(f"[{d['title']}] {d['source_url']}")
+                concept_facts.extend(f"  {l[:220]}" for l in dict.fromkeys(lines))
+
     # API 卡片只在“未归档 + full + 首名明显胜出 + 非复杂问法”时替代正文。
     cards_enabled = (not force_full and os.environ.get("KB_NO_CARDS") != "1")
     api_top = rows[0] if rows else None
@@ -948,10 +1005,15 @@ def _ctx_impl(terms, n, force_full=False):
                 parts.append("== API参数卡(证据;结论仍以正文为准) ==")
                 parts.append(evidence_card["body"])
         parts.append(_evidence_contract(api_card, intent, card_fast))
+        if concept_facts:
+            parts.append("== 原文直取(问法里的现象词→文档实现名;以下逐字摘自原文,参数名以此为准,原文没有的参数不得出现) ==")
+            parts.extend(concept_facts)
         # dws 数字员工的命令面只在 dws 库;只查本库时模型会把 DEAP 智能体/企业自建 Agent 接口
         # 当成数字员工的创建或入群方式(实录 2026-10-10、10-12 正式群)。
         if _DIGITAL_EMPLOYEE_RE.search(raw_q):
             parts.append(_DIGITAL_EMPLOYEE_HINT)
+        if _DWS_RATELIMIT_RE.search(raw_q):
+            parts.append(_DWS_RATELIMIT_HINT)
         if archived_first:
             parts.append("archived_only: 首篇为 ⚠归档 页且现行区无同主题文档——归档页即本题唯一依据，须据其作答并标注「已归档」，不得因归档而答「文档未收录」")
         if ent_lines:
@@ -1039,6 +1101,8 @@ def _ctx_impl(terms, n, force_full=False):
 
     if not cand and not ent_lines:
         print(_evidence_contract(None, intent, False))
+        if _DWS_RATELIMIT_RE.search(raw_q):
+            print(_DWS_RATELIMIT_HINT)
         print("== 检索审计 ==")
         print("已检索: api/err/event/jsapi/perm/find · 关键词: " + " ".join(terms)
               + f" · 命中: 0 · card_blocked={blocked_audit}")

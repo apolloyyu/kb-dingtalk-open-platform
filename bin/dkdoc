@@ -88,13 +88,13 @@ def _evidence_contract(card=None, intent=None, fast=False):
         "proves: 卡片仅证明列出的 method/endpoint/应用类型/权限/请求头/路径、查询和Body参数/响应字段/必填性/明确限额；正文仅证明其逐字陈述",
         "not_proved: 未明示的 ID 格式或校验、其他接口/配置阶段的数据流、客户端分栏/排序/展示因果",
         "rule: 示例值不等于格式规范；字段存在不等于它决定产品行为；未直接证明则写“文档未说明”",
-        "links: 正文里的内联链接（含 dingtalk:// 客户端深链）应作为可点入口原样给用户：整条逐字照抄，禁止解码成 url= 内嵌地址、禁止改写或替换 ${corpId} 等占位符、禁止只留文字不给链接；文档出处另用各篇 source_url",
+        "links: 正文里的内联链接（含 dingtalk:// 客户端深链）应作为可点入口原样给用户：整条逐字照抄，禁止解码成 url= 内嵌地址、禁止改写或替换 ${corpId} 等占位符、禁止只留文字不给链接；文档出处另用各篇 source_url；链接被截断或不完整时不得补全、拼接，须 dkdoc cat 原文取整条，取不到只给该篇 source_url；不得按格式自行构造 alidocs.dingtalk.com / open.dingtalk.com 等任何链接",
         "images: 正文配图只配必要的：看图才能定位入口、填对表单或确认结果的步骤才带图，文字能说清的步骤不带；URL 逐字照抄本篇原图，[图略] 处不得凭空补图或引用其他篇的图",
     ]
     return "== 证据契约 ==\n" + "\n".join(lines)
 
 
-_DIGITAL_EMPLOYEE_RE = re.compile(r"数字员工|dingtalk-tag|agentuuid|agent-uuid")
+_DIGITAL_EMPLOYEE_RE = re.compile(r"数字员工|digital_employee|dingtalk-tag|agentuuid|agent-uuid")
 _DIGITAL_EMPLOYEE_HINT = (
     "cross_kb: 本题涉及数字员工——dws 数字员工(dingtalk-tag,标识 agentUuid)的创建、可见范围、群里谁能对话、"
     "本地 Agent 接入及命令参数，以 dws 知识库为准，须同时用 dws-cli-qa 检索(dwsdoc ctx)；本库只作开通/灰度申请等平台侧依据。"
@@ -120,6 +120,44 @@ _DWS_RATELIMIT_HINT = (
 
 _IMG_RE = re.compile(r"!\[[^\]]*\]\((https?://[^)\s]+)\)")
 _IMG_KEEP = int(os.environ.get("KB_IMG_KEEP") or 0)  # 每篇保留图数;0=不裁(默认)。曾默认 3,用户裁定"只要必要的图",改为按语义由契约约束
+
+
+# 截断不得落在链接中间：实录 2026-10-15 正式群——更新日志里的灰度申请表链接被正文上限切成
+# `https://alidocs.dingtalk.com/notable/s`，模型据半截前缀编出一条 404 的 alidocs 链接。
+_LINK_SPAN_RE = re.compile(r"!?\[[^\]\n]*\]\([^)\s]*\)|(?:https?|dingtalk)://[^\s)\]>\"'`]+")
+
+
+_GRAY_FORM_DOC = "dws-cli-log"   # 开放平台「dws 更新日志」slug；数字员工灰度申请表只在这里
+_GRAY_FORM_RE = re.compile(r"\[[^\]\n]*灰度申请[^\]\n]*\]\((https?://[^)\s]+)\)")
+
+
+def _gray_form_line():
+    """逐字取更新日志里的数字员工灰度申请表链接(不写死:表单换链接时随快照更新)。
+    实录 2026-10-15:提示里只写「以更新日志为准」不给链接,模型编出 alidocs/i/nodes/… 的 404 链接。"""
+    d = next((x for x in load_jsonl("meta/documents.jsonl") if x.get("slug") == _GRAY_FORM_DOC), None)
+    if not d:
+        return ""
+    try:
+        body = open(os.path.join(ROOT, d["local_path"]), encoding="utf-8", errors="ignore").read()
+    except OSError:
+        return ""
+    m = next((m for m in _GRAY_FORM_RE.finditer(body) if "数字员工" in m.group(0)), None)
+    if not m:
+        return ""
+    return ("cross_kb_form: 数字员工开通灰度申请表(逐字摘自 " + d["source_url"] + "，表名与链接整条照抄，"
+            "不得改称其他名称、不得改写或另造链接)：" + m.group(0))
+
+
+def _cut(text, cap, extend=300):
+    """按 cap 截断；切点落在 markdown 链接/裸 URL 内部时，短链延到链接结尾，长链退到链接之前。"""
+    if len(text) <= cap:
+        return text
+    for m in _LINK_SPAN_RE.finditer(text, max(0, cap - 2000)):
+        if m.start() >= cap:
+            break
+        if m.end() > cap:
+            return text[:m.end()] if m.end() - cap <= extend else text[:m.start()]
+    return text[:cap]
 
 
 def _sanitize_links(body):
@@ -1012,6 +1050,9 @@ def _ctx_impl(terms, n, force_full=False):
         # 当成数字员工的创建或入群方式(实录 2026-10-10、10-12 正式群)。
         if _DIGITAL_EMPLOYEE_RE.search(raw_q):
             parts.append(_DIGITAL_EMPLOYEE_HINT)
+            form = _gray_form_line()
+            if form:
+                parts.append(form)
         if _DWS_RATELIMIT_RE.search(raw_q):
             parts.append(_DWS_RATELIMIT_HINT)
         if archived_first:
@@ -1026,7 +1067,7 @@ def _ctx_impl(terms, n, force_full=False):
             parts.append(f"source_url: {d['source_url']} · updated_at: {d['updated_at'][:10]}")
             body = _sanitize_links(open(os.path.join(ROOT, lp), encoding="utf-8", errors="ignore").read())
             if len(body) > _CTX_BODY_CAP:
-                body = body[:_CTX_BODY_CAP] + f"\n…[已截断，完整: dkdoc cat {lp}]"
+                body = _cut(body, _CTX_BODY_CAP) + f"\n…[已截断，完整: dkdoc cat {lp}]"
             parts.append(body)
             out_e = [e for e in edges if e["from"] == lp][:6]
             inc_e = [e for e in edges if e["to"] == lp][:6]
@@ -1118,7 +1159,7 @@ def _ctx_impl(terms, n, force_full=False):
     if len(text) > _CTX_TOTAL_CAP and not card_fast:
         text = render(2 if multi_doc else 1)
     if len(text) > _CTX_TOTAL_CAP:
-        text = text[:_CTX_TOTAL_CAP] + "\n…[ctx 总量截断，用 dkdoc cat 读完整正文]"
+        text = _cut(text, _CTX_TOTAL_CAP) + "\n…[ctx 总量截断，用 dkdoc cat 读完整正文]"
     print(text)
     return 0
 

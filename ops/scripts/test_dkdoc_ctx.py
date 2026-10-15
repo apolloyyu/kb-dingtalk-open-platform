@@ -251,6 +251,35 @@ def main():
         out = run("ctx", query)
         check("cross_kb_ratelimit:" not in out, f"非 dws 题不应出现 dws 限流提示: {query}")
 
+    # 实录 10-15 正式群：更新日志正文被上限切在申请表链接中间(…/notable/s)，模型补全出 404 的 alidocs 链接。
+    form = ("[钉钉数字员工创建灰度申请（DWS 内&&界面功能）]"
+            "(https://alidocs.dingtalk.com/notable/share/form/v013BMqYy5D4dLEmqwZ_MPojg9m_23zNs0R?source=link)")
+    log = open(os.path.join(ROOT, next(
+        d["local_path"] for d in MOD["load_jsonl"]("meta/documents.jsonl") if d.get("slug") == "dws-cli-log")),
+        encoding="utf-8").read()
+    check(form in log, "更新日志原文的灰度申请表链接已变化：同步 kb-dws-wiki bin/dwsdoc _GRAY_FORM 与 notes/digital-employee-origin.md")
+    for query in ("数字员工灰度怎么申请", "DIGITAL_EMPLOYEE_NOT_ENABLED 怎么开通", "数字员工怎么开通"):
+        out = run("ctx", query)
+        check("cross_kb_form:" in out and form in out, f"数字员工开通题缺逐字申请表链接: {query}")
+    out = run("ctx", "通过免登码获取用户信息的接口地址和必填参数是什么")
+    check("cross_kb_form:" not in out, "非数字员工题不应出现申请表")
+    check("不得按格式自行构造" in out and "不得补全" in out, "证据契约缺少截断链接/构造链接禁令")
+    # 截断点不得落在链接内部：全库长文 × 各档正文上限
+    cut, span = MOD["_cut"], MOD["_LINK_SPAN_RE"]
+    check(cut("ab [x](http://e.test/aaaa) cd", 12) == "ab [x](http://e.test/aaaa)", "短链未延到链接结尾")
+    check(cut("ab [x](http://e.test/" + "a" * 500 + ")", 12) == "ab ", "长链未退到链接之前")
+    bad = []
+    for d in MOD["load_jsonl"]("meta/documents.jsonl"):
+        fp = os.path.join(ROOT, d["local_path"])
+        body = open(fp, encoding="utf-8", errors="ignore").read() if os.path.exists(fp) else ""
+        for cap in (3000, 3500, 5000, 6000):
+            if len(body) <= cap:
+                continue
+            k = len(cut(body, cap))
+            if any(m.start() < k < m.end() for m in span.finditer(body, max(0, k - 2500))):
+                bad.append(f"{d['local_path']}@{cap}")
+    check(not bad, f"截断仍切在链接中间 {len(bad)} 处: {bad[:3]}")
+
     print("OK: dkdoc ctx fast-path/evidence-contract regression")
     return 0
 

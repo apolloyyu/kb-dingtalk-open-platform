@@ -29,15 +29,15 @@ updated_at: "2026-07-14 09:22:09"
 1. 选择目标应用，进入应用详情页，单击**基础信息** > **凭证与基础信息**。
 2. 获取应用 Client ID 和 Client Secret。
 3. 企业内部应用已经默认开通工作通知接口权限，无需再手动提交申请。
-4. 获取应用访问凭证[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
-5. 调用[发送工作通知](0770-asynchronous-sending-of-enterprise-session-messages.md)接口，给目标用户发送工作消息通知，需要用户点击消息进行跳转，所以适合的消息类型有link消息、OA消息和卡片消息，具体可参考[消息通知类型](0776-message-types-and-data-format.md)。
+4. 获取应用访问凭证[获取企业内部应用的access\_token](1443-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
+5. 调用[发送工作通知](0769-asynchronous-sending-of-enterprise-session-messages.md)接口，给目标用户发送工作消息通知，需要用户点击消息进行跳转，所以适合的消息类型有link消息、OA消息和卡片消息，具体可参考[消息通知类型](0775-message-types-and-data-format.md)。
 
 ## **点击工作通知跳转小程序**
 
 ### **企业内部应用**
 
-1. 调用[发送工作通知](0770-asynchronous-sending-of-enterprise-session-messages.md)接口，工作消息的格式选择link消息、OA消息或者卡片消息，这三种类型消息可以进行跳转。
-2. 跳转链接的构造参考[消息链接说明](0777-message-link-description.md)，如下提供这三种类型消息中链接的构造示例，完整的消息发送格式请参考[消息通知类型](0776-message-types-and-data-format.md)。
+1. 调用[发送工作通知](0769-asynchronous-sending-of-enterprise-session-messages.md)接口，工作消息的格式选择link消息、OA消息或者卡片消息，这三种类型消息可以进行跳转。
+2. 跳转链接的构造参考[消息链接说明](0776-message-link-description.md)，如下提供这三种类型消息中链接的构造示例，完整的消息发送格式请参考[消息通知类型](0775-message-types-and-data-format.md)。
 
 #### **Link消息跳转链接构造示例**
 
@@ -68,8 +68,8 @@ updated_at: "2026-07-14 09:22:09"
 
 ### **第三方企业应用**
 
-1. 调用[发送工作通知](0770-asynchronous-sending-of-enterprise-session-messages.md)接口，工作消息的格式选择link消息、OA消息或者卡片消息，这三种类型消息可以进行跳转。
-2. 跳转链接的构造参考[小程序 scheme](../03-Ogu5SlPY4t-客户端-JSAPI/0441-scheme-of-mini-programs-1.md)，如下提供这三种类型消息中链接的构造示例，完整的消息格式请参考[消息通知类型](0776-message-types-and-data-format.md)。
+1. 调用[发送工作通知](0769-asynchronous-sending-of-enterprise-session-messages.md)接口，工作消息的格式选择link消息、OA消息或者卡片消息，这三种类型消息可以进行跳转。
+2. 跳转链接的构造参考[小程序 scheme](../03-Ogu5SlPY4t-客户端-JSAPI/0441-scheme-of-mini-programs-1.md)，如下提供这三种类型消息中链接的构造示例，完整的消息格式请参考[消息通知类型](0775-message-types-and-data-format.md)。
 
    | **参数名** | **是否必填** | **说明** |
    | --- | --- | --- |

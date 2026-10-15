@@ -5,13 +5,13 @@ namespace: "development"
 slug: "small-program-application-free-of-registration"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "认证与授权 > 身份验证（免登） > 使用教程 > 企业内部应用 > 企业内部小程序免登"
+breadcrumb: "认证与授权 > 身份验证（免登） > 集成方案 > 企业内部应用 > 企业内部小程序免登"
 doc_id: "0btNjCav6Z"
 updated_at: "2026-09-10 14:32:56"
 ---
 
 > Source: https://open.dingtalk.com/document/development/small-program-application-free-of-registration
-> Path: 应用开发 / 服务端 API / 认证与授权 > 身份验证（免登） > 使用教程 > 企业内部应用 > 企业内部小程序免登
+> Path: 应用开发 / 服务端 API / 认证与授权 > 身份验证（免登） > 集成方案 > 企业内部应用 > 企业内部小程序免登
 > Updated: 2026-09-10 14:32:56
 
 # 企业内部小程序免登

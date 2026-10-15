@@ -5,13 +5,13 @@ namespace: "development"
 slug: "operations-related-to-address-book-departments"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "通讯录管理 > 使用教程 > 组织架构维护：部门信息的批量创建与智能更新"
+breadcrumb: "通讯录管理 > 集成方案 > 组织架构维护：部门信息的批量创建与智能更新"
 doc_id: "Rqv5HvWlb3"
 updated_at: "2026-09-23 12:04:21"
 ---
 
 > Source: https://open.dingtalk.com/document/development/operations-related-to-address-book-departments
-> Path: 应用开发 / 服务端 API / 通讯录管理 > 使用教程 > 组织架构维护：部门信息的批量创建与智能更新
+> Path: 应用开发 / 服务端 API / 通讯录管理 > 集成方案 > 组织架构维护：部门信息的批量创建与智能更新
 > Updated: 2026-09-23 12:04:21
 
 # 组织架构维护：部门信息的批量创建与智能更新
@@ -117,7 +117,7 @@ updated_at: "2026-09-23 12:04:21"
 
 1. 获取应用凭证信息，获取应用 Client ID 和 Client Secret。
 2. 申请接口权限，申请通讯录管理相关接口权限。
-3. 获取应用访问凭证[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
+3. 获取应用访问凭证[获取企业内部应用的access\_token](1443-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
 4. 调用通讯录相关API：
 
    1. 调用服务端API-[创建部门](0076-address-book-creation-department-established-department.md)接口，实现创建部门，获取部门`dept_id`**。**
@@ -155,7 +155,7 @@ updated_at: "2026-09-23 12:04:21"
 
 ### **步骤三：获取访问凭证（access\_token）**
 
-根据步骤一中的 `Client ID` 和 `Client Secret`，调用[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)接口，获取应用访问凭证。
+根据步骤一中的 `Client ID` 和 `Client Secret`，调用[获取企业内部应用的access\_token](1443-obtain-orgapp-token.md)接口，获取应用访问凭证。
 
 ```
 public void getAccessToken() throws ApiException {

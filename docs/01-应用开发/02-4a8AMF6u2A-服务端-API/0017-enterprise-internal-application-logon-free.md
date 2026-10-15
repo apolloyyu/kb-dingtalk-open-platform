@@ -5,13 +5,13 @@ namespace: "development"
 slug: "enterprise-internal-application-logon-free"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "认证与授权 > 身份验证（免登） > 使用教程 > 企业内部应用 > 企业内部网页应用免登"
+breadcrumb: "认证与授权 > 身份验证（免登） > 集成方案 > 企业内部应用 > 企业内部网页应用免登"
 doc_id: "NtFrVltzL7"
 updated_at: "2026-09-16 09:04:56"
 ---
 
 > Source: https://open.dingtalk.com/document/development/enterprise-internal-application-logon-free
-> Path: 应用开发 / 服务端 API / 认证与授权 > 身份验证（免登） > 使用教程 > 企业内部应用 > 企业内部网页应用免登
+> Path: 应用开发 / 服务端 API / 认证与授权 > 身份验证（免登） > 集成方案 > 企业内部应用 > 企业内部网页应用免登
 > Updated: 2026-09-16 09:04:56
 
 # 企业内部网页应用免登

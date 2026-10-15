@@ -5,13 +5,13 @@ namespace: "development"
 slug: "calendar-participant-process"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "日程 > 使用教程 > 日程参会人精细化管理：状态追踪与动态调整"
+breadcrumb: "日程 > 集成方案 > 日程参会人精细化管理：状态追踪与动态调整"
 doc_id: "fRiCYfHaWR"
 updated_at: "2026-09-23 12:04:35"
 ---
 
 > Source: https://open.dingtalk.com/document/development/calendar-participant-process
-> Path: 应用开发 / 服务端 API / 日程 > 使用教程 > 日程参会人精细化管理：状态追踪与动态调整
+> Path: 应用开发 / 服务端 API / 日程 > 集成方案 > 日程参会人精细化管理：状态追踪与动态调整
 > Updated: 2026-09-23 12:04:35
 
 # 日程参会人精细化管理：状态追踪与动态调整

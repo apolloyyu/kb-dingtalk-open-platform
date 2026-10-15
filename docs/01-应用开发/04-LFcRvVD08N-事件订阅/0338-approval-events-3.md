@@ -62,7 +62,7 @@ ISV通过开放接口创建的官方OA审批，或用户在OA管理后台创建�
 
 > **[!NOTE]**
 >
-> 当表单内容大于64KB时，为防止推送失败，推送数据中会省略掉formValueVOS字段，并同时添加formValuesOmitted为true的标识字段。若需要获取表单完整数据，可调用服务端API-[获取单个审批实例详情](../02-4a8AMF6u2A-服务端-API/0498-obtains-the-details-of-a-single-approval-instance-pop.md)接口。
+> 当表单内容大于64KB时，为防止推送失败，推送数据中会省略掉formValueVOS字段，并同时添加formValuesOmitted为true的标识字段。若需要获取表单完整数据，可调用服务端API-[获取单个审批实例详情](../02-4a8AMF6u2A-服务端-API/0497-obtains-the-details-of-a-single-approval-instance-pop.md)接口。
 
 | **字段** | **说明** |
 | --- | --- |
@@ -117,4 +117,4 @@ biz\_data数据如下。
 }
 ```
 
-字段说明，请参考[获取单个审批实例详情](../02-4a8AMF6u2A-服务端-API/0498-obtains-the-details-of-a-single-approval-instance-pop.md)。
+字段说明，请参考[获取单个审批实例详情](../02-4a8AMF6u2A-服务端-API/0497-obtains-the-details-of-a-single-approval-instance-pop.md)。

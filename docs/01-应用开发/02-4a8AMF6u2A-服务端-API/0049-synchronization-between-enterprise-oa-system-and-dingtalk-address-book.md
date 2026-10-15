@@ -5,13 +5,13 @@ namespace: "development"
 slug: "synchronization-between-enterprise-oa-system-and-dingtalk-address-book"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "通讯录管理 > 使用教程 > 企业OA与钉钉通讯录双向同步：实现多系统数据闭环"
+breadcrumb: "通讯录管理 > 集成方案 > 企业OA与钉钉通讯录双向同步：实现多系统数据闭环"
 doc_id: "uYLZbIXHIn"
 updated_at: "2026-09-23 12:04:22"
 ---
 
 > Source: https://open.dingtalk.com/document/development/synchronization-between-enterprise-oa-system-and-dingtalk-address-book
-> Path: 应用开发 / 服务端 API / 通讯录管理 > 使用教程 > 企业OA与钉钉通讯录双向同步：实现多系统数据闭环
+> Path: 应用开发 / 服务端 API / 通讯录管理 > 集成方案 > 企业OA与钉钉通讯录双向同步：实现多系统数据闭环
 > Updated: 2026-09-23 12:04:22
 
 # 企业OA与钉钉通讯录双向同步：实现多系统数据闭环
@@ -119,7 +119,7 @@ HR或管理员直接在钉钉中调整了组织架构（如部门重命名、员
 
 步骤二：申请接口权限，申请通讯录管理相关接口权限。
 
-步骤三：获取应用访问凭证[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
+步骤三：获取应用访问凭证[获取企业内部应用的access\_token](1443-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
 
 步骤四：调用通讯录相关API：
 
@@ -158,7 +158,7 @@ HR或管理员直接在钉钉中调整了组织架构（如部门重命名、员
    > **[!NOTE]**
    >
    > 不同业务场景可能需要不同的权限组合，请根据实际需求申请。例如批量导入场景还需申请批量操作用户的相关权限。
-3. 根据获取的 `Client ID` 和 `Client Secret`，调用[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)接口，获取应用访问凭证。
+3. 根据获取的 `Client ID` 和 `Client Secret`，调用[获取企业内部应用的access\_token](1443-obtain-orgapp-token.md)接口，获取应用访问凭证。
 
    ```
    public void getAccessToken() throws ApiException {

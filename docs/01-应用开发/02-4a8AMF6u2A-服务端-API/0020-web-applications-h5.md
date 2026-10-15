@@ -5,13 +5,13 @@ namespace: "development"
 slug: "web-applications-h5"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "认证与授权 > 身份验证（免登） > 使用教程 > 第三方企业应用 > 第三方企业网页应用免登"
+breadcrumb: "认证与授权 > 身份验证（免登） > 集成方案 > 第三方企业应用 > 第三方企业网页应用免登"
 doc_id: "nmjqYSGD9C"
 updated_at: "2026-09-10 14:32:59"
 ---
 
 > Source: https://open.dingtalk.com/document/development/web-applications-h5
-> Path: 应用开发 / 服务端 API / 认证与授权 > 身份验证（免登） > 使用教程 > 第三方企业应用 > 第三方企业网页应用免登
+> Path: 应用开发 / 服务端 API / 认证与授权 > 身份验证（免登） > 集成方案 > 第三方企业应用 > 第三方企业网页应用免登
 > Updated: 2026-09-10 14:32:59
 
 # 第三方企业网页应用免登

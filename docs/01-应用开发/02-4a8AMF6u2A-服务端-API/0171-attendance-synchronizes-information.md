@@ -5,13 +5,13 @@ namespace: "development"
 slug: "attendance-synchronizes-information"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "考勤 > 使用教程 > 假勤审批集成：假勤数据自动同步至钉钉考勤"
+breadcrumb: "考勤 > 集成方案 > 假勤审批集成：假勤数据自动同步至钉钉考勤"
 doc_id: "ANOoKtLNB2"
 updated_at: "2026-09-23 12:04:32"
 ---
 
 > Source: https://open.dingtalk.com/document/development/attendance-synchronizes-information
-> Path: 应用开发 / 服务端 API / 考勤 > 使用教程 > 假勤审批集成：假勤数据自动同步至钉钉考勤
+> Path: 应用开发 / 服务端 API / 考勤 > 集成方案 > 假勤审批集成：假勤数据自动同步至钉钉考勤
 > Updated: 2026-09-23 12:04:32
 
 # 假勤审批集成：假勤数据自动同步至钉钉考勤
@@ -114,7 +114,7 @@ updated_at: "2026-09-23 12:04:32"
 
 步骤二：[添加接口调用权限](0003-add-api-permission.md)。查找“通讯录”、“考勤”，申请对应接口的权限。
 
-步骤三：获取应用访问凭证[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
+步骤三：获取应用访问凭证[获取企业内部应用的access\_token](1443-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
 
 步骤四：调用通讯录、考勤相关API：
 
@@ -148,7 +148,7 @@ updated_at: "2026-09-23 12:04:32"
 
 ### 步骤三：获取访问凭证（access\_token）
 
-根据步骤一中 的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)。
+根据步骤一中 的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的access\_token](1443-obtain-orgapp-token.md)。
 
 ```
 public void getAccessToken() throws ApiException {

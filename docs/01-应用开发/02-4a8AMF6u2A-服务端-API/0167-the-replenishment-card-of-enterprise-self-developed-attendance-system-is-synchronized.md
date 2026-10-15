@@ -5,13 +5,13 @@ namespace: "development"
 slug: "the-replenishment-card-of-enterprise-self-developed-attendance-system-is-synchronized"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "考勤 > 使用教程 > 补卡自动同步：审批通过实时更新钉钉考勤状态"
+breadcrumb: "考勤 > 集成方案 > 补卡自动同步：审批通过实时更新钉钉考勤状态"
 doc_id: "nTMMOfrMW3"
 updated_at: "2026-09-23 12:04:28"
 ---
 
 > Source: https://open.dingtalk.com/document/development/the-replenishment-card-of-enterprise-self-developed-attendance-system-is-synchronized
-> Path: 应用开发 / 服务端 API / 考勤 > 使用教程 > 补卡自动同步：审批通过实时更新钉钉考勤状态
+> Path: 应用开发 / 服务端 API / 考勤 > 集成方案 > 补卡自动同步：审批通过实时更新钉钉考勤状态
 > Updated: 2026-09-23 12:04:28
 
 # 补卡自动同步：审批通过实时更新钉钉考勤状态
@@ -114,7 +114,7 @@ updated_at: "2026-09-23 12:04:28"
 
 步骤二：申请接口权限，申请考勤相关接口权限。
 
-步骤三：获取应用访问凭证[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
+步骤三：获取应用访问凭证[获取企业内部应用的access\_token](1443-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
 
 步骤四：调用考勤相关API：
 
@@ -155,7 +155,7 @@ updated_at: "2026-09-23 12:04:28"
 
 ### 步骤三：获取访问凭证（access\_token）
 
-根据步骤一中 的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)。
+根据步骤一中 的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的access\_token](1443-obtain-orgapp-token.md)。
 
 ```
 public void getAccessToken() throws ApiException {

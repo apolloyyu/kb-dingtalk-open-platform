@@ -5,13 +5,13 @@ namespace: "development"
 slug: "enterprise-s-own-oa-approval-system-synchronized-to-dingtalk-during-holidays"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "考勤 > 使用教程 > 打卡数据同步：硬件打卡记录自动上传至钉钉"
+breadcrumb: "考勤 > 集成方案 > 打卡数据同步：硬件打卡记录自动上传至钉钉"
 doc_id: "qieVTeeppo"
 updated_at: "2026-09-23 12:04:31"
 ---
 
 > Source: https://open.dingtalk.com/document/development/enterprise-s-own-oa-approval-system-synchronized-to-dingtalk-during-holidays
-> Path: 应用开发 / 服务端 API / 考勤 > 使用教程 > 打卡数据同步：硬件打卡记录自动上传至钉钉
+> Path: 应用开发 / 服务端 API / 考勤 > 集成方案 > 打卡数据同步：硬件打卡记录自动上传至钉钉
 > Updated: 2026-09-23 12:04:31
 
 # 打卡数据同步：硬件打卡记录自动上传至钉钉
@@ -119,7 +119,7 @@ updated_at: "2026-09-23 12:04:31"
 
 步骤二：申请接口权限，申请考勤相关接口权限。
 
-步骤三：获取应用访问凭证[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
+步骤三：获取应用访问凭证[获取企业内部应用的access\_token](1443-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
 
 步骤四：调用考勤相关API：
 
@@ -158,7 +158,7 @@ updated_at: "2026-09-23 12:04:31"
 
 ### 步骤三：获取访问凭证（access\_token）
 
-根据步骤一中 的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的access\_token](1444-obtain-orgapp-token.md)。
+根据步骤一中 的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的access\_token](1443-obtain-orgapp-token.md)。
 
 ```
 public void getAccessToken() throws ApiException {
@@ -186,8 +186,8 @@ public void getAccessToken() throws ApiException {
    >
    > 该步骤不可跳过，自有系统内的审批单信息同步到钉钉。例如，小明在10月15日的排班是8小时，10月16日的排班是4小时，如果正常上班，小明在10月15日、16日这2天的工作时间是12小时。小明在企业自有系统内提交请假审批单时，以下各情况，可提交的请假时长不同：
    >
-   > - 情况一，选择请假开始时间是10月15日，结束时间是10月15日；调用[预计算时长](1543-calculate-duration-based-on-attendance-scheduling.md)接口，获取的可提交请假时长最大是8小时。
-   > - 情况二，选择请假开始时间是10月15日，结束时间是10月16日，调用[预计算时长](1543-calculate-duration-based-on-attendance-scheduling.md)接口，获取的可提交请假时长最大是12小时。
+   > - 情况一，选择请假开始时间是10月15日，结束时间是10月15日；调用[预计算时长](1542-calculate-duration-based-on-attendance-scheduling.md)接口，获取的可提交请假时长最大是8小时。
+   > - 情况二，选择请假开始时间是10月15日，结束时间是10月16日，调用[预计算时长](1542-calculate-duration-based-on-attendance-scheduling.md)接口，获取的可提交请假时长最大是12小时。
 
    ```
    public CalculateDurationResponseBody durationCalculate(){

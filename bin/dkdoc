@@ -529,9 +529,10 @@ def _ident_rows(rows, hayf, tl):
     """自然问句里夹着接口标识符(UpdateManager.onUpdateReady / dd.biz.util.uploadAttachment)时,
     按标识符本身匹配。all(t in 标题) 要求「方法/文档/不支持」这类问法词也出现在标题里,
     带标识符的问题恒为 0 命中(R10.5 回退 Q81/Q82),答案页就在表里却不给。
-    标识符=含 `.` 的 ASCII 串,或 ≥8 位的驼峰/下划线串;整串命中优先,其次末段(≥6 位)。"""
-    ids = [t for t in tl if re.fullmatch(r"[a-z][a-z0-9_.]*", t)
-           and ("." in t or (len(t) >= 8 and not t.isalpha()) or len(t) >= 12)]
+    标识符=带点的 ASCII 调用名;整串命中优先,其次末段(≥6 位)。"""
+    # 只认带点的调用名:openConversationId 这类字段名会撞上 toConversationByOpenConversationId,
+    # 把「怎么获取/反查 openConversationId」挤成 JSAPI 题(300 题回放 Q41/Q125)。
+    ids = [t for t in tl if re.fullmatch(r"[a-z][a-z0-9_]*(?:\.[a-z0-9_]+)+", t)]
     if not ids:
         return []
     full = [r for r in rows if any(i in hayf(r) for i in ids)]

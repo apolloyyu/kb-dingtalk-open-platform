@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "行业与生态 > 生态开放 > 金智CRM > 概述"
 doc_id: "SrnbpYnIB0"
-updated_at: "2026-09-18 09:11:29"
+updated_at: "2026-10-15 16:29:33"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jinzhi-crm-interface-call-description
 > Path: 应用开发 / 服务端 API / 行业与生态 > 生态开放 > 金智CRM > 概述
-> Updated: 2026-09-18 09:11:29
+> Updated: 2026-10-15 16:29:33
 
 # 概述
 

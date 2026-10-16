@@ -1,20 +1,20 @@
 ---
-title: "入库单"
+title: "新增或更新入库单"
 source_url: "https://open.dingtalk.com/document/development/add-or-edit-a-shipment-record"
 namespace: "development"
 slug: "add-or-edit-a-shipment-record"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "行业与生态 > 生态开放 > 金智CRM > 库存 > 入库单"
+breadcrumb: "行业与生态 > 生态开放 > 金智CRM > 库存 > 新增或更新入库单"
 doc_id: "0BPjkr1HE4"
-updated_at: "2026-06-02 20:01:03"
+updated_at: "2026-10-16 09:23:31"
 ---
 
 > Source: https://open.dingtalk.com/document/development/add-or-edit-a-shipment-record
-> Path: 应用开发 / 服务端 API / 行业与生态 > 生态开放 > 金智CRM > 库存 > 入库单
-> Updated: 2026-06-02 20:01:03
+> Path: 应用开发 / 服务端 API / 行业与生态 > 生态开放 > 金智CRM > 库存 > 新增或更新入库单
+> Updated: 2026-10-16 09:23:31
 
-# 入库单
+# 新增或更新入库单
 
 通过此接口可新增或编辑金智CRM系统中的入库单据。
 
@@ -41,7 +41,7 @@ updated_at: "2026-06-02 20:01:03"
 | --- | --- | --- | --- |
 | datatype | Long | 是 | 数据类型，固定值**189**。 |
 | stamp | Long | 是 | 时间戳。 |
-| msgid | Long | 否 | 数据ID。  **[!NOTE]**    值为0或不填时，为新增数据。 |
+| msgid | Long | 否 | 数据ID。      值为0或不填时，为新增数据。 |
 | data | Object | 否 | 编辑数据。 |
 | data\_userid | String | 是 | 创建人。 |
 | libiodate | String | 是 | 入库日期。 |

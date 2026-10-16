@@ -1,20 +1,20 @@
 ---
-title: "发货单"
+title: "新增或更新发货单"
 source_url: "https://open.dingtalk.com/document/development/add-or-edit-invoices"
 namespace: "development"
 slug: "add-or-edit-invoices"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "行业与生态 > 生态开放 > 金智CRM > 合同 > 发货单"
+breadcrumb: "行业与生态 > 生态开放 > 金智CRM > 合同 > 新增或更新发货单"
 doc_id: "VrQubVTnLr"
-updated_at: "2026-06-02 20:01:00"
+updated_at: "2026-10-16 09:23:26"
 ---
 
 > Source: https://open.dingtalk.com/document/development/add-or-edit-invoices
-> Path: 应用开发 / 服务端 API / 行业与生态 > 生态开放 > 金智CRM > 合同 > 发货单
-> Updated: 2026-06-02 20:01:00
+> Path: 应用开发 / 服务端 API / 行业与生态 > 生态开放 > 金智CRM > 合同 > 新增或更新发货单
+> Updated: 2026-10-16 09:23:26
 
-# 发货单
+# 新增或更新发货单
 
 通过此接口新增或编辑发货单据，实现与金智CRM系统的数据同步。
 
@@ -41,7 +41,7 @@ updated_at: "2026-06-02 20:01:00"
 | --- | --- | --- | --- |
 | datatype | Long | 是 | 数据类型，固定值**169**。 |
 | stamp | Long | 是 | 时间戳。 |
-| msgid | Long | 否 | 数据ID。  **[!NOTE]**    值为0或不填时，为新增数据。 |
+| msgid | Long | 否 | 数据ID。      值为0或不填时，为新增数据。 |
 | data | Object | 否 | 编辑数据。 |
 | data\_userid | String | 是 | 创建人。 |
 | fh\_customerid | String | 是 | 对应客户。 |

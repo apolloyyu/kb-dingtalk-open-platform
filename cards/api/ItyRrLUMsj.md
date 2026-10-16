@@ -36,4 +36,4 @@ permissions: not_stated
 - - **实时同步：** 理赔状态变更从系统记录到群通知推送延迟从4小时缩短至5秒，客户电话追问量下降70%。
 
 source_url: https://open.dingtalk.com/document/development/group-assistant-sends-a-message
-updated_at: 2026-10-14 09:16:58
+updated_at: 2026-10-16 09:23:08

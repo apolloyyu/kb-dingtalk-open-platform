@@ -1,4 +1,4 @@
-# 采购单
+# 新增或更新采购单
 
 doc_id: 6BUbMt1lWj
 completeness: full
@@ -36,4 +36,4 @@ permissions: Jzcrm.Common.ReadWrite
 - none stated
 
 source_url: https://open.dingtalk.com/document/development/edit-purchase-order
-updated_at: 2026-06-04 19:10:50
+updated_at: 2026-10-16 09:23:28

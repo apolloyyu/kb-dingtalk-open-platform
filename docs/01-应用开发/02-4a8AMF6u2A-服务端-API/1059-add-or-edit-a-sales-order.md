@@ -1,20 +1,20 @@
 ---
-title: "销售换货单"
+title: "新增或更新销售换货单"
 source_url: "https://open.dingtalk.com/document/development/add-or-edit-a-sales-order"
 namespace: "development"
 slug: "add-or-edit-a-sales-order"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "行业与生态 > 生态开放 > 金智CRM > 合同 > 销售换货单"
+breadcrumb: "行业与生态 > 生态开放 > 金智CRM > 合同 > 新增或更新销售换货单"
 doc_id: "OhKCRb6tEN"
-updated_at: "2026-06-02 20:01:01"
+updated_at: "2026-10-16 09:23:27"
 ---
 
 > Source: https://open.dingtalk.com/document/development/add-or-edit-a-sales-order
-> Path: 应用开发 / 服务端 API / 行业与生态 > 生态开放 > 金智CRM > 合同 > 销售换货单
-> Updated: 2026-06-02 20:01:01
+> Path: 应用开发 / 服务端 API / 行业与生态 > 生态开放 > 金智CRM > 合同 > 新增或更新销售换货单
+> Updated: 2026-10-16 09:23:27
 
-# 销售换货单
+# 新增或更新销售换货单
 
 通过此接口新增或编辑销售换货单据。
 
@@ -41,7 +41,7 @@ updated_at: "2026-06-02 20:01:01"
 | --- | --- | --- | --- |
 | datatype | Long | 是 | 数据类型，固定值**228**。 |
 | stamp | Long | 是 | 时间戳。 |
-| msgid | Long | 否 | 数据ID。  **[!NOTE]**    值为0或不填时，为新增数据。 |
+| msgid | Long | 否 | 数据ID。      值为0或不填时，为新增数据。 |
 | data | Object | 否 | 编辑数据。 |
 | data\_userid | String | 是 | 创建人。 |
 | hh\_inlibid | String | 是 | 换入仓库。 |

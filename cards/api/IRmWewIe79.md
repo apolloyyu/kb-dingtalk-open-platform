@@ -1,4 +1,4 @@
-# 联系人
+# 新增或更新联系人
 
 doc_id: IRmWewIe79
 completeness: full
@@ -33,4 +33,4 @@ permissions: Jzcrm.Common.ReadWrite
 - none stated
 
 source_url: https://open.dingtalk.com/document/development/add-or-edit-contacts
-updated_at: 2026-06-02 20:00:59
+updated_at: 2026-10-16 09:23:24

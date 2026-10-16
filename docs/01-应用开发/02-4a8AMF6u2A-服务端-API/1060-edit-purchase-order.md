@@ -1,20 +1,20 @@
 ---
-title: "采购单"
+title: "新增或更新采购单"
 source_url: "https://open.dingtalk.com/document/development/edit-purchase-order"
 namespace: "development"
 slug: "edit-purchase-order"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "行业与生态 > 生态开放 > 金智CRM > 采购 > 采购单"
+breadcrumb: "行业与生态 > 生态开放 > 金智CRM > 采购 > 新增或更新采购单"
 doc_id: "6BUbMt1lWj"
-updated_at: "2026-06-04 19:10:50"
+updated_at: "2026-10-16 09:23:28"
 ---
 
 > Source: https://open.dingtalk.com/document/development/edit-purchase-order
-> Path: 应用开发 / 服务端 API / 行业与生态 > 生态开放 > 金智CRM > 采购 > 采购单
-> Updated: 2026-06-04 19:10:50
+> Path: 应用开发 / 服务端 API / 行业与生态 > 生态开放 > 金智CRM > 采购 > 新增或更新采购单
+> Updated: 2026-10-16 09:23:28
 
-# 采购单
+# 新增或更新采购单
 
 通过此接口可新增或编辑采购单，实现企业采购流程的数字化管理。
 

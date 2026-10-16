@@ -1,4 +1,4 @@
-# 销售换货单
+# 新增或更新销售换货单
 
 doc_id: OhKCRb6tEN
 completeness: full
@@ -35,4 +35,4 @@ permissions: Jzcrm.Common.ReadWrite
 - none stated
 
 source_url: https://open.dingtalk.com/document/development/add-or-edit-a-sales-order
-updated_at: 2026-06-02 20:01:01
+updated_at: 2026-10-16 09:23:27

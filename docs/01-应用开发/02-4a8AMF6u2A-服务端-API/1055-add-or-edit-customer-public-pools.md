@@ -1,20 +1,20 @@
 ---
-title: "客户公共池"
+title: "新增或更新客户公共池"
 source_url: "https://open.dingtalk.com/document/development/add-or-edit-customer-public-pools"
 namespace: "development"
 slug: "add-or-edit-customer-public-pools"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "行业与生态 > 生态开放 > 金智CRM > 客户 > 客户公共池"
+breadcrumb: "行业与生态 > 生态开放 > 金智CRM > 客户 > 新增或更新客户公共池"
 doc_id: "ABhAjPrGVr"
-updated_at: "2026-06-02 20:00:58"
+updated_at: "2026-10-16 09:23:23"
 ---
 
 > Source: https://open.dingtalk.com/document/development/add-or-edit-customer-public-pools
-> Path: 应用开发 / 服务端 API / 行业与生态 > 生态开放 > 金智CRM > 客户 > 客户公共池
-> Updated: 2026-06-02 20:00:58
+> Path: 应用开发 / 服务端 API / 行业与生态 > 生态开放 > 金智CRM > 客户 > 新增或更新客户公共池
+> Updated: 2026-10-16 09:23:23
 
-# 客户公共池
+# 新增或更新客户公共池
 
 调用本接口新增或编辑客户公共池。本接口适用于金智CRM系统中客户公共池的新增与编辑操作。
 
@@ -41,7 +41,7 @@ updated_at: "2026-06-02 20:00:58"
 | --- | --- | --- | --- |
 | datatype | Long | 是 | 数据类型，固定值**238**。 |
 | stamp | Long | 是 | 时间戳。 |
-| msgid | Long | 否 | 数据ID。  **[!NOTE]**    值为0或不填时，为新增数据。 |
+| msgid | Long | 否 | 数据ID。      值为0或不填时，为新增数据。 |
 | data | Object | 否 | 编辑数据。 |
 | data\_userid | String | 是 | 创建人。 |
 | kh\_pkhid | String | 否 | 上级客户。 |

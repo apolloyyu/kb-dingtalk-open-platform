@@ -1,20 +1,20 @@
 ---
-title: "客户资料"
+title: "新增或更新客户资料"
 source_url: "https://open.dingtalk.com/document/development/add-or-edit-customer-profile"
 namespace: "development"
 slug: "add-or-edit-customer-profile"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "行业与生态 > 生态开放 > 金智CRM > 客户 > 客户资料"
+breadcrumb: "行业与生态 > 生态开放 > 金智CRM > 客户 > 新增或更新客户资料"
 doc_id: "yr5XPoBYgr"
-updated_at: "2026-06-02 20:00:57"
+updated_at: "2026-10-16 09:23:22"
 ---
 
 > Source: https://open.dingtalk.com/document/development/add-or-edit-customer-profile
-> Path: 应用开发 / 服务端 API / 行业与生态 > 生态开放 > 金智CRM > 客户 > 客户资料
-> Updated: 2026-06-02 20:00:57
+> Path: 应用开发 / 服务端 API / 行业与生态 > 生态开放 > 金智CRM > 客户 > 新增或更新客户资料
+> Updated: 2026-10-16 09:23:22
 
-# 客户资料
+# 新增或更新客户资料
 
 通过此接口可新增或编辑客户资料，支持企业内部应用与第三方企业应用对金智CRM系统中的客户信息进行统一管理。
 
@@ -41,7 +41,7 @@ updated_at: "2026-06-02 20:00:57"
 | --- | --- | --- | --- |
 | datatype | Long | 是 | 数据类型，固定值**148**。 |
 | stamp | Long | 是 | 时间戳，单位：秒。 |
-| msgid | Long | 否 | 数据ID。  **[!NOTE]**    值为0或不填时，为新增数据。 |
+| msgid | Long | 否 | 数据ID。      值为0或不填时，为新增数据。 |
 | data | Object | 否 | 编辑数据。 |
 | data\_userid | String | 是 | 创建人。 |
 | kh\_pkhid | String | 否 | 上级客户。 |

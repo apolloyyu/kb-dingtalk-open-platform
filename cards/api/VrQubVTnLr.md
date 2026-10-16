@@ -1,4 +1,4 @@
-# 发货单
+# 新增或更新发货单
 
 doc_id: VrQubVTnLr
 completeness: full
@@ -35,4 +35,4 @@ permissions: Jzcrm.Common.ReadWrite
 - none stated
 
 source_url: https://open.dingtalk.com/document/development/add-or-edit-invoices
-updated_at: 2026-06-02 20:01:00
+updated_at: 2026-10-16 09:23:26

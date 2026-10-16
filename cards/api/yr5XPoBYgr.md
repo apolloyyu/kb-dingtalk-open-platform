@@ -1,4 +1,4 @@
-# 客户资料
+# 新增或更新客户资料
 
 doc_id: yr5XPoBYgr
 completeness: full
@@ -33,4 +33,4 @@ permissions: Jzcrm.Common.ReadWrite
 - none stated
 
 source_url: https://open.dingtalk.com/document/development/add-or-edit-customer-profile
-updated_at: 2026-06-02 20:00:57
+updated_at: 2026-10-16 09:23:22

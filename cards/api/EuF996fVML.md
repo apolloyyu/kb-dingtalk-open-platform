@@ -1,4 +1,4 @@
-# 出库单
+# 新增或更新出库单
 
 doc_id: EuF996fVML
 completeness: full
@@ -37,4 +37,4 @@ permissions: Jzcrm.Common.ReadWrite
 - none stated
 
 source_url: https://open.dingtalk.com/document/development/add-or-edit-an-issue-ticket
-updated_at: 2026-06-02 20:01:04
+updated_at: 2026-10-16 09:23:32

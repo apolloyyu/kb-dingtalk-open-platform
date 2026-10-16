@@ -1,20 +1,20 @@
 ---
-title: "合同订单"
+title: "新增或更新合同订单"
 source_url: "https://open.dingtalk.com/document/development/add-or-edit-contract-orders"
 namespace: "development"
 slug: "add-or-edit-contract-orders"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "行业与生态 > 生态开放 > 金智CRM > 合同 > 合同订单"
+breadcrumb: "行业与生态 > 生态开放 > 金智CRM > 合同 > 新增或更新合同订单"
 doc_id: "gWQ5uO3y4I"
-updated_at: "2026-06-02 20:00:59"
+updated_at: "2026-10-16 09:23:25"
 ---
 
 > Source: https://open.dingtalk.com/document/development/add-or-edit-contract-orders
-> Path: 应用开发 / 服务端 API / 行业与生态 > 生态开放 > 金智CRM > 合同 > 合同订单
-> Updated: 2026-06-02 20:00:59
+> Path: 应用开发 / 服务端 API / 行业与生态 > 生态开放 > 金智CRM > 合同 > 新增或更新合同订单
+> Updated: 2026-10-16 09:23:25
 
-# 合同订单
+# 新增或更新合同订单
 
 通过本接口可新增或编辑合同订单，支持在企业CRM系统中进行合同数据的创建与更新操作。
 
@@ -41,7 +41,7 @@ updated_at: "2026-06-02 20:00:59"
 | --- | --- | --- | --- |
 | datatype | Long | 是 | 数据类型，固定填写**150**。 |
 | stamp | Long | 是 | 时间戳。 |
-| msgid | Long | 否 | 数据ID。  **[!NOTE]**    值为0或不填时，为新增数据。 |
+| msgid | Long | 否 | 数据ID。      值为0或不填时，为新增数据。 |
 | data | Object | 否 | 编辑数据。 |
 | data\_userid | String | 是 | 创建人。 |
 | ht\_customerid | String | 是 | 对应客户。 |

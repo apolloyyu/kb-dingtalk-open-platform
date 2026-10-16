@@ -1,20 +1,20 @@
 ---
-title: "联系人"
+title: "新增或更新联系人"
 source_url: "https://open.dingtalk.com/document/development/add-or-edit-contacts"
 namespace: "development"
 slug: "add-or-edit-contacts"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "行业与生态 > 生态开放 > 金智CRM > 联系人 > 联系人"
+breadcrumb: "行业与生态 > 生态开放 > 金智CRM > 联系人 > 新增或更新联系人"
 doc_id: "IRmWewIe79"
-updated_at: "2026-06-02 20:00:59"
+updated_at: "2026-10-16 09:23:24"
 ---
 
 > Source: https://open.dingtalk.com/document/development/add-or-edit-contacts
-> Path: 应用开发 / 服务端 API / 行业与生态 > 生态开放 > 金智CRM > 联系人 > 联系人
-> Updated: 2026-06-02 20:00:59
+> Path: 应用开发 / 服务端 API / 行业与生态 > 生态开放 > 金智CRM > 联系人 > 新增或更新联系人
+> Updated: 2026-10-16 09:23:24
 
-# 联系人
+# 新增或更新联系人
 
 通过此接口实现金智CRM系统中联系人的新增或编辑操作，支持企业内部应用和第三方企业应用调用。
 
@@ -41,7 +41,7 @@ updated_at: "2026-06-02 20:00:59"
 | --- | --- | --- | --- |
 | datatype | Long | 是 | 数据类型，固定值**197**。 |
 | stamp | Long | 是 | 时间戳。 |
-| msgid | Long | 否 | 数据ID。  **[!NOTE]**    值为0或不填时，为新增数据。 |
+| msgid | Long | 否 | 数据ID。      值为0或不填时，为新增数据。 |
 | data | Object | 否 | 编辑数据。 |
 | data\_userid | String | 是 | 创建人。 |
 | lxr\_customerid | String | 是 | 对应客户。 |

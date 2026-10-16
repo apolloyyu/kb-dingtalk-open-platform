@@ -1,20 +1,20 @@
 ---
-title: "生产单"
+title: "新增或更新生产单"
 source_url: "https://open.dingtalk.com/document/development/add-or-edit-a-production-order"
 namespace: "development"
 slug: "add-or-edit-a-production-order"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "行业与生态 > 生态开放 > 金智CRM > 生产 > 生产单"
+breadcrumb: "行业与生态 > 生态开放 > 金智CRM > 生产 > 新增或更新生产单"
 doc_id: "3fRsqh8nlJ"
-updated_at: "2026-06-04 19:10:51"
+updated_at: "2026-10-16 09:23:29"
 ---
 
 > Source: https://open.dingtalk.com/document/development/add-or-edit-a-production-order
-> Path: 应用开发 / 服务端 API / 行业与生态 > 生态开放 > 金智CRM > 生产 > 生产单
-> Updated: 2026-06-04 19:10:51
+> Path: 应用开发 / 服务端 API / 行业与生态 > 生态开放 > 金智CRM > 生产 > 新增或更新生产单
+> Updated: 2026-10-16 09:23:29
 
-# 生产单
+# 新增或更新生产单
 
 调用本接口新增或编辑生产单。
 

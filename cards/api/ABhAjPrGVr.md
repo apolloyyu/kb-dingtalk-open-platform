@@ -1,4 +1,4 @@
-# 客户公共池
+# 新增或更新客户公共池
 
 doc_id: ABhAjPrGVr
 completeness: full
@@ -33,4 +33,4 @@ permissions: Jzcrm.Common.ReadWrite
 - none stated
 
 source_url: https://open.dingtalk.com/document/development/add-or-edit-customer-public-pools
-updated_at: 2026-06-02 20:00:58
+updated_at: 2026-10-16 09:23:23

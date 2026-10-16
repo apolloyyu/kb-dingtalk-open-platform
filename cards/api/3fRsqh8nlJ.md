@@ -1,4 +1,4 @@
-# 生产单
+# 新增或更新生产单
 
 doc_id: 3fRsqh8nlJ
 completeness: full
@@ -35,4 +35,4 @@ permissions: Jzcrm.Common.ReadWrite
 - none stated
 
 source_url: https://open.dingtalk.com/document/development/add-or-edit-a-production-order
-updated_at: 2026-06-04 19:10:51
+updated_at: 2026-10-16 09:23:29

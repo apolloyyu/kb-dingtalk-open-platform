@@ -1,4 +1,4 @@
-# 产品信息
+# 新增或更新产品信息
 
 doc_id: rn6mj1gnwd
 completeness: full
@@ -34,4 +34,4 @@ permissions: Jzcrm.Common.ReadWrite
 - 库存上限。
 
 source_url: https://open.dingtalk.com/document/development/add-or-edit-product-information
-updated_at: 2026-06-02 20:01:03
+updated_at: 2026-10-16 09:23:30

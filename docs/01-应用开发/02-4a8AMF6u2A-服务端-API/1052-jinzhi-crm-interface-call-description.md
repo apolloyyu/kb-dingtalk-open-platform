@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "行业与生态 > 生态开放 > 金智CRM > 概述"
 doc_id: "SrnbpYnIB0"
-updated_at: "2026-10-15 16:29:33"
+updated_at: "2026-10-16 09:23:18"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jinzhi-crm-interface-call-description
 > Path: 应用开发 / 服务端 API / 行业与生态 > 生态开放 > 金智CRM > 概述
-> Updated: 2026-10-15 16:29:33
+> Updated: 2026-10-16 09:23:18
 
 # 概述
 
@@ -44,47 +44,47 @@ updated_at: "2026-10-15 16:29:33"
 
 | **API** | **API说明** | **API版本** |
 | --- | --- | --- |
-| [客户资料](1054-add-or-edit-customer-profile.md) | 新增或编辑客户资料。 | 新版 |
-| [客户公共池](1055-add-or-edit-customer-public-pools.md) | 新增或编辑客户公共池。 | 新版 |
+| [新增或更新客户资料](1054-add-or-edit-customer-profile.md) | 新增或编辑客户资料。 | 新版 |
+| [新增或更新客户公共池](1055-add-or-edit-customer-public-pools.md) | 新增或编辑客户公共池。 | 新版 |
 
 #### **联系人**
 
 | **API** | **API说明** | **API版本** |
 | --- | --- | --- |
-| [联系人](1056-add-or-edit-contacts.md) | 新增或编辑联系人。 | 新版 |
+| [新增或更新联系人](1056-add-or-edit-contacts.md) | 新增或编辑联系人。 | 新版 |
 
 #### **合同**
 
 | **API** | **API说明** | **API版本** |
 | --- | --- | --- |
-| [合同订单](1057-add-or-edit-contract-orders.md) | 新增或编辑合同订单。 | 新版 |
-| [发货单](1058-add-or-edit-invoices.md) | 新增或编辑发货单。 | 新版 |
-| [销售换货单](1059-add-or-edit-a-sales-order.md) | 新增或编辑销售换货单。 | 新版 |
+| [新增或更新合同订单](1057-add-or-edit-contract-orders.md) | 新增或编辑合同订单。 | 新版 |
+| [新增或更新发货单](1058-add-or-edit-invoices.md) | 新增或编辑发货单。 | 新版 |
+| [新增或更新销售换货单](1059-add-or-edit-a-sales-order.md) | 新增或编辑销售换货单。 | 新版 |
 
 #### **采购**
 
 | **API** | **API说明** | **API版本** |
 | --- | --- | --- |
-| [采购单](1060-edit-purchase-order.md) | 新增或编辑采购单。 | 新版 |
+| [新增或更新采购单](1060-edit-purchase-order.md) | 新增或编辑采购单。 | 新版 |
 
 #### **生产**
 
 | **API** | **API说明** | **API版本** |
 | --- | --- | --- |
-| [生产单](1061-add-or-edit-a-production-order.md) | 新增或编辑生产单。 | 新版 |
+| [新增或更新生产单](1061-add-or-edit-a-production-order.md) | 新增或编辑生产单。 | 新版 |
 
 #### **产品**
 
 | **API** | **API说明** | **API版本** |
 | --- | --- | --- |
-| [产品信息](1062-add-or-edit-product-information.md) | 新增或编辑产品信息。 | 新版 |
+| [新增或更新产品信息](1062-add-or-edit-product-information.md) | 新增或编辑产品信息。 | 新版 |
 
 #### **库存**
 
 | **API** | **API说明** | **API版本** |
 | --- | --- | --- |
-| [入库单](1063-add-or-edit-a-shipment-record.md) | 新增或编辑入库单。 | 新版 |
-| [出库单](1064-add-or-edit-an-issue-ticket.md) | 新增或编辑出库单。 | 新版 |
+| [新增或更新入库单](1063-add-or-edit-a-shipment-record.md) | 新增或编辑入库单。 | 新版 |
+| [新增或更新出库单](1064-add-or-edit-an-issue-ticket.md) | 新增或编辑出库单。 | 新版 |
 
 #### **数据**
 
@@ -95,7 +95,7 @@ updated_at: "2026-10-15 16:29:33"
 
 ## 开放教程
 
-钉钉提供了金智CRM接口接入流程示例，请参见[制造业订单交付全过程管理](1053-management-of-order-delivery-in-the-manufacturing-industry.md)。
+钉钉提供了金智CRM接口接入流程示例，请参见[制造业订单交付管理：产供销全链路数据协同与实时追踪](1053-management-of-order-delivery-in-the-manufacturing-industry.md)。
 
 ## 技术支持
 

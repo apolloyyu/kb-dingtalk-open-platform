@@ -525,6 +525,23 @@ def cmd_grep(terms, n):
         return 0 if cnt else 1
 
 
+def _ident_rows(rows, hayf, tl):
+    """自然问句里夹着接口标识符(UpdateManager.onUpdateReady / dd.biz.util.uploadAttachment)时,
+    按标识符本身匹配。all(t in 标题) 要求「方法/文档/不支持」这类问法词也出现在标题里,
+    带标识符的问题恒为 0 命中(R10.5 回退 Q81/Q82),答案页就在表里却不给。
+    标识符=含 `.` 的 ASCII 串,或 ≥8 位的驼峰/下划线串;整串命中优先,其次末段(≥6 位)。"""
+    ids = [t for t in tl if re.fullmatch(r"[a-z][a-z0-9_.]*", t)
+           and ("." in t or (len(t) >= 8 and not t.isalpha()) or len(t) >= 12)]
+    if not ids:
+        return []
+    full = [r for r in rows if any(i in hayf(r) for i in ids)]
+    if full:
+        return full
+    tails = [i.rsplit(".", 1)[-1] for i in ids if "." in i]
+    tails = [t for t in tails if len(t) >= 6]
+    return [r for r in rows if any(t in hayf(r) for t in tails)]
+
+
 def cmd_ctx(terms, n, force_full=False):
     """一次打包检索：安全时答案卡直答，否则正文+links；异常→CTX_ERROR。"""
     try:
@@ -795,15 +812,17 @@ def _ctx_impl(terms, n, force_full=False):
     ent_counts["err"] = len(hits)
     for r in hits[:4]:
         ent_lines.append(f"[err] {r['error_code']} · {r['message']} · HTTP {r['http_code']}\n      {r.get('explanation','')[:80]} · {r['source_url']}")
-    ev = [r for r in load_jsonl("graph/event.jsonl")
-          if all(t in (r["title"] + " " + " ".join(r.get("event_types", []))).lower() for t in tl)]
+    _hay_ev = lambda r: (r["title"] + " " + " ".join(r.get("event_types", []))).lower()
+    _ev_rows = load_jsonl("graph/event.jsonl")
+    ev = [r for r in _ev_rows if all(t in _hay_ev(r) for t in tl)] or _ident_rows(_ev_rows, _hay_ev, tl)
     ent_counts["event"] = len(ev)
     for r in ev[:4]:
         tag = " ⚠归档" if r.get("archived") else ""
         ent_lines.append(f"[event] {r['title']}{tag} · {', '.join(r.get('event_types', [])[:4])}\n      {r['doc_path']} · {r['source_url']}")
         ent_paths.append(r["doc_path"])
-    js = [r for r in load_jsonl("graph/jsapi.jsonl")
-          if all(t in (r["title"] + " " + " ".join(r.get("jsapi_names", []))).lower() for t in tl)]
+    _hay_js = lambda r: (r["title"] + " " + " ".join(r.get("jsapi_names", []))).lower()
+    _js_rows = load_jsonl("graph/jsapi.jsonl")
+    js = [r for r in _js_rows if all(t in _hay_js(r) for t in tl)] or _ident_rows(_js_rows, _hay_js, tl)
     js.sort(key=lambda r: (r.get("archived", False), len(r.get("jsapi_names", [])), r["doc_path"]))
     ent_counts["jsapi"] = len(js)
     for r in js[:4]:

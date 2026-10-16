@@ -795,6 +795,13 @@ def _ctx_impl(terms, n, force_full=False):
     api_scored.sort()
     rows = [r for _, _, _, _, r in api_scored]
     ent_counts["api"] = len(rows)
+    # 同名接口标准版与 premium(OA 高级版/专属)并存时,模型常把高级版专属接口当通用答案
+    # (实录 Q107/Q108:给出 premium 流程中心接口,未提需 OA 高级版)。
+    _shown = rows[:6]
+    _prem = [r for r in _shown if "/premium/" in (r.get("endpoint") or "")]
+    if _prem and len(_prem) < len(_shown):
+        ent_lines.append("[提示] 以下命中同时含标准版与 premium 接口:endpoint 含 /premium/ 的需 OA 高级版等付费版本"
+                         "(权限点 Premium.*),回答须标明适用版本,标准版能解决时优先给标准版。")
     for r in rows[:6]:
         tag = " ⚠归档" if r.get("archived") else ""
         perm = f" · 权限:{','.join(r.get('permission_scopes') or [])}" if r.get("permission_scopes") else ""
@@ -1208,11 +1215,21 @@ def main():
     if cmd == "ctx" and "--full" in terms:
         terms = [x for x in terms if x != "--full"]
         force_full = True
+    prev_q = ""
+    if cmd == "ctx" and "--prev" in terms:
+        i = terms.index("--prev")
+        prev_q = terms[i + 1] if i + 1 < len(terms) else ""
+        del terms[i:i + 2]
     # ctx 调用方可能传多参数(ctx a b c)或引号整串(ctx "a b c"),后者不拆词会让
     # 逐词检索退化成整句子串匹配而全部落空(实录:整串222B/0命中 vs 多参数14KB)。
     if cmd == "ctx" and len(terms) == 1:
         terms = [w for w in re.split(r"[\s,，、]+", terms[0]) if w] or terms
     if cmd == "ctx":
+        if prev_q:
+            # 追问(「不进行预览行不行」)单独检索必落空:上一问的实体词(dd.biz.util.uploadAttachment)
+            # 才是检索对象。上一问词放前面,本问意图词仍由本问决定。
+            prev_t = [w for w in re.split(r"[\s,，、]+", prev_q) if w]
+            terms = list(dict.fromkeys(prev_t + terms))
         return cmd_ctx(terms, n, force_full=force_full)
     if cmd == "where":
         print(ROOT)

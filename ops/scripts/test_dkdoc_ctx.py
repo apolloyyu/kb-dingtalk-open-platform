@@ -282,6 +282,14 @@ def main():
                 bad.append(f"{d['local_path']}@{cap}")
     check(not bad, f"截断仍切在链接中间 {len(bad)} 处: {bad[:3]}")
 
+    # R10.5 回退:带接口标识符的自然问句 jsapi 恒 0 命中(Q81/Q82);追问须带上一问(Q80);高级版接口须提示(Q107)
+    out = run("ctx", "为什么UpdateManager.onUpdateReady方法文档里写小程序不支持啊？")
+    check("[jsapi] UpdateManager.onUpdateReady" in out, "标识符问句未召回 jsapi 页")
+    out = run("ctx", "--prev", "H5 通过JSAPI调用dd.biz.util.uploadAttachment接口", "不进行预览行不行")
+    check("dd.biz.util.uploadAttachment" in out and "jsapi=1" in out, "--prev 未把上一问实体并入")
+    out = run("ctx", "审批实例的url只能填一个，多个审批人的情况下怎么让审批人在OA审批应用中看到自己的审批单详情")
+    check("[提示] 以下命中同时含标准版与 premium" in out, "标准版/premium 并存未提示")
+
     print("OK: dkdoc ctx fast-path/evidence-contract regression")
     return 0
 

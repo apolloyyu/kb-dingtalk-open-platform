@@ -255,10 +255,11 @@ def main():
     # 实录 10-15 正式群：更新日志正文被上限切在申请表链接中间(…/notable/s)，模型补全出 404 的 alidocs 链接。
     form = ("[钉钉数字员工创建灰度申请（DWS 内&&界面功能）]"
             "(https://alidocs.dingtalk.com/notable/share/form/v013BMqYy5D4dLEmqwZ_MPojg9m_23zNs0R?source=link)")
+    # 断言用固定串只为发现原文变更;dws 库 note 不再写死链接(引用本库原文的外部镜像),无需人工同步
     log = open(os.path.join(ROOT, next(
         d["local_path"] for d in MOD["load_jsonl"]("meta/documents.jsonl") if d.get("slug") == "dws-cli-log")),
         encoding="utf-8").read()
-    check(form in log, "更新日志原文的灰度申请表链接已变化：同步 kb-dws-wiki bin/dwsdoc _GRAY_FORM 与 notes/digital-employee-origin.md")
+    check(form in log, "更新日志原文的灰度申请表链接已变化：更新本测试的 form 常量即可")
     for query in ("数字员工灰度怎么申请", "DIGITAL_EMPLOYEE_NOT_ENABLED 怎么开通", "数字员工怎么开通"):
         out = run("ctx", query)
         check("cross_kb_form:" in out and form in out, f"数字员工开通题缺逐字申请表链接: {query}")

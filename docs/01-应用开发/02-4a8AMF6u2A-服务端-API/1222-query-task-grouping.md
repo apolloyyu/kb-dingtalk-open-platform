@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "Teambition 项目管理 > 任务 > 项目任务 > 查询任务分组"
 doc_id: "hLaA3cmg8i"
-updated_at: "2026-06-03 09:26:04"
+updated_at: "2026-10-19 09:12:07"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-task-grouping
 > Path: 应用开发 / 服务端 API / Teambition 项目管理 > 任务 > 项目任务 > 查询任务分组
-> Updated: 2026-06-03 09:26:04
+> Updated: 2026-10-19 09:12:07
 
 # 查询任务分组
 
@@ -20,13 +20,11 @@ updated_at: "2026-06-03 09:26:04"
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/project/users/{userId}/projects/{projectId}/taskLists/search |
 | HTTP Method | POST |
-| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
+| 支持的应用类型 | appType-企业内部应用appType-第三方企业应用 |
 | 权限要求 | permission-Project.Task.Read.All-项目应用任务读权限 |
 
 ### 请求头
@@ -47,7 +45,7 @@ updated_at: "2026-06-03 09:26:04"
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
 | query | String | 否 | 模糊任务分组名字。 |
-| maxResults | Integer | 否 | 每页返回最大数量。  **[!NOTE]**    默认10，最大300。 |
+| maxResults | Integer | 否 | 每页返回最大数量。      默认10，最大300。 |
 | nextToken | String | 否 | 分页标，从上一次请求结果中获取。 |
 | taskListIds | String | 否 | 任务分组ID集合，多个使用英文逗号隔开，可调用[查询项目](1204-query-enterprise-all-projects.md)接口，获取返回参数`taskListId`字段。 |
 
@@ -463,8 +461,8 @@ namespace AlibabaCloud.SDK.Sample
 | description | String | 任务分组名称。 |
 | projectId | String | 项目ID。 |
 | creatorId | String | 创建者用户ID。 |
-| created | String | 创建时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。  **[!NOTE]**    转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
-| updated | String | 更新时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。  **[!NOTE]**    转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
+| created | String | 创建时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。      转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
+| updated | String | 更新时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。      转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
 | nextToken | String | 分页标，供分页使用，下一页token。 |
 
 ### 响应体示例

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "Teambition 项目管理 > 任务 > 项目任务 > 获取任务详情"
 doc_id: "63nyYsLGSB"
-updated_at: "2026-06-03 09:26:03"
+updated_at: "2026-10-19 09:12:06"
 ---
 
 > Source: https://open.dingtalk.com/document/development/get-task-details
 > Path: 应用开发 / 服务端 API / Teambition 项目管理 > 任务 > 项目任务 > 获取任务详情
-> Updated: 2026-06-03 09:26:03
+> Updated: 2026-10-19 09:12:06
 
 # 获取任务详情
 
@@ -20,13 +20,11 @@ updated_at: "2026-06-03 09:26:03"
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/project/users/{userId}/tasks |
 | HTTP Method | GET |
-| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
+| 支持的应用类型 | appType-企业内部应用appType-第三方企业应用 |
 | 权限要求 | permission-Project.Task.Read.All-项目应用任务读权限 |
 
 ### 请求头
@@ -45,8 +43,8 @@ updated_at: "2026-06-03 09:26:03"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| taskId | String | 否 | 任务ID集合，多个taskId，使用逗号分隔，可通过调用[查询项目中的任务](1226-query-tasks-in-a-project.md)接口，获取返回参数`taskId`字段。  **[!NOTE]**    与parentTaskId冲突（选其一）。 |
-| parentTaskId | String | 否 | 父任务ID。  **[!NOTE]**    与taskId冲突（选其一）。 |
+| taskId | String | 否 | 任务ID集合，多个taskId，使用逗号分隔，可通过调用[查询项目中的任务](1226-query-tasks-in-a-project.md)接口，获取返回参数`taskId`字段。      与parentTaskId冲突（选其一）。 |
+| parentTaskId | String | 否 | 父任务ID。      与taskId冲突（选其一）。 |
 
 ### 请求示例
 
@@ -461,11 +459,11 @@ namespace AlibabaCloud.SDK.Sample
 | isArchived | Boolean | 是否任务放入回收站。 |
 | visible | String | 任务隐私性：   - involves：表达仅参与者可见 - members：表达项目成员可见 |
 | uniqueId | String | 任务数字ID。 |
-| startDate | String | 任务开始时间(UTC)，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。  **[!NOTE]**    转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
-| dueDate | String | 任务截止时间(UTC)，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。  **[!NOTE]**    转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
-| accomplishTime | String | 任务完成时间(UTC)，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。  **[!NOTE]**    转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
-| created | String | 创建时间(UTC)，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。  **[!NOTE]**    转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
-| updated | String | 更新时间(UTC)，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。  **[!NOTE]**    转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
+| startDate | String | 任务开始时间(UTC)，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。      转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
+| dueDate | String | 任务截止时间(UTC)，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。      转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
+| accomplishTime | String | 任务完成时间(UTC)，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。      转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
+| created | String | 创建时间(UTC)，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。      转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
+| updated | String | 更新时间(UTC)，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。      转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
 | scenarioFieldConfigId | String | 任务类型ID。 |
 | sprintId | String | 迭代ID。 |
 | customFields | Array | 自定义字段值集合。 |

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "智能人事 > 概述"
 doc_id: "aAXy9wvuXk"
-updated_at: "2026-07-14 09:10:43"
+updated_at: "2026-10-19 09:11:43"
 ---
 
 > Source: https://open.dingtalk.com/document/development/intelligent-personnel-call-description
 > Path: 应用开发 / 服务端 API / 智能人事 > 概述
-> Updated: 2026-07-14 09:10:43
+> Updated: 2026-10-19 09:11:43
 
 # 概述
 
@@ -96,9 +96,11 @@ updated_at: "2026-07-14 09:10:43"
 - [培训学习记录同步事件](../04-LFcRvVD08N-事件订阅/0150-training-learning-record-sync-events.md)
 - [智能人事一体化应用授权](../04-LFcRvVD08N-事件订阅/0152-intelligent-personnel-integration-application-authorization.md)
 
-## 使用教程
+## 集成方案
 
-钉钉提供了智能人事接口接入流程示例，请参见[获取并补全员工的民族信息](0932-realize-automatic-push-of-employee-birthday-wishes-information.md)。
+企业若需要集成更多智能人事相关能力，可参考下方内容进行接入：
+
+- [智能人事花名册管理：员工信息获取与补全](0932-realize-automatic-push-of-employee-birthday-wishes-information.md)
 
 ## 名词解释
 

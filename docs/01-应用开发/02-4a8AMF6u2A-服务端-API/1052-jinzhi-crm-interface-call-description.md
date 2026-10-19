@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "行业与生态 > 生态开放 > 金智CRM > 概述"
 doc_id: "SrnbpYnIB0"
-updated_at: "2026-10-16 09:23:18"
+updated_at: "2026-10-19 09:11:47"
 ---
 
 > Source: https://open.dingtalk.com/document/development/jinzhi-crm-interface-call-description
 > Path: 应用开发 / 服务端 API / 行业与生态 > 生态开放 > 金智CRM > 概述
-> Updated: 2026-10-16 09:23:18
+> Updated: 2026-10-19 09:11:47
 
 # 概述
 
@@ -38,7 +38,9 @@ updated_at: "2026-10-16 09:23:18"
 
 金智CRM提供了丰富的API接口能力，涵盖客户管理、销售机会、合同订单、采购生产等多个业务领域，支持企业实现跨系统数据同步与流程自动化。
 
-金智CRM已通过钉钉开放平台对外开放其核心业务能力，适用于ISV（独立软件开发商）及企业自研开发者进行系统集成。
+> **[!NOTE]**
+>
+> 金智CRM已通过钉钉开放平台对外开放其核心业务能力，适用于ISV（独立软件开发商）及企业自研开发者进行系统集成。
 
 #### **客户**
 
@@ -93,9 +95,11 @@ updated_at: "2026-10-16 09:23:18"
 | [获取数据列表](1066-obtain-the-data-list.md) | 获取各种单据的列表数据。 | 新版 |
 | [获取数据详情](1065-queries-data-details.md) | 获取各种单据的详情数据。 | 新版 |
 
-## 开放教程
+## 集成方案
 
-钉钉提供了金智CRM接口接入流程示例，请参见[制造业订单交付管理：产供销全链路数据协同与实时追踪](1053-management-of-order-delivery-in-the-manufacturing-industry.md)。
+企业若需要集成更多金质CRM相关能力，可参考下方内容进行接入：
+
+- [制造业订单交付管理：产供销全链路数据协同与实时追踪](1053-management-of-order-delivery-in-the-manufacturing-industry.md)
 
 ## 技术支持
 

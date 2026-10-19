@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "考勤 > 概述"
 doc_id: "LEAUqHYt7C"
-updated_at: "2026-07-02 10:36:00"
+updated_at: "2026-10-19 09:11:18"
 ---
 
 > Source: https://open.dingtalk.com/document/development/attendance-overview
 > Path: 应用开发 / 服务端 API / 考勤 > 概述
-> Updated: 2026-07-02 10:36:00
+> Updated: 2026-10-19 09:11:18
 
 # 概述
 
@@ -170,17 +170,17 @@ updated_at: "2026-07-02 10:36:00"
 
 考勤支持班次变更、考勤组变更、员工打卡事件及员工加班事件等多种回调事件，更多事件参考[事件订阅总览](../04-LFcRvVD08N-事件订阅/0002-org-event-overview.md)。
 
-## 使用教程
+## 集成方案
 
-钉钉提供了考勤组管理、假勤审批及考勤补卡等常用场景的使用流程示例。
+企业若需要集成更多考勤相关能力，可参考下方内容进行接入：
 
-- [通过考勤接口与事件获取员工到岗情况](0168-the-enterprise-big-screen-displays-the-attendance-of-employees.md)
-- [同步与更新企业自有考勤补卡信息](0167-the-replenishment-card-of-enterprise-self-developed-attendance-system-is-synchronized.md)
-- [创建、获取、更新及删除考勤组](0165-operation-related-to-attendance-group.md)
-- [新增、获取、更新及删除考勤人员](0166-attendance-group-member-operations.md)
-- [按天获取员工考勤报表信息](0169-obtain-the-employee-attendance-report-information.md)
-- [企业自有假勤审批同步到钉钉](0170-enterprise-s-own-oa-approval-system-synchronized-to-dingtalk-during-holidays.md)
-- [企业自有系统考勤打卡信息同步到钉钉](0171-attendance-synchronizes-information.md)
+- [考勤数据可视化：实时到岗监控与异常预警展示](0168-the-enterprise-big-screen-displays-the-attendance-of-employees.md)
+- [补卡自动同步：审批通过实时更新钉钉考勤状态](0167-the-replenishment-card-of-enterprise-self-developed-attendance-system-is-synchronized.md)
+- [考勤规则配置：考勤组的批量创建与动态调整](0165-operation-related-to-attendance-group.md)
+- [考勤人员分配：成员批量加入与精准管理](0166-attendance-group-member-operations.md)
+- [考勤日报生成：按天统计与多维度数据分析](0169-obtain-the-employee-attendance-report-information.md)
+- [打卡数据同步：硬件打卡记录自动上传至钉钉](0170-enterprise-s-own-oa-approval-system-synchronized-to-dingtalk-during-holidays.md)
+- [假勤审批集成：假勤数据自动同步至钉钉考勤](0171-attendance-synchronizes-information.md)
 
 ## 名词解释
 

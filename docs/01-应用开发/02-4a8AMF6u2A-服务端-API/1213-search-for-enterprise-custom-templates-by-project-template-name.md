@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "Teambition 项目管理 > 项目 > 搜索企业项目模板"
 doc_id: "esLK98SLOP"
-updated_at: "2026-06-04 19:11:35"
+updated_at: "2026-10-19 09:12:00"
 ---
 
 > Source: https://open.dingtalk.com/document/development/search-for-enterprise-custom-templates-by-project-template-name
 > Path: 应用开发 / 服务端 API / Teambition 项目管理 > 项目 > 搜索企业项目模板
-> Updated: 2026-06-04 19:11:35
+> Updated: 2026-10-19 09:12:00
 
 # 搜索企业项目模板
 
@@ -20,13 +20,11 @@ updated_at: "2026-06-04 19:11:35"
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/project/organizations/users/{userId}/templates |
 | HTTP Method | GET |
-| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
+| 支持的应用类型 | appType-企业内部应用appType-第三方企业应用 |
 | 权限要求 | permission-Project.Project.Read.All-项目应用项目读权限 |
 
 ### 请求头

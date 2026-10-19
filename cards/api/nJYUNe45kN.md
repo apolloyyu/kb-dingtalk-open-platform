@@ -6,7 +6,7 @@ archived: false
 method: POST
 endpoint: https://api.dingtalk.com/v1.0/project/users/{userId}/projects/{projectId}/members
 api_version: v2-new
-app_types: 第三方企业应用
+app_types: 企业内部应用, 第三方企业应用
 permissions: Project.Project.Write.All
 
 ## Request headers
@@ -29,4 +29,4 @@ permissions: Project.Project.Write.All
 - 被添加的用户userId列表，建议一次不超过10个。
 
 source_url: https://open.dingtalk.com/document/development/add-project-members
-updated_at: 2026-06-04 19:11:34
+updated_at: 2026-10-19 09:11:56

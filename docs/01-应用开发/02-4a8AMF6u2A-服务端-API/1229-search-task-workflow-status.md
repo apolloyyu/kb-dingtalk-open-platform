@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "Teambition 项目管理 > 任务 > 项目任务 > 搜索任务工作流状态"
 doc_id: "oUJsLLP2uK"
-updated_at: "2026-06-04 19:11:41"
+updated_at: "2026-10-19 09:12:13"
 ---
 
 > Source: https://open.dingtalk.com/document/development/search-task-workflow-status
 > Path: 应用开发 / 服务端 API / Teambition 项目管理 > 任务 > 项目任务 > 搜索任务工作流状态
-> Updated: 2026-06-04 19:11:41
+> Updated: 2026-10-19 09:12:13
 
 # 搜索任务工作流状态
 
@@ -20,13 +20,11 @@ updated_at: "2026-06-04 19:11:41"
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/project/users/{userId}/projects/{projectId}/taskflowStatuses/search |
 | HTTP Method | GET |
-| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
+| 支持的应用类型 | appType-企业内部应用appType-第三方企业应用 |
 | 权限要求 | permission-Project.Task.Read.All-项目应用项目读权限 |
 
 ### 请求头

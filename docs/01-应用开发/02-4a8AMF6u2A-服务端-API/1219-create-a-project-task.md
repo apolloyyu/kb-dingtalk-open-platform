@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "Teambition 项目管理 > 任务 > 项目任务 > 创建项目任务"
 doc_id: "42SwEyXX6I"
-updated_at: "2026-06-03 09:26:02"
+updated_at: "2026-10-19 09:12:04"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-a-project-task
 > Path: 应用开发 / 服务端 API / Teambition 项目管理 > 任务 > 项目任务 > 创建项目任务
-> Updated: 2026-06-03 09:26:02
+> Updated: 2026-10-19 09:12:04
 
 # 创建项目任务
 
@@ -20,13 +20,11 @@ updated_at: "2026-06-03 09:26:02"
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/project/users/{userId}/tasks |
 | HTTP Method | POST |
-| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
+| 支持的应用类型 | appType-企业内部应用appType-第三方企业应用 |
 | 权限要求 | permission-Project.Task.Write.All-项目应用任务写权限 |
 
 ### 请求头
@@ -45,15 +43,15 @@ updated_at: "2026-06-03 09:26:02"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| projectId | String | 是 | 项目id。  **[!NOTE]**    目前需要从项目链接中获取该参数值，获取步骤：进入**项目** > 右上角单击**菜单** > **复制链接** 得到的项目链接示例：https://www.teambition.com/project/62c794xxxxx，project下一级路径的值就是项目id。 |
+| projectId | String | 是 | 项目id。      目前需要从项目链接中获取该参数值，获取步骤：进入**项目** > 右上角单击**菜单** > **复制链接** 得到的项目链接示例：https://www.teambition.com/project/62c794xxxxx，project下一级路径的值就是项目id。 |
 | content | String | 是 | 任务标题。 |
 | executorId | String | 否 | 任务执行者userId。 |
-| dueDate | String | 否 | 任务截止时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。  **[!NOTE]**    转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
+| dueDate | String | 否 | 任务截止时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。      转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
 | note | String | 否 | 任务备注。 |
 | priority | Integer | 否 | 任务优先级，调用[查询优先级列表](1241-query-a-priority-list.md)接口获取priorityId值。 |
-| customfields | Array | 否 | 自定义字段列表。  **[!NOTE]**    自定义字段目前只支持单选、多选、数字、文本和日期，其他类型暂不支持。 |
-| customfieldName | String | 否 | 自定义字段名称。  **[!NOTE]**    该字段值需要与自定义字段名保持完全一致。 |
-| customfieldId | String | 否 | 自定义字段ID。  **[!NOTE]**    自定义字段ID，暂未透出，目前该参数字段值不填即可。 |
+| customfields | Array | 否 | 自定义字段列表。      自定义字段目前只支持单选、多选、数字、文本和日期，其他类型暂不支持。 |
+| customfieldName | String | 否 | 自定义字段名称。      该字段值需要与自定义字段名保持完全一致。 |
+| customfieldId | String | 否 | 自定义字段ID。      自定义字段ID，暂未透出，目前该参数字段值不填即可。 |
 | value | Array | 否 | 自定义字段值列表。 |
 | title | String | 否 | 自定义字段值。   - 如果自定义字段为单选或多选类型，该参数值需要与设置的选项值保持完全一致。 - 如果自定义字段为日期类型，该参数值格式为yyyy-MM-dd HH:mm:ss。 |
 | id | String | 否 | 字段值id，如果该字段是成员字段，那么此处应该填写成员的在Teambition系统中的userId，获取Teambition用户id请参阅文档[根据userId获取Teambition项目用户ID](1253-obtain-dingtalk-teambition-user-id-based-on-userid.md)。 |
@@ -598,13 +596,13 @@ namespace AlibabaCloud.SDK.Sample
 | projectId | String | 项目id。 |
 | executorId | String | 任务执行者userId。 |
 | creatorId | String | 任务创建者userId。 |
-| created | String | 任务创建时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。  **[!NOTE]**    转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
-| updated | String | 任务更新时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。  **[!NOTE]**    转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
+| created | String | 任务创建时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。      转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
+| updated | String | 任务更新时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。      转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
 | note | String | 任务备注。 |
-| dueDate | String | 任务截止时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。  **[!NOTE]**    转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
+| dueDate | String | 任务截止时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。      转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
 | priority | Integer | 任务优先级。   - 使用项目默认的优先级，如下图所示。优先级默认为以下。    - **-10**：较低，默认值。   - **0**：普通   - **1**：紧急   - **2**：非常紧急      - 用户自定义优先级，如下图所示，新增一般紧急并调整优先级顺序等。该参数值以接口实际调用结果为准。优先级越高，数值越大。 |
 | customfields | Array | 自定义字段列表。 |
-| customfieldId | String | 自定义字段ID。  **[!NOTE]**    该参数暂未透出，目前不返回。 |
+| customfieldId | String | 自定义字段ID。      该参数暂未透出，目前不返回。 |
 | value | Array | 自定义字段值列表。 |
 | title | String | 自定义字段值。 |
 

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "日志 > 概述"
 doc_id: "usxyGH9sdA"
-updated_at: "2026-07-08 14:38:18"
+updated_at: "2026-10-19 09:11:26"
 ---
 
 > Source: https://open.dingtalk.com/document/development/report-log-overview
 > Path: 应用开发 / 服务端 API / 日志 > 概述
-> Updated: 2026-07-08 14:38:18
+> Updated: 2026-10-19 09:11:26
 
 # 概述
 
@@ -53,9 +53,11 @@ updated_at: "2026-07-08 14:38:18"
 | [获取用户日志未读数](0304-querying-the-employee-s-log-is-not-reading.md) | 获取员工有多少数量的日志（一个月内）是未读状态。 | 旧版 |
 | [获取日志评论详情](0303-queries-log-comment-details.md) | 获取评论详情。 | 旧版 |
 
-## 使用教程
+## 集成方案
 
-钉钉提供了日志接口接入流程示例，请参见[三方系统发起和查看日志信息](0295-log-api-use-cases.md)。
+企业若需要集成更多考勤相关能力，可参考下方内容进行接入：
+
+- [日志数据自动化集成：从业务系统到钉钉日志的无缝流转](0295-log-api-use-cases.md)
 
 ## 名词解释
 

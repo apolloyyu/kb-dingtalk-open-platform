@@ -1,0 +1,78 @@
+# 快照对账 2026-10-20
+
+- 旧：3632 篇（本库 meta/documents.jsonl）
+- 新：3632 篇（/home/yuweilun.ywl/Documents/工作/开放平台/wiki/dingtalk-open-platform-docs-20261020-0701）
+- 新增 0 / 更新 67 / 移动 0 / 删除 0
+
+## 内容更新
+- [服务端SDK下载](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0002-download-the-server-side-sdk.md) · 2026-09-18 → 2026-10-19
+- [概述](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0046-contacts-overview.md) · 2026-07-02 → 2026-10-19
+- [概述](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0164-attendance-overview.md) · 2026-07-02 → 2026-10-19
+- [概述](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0246-dingtalk-event-overview.md) · 2026-07-02 → 2026-10-19
+- [概述](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0279-blackboard-announcement-overview.md) · 2026-07-02 → 2026-10-19
+- [概述](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0290-sign-check-overview.md) · 2026-07-02 → 2026-10-19
+- [概述](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0294-report-log-overview.md) · 2026-07-08 → 2026-10-19
+- [概述](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0306-overview-yida.md) · 2026-08-07 → 2026-10-19
+- [概述](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0396-video-conference-overview.md) · 2026-07-10 → 2026-10-19
+- [概述](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0475-workflow-overview.md) · 2026-10-12 → 2026-10-19
+- [概述](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0730-im-session-overview.md) · 2026-05-15 → 2026-10-19
+- [概述](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0764-message-corpconversation-overview.md) · 2026-07-14 → 2026-10-19
+- [概述](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0858-application-management-overrew.md) · 2026-07-24 → 2026-10-19
+- [概述](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0931-intelligent-personnel-call-description.md) · 2026-07-14 → 2026-10-19
+- [概述](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0967-intelligent-form-filling-overview.md) · 2026-07-14 → 2026-10-19
+- [概述](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1052-jinzhi-crm-interface-call-description.md) · 2026-10-16 → 2026-10-19
+- [客户触达提效：服务群消息自动发送与群发任务管理](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1114-enable-the-service-group-to-send-messages.md) · 2026-07-20 → 2026-10-19
+- [创建项目](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1203-create-project.md) · 2026-06-04 → 2026-10-19
+- [查询项目](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1204-query-enterprise-all-projects.md) · 2026-06-03 → 2026-10-19
+- [归档项目](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1205-archiving-project.md) · 2026-06-04 → 2026-10-19
+- [恢复项目归档](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1206-cancel-project-archiving.md) · 2026-06-03 → 2026-10-19
+- [获取项目成员](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1207-get-project-members.md) · 2026-06-03 → 2026-10-19
+- [查询项目状态](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1208-query-project-status.md) · 2026-06-04 → 2026-10-19
+- [添加项目成员](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1209-add-project-members.md) · 2026-06-04 → 2026-10-19
+- [删除项目成员](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1210-delete-project-members.md) · 2026-06-03 → 2026-10-19
+- [项目放入回收站](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1211-items-in-recycle-bin.md) · 2026-06-08 → 2026-10-19
+- [获取用户加入的项目](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1212-get-projects-joined-by-users.md) · 2026-06-03 → 2026-10-19
+- [搜索企业项目模板](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1213-search-for-enterprise-custom-templates-by-project-template-name.md) · 2026-06-04 → 2026-10-19
+- [根据项目模板创建项目](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1214-create-a-project-from-a-project-template.md) · 2026-06-04 → 2026-10-19
+- [查询员工可见的项目分组](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1215-query-available-project-groups.md) · 2026-06-04 → 2026-10-19
+- [更新项目所在的分组](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1216-update-project-grouping.md) · 2026-06-04 → 2026-10-19
+- [创建或更新项目概览中自定义字段值](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1218-create-or-update-field-values-project-overview.md) · 2026-06-04 → 2026-10-19
+- [创建项目任务](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1219-create-a-project-task.md) · 2026-06-03 → 2026-10-19
+- [删除任务](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1220-delete-task.md) · 2026-06-04 → 2026-10-19
+- [获取任务详情](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1221-get-task-details.md) · 2026-06-03 → 2026-10-19
+- [查询任务分组](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1222-query-task-grouping.md) · 2026-06-03 → 2026-10-19
+- [获取任务列表](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1223-get-task-list.md) · 2026-06-03 → 2026-10-19
+- [查询任务工作流](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1224-query-task-workflow.md) · 2026-06-04 → 2026-10-19
+- [查询用户任务信息列表](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1225-querying-user-tasks.md) · 2026-06-03 → 2026-10-19
+- [查询项目中的任务](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1226-query-tasks-in-a-project.md) · 2026-06-04 → 2026-10-19
+- [添加任务的关联内容](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1227-create-a-linked-object-associated-with-a-task.md) · 2026-06-04 → 2026-10-19
+- [任务迁移至回收站](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1228-archive-tasks.md) · 2026-06-03 → 2026-10-19
+- [搜索任务工作流状态](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1229-search-task-workflow-status.md) · 2026-06-04 → 2026-10-19
+- [更新任务工作流状态](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1230-update-task-workflow-status.md) · 2026-06-04 → 2026-10-19
+- [更新任务备注](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1231-update-task-notes.md) · 2026-06-03 → 2026-10-19
+- [更新任务标题](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1232-update-task-content.md) · 2026-06-03 → 2026-10-19
+- [更新任务执行者](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1233-update-task-performer.md) · 2026-06-03 → 2026-10-19
+- [更新任务优先级](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1234-update-task-priority.md) · 2026-06-03 → 2026-10-19
+- [更新任务参与者](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1235-update-task-participants.md) · 2026-06-03 → 2026-10-19
+- [更新任务截止时间](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1236-update-task-deadline.md) · 2026-06-03 → 2026-10-19
+- [更新任务开始时间](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1237-update-task-start-time.md) · 2026-06-04 → 2026-10-19
+- [更新项目任务的自定义字段值](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1238-update-task-custom-field-value.md) · 2026-06-04 → 2026-10-19
+- [创建自由任务](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1239-create-a-free-task.md) · 2026-06-03 → 2026-10-19
+- [获取自由任务详情](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1240-queries-free-task-details.md) · 2026-06-04 → 2026-10-19
+- [查询优先级列表](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1241-query-a-priority-list.md) · 2026-06-04 → 2026-10-19
+- [批量获取自由任务详情](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1242-obtains-details-about-multiple-free-tasks.md) · 2026-06-04 → 2026-10-19
+- [更新自由任务标题](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1243-change-free-task-title.md) · 2026-06-04 → 2026-10-19
+- [更新自由任务状态](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1244-change-free-task-status.md) · 2026-06-04 → 2026-10-19
+- [更新自由任务备注](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1245-update-free-task-notes.md) · 2026-06-04 → 2026-10-19
+- [更新自由任务执行者](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1246-change-free-task-executor.md) · 2026-06-04 → 2026-10-19
+- [更新自由任务的优先级](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1247-change-free-task-priority.md) · 2026-06-04 → 2026-10-19
+- [更新自由任务截止时间](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1248-change-free-task-deadline.md) · 2026-06-05 → 2026-10-19
+- [增加或删除自由任务的参与者](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1249-change-task-participant.md) · 2026-06-04 → 2026-10-19
+- [创建计划工时](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1250-create-planned-work.md) · 2026-06-03 → 2026-10-19
+- [创建实际工时](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1251-create-actual-work.md) · 2026-06-03 → 2026-10-19
+- [获取Teambition项目企业ID](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1252-obtain-the-teambition-enterprise-id.md) · 2026-06-04 → 2026-10-19
+- [根据userId获取Teambition项目用户ID](docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1253-obtain-dingtalk-teambition-user-id-based-on-userid.md) · 2026-06-04 → 2026-10-19
+
+## 后续动作
+- 结构层（index/ graph/ meta/kb_manifest）：--apply 已全量重建；未 --apply 则本报告仅供预览。
+- 认知层（index/TOPICS.md）：对照上面清单，凡命中 TOPICS 引用的文档（可用 `rg <path> index/TOPICS.md` 与 `graph/links.jsonl` 反查），由 LLM 复核该主题条目是否要改写。

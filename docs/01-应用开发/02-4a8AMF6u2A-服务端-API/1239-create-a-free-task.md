@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "Teambition 项目管理 > 任务 > 自由任务 > 创建自由任务"
 doc_id: "PV6r1qh7mH"
-updated_at: "2026-06-03 09:26:17"
+updated_at: "2026-10-19 09:12:23"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-a-free-task
 > Path: 应用开发 / 服务端 API / Teambition 项目管理 > 任务 > 自由任务 > 创建自由任务
-> Updated: 2026-06-03 09:26:17
+> Updated: 2026-10-19 09:12:23
 
 # 创建自由任务
 
@@ -20,13 +20,11 @@ updated_at: "2026-06-03 09:26:17"
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/project/organizations/users/{userId}/tasks |
 | HTTP Method | POST |
-| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
+| 支持的应用类型 | appType-企业内部应用appType-第三方企业应用 |
 | 权限要求 | permission-Project.Task.Write.All-项目应用任务写权限 |
 
 ### 请求头
@@ -47,11 +45,11 @@ updated_at: "2026-06-03 09:26:17"
 | --- | --- | --- | --- |
 | content | String | 是 | 任务标题。 |
 | note | String | 否 | 任务备注。 |
-| priority | Integer | 是 | 自由任务优先级，如下图所示。用户是否有自定义更新优先级，获取该参数方法不同。   - 用户未更新优先级。该参数默认为以下值：    - **较低，默认值**：10   - **普通**：0   - **紧急**：1   - **非常紧急**：2      - 用户自定义优先级，如下图所示，新增**一般紧急**并调整优先级顺序等，需要通过调用[查询优先级列表](1241-query-a-priority-list.md)接口获取接口获取该参数值。     **[!NOTE]**     - 优先级数值越大，优先级越高。 - 自定义优先级需要开通企业版或者旗舰版项目，开通请参考[开通企业版或旗舰版](https://www.teambition.com/pricing/)。 |
+| priority | Integer | 是 | 自由任务优先级，如下图所示。用户是否有自定义更新优先级，获取该参数方法不同。   - 用户未更新优先级。该参数默认为以下值：    - **较低，默认值**：10   - **普通**：0   - **紧急**：1   - **非常紧急**：2      - 用户自定义优先级，如下图所示，新增**一般紧急**并调整优先级顺序等，需要通过调用[查询优先级列表](1241-query-a-priority-list.md)接口获取接口获取该参数值。          - 优先级数值越大，优先级越高。 - 自定义优先级需要开通企业版或者旗舰版项目，开通请参考[开通企业版或旗舰版](https://www.teambition.com/pricing/)。 |
 | involveMembers | Array of String | 否 | 参与者userId列表，建议参与者总人数不超过20个。 |
 | executorId | String | 否 | 执行者userId。 |
-| dueDate | String | 否 | 任务截止日期，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。  **[!NOTE]**    转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
-| createTime | String | 否 | 任务创建日期，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。  **[!NOTE]**    转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
+| dueDate | String | 否 | 任务截止日期，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。      转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
+| createTime | String | 否 | 任务创建日期，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。      转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
 | visible | String | 是 | 任务可见性。   - **involves**：仅参与者可见 - **members**：所有人可见 |
 | disableNotification | Boolean | 否 | 是否禁止通知。   - **true**：禁止，不显示通知。 - **false**：不禁止，显示通知。 |
 | disableActivity | Boolean | 否 | 是否禁止动态。   - **true**：禁止，不显示该任务动态信息。 - **false**：不禁止，显示该任务动态信息。 |
@@ -537,20 +535,20 @@ namespace AlibabaCloud.SDK.Sample
 | 名称 | 类型 | 描述 |
 | --- | --- | --- |
 | result | Object | 返回结果。 |
-| dueDate | String | 任务截止日期，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。  **[!NOTE]**    转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
+| dueDate | String | 任务截止日期，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。      转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
 | executor | Object | 执行者。 |
 | avatarUrl | String | 执行者头像地址。 |
 | name | String | 执行者姓名。 |
 | userId | String | 执行者userId。 |
-| id | String | 任务id。  **[!NOTE]**    暂无其他接口可获取任务id值，请妥善保存任务id。 |
+| id | String | 任务id。      暂无其他接口可获取任务id值，请妥善保存任务id。 |
 | visible | String | 任务可见性。   - **involves**：仅参与者可见 - **members**：所有人可见 |
-| created | String | 创建时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。  **[!NOTE]**    转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
+| created | String | 创建时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。      转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
 | priority | Integer | 自由任务优先级。   - 使用项目默认的优先级，如下图所示。优先级默认为以下。    - **-10**：较低，默认值。   - **0**：普通   - **1**：紧急   - **2**：非常紧急      - 用户自定义优先级，如下图所示，新增一般紧急并调整优先级顺序等。该参数值以接口实际调用结果为准。优先级越高，数值越大。 |
 | involvers | Array | 参与者信息列表。 |
 | avatarUrl | String | 参与者头像地址。 |
 | name | String | 参与者名字。 |
 | id | String | 参与者userId。 |
-| updated | String | 更新时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。  **[!NOTE]**    转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
+| updated | String | 更新时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。      转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
 | note | String | 任务备注。 |
 | hasReminder | Boolean | 任务是否有提醒。   - **true**：有提醒 - **false**：无提醒 |
 | creatorId | String | 创建者userId。 |

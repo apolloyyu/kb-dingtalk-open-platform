@@ -7,30 +7,24 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "Teambition 项目管理 > 任务 > 项目任务 > 删除任务"
 doc_id: "9dhiHrqqJ2"
-updated_at: "2026-06-04 19:11:38"
+updated_at: "2026-10-19 09:12:05"
 ---
 
 > Source: https://open.dingtalk.com/document/development/delete-task
 > Path: 应用开发 / 服务端 API / Teambition 项目管理 > 任务 > 项目任务 > 删除任务
-> Updated: 2026-06-04 19:11:38
+> Updated: 2026-10-19 09:12:05
 
 # 删除任务
 
-调用本接口删除任务。
-
-## 接口调用说明
-
-该删除操作为永久删除，仅任务创建者和执行者可以操作删除。
+调用本接口删除任务。该删除操作为永久删除，仅任务创建者和执行者可以操作删除。
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/project/users/{userId}/tasks/{taskId} |
 | HTTP Method | DELETE |
-| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
+| 支持的应用类型 | appType-企业内部应用appType-第三方企业应用 |
 | 权限要求 | permission-Project.Task.Write.All-项目应用任务写权限 |
 
 ### 请求头

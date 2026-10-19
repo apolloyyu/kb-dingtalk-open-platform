@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "通讯录管理 > 概述"
 doc_id: "21IqXiWBhF"
-updated_at: "2026-07-02 10:35:39"
+updated_at: "2026-10-19 09:11:14"
 ---
 
 > Source: https://open.dingtalk.com/document/development/contacts-overview
 > Path: 应用开发 / 服务端 API / 通讯录管理 > 概述
-> Updated: 2026-07-02 10:35:39
+> Updated: 2026-10-19 09:11:14
 
 # 概述
 
@@ -227,13 +227,13 @@ updated_at: "2026-07-02 10:35:39"
 
 通讯录支持用户变更、部门变更、角色变更和企业信息变更等回调事件，更多事件可参考[事件订阅总览](../04-LFcRvVD08N-事件订阅/0002-org-event-overview.md)。
 
-## 使用教程
+## 集成方案
 
-钉钉提供了通讯录接口接入流程示例。
+企业若需要集成更多通讯录相关能力，可参考下方内容进行接入：
 
-- [创建、获取、更新和删除企业员工](0047-address-book-employee-operations.md)
-- [创建、获取、更新和删除企业部门](0048-operations-related-to-address-book-departments.md)
-- [企业OA系统与钉钉通讯录实现同步](0049-synchronization-between-enterprise-oa-system-and-dingtalk-address-book.md)
+- [员工信息同步：从HR系统到钉钉通讯录的实时联动](0047-address-book-employee-operations.md)
+- [组织架构维护：部门信息的批量创建与智能更新](0048-operations-related-to-address-book-departments.md)
+- [企业OA与钉钉通讯录双向同步：实现多系统数据闭环](0049-synchronization-between-enterprise-oa-system-and-dingtalk-address-book.md)
 - [第三方个人小程序获取登录用户信息](0050-third-party-personal-applet-to-obtain-login-user-information-tutorial.md)
 
 ## 名词解释

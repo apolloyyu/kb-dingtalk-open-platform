@@ -6,7 +6,7 @@ archived: false
 method: POST
 endpoint: https://api.dingtalk.com/v1.0/project/organizations/users/{userId}/tasks
 api_version: v2-new
-app_types: 第三方企业应用
+app_types: 企业内部应用, 第三方企业应用
 permissions: Project.Task.Write.All
 
 ## Request headers
@@ -20,7 +20,7 @@ permissions: Project.Task.Write.All
 
 ## Body
 - content (String, required): 任务标题。
-- priority (Integer, required): 自由任务优先级，如下图所示。用户是否有自定义更新优先级，获取该参数方法不同。 - 用户未更新优先级。该参数默认为以下值： - **较低，默认值**：10 - **普通**：0 - **紧急**：1 - **非常紧急**：2 - 用户自定义优先级，如下图所示，新增**一般紧急**并调整优先级顺序等，需要通过调用查询优先级列表接口获取接口获取该参数值。 **[!NOTE]** - 优先级数值越大，优先级越高。 - 自定义优先级需要开通企业版或者旗舰版项目，开通请参考开通企业版或旗舰版。
+- priority (Integer, required): 自由任务优先级，如下图所示。用户是否有自定义更新优先级，获取该参数方法不同。 - 用户未更新优先级。该参数默认为以下值： - **较低，默认值**：10 - **普通**：0 - **紧急**：1 - **非常紧急**：2 - 用户自定义优先级，如下图所示，新增**一般紧急**并调整优先级顺序等，需要通过调用查询优先级列表接口获取接口获取该参数值。 - 优先级数值越大，优先级越高。 - 自定义优先级需要开通企业版或者旗舰版项目，开通请参考开通企业版或旗舰版。
 - visible (String, required): 任务可见性。 - **involves**：仅参与者可见 - **members**：所有人可见
 - optional: note(String), involveMembers(Array of String), executorId(String), dueDate(String), createTime(String), disableNotification(Boolean), disableActivity(Boolean)
 
@@ -29,10 +29,10 @@ permissions: Project.Task.Write.All
 
 ## Limits
 - 参与者userId列表，建议参与者总人数不超过20个。
-- 任务截止日期，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。 **[!NOTE]** 转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。
-- 任务创建日期，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。 **[!NOTE]** 转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。
-- 创建时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。 **[!NOTE]** 转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。
-- 更新时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。 **[!NOTE]** 转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。
+- 任务截止日期，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。 转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。
+- 任务创建日期，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。 转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。
+- 创建时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。 转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。
+- 更新时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。 转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。
 
 source_url: https://open.dingtalk.com/document/development/create-a-free-task
-updated_at: 2026-06-03 09:26:17
+updated_at: 2026-10-19 09:12:23

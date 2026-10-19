@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "Teambition 项目管理 > 任务 > 自由任务 > 增加或删除自由任务的参与者"
 doc_id: "drFZ3Xrsnl"
-updated_at: "2026-06-04 19:11:49"
+updated_at: "2026-10-19 09:12:33"
 ---
 
 > Source: https://open.dingtalk.com/document/development/change-task-participant
 > Path: 应用开发 / 服务端 API / Teambition 项目管理 > 任务 > 自由任务 > 增加或删除自由任务的参与者
-> Updated: 2026-06-04 19:11:49
+> Updated: 2026-10-19 09:12:33
 
 # 增加或删除自由任务的参与者
 
@@ -20,14 +20,12 @@ updated_at: "2026-06-04 19:11:49"
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/project/organizations/users/{userId}/tasks/{taskId}/involveMembers |
 | HTTP Method | PUT |
-| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
-| 权限要求 | permission-Project.Task.Write.All-项目应用中任务写权限 |
+| 支持的应用类型 | appType-企业内部应用appType-第三方企业应用 |
+| 权限要求 | permission-Project.Task.Write.All-项目应用任务写权限 |
 
 ### 请求头
 

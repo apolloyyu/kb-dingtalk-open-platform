@@ -7,31 +7,25 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "Teambition 项目管理 > 任务 > 自由任务 > 更新自由任务截止时间"
 doc_id: "1UQ9gGs0EU"
-updated_at: "2026-06-05 15:35:39"
+updated_at: "2026-10-19 09:12:32"
 ---
 
 > Source: https://open.dingtalk.com/document/development/change-free-task-deadline
 > Path: 应用开发 / 服务端 API / Teambition 项目管理 > 任务 > 自由任务 > 更新自由任务截止时间
-> Updated: 2026-06-05 15:35:39
+> Updated: 2026-10-19 09:12:32
 
 # 更新自由任务截止时间
 
 调用本接口，更新自由任务的截止时间。
 
-## 接口调用说明
-
-例如，员工小钉3有个自由任务名为**测试任务1**，任务的截止时间为**2022年6月28日 17：00**，如下图所示。 ![](https://img.alicdn.com/imgextra/i4/O1CN01PIoEMD1YSbvqPbiJT_!!6000000003058-2-tps-2046-1280.png) 调用本接口可以更新该任务的截止时间，将截止时间**2022年6月28日 17：00**更新为**2022年6月30日 17：00**。接口调用成功后的效果如下图所示。 ![](https://img.alicdn.com/imgextra/i2/O1CN01dOhZ5w1uIv63Pv1oM_!!6000000006015-2-tps-2046-1280.png)
-
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/project/organizations/users/{userId}/tasks/{taskId}/dueDates |
 | HTTP Method | PUT |
-| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
-| 权限要求 | permission-Project.Task.Write.All-项目应用中任务写权限 |
+| 支持的应用类型 | appType-企业内部应用appType-第三方企业应用 |
+| 权限要求 | permission-Project.Task.Write.All-项目应用任务写权限 |
 
 ### 请求头
 
@@ -50,7 +44,7 @@ updated_at: "2026-06-05 15:35:39"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| dueDate | String | 是 | 任务截止时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。  **[!NOTE]**    转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
+| dueDate | String | 是 | 任务截止时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。      转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
 | disableActivity | Boolean | 否 | 是否禁止动态。   - **true**：禁止，不显示该任务动态信息。 - **false**：不禁止，显示该任务动态信息。 |
 | disableNotification | Boolean | 否 | 是否禁止通知。   - **true**：禁止，不显示通知。 - **false**：不禁止，显示通知。 |
 
@@ -466,8 +460,8 @@ namespace AlibabaCloud.SDK.Sample
 | 名称 | 类型 | 描述 |
 | --- | --- | --- |
 | result | Object | 返回结果。 |
-| dueDate | String | 更新后的任务截止时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。  **[!NOTE]**    转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
-| updateTime | String | 任务截止时间被更新的时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。  **[!NOTE]**    转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
+| dueDate | String | 更新后的任务截止时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。      转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
+| updateTime | String | 任务截止时间被更新的时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。      转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
 
 ### 响应体示例
 

@@ -6,7 +6,7 @@ archived: false
 method: POST
 endpoint: https://api.dingtalk.com/v1.0/project/users/{userId}/planTimes
 api_version: v2-new
-app_types: 第三方企业应用
+app_types: 企业内部应用, 第三方企业应用
 permissions: Project.Task.Write.All
 
 ## Request headers
@@ -27,13 +27,13 @@ permissions: Project.Task.Write.All
 - submitterId (String, required): 工时提交人员的userId。
 - startDate (String, required): 开始日期，格式：yyyy-MM-dd。
 - endDate (String, required): 结束时间，格式：yyyy-MM-dd。
-- planTime (Long, required): 计划工时时长，单位毫秒，1小时即为3600000。 **[!NOTE]** 不超过24小时。
+- planTime (Long, required): 计划工时时长，单位毫秒，1小时即为3600000。 不超过24小时。
 
 ## Returns
 - optional: result(Object), ok(Boolean), message(String), body(Array), objectId(String), date(String), planTime(Long)
 
 ## Limits
-- 计划工时时长，单位毫秒，1小时即为3600000。 **[!NOTE]** 不超过24小时。
+- 计划工时时长，单位毫秒，1小时即为3600000。 不超过24小时。
 
 source_url: https://open.dingtalk.com/document/development/create-planned-work
-updated_at: 2026-06-03 09:29:38
+updated_at: 2026-10-19 09:12:34

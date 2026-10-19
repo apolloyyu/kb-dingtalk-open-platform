@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "Teambition 项目管理 > 企业和用户 > 获取Teambition项目企业ID"
 doc_id: "92YBLm9XzG"
-updated_at: "2026-06-04 19:11:49"
+updated_at: "2026-10-19 09:12:36"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-the-teambition-enterprise-id
 > Path: 应用开发 / 服务端 API / Teambition 项目管理 > 企业和用户 > 获取Teambition项目企业ID
-> Updated: 2026-06-04 19:11:49
+> Updated: 2026-10-19 09:12:36
 
 # 获取Teambition项目企业ID
 
@@ -20,14 +20,12 @@ updated_at: "2026-06-04 19:11:49"
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/project/teambition/organizations |
 | HTTP Method | GET |
-| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
-| 权限要求 | permission-qyapi\_project-调用钉钉项目管理相关接口的权限 |
+| 支持的应用类型 | appType-企业内部应用appType-第三方企业应用 |
+| 权限要求 | permission-qyapi\_project-钉钉任务管理权限 |
 
 ### 请求头
 

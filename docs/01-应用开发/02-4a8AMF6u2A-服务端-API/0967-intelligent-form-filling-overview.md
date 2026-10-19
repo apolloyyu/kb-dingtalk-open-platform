@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "智能填表 > 概述"
 doc_id: "thzhTAdWnw"
-updated_at: "2026-07-14 09:12:14"
+updated_at: "2026-10-19 09:11:46"
 ---
 
 > Source: https://open.dingtalk.com/document/development/intelligent-form-filling-overview
 > Path: 应用开发 / 服务端 API / 智能填表 > 概述
-> Updated: 2026-07-14 09:12:14
+> Updated: 2026-10-19 09:11:46
 
 # 概述
 
@@ -46,9 +46,11 @@ updated_at: "2026-07-14 09:12:14"
 | [获取填表实例列表](0970-obtain-the-table-filling-instance-list-data.md) | 根据填表的Code获取填表实例列表。 | 新版 |
 | [获取单条填表实例详情](0971-obtains-the-instance-details-of-a-single-fill-table.md) | 获取单条填表实例详情。 | 新版 |
 
-## 使用教程
+## 集成方案
 
-如何获取表单、及表单数据等接入流程，请参见[获取用户的填表数据详情](0968-use-case-form.md)。
+企业若需要集成更多智能填表相关能力，可参考下方内容进行接入：
+
+- [智能填表数据管理：模板查询、实例获取与详情提取](0968-use-case-form.md)
 
 ## 名词解释
 

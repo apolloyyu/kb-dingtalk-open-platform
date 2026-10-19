@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "Teambition 项目管理 > 任务 > 自由任务 > 批量获取自由任务详情"
 doc_id: "JUMHAtQWEc"
-updated_at: "2026-06-04 19:11:45"
+updated_at: "2026-10-19 09:12:26"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtains-details-about-multiple-free-tasks
 > Path: 应用开发 / 服务端 API / Teambition 项目管理 > 任务 > 自由任务 > 批量获取自由任务详情
-> Updated: 2026-06-04 19:11:45
+> Updated: 2026-10-19 09:12:26
 
 # 批量获取自由任务详情
 
@@ -20,14 +20,12 @@ updated_at: "2026-06-04 19:11:45"
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/project/organizations/users/{userId}/tasks |
 | HTTP Method | GET |
-| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
-| 权限要求 | permission-Project.Task.Read.All-项目应用中任务读权限 |
+| 支持的应用类型 | appType-企业内部应用appType-第三方企业应用 |
+| 权限要求 | permission-Project.Task.Read.All-项目应用任务读权限 |
 
 ### 请求头
 

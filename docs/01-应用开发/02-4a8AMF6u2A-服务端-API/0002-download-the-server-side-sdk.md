@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "API 调用指南 > 服务端SDK下载"
 doc_id: "5sZqhSBh98"
-updated_at: "2026-09-18 09:11:25"
+updated_at: "2026-10-19 09:15:07"
 ---
 
 > Source: https://open.dingtalk.com/document/development/download-the-server-side-sdk
 > Path: 应用开发 / 服务端 API / API 调用指南 > 服务端SDK下载
-> Updated: 2026-09-18 09:11:25
+> Updated: 2026-10-19 09:15:07
 
 # 服务端SDK下载
 

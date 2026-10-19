@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "Teambition 项目管理 > 项目 > 获取项目成员"
 doc_id: "ZTRKxOMy6w"
-updated_at: "2026-06-03 09:19:54"
+updated_at: "2026-10-19 09:11:54"
 ---
 
 > Source: https://open.dingtalk.com/document/development/get-project-members
 > Path: 应用开发 / 服务端 API / Teambition 项目管理 > 项目 > 获取项目成员
-> Updated: 2026-06-03 09:19:54
+> Updated: 2026-10-19 09:11:54
 
 # 获取项目成员
 
@@ -20,13 +20,11 @@ updated_at: "2026-06-03 09:19:54"
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/project/users/{userId}/projects/{projectId}/members |
 | HTTP Method | GET |
-| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
+| 支持的应用类型 | appType-企业内部应用appType-第三方企业应用 |
 | 权限要求 | permission-Project.Project.Read.All-项目应用项目读权限 |
 
 ### 请求头
@@ -46,8 +44,8 @@ updated_at: "2026-06-03 09:19:54"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| userIds | String | 否 | 用户ID。  **[!NOTE]**    多个ID，使用英文逗号分隔。 |
-| projectRoleId | String | 否 | 项目角色ID。  **[!NOTE]**    仅查询拥有该角色的成员，并且仅支持单个角色查询。 |
+| userIds | String | 否 | 用户ID。      多个ID，使用英文逗号分隔。 |
+| projectRoleId | String | 否 | 项目角色ID。      仅查询拥有该角色的成员，并且仅支持单个角色查询。 |
 | maxResults | Integer | 否 | 每页返回最大数量。默认10，最大300。 |
 | skip | Integer | 否 | 跳过的数据数量。 |
 

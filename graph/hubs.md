@@ -23,8 +23,8 @@
 - 37 ← [获取用户通讯录个人信息](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0053-dingtalk-retrieve-user-information.md)（服务端 API）
 - 37 ← [添加空间](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0651-add-space.md)（服务端 API）
 - 34 ← [获取文件或文件夹列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0665-get-a-list-of-files-or-folders.md)（服务端 API）
-- 30 ← [添加接口调用权限](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0003-add-api-permission.md)（服务端 API）
 - 30 ← [获取部门列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1153-obtains-the-department-node-list.md)（服务端 API）
+- 29 ← [添加接口调用权限](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0003-add-api-permission.md)（服务端 API）
 - 27 ← [发起审批实例](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0496-create-an-approval-instance.md)（服务端 API）
 - 27 ← [概述](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0552-knowledge-base-overview.md)（服务端 API）
 - 26 ← [获取所有工作表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0594-obtain-all-worksheets.md)（服务端 API）

@@ -6,7 +6,7 @@ archived: false
 method: POST
 endpoint: https://api.dingtalk.com/v1.0/project/users/{userId}/tasks
 api_version: v2-new
-app_types: 第三方企业应用
+app_types: 企业内部应用, 第三方企业应用
 permissions: Project.Task.Write.All
 
 ## Request headers
@@ -19,7 +19,7 @@ permissions: Project.Task.Write.All
 - none
 
 ## Body
-- projectId (String, required): 项目id。 **[!NOTE]** 目前需要从项目链接中获取该参数值，获取步骤：进入**项目** > 右上角单击**菜单** > **复制链接** 得到的项目链接示例：https://www.teambition.com/project/62c794xxxxx，project下一级路径的值就是项目id。
+- projectId (String, required): 项目id。 目前需要从项目链接中获取该参数值，获取步骤：进入**项目** > 右上角单击**菜单** > **复制链接** 得到的项目链接示例：https://www.teambition.com/project/62c794xxxxx，project下一级路径的值就是项目id。
 - content (String, required): 任务标题。
 - optional: executorId(String), dueDate(String), note(String), priority(Integer), customfields(Array), customfieldName(String), customfieldId(String), value(Array), title(String), id(String), thumbUrl(String), stageId(String), parentTaskId(String), scenariofieldconfigId(String), startDate(String), visible(String)
 
@@ -27,9 +27,9 @@ permissions: Project.Task.Write.All
 - optional: result(Object), taskId(String), content(String), involveMembers(Array of String), projectId(String), executorId(String), creatorId(String), created(String), updated(String), note(String), dueDate(String), priority(Integer), customfields(Array), customfieldId(String), value(Array), title(String)
 
 ## Limits
-- 任务截止时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。 **[!NOTE]** 转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。
-- 任务创建时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。 **[!NOTE]** 转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。
-- 任务更新时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。 **[!NOTE]** 转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。
+- 任务截止时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。 转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。
+- 任务创建时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。 转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。
+- 任务更新时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。 转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。
 
 source_url: https://open.dingtalk.com/document/development/create-a-project-task
-updated_at: 2026-06-03 09:26:02
+updated_at: 2026-10-19 09:12:04

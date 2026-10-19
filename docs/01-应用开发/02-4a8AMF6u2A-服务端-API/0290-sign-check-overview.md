@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "签到 > 概述"
 doc_id: "IcHeHSUtzQ"
-updated_at: "2026-07-02 10:36:28"
+updated_at: "2026-10-19 09:11:25"
 ---
 
 > Source: https://open.dingtalk.com/document/development/sign-check-overview
 > Path: 应用开发 / 服务端 API / 签到 > 概述
-> Updated: 2026-07-02 10:36:28
+> Updated: 2026-10-19 09:11:25
 
 # 概述
 
@@ -46,13 +46,15 @@ updated_at: "2026-07-02 10:36:28"
 | [获取用户签到记录](0292-obtain-the-check-in-records-of-multiple-users.md) | 获取用户签到记录。 | 旧版 |
 | [获取部门用户签到记录](0293-get-check-in-data.md) | 以部门维度获取员工签到记录。 | 旧版 |
 
-### 签到回调事件列表
+### 回调事件列表
 
 签到支持[用户签到](../04-LFcRvVD08N-事件订阅/0014-event-check-in.md)回调事件。
 
-## 使用教程
+## 集成方案
 
-钉钉提供了签到接口接入流程示例，请参见[获取员工签到信息](0291-obtain-check-in-information.md)。
+企业若需要集成更多签到相关能力，可参考下方内容进行接入：
+
+- [签到数据自动采集：从钉钉签到到业务系统实时同步](0291-obtain-check-in-information.md)
 
 ## 名词解释
 

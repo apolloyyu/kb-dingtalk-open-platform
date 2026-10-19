@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "音视频 > 概述"
 doc_id: "Emt0eX1v74"
-updated_at: "2026-07-10 10:05:13"
+updated_at: "2026-10-19 09:11:31"
 ---
 
 > Source: https://open.dingtalk.com/document/development/video-conference-overview
 > Path: 应用开发 / 服务端 API / 音视频 > 概述
-> Updated: 2026-07-10 10:05:13
+> Updated: 2026-10-19 09:11:31
 
 # 概述
 
@@ -49,7 +49,9 @@ updated_at: "2026-07-10 10:05:13"
 
     ![视频会议.png](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/3119463871/p731067.png)
 
-### **开放接口列表**
+### **开放概览**
+
+#### **开放接口列表**
 
 视频会议提供了丰富的接口开放能力，开发者通过API接口可以实现视频会议和企业业务系统打通。
 
@@ -86,9 +88,15 @@ updated_at: "2026-07-10 10:05:13"
 | [查询会议录制中的视频信息](0429-queries-the-playback-information-about-a-recorded-cloud-video.md) | 查询会议录制中的视频信息。 | 新版 |
 | [查询会议录制中的文本信息](0430-queries-the-text-information-about-cloud-recording.md) | 查询视频会议录制的语音转文字信息 | 新版 |
 
-### 回调事件列表
+#### **回调事件列表**
 
 视频会议支持人事档案变动回调事件，更多事件可参考[事件订阅总览](../04-LFcRvVD08N-事件订阅/0002-org-event-overview.md)。
+
+### **集成方案**
+
+企业若需要集成更多视频会议相关能力，可参考下方内容进行接入：
+
+- [视频会议自动化：从业务系统到钉钉会议无缝集成](0397-create-and-close-video-meetings.md)
 
 ## **直播**
 
@@ -113,7 +121,9 @@ updated_at: "2026-07-10 10:05:13"
 
 ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/2293231661/p480498.png)
 
-### **开放接口列表**
+### **开放概览**
+
+#### **开放接口列表**
 
 直播提供了丰富的开放接口，开发者通过API接口可以实现钉钉直播原生能力调用。
 
@@ -125,7 +135,7 @@ updated_at: "2026-07-10 10:05:13"
 | [修改直播属性信息](0434-modify-live-streaming.md) | 修改直播属性信息。 | 新版 |
 | [查询直播观看人员信息](0435-queries-the-viewing-information-of-viewers.md) | 查询直播观看人员的具体观看信息。 | 新版 |
 
-### **回调事件列表**
+#### **回调事件列表**
 
 直播支持状态变化、修改信息和观看回放信息回调事件。
 
@@ -133,6 +143,12 @@ updated_at: "2026-07-10 10:05:13"
 - [直播信息修改](../04-LFcRvVD08N-事件订阅/0075-event-live-update-event.md)
 - [直播回放观看数据推送](../04-LFcRvVD08N-事件订阅/0076-event-live-watch-playback-event.md)
 - [直播结束数据处理完成事件](../04-LFcRvVD08N-事件订阅/0077-event-live-statistic-done-event.md)
+
+### **集成方案**
+
+企业若需要集成更多直播相关能力，可参考下方内容进行接入：
+
+- [直播全链路：自动创建培训与观看数据实时追踪](0398-initiate-and-delete-live-broadcast.md)
 
 ### **名词解释**
 
@@ -186,52 +202,59 @@ updated_at: "2026-07-10 10:05:13"
 
   在钉钉电脑客户端**工作台**页面，在**全员**内单击**添加**，在搜索框输入**智能会议室**，单击**添加**。![图片排版-钉钉端展示-1张图1备份 12345](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/3119463871/p511855.png)
 
-### **开放接口列表**
+### **开放概览**
+
+#### **开放接口列表**
 
 智能会议室提供了丰富的开放接口，开发者通过API接口可以实现钉钉智能会议室管理。
 
-#### **会议室**
+- **会议室**
 
-| **API** | **API说明** | **API版本** |
-| --- | --- | --- |
-| [创建会议室](0436-create-a-meeting-room.md) | 创建会议室。 | 新版 |
-| [删除会议室](0437-delete-a-meeting-room.md) | 删除会议室。 | 新版 |
-| [更新会议室信息](0438-update-meeting-room-information.md) | 更新会议室信息。 | 新版 |
-| [查询会议室列表](0439-check-the-meeting-room-list.md) | 查询会议室列表。 | 新版 |
-| [查询会议室详情](0440-check-meeting-room-details.md) | 查询会议室详情。 | 新版 |
-| [创建会议室预定黑名单](0441-api-createbookingblacklist.md) | 调用本接口，可以创建会议室预定黑名单。 | 新版 |
-| [删除会议室预定黑名单](0442-api-deletebookingblacklist.md) | 调用本接口，删除会议室预定黑名单。 | 新版 |
-| [查询视频会议设备信息](0443-querying-video-conference-device-information.md) | 查询视频会议设备信息 | 新版 |
-| [查询视频会议设备属性信息](0444-querying-video-conference-device-attribute-information.md) | 查询视频会议设备属性信息 | 新版 |
-| [发送Rooms中控API信令](0445-api-sendcentralcontrol.md) | 给会议室中的设备发送中控信令，属于高级功能。 | 新版 |
+  | **API** | **API说明** | **API版本** |
+  | --- | --- | --- |
+  | [创建会议室](0436-create-a-meeting-room.md) | 创建会议室。 | 新版 |
+  | [删除会议室](0437-delete-a-meeting-room.md) | 删除会议室。 | 新版 |
+  | [更新会议室信息](0438-update-meeting-room-information.md) | 更新会议室信息。 | 新版 |
+  | [查询会议室列表](0439-check-the-meeting-room-list.md) | 查询会议室列表。 | 新版 |
+  | [查询会议室详情](0440-check-meeting-room-details.md) | 查询会议室详情。 | 新版 |
+  | [创建会议室预定黑名单](0441-api-createbookingblacklist.md) | 调用本接口，可以创建会议室预定黑名单。 | 新版 |
+  | [删除会议室预定黑名单](0442-api-deletebookingblacklist.md) | 调用本接口，删除会议室预定黑名单。 | 新版 |
+  | [查询视频会议设备信息](0443-querying-video-conference-device-information.md) | 查询视频会议设备信息 | 新版 |
+  | [查询视频会议设备属性信息](0444-querying-video-conference-device-attribute-information.md) | 查询视频会议设备属性信息 | 新版 |
+  | [发送Rooms中控API信令](0445-api-sendcentralcontrol.md) | 给会议室中的设备发送中控信令，属于高级功能。 | 新版 |
+- **会议室分组**
 
-#### **会议室分组**
+  | **API** | **API说明** | **API版本** |
+  | --- | --- | --- |
+  | [创建会议室分组](0446-create-meeting-room-groups.md) | 创建会议室分组。 | 新版 |
+  | [删除会议室分组](0447-delete-a-conference-room-group.md) | 删除会议室分组。 | 新版 |
+  | [获取分组管理员信息](0448-api-querymeetingroomgroupadmin.md) | 查询会议室分组管理员信息。 | 新版 |
+  | [更新会议室分组信息](0449-update-meeting-room-groups.md) | 更新会议室分组的信息。 | 新版 |
+  | [查询会议室分组列表](0450-query-meeting-rooms-groups.md) | 查询会议室分组列表。 | 新版 |
+  | [查询会议室分组信息](0451-query-meeting-room-groups.md) | 查询会议室分组信息。 | 新版 |
+- **自定义屏幕模板**
 
-| **API** | **API说明** | **API版本** |
-| --- | --- | --- |
-| [创建会议室分组](0446-create-meeting-room-groups.md) | 创建会议室分组。 | 新版 |
-| [删除会议室分组](0447-delete-a-conference-room-group.md) | 删除会议室分组。 | 新版 |
-| [获取分组管理员信息](0448-api-querymeetingroomgroupadmin.md) | 查询会议室分组管理员信息。 | 新版 |
-| [更新会议室分组信息](0449-update-meeting-room-groups.md) | 更新会议室分组的信息。 | 新版 |
-| [查询会议室分组列表](0450-query-meeting-rooms-groups.md) | 查询会议室分组列表。 | 新版 |
-| [查询会议室分组信息](0451-query-meeting-room-groups.md) | 查询会议室分组信息。 | 新版 |
+  | **API** | **API说明** | **API版本** |
+  | --- | --- | --- |
+  | [创建自定义屏幕模板](0452-api-createdevicecustomtemplate.md) | 调用本接口，根据模板名称创建自定义屏幕模板。 | 新版 |
+  | [删除自定义屏幕模板](0453-api-deletedevicecustomtemplate.md) | 调用本接口，根据模板ID，删除自定义屏幕模板。 | 新版 |
+  | [更新自定义屏幕模板](0454-api-updatedevicecustomtemplate.md) | 根据自定义屏幕模板ID，更新自定义屏幕模板信息内容。 | 新版 |
+  | [查询自定义屏幕信息](0455-api-querydevicecustomtemplate.md) | 根据模板id，查询自定义屏幕信息。 | 新版 |
+  | [查询自定义屏幕模板列表](0456-api-querylistdevicecustomscreentemplate.md) | 调用本接口，直接查询自定义屏幕模板列表信息。 | 新版 |
 
-#### **自定义屏幕模板**
-
-| **API** | **API说明** | **API版本** |
-| --- | --- | --- |
-| [创建自定义屏幕模板](0452-api-createdevicecustomtemplate.md) | 调用本接口，根据模板名称创建自定义屏幕模板。 | 新版 |
-| [删除自定义屏幕模板](0453-api-deletedevicecustomtemplate.md) | 调用本接口，根据模板ID，删除自定义屏幕模板。 | 新版 |
-| [更新自定义屏幕模板](0454-api-updatedevicecustomtemplate.md) | 根据自定义屏幕模板ID，更新自定义屏幕模板信息内容。 | 新版 |
-| [查询自定义屏幕信息](0455-api-querydevicecustomtemplate.md) | 根据模板id，查询自定义屏幕信息。 | 新版 |
-| [查询自定义屏幕模板列表](0456-api-querylistdevicecustomscreentemplate.md) | 调用本接口，直接查询自定义屏幕模板列表信息。 | 新版 |
-
-### **回调事件列表**
+#### **回调事件列表**
 
 会议室支持预定等事件，包括预定成功、取消等。
 
 - [设备中控事件](../04-LFcRvVD08N-事件订阅/0079-events-open-meeting-room-central-control.md)
 - [会议室事件](../04-LFcRvVD08N-事件订阅/0078-nqrbp8.md)
+
+### **集成方案**
+
+企业若需要集成更多智能会议室相关能力，可参考下方内容进行接入：
+
+- [构建会议室资源池：数据上钉实现会议室高效调度](0399-conference-room-operation-process.md)
+- [构建会议室分级体系：数据上钉实现会议室批量调度](0400-meeting-room-grouping-operation-process.md)
 
 ### **名词解释**
 

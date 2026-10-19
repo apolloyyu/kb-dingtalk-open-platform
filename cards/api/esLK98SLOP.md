@@ -6,7 +6,7 @@ archived: false
 method: GET
 endpoint: https://api.dingtalk.com/v1.0/project/organizations/users/{userId}/templates
 api_version: v2-new
-app_types: 第三方企业应用
+app_types: 企业内部应用, 第三方企业应用
 permissions: Project.Project.Read.All
 
 ## Request headers
@@ -28,4 +28,4 @@ permissions: Project.Project.Read.All
 - none stated
 
 source_url: https://open.dingtalk.com/document/development/search-for-enterprise-custom-templates-by-project-template-name
-updated_at: 2026-06-04 19:11:35
+updated_at: 2026-10-19 09:12:00

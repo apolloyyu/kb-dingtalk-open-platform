@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "即时通信 > 消息通知 > 概述"
 doc_id: "mFJlnjOloh"
-updated_at: "2026-07-14 09:08:48"
+updated_at: "2026-10-19 09:11:40"
 ---
 
 > Source: https://open.dingtalk.com/document/development/message-corpconversation-overview
 > Path: 应用开发 / 服务端 API / 即时通信 > 消息通知 > 概述
-> Updated: 2026-07-14 09:08:48
+> Updated: 2026-10-19 09:11:40
 
 # 概述
 
@@ -53,7 +53,7 @@ updated_at: "2026-07-14 09:08:48"
 
 如下图所示，使用消息模板发送工作通知需要完成以下操作：
 
-1. 创建并配置消息模板，详情请参考[管理消息模板](0765-manage-message-templates.md)。
+1. 创建并配置消息模板，详情请参考[消息模板](0765-manage-message-templates.md)。
 2. 模板审核。
 3. 调用使用模板发送工作通知接口，详情请参考[使用模板发送工作通知消息](0774-work-notification-templating-send-notification-interface.md)。
 
@@ -72,13 +72,18 @@ updated_at: "2026-07-14 09:08:48"
 | [撤回工作通知消息](0770-notification-of-work-withdrawal.md) | 撤回工作消息通知。 | 旧版 |
 | [使用模板发送工作通知消息](0774-work-notification-templating-send-notification-interface.md) | 使用消息模板发送工作通知。 | 旧版 |
 
-## 如何接入消息通知接口能力
+## 使用教程
 
 钉钉提供了消息通知接口接入流程示例。
 
 - [点击工作通知跳转到钉钉小程序](0767-send-personal-work-notifications.md)
 - [点击工作通知跳转到网页应用](0766-redirect-micro-applications-to-work-messages.md)
-- [发送、查询、撤回工作通知](0768-work-notice-option.md)
+
+## 集成方案
+
+企业若需要集成更多消息通知相关能力，可参考下方内容进行接入：
+
+- [工作通知消息管理：发送、查询与撤回开发实践](0768-work-notice-option.md)
 
 ## 名词解释
 

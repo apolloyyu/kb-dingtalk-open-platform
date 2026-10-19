@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "Teambition 项目管理 > 工时 > 创建实际工时"
 doc_id: "0fgFjKBxLt"
-updated_at: "2026-06-03 09:29:40"
+updated_at: "2026-10-19 09:12:35"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-actual-work
 > Path: 应用开发 / 服务端 API / Teambition 项目管理 > 工时 > 创建实际工时
-> Updated: 2026-06-03 09:29:40
+> Updated: 2026-10-19 09:12:35
 
 # 创建实际工时
 
@@ -20,13 +20,11 @@ updated_at: "2026-06-03 09:29:40"
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/project/users/{userId}/workTimes |
 | HTTP Method | POST |
-| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
+| 支持的应用类型 | appType-企业内部应用appType-第三方企业应用 |
 | 权限要求 | permission-Project.Task.Write.All-项目应用任务写权限 |
 
 ### 请求头
@@ -57,9 +55,9 @@ updated_at: "2026-06-03 09:29:40"
 | submitterId | String | 是 | 工时提交人员的userId。 |
 | isDuration | Boolean | 是 | 当startDate和endDate指定的时间跨天时，添加的工时时长是否平均分配。   - **true**：表示将workTime时长的实际工时平均分配给对应的日期。 - **false**：表示每个日期都添加workTime时长的实际工时。 |
 | includesHolidays | Boolean | 是 | 添加实际工时的日期是否包含假期。   - **true**：表示日期范围内如果有假期，则假期也添加工时。 - **false**：表示日期范围内如果有假期，则假期不添加工时。 |
-| startDate | String | 是 | 添加实际工时的开始日期，格式：yyyy-MM-dd。  **[!NOTE]**    实际工时的开始日期不能早于当前日期。 |
+| startDate | String | 是 | 添加实际工时的开始日期，格式：yyyy-MM-dd。      实际工时的开始日期不能早于当前日期。 |
 | endDate | String | 是 | 添加实际工时的结束日期，格式：yyyy-MM-dd。 |
-| workTime | Long | 是 | 实际工时时长，单位毫秒，1小时即为3600000。  **[!NOTE]**    不超过24小时。 |
+| workTime | Long | 是 | 实际工时时长，单位毫秒，1小时即为3600000。      不超过24小时。 |
 | description | String | 否 | 工作进展描述 |
 
 ### 请求示例

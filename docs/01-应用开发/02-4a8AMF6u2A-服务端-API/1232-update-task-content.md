@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "Teambition 项目管理 > 任务 > 项目任务 > 更新任务标题"
 doc_id: "dyjJ7hMXNs"
-updated_at: "2026-06-03 09:26:10"
+updated_at: "2026-10-19 09:12:16"
 ---
 
 > Source: https://open.dingtalk.com/document/development/update-task-content
 > Path: 应用开发 / 服务端 API / Teambition 项目管理 > 任务 > 项目任务 > 更新任务标题
-> Updated: 2026-06-03 09:26:10
+> Updated: 2026-10-19 09:12:16
 
 # 更新任务标题
 
@@ -20,13 +20,11 @@ updated_at: "2026-06-03 09:26:10"
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/project/users/{userId}/tasks/{taskId}/contents |
 | HTTP Method | PUT |
-| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
+| 支持的应用类型 | appType-企业内部应用appType-第三方企业应用 |
 | 权限要求 | permission-Project.Task.Write.All-项目应用任务写权限 |
 
 ### 请求头
@@ -439,7 +437,7 @@ namespace AlibabaCloud.SDK.Sample
 | --- | --- | --- |
 | result | Object | 结果。 |
 | content | String | 任务标题。 |
-| updated | String | 更新时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。  **[!NOTE]**    转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
+| updated | String | 更新时间，格式：YYYY-MM-DDTHH:mm:ssZ（ISO 8601/RFC 3339）。      转换成北京时间，需要在参数时间基础上加8小时。例如参数值为2022-06-20T00:00:00Z，表示的北京时间为2022-06-20 08:00:00。 |
 
 ### 响应体示例
 

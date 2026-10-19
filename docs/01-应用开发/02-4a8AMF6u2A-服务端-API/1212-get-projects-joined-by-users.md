@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "Teambition 项目管理 > 项目 > 获取用户加入的项目"
 doc_id: "emScPgy3gC"
-updated_at: "2026-06-03 09:19:56"
+updated_at: "2026-10-19 09:11:59"
 ---
 
 > Source: https://open.dingtalk.com/document/development/get-projects-joined-by-users
 > Path: 应用开发 / 服务端 API / Teambition 项目管理 > 项目 > 获取用户加入的项目
-> Updated: 2026-06-03 09:19:56
+> Updated: 2026-10-19 09:11:59
 
 # 获取用户加入的项目
 
@@ -20,13 +20,11 @@ updated_at: "2026-06-03 09:19:56"
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/project/users/{userId}/joinProjects |
 | HTTP Method | GET |
-| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
+| 支持的应用类型 | appType-企业内部应用appType-第三方企业应用 |
 | 权限要求 | permission-Project.Project.Read.All-项目应用项目读权限 |
 
 ### 请求头
@@ -45,7 +43,7 @@ updated_at: "2026-06-03 09:19:56"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| maxResults | Integer | 否 | 分页大小。  **[!NOTE]**    不传则显示全部项目。 |
+| maxResults | Integer | 否 | 分页大小。      不传则显示全部项目。 |
 | nextToken | String | 否 | 分页标。 |
 
 ### 请求示例

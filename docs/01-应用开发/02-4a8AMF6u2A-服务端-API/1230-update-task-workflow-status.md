@@ -7,30 +7,24 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "Teambition 项目管理 > 任务 > 项目任务 > 更新任务工作流状态"
 doc_id: "0HRUTXENfF"
-updated_at: "2026-06-04 19:11:41"
+updated_at: "2026-10-19 09:12:14"
 ---
 
 > Source: https://open.dingtalk.com/document/development/update-task-workflow-status
 > Path: 应用开发 / 服务端 API / Teambition 项目管理 > 任务 > 项目任务 > 更新任务工作流状态
-> Updated: 2026-06-04 19:11:41
+> Updated: 2026-10-19 09:12:14
 
 # 更新任务工作流状态
 
-调用本接口，更新任务工作流状态。
-
-## 接口调用说明
-
-该接口调用后是更新任务的任务状态，而不是更新任务状态本身字段内的内容。
+调用本接口，更新任务工作流状态。该接口调用后是更新任务的任务状态，而不是更新任务状态本身字段内的内容。
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/project/users/{userId}/tasks/{taskId}/taskflowStatuses |
 | HTTP Method | PUT |
-| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
+| 支持的应用类型 | appType-企业内部应用appType-第三方企业应用 |
 | 权限要求 | permission-Project.Task.Write.All-项目应用任务写权限 |
 
 ### 请求头

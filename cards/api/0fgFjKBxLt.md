@@ -6,7 +6,7 @@ archived: false
 method: POST
 endpoint: https://api.dingtalk.com/v1.0/project/users/{userId}/workTimes
 api_version: v2-new
-app_types: 第三方企业应用
+app_types: 企业内部应用, 第三方企业应用
 permissions: Project.Task.Write.All
 
 ## Request headers
@@ -25,16 +25,16 @@ permissions: Project.Task.Write.All
 - submitterId (String, required): 工时提交人员的userId。
 - isDuration (Boolean, required): 当startDate和endDate指定的时间跨天时，添加的工时时长是否平均分配。 - **true**：表示将workTime时长的实际工时平均分配给对应的日期。 - **false**：表示每个日期都添加workTime时长的实际工时。
 - includesHolidays (Boolean, required): 添加实际工时的日期是否包含假期。 - **true**：表示日期范围内如果有假期，则假期也添加工时。 - **false**：表示日期范围内如果有假期，则假期不添加工时。
-- startDate (String, required): 添加实际工时的开始日期，格式：yyyy-MM-dd。 **[!NOTE]** 实际工时的开始日期不能早于当前日期。
+- startDate (String, required): 添加实际工时的开始日期，格式：yyyy-MM-dd。 实际工时的开始日期不能早于当前日期。
 - endDate (String, required): 添加实际工时的结束日期，格式：yyyy-MM-dd。
-- workTime (Long, required): 实际工时时长，单位毫秒，1小时即为3600000。 **[!NOTE]** 不超过24小时。
+- workTime (Long, required): 实际工时时长，单位毫秒，1小时即为3600000。 不超过24小时。
 - optional: description(String)
 
 ## Returns
 - optional: result(Object), ok(Boolean), message(String), body(Array), taskId(String), date(String), workTime(Long)
 
 ## Limits
-- 实际工时时长，单位毫秒，1小时即为3600000。 **[!NOTE]** 不超过24小时。
+- 实际工时时长，单位毫秒，1小时即为3600000。 不超过24小时。
 
 source_url: https://open.dingtalk.com/document/development/create-actual-work
-updated_at: 2026-06-03 09:29:40
+updated_at: 2026-10-19 09:12:35

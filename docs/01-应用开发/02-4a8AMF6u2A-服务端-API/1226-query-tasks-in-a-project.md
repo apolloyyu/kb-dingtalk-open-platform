@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "Teambition 项目管理 > 任务 > 项目任务 > 查询项目中的任务"
 doc_id: "XFxugf87aR"
-updated_at: "2026-06-04 19:11:40"
+updated_at: "2026-10-19 09:12:11"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-tasks-in-a-project
 > Path: 应用开发 / 服务端 API / Teambition 项目管理 > 任务 > 项目任务 > 查询项目中的任务
-> Updated: 2026-06-04 19:11:40
+> Updated: 2026-10-19 09:12:11
 
 # 查询项目中的任务
 
@@ -20,13 +20,11 @@ updated_at: "2026-06-04 19:11:40"
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/project/users/{userId}/projectIds/{projectId}/tasks |
 | HTTP Method | GET |
-| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
+| 支持的应用类型 | appType-企业内部应用appType-第三方企业应用 |
 | 权限要求 | permission-Project.Task.Read.All-项目应用任务读权限 |
 
 ### 请求头

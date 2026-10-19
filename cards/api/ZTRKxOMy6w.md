@@ -6,7 +6,7 @@ archived: false
 method: GET
 endpoint: https://api.dingtalk.com/v1.0/project/users/{userId}/projects/{projectId}/members
 api_version: v2-new
-app_types: 第三方企业应用
+app_types: 企业内部应用, 第三方企业应用
 permissions: Project.Project.Read.All
 
 ## Request headers
@@ -29,4 +29,4 @@ permissions: Project.Project.Read.All
 - 每页返回最大数量。默认10，最大300。
 
 source_url: https://open.dingtalk.com/document/development/get-project-members
-updated_at: 2026-06-03 09:19:54
+updated_at: 2026-10-19 09:11:54

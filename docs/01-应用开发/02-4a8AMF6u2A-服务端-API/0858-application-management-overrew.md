@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "钉钉应用 > 概述"
 doc_id: "JpJhDg3nOv"
-updated_at: "2026-07-24 09:16:39"
+updated_at: "2026-10-19 09:11:42"
 ---
 
 > Source: https://open.dingtalk.com/document/development/application-management-overrew
 > Path: 应用开发 / 服务端 API / 钉钉应用 > 概述
-> Updated: 2026-07-24 09:16:39
+> Updated: 2026-10-19 09:11:42
 
 # 概述
 
@@ -53,7 +53,7 @@ updated_at: "2026-07-24 09:16:39"
 | **API** | **说明** | **API版本** |
 | --- | --- | --- |
 | [更新企业内部应用的可使用范围](0870-update-the-visible-range-of-micro-applications.md) | 更新企业内部应用的可使用范围。 | 新版 |
-| [获取企业内部应用的可使用范围](0871-obtains-the-application-visible-range.md) | 获取企业内部应用的可使用范围信息。 | 新版 |
+| [获取企业应用的可使用范围](0871-obtains-the-application-visible-range.md) | 获取企业内部应用的可使用范围信息。 | 新版 |
 
 #### **智能体**
 
@@ -67,6 +67,8 @@ updated_at: "2026-07-24 09:16:39"
 
 应用管理提供了小程序版本发布事件、小程序版本回滚事件、企业内部应用发布、企业内部应用状态变更等多个事件，更多信息可参考[事件订阅总览](../04-LFcRvVD08N-事件订阅/0002-org-event-overview.md)。
 
-## 使用教程
+## 集成方案
 
-钉钉提供了应用管理接口接入流程示例，请参见[应用的全生命周期管理](0859-application-management-workflow.md)。
+企业若需要集成更多钉钉应用相关能力，可参考下方内容进行接入：
+
+- [应用全生命周期管控：自动化创建、查询与权限配置](0859-application-management-workflow.md)

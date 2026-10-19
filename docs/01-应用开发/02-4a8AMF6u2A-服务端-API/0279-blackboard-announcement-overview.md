@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "公告 > 概述"
 doc_id: "ntP5GfVOFL"
-updated_at: "2026-07-02 10:36:24"
+updated_at: "2026-10-19 09:11:24"
 ---
 
 > Source: https://open.dingtalk.com/document/development/blackboard-announcement-overview
 > Path: 应用开发 / 服务端 API / 公告 > 概述
-> Updated: 2026-07-02 10:36:24
+> Updated: 2026-10-19 09:11:24
 
 # 概述
 
@@ -51,9 +51,11 @@ updated_at: "2026-07-02 10:36:24"
 
 公告支持[公告发送](../04-LFcRvVD08N-事件订阅/0019-events-blackboard-sent.md)回调事件。
 
-## **使用教程**
+## 集成方案
 
-钉钉提供了公告接口接入流程示例，请参见[创建、获取、更新及删除公告](0280-create-and-delete-announcements.md)**。**
+企业若需要集成更多公告相关能力，可参考下方内容进行接入：
+
+- [通知自动发布：从自有系统到钉钉公告的触达闭环](0280-create-and-delete-announcements.md)
 
 ## 名词解释
 

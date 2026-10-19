@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "Teambition 项目管理 > 工时 > 创建计划工时"
 doc_id: "eXvOPA0xrF"
-updated_at: "2026-06-03 09:29:38"
+updated_at: "2026-10-19 09:12:34"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-planned-work
 > Path: 应用开发 / 服务端 API / Teambition 项目管理 > 工时 > 创建计划工时
-> Updated: 2026-06-03 09:29:38
+> Updated: 2026-10-19 09:12:34
 
 # 创建计划工时
 
@@ -20,13 +20,11 @@ updated_at: "2026-06-03 09:29:38"
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/project/users/{userId}/planTimes |
 | HTTP Method | POST |
-| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
+| 支持的应用类型 | appType-企业内部应用appType-第三方企业应用 |
 | 权限要求 | permission-Project.Task.Write.All-项目应用任务写权限 |
 
 ### 请求头
@@ -59,7 +57,7 @@ updated_at: "2026-06-03 09:29:38"
 | submitterId | String | 是 | 工时提交人员的userId。 |
 | startDate | String | 是 | 开始日期，格式：yyyy-MM-dd。 |
 | endDate | String | 是 | 结束时间，格式：yyyy-MM-dd。 |
-| planTime | Long | 是 | 计划工时时长，单位毫秒，1小时即为3600000。  **[!NOTE]**    不超过24小时。 |
+| planTime | Long | 是 | 计划工时时长，单位毫秒，1小时即为3600000。      不超过24小时。 |
 
 ### 请求示例
 

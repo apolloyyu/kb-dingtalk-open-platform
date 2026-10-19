@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "宜搭 > 概述"
 doc_id: "VDv0jenfrW"
-updated_at: "2026-08-07 14:50:58"
+updated_at: "2026-10-19 09:11:28"
 ---
 
 > Source: https://open.dingtalk.com/document/development/overview-yida
 > Path: 应用开发 / 服务端 API / 宜搭 > 概述
-> Updated: 2026-08-07 14:50:58
+> Updated: 2026-10-19 09:11:28
 
 # 概述
 
@@ -137,3 +137,9 @@ PC端：钉钉PC客户端-工作台
 | --- | --- | --- |
 | [获取集成自动化日志详情](0367-api-getautoflowlogdetail.md) | 通过集成自动化的实例 id 获取日志详情信息。 | 新版 |
 | [分页获取集成自动化日志列表](0368-api-pageautoflowlog.md) | 根据表单信息数据，获取集成自动化日志列表。 | 新版 |
+
+## 集成方案
+
+企业若需要集成更多宜搭相关能力，可参考下方内容进行接入：
+
+- [宜搭审批流程：从业务系统到宜搭审批无缝集成](0307-suitable-for-the-basic-operation-process-of-approval.md)

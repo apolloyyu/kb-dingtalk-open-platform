@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "即时通信 > 会话管理 > 概述"
 doc_id: "8s8KVFzInb"
-updated_at: "2026-05-15 18:20:35"
+updated_at: "2026-10-19 09:11:38"
 ---
 
 > Source: https://open.dingtalk.com/document/development/im-session-overview
 > Path: 应用开发 / 服务端 API / 即时通信 > 会话管理 > 概述
-> Updated: 2026-05-15 18:20:35
+> Updated: 2026-10-19 09:11:38
 
 # 概述
 
@@ -58,43 +58,40 @@ updated_at: "2026-05-15 18:20:35"
 
 #### **场景群**
 
-##### **群管理**
+- **群管理**
 
-| **API** | **API说明** | **API版本** |
-| --- | --- | --- |
-| [创建场景群](0744-create-a-scene-group.md) | 根据群模板ID创建群。 | 新版 |
-| [更新场景群](0745-api-updatescenegroup.md) | 根据群ID更新群信息。 | 新版 |
-| [添加群成员](0747-api-addscenegroupmember.md) | 向群内新增群成员（群成员人数上限1000）。 | 新版 |
-| [删除群成员](0748-api-removescenegroupmember.md) | 根据群ID和群成员ID删除群成员。 | 新版 |
-| [查询群信息](0753-queries-the-basic-information-of-a-scenario-group.md) | 根据群ID获取群名称、群图标、群主id、入群链接、群设置项等信息。 | 旧版 |
-| [设置群成员禁言状态](0754-set-group-members-access-control.md) | 设置场景群内的群成员禁言状态。 | 新版 |
-| [查询群禁言状态](0751-query-group-silence-status.md) | 查询群和群内成员的禁言状态。 | 新版 |
-| [更新群成员的群昵称](0755-update-group-nicknames.md) | 根据群ID和群成员ID，更新群成员的群昵称。 | 新版 |
-| [更新群管理员](0750-update-group-administrators.md) | 更新群的群管理员。 | 新版 |
-| [查询群简要信息](0752-query-group-information.md) | 根据群ID查询群名称、群图标、群主id等基本信息。 | 新版 |
-| [查询群成员](0749-query-group-members.md) | 查询群成员信息。 | 新版 |
-| [解散群聊](0746-api-dsbandopenscenegroup.md) | 根据群ID解散指定群。 | 新版 |
-| [查询群内群模板机器人](0756-search-group-scene-template-robot.md) | 查询群内群模板机器人信息。 | 新版 |
+  | **API** | **API说明** | **API版本** |
+  | --- | --- | --- |
+  | [创建场景群](0744-create-a-scene-group.md) | 根据群模板ID创建群。 | 新版 |
+  | [更新场景群](0745-api-updatescenegroup.md) | 根据群ID更新群信息。 | 新版 |
+  | [添加场景群成员](0747-api-addscenegroupmember.md) | 向群内新增群成员（群成员人数上限1000）。 | 新版 |
+  | [删除场景群成员](0748-api-removescenegroupmember.md) | 根据群ID和群成员ID删除群成员。 | 新版 |
+  | [查询场景群基本信息](0753-queries-the-basic-information-of-a-scenario-group.md) | 根据群ID获取群名称、群图标、群主id、入群链接、群设置项等信息。 | 旧版 |
+  | [设置场景群成员禁言状态](0754-set-group-members-access-control.md) | 设置场景群内的群成员禁言状态。 | 新版 |
+  | [查询场景群禁言状态](0751-query-group-silence-status.md) | 查询群和群内成员的禁言状态。 | 新版 |
+  | [更新场景群成员的群昵称](0755-update-group-nicknames.md) | 根据群ID和群成员ID，更新群成员的群昵称。 | 新版 |
+  | [更新场景群管理员](0750-update-group-administrators.md) | 更新群的群管理员。 | 新版 |
+  | [查询场景群简要信息](0752-query-group-information.md) | 根据群ID查询群名称、群图标、群主id等基本信息。 | 新版 |
+  | [查询场景群成员](0749-query-group-members.md) | 查询群成员信息。 | 新版 |
+  | [解散场景群](0746-api-dsbandopenscenegroup.md) | 根据群ID解散指定群。 | 新版 |
+  | [查询场景群内群模板机器人](0756-search-group-scene-template-robot.md) | 查询群内群模板机器人信息。 | 新版 |
+- **群模板**
 
-##### **群模板**
+  | **API** | **API说明** | **API版本** |
+  | --- | --- | --- |
+  | [启用群模板](0757-enable-a-group-template.md) | 根据群模板ID启用群模板。 | 旧版 |
+  | [停用群模板](0758-disable-a-group-template.md) | 根据群模板ID停用群模板。 | 旧版 |
+- **群吊顶**
 
-| **API** | **API说明** | **API版本** |
-| --- | --- | --- |
-| [启用群模板](0757-enable-a-group-template.md) | 根据群模板ID启用群模板。 | 旧版 |
-| [停用群模板](0758-disable-a-group-template.md) | 根据群模板ID停用群模板。 | 旧版 |
+  | **API** | **API说明** | **API版本** |
+  | --- | --- | --- |
+  | [创建并开启互动卡片吊顶](0759-send-group-helper-message.md) | 创建并开启会话中的互动卡片吊顶。 | 新版 |
+  | [关闭互动卡片吊顶](0760-close-interactive-card-ceiling.md) | 关闭会话中的互动卡片吊顶。 | 新版 |
+- **群助手**
 
-##### **群吊顶**
-
-| **API** | **API说明** | **API版本** |
-| --- | --- | --- |
-| [创建并开启互动卡片吊顶](0759-send-group-helper-message.md) | 创建并开启会话中的互动卡片吊顶。 | 新版 |
-| [关闭互动卡片吊顶](0760-close-interactive-card-ceiling.md) | 关闭会话中的互动卡片吊顶。 | 新版 |
-
-##### **群助手**
-
-| **API** | **API说明** | **API版本** |
-| --- | --- | --- |
-| [发送群助手消息](0761-group-template-robot-message.md) | 通过群模板定义的机器人向群内发送消息。 | 旧版 |
+  | **API** | **API说明** | **API版本** |
+  | --- | --- | --- |
+  | [发送群助手消息](0761-group-template-robot-message.md) | 通过群模板定义的机器人向群内发送消息。 | 旧版 |
 
 ### **回调事件列表**
 
@@ -106,9 +103,14 @@ updated_at: "2026-05-15 18:20:35"
 
 - [创建群聊会话（场景群）](0731-create-a-group-chat-session.md)
 - [创建快捷入口（群插件）](0732-create-a-group-plug-in.md)
-- [群助手发送消息](0734-group-assistant-sends-a-message.md)
-- [创建、查询、修改及管理群会话](0735-group-session-operation-process.md)
 - [实现置顶卡片纯拉模式](0733-pure-pull-mode-process-guide.md)
+
+## 集成方案
+
+企业若需要集成更多场景群或群会话相关能力，可参考下方内容进行接入：
+
+- [场景群机器人消息推送：群助手自动化通知与业务提醒](0734-group-assistant-sends-a-message.md)
+- [群会话全生命周期管理：建群、查群、管群全链路实践](0735-group-session-operation-process.md)
 
 ## **名词解释**
 

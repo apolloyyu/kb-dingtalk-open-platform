@@ -6,7 +6,7 @@ archived: false
 method: GET
 endpoint: https://api.dingtalk.com/v1.0/project/users/{userId}/projects/{projectId}/taskflowStatuses/search
 api_version: v2-new
-app_types: 第三方企业应用
+app_types: 企业内部应用, 第三方企业应用
 permissions: Project.Task.Read.All
 
 ## Request headers
@@ -29,4 +29,4 @@ permissions: Project.Task.Read.All
 - 每页返回最大数量。 默认10，最大300。
 
 source_url: https://open.dingtalk.com/document/development/search-task-workflow-status
-updated_at: 2026-06-04 19:11:41
+updated_at: 2026-10-19 09:12:13

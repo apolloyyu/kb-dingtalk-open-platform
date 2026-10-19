@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "OA 审批 > 概述"
 doc_id: "8oAXqBg2Oq"
-updated_at: "2026-10-12 18:04:33"
+updated_at: "2026-10-19 09:11:35"
 ---
 
 > Source: https://open.dingtalk.com/document/development/workflow-overview
 > Path: 应用开发 / 服务端 API / OA 审批 > 概述
-> Updated: 2026-10-12 18:04:33
+> Updated: 2026-10-19 09:11:35
 
 # 概述
 
@@ -46,73 +46,68 @@ OA审批提供了丰富的接口开放能力，开发者通过API接口可以实
 
 #### **官方OA审批**
 
-##### **审批表单**
+- **审批表单**
 
-| **API** | **API说明** | **API版本** |
-| --- | --- | --- |
-| [创建或更新审批表单模板](0490-create-an-approval-form-template.md) | 创建或更新一个OA审批的流程表单模板，可指定表单控件列表并生成默认审批流程。 | 新版 |
-| [获取表单 schema](0491-obtain-the-form-schema.md) | 通过 processCode 获取对应表单的 schema 信息。 | 新版 |
-| [获取审批单流程中的节点信息](0492-approval-process-prediction.md) | 获取审批单流程中的节点信息。 | 新版 |
-| [获取指定用户可见的审批表单列表](0493-obtains-a-list-of-approval-forms-visible-to-the-specified.md) | 根据员工的userid分页获取该用户可见的审批表单列表。 | 新版 |
-| [获取当前企业所有可管理的表单](0494-get-all-manageable-forms-for-the-current-enterprise.md) | 获取当前企业所有可管理的审批表单。 | 新版 |
-| [查询已设置为条件的表单组件](0495-query-form-components-that-have-been-set-as-criteria-1.md) | 获取用户在当前企业所有可管理的审批表单。 | 新版 |
+  | **API** | **API说明** | **API版本** |
+  | --- | --- | --- |
+  | [创建或更新审批表单模板](0490-create-an-approval-form-template.md) | 创建或更新一个OA审批的流程表单模板，可指定表单控件列表并生成默认审批流程。 | 新版 |
+  | [获取表单 schema](0491-obtain-the-form-schema.md) | 通过 processCode 获取对应表单的 schema 信息。 | 新版 |
+  | [获取审批单流程中的节点信息](0492-approval-process-prediction.md) | 获取审批单流程中的节点信息。 | 新版 |
+  | [获取指定用户可见的审批表单列表](0493-obtains-a-list-of-approval-forms-visible-to-the-specified.md) | 根据员工的userid分页获取该用户可见的审批表单列表。 | 新版 |
+  | [获取当前企业所有可管理的表单](0494-get-all-manageable-forms-for-the-current-enterprise.md) | 获取当前企业所有可管理的审批表单。 | 新版 |
+  | [查询已设置为条件的表单组件](0495-query-form-components-that-have-been-set-as-criteria-1.md) | 获取用户在当前企业所有可管理的审批表单。 | 新版 |
+- **审批实例**
 
-##### **审批实例**
+  | **API** | **API说明** | **API版本** |
+  | --- | --- | --- |
+  | [发起审批实例](0496-create-an-approval-instance.md) | 发起OA审批实例。 | 新版 |
+  | [获取单个审批实例详情](0497-obtains-the-details-of-a-single-approval-instance-pop.md) | 根据审批实例ID，获取审批实例详情。 | 新版 |
+  | [撤销审批实例](0498-revoke-an-approval-instance.md) | 撤销发起的审批实例。 | 新版 |
+  | [添加审批评论](0499-official-approval-adds-approval-comments.md) | 对审批实例添加评论。 | 新版 |
+  | [获取审批实例ID列表](0500-obtain-an-approval-list-of-instance-ids.md) | 获取权限范围内的相关部门审批实例ID列表。 | 新版 |
+- **审批钉盘空间&附件**
 
-| **API** | **API说明** | **API版本** |
-| --- | --- | --- |
-| [发起审批实例](0496-create-an-approval-instance.md) | 发起OA审批实例。 | 新版 |
-| [获取单个审批实例详情](0497-obtains-the-details-of-a-single-approval-instance-pop.md) | 根据审批实例ID，获取审批实例详情。 | 新版 |
-| [撤销审批实例](0498-revoke-an-approval-instance.md) | 撤销发起的审批实例。 | 新版 |
-| [添加审批评论](0499-official-approval-adds-approval-comments.md) | 对审批实例添加评论。 | 新版 |
-| [获取审批实例ID列表](0500-obtain-an-approval-list-of-instance-ids.md) | 获取权限范围内的相关部门审批实例ID列表。 | 新版 |
+  | **API** | **API说明** | **API版本** |
+  | --- | --- | --- |
+  | [获取审批钉盘空间信息](0501-obtains-the-information-about-approval-nail-disk.md) | 获取审批钉盘空间的ID并授予当前用户上传附件的权限。 | 新版 |
+  | [授权预览审批附件](0502-official-authorized-preview-approval-attachment.md) | 授权预览审批附件。 | 新版 |
+  | [授权下载审批钉盘文件](0503-download-the-approval-nail-file.md) | 根据钉盘空间spaceId和文件fileId对钉盘文件进行授权审批钉盘空间下载权限。 | 新版 |
+  | [下载审批附件](0504-download-an-approval-attachment.md) | 获取审批文件下载授权，并且生成下载链接。 | 新版 |
+- **审批任务**
 
-##### **审批钉盘空间&附件**
-
-| **API** | **API说明** | **API版本** |
-| --- | --- | --- |
-| [获取审批钉盘空间信息](0501-obtains-the-information-about-approval-nail-disk.md) | 获取审批钉盘空间的ID并授予当前用户上传附件的权限。 | 新版 |
-| [授权预览审批附件](0502-official-authorized-preview-approval-attachment.md) | 授权预览审批附件。 | 新版 |
-| [授权下载审批钉盘文件](0503-download-the-approval-nail-file.md) | 根据钉盘空间spaceId和文件fileId对钉盘文件进行授权审批钉盘空间下载权限。 | 新版 |
-| [下载审批附件](0504-download-an-approval-attachment.md) | 获取审批文件下载授权，并且生成下载链接。 | 新版 |
-
-##### **审批任务**
-
-| **API** | **API说明** | **API版本** |
-| --- | --- | --- |
-| [同意或拒绝审批任务](0505-approve-or-reject-the-approval-task.md) | 根据指定模板ID、实例ID、审批节点ID和审批人，对单个审批任务进行处理。 | 新版 |
-| [获取用户待审批数量](0507-queries-the-number-of-requests-to-be-approved-by-users.md) | 根据用户的userid获取该用户待处理的审批数量。 | 新版 |
-| [转交OA审批任务](0506-transfer-the-oa-approval-task.md) | 转交OA审批任务。 | 新版 |
+  | **API** | **API说明** | **API版本** |
+  | --- | --- | --- |
+  | [同意或拒绝审批任务](0505-approve-or-reject-the-approval-task.md) | 根据指定模板ID、实例ID、审批节点ID和审批人，对单个审批任务进行处理。 | 新版 |
+  | [获取用户待审批数量](0507-queries-the-number-of-requests-to-be-approved-by-users.md) | 根据用户的userid获取该用户待处理的审批数量。 | 新版 |
+  | [转交OA审批任务](0506-transfer-the-oa-approval-task.md) | 转交OA审批任务。 | 新版 |
 
 #### **自有OA审批**
 
-##### **审批表单**
+- **审批表单**
 
-| **API** | **API说明** | **API版本** |
-| --- | --- | --- |
-| [创建或更新审批模板](0509-create-orupdate-the-approval-template-new.md) | 创建或更新审批模板。 | 新版 |
-| [获取模板code](0510-obtain-the-template-code.md) | 根据模板名称查询process\_code。 | 新版 |
-| [删除模板](0511-self-owned-approval-deletion-template.md) | 删除为企业创建的审批模板，同时删除该模板下创建的实例和待办任务。 | 新版 |
+  | **API** | **API说明** | **API版本** |
+  | --- | --- | --- |
+  | [创建或更新审批模板](0509-create-orupdate-the-approval-template-new.md) | 创建或更新审批模板。 | 新版 |
+  | [获取模板code](0510-obtain-the-template-code.md) | 根据模板名称查询process\_code。 | 新版 |
+  | [删除模板](0511-self-owned-approval-deletion-template.md) | 删除为企业创建的审批模板，同时删除该模板下创建的实例和待办任务。 | 新版 |
+- **审批实例**
 
-##### **审批实例**
+  | **API** | **API说明** | **API版本** |
+  | --- | --- | --- |
+  | [创建实例](0512-create-a-ticket-approval-instance.md) | 创建不带流程的审批实例。 | 新版 |
+  | [更新实例状态](0513-update-instance-status.md) | 更新实例状态。 | 新版 |
+  | [批量更新实例状态](0514-self-owned-batch-update-of-instance-status.md) | 批量更新实例状态。 | 新版 |
+- **流程中心任务**
 
-| **API** | **API说明** | **API版本** |
-| --- | --- | --- |
-| [创建实例](0512-create-a-ticket-approval-instance.md) | 创建不带流程的审批实例。 | 新版 |
-| [更新实例状态](0513-update-instance-status.md) | 更新实例状态。 | 新版 |
-| [批量更新实例状态](0514-self-owned-batch-update-of-instance-status.md) | 批量更新实例状态。 | 新版 |
+  | **API** | **API说明** | **API版本** |
+  | --- | --- | --- |
+  | [创建流程中心待处理任务](0515-create-pending-tasks-in-process-center.md) | 创建OA审批的待办任务。 | 新版 |
+  | [查询通过流程中心集成的OA审批任务](0516-query-oa-approval-tasks-integrated-through-process-center.md) | 可以查询到用户运行中的审批任务。 | 新版 |
+  | [更新流程中心任务状态](0517-update-process-center-task-status.md) | 更新待办任务的状态。 | 新版 |
+  | [批量取消流程中心待处理任务](0518-cancel-multiple-oa-approval-tasks.md) | 批量取消流程中心待处理任务。 | 新版 |
+  | [清理OA审批数据](0519-clear-oa-approval-data.md) | 清理审批相关数据。 | 新版 |
 
-##### **流程中心任务**
-
-| **API** | **API说明** | **API版本** |
-| --- | --- | --- |
-| [创建流程中心待处理任务](0515-create-pending-tasks-in-process-center.md) | 创建OA审批的待办任务。 | 新版 |
-| [查询通过流程中心集成的OA审批任务](0516-query-oa-approval-tasks-integrated-through-process-center.md) | 可以查询到用户运行中的审批任务。 | 新版 |
-| [更新流程中心任务状态](0517-update-process-center-task-status.md) | 更新待办任务的状态。 | 新版 |
-| [批量取消流程中心待处理任务](0518-cancel-multiple-oa-approval-tasks.md) | 批量取消流程中心待处理任务。 | 新版 |
-| [清理OA审批数据](0519-clear-oa-approval-data.md) | 清理审批相关数据。 | 新版 |
-
-### **专享开放**
+#### **专享开放**
 
 专享开放介绍详情请参见：[关于新增OA审批高级版专享OpenAPI和解决方案的说明](1439-description-of-new-oa-approval-premium-exclusive-openapi-and-solutions.md)。
 
@@ -154,7 +149,9 @@ OA审批提供了丰富的接口开放能力，开发者通过API接口可以实
 
 ![image.png](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/1429463871/p925369.png)
 
-## **解决方案**
+## 集成方案
+
+企业若需要集成更多OA审批标准版和OA审批高级版专享的相关能力，可参考下方内容进行接入：
 
 ### **标准版**
 
@@ -171,15 +168,15 @@ OA审批提供了丰富的接口开放能力，开发者通过API接口可以实
 
 钉钉 OA 审批提供多种企业流程接入方案，满足企业各类业务管理和对接诉求。
 
-- [审批页面托管：三方流程与钉钉页面对接](0488-use-the-three-party-process-to-interface-with-the-dingtalk-oa.md)
+- [三方流程审批页面托管：官方详情页与自定义操作区对接](0488-use-the-three-party-process-to-interface-with-the-dingtalk-oa.md)
 - [深度集成钉钉OA审批：专享OpenAPI与AppLink协议对接](0485-use-the-exclusive-openapi-capability-to-dingtalk-oa-approval-through.md)
 - [三方系统快捷审批集成：待办中心与消息卡片一键审批](0486-custom-quick-approval-supports-quick-approval-of-pending-tasks-from.md)
-- [自定义审批业务分组：待办中心业务分类](0487-user-defined-approval-business-group-supports-custom-business-classification-in-the.md)
+- [三方业务审批分类集成：待办中心自定义业务分组](0487-user-defined-approval-business-group-supports-custom-business-classification-in-the.md)
 - [审批流程托管：钉钉流程与三方页面对接](0484-approval-process-hosting-integration-mode-use-the-dingtalk-official-oa.md)
 
-## **接入方案**
+### **接入方案**
 
-### **说明**
+#### **说明**
 
 通过钉钉OA审批开放能力，提供四种企业业务系统接入钉钉OA审批的方案，实现业务系统发起审批，在钉钉端内处理审批，同时无缝连接钉钉沟通、待办、通知等功能，实现企业各种业务流程集中审批、高效协同。
 
@@ -187,7 +184,7 @@ OA审批提供了丰富的接口开放能力，开发者通过API接口可以实
 
 ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/6666525271/p843389.png)
 
-### **接入方式**
+#### **接入方式**
 
 钉钉OA审批提供四种企业流程接入方案，满足企业各类业务管理和对接诉求。
 
@@ -197,7 +194,7 @@ OA审批提供了丰富的接口开放能力，开发者通过API接口可以实
 | --- | --- | --- |
 | 三方流程+页面（钉钉端内打开） | [自有OA审批：三方流程与页面对接](0483-use-three-party-process-and-page-docking.md)  可在业务系统发起流程，调用钉钉**自有OA审批相关接口**创建钉钉OA审批流程，在钉钉端打开业务系统审批详情页处理流程。 | **更轻量**  1、接入简单，直接在钉钉端内打开业务系统页面审批  2、只有同意拒绝等基础操作，无和钉钉连接操作，如拉群  3、延续用户原来使用的流程和页面习惯，低成本快速使用 |
 | 钉钉OA审批流程+页面 | [官方OA审批：钉钉流程与页面对接](0482-use-the-dingtalk-oa-approval-process-and-page-interface.md)  可在业务系统发起流程，调用钉钉**官方OA审批相关接口**创建钉钉OA审批流程，在钉钉端打开钉钉官方审批详情页处理流程。 | **更标准**  1、标准化对接，使用钉钉OA流程和页面能力，无缝和钉钉聊天、待办、通知连接，高效审批  2、复用钉钉官方OA审批流程引擎和表单组件能力，帮助不同业务的审批流程上钉，为用户在钉钉上提供一站式、多端统一的OA 审批产品体验 |
-| 三方流程+钉钉OA审批页面（钉钉OA审批高级版专享） | [审批页面托管：三方流程与钉钉页面对接](0488-use-the-three-party-process-to-interface-with-the-dingtalk-oa.md)  可在业务系统发起流程，基于钉钉官方OA审批提供的**审批单据详情页搭建能力**，调用钉钉接口**用三方流程业务数据渲染钉钉OA审批页面**，在钉钉端打开钉钉官方OA审批详情页处理流程。 | **更灵活**  1、灵活对接，将不同业务系统的审批单结构、样式统一，为用户提供多端（移动端/PC/平板）一致体验  2、审批操作区按钮可自定义，同意、拒绝、转交、打印等等  3、托管后三方审批流转情况将汇集到钉钉官方审批效率看板中，管理层可通过流程效率统计报告全方位诊断企业的审批效率和合理性。 |
+| 三方流程+钉钉OA审批页面（钉钉OA审批高级版专享） | [三方流程审批页面托管：官方详情页与自定义操作区对接](0488-use-the-three-party-process-to-interface-with-the-dingtalk-oa.md)  可在业务系统发起流程，基于钉钉官方OA审批提供的**审批单据详情页搭建能力**，调用钉钉接口**用三方流程业务数据渲染钉钉OA审批页面**，在钉钉端打开钉钉官方OA审批详情页处理流程。 | **更灵活**  1、灵活对接，将不同业务系统的审批单结构、样式统一，为用户提供多端（移动端/PC/平板）一致体验  2、审批操作区按钮可自定义，同意、拒绝、转交、打印等等  3、托管后三方审批流转情况将汇集到钉钉官方审批效率看板中，管理层可通过流程效率统计报告全方位诊断企业的审批效率和合理性。 |
 | 自建应用，集成钉钉OA审批（钉钉OA审批高级版专享） | [深度集成钉钉OA审批：专享OpenAPI与AppLink协议对接](0485-use-the-exclusive-openapi-capability-to-dingtalk-oa-approval-through.md)  通过**钉钉OA审批高级版专享开放接口和前端页面AppLink协议**，支持企业自建应用，来实现业务应用的流程和钉钉侧流程**在自建应用统一批量处理**，帮助**实现企业自建审批中心**等个性化业务需求。 | **更定制**  1、定制对接，企业可根据业务，实现页面和功能逻辑的定制  2、专享OpenAPI和前端页面AppLink协议开放，将提供更丰富的能力，响应更个性化的业务需求，支持企业自建审批中心、流程交接等业务解决方案 |
 
 ## **名词解释**

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "更多开放 > 客户管理（官方CRM） > 联系人管理 > 根据指定条件查询联系人数据"
 doc_id: "hVuAIe3Pdt"
-updated_at: "2026-06-04 19:12:12"
+updated_at: "2026-10-20 15:09:45"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-getcontacts
 > Path: 应用开发 / 服务端 API / 更多开放 > 客户管理（官方CRM） > 联系人管理 > 根据指定条件查询联系人数据
-> Updated: 2026-06-04 19:12:12
+> Updated: 2026-10-20 15:09:45
 
 # 根据指定条件查询联系人数据
 
@@ -20,14 +20,12 @@ updated_at: "2026-06-04 19:12:12"
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/crm/customObjects/contacts/datas/query |
 | HTTP Method | POST |
-| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
-| 权限要求 | permission-qyapi\_crm\_maindata\_read-获取CRM主数据的接口访问权限 |
+| 支持的应用类型 | appType-企业内部应用appType-第三方企业应用 |
+| 权限要求 | permission-qyapi\_crm\_maindata\_read-CRM主数据读权限 |
 
 ### 请求头
 

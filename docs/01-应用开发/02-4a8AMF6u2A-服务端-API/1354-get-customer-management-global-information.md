@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "更多开放 > 客户管理（官方CRM） > 客户 > 获取客户管理全局信息"
 doc_id: "seCKsO3L9A"
-updated_at: "2026-06-03 09:36:56"
+updated_at: "2026-10-20 15:09:40"
 ---
 
 > Source: https://open.dingtalk.com/document/development/get-customer-management-global-information
 > Path: 应用开发 / 服务端 API / 更多开放 > 客户管理（官方CRM） > 客户 > 获取客户管理全局信息
-> Updated: 2026-06-03 09:36:56
+> Updated: 2026-10-20 15:09:40
 
 # 获取客户管理全局信息
 
@@ -20,14 +20,12 @@ updated_at: "2026-06-03 09:36:56"
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/crm/globalInfos |
 | HTTP Method | GET |
-| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
-| 权限要求 | permission-qyapi\_crm\_maindata\_read-获取CRM主数据的接口访问权限 |
+| 支持的应用类型 | appType-企业内部应用appType-第三方企业应用 |
+| 权限要求 | permission-qyapi\_crm\_maindata\_read-CRM主数据读权限 |
 
 ### 请求头
 

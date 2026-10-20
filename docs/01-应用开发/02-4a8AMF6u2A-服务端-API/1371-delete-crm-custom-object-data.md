@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "更多开放 > 客户管理（官方CRM） > 自定义对象 > 删除CRM自定义对象数据"
 doc_id: "EmvpMXNXQx"
-updated_at: "2026-06-04 19:12:15"
+updated_at: "2026-10-20 15:09:48"
 ---
 
 > Source: https://open.dingtalk.com/document/development/delete-crm-custom-object-data
 > Path: 应用开发 / 服务端 API / 更多开放 > 客户管理（官方CRM） > 自定义对象 > 删除CRM自定义对象数据
-> Updated: 2026-06-04 19:12:15
+> Updated: 2026-10-20 15:09:48
 
 # 删除CRM自定义对象数据
 
@@ -20,20 +20,18 @@ updated_at: "2026-06-04 19:12:15"
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/crm/customObjectDatas/instances/{instanceId} |
 | HTTP Method | DELETE |
 | 支持的应用类型 | appType-企业内部应用 |
-| 权限要求 | permission-qyapi\_crm\_maindata\_write-维护CRM主数据的接口写入权限 |
+| 权限要求 | permission-qyapi\_crm\_maindata\_write-CRM主数据写权限 |
 
 ### 请求头
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，通过调用[获取企业内部应用的accessToken](0032-obtain-the-access-token-of-an-internal-app.md)接口获取。 |
+| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，调用[获取企业内部应用的accessToken](0032-obtain-the-access-token-of-an-internal-app.md)接口获取。 |
 
 ### 路径参数
 

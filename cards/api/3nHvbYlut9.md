@@ -6,7 +6,7 @@ archived: false
 method: POST
 endpoint: https://api.dingtalk.com/v1.0/crm/formRelatedTabs/meta/query
 api_version: v2-new
-app_types: 第三方企业应用
+app_types: 企业内部应用, 第三方企业应用
 permissions: qyapi_crm_customdata_read
 
 ## Request headers
@@ -29,4 +29,4 @@ permissions: qyapi_crm_customdata_read
 - none stated
 
 source_url: https://open.dingtalk.com/document/development/api-getrelatedviewtabmeta
-updated_at: 2026-06-03 09:36:58
+updated_at: 2026-10-20 15:09:41

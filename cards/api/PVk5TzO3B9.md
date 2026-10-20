@@ -6,7 +6,7 @@ archived: false
 method: POST
 endpoint: https://api.dingtalk.com/v1.0/crm/groups
 api_version: v2-new
-app_types: 第三方企业应用
+app_types: 企业内部应用, 第三方企业应用
 permissions: Crm.CustomerGroup.Write
 
 ## Request headers
@@ -31,4 +31,4 @@ permissions: Crm.CustomerGroup.Write
 - none stated
 
 source_url: https://open.dingtalk.com/document/development/create-a-customer-group
-updated_at: 2026-06-04 19:12:16
+updated_at: 2026-10-20 09:09:43

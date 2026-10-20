@@ -4,8 +4,8 @@
 
 - [概述](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1199-project-management-overview.md) · 2026-09-10
 - [获取项目管理操作日志](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1200-obtain-the-project-management-log.md) · 使用教程 · 2026-07-20
-- [创建、更新和获取自由任务](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1201-teambition-free-task-operation-process.md) · 使用教程 · 2026-07-20
-- [创建项目任务和工时](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1202-team-ambition-project-operation-process.md) · 使用教程 · 2026-07-20
+- [创建项目任务和工时](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1201-team-ambition-project-operation-process.md) · 使用教程 · 2026-07-20
+- [任务协同提效：创建自由任务与生命周期管理](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1202-teambition-free-task-operation-process.md) · 集成方案 · 2026-10-20
 - [创建项目](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1203-create-project.md) · 项目 · 2026-10-19
 - [查询项目](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1204-query-enterprise-all-projects.md) · 项目 · 2026-10-19
 - [归档项目](../../../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1205-archiving-project.md) · 项目 · 2026-10-19

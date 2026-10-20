@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "更多开放 > 客户管理（官方CRM） > 客户群 > 查询客户群组列表"
 doc_id: "X0AYHZU632"
-updated_at: "2026-06-03 15:47:52"
+updated_at: "2026-10-20 09:09:49"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-groups
 > Path: 应用开发 / 服务端 API / 更多开放 > 客户管理（官方CRM） > 客户群 > 查询客户群组列表
-> Updated: 2026-06-03 15:47:52
+> Updated: 2026-10-20 09:09:49
 
 # 查询客户群组列表
 
@@ -34,13 +34,11 @@ updated_at: "2026-06-03 15:47:52"
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/crm/groupSets/lists |
 | HTTP Method | GET |
-| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
+| 支持的应用类型 | appType-企业内部应用appType-第三方企业应用 |
 | 权限要求 | permission-Crm.CustomerGroup.Read-客户管理客户群读权限 |
 
 ### 请求头
@@ -522,10 +520,10 @@ int main(int argc, char *args[]) {
 | relationType | String | 关系类型。   - **crm\_customer**：企业客户 - **crm\_customer\_personal**：个人客户 |
 | memberQuota | Integer | 群组内单个群的人数上限。 |
 | memberCount | Integer | 群组内所有群的成员总数量。 |
-| templateId | String | 群模板Id。  **[!NOTE]**    该参数暂无使用场景。 |
+| templateId | String | 群模板Id。      该参数暂无使用场景。 |
 | ownerUserId | String | 群主userId，裂变出的新群会自动设置该userId为群主。 |
-| managerUserIds | String | 群管理员userId列表，用逗号隔开。  **[!NOTE]**    裂变出的新群会自动设置这些userId为群管理员。 |
-| notice | String | 群公告文本。  **[!NOTE]**    裂变出的新群会自动设置上该群公告。 |
+| managerUserIds | String | 群管理员userId列表，用逗号隔开。      裂变出的新群会自动设置这些userId为群管理员。 |
+| notice | String | 群公告文本。      裂变出的新群会自动设置上该群公告。 |
 | noticeToped | Integer | 群公告是否置顶。   - **0**：否 - **1**：是   裂变出的新群会自动设置上该属性。 |
 | owner | Object | 群主信息。 |
 | name | String | 群主姓名。 |
@@ -536,7 +534,7 @@ int main(int argc, char *args[]) {
 | lastOpenConversationId | String | 该群组裂变的第一个群openConversationId。 |
 | gmtCreate | String | 创建时间。 |
 | gmtModified | String | 修改时间。 |
-| groupChatCount | Integer | 群组内群的数量。  **[!NOTE]**    不包含已解散的群。 |
+| groupChatCount | Integer | 群组内群的数量。      不包含已解散的群。 |
 | totalCount | Integer | 总条数。 |
 
 ### 响应体示例

@@ -6,7 +6,7 @@ archived: false
 method: GET
 endpoint: https://api.dingtalk.com/v1.0/crm/groupSets
 api_version: v2-new
-app_types: 第三方企业应用
+app_types: 企业内部应用, 第三方企业应用
 permissions: Crm.CustomerGroup.Read
 
 ## Request headers
@@ -29,4 +29,4 @@ permissions: Crm.CustomerGroup.Read
 - 调用本接口，获取单个客户群组详情，包括群组内已自动创建的群数量、群组设置的群主、群组设置的管理员和群组设置的上限成员数等。
 
 source_url: https://open.dingtalk.com/document/development/queries-the-details-of-a-single-customer-group
-updated_at: 2026-06-04 19:12:19
+updated_at: 2026-10-20 09:09:47

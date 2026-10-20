@@ -6,7 +6,7 @@ archived: false
 method: GET
 endpoint: https://api.dingtalk.com/v1.0/crm/groupSets/lists
 api_version: v2-new
-app_types: 第三方企业应用
+app_types: 企业内部应用, 第三方企业应用
 permissions: Crm.CustomerGroup.Read
 
 ## Request headers
@@ -31,4 +31,4 @@ permissions: Crm.CustomerGroup.Read
 - 有2个客户群，为“核心客户1群”、“供应商客户1群”，对应的群组分别为“核心客户”、“供应商客户”，如下图所示。调用本接口，获取所有名称包含“客户”的客户群组列表，按创建时间降序结果为：
 
 source_url: https://open.dingtalk.com/document/development/query-groups
-updated_at: 2026-06-03 15:47:52
+updated_at: 2026-10-20 09:09:49

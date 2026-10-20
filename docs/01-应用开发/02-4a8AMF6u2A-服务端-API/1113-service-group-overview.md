@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "行业与生态 > 行业开放 > 服务群 > 概述"
 doc_id: "8kmatELKJA"
-updated_at: "2026-07-20 09:25:37"
+updated_at: "2026-10-20 09:09:18"
 ---
 
 > Source: https://open.dingtalk.com/document/development/service-group-overview
 > Path: 应用开发 / 服务端 API / 行业与生态 > 行业开放 > 服务群 > 概述
-> Updated: 2026-07-20 09:25:37
+> Updated: 2026-10-20 09:09:18
 
 # 概述
 
@@ -72,9 +72,11 @@ updated_at: "2026-07-20 09:25:37"
 
 服务群支持群信息变更、联系人关联客户、入群表单保存及服务群工单等多种回调事件，更多事件参考[事件订阅总览](../04-LFcRvVD08N-事件订阅/0002-org-event-overview.md)。
 
-## 使用教程
+## 集成方案
 
-钉钉提供了服务群接口接入流程示例，请参见[实现服务群发送消息](1114-enable-the-service-group-to-send-messages.md)。
+企业若需要集成更多服务群相关能力，可参考下方内容进行接入：
+
+[客户触达提效：服务群消息自动发送与群发任务管理](1114-enable-the-service-group-to-send-messages.md)
 
 ## **服务支持**
 

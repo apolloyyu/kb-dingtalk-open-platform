@@ -651,6 +651,39 @@ _CONCEPT_FACTS = {
 }
 
 
+# 主题锚点只选择原始文档，不含答案/规格值。产品主体先于“文件/应用/参数”等泛词；
+# 显式 source_url 仍最高优先级。slug 在每日快照重编号后保持稳定。
+_TOPIC_ROUTES = (
+    (r"(?=.*(?:ai\s*(?:助手|助理)|智能体))(?=.*(?:app|端外|外部|集成|接入|连过来))",
+     ("automatically-generate-an-ai-assistant-1", "api-assistantresponse")),
+    (r"(?=.*(?:调用|api))(?=.*(?:月|配额|额度))",
+     ("dingtalk-application-development-platform-billing-model", "notice-announcement",
+      "how-to-process-api-throttling-on-the-dingtalk-server")),
+    (r"(?=.*(?:ai\s*表格|多维表|notable))(?=.*(?:数据库|后端|增删改查|crud))",
+     ("api-notable-listrecords", "api-notable-insertrecords",
+      "api-noatable-updaterecords", "api-noatable-deleterecords")),
+    (r"(?=.*公告)(?=.*(?:附件|文件))",
+     ("create-an-enterprise-announcement", "obtain-bulletin-nail-disk-space-information")),
+    (r"(?=.*(?:字号|字体大小|fontsizesetting))(?=.*(?:获取|读取|查询|设置的|配置的))",
+     ("jsapi-get-system-info", "jsapi-get-system-info-sync")),
+)
+
+
+def _topic_documents(query, docs):
+    """精确主体/意图的策展入口；目录缺失时不猜路径、不补事实。"""
+    if "dws" in query.lower():
+        return []  # DWS产品限流不能套OpenAPI月度额度。
+    by_slug = {d.get("slug"): d for d in docs}
+    picked = []
+    for pattern, slugs in _TOPIC_ROUTES:
+        if re.search(pattern, query, re.I):
+            for slug in slugs:
+                d = by_slug.get(slug)
+                if d and d not in picked:
+                    picked.append(d)
+    return picked
+
+
 def _tokenize_query(terms, corpus, stop):
     """自然中文按语料最长匹配，不产生跨边界伪词；常见英文概念补中文同义词。"""
     out = []
@@ -716,6 +749,8 @@ def _ctx_impl(terms, n, force_full=False):
              "什么", "如果", "情况下", "先", "再", "然后", "之后", "钉钉", "的", "吗", "呢", "怎么", "如何"}
     docs = load_jsonl("meta/documents.jsonl")
     doc_hint = _source_doc_hint(raw_query, docs)
+    topic_reps = [] if doc_hint else _topic_documents(raw_query, docs)
+    topic_order = {d["local_path"]: i for i, d in enumerate(topic_reps)}
     corpus = "\n".join((d["title"] + " " + " ".join(d.get("breadcrumb") or []) + " "
                           + " ".join(d.get("headings") or [])).lower() for d in docs)
     tl = _tokenize_query(terms, corpus, _STOP)
@@ -766,12 +801,13 @@ def _ctx_impl(terms, n, force_full=False):
     concept_api = term_doc_hits(fact_terms, docs) if fact_terms else {}
     for r in _api:
         hinted = bool(hint_path and r.get("doc_path") == hint_path)
+        topic_rank = topic_order.get(r.get("doc_path"))
         if hint_path and not hinted:
             continue
         hay = _hay_api(r)
         hit = sum(1 for w in api_terms if w in hay)
         concept_bonus = concept_api.get(r.get("doc_path"), 0)
-        if not hit and not hinted and not concept_bonus:
+        if not hit and not hinted and not concept_bonus and topic_rank is None:
             continue
         title, endpoint = r["title"].lower(), (r.get("endpoint") or "").lower()
         exact = bool(q_join and (q_join == title or q_join == endpoint))
@@ -780,7 +816,7 @@ def _ctx_impl(terms, n, force_full=False):
                           or (re.fullmatch(r"[a-z0-9_.:/-]+", w) and len(w) >= 6))
             for w in api_terms)
         # 指南/流程题不能因“请求参数/配置/获取”等泛词被 API 表抢走；source_url 精确锚点例外。
-        if not (hinted or exact or api_signal or hit >= 2 or strong_single or concept_bonus):
+        if not (hinted or exact or api_signal or hit >= 2 or strong_single or concept_bonus or topic_rank is not None):
             continue
         score = (hit * 10 + sum(4 for w in api_terms if w in title) + sum(3 for w in api_terms if w in endpoint)
                  + (100 + concept_bonus if concept_bonus else 0))
@@ -790,6 +826,8 @@ def _ctx_impl(terms, n, force_full=False):
             score += 1000
         if hinted:
             score += 5000
+        if topic_rank is not None:
+            score += 2000 - topic_rank * 20
         rr = dict(r)
         rr["_ctx_score"] = score
         api_scored.append((bool(r.get("archived")), -score, r["title"], r["doc_path"], rr))
@@ -977,6 +1015,8 @@ def _ctx_impl(terms, n, force_full=False):
             cand.append(d)
             seen.add(d["local_path"])
     add_doc(doc_hint)
+    for d in topic_reps:
+        add_doc(d)
     for d in stage_reps:
         add_doc(d)
     for d in flow_reps:
@@ -1030,10 +1070,13 @@ def _ctx_impl(terms, n, force_full=False):
                    "返回值", "返回字段", "响应", "权限点", "调用", "用法", "示例")))
     card_blocked = any(intent.values())
     card_fast = bool(api_card and api_card["full"] and not api_card.get("archived")
-                     and confident and strong_anchor and card_scope and not card_blocked)
+                     and confident and strong_anchor and card_scope and not card_blocked
+                     and len(topic_reps) <= 1)
     # 审计必须能区分「意图阻断」与「人为关卡」：--full/KB_NO_CARDS 下 card=0 却报
     # blocked=none 会被误读成"本可 fast 而未 fast"。
     blocked_reasons = [k for k, v in intent.items() if v]
+    if len(topic_reps) > 1:
+        blocked_reasons.append("topic_scope")
     if force_full:
         blocked_reasons.append("forced_full")
     elif os.environ.get("KB_NO_CARDS") == "1":
@@ -1161,7 +1204,8 @@ def _ctx_impl(terms, n, force_full=False):
     if term_hits and not ent_total:
         ent_total = 1
     global _CTX_BODY_CAP
-    multi_doc = intent["stage"] or intent["semantic"] or intent["cross_doc"] or intent["enumeration"]
+    multi_doc = (intent["stage"] or intent["semantic"] or intent["cross_doc"]
+                 or intent["enumeration"] or len(topic_reps) > 1)
     top_k_default = 3 if multi_doc else (1 if ent_total >= 1 else 2)
     if ent_total >= 1 or multi_doc:
         # 多篇题每篇 3500：R10.2.1 实录 3 篇×5000 使 Q24/Q59 上下文 19K、正文时延 70–100s；

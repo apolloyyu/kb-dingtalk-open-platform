@@ -6,7 +6,9 @@ import runpy
 import subprocess
 import sys
 import tempfile
+import unittest
 from contextlib import redirect_stdout
+from test_dkdoc_subjects import SubjectEvidenceTest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DKDOC = os.path.join(ROOT, "bin", "dkdoc")
@@ -290,7 +292,9 @@ def main():
     out = run("ctx", "审批实例的url只能填一个，多个审批人的情况下怎么让审批人在OA审批应用中看到自己的审批单详情")
     check("[提示] 以下命中同时含标准版与 premium" in out, "标准版/premium 并存未提示")
 
-    print("OK: dkdoc ctx fast-path/evidence-contract regression")
+    result = unittest.TextTestRunner().run(unittest.defaultTestLoader.loadTestsFromTestCase(SubjectEvidenceTest))
+    check(result.wasSuccessful(), "主体路由/证据覆盖回归失败")
+    print("OK: dkdoc ctx fast-path/evidence-contract/subject regression")
     return 0
 
 

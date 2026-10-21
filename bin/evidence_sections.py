@@ -3,6 +3,7 @@
 The identical module is shipped by both KB adapters. Its content hash is checked
 by the cross-repository acceptance script; product facts belong to the sources.
 """
+import json
 import math
 import re
 
@@ -116,7 +117,17 @@ def select(text, query, budget, symbols=()):
         scores.append((-score, i))
     scores.sort()
     chosen, used, projected = [], 0, False
+    # A short relevant document preface carries the object and applicability
+    # context; a long example must not consume its entire budget first.
+    if parts and len(parts[0]['scope']) <= 1:
+        opening = parts[0]
+        size = len(opening['body']) + sum(len(x) + 1 for x in opening['scope']) + 40
+        if size <= min(650, budget // 3) and relevance(opening['body'], query) > 0:
+            chosen.append(0)
+            used = size
     for score, i in scores:
+        if i in chosen:
+            continue
         size = len(parts[i]['body']) + sum(len(s) + 1 for s in parts[i]['scope']) + 40
         if size > budget:
             body = project(parts[i]['body'], query, max(100, budget - 120))
@@ -213,3 +224,105 @@ def referenced_commands(text, paths):
             result.append(path)
         covered_until = end
     return result
+
+
+def time_fields(question, history=''):
+    """Literal date fields with provenance; no host date or expiry conclusion."""
+    records = []
+    decoder = json.JSONDecoder()
+    projected = previous_questions(history)
+    role_filtered = bool(re.match(r'^(?:用户|User)[:：]', history)) and projected != history
+    sources = [('current_question', question),
+               ('prior_user_questions' if role_filtered else 'unclassified_history', projected)]
+    def visit(value, path, origin):
+        if isinstance(value, dict):
+            for key, child in value.items():
+                name = path + '.' + key
+                if isinstance(child, str) and re.match(r'^\d{4}-\d{2}-\d{2}[Tt ]', child):
+                    records.append({'origin': origin, 'path': name, 'value': child,
+                        'kind': 'expiry' if re.search(r'expir|过期', key, re.I) else 'unclassified_timestamp'})
+                else:
+                    visit(child, name, origin)
+        elif isinstance(value, list):
+            for n, child in enumerate(value):
+                visit(child, path + '[' + str(n) + ']', origin)
+    for origin, text in sources:
+        offset, number = 0, 0
+        while offset < len(text):
+            match = re.search(r'[\[{]', text[offset:])
+            if not match:
+                break
+            start = offset + match.start()
+            try:
+                value, end = decoder.raw_decode(text[start:])
+                visit(value, '$[' + str(number) + ']', origin)
+                number += 1
+                offset = start + end
+            except ValueError:
+                offset = start + 1
+    if not any(record['kind'] == 'expiry' for record in records):
+        return ''
+    pattern = (r'(?:执行|运行|请求|发生)(?:的)?(?:时间|时刻|日期)(?:是|为|[:：])?\s*'
+               r'(\d{4}-\d{2}-\d{2}(?:[Tt ]\d{2}:\d{2}(?::\d{2}(?:\.\d+)?)?(?:[Zz]|[+-]\d{2}:?\d{2})?)?)')
+    literal = [{'origin': origin, 'value': value}
+               for origin, text in sources for value in re.findall(pattern, text)]
+    times = [row for row in literal if re.search(r'[Tt ]\d{2}:\d{2}', row['value'])]
+    current = [row['value'] for row in times if row['origin'] == 'current_question']
+    return '== 输入时间字段 ==\n' + json.dumps({
+        'origin': 'user_supplied_text', 'extractor_uses_host_clock': False,
+        'execution_time': {'status': 'explicit_text_extracted' if times else 'not_extracted',
+                           'candidates_from_current_question': current,
+                           'literal_candidates_with_origin': literal},
+        'timestamp_fields': records}, ensure_ascii=False)
+
+
+def pack_groups(entries, cap):
+    """Budget complete evidence groups, preserving explicit deferred coverage."""
+    if len('\n'.join(entries)) <= cap:
+        return '\n'.join(entries)
+    groups = []
+    for entry in entries:
+        if entry.lstrip().startswith(('==', '--- notes/')) or not groups:
+            groups.append([entry])
+        else:
+            groups[-1].append(entry)
+    bodies = ['\n'.join(group) for group in groups]
+    def priority(i):
+        title = bodies[i].lstrip().splitlines()[0]
+        if any(key in title for key in ('证据契约', '输入时间字段', '检索审计', '== 继续')):
+            return 0
+        if title.startswith('--- notes/') or any(key in title for key in
+                ('行为语义', 'CHANGELOG', '定位字段', '产品原文', '原文直取')):
+            return 1
+        if '命令契约:' in title or 'API参数卡' in title or 'API答案卡' in title:
+            return 2
+        if '篇目[' in title or '正文[' in title:
+            return 3
+        return 4
+    notices = []
+    for body in bodies:
+        title = body.lstrip().splitlines()[0]
+        command = re.search(r'命令契约: dws (.+?) ==', title)
+        continuation = 'dwsdoc contract ' + json.dumps(command[1]) if command else ''
+        doc = re.search(r'篇目\[.*?\] (\S+)', title)
+        api_doc = re.search(r'正文\[.*?\].*?\((docs/[^)]+)\)', title)
+        note = re.search(r'^--- (notes/\S+)', title)
+        if doc or note:
+            continuation = 'dwsdoc cat ' + (doc or note)[1]
+        if api_doc:
+            continuation = 'dkdoc cat ' + api_doc[1]
+        if 'CHANGELOG' in title:
+            continuation = 'dwsdoc cat docs/CHANGELOG.md'
+        notices.append(title + (' | ' + continuation if continuation else ''))
+    reserve = len('\n'.join(notices)) + 100
+    if reserve > cap:
+        return '== 证据覆盖 ==\ncoverage: deferred; complete-group index exceeds budget; individual source lookup available'
+    chosen, used = set(), 0
+    for i in sorted(range(len(bodies)), key=lambda n: (priority(n), n)):
+        size = len(bodies[i]) + 1
+        if used + size + reserve <= cap:
+            chosen.add(i)
+            used += size
+    deferred = [notices[i] for i in range(len(bodies)) if i not in chosen]
+    result = '\n'.join(body for i, body in enumerate(bodies) if i in chosen)
+    return result + '\n== 证据覆盖 ==\ncoverage: excerpt; 未展开完整单元:\n' + '\n'.join(deferred)

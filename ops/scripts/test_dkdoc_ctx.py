@@ -57,7 +57,7 @@ def main():
     dept_contract = run("ctx", "如何查询主部门")
     check("mode: full-context-required" in dept_contract and "sys00-mainDeptId" in dept_contract, "缺少完整证据模式或字段来源")
     product = run("ctx", "钉钉表格 字段级别权限 列权限 查看权限")
-    check("cross_kb_product:" in product and "dwsdoc ctx" in product, "产品权限需补产品依据")
+    check("产品原文" in product and "按字段或行配置权限" in product and "source_commit:" in product, "产品权限需带固定版本的产品原文")
     callback = run("ctx", "应用机器人能发送钉钉卡片并接收回调吗")
     check("可选原文导航（未核验适用性）" in callback and "dkdoc cat event-callback-card" in callback,
           "复杂卡片题需给可选补查入口，并明确尚不能当作事实证据")
@@ -204,7 +204,7 @@ def main():
     check("messageFiles/download" in out or "downloadCode" in out,
           "概念别名(聊天图片→downloadCode)未把机器人接收消息/文件下载文档带入上下文")
     out = run("ctx", "钉钉知识库正文是否有接口")
-    check("否定前必读" in out and "块元素" in out.split("== 证据契约 ==", 1)[0],
+    check("本轮命中的相关接口/文档" in out and "块元素" in out.split("== 证据契约 ==", 1)[0],
           "支持性题未前置存在性清单或未命中查询块元素")
     out = run("ctx", "钉钉小程序 离开页面二次确认")
     check("archived_only" in out and "离开二次确认配置" in out,

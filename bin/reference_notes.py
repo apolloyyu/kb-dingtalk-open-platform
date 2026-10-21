@@ -75,14 +75,32 @@ def expand(root, query, docs, validate=False):
                 rows.append(f"[{doc['title']} · {scope} · {' / '.join(x.lstrip('# ') for x in headings[-2:])}]\n"
                             f"source_url: {doc['source_url']} · updated_at: {doc.get('updated_at', '')}")
                 last_context = context
-            rows.append(line)
+            if line.lstrip().startswith('|'):
+                start, end = i, i + 1
+                while start and lines[start - 1].lstrip().startswith('|'):
+                    start -= 1
+                while end < len(lines) and lines[end].lstrip().startswith('|'):
+                    end += 1
+                table = "\n".join(lines[start:end])
+                if any(re.search(r'\|\s*(?:Object|Array|Map|List)', row, re.I) for row in lines[start:end]):
+                    if len(table) <= 4200:
+                        table_key = (doc['source_url'], start, end)
+                        if table_key not in seen:
+                            seen.add(table_key)
+                            rows.append(table)
+                    else:
+                        rows.extend(lines[start:start + 2])
+                        rows.append('[nested table not expanded; complete source: ' + doc['source_url'] + ']')
+                else:
+                    rows.extend(lines[start:start + 2])
+                    rows.append(line)
+            else:
+                rows.append(line)
         if selected and rows:
             output.extend(rows)
     if not output and not errors:
         return "", errors
-    header = ("== 补充原文摘录（不替代对象核验） ==\n"
-              "以下逐行取自各自 source_url；适用对象、入口、端、字段所在层级和时间须分别核验。"
-              "不同接口的同名字段不可互套；摘录不代表全文，缺少所问契约仍须 cat 原文。")
+    header = "== 定位字段的原文摘录 ==\ncoverage: literal source rows with document and heading scope; excerpt only"
     warnings = ["⚠补充依据待复核，不得据此下结论：" + x for x in errors]
     return header + "\n" + "\n".join(output + warnings), errors
 

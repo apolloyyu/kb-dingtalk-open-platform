@@ -544,10 +544,10 @@ def _ident_rows(rows, hayf, tl):
     return [r for r in rows if any(t in hayf(r) for t in tails)]
 
 
-def cmd_ctx(terms, n, force_full=False):
+def cmd_ctx(terms, n, force_full=False, raw_question=None, history=""):
     """一次打包检索：安全时答案卡直答，否则正文+links；异常→CTX_ERROR。"""
     try:
-        return _ctx_impl(terms, n, force_full=force_full)
+        return _ctx_impl(terms, n, force_full=force_full, raw_question=raw_question, history=history)
     except SystemExit:
         raise
     except Exception as e:  # 绝不半吊子输出：报错即引导回退旧检索序
@@ -777,7 +777,7 @@ def _tokenize_query(terms, corpus, stop):
     return list(dict.fromkeys(out))
 
 
-def _ctx_impl(terms, n, force_full=False):
+def _ctx_impl(terms, n, force_full=False, raw_question=None, history=""):
     if not terms:
         return usage("ctx 需要至少一个关键词")
     raw_query = " ".join(terms)
@@ -1163,17 +1163,23 @@ def _ctx_impl(terms, n, force_full=False):
 
     archived_first = bool(cand) and cand[0]["local_path"] in flags
 
+    from reference_notes import expand as expand_reference_notes
+    from peer_products import excerpt as peer_product_excerpt
+    supplements, supplement_errors = expand_reference_notes(ROOT, raw_query, docs)
+    product_sources = peer_product_excerpt(ROOT, raw_query)
+    timing = evidence_sections.time_fields(raw_question if raw_question is not None else raw_query, history)
+
     def render(top_k):
-        parts = []
+        parts = [part for part in (timing, supplements, product_sources) if part]
         # 支持性/枚举题:先看到"库里有什么",再决定能不能说"没有"(实录 Q28-30/Q37/Q143 均为
         # 正解在候选里却答"无此接口/文档未收录")。清单来自已算好的实体命中与篇目命中,不加检索。
         if (intent["support"] or intent["enumeration"] or intent["cross_doc"]) and (ent_lines or cand):
-            parts.append("== 否定前必读：本轮命中的相关接口/文档（说「没有/未收录/不支持」前须逐条说明为何不满足所问）==")
+            parts.append("== 本轮命中的相关接口/文档 ==")
             parts.extend(ent_lines[:8])
             for d in cand[:5]:
                 tag = " " + flags.get(d["local_path"], "") if flags.get(d["local_path"]) else ""
                 parts.append(f"[doc] {d['title']}{tag} · {' › '.join(d.get('breadcrumb') or [])[:40]} · {d['source_url']}")
-            parts.append("(以上为实体表/篇目精确命中，存在即事实；未列出≠不存在，仍须 find 换词再查后才可否定)")
+            parts.append("coverage: matching entities and titles; other documents not enumerated")
         if card_fast:
             parts.append("== API答案卡(card:full,首名明确,可直接作答) ==")
             parts.append(api_card["body"])
@@ -1192,10 +1198,8 @@ def _ctx_impl(terms, n, force_full=False):
                 parts.append("== API参数卡(证据;结论仍以正文为准) ==")
                 parts.append(evidence_card["body"])
         parts.append(_evidence_contract(api_card, intent, card_fast))
-        if _PRODUCT_CAPABILITY_RE.search(raw_q):
-            parts.append(_PRODUCT_CAPABILITY_HINT)
         if concept_facts:
-            parts.append("== 原文直取(问法里的现象词→文档实现名;以下逐字摘自原文,参数名以此为准,原文没有的参数不得出现) ==")
+            parts.append("== 原文直取(问法现象词与文档实现名) ==")
             parts.extend(concept_facts)
         # dws 数字员工的命令面只在 dws 库;只查本库时模型会把 DEAP 智能体/企业自建 Agent 接口
         # 当成数字员工的创建或入群方式(实录 2026-10-10、10-12 正式群)。
@@ -1307,7 +1311,7 @@ def _ctx_impl(terms, n, force_full=False):
         if intent["error"]:
             tips.append("错误码语义: dkdoc err <码>")
         parts.append(" · ".join(tips))
-        return "\n".join(parts)
+        return parts
 
     # 简单实体题只带一篇；流程/跨阶段/汇总题需同时展开 2-3 篇，避免单 API 片段冒充完整流程。
     ent_total = sum(ent_counts.values())
@@ -1327,7 +1331,7 @@ def _ctx_impl(terms, n, force_full=False):
         if min_exact_bodies > 3:
             _CTX_BODY_CAP = min(_CTX_BODY_CAP, max(500, 14000 // min_exact_bodies))
 
-    if not cand and not ent_lines:
+    if not cand and not ent_lines and not (supplements or product_sources):
         print(_evidence_contract(None, intent, False))
         if _DWS_RATELIMIT_RE.search(raw_q):
             print(_DWS_RATELIMIT_HINT)
@@ -1337,33 +1341,32 @@ def _ctx_impl(terms, n, force_full=False):
         print("== 继续 ==")
         print(f"换同义词重试 ctx；或 dkdoc grep '{' '.join(terms)}'；否定前核对 meta/UNAVAILABLE.md")
         return 1
-    text = render(0 if card_fast else top_k_default)
+    blocks = render(0 if card_fast else top_k_default)
+    text = "\n".join(blocks)
     # 超限时先压单篇正文，再降篇数；流程/跨阶段题保底 2 篇——降到 1 篇会丢配置阶段，
     # 拿单篇冒充完整流程（实录 Q75：正确的执行动作/鉴权文档被挤出正文位）。
     if len(text) > _CTX_TOTAL_CAP and not card_fast:
         _CTX_BODY_CAP = min(_CTX_BODY_CAP, 3000)
-        text = render(top_k_default)
+        blocks = render(top_k_default)
+        text = "\n".join(blocks)
     if len(text) > _CTX_TOTAL_CAP and not card_fast:
         reduced_count = max(2 if multi_doc else 1, min_exact_bodies)
-        text = render(reduced_count)
+        blocks = render(reduced_count)
+        text = "\n".join(blocks)
         for cap in (1500, 800, 400):
             if len(text) <= _CTX_TOTAL_CAP:
                 break
             _CTX_BODY_CAP = min(_CTX_BODY_CAP, cap)
-            text = render(reduced_count)
-    if len(text) > _CTX_TOTAL_CAP:
-        text = _cut(text, _CTX_TOTAL_CAP) + "\n…[ctx 总量截断，用 dkdoc cat 读完整正文]"
-    print(text)
-    # 导航在原文预算决策完成后附加，不能因提示多几个字而压缩/挤掉已有正文。
+            blocks = render(reduced_count)
+            text = "\n".join(blocks)
     if not card_fast:
         navigation = _workflow_candidates(raw_query, docs)
         if navigation:
-            print(navigation)
-        sys.path.insert(0, os.path.join(ROOT, "bin"))
-        from reference_notes import expand as expand_reference_notes
-        supplements, _ = expand_reference_notes(ROOT, raw_query, docs)
-        if supplements:
-            print(supplements)
+            blocks.append(navigation)
+            text = "\n".join(blocks)
+    if len(text) > _CTX_TOTAL_CAP:
+        text = evidence_sections.pack_groups(blocks, _CTX_TOTAL_CAP)
+    print(text)
     return 0
 
 
@@ -1396,6 +1399,7 @@ def main():
         i = terms.index("--prev")
         prev_q = terms[i + 1] if i + 1 < len(terms) else ""
         del terms[i:i + 2]
+    raw_question = " ".join(terms)
     # ctx 调用方可能传多参数(ctx a b c)或引号整串(ctx "a b c"),后者不拆词会让
     # 逐词检索退化成整句子串匹配而全部落空(实录:整串222B/0命中 vs 多参数14KB)。
     if cmd == "ctx" and len(terms) == 1:
@@ -1404,9 +1408,9 @@ def main():
         if prev_q:
             # 追问(「不进行预览行不行」)单独检索必落空:上一问的实体词(dd.biz.util.uploadAttachment)
             # 才是检索对象。上一问词放前面,本问意图词仍由本问决定。
-            prev_t = [w for w in re.split(r"[\s,，、]+", prev_q) if w]
+            prev_t = [w for w in re.split(r"[\s,，、]+", evidence_sections.previous_questions(prev_q)) if w]
             terms = list(dict.fromkeys(prev_t + terms))
-        return cmd_ctx(terms, n, force_full=force_full)
+        return cmd_ctx(terms, n, force_full=force_full, raw_question=raw_question, history=prev_q)
     if cmd == "where":
         print(ROOT)
         return 0

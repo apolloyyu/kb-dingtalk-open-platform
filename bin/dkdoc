@@ -25,6 +25,8 @@ import re
 import subprocess
 import sys
 from urllib.parse import urlsplit
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import evidence_sections
 
 ROOT = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))  # realpath 兼容软链安装
 
@@ -1227,8 +1229,10 @@ def _ctx_impl(terms, n, force_full=False):
             parts.append(f"\n== 正文[{i+1}/{min(top_k, len(cand))}] {d['title']}{tag} ({lp}) ==")
             parts.append(f"source_url: {d['source_url']} · updated_at: {d['updated_at'][:10]}")
             body = _sanitize_links(open(os.path.join(ROOT, lp), encoding="utf-8", errors="ignore").read())
-            if len(body) > _CTX_BODY_CAP:
-                body = _cut(body, _CTX_BODY_CAP) + f"\n…[已截断，完整: dkdoc cat {lp}]"
+            body, selection = evidence_sections.select(body, raw_query, _CTX_BODY_CAP,
+                                                       symbols=[t for t in tl if re.search(r'[a-z]', t)])
+            if selection['coverage'] != 'full':
+                body += f"\n[正文覆盖: excerpt; 未展开小节: {selection['omitted_units']}; 完整: dkdoc cat {lp}]"
             parts.append(body)
             out_e = [e for e in edges if e["from"] == lp][:6]
             inc_e = [e for e in edges if e["to"] == lp][:6]
@@ -1248,12 +1252,41 @@ def _ctx_impl(terms, n, force_full=False):
                             b = open(os.path.join(ROOT, tgt), encoding="utf-8", errors="ignore").read()
                         except OSError:
                             b = ""
-                        head = b[:500].replace("\n\n", "\n")
+                        head = ''  # Evidence expansion below owns linked-source selection.
                         parts.append(f"  {arrow} {tgt} — {bymap[tgt]['title']}")
                         parts.append(f"    摘要: {head}")
                         shown += 1
                     else:
                         parts.append(f"  {arrow} {tgt}")
+        # Linked sources are selected by the same question facets, not by their
+        # file prefix. A link alone is navigation, not evidence for the question.
+        if not card_fast and any(intent[k] for k in ('howmany', 'support', 'why', 'semantic')):
+            selected = {d['local_path'] for d in cand[:top_k]}
+            linked = {}
+            for edge in edges:
+                target = edge['to'] if edge['from'] in selected else edge['from'] if edge['to'] in selected else None
+                if target in selected or target not in bymap or target in linked:
+                    continue
+                target_family = (bymap[target].get('breadcrumb') or [])[:1]
+                if not target_family or not any((bymap[p].get('breadcrumb') or [])[:1] == target_family for p in selected):
+                    continue
+                try:
+                    source = _sanitize_links(open(os.path.join(ROOT, target), encoding='utf-8').read())
+                except OSError:
+                    continue
+                # Quantity/lifetime questions need the relevant specification,
+                # rather than another linked workflow sharing the entity name.
+                groups = evidence_sections.facets(raw_query)
+                if groups and not any(any(term in source for term in group) for group in groups):
+                    continue
+                excerpt, coverage = evidence_sections.select(source, raw_query, 1800)
+                score = evidence_sections.relevance(excerpt, raw_query)
+                if score:
+                    linked[target] = (score, excerpt, coverage)
+            for target, (_, excerpt, coverage) in sorted(linked.items(), key=lambda x: (-x[1][0], x[0]))[:2]:
+                doc = bymap[target]
+                parts.append(f"\n== 关联证据 {doc['title']} ({target}) ==\nsource_url: {doc['source_url']}\n"
+                             f"coverage: {coverage['coverage']}\n{excerpt}")
         others = cand[top_k:top_k + 8]
         if others:
             parts.append("\n== 其他候选(未展开) ==")

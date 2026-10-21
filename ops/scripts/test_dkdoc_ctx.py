@@ -9,6 +9,7 @@ import tempfile
 import unittest
 from contextlib import redirect_stdout
 from test_dkdoc_subjects import SubjectEvidenceTest
+from test_reference_notes import ReferenceNotesTest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DKDOC = os.path.join(ROOT, "bin", "dkdoc")
@@ -345,6 +346,8 @@ def main():
 
     result = unittest.TextTestRunner().run(unittest.defaultTestLoader.loadTestsFromTestCase(SubjectEvidenceTest))
     check(result.wasSuccessful(), "主体路由/证据覆盖回归失败")
+    result = unittest.TextTestRunner().run(unittest.defaultTestLoader.loadTestsFromTestCase(ReferenceNotesTest))
+    check(result.wasSuccessful(), "补充原文依据回归失败")
     print("OK: dkdoc ctx fast-path/evidence-contract/subject regression")
     return 0
 

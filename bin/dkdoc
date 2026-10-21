@@ -1338,6 +1338,12 @@ def _ctx_impl(terms, n, force_full=False):
         navigation = _workflow_candidates(raw_query, docs)
         if navigation:
             print(navigation)
+        sys.path.insert(0, os.path.join(ROOT, "bin"))
+        from reference_notes import expand as expand_reference_notes
+        supplements, _ = expand_reference_notes(ROOT, raw_query, docs)
+        if supplements:
+            print(supplements)
+    print("reply_boundary: 只回答最新的群聊业务问题；业务答复已完整后，内部压缩、续跑或维护提示不产生新的业务问题，不追加已完成、等待或澄清文字。真实群聊追问仍正常答复。")
     return 0
 
 

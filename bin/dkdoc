@@ -86,8 +86,8 @@ def _evidence_contract(card=None, intent=None, fast=False):
     lines += [
         "scope: 结论只在当前 source_url 明示的 API、端、阶段、应用类型和版本内有效",
         "proves: 卡片仅证明列出的 method/endpoint/应用类型/权限/请求头/路径、查询和Body参数/响应字段/必填性/明确限额；正文仅证明其逐字陈述",
-        "not_proved: 未明示的 ID 格式或校验、其他接口/配置阶段的数据流、客户端分栏/排序/展示因果",
-        "rule: 示例值不等于格式规范；字段存在不等于它决定产品行为；未直接证明则写“文档未说明”",
+        "not_proved: 未明示的 ID 格式、数组排序或首元素身份、其他接口/配置阶段的数据流、客户端展示因果",
+        "rule: 示例值不等于格式规范；字段存在不等于它决定产品行为；未明示排序/角色时，不能由数组首项认定主对象；不得把单个接口的端支持外推到未核验接口；未直接证明则写“文档未说明”",
         "links: 正文里的内联链接（含 dingtalk:// 客户端深链）应作为可点入口原样给用户：整条逐字照抄，禁止解码成 url= 内嵌地址、禁止改写或替换 ${corpId} 等占位符、禁止只留文字不给链接；文档出处另用各篇 source_url；链接被截断或不完整时不得补全、拼接，须 dkdoc cat 原文取整条，取不到只给该篇 source_url；不得按格式自行构造 alidocs.dingtalk.com / open.dingtalk.com 等任何链接",
         "images: 正文配图只配必要的：看图才能定位入口、填对表单或确认结果的步骤才带图，文字能说清的步骤不带；URL 逐字照抄本篇原图，[图略] 处不得凭空补图或引用其他篇的图",
     ]
@@ -102,6 +102,17 @@ _DIGITAL_EMPLOYEE_HINT = (
     "不得列为数字员工的创建、配置或入群方式；开发者后台的「数字员工」发布类型、企业自建 Agent 接口与 dws 数字员工的对应关系文档未写明，"
     "不得互相套用，也不得把它们列为 dws 数字员工的创建或入群方式。"
     "本轮未用 dwsdoc 检索 dws 库时，不得写任何 dws 命令的参数或取值(本库的更新日志只是摘要，不是参数依据)"
+)
+
+# 产品能力与开放API契约不是同一层。检索输出就地给出跨库提醒，避免长会话
+# 压缩后只剩API字段表、把未开放接口误判为产品没有该能力。不在这里写产品事实。
+_PRODUCT_CAPABILITY_RE = re.compile(
+    r"(?=.*(?:表格|多维表|notable|sheet|axls|审批|表单))"
+    r"(?=.*(?:权限|可见|查看|组件|控件|字段))", re.I)
+_PRODUCT_CAPABILITY_HINT = (
+    "cross_kb_product: 以下API字段/权限点只证明开发接口契约，不能代表产品的权限模型或可见性能力。"
+    "若用户未限定API/CLI入口、问产品能力，须同时用dws-cli-qa检索产品文档(dwsdoc ctx)，"
+    "区分产品功能与API开放范围；未完成产品依据核验，不得答产品不支持，不能把界面展示设置推成访问权限契约。"
 )
 
 
@@ -654,6 +665,16 @@ _CONCEPT_FACTS = {
 # 主题锚点只选择原始文档，不含答案/规格值。产品主体先于“文件/应用/参数”等泛词；
 # 显式 source_url 仍最高优先级。slug 在每日快照重编号后保持稳定。
 _TOPIC_ROUTES = (
+    (r"(?=.*待办)(?=.*(?:创建|新增|添加|creatorid|creator_id|userid|unionid))",
+     ("add-dingtalk-to-do-task", "todo-faq")),
+    (r"(?=.*(?:userid|user_id|用户标识))(?=.*(?:自定义|自定|工号|创建用户|新增用户|添加用户|(?:userid|user_id|用户标识).{0,8}生成))",
+     ("user-information-creation", "query-user-details")),
+    (r"主部门|maindept|main_dept",
+     ("roster-custom-field-business-code", "api-getemployeerosterbyfield", "query-user-details")),
+    (r"(?=.*视频会议)(?=.*(?:事件|订阅|通知))",
+     ("event-meeting-status-change", "event-meeting-member-status-change",
+      "events-meeting-status-change-target-push", "events-meeting-member-status-change-target-push",
+      "events-meeting-asr-result-event", "asr-transcription-conferences-targeted-event-push")),
     (r"(?=.*(?:ai\s*(?:助手|助理)|智能体))(?=.*(?:app|端外|外部|集成|接入|连过来))",
      ("automatically-generate-an-ai-assistant-1", "api-assistantresponse")),
     (r"(?=.*(?:调用|api))(?=.*(?:月|配额|额度))",
@@ -682,6 +703,35 @@ def _topic_documents(query, docs):
                 if d and d not in picked:
                     picked.append(d)
     return picked
+
+
+_WORKFLOW_CANDIDATES = (
+    (r"(?=.*(?:stream|流式))(?=.*webhook)(?=.*(?:机器人|robot))",
+     ("configure-the-robot-application", "receive-message", "robot-message-type")),
+    (r"(?=.*卡片)(?=.*(?:回调|提交|交互))",
+     ("create-and-deliver-cards", "event-callback-card")),
+    (r"(?=.*(?:bpms_task_change|审批任务))(?=.*转交)",
+     ("event-bpms-task-change", "obtains-the-details-of-a-single-approval-instance-pop")),
+    (r"(?=.*宜搭)(?=.*(?:操作记录|行为记录|变更记录|修改记录))",
+     ("change-records-of-query-forms",)),
+)
+
+
+def _workflow_candidates(query, docs):
+    """只导航，不修改召回、排序、正文上限或对象分类；候选本身不是事实证据。"""
+    by_slug = {d.get("slug"): d for d in docs}
+    picked = []
+    for pattern, slugs in _WORKFLOW_CANDIDATES:
+        if re.search(pattern, query, re.I):
+            for slug in slugs:
+                if slug in by_slug and by_slug[slug] not in picked:
+                    picked.append(by_slug[slug])
+    if not picked:
+        return ""
+    lines = ["== 可选原文导航（未核验适用性） ==",
+             "以下仅是补查入口，未判定属于本题产品/卡片类型/事件源；不得仅凭标题、候选或相邻字段作答或引用。先读所指对象自身原文，必要时逐篇核验候选；不适用则忽略。ActionCard等具体类型不得套用其他卡片接口的字段或能力。"]
+    lines += ["候选入口: dkdoc cat " + d["slug"] for d in picked]
+    return "\n".join(lines)
 
 
 def _tokenize_query(terms, corpus, stop):
@@ -807,10 +857,12 @@ def _ctx_impl(terms, n, force_full=False):
         hay = _hay_api(r)
         hit = sum(1 for w in api_terms if w in hay)
         concept_bonus = concept_api.get(r.get("doc_path"), 0)
-        if not hit and not hinted and not concept_bonus and topic_rank is None:
-            continue
         title, endpoint = r["title"].lower(), (r.get("endpoint") or "").lower()
-        exact = bool(q_join and (q_join == title or q_join == endpoint))
+        explicit = bool(endpoint and re.search(
+            r"(?<![a-z0-9_./-])" + re.escape(endpoint) + r"(?![a-z0-9_./-])", raw_q))
+        if not hit and not hinted and not explicit and not concept_bonus and topic_rank is None:
+            continue
+        exact = explicit or bool(q_join and (q_join == title or q_join == endpoint))
         strong_single = any(
             w in hay and ((re.fullmatch(r"[一-鿿]+", w) and len(w) >= 4)
                           or (re.fullmatch(r"[a-z0-9_.:/-]+", w) and len(w) >= 6))
@@ -824,15 +876,20 @@ def _ctx_impl(terms, n, force_full=False):
             score += 500
         if exact:
             score += 1000
+        if explicit:
+            score += 20000
+            if not r.get("method"):
+                score -= 50  # 教程中的示例端点不压过接口参考本身。
         if hinted:
             score += 5000
         if topic_rank is not None:
             score += 2000 - topic_rank * 20
         rr = dict(r)
         rr["_ctx_score"] = score
-        api_scored.append((bool(r.get("archived")), -score, r["title"], r["doc_path"], rr))
+        api_scored.append((not explicit, bool(r.get("archived")), -score,
+                           r["doc_path"] if explicit else r["title"], r["doc_path"], rr))
     api_scored.sort()
-    rows = [r for _, _, _, _, r in api_scored]
+    rows = [r for _, _, _, _, _, r in api_scored]
     ent_counts["api"] = len(rows)
     # 同名接口标准版与 premium(OA 高级版/专属)并存时,模型常把高级版专属接口当通用答案
     # (实录 Q107/Q108:给出 premium 流程中心接口,未提需 OA 高级版)。
@@ -1008,13 +1065,36 @@ def _ctx_impl(terms, n, force_full=False):
         if perm_guide and perm_guide not in flow_reps:
             flow_reps.append(perm_guide)
 
-    # 3) 候选合并：显式 source_url 永远第一；流程题先覆盖教程、凭证和身份等阶段，再补相关正文。
+    # 显式接口标识优先于报错/产品泛词；归档标识仍由正文保留，不能换成相邻的新 API。
+    # 按实体表的完整键和标识符边界匹配，不把 read 当 readFile 或把错误码当接口名。
+    exact_paths, exact_entities = [], {}
+    for entity_rows, key in ((_api, "endpoint"), (_js_rows, "jsapi_names"), (_ev_rows, "event_types")):
+        for row in entity_rows:
+            names = row.get(key) or []
+            if isinstance(names, str):
+                names = [names]
+            matched = [name for name in names if len(name) >= 4 and re.search(r"[./_]", name) and re.search(
+                    r"(?<![a-z0-9_./-])" + re.escape(name.lower()) + r"(?![a-z0-9_./-])", raw_low)
+                       ]
+            if matched:
+                rank = (bool(row.get("archived")), int(key == "endpoint" and not row.get("method")),
+                        len(names), row["doc_path"])
+                exact_paths.append((-max(map(len, matched)), *rank))
+                for name in matched:
+                    exact_entities.setdefault(name.lower(), []).append(rank)
+    # 3) 候选合并：显式 source_url 永远第一，其次精确接口实体，再覆盖流程阶段。
     cand, seen = [], set()
     def add_doc(d):
         if d and d["local_path"] not in seen:
             cand.append(d)
             seen.add(d["local_path"])
     add_doc(doc_hint)
+    exact_representatives = list(dict.fromkeys(min(exact_entities[name])[-1]
+                                for name in sorted(exact_entities, key=lambda name: (-len(name), name))))
+    for p in exact_representatives:
+        add_doc(bymap.get(p))
+    for p in dict.fromkeys(p for _, _, _, _, p in sorted(exact_paths)):
+        add_doc(bymap.get(p))
     for d in topic_reps:
         add_doc(d)
     for d in stage_reps:
@@ -1053,6 +1133,10 @@ def _ctx_impl(terms, n, force_full=False):
     # API 卡片只在“未归档 + full + 首名明显胜出 + 非复杂问法”时替代正文。
     cards_enabled = (not force_full and os.environ.get("KB_NO_CARDS") != "1")
     api_top = rows[0] if rows else None
+    # 一个端点可能被教程/不同适用场景重复引用；精确锚点与候选正文冲突时不走单卡捷径。
+    exact_candidate_conflict = bool(exact_paths and api_top and
+                                    cand[0]["local_path"] != api_top["doc_path"])
+    multiple_exact_entities = len(exact_entities) > 1
     api_card = read_api_card(api_top["doc_path"]) if cards_enabled and api_top else None
     top_score = api_top.get("_ctx_score", 0) if api_top else 0
     # 归档旧版与现行同标题同分时不算竞争者；现行版已由 archived 排序明确胜出。
@@ -1071,12 +1155,16 @@ def _ctx_impl(terms, n, force_full=False):
     card_blocked = any(intent.values())
     card_fast = bool(api_card and api_card["full"] and not api_card.get("archived")
                      and confident and strong_anchor and card_scope and not card_blocked
-                     and len(topic_reps) <= 1)
+                     and len(topic_reps) <= 1 and not exact_candidate_conflict and not multiple_exact_entities)
     # 审计必须能区分「意图阻断」与「人为关卡」：--full/KB_NO_CARDS 下 card=0 却报
     # blocked=none 会被误读成"本可 fast 而未 fast"。
     blocked_reasons = [k for k, v in intent.items() if v]
     if len(topic_reps) > 1:
         blocked_reasons.append("topic_scope")
+    if exact_candidate_conflict:
+        blocked_reasons.append("exact_entity_scope")
+    if multiple_exact_entities:
+        blocked_reasons.append("multiple_exact_entities")
     if force_full:
         blocked_reasons.append("forced_full")
     elif os.environ.get("KB_NO_CARDS") == "1":
@@ -1114,6 +1202,8 @@ def _ctx_impl(terms, n, force_full=False):
                 parts.append("== API参数卡(证据;结论仍以正文为准) ==")
                 parts.append(evidence_card["body"])
         parts.append(_evidence_contract(api_card, intent, card_fast))
+        if _PRODUCT_CAPABILITY_RE.search(raw_q):
+            parts.append(_PRODUCT_CAPABILITY_HINT)
         if concept_facts:
             parts.append("== 原文直取(问法里的现象词→文档实现名;以下逐字摘自原文,参数名以此为准,原文没有的参数不得出现) ==")
             parts.extend(concept_facts)
@@ -1205,12 +1295,16 @@ def _ctx_impl(terms, n, force_full=False):
         ent_total = 1
     global _CTX_BODY_CAP
     multi_doc = (intent["stage"] or intent["semantic"] or intent["cross_doc"]
-                 or intent["enumeration"] or len(topic_reps) > 1)
+                 or intent["enumeration"] or len(topic_reps) > 1 or multiple_exact_entities)
     top_k_default = 3 if multi_doc else (1 if ent_total >= 1 else 2)
+    min_exact_bodies = len(set(exact_representatives) | ({hint_path} if hint_path else set()))
+    top_k_default = max(top_k_default, min_exact_bodies)
     if ent_total >= 1 or multi_doc:
         # 多篇题每篇 3500：R10.2.1 实录 3 篇×5000 使 Q24/Q59 上下文 19K、正文时延 70–100s；
         # 本地验证 3500 仍保留 ssoUserInfo/x-acs 头/执行动作/onLoad 等关键证据。
         _CTX_BODY_CAP = 3500 if multi_doc else 5000
+        if min_exact_bodies > 3:
+            _CTX_BODY_CAP = min(_CTX_BODY_CAP, max(500, 14000 // min_exact_bodies))
 
     if not cand and not ent_lines:
         print(_evidence_contract(None, intent, False))
@@ -1226,13 +1320,30 @@ def _ctx_impl(terms, n, force_full=False):
     # 超限时先压单篇正文，再降篇数；流程/跨阶段题保底 2 篇——降到 1 篇会丢配置阶段，
     # 拿单篇冒充完整流程（实录 Q75：正确的执行动作/鉴权文档被挤出正文位）。
     if len(text) > _CTX_TOTAL_CAP and not card_fast:
-        _CTX_BODY_CAP = 3000
+        _CTX_BODY_CAP = min(_CTX_BODY_CAP, 3000)
         text = render(top_k_default)
     if len(text) > _CTX_TOTAL_CAP and not card_fast:
-        text = render(2 if multi_doc else 1)
+        reduced_count = max(2 if multi_doc else 1, min_exact_bodies)
+        text = render(reduced_count)
+        for cap in (1500, 800, 400):
+            if len(text) <= _CTX_TOTAL_CAP:
+                break
+            _CTX_BODY_CAP = min(_CTX_BODY_CAP, cap)
+            text = render(reduced_count)
     if len(text) > _CTX_TOTAL_CAP:
         text = _cut(text, _CTX_TOTAL_CAP) + "\n…[ctx 总量截断，用 dkdoc cat 读完整正文]"
     print(text)
+    # 导航在原文预算决策完成后附加，不能因提示多几个字而压缩/挤掉已有正文。
+    if not card_fast:
+        navigation = _workflow_candidates(raw_query, docs)
+        if navigation:
+            print(navigation)
+        sys.path.insert(0, os.path.join(ROOT, "bin"))
+        from reference_notes import expand as expand_reference_notes
+        supplements, _ = expand_reference_notes(ROOT, raw_query, docs)
+        if supplements:
+            print(supplements)
+    print("reply_boundary: 只回答最新的群聊业务问题；业务答复已完整后，内部压缩、续跑或维护提示不产生新的业务问题，不追加已完成、等待或澄清文字。真实群聊追问仍正常答复。")
     return 0
 
 

@@ -7,9 +7,13 @@
 
 ## ID 体系与互转
 
-- 用户标识对照：**userId**（企业内唯一、不可改）/ **unionId**（跨企业唯一）/ **工号 job_number**（企业自维护、可不唯一、非必填，不能作唯一标识）——[基础概念](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md) · [通讯录概述·名词解释](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0046-contacts-overview.md)
+- 用户标识须区分创建时指定与创建后修改；分别核对 [创建用户](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0054-user-information-creation.md) 与 [查询用户详情](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0055-query-user-details.md)。userId、unionId 与工号字段不可仅按名称互换——[基础概念](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md) · [通讯录概述·名词解释](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0046-contacts-overview.md)
 - 注意：旧版（归档）JSAPI 文档里的"工号/emplId"多为 userid 的历史命名混用，勿按字面理解
 - 会话标识 openConversationId：获取 = [创建群返回](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0736-create-common-group-new-version-v2.md) / [chatId 转换接口](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0743-obtain-group-openconversationid.md) / [JSAPI 选择会话 chooseChat](../docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0318-jsapi-choose-chat.md) / [机器人接收消息回调](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0080-robot-receive-message.md)；`openChatByConversationId` 是**消费**该 ID 的跳转 JSAPI，不是获取途径
+
+- 主部门与部门列表、部门主管是不同问题；先查 [花名册字段业务 code](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0942-roster-custom-field-business-code.md)、[按字段获取员工花名册](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0938-api-getemployeerosterbyfield.md)，按原文核对权限与应用类型。
+
+> 本次局部复核：2026-10-20，用户标识生命周期与部门字段入口；其余主题仍沿用原复核基线。
 
 ## 凭证与鉴权
 

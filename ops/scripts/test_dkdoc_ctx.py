@@ -9,6 +9,7 @@ import tempfile
 import unittest
 from contextlib import redirect_stdout
 from test_dkdoc_subjects import SubjectEvidenceTest
+from test_reference_notes import ReferenceNotesTest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DKDOC = os.path.join(ROOT, "bin", "dkdoc")
@@ -38,6 +39,57 @@ def first_body_heading(output):
 
 
 def main():
+    precise = run("ctx", "dd.biz.util.uploadAttachment 报错 invalidParameter 怎么排查")
+    check("upload-attachment-to-nail-plate" in first_body_heading(precise), "完整 JSAPI 被错误词抢走")
+    check("归档" in first_body_heading(precise), "旧 JSAPI 丢失归档说明")
+    endpoint = run("ctx", "https://oapi.dingtalk.com/topapi/v2/user/create 的 userid 参数")
+    check("user-information-creation" in endpoint, "完整 endpoint 未召回自身接口")
+    check("exclusive/partners/users" not in endpoint.split("== 其他")[0], "显式 endpoint 被同字段接口替换")
+    roles = run("ctx", "查询角色列表")
+    check("upload-attachment-to-nail-plate" not in first_body_heading(roles), "精确实体误伤普通问题")
+    made = run("ctx", "userid 可以自定义吗，创建后能修改吗")
+    check("user-information-creation" in made, "用户标识生命周期缺创建证据")
+    dept = run("ctx", "如何查询主部门")
+    check("sys00-mainDeptId" in dept, "主部门缺精确字段证据")
+    events = run("ctx", "视频会议有哪些订阅事件")
+    check("event-meeting-status-change" in events, "会议事件枚举缺原始事件页")
+
+    dept_contract = run("ctx", "如何查询主部门")
+    check("未明示排序/角色时，不能由数组首项认定主对象" in dept_contract, "缺少数组角色的证据边界")
+    product = run("ctx", "钉钉表格 字段级别权限 列权限 查看权限")
+    check("cross_kb_product:" in product and "dwsdoc ctx" in product, "产品权限需补产品依据")
+    callback = run("ctx", "应用机器人能发送钉钉卡片并接收回调吗")
+    check("可选原文导航（未核验适用性）" in callback and "dkdoc cat event-callback-card" in callback,
+          "复杂卡片题需给可选补查入口，并明确尚不能当作事实证据")
+    # 导航可定位到现行原文；API能力仍由原文证明，不由候选列表自证。
+    callback_body = run("cat", "event-callback-card")
+    check("STREAM" in callback_body and "callbackRouteKey" in callback_body, "候选入口不能成为失效路径")
+    transfer_body = run("cat", "obtains-the-details-of-a-single-approval-instance-pop")
+    check("/v1.0/workflow/processInstances" in transfer_body, "审批补查入口应可读取现行原文")
+
+    multi = run("ctx", "https://oapi.dingtalk.com/topapi/v2/user/get https://oapi.dingtalk.com/topapi/v2/user/create 参数")
+    check("fast=0" in multi and "multiple_exact_entities" in multi, "多接口问法走了单卡捷径")
+    check("query-user-details" in multi and "user-information-creation" in multi, "多接口证据未分别展开")
+    js_pair = run("ctx", "dd.biz.util.uploadAttachment 对比 dd.uploadFile 参数")
+    check("upload-attachment-to-nail-plate" in js_pair and "jsapi-upload-file" in js_pair, "两个 JSAPI 未分别展开")
+
+    todo_identity = run("ctx", "创建待办时，creatorId 应该传 userId 还是 unionId")
+    check("user-information-creation" not in first_body_heading(todo_identity), "其他产品创建动作误触通讯录生命周期")
+    check("unionId" in todo_identity and "todo-faq" in todo_identity, "待办身份契约被泛标识路由挤走")
+    check("add-dingtalk-to-do-task" in first_body_heading(todo_identity), "明确待办创建主体未优先自身接口")
+
+    four = run("ctx", "dd.chooseImage dd.previewImage dd.uploadFile dd.downloadFile 参数")
+    headings = "\n".join(l for l in four.splitlines() if l.startswith("== 正文["))
+    check("jsapi-upload-file" in headings and len(headings.splitlines()) >= 4, "四个显式实体仍被三篇上限丢弃")
+    todo_creator = run("ctx", "待办 creatorId 的 userId 怎么生成")
+    check("add-dingtalk-to-do-task" in first_body_heading(todo_creator), "待办字段主体被用户标识生成泛词覆盖")
+
+    current = run("ctx", "dd.complexChoose PC端选人的用法")
+    check("jsapi-complex-choose" in first_body_heading(current) and "归档" not in first_body_heading(current), "同标识现行参考被归档页挤走")
+    check("showLabelPick" in current, "选人 JSAPI 的现行端限制丢失")
+    ready = run("ctx", "dd.ready 为什么回调不执行")
+    check("归档" not in first_body_heading(ready), "通用 JSAPI 回调从现行鉴权回退归档流程")
+
     simple = intent("通过免登码获取用户信息的接口地址和必填参数是什么")
     check(not any(simple.values()), f"简单 API 契约题被误拦截: {simple}")
     check(not intent("获取 access_token 接口")["truncated"],
@@ -294,6 +346,8 @@ def main():
 
     result = unittest.TextTestRunner().run(unittest.defaultTestLoader.loadTestsFromTestCase(SubjectEvidenceTest))
     check(result.wasSuccessful(), "主体路由/证据覆盖回归失败")
+    result = unittest.TextTestRunner().run(unittest.defaultTestLoader.loadTestsFromTestCase(ReferenceNotesTest))
+    check(result.wasSuccessful(), "补充原文依据回归失败")
     print("OK: dkdoc ctx fast-path/evidence-contract/subject regression")
     return 0
 

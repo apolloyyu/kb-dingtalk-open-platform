@@ -6,7 +6,7 @@ archived: false
 method: POST
 endpoint: https://api.dingtalk.com/v1.0/crm/customObjects/contacts/datas/query
 api_version: v2-new
-app_types: 第三方企业应用
+app_types: 企业内部应用, 第三方企业应用
 permissions: qyapi_crm_maindata_read
 
 ## Request headers
@@ -29,4 +29,4 @@ permissions: qyapi_crm_maindata_read
 - 分页大小。 **[!NOTE]** 最多可一次获取200条数据。
 
 source_url: https://open.dingtalk.com/document/development/api-getcontacts
-updated_at: 2026-06-04 19:12:12
+updated_at: 2026-10-20 15:09:45

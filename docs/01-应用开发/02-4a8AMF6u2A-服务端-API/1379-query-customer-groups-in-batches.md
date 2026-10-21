@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "更多开放 > 客户管理（官方CRM） > 客户群 > 批量查询客户群"
 doc_id: "Dn0xSVDrEn"
-updated_at: "2026-06-04 19:12:18"
+updated_at: "2026-10-20 09:09:45"
 ---
 
 > Source: https://open.dingtalk.com/document/development/query-customer-groups-in-batches
 > Path: 应用开发 / 服务端 API / 更多开放 > 客户管理（官方CRM） > 客户群 > 批量查询客户群
-> Updated: 2026-06-04 19:12:18
+> Updated: 2026-10-20 09:09:45
 
 # 批量查询客户群
 
@@ -20,13 +20,11 @@ updated_at: "2026-06-04 19:12:18"
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/crm/crmGroupChats/batchQuery |
 | HTTP Method | POST |
-| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
+| 支持的应用类型 | appType-企业内部应用appType-第三方企业应用 |
 | 权限要求 | permission-Crm.CustomerGroup.Read-客户管理客户群读权限 |
 
 ### 请求头

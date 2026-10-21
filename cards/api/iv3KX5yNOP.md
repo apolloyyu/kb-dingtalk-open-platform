@@ -6,7 +6,7 @@ archived: false
 method: GET
 endpoint: https://api.dingtalk.com/v1.0/crm/relations/datas/targets/{targetId}
 api_version: v2-new
-app_types: 第三方企业应用
+app_types: 企业内部应用, 第三方企业应用
 permissions: qyapi_crm_maindata_read
 
 ## Request headers
@@ -28,4 +28,4 @@ permissions: qyapi_crm_maindata_read
 - 客户的unionId，只能通过以下方式获取： - 企业内部应用，调用查询用户详情接口获取。 - 第三方企业应用，通过钉钉统一授权套件获取。
 
 source_url: https://open.dingtalk.com/document/development/querying-customer-data
-updated_at: 2026-06-03 09:36:57
+updated_at: 2026-10-20 15:09:40

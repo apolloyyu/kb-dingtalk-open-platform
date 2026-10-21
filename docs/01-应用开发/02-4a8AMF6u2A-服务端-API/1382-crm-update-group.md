@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "更多开放 > 客户管理（官方CRM） > 客户群 > 更新客户群组"
 doc_id: "2vS1U4O2SJ"
-updated_at: "2026-06-04 19:12:20"
+updated_at: "2026-10-20 09:09:48"
 ---
 
 > Source: https://open.dingtalk.com/document/development/crm-update-group
 > Path: 应用开发 / 服务端 API / 更多开放 > 客户管理（官方CRM） > 客户群 > 更新客户群组
-> Updated: 2026-06-04 19:12:20
+> Updated: 2026-10-20 09:09:48
 
 # 更新客户群组
 
@@ -20,20 +20,18 @@ updated_at: "2026-06-04 19:12:20"
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/crm/groupSets/set |
 | HTTP Method | PUT |
-| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
+| 支持的应用类型 | appType-企业内部应用appType-第三方企业应用 |
 | 权限要求 | permission-Crm.CustomerGroup.Write-客户管理客户群写权限 |
 
 ### 请求头
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证：  企业内部应用，可通过[获取企业内部应用的accessToken](0032-obtain-the-access-token-of-an-internal-app.md)接口获取。  第三方企业应用，可通过[获取第三方应用授权企业的accessToken](0033-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口获取。 |
+| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，通过以下获取：   - 企业内部应用，调用[获取企业内部应用的accessToken](0032-obtain-the-access-token-of-an-internal-app.md)接口获取。 - 第三方企业应用，调用[获取第三方应用授权企业的accessToken](0033-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口获取。 |
 
 ### 请求体
 

@@ -6,7 +6,7 @@ archived: false
 method: GET
 endpoint: https://api.dingtalk.com/v1.0/crm/personalCustomers
 api_version: v2-new
-app_types: 第三方企业应用
+app_types: 企业内部应用, 第三方企业应用
 permissions: qyapi_crm_maindata_read
 
 ## Request headers
@@ -29,4 +29,4 @@ permissions: qyapi_crm_maindata_read
 - 每页条数，最大值100。
 
 source_url: https://open.dingtalk.com/document/development/obtains-crm-individual-customers-in-batches-based-on-specified-query
-updated_at: 2026-06-04 19:12:10
+updated_at: 2026-10-20 14:51:09

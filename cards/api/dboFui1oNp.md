@@ -30,4 +30,4 @@ permissions: qyapi_crm_customdata_read
 - 分页大小。 **[!NOTE]** 最多可一次获取200条数据。
 
 source_url: https://open.dingtalk.com/document/development/api-getobjectdata
-updated_at: 2026-07-21 09:26:19
+updated_at: 2026-10-20 15:09:49

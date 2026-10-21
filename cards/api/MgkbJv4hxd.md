@@ -6,7 +6,7 @@ archived: false
 method: POST
 endpoint: https://api.dingtalk.com/v1.0/crm/groupSets
 api_version: v2-new
-app_types: 第三方企业应用
+app_types: 企业内部应用, 第三方企业应用
 permissions: Crm.CustomerGroup.Write
 
 ## Request headers
@@ -35,4 +35,4 @@ permissions: Crm.CustomerGroup.Write
 - - 每次创建新群时，会自动设置群主、群管理员、群公告等信息。
 
 source_url: https://open.dingtalk.com/document/development/crm-create-group
-updated_at: 2026-06-04 19:12:19
+updated_at: 2026-10-20 15:09:49

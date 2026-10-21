@@ -6,7 +6,7 @@ archived: false
 method: GET
 endpoint: https://api.dingtalk.com/v1.0/crm/crmGroupChats
 api_version: v2-new
-app_types: 第三方企业应用
+app_types: 企业内部应用, 第三方企业应用
 permissions: Crm.CustomerGroup.Read
 
 ## Request headers
@@ -30,4 +30,4 @@ permissions: Crm.CustomerGroup.Read
 - 每页最大条目数，最大值100。
 
 source_url: https://open.dingtalk.com/document/development/query-the-list-of-customer-groups
-updated_at: 2026-06-04 19:12:17
+updated_at: 2026-10-20 09:09:44

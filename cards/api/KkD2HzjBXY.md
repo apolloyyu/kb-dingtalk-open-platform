@@ -6,7 +6,7 @@ archived: false
 method: POST
 endpoint: https://api.dingtalk.com/v1.0/crm/crmGroupChats/query
 api_version: v2-new
-app_types: 第三方企业应用
+app_types: 企业内部应用, 第三方企业应用
 permissions: Crm.CustomerGroup.Read
 
 ## Request headers
@@ -28,4 +28,4 @@ permissions: Crm.CustomerGroup.Read
 - none stated
 
 source_url: https://open.dingtalk.com/document/development/obtain-a-single-customer-group
-updated_at: 2026-06-04 19:12:18
+updated_at: 2026-10-20 09:09:44

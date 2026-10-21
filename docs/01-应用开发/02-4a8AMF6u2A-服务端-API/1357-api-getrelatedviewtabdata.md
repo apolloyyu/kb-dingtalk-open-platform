@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "更多开放 > 客户管理（官方CRM） > 客户 > 获取审批里创建的与CRM客户关联的TAB表单数据实例列表"
 doc_id: "jdqwMFJKm9"
-updated_at: "2026-06-03 09:36:59"
+updated_at: "2026-10-20 15:09:42"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-getrelatedviewtabdata
 > Path: 应用开发 / 服务端 API / 更多开放 > 客户管理（官方CRM） > 客户 > 获取审批里创建的与CRM客户关联的TAB表单数据实例列表
-> Updated: 2026-06-03 09:36:59
+> Updated: 2026-10-20 15:09:42
 
 # 获取审批里创建的与CRM客户关联的TAB表单数据实例列表
 
@@ -20,14 +20,12 @@ updated_at: "2026-06-03 09:36:59"
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/crm/formRelatedTabs/datas/query |
 | HTTP Method | POST |
-| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
-| 权限要求 | permission-qyapi\_crm\_customdata\_read-获取CRM自定义对象数据的接口访问权限 |
+| 支持的应用类型 | appType-企业内部应用appType-第三方企业应用 |
+| 权限要求 | permission-qyapi\_crm\_customdata\_read-CRM自定义对象数据读权限 |
 
 ### 请求头
 

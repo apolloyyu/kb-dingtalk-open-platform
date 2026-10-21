@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "更多开放 > 客户管理（官方CRM） > 自定义对象 > 根据指定条件查询自定义对象数据"
 doc_id: "dboFui1oNp"
-updated_at: "2026-07-21 09:26:19"
+updated_at: "2026-10-20 15:09:49"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-getobjectdata
 > Path: 应用开发 / 服务端 API / 更多开放 > 客户管理（官方CRM） > 自定义对象 > 根据指定条件查询自定义对象数据
-> Updated: 2026-07-21 09:26:19
+> Updated: 2026-10-20 15:09:49
 
 # 根据指定条件查询自定义对象数据
 
@@ -25,7 +25,7 @@ updated_at: "2026-07-21 09:26:19"
 | HTTP URL | https://api.dingtalk.com/v1.0/crm/customObjects/datas/query |
 | HTTP Method | POST |
 | 支持的应用类型 | appType-企业内部应用 |
-| 权限要求 | permission-qyapi\_crm\_customdata\_read-获取CRM自定义对象数据的接口访问权限 |
+| 权限要求 | permission-qyapi\_crm\_customdata\_read-CRM自定义对象数据读权限 |
 
 ### 请求头
 

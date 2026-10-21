@@ -6,7 +6,7 @@ archived: false
 method: PUT
 endpoint: https://api.dingtalk.com/v1.0/crm/personalCustomers
 api_version: v2-new
-app_types: 第三方企业应用
+app_types: 企业内部应用, 第三方企业应用
 permissions: qyapi_crm_maindata_write
 
 ## Request headers
@@ -31,4 +31,4 @@ permissions: qyapi_crm_maindata_write
 - none stated
 
 source_url: https://open.dingtalk.com/document/development/update-crm-personal-customers
-updated_at: 2026-06-04 19:12:06
+updated_at: 2026-10-20 14:51:06

@@ -10,7 +10,7 @@ app_types: 企业内部应用
 permissions: qyapi_crm_maindata_write
 
 ## Request headers
-- x-acs-dingtalk-access-token (String, required): 调用该接口的访问凭证，通过调用获取企业内部应用的accessToken接口获取。
+- x-acs-dingtalk-access-token (String, required): 调用该接口的访问凭证，调用获取企业内部应用的accessToken接口获取。
 
 ## Path params
 - instanceId (String, required): CRM自定义对象数据ID，可通过根据指定条件查询自定义对象数据接口获取instance_id参数值。
@@ -28,4 +28,4 @@ permissions: qyapi_crm_maindata_write
 - none stated
 
 source_url: https://open.dingtalk.com/document/development/delete-crm-custom-object-data
-updated_at: 2026-06-04 19:12:15
+updated_at: 2026-10-20 15:09:48

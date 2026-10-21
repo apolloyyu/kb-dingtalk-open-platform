@@ -5,13 +5,13 @@ namespace: "development"
 slug: "crm-custom-object-data-operation-process"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "更多开放 > 客户管理（官方CRM） > 使用教程 > CRM自定义对象数据操作流程"
+breadcrumb: "更多开放 > 客户管理（官方CRM） > 集成方案 > 自定义对象管理：企业个性化业务数据全生命周期操作"
 doc_id: "CtYgKI5kQ2"
 updated_at: "2026-07-21 09:26:13"
 ---
 
 > Source: https://open.dingtalk.com/document/development/crm-custom-object-data-operation-process
-> Path: 应用开发 / 服务端 API / 更多开放 > 客户管理（官方CRM） > 使用教程 > CRM自定义对象数据操作流程
+> Path: 应用开发 / 服务端 API / 更多开放 > 客户管理（官方CRM） > 集成方案 > 自定义对象管理：企业个性化业务数据全生命周期操作
 > Updated: 2026-07-21 09:26:13
 
 # CRM自定义对象数据操作流程

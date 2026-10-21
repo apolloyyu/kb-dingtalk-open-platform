@@ -53,6 +53,19 @@ def main():
     events = run("ctx", "视频会议有哪些订阅事件")
     check("event-meeting-status-change" in events, "会议事件枚举缺原始事件页")
 
+    dept_contract = run("ctx", "如何查询主部门")
+    check("未明示排序/角色时，不能由数组首项认定主对象" in dept_contract, "缺少数组角色的证据边界")
+    product = run("ctx", "钉钉表格 字段级别权限 列权限 查看权限")
+    check("cross_kb_product:" in product and "dwsdoc ctx" in product, "产品权限需补产品依据")
+    callback = run("ctx", "应用机器人能发送钉钉卡片并接收回调吗")
+    check("可选原文导航（未核验适用性）" in callback and "dkdoc cat event-callback-card" in callback,
+          "复杂卡片题需给可选补查入口，并明确尚不能当作事实证据")
+    # 导航可定位到现行原文；API能力仍由原文证明，不由候选列表自证。
+    callback_body = run("cat", "event-callback-card")
+    check("STREAM" in callback_body and "callbackRouteKey" in callback_body, "候选入口不能成为失效路径")
+    transfer_body = run("cat", "obtains-the-details-of-a-single-approval-instance-pop")
+    check("/v1.0/workflow/processInstances" in transfer_body, "审批补查入口应可读取现行原文")
+
     multi = run("ctx", "https://oapi.dingtalk.com/topapi/v2/user/get https://oapi.dingtalk.com/topapi/v2/user/create 参数")
     check("fast=0" in multi and "multiple_exact_entities" in multi, "多接口问法走了单卡捷径")
     check("query-user-details" in multi and "user-information-creation" in multi, "多接口证据未分别展开")

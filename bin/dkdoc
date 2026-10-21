@@ -86,8 +86,8 @@ def _evidence_contract(card=None, intent=None, fast=False):
     lines += [
         "scope: 结论只在当前 source_url 明示的 API、端、阶段、应用类型和版本内有效",
         "proves: 卡片仅证明列出的 method/endpoint/应用类型/权限/请求头/路径、查询和Body参数/响应字段/必填性/明确限额；正文仅证明其逐字陈述",
-        "not_proved: 未明示的 ID 格式或校验、其他接口/配置阶段的数据流、客户端分栏/排序/展示因果",
-        "rule: 示例值不等于格式规范；字段存在不等于它决定产品行为；未直接证明则写“文档未说明”",
+        "not_proved: 未明示的 ID 格式、数组排序或首元素身份、其他接口/配置阶段的数据流、客户端展示因果",
+        "rule: 示例值不等于格式规范；字段存在不等于它决定产品行为；未明示排序/角色时，不能由数组首项认定主对象；不得把单个接口的端支持外推到未核验接口；未直接证明则写“文档未说明”",
         "links: 正文里的内联链接（含 dingtalk:// 客户端深链）应作为可点入口原样给用户：整条逐字照抄，禁止解码成 url= 内嵌地址、禁止改写或替换 ${corpId} 等占位符、禁止只留文字不给链接；文档出处另用各篇 source_url；链接被截断或不完整时不得补全、拼接，须 dkdoc cat 原文取整条，取不到只给该篇 source_url；不得按格式自行构造 alidocs.dingtalk.com / open.dingtalk.com 等任何链接",
         "images: 正文配图只配必要的：看图才能定位入口、填对表单或确认结果的步骤才带图，文字能说清的步骤不带；URL 逐字照抄本篇原图，[图略] 处不得凭空补图或引用其他篇的图",
     ]
@@ -102,6 +102,17 @@ _DIGITAL_EMPLOYEE_HINT = (
     "不得列为数字员工的创建、配置或入群方式；开发者后台的「数字员工」发布类型、企业自建 Agent 接口与 dws 数字员工的对应关系文档未写明，"
     "不得互相套用，也不得把它们列为 dws 数字员工的创建或入群方式。"
     "本轮未用 dwsdoc 检索 dws 库时，不得写任何 dws 命令的参数或取值(本库的更新日志只是摘要，不是参数依据)"
+)
+
+# 产品能力与开放API契约不是同一层。检索输出就地给出跨库提醒，避免长会话
+# 压缩后只剩API字段表、把未开放接口误判为产品没有该能力。不在这里写产品事实。
+_PRODUCT_CAPABILITY_RE = re.compile(
+    r"(?=.*(?:表格|多维表|notable|sheet|axls|审批|表单))"
+    r"(?=.*(?:权限|可见|查看|组件|控件|字段))", re.I)
+_PRODUCT_CAPABILITY_HINT = (
+    "cross_kb_product: 以下API字段/权限点只证明开发接口契约，不能代表产品的权限模型或可见性能力。"
+    "若用户未限定API/CLI入口、问产品能力，须同时用dws-cli-qa检索产品文档(dwsdoc ctx)，"
+    "区分产品功能与API开放范围；未完成产品依据核验，不得答产品不支持，不能把界面展示设置推成访问权限契约。"
 )
 
 
@@ -694,6 +705,35 @@ def _topic_documents(query, docs):
     return picked
 
 
+_WORKFLOW_CANDIDATES = (
+    (r"(?=.*(?:stream|流式))(?=.*webhook)(?=.*(?:机器人|robot))",
+     ("configure-the-robot-application", "receive-message", "robot-message-type")),
+    (r"(?=.*卡片)(?=.*(?:回调|提交|交互))",
+     ("create-and-deliver-cards", "event-callback-card")),
+    (r"(?=.*(?:bpms_task_change|审批任务))(?=.*转交)",
+     ("event-bpms-task-change", "obtains-the-details-of-a-single-approval-instance-pop")),
+    (r"(?=.*宜搭)(?=.*(?:操作记录|行为记录|变更记录|修改记录))",
+     ("change-records-of-query-forms",)),
+)
+
+
+def _workflow_candidates(query, docs):
+    """只导航，不修改召回、排序、正文上限或对象分类；候选本身不是事实证据。"""
+    by_slug = {d.get("slug"): d for d in docs}
+    picked = []
+    for pattern, slugs in _WORKFLOW_CANDIDATES:
+        if re.search(pattern, query, re.I):
+            for slug in slugs:
+                if slug in by_slug and by_slug[slug] not in picked:
+                    picked.append(by_slug[slug])
+    if not picked:
+        return ""
+    lines = ["== 可选原文导航（未核验适用性） ==",
+             "以下仅是补查入口，未判定属于本题产品/卡片类型/事件源；不得仅凭标题、候选或相邻字段作答或引用。先读所指对象自身原文，必要时逐篇核验候选；不适用则忽略。ActionCard等具体类型不得套用其他卡片接口的字段或能力。"]
+    lines += ["候选入口: dkdoc cat " + d["slug"] for d in picked]
+    return "\n".join(lines)
+
+
 def _tokenize_query(terms, corpus, stop):
     """自然中文按语料最长匹配，不产生跨边界伪词；常见英文概念补中文同义词。"""
     out = []
@@ -1162,6 +1202,8 @@ def _ctx_impl(terms, n, force_full=False):
                 parts.append("== API参数卡(证据;结论仍以正文为准) ==")
                 parts.append(evidence_card["body"])
         parts.append(_evidence_contract(api_card, intent, card_fast))
+        if _PRODUCT_CAPABILITY_RE.search(raw_q):
+            parts.append(_PRODUCT_CAPABILITY_HINT)
         if concept_facts:
             parts.append("== 原文直取(问法里的现象词→文档实现名;以下逐字摘自原文,参数名以此为准,原文没有的参数不得出现) ==")
             parts.extend(concept_facts)
@@ -1291,6 +1333,11 @@ def _ctx_impl(terms, n, force_full=False):
     if len(text) > _CTX_TOTAL_CAP:
         text = _cut(text, _CTX_TOTAL_CAP) + "\n…[ctx 总量截断，用 dkdoc cat 读完整正文]"
     print(text)
+    # 导航在原文预算决策完成后附加，不能因提示多几个字而压缩/挤掉已有正文。
+    if not card_fast:
+        navigation = _workflow_candidates(raw_query, docs)
+        if navigation:
+            print(navigation)
     return 0
 
 

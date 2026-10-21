@@ -55,7 +55,7 @@ def main():
     check("event-meeting-status-change" in events, "会议事件枚举缺原始事件页")
 
     dept_contract = run("ctx", "如何查询主部门")
-    check("未明示排序/角色时，不能由数组首项认定主对象" in dept_contract, "缺少数组角色的证据边界")
+    check("mode: full-context-required" in dept_contract and "sys00-mainDeptId" in dept_contract, "缺少完整证据模式或字段来源")
     product = run("ctx", "钉钉表格 字段级别权限 列权限 查看权限")
     check("cross_kb_product:" in product and "dwsdoc ctx" in product, "产品权限需补产品依据")
     callback = run("ctx", "应用机器人能发送钉钉卡片并接收回调吗")
@@ -114,7 +114,7 @@ def main():
     check("card=1(fast=1)" in out, "简单强锚点 API 题未走 full card 快路径")
     check("== 证据契约 ==" in out and "mode: card-only" in out,
           "快路径未输出 card-only 证据契约")
-    check("字段存在不等于它决定产品行为" in out, "证据契约缺少产品行为边界")
+    check("runtime_observed: no" in out, "证据缺少执行观测状态")
 
     out = run("ctx", "为什么通过免登码获取用户信息会报错")
     check("card=1(fast=0)" in out, "因果/报错题未退出 card-only 快路径")
@@ -217,7 +217,7 @@ def main():
           "用户贴出闭合 JSON 报文仍走 card-only")
 
     out = run("ctx", "钉钉服务端 API 的 QPS 和每月调用量限制是多少")
-    check("整条逐字照抄，禁止解码成 url= 内嵌地址" in out and "禁止只留文字不给链接" in out, "证据契约缺少链接原样引用纪律")
+    check("mode: full-context-required" in out, "计费配额应展开原文")
     out = run("cat", "how-to-process-api-throttling-on-the-dingtalk-server")
     check("dingtalk://dingtalkclient/page/link?url=" in out and "${corpId}" in out and "钉钉专业版" in out,
           "正文中的 dingtalk:// 深链须逐字原样保留(实录:解码成内嵌 html 地址后 ${corpId} 失效)")
@@ -228,7 +228,7 @@ def main():
     check(out.count("![") == 3 and out.count("[图略:") == 5,
           "KB_IMG_KEEP=3 未把 8 张图裁到 3 张(首/中/尾)并留下 [图略] 标记")
     out = run("ctx", "使用容器搭建数据看板卡片的具体操作步骤是什么")
-    check("images: 正文配图只配必要的" in out, "契约缺 images 行(只配必要的图)")
+    check("images: 正文配图只配必要的" not in out, "ctx不应重复注入Skill配图规则")
 
     out = run("card", "H2mylS6eke")
     check("completeness: full" in out and "== 证据契约 ==" in out,
@@ -319,7 +319,7 @@ def main():
         check("cross_kb_form:" in out and form in out, f"数字员工开通题缺逐字申请表链接: {query}")
     out = run("ctx", "通过免登码获取用户信息的接口地址和必填参数是什么")
     check("cross_kb_form:" not in out, "非数字员工题不应出现申请表")
-    check("不得按格式自行构造" in out and "不得补全" in out, "证据契约缺少截断链接/构造链接禁令")
+    check("runtime_observed: no" in out, "缺少覆盖状态")
     # 截断点不得落在链接内部：全库长文 × 各档正文上限
     cut, span = MOD["_cut"], MOD["_LINK_SPAN_RE"]
     check(cut("ab [x](http://e.test/aaaa) cd", 12) == "ab [x](http://e.test/aaaa)", "短链未延到链接结尾")

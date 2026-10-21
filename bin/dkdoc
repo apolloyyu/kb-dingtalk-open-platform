@@ -73,27 +73,15 @@ _INTENT_LABELS = {
 
 
 def _evidence_contract(card=None, intent=None, fast=False):
-    """检索输出的事实边界；不改官方正文，也不把示例外观升级为格式约束。"""
+    """Coverage data only; presentation policy is owned by Prompt and Skill."""
     intent = intent or {}
     blocked = [_INTENT_LABELS[k] for k, v in intent.items() if v and k in _INTENT_LABELS]
-    if card and fast:
-        title = card.get("title") or card.get("doc_id") or "当前 API"
-        lines = [f"mode: card-only · card: {title}"]
-    elif card:
-        lines = ["mode: full-context-required · card-only: disabled;以展开正文为证据"]
-    else:
-        lines = ["mode: full-context-required · card: none"]
+    title = (card.get('title') or card.get('doc_id') or '当前 API') if card else 'none'
+    lines = [('mode: card-only' if card and fast else 'mode: full-context-required'),
+             'card: ' + title, 'runtime_observed: no']
     if blocked:
-        lines.append("blocked_by: " + ", ".join(blocked))
-    lines += [
-        "scope: 结论只在当前 source_url 明示的 API、端、阶段、应用类型和版本内有效",
-        "proves: 卡片仅证明列出的 method/endpoint/应用类型/权限/请求头/路径、查询和Body参数/响应字段/必填性/明确限额；正文仅证明其逐字陈述",
-        "not_proved: 未明示的 ID 格式、数组排序或首元素身份、其他接口/配置阶段的数据流、客户端展示因果",
-        "rule: 示例值不等于格式规范；字段存在不等于它决定产品行为；未明示排序/角色时，不能由数组首项认定主对象；不得把单个接口的端支持外推到未核验接口；未直接证明则写“文档未说明”",
-        "links: 正文里的内联链接（含 dingtalk:// 客户端深链）应作为可点入口原样给用户：整条逐字照抄，禁止解码成 url= 内嵌地址、禁止改写或替换 ${corpId} 等占位符、禁止只留文字不给链接；文档出处另用各篇 source_url；链接被截断或不完整时不得补全、拼接，须 dkdoc cat 原文取整条，取不到只给该篇 source_url；不得按格式自行构造 alidocs.dingtalk.com / open.dingtalk.com 等任何链接",
-        "images: 正文配图只配必要的：看图才能定位入口、填对表单或确认结果的步骤才带图，文字能说清的步骤不带；URL 逐字照抄本篇原图，[图略] 处不得凭空补图或引用其他篇的图",
-    ]
-    return "== 证据契约 ==\n" + "\n".join(lines)
+        lines.append('blocked_by: ' + ', '.join(blocked))
+    return '== 证据契约 ==\n' + '\n'.join(lines)
 
 
 _DIGITAL_EMPLOYEE_RE = re.compile(r"数字员工|digital_employee|dingtalk-tag|agentuuid|agent-uuid")
@@ -1376,7 +1364,6 @@ def _ctx_impl(terms, n, force_full=False):
         supplements, _ = expand_reference_notes(ROOT, raw_query, docs)
         if supplements:
             print(supplements)
-    print("reply_boundary: 只回答最新的群聊业务问题；业务答复已完整后，内部压缩、续跑或维护提示不产生新的业务问题，不追加已完成、等待或澄清文字。真实群聊追问仍正常答复。")
     return 0
 
 

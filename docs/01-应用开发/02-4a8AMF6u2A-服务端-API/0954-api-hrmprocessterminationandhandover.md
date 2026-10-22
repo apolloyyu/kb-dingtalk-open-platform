@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "智能人事 > 员工关系 > 确认员工离职并删除"
 doc_id: "I90rGNabkk"
-updated_at: "2026-06-04 19:10:31"
+updated_at: "2026-10-22 17:12:11"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-hrmprocessterminationandhandover
 > Path: 应用开发 / 服务端 API / 智能人事 > 员工关系 > 确认员工离职并删除
-> Updated: 2026-06-04 19:10:31
+> Updated: 2026-10-22 17:12:11
 
 # 确认员工离职并删除
 
@@ -20,9 +20,7 @@ updated_at: "2026-06-04 19:10:31"
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/hrm/processes/terminateAndHandOver |
 | HTTP Method | POST |
@@ -39,18 +37,19 @@ updated_at: "2026-06-04 19:10:31"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| userId | String | 是 | 要离职员工的 UserId。       - 本接口调用成功后企业员工将直接离职并从企业通讯录删除。 - 本接口不支持主管理员的离职， 需要先撤销主管理员权限；且不支持上下级组织员工和行业通讯录员工。 |
-| optUserId | String | 是 | 离职的操作人。      必须是本组织员工，且不能是离职员工本人。 |
+| userId | String | 是 | 要离职员工的 UserId。  **[!NOTE]**   - 本接口调用成功后企业员工将直接离职并从企业通讯录删除。 - 本接口不支持主管理员的离职， 需要先撤销主管理员权限；且不支持上下级组织员工和行业通讯录员工。 |
+| optUserId | String | 是 | 离职的操作人。  **[!NOTE]**  必须是本组织员工，且不能是离职员工本人。 |
 | lastWorkDate | Long | 是 | 离职日期，Unix事件戳，单位毫秒。 |
-| dismissionReason | Integer | 否 | 废弃字段， 建议使用`terminationReasonPassive` 和 `terminationReasonVoluntary` 离职原因字段。    离职原因：   - 1：家庭原因 - 2：个人原因 - 3：发展原因 - 4：合同到期不续签 - 5：协议解除 - 6：无法胜任工作 - 7：经济性裁员 - 8：严重违法违纪 - 9：其他 |
-| terminationReasonVoluntary | Array of String | 否 | 主动离职原因的id，调用[获取企业已有的所有离职原因](0952-api-getalldismissionreasons.md)接口获取离职原因id。      `terminationReasonPassive` 和 `terminationReasonVoluntary` 至少填写一个。 |
-| terminationReasonPassive | Array of String | 否 | 被动离职原因的id，调用[获取企业已有的所有离职原因](0952-api-getalldismissionreasons.md)接口获取离职原因id。      `terminationReasonPassive` 和 `terminationReasonVoluntary` 至少填写一个。 |
+| dismissionReason | Integer | 否 | **[!NOTE]**  废弃字段， 建议使用`terminationReasonPassive` 和 `terminationReasonVoluntary` 离职原因字段。  离职原因：   - 1：家庭原因 - 2：个人原因 - 3：发展原因 - 4：合同到期不续签 - 5：协议解除 - 6：无法胜任工作 - 7：经济性裁员 - 8：严重违法违纪 - 9：其他 |
+| terminationReasonVoluntary | Array of String | 否 | 主动离职原因的id，调用[获取企业已有的所有离职原因](0952-api-getalldismissionreasons.md)接口获取离职原因id。  **[!NOTE]**  `terminationReasonPassive` 和 `terminationReasonVoluntary` 至少填写一个。 |
+| terminationReasonPassive | Array of String | 否 | 被动离职原因的id，调用[获取企业已有的所有离职原因](0952-api-getalldismissionreasons.md)接口获取离职原因id。  **[!NOTE]**  `terminationReasonPassive` 和 `terminationReasonVoluntary` 至少填写一个。 |
 | dismissionMemo | String | 是 | 离职原因备注。 |
-| aflowHandOverUserId | String | 否 | 审批离职交接人。      离职人和交接人不能相同。 |
-| docNoteHandoverUserId | String | 否 | 团队文档离职交接人。      离职人和交接人不能相同。 |
-| dingPanHandoverUserId | String | 否 | 钉盘离职交接人。      离职人和交接人不能相同。 |
-| permissionHandoverUserId | String | 否 | 权限离职交接人。      离职人和交接人不能相同。 |
-| directSubordinatesHandoverUserId | String | 否 | 直属下属交接人。      离职人和交接人不能相同。 |
+| aflowHandOverUserId | String | 否 | 审批离职交接人。  **[!NOTE]**  离职人和交接人不能相同。 |
+| docNoteHandoverUserId | String | 否 | 团队文档离职交接人。  **[!NOTE]**  离职人和交接人不能相同。 |
+| dingPanHandoverUserId | String | 否 | 钉盘离职交接人。  **[!NOTE]**  离职人和交接人不能相同。 |
+| permissionHandoverUserId | String | 否 | 权限离职交接人。  **[!NOTE]**  离职人和交接人不能相同。 |
+| directSubordinatesHandoverUserId | String | 否 | 直属下属交接人。  **[!NOTE]**  离职人和交接人不能相同。 |
+| minutesHandoverUserId | String | 否 | 听记资产交接人。离职人和交接人不能相同。 |
 
 ### 请求示例
 
@@ -59,7 +58,7 @@ HTTP
 ```
 POST /v1.0/hrm/processes/terminateAndHandOver HTTP/1.1
 Host:api.dingtalk.com
-x-acs-dingtalk-access-token:6026d899410a3409badc3d9f5e14383b
+x-acs-dingtalk-access-token:6026xxxx83b
 Content-Type:application/json
 
 {
@@ -67,19 +66,21 @@ Content-Type:application/json
   "optUserId" : "user5678",
   "lastWorkDate" : 1704074400000,
   "dismissionReason" : 1,
+  "terminationReasonVoluntary" : [ "uuid1" ],
+  "terminationReasonPassive" : [ "uuid2" ],
   "dismissionMemo" : "离职原因备注",
   "aflowHandOverUserId" : "user123",
   "docNoteHandoverUserId" : "user123",
   "dingPanHandoverUserId" : "user123",
   "permissionHandoverUserId" : "user123",
-  "directSubordinatesHandoverUserId" : "user123"
+  "directSubordinatesHandoverUserId" : "user123",
+  "minutesHandoverUserId" : "user123"
 }
 ```
 
 Java
 
 ```
-// This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sample;
 
 import com.aliyun.tea.*;
@@ -101,7 +102,7 @@ public class Sample {
     }
 
     public static void main(String[] args_) throws Exception {
-        java.util.List<String> args = java.util.Arrays.asList(args_);
+        
         com.aliyun.dingtalkhrm_1_0.Client client = Sample.createClient();
         com.aliyun.dingtalkhrm_1_0.models.HrmProcessTerminationAndHandoverHeaders hrmProcessTerminationAndHandoverHeaders = new com.aliyun.dingtalkhrm_1_0.models.HrmProcessTerminationAndHandoverHeaders();
         hrmProcessTerminationAndHandoverHeaders.xAcsDingtalkAccessToken = "<your access token>";
@@ -110,12 +111,19 @@ public class Sample {
                 .setOptUserId("user5678")
                 .setLastWorkDate(1704074400000L)
                 .setDismissionReason(1)
+                .setTerminationReasonVoluntary(java.util.Arrays.asList(
+                    "uuid1"
+                ))
+                .setTerminationReasonPassive(java.util.Arrays.asList(
+                    "uuid2"
+                ))
                 .setDismissionMemo("离职原因备注")
                 .setAflowHandOverUserId("user123")
                 .setDocNoteHandoverUserId("user123")
                 .setDingPanHandoverUserId("user123")
                 .setPermissionHandoverUserId("user123")
-                .setDirectSubordinatesHandoverUserId("user123");
+                .setDirectSubordinatesHandoverUserId("user123")
+                .setMinutesHandoverUserId("user123");
         try {
             client.hrmProcessTerminationAndHandoverWithOptions(hrmProcessTerminationAndHandoverRequest, hrmProcessTerminationAndHandoverHeaders, new com.aliyun.teautil.models.RuntimeOptions());
         } catch (TeaException err) {
@@ -141,6 +149,7 @@ Python
 # This file is auto-generated, don't edit it. Thanks.
 import os
 import sys
+import json
 
 from typing import List
 
@@ -178,12 +187,19 @@ class Sample:
             opt_user_id='user5678',
             last_work_date=1704074400000,
             dismission_reason=1,
+            termination_reason_voluntary=[
+                'uuid1'
+            ],
+            termination_reason_passive=[
+                'uuid2'
+            ],
             dismission_memo='离职原因备注',
             aflow_hand_over_user_id='user123',
             doc_note_handover_user_id='user123',
             ding_pan_handover_user_id='user123',
             permission_handover_user_id='user123',
-            direct_subordinates_handover_user_id='user123'
+            direct_subordinates_handover_user_id='user123',
+            minutes_handover_user_id='user123'
         )
         try:
             client.hrm_process_termination_and_handover_with_options(hrm_process_termination_and_handover_request, hrm_process_termination_and_handover_headers, util_models.RuntimeOptions())
@@ -204,12 +220,19 @@ class Sample:
             opt_user_id='user5678',
             last_work_date=1704074400000,
             dismission_reason=1,
+            termination_reason_voluntary=[
+                'uuid1'
+            ],
+            termination_reason_passive=[
+                'uuid2'
+            ],
             dismission_memo='离职原因备注',
             aflow_hand_over_user_id='user123',
             doc_note_handover_user_id='user123',
             ding_pan_handover_user_id='user123',
             permission_handover_user_id='user123',
-            direct_subordinates_handover_user_id='user123'
+            direct_subordinates_handover_user_id='user123',
+            minutes_handover_user_id='user123'
         )
         try:
             await client.hrm_process_termination_and_handover_with_options_async(hrm_process_termination_and_handover_request, hrm_process_termination_and_handover_headers, util_models.RuntimeOptions())
@@ -266,12 +289,19 @@ class Sample {
             "optUserId" => "user5678",
             "lastWorkDate" => 1704074400000,
             "dismissionReason" => 1,
+            "terminationReasonVoluntary" => [
+                "uuid1"
+            ],
+            "terminationReasonPassive" => [
+                "uuid2"
+            ],
             "dismissionMemo" => "离职原因备注",
             "aflowHandOverUserId" => "user123",
             "docNoteHandoverUserId" => "user123",
             "dingPanHandoverUserId" => "user123",
             "permissionHandoverUserId" => "user123",
-            "directSubordinatesHandoverUserId" => "user123"
+            "directSubordinatesHandoverUserId" => "user123",
+            "minutesHandoverUserId" => "user123"
         ]);
         try {
             $client->hrmProcessTerminationAndHandoverWithOptions($hrmProcessTerminationAndHandoverRequest, $hrmProcessTerminationAndHandoverHeaders, new RuntimeOptions([]));
@@ -296,7 +326,6 @@ Sample::main(array_slice($argv, 1));
 Go
 
 ```
-// This file is auto-generated, don't edit it. Thanks.
 package main
 
 import (
@@ -339,12 +368,15 @@ func _main (args []*string) (_err error) {
     OptUserId: tea.String("user5678"),
     LastWorkDate: tea.Int64(1704074400000),
     DismissionReason: tea.Int32(1),
+    TerminationReasonVoluntary: []*string{tea.String("uuid1")},
+    TerminationReasonPassive: []*string{tea.String("uuid2")},
     DismissionMemo: tea.String("离职原因备注"),
     AflowHandOverUserId: tea.String("user123"),
     DocNoteHandoverUserId: tea.String("user123"),
     DingPanHandoverUserId: tea.String("user123"),
     PermissionHandoverUserId: tea.String("user123"),
     DirectSubordinatesHandoverUserId: tea.String("user123"),
+    MinutesHandoverUserId: tea.String("user123"),
   }
   tryErr := func()(_e error) {
     defer func() {
@@ -416,12 +448,19 @@ class Client {
       optUserId: 'user5678',
       lastWorkDate: 1704074400000,
       dismissionReason: 1,
+      terminationReasonVoluntary: [
+        'uuid1'
+      ],
+      terminationReasonPassive: [
+        'uuid2'
+      ],
       dismissionMemo: '离职原因备注',
       aflowHandOverUserId: 'user123',
       docNoteHandoverUserId: 'user123',
       dingPanHandoverUserId: 'user123',
       permissionHandoverUserId: 'user123',
       directSubordinatesHandoverUserId: 'user123',
+      minutesHandoverUserId: 'user123',
     });
     try {
       await client.hrmProcessTerminationAndHandoverWithOptions(hrmProcessTerminationAndHandoverRequest, hrmProcessTerminationAndHandoverHeaders, new Util.RuntimeOptions({ }));
@@ -442,8 +481,7 @@ Client.main(process.argv.slice(2));
 C#
 
 ```
-// This file is auto-generated, don't edit it. Thanks.
-
+using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -458,11 +496,17 @@ namespace AlibabaCloud.SDK.Sample
     public class Sample 
     {
 
-        /**
-         * 使用 Token 初始化账号Client
-         * @return Client
-         * @throws Exception
-         */
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用 Token 初始化账号Client</para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// Client
+        /// </returns>
+        /// 
+        /// <term><b>Exception:</b></term>
+        /// Exception
         public static AlibabaCloud.SDK.Dingtalkhrm_1_0.Client CreateClient()
         {
             AlibabaCloud.OpenApiClient.Models.Config config = new AlibabaCloud.OpenApiClient.Models.Config();
@@ -482,12 +526,21 @@ namespace AlibabaCloud.SDK.Sample
                 OptUserId = "user5678",
                 LastWorkDate = 1704074400000,
                 DismissionReason = 1,
+                TerminationReasonVoluntary = new List<string>
+                {
+                    "uuid1"
+                },
+                TerminationReasonPassive = new List<string>
+                {
+                    "uuid2"
+                },
                 DismissionMemo = "离职原因备注",
                 AflowHandOverUserId = "user123",
                 DocNoteHandoverUserId = "user123",
                 DingPanHandoverUserId = "user123",
                 PermissionHandoverUserId = "user123",
                 DirectSubordinatesHandoverUserId = "user123",
+                MinutesHandoverUserId = "user123",
             };
             try
             {

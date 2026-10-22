@@ -7,70 +7,156 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "考勤 > 假勤审批 > 通知审批通过"
 doc_id: "Cyq6WFJlau"
-updated_at: "2026-10-14 09:14:25"
+updated_at: "2026-10-22 17:12:10"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-processapprovefinish
 > Path: 应用开发 / 服务端 API / 考勤 > 假勤审批 > 通知审批通过
-> Updated: 2026-10-14 09:14:25
+> Updated: 2026-10-22 17:12:10
 
 # 通知审批通过
 
 通过本接口，通知审批通过，支持加班、请假、外出和出差类型。
 
-## 接口调用说明
+例如，员工今日排班是8：00-18：00，在企业自有审批系统提交了请假，审批通过后通过本接口通知钉钉考勤，今天该员工无需打卡，不会被记为旷工，状态会显示为请假。
+例如，员工小钉在11月15日未执行打卡，考勤统计中显示如下图。
+![](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/7014958661/p520504.png)
+调用本接口，通知审批通过，可实现修改员工小钉在11月15日的考勤为请假、出差或者加班，如下图所示。
+![](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/7014958661/p520511.png)
 
-例如，员工今日排班是8：00-18：00，在企业自有审批系统提交了请假，审批通过后通过本接口通知钉钉考勤，今天该员工无需打卡，不会被记为旷工，状态会显示为请假。 例如，员工小钉在11月15日未执行打卡，考勤统计中显示如下图：
+## 权限
 
-![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/1943630871/p1075898.png)
+要调用此API，需要以下权限之一。
 
-调用本接口，通知审批通过，可实现修改员工小钉在11月15日的考勤为请假、出差或者加班，如下图所示：
+| 应用类型 | 是否支持 | 权限 | API Explorer调试 |
+| --- | --- | --- | --- |
+| 企业内部应用 | 支持 | 考勤组查询权限 | [API Explorer](https://open-dev.dingtalk.com/apiExplorer#/?devType=org&api=attendance_1.0%23ProcessApproveFinish) |
+| 第三方企业应用 | 支持 | 考勤组查询权限 | [API Explorer](https://open-dev.dingtalk.com/apiExplorer#/?devType=isv&api=attendance_1.0%23ProcessApproveFinish) |
+| 第三方个人应用 | 暂不支持 | 考勤组查询权限 | [API Explorer](https://open-dev.dingtalk.com/apiExplorer#/?devType=personal&api=attendance_1.0%23ProcessApproveFinish) |
 
-![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/1943630871/p1075899.png)
+## 请求方法
 
-## 请求
+```
+POST /v1.0/attendance/approvals/finish?userId=String HTTP/1.1
+x-acs-dingtalk-access-token:String
+Content-Type:application/json
 
-### 基本信息
+{
+  "topCalculateApproveDurationParam" : {
+    "bizType" : Long,
+    "fromTime" : "String",
+    "toTime" : "String",
+    "durationUnit" : "String",
+    "calculateModel" : Long,
+    "leaveCode" : "String",
+    "timeZoneId" : "String"
+  },
+  "tagName" : "String",
+  "subType" : "String",
+  "approveId" : "String",
+  "dingtalkApproveId" : "String",
+  "jumpUrl" : "String",
+  "overtimeDuration" : "String",
+  "overTimeToMore" : Long,
+  "isApproveProcess" : Boolean,
+  "overtimeDurationByApprove" : Boolean,
+  "approveDuration" : {
+    "pushTag" : "String",
+    "durationUnit" : "String",
+    "durationInDay" : Double,
+    "durationInHour" : Double,
+    "durationInMinutes" : Double,
+    "calculateMode" : Long,
+    "detailList" : [ {
+      "workDate" : Long,
+      "durationInDay" : Double,
+      "durationInHour" : Double,
+      "durationInMinutes" : Double,
+      "workTimeMinutes" : Long,
+      "hasClass" : Boolean,
+      "features" : {
+        "className" : "String",
+        "classSections" : [ {
+          "startTime" : Long,
+          "startAcross" : Long,
+          "endTime" : Long,
+          "endAcross" : Long
+        } ],
+        "restSections" : [ {
+          "startTime" : Long,
+          "startAcross" : Long,
+          "endTime" : Long,
+          "endAcross" : Long
+        } ],
+        "workStartTime" : Long,
+        "workEndTime" : Long,
+        "applyFromTime" : Long,
+        "applyToTime" : Long,
+        "isRest" : Boolean
+      },
+      "durationInSecond" : Long,
+      "overtimeDurationStatus" : Long,
+      "message" : "String",
+      "dayType" : "String"
+    } ],
+    "compressedValue" : "String",
+    "overtimeRedressBy" : "String",
+    "overtimeDurationStatus" : Long,
+    "message" : "String",
+    "modifiable" : Boolean,
+    "userMessage" : "String",
+    "approvalMessage" : "String",
+    "newOvertime" : Boolean,
+    "excludePrincipalUserIds" : [ "String" ]
+  }
+}
+```
 
-| 字段 | 值 |
-| --- | --- |
-| HTTP URL | https://api.dingtalk.com/v1.0/attendance/approvals/finish |
-| HTTP Method | POST |
-| 支持的应用类型 | appType-企业内部应用　appType-第三方企业应用 |
-| 权限要求 | permission-qyapi\_attendance\_group\_read-考勤组查询权限 |
-
-### 请求头
+## Header参数
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，通过以下获取：   - 企业内部应用，调用[获取企业内部应用的accessToken](0032-obtain-the-access-token-of-an-internal-app.md)接口获取。 - 第三方企业应用，调用[获取第三方应用授权企业的accessToken](0033-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口获取。 |
+| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，可通过以下方式获取：   - 企业内部应用可调用[获取企业内部应用的accessToken](0032-obtain-the-access-token-of-an-internal-app.md)接口获取。 - 第三方企业应用可调用[获取第三方应用授权企业的accessToken](0033-obtain-the-access-token-of-the-authorized-enterprise-1.md)接口获取。 |
 
-### 查询参数
+## Query参数
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
 | userId | String | 否 | 员工的userId。 |
 
-### 请求体
+## Body参数
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
 | topCalculateApproveDurationParam | Object | 否 | 时长相关入参。 |
 | bizType | Long | 否 | 审批单类型，可取值：   - **1**：加班 - **2**：出差、外出 - **3**：请假 |
-| fromTime | String | 否 | 开始时间。开始时间不能早于当前时间前31天。  支持以下格式：   - 2019-08-15 - 2019-08-15 AM - 2019-08-15 12:43 |
-| toTime | String | 否 | 结束时间。  支持以下格式：   - 2019-08-15 - 2019-08-15 AM - 2019-08-15 12:43   **[!NOTE]**  - 结束时间不能早于开始时间； - 时间跨度不能超过360天； - 结束时间减去开始时间的天数不能超过31天； - `biz_type`为1时，结束时间减去开始时间的天数不能超过1天。 |
+| fromTime | String | 否 | 开始时间。开始时间不能早于当前时间前31天。 支持以下格式：   - 2019-08-15 - 2019-08-15 AM - 2019-08-15 12:43 |
+| toTime | String | 否 | 结束时间。 支持以下格式：   - 2019-08-15 - 2019-08-15 AM - 2019-08-15 12:43   **[!NOTE]**     - 结束时间不能早于开始时间； - 时间跨度不能超过360天； - 结束时间减去开始时间的天数不能超过31天； - `biz_type`为1时，结束时间减去开始时间的天数不能超过1天。 |
 | durationUnit | String | 否 | 时长单位，支持格式如下：   - **day** - **halfDay** - **hour**：`biz_type`为1时仅支持hour。   时间格式必须与时长单位对应：   - 2019-08-15对应day - 2019-08-15 AM对应halfDay - 2019-08-15 12:43对应hour |
 | calculateModel | Long | 否 | 计算方法：   - **0**：按自然日计算 - **1**：按工作日计算 |
-| leaveCode | String | 否 | 假期规则唯一标识。选填。  **[!NOTE]**  仅支持`bizType=3`请假时传不为空，可以支持根据假期类型设置的取整规则进行时长取整。 |
-| timeZoneId | String | 否 | 时区id，格式`Asia/Shanghai`。 |
+| leaveCode | String | 否 | 假期规则唯一标识。选填。  **[!NOTE]**    仅支持`bizType=3`请假时传不为空，可以支持根据假期类型设置的取整规则进行时长取整。 |
+| timeZoneId | String | 否 | 时区id |
 | tagName | String | 否 | 审批单类型名称，最大长度20个字符，支持类型：请假、出差、外出、加班。 |
-| subType | String | 否 | 子类型名称，最大长度64个字符。  **[!NOTE]**  审批单类型biz\_type=3时，该参数必传。 |
-| approveId | String | 否 | 审批单ID，最大长度100个字符，自定义值。  **[!NOTE]**  第三方企业应用需要自行保存，通知审批撤销时需要使用参数。approveId不变的情况下再次调用本接口是更新操作。 |
-| jumpUrl | String | 否 | 审批单跳转地址，最大长度200个字符。  **[!NOTE]**  第三方企业应用在考勤统计页面点击会根据该地址进行跳转，可传对应的审批单详情地址。 |
+| subType | String | 否 | 子类型名称，最大长度64个字符。  **[!NOTE]**    审批单类型biz\_type=3时，该参数必传。 |
+| approveId | String | 否 | 审批单ID，最大长度100个字符，自定义值。  **[!NOTE]**    第三方企业应用需要自行保存，通知审批撤销时需要使用参数。approveId不变的情况下再次调用本接口是更新操作。 |
+| jumpUrl | String | 否 | 审批单跳转地址，最大长度200个字符。  **[!NOTE]**    第三方企业应用在考勤统计页面点击会根据该地址进行跳转，可传对应的审批单详情地址。 |
 | overtimeDuration | String | 否 | biz\_type为1时必传，加班时长单位小时。 |
 | overTimeToMore | Long | 否 | biz\_type为1时必传：   - **1**：加班转调休 - **2**：加班转工资 |
 
-### 请求示例
+## 返回参数
+
+| 名称 | 类型 | 描述 |
+| --- | --- | --- |
+| result | Object | 返回结果。 |
+| duration | double | 总时长，该字段的单位与本企业内对应审批单设置的单位一致。 |
+| durationDetail | Array | 详细信息。 |
+| date | String | 审批通过日期。 |
+| duration | double | 每日时长。 |
+| success | Boolean | 接口调用是否成功。 |
+
+## 示例
+
+**请求示例**
 
 HTTP
 
@@ -88,7 +174,6 @@ Content-Type:application/json
     "durationUnit" : "day",
     "calculateModel" : 1,
     "leaveCode" : "3afdsf-143dsadw3-ad23"
-    "timeZoneId":"Asia/Shanghai"
   },
   "tagName" : "请假",
   "subType" : "年假",
@@ -135,7 +220,6 @@ public class Sample {
                 .setDurationUnit("day")
                 .setCalculateModel(1L)
                 .setLeaveCode("3afdsf-143dsadw3-ad23");
-                .setTimeZoneId("Asia/Shanghai");
         com.aliyun.dingtalkattendance_1_0.models.ProcessApproveFinishRequest processApproveFinishRequest = new com.aliyun.dingtalkattendance_1_0.models.ProcessApproveFinishRequest()
                 .setUserId("manager123")
                 .setTopCalculateApproveDurationParam(topCalculateApproveDurationParam)
@@ -589,20 +673,7 @@ namespace AlibabaCloud.SDK.Sample
 }
 ```
 
-## 响应
-
-### 响应体
-
-| 名称 | 类型 | 描述 |
-| --- | --- | --- |
-| result | Object | 返回结果。 |
-| duration | double | 总时长，该字段的单位与本企业内对应审批单设置的单位一致。 |
-| durationDetail | Array | 详细信息。 |
-| date | String | 审批通过日期。 |
-| duration | double | 每日时长。 |
-| success | Boolean | 接口调用是否成功。 |
-
-### 响应体示例
+**返回示例**
 
 ```
 HTTP/1.1 200 OK
@@ -620,9 +691,7 @@ Content-Type:application/json
 }
 ```
 
-### 错误码
-
-若调用该接口报错，可根据错误信息在[全局错误码](0013-server-api-error-codes-1.md)文档中查找解决方案。
+## 错误码
 
 | HttpCode | 错误码 | 错误信息 | 说明 |
 | --- | --- | --- | --- |

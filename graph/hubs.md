@@ -3,16 +3,16 @@
 > 站内被其他文档引用最多的页面，即事实上的核心概念/核心流程页。答疑吃不准从哪读起时，从这里进。
 > 生成物（ops/scripts/build_links.py），勿手改。
 
-- 1196 ← [全局错误码](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0013-server-api-error-codes-1.md)（服务端 API）
-- 1091 ← [获取企业内部应用的accessToken](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md)（服务端 API）
+- 1195 ← [全局错误码](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0013-server-api-error-codes-1.md)（服务端 API）
+- 1090 ← [获取企业内部应用的accessToken](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md)（服务端 API）
 - 770 ← [获取第三方应用授权企业的accessToken](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0033-obtain-the-access-token-of-the-authorized-enterprise-1.md)（服务端 API）
-- 382 ← [获取企业内部应用的access_token](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1443-obtain-orgapp-token.md)（服务端 API）
+- 383 ← [获取企业内部应用的access_token](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1443-obtain-orgapp-token.md)（服务端 API）
 - 270 ← [查询用户详情](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0055-query-user-details.md)（服务端 API）
 - 246 ← [服务商获取第三方应用授权企业的access_token](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1445-obtain-isvapp-token.md)（服务端 API）
 - 90 ← [应用创建与配置](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md)（开发指南）
 - 78 ← [获取用户token](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0031-obtain-user-token.md)（服务端 API）
 - 52 ← [基础概念](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md)（开发指南）
-- 51 ← [服务端SDK下载](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0002-download-the-server-side-sdk.md)（服务端 API）
+- 50 ← [服务端SDK下载](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0002-download-the-server-side-sdk.md)（服务端 API）
 - 50 ← [获取部门用户userid列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0064-query-the-list-of-department-userids.md)（服务端 API）
 - 47 ← [获取开发者权限](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0006-get-developer-permissions.md)（开发指南）
 - 47 ← [通过免登码获取用户信息](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0023-obtain-the-userid-of-a-user-by-using-the-log-free.md)（服务端 API）
@@ -24,12 +24,12 @@
 - 37 ← [添加空间](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0651-add-space.md)（服务端 API）
 - 34 ← [获取文件或文件夹列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0665-get-a-list-of-files-or-folders.md)（服务端 API）
 - 30 ← [获取部门列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1153-obtains-the-department-node-list.md)（服务端 API）
-- 27 ← [添加接口调用权限](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0003-add-api-permission.md)（服务端 API）
 - 27 ← [发起审批实例](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0496-create-an-approval-instance.md)（服务端 API）
 - 27 ← [概述](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0552-knowledge-base-overview.md)（服务端 API）
 - 26 ← [获取所有工作表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0594-obtain-all-worksheets.md)（服务端 API）
 - 26 ← [dd.canIUse](../docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0477-dd-caniuse.md)（客户端 JSAPI）
 - 24 ← [创建场景群](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0744-create-a-scene-group.md)（服务端 API）
+- 23 ← [添加接口调用权限](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0003-add-api-permission.md)（服务端 API）
 - 22 ← [创建并投放卡片](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0783-create-and-deliver-cards.md)（服务端 API）
 - 21 ← [获取单个审批实例详情](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0497-obtains-the-details-of-a-single-approval-instance-pop.md)（服务端 API）
 - 21 ← [创建连接器](../docs/02-连接平台/02-XdgyZifJkr-我的连接/0010-create-connector.md)（我的连接）

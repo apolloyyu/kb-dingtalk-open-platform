@@ -1299,7 +1299,6 @@
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0227-api-calculateduration.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0013-server-api-error-codes-1.md", "text": "全局错误码", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0227-api-calculateduration.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md", "text": "获取企业内部应用的accessToken", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0227-api-calculateduration.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0033-obtain-the-access-token-of-the-authorized-enterprise-1.md", "text": "获取第三方应用授权企业的accessToken", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0228-api-processapprovefinish.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0013-server-api-error-codes-1.md", "text": "全局错误码", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0228-api-processapprovefinish.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md", "text": "获取企业内部应用的accessToken", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0228-api-processapprovefinish.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0033-obtain-the-access-token-of-the-authorized-enterprise-1.md", "text": "获取第三方应用授权企业的accessToken", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0229-notify-the-attendance-to-modify-the-punch-result-when-the.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0013-server-api-error-codes-1.md", "text": "全局错误码", "n": 1}
@@ -6753,9 +6752,7 @@
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1337-crm-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0167-events-ding-paas-object-data-create.md", "text": "主数据实例新增事件", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1337-crm-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0168-event-ding-paas-object-data-delete.md", "text": "主数据实例删除事件", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1337-crm-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0169-event-ding-paas-object-data-update.md", "text": "主数据实例更新事件", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1338-crm-customer-group-operation-process.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "企业内部应用", "n": 3}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1338-crm-customer-group-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0002-download-the-server-side-sdk.md", "text": "新版API VS 旧版API", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1338-crm-customer-group-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0003-add-api-permission.md", "text": "申请客户管理接口权限", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1338-crm-customer-group-operation-process.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "应用创建与配置", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1338-crm-customer-group-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md", "text": "获取企业内部应用的accessToken", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1338-crm-customer-group-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1376-create-a-customer-group.md", "text": "创建客户群", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1338-crm-customer-group-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1377-query-the-list-of-customer-groups.md", "text": "查询客户群列表", "n": 2}
@@ -6785,9 +6782,8 @@
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1340-customer-management-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1351-crm-obtains-all-private-sea-customer-data.md", "text": "获取全量个人或企业客户数据", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1340-customer-management-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1352-obtains-crm-individual-customers-in-batches-based-on-specified-query.md", "text": "根据指定条件查询个人或企业客户数据", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1340-customer-management-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1353-obtain-duplicate-check-fields.md", "text": "获取个人或企业客户查重字段", "n": 3}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1341-crm-contact-data-operation-process.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "企业内部应用", "n": 3}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1341-crm-contact-data-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0002-download-the-server-side-sdk.md", "text": "新版API VS 旧版API", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1341-crm-contact-data-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0003-add-api-permission.md", "text": "申请客户管理接口权限", "n": 2}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1341-crm-contact-data-operation-process.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "应用创建与配置", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1341-crm-contact-data-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0002-download-the-server-side-sdk.md", "text": "服务端SDK下载", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1341-crm-contact-data-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md", "text": "获取企业内部应用的accessToken", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1341-crm-contact-data-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1358-add-contact-data-in-batches.md", "text": "批量新增联系人数据", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1341-crm-contact-data-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1359-delete-crm-contact.md", "text": "删除联系人数据", "n": 2}
@@ -6795,16 +6791,14 @@
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1341-crm-contact-data-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1361-gets-the-metadata-description-of-a-crm-contact-object.md", "text": "获取联系人的元数据", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1341-crm-contact-data-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1362-api-getcontacts.md", "text": "根据指定条件查询联系人数据", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1341-crm-contact-data-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1363-retrieves-contact-data-in-batches-based-on-the-id-list.md", "text": "按照ID列表批量获取联系人数据", "n": 2}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1342-crm-follow-up-record-data-operation-process.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "企业内部应用", "n": 3}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1342-crm-follow-up-record-data-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0002-download-the-server-side-sdk.md", "text": "新版API VS 旧版API", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1342-crm-follow-up-record-data-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0003-add-api-permission.md", "text": "申请客户管理接口权限", "n": 2}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1342-crm-follow-up-record-data-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md", "text": "获取企业内部应用的accessToken", "n": 2}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1342-crm-follow-up-record-data-operation-process.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "应用创建与配置", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1342-crm-follow-up-record-data-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0002-download-the-server-side-sdk.md", "text": "服务端SDK下载", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1342-crm-follow-up-record-data-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1364-obtains-the-metadata-description-of-the-crm-follow-up-record-object.md", "text": "获取跟进记录对象的元数据", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1342-crm-follow-up-record-data-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1368-query-and-dingtalk-data-of-track-records-in-apsara-stack.md", "text": "根据指定条件查询跟进记录数据", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1342-crm-follow-up-record-data-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1369-dingtalk-the-primary-data-of-apsara-stack-agility-paas-allows-you.md", "text": "根据ID列表批量获取跟进记录数据", "n": 2}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1343-crm-custom-object-data-operation-process.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "企业内部应用", "n": 3}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1343-crm-custom-object-data-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0002-download-the-server-side-sdk.md", "text": "新版API VS 旧版API", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1343-crm-custom-object-data-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0003-add-api-permission.md", "text": "申请客户管理接口权限", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1342-crm-follow-up-record-data-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1443-obtain-orgapp-token.md", "text": "获取企业内部应用的access\\_token", "n": 2}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1343-crm-custom-object-data-operation-process.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "应用创建与配置", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1343-crm-custom-object-data-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0002-download-the-server-side-sdk.md", "text": "服务端SDK下载", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1343-crm-custom-object-data-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md", "text": "获取企业内部应用的accessToken", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1343-crm-custom-object-data-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1370-dingtalk-paas-master-create-custom-crm-object-data.md", "text": "创建CRM自定义对象数据", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1343-crm-custom-object-data-operation-process.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1371-delete-crm-custom-object-data.md", "text": "删除CRM自定义对象数据", "n": 2}

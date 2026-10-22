@@ -92,11 +92,186 @@ def query_terms(query, symbols=()):
     return words | {s.lower() for s in symbols if s}
 
 
-def select(text, query, budget, symbols=()):
+def _declaration_match(body, query, symbols=()):
+    """Match real field-definition rows outside fences, without heading hints."""
+    names = {'名称', '参数', '参数名', '字段', '字段名', 'name', 'field', 'parameter', 'field name', 'parameter name'}
+    types = {'类型', '数据类型', '参数类型', '字段类型', 'type', 'data type'}
+    details = {'描述', '说明', '含义', '是否必填', '必填', 'required', 'description'}
+    generic = names | types | details | {'请求', '响应', '查询', '创建', '可选', '示例', '使用', '返回'}
+    subject = re.sub(r'https?://\S+', '', query, flags=re.I)
+    literal_symbols = [symbol for symbol in symbols if symbol.lower() in subject.lower()]
+    terms = query_terms(subject, literal_symbols) - generic
+    lines, fence, index = body.splitlines(), None, 0
+    while index < len(lines):
+        line = lines[index]
+        marker = re.match(r'^\s*(`{3,}|~{3,})', line)
+        if marker:
+            if fence is None:
+                fence = marker[1]
+            elif marker[1][0] == fence[0] and len(marker[1]) >= len(fence):
+                fence = None
+            index += 1
+            continue
+        if fence is not None or not line.lstrip().startswith('|'):
+            index += 1
+            continue
+        end = index + 1
+        while end < len(lines) and lines[end].lstrip().startswith('|'):
+            end += 1
+        rows = lines[index:end]
+        index = end
+        if len(rows) < 3:
+            continue
+        cells = lambda row: [cell.strip() for cell in re.split(r'(?<!\\)\|', row.strip().strip('|'))]
+        header = [re.sub(r'[*`_]', '', cell).lower() for cell in cells(rows[0])]
+        separators = cells(rows[1])
+        if (len(separators) != len(header) or not all(re.fullmatch(r':?-{3,}:?', cell) for cell in separators)
+                or not (set(header) & names and set(header) & types and set(header) & details)):
+            continue
+        columns = [n for n, cell in enumerate(header) if cell in names or cell in {'描述', '说明', '含义', 'description'}]
+        for row in rows[2:]:
+            values = cells(row)
+            hay = ' '.join(values[n] for n in columns if n < len(values)).lower().replace('\\_', '_')
+            if any((bool(re.search(r'(?<![a-z0-9_])' + re.escape(term) + r'(?![a-z0-9_])', hay))
+                    if re.search(r'[a-z]', term) else term in hay) for term in terms):
+                return True
+    return False
+
+
+def _captioned_codes(text, query):
+    """Literal source captions/fence info, with complete fences and exact lines."""
+    lines, headings, result, i = text.splitlines(keepends=True), [], [], 0
+    subject = re.sub(r'https?://\S+', '', query.lower())
+    while i < len(lines):
+        opened = re.match(r'^\s*(`{3,}|~{3,})([^\r\n]*)', lines[i])
+        if not opened:
+            heading = re.match(r'^(#{1,6})\s+', lines[i])
+            if heading:
+                depth = len(heading[1])
+                headings = [(d, h) for d, h in headings if d < depth]
+                headings.append((depth, lines[i].rstrip('\r\n')))
+            i += 1
+            continue
+        end = i + 1
+        while end < len(lines):
+            close = re.match(r'^\s*(`{3,}|~{3,})\s*$', lines[end])
+            if close and close[1][0] == opened[1][0] and len(close[1]) >= len(opened[1]):
+                break
+            end += 1
+        if end == len(lines):
+            break
+        start, labels = i, opened[2].strip().split()[:1]
+        previous = i - 1
+        while previous >= 0 and not lines[previous].strip():
+            previous -= 1
+        if previous >= 0 and re.fullmatch(r'[A-Za-z][A-Za-z0-9.+#_-]{0,30}', lines[previous].strip()):
+            start = previous
+            labels.append(lines[previous].strip())
+        if any(re.fullmatch(r'[A-Za-z][A-Za-z0-9.+#_-]{0,30}', label)
+               and re.search(r'(?<![a-z0-9_])' + re.escape(label.lower()) + r'(?![a-z0-9_])', subject)
+               for label in labels):
+            result.append({'body': ''.join(lines[start:end + 1]), 'line': start + 1,
+                           'scope': [h for _, h in headings]})
+        i = end + 1
+    return result
+
+
+def _scalar_prefix_projection(part, query, symbols=()):
+    """Project only proven root scalar rows before the first unknown/container.
+
+    Flattened tables do not encode the later parent tree. Never cross that first
+    boundary to infer a field's ancestry. Adjacent conditions stay verbatim.
+    """
+    roots = {'请求体', '查询参数', '路径参数', '请求头', '响应体', 'request body',
+             'query parameters', 'path parameters', 'request headers', 'response body'}
+    leaf = re.sub(r'^[#\s]+|[*`]', '', part['scope'][-1]).strip().lower() if part['scope'] else ''
+    if leaf not in roots or re.search(r'(?m)^\s*(?:`{3,}|~{3,})', part['body']):
+        return None
+    lines, spans, i = part['body'].splitlines(keepends=True), [], 0
+    while i < len(lines):
+        if not lines[i].lstrip().startswith('|'):
+            i += 1
+            continue
+        end = i + 1
+        while end < len(lines) and lines[end].lstrip().startswith('|'):
+            end += 1
+        spans.append((i, end))
+        i = end
+    if len(spans) != 1:
+        return None
+    start, end = spans[0]
+    table = lines[start:end]
+    if len(table) < 3 or not _declaration_match(''.join(table), query, symbols):
+        return None
+    cells = lambda row: [cell.strip() for cell in re.split(r'(?<!\\)\|', row.strip().strip('|'))]
+    header = [re.sub(r'[*`_]', '', cell).lower() for cell in cells(table[0])]
+    columns = [n for n, cell in enumerate(header)
+               if cell in {'类型', '数据类型', '参数类型', '字段类型', 'type', 'data type'}]
+    if len(columns) != 1:
+        return None
+    scalars = {'string', 'number', 'integer', 'int', 'long', 'double', 'float', 'boolean', 'bool'}
+    picked = []
+    for row in table[2:]:
+        values = cells(row)
+        if len(values) != len(header) or re.sub(r'[*`]', '', values[columns[0]]).lower() not in scalars:
+            break
+        if _declaration_match(''.join(table[:2]) + row, query, symbols):
+            picked.append(row)
+    if not picked:
+        return None
+    notice = f'\n[表格摘录：仅原表首个未知或容器类型前的已知标量行；省略 {len(table)-2-len(picked)} 行；完整表见原文]\n'
+    return {**part, 'body': ''.join(lines[:start] + table[:2] + picked) + notice + ''.join(lines[end:])}
+
+
+def _declarations_with_code(parts, codes, query, budget, symbols=()):
+    """Allocate a matching literal code caption and field evidence together."""
+    def render(selected):
+        return '\n\n'.join('\n'.join(part['scope']) + f"\n[原文起始行 {part['line']}]\n" + part['body']
+                            for _, part in sorted(selected, key=lambda row: (row[0], row[1]['line'])))
+    declarations = [(i, part) for i, part in enumerate(parts) if _declaration_match(part['body'], query, symbols)]
+    declarations.sort(key=lambda row: (-relevance(row[1]['body'], query), row[0]))
+    codes = sorted(codes, key=lambda part: (-relevance(part['body'], query), part['line']))
+    chosen = []
+    for code in codes:
+        code_index = max((i for i, part in enumerate(parts) if part['line'] <= code['line']), default=0)
+        for index, table in declarations:
+            if index == code_index:
+                # A single section can already contain both the table and its
+                # example. Keep it once; mixed code/table blocks are not projected.
+                if len(render([(index, table)])) <= budget:
+                    chosen = [(index, table)]
+                    break
+                continue
+            pair = [(index, table), (code_index, code)]
+            if len(render(pair)) <= budget:
+                chosen = pair
+                break
+            projection = _scalar_prefix_projection(table, query, symbols)
+            if projection is not None:
+                pair = [(index, projection), (code_index, code)]
+                if len(render(pair)) <= budget:
+                    chosen = pair
+                    break
+        if chosen:
+            break
+    if not chosen:
+        return None
+    covered = {index for index, _ in chosen}
+    extra = [(i, part) for i, part in enumerate(parts) if i not in covered
+             and not re.search(r'(?m)^\s*(?:`{3,}|~{3,})', part['body'])]
+    for index, part in sorted(extra, key=lambda row: (-relevance(row[1]['body'], query), row[0])):
+        if relevance(part['body'], query) > 0 and len(render(chosen + [(index, part)])) <= budget:
+            chosen.append((index, part))
+    return render(chosen), len({index for index, _ in chosen})
+
+
+def select(text, query, budget, symbols=(), *, prefer_declarations=False):
     """Keep complete source units; never cut a table, code fence or a URL.
 
     Oversized sections become explicitly partial projections of complete blocks
     or table rows, with a preserved scope and column header.
+    Declaration preference is opt-in; it uses displayed table rows, never an
+    ancestor heading or a deferred table's omitted content, to earn priority.
     """
     if len(text) <= budget:
         return text, {'coverage': 'full', 'source_chars': len(text), 'selected_chars': len(text),
@@ -105,6 +280,17 @@ def select(text, query, budget, symbols=()):
     if not parts:
         return text, {'coverage': 'full', 'source_chars': len(text), 'selected_chars': len(text),
                       'omitted_units': 0, 'overflow': len(text) > budget}
+    if prefer_declarations:
+        codes = _captioned_codes(text, query)
+        balanced = _declarations_with_code(parts, codes, query, budget, symbols) if codes else None
+        if balanced is not None:
+            result, selected_units = balanced
+            return result, {'coverage': 'excerpt', 'source_chars': len(text), 'selected_chars': len(result),
+                            'omitted_units': len(parts) - selected_units, 'overflow': False}
+        if codes:
+            # If safe declaration/code co-selection failed, retain the original
+            # selection behavior; do not revive rejected rows through projection.
+            return select(text, query, budget, symbols, prefer_declarations=False)
     words = query_terms(query, symbols)
     hays = [(' '.join(p['scope']) + '\n' + p['body']).lower().replace('\\_', '_') for p in parts]
     weights = {w: math.log(1 + len(parts) / (1 + sum(w in h for h in hays)))
@@ -117,6 +303,24 @@ def select(text, query, budget, symbols=()):
         score += sum(100 for s in exact if s in hay)
         scores.append((-score, i))
     scores.sort()
+    prepared = {}
+    if prefer_declarations:
+        ranked = []
+        for score, i in scores:
+            part = parts[i]
+            overhead = sum(len(s) + 1 for s in part['scope']) + 40
+            body = part['body']
+            if len(body) + overhead > budget:
+                body = project(body, query, max(0, budget - overhead), prefer_declarations=True)
+            if not body:
+                continue
+            prepared[i] = body
+            deferred = bool(re.fullmatch(r'\[表格未展开：[^\n]*\]', body.strip()))
+            # A deferred table has no displayed field declaration. It cannot
+            # borrow the omitted table's score or displace a real small table.
+            ranked.append((2 if deferred else 0 if _declaration_match(body, query, symbols) else 1,
+                           0 if deferred else score, i))
+        scores = [(score, i) for _, score, i in sorted(ranked)]
     chosen, used, projected = [], 0, False
     # A short relevant document preface carries the object and applicability
     # context; a long example must not consume its entire budget first.
@@ -129,6 +333,11 @@ def select(text, query, budget, symbols=()):
     for score, i in scores:
         if i in chosen:
             continue
+        if prefer_declarations:
+            body = prepared[i]
+            if body != parts[i]['body']:
+                projected = True
+                parts[i] = {**parts[i], 'body': body}
         size = len(parts[i]['body']) + sum(len(s) + 1 for s in parts[i]['scope']) + 40
         if size > budget:
             body = project(parts[i]['body'], query, max(100, budget - 120))
@@ -154,7 +363,7 @@ def select(text, query, budget, symbols=()):
                     'omitted_units': len(parts) - len(chosen), 'overflow': len(result) > budget}
 
 
-def project(body, query, budget):
+def project(body, query, budget, *, prefer_declarations=False):
     """Oversized sections: whole paragraphs/fences, or a marked table projection.
 
     No partial row or code fence is emitted. A table projection retains its
@@ -183,13 +392,25 @@ def project(body, query, budget):
             if len(rows) < 3:
                 continue
             head = rows[:2]
+            if prefer_declarations:
+                cells = lambda row: [cell.strip() for cell in re.split(r'(?<!\\)\|', row.strip().strip('|'))]
+                header = [re.sub(r'[*`_]', '', cell).lower() for cell in cells(rows[0])]
+                columns = [n for n, cell in enumerate(header)
+                           if cell in {'类型', '数据类型', '参数类型', '字段类型', 'type', 'data type'}]
+                values = [cells(row) for row in rows[2:]]
+                scalars = {'string', 'number', 'integer', 'int', 'long', 'double', 'float', 'boolean', 'bool'}
+                if len(columns) != 1 or any(len(row) != len(header)
+                        or re.sub(r'[*`]', '', row[columns[0]]).lower() not in scalars for row in values):
+                    block = '[表格未展开：字段层级无法确认，原始表共 ' + str(len(rows) - 2) + ' 行；完整表见原文]'
+                    candidates.append((0, index, block))
+                    continue
             # Flattened nested schemas have no reliable depth information.
             # Isolated rows cannot preserve their object ancestry; defer the
             # table as a whole instead of assembling a misleading schema.
-            if any(re.search(r'\|\s*(?:Object|Array|Map(?:&lt;|<)|List(?:&lt;|<))', row, re.I)
+            if not prefer_declarations and any(re.search(r'\|\s*(?:Object|Array|Map(?:&lt;|<)|List(?:&lt;|<))', row, re.I)
                    for row in rows[2:]):
                 block = '[表格未展开：含嵌套对象，原始表共 ' + str(len(rows) - 2) + ' 行；完整表见原文]'
-                candidates.append((-relevance('\n'.join(rows), query), index, block))
+                candidates.append((0 if prefer_declarations else -relevance('\n'.join(rows), query), index, block))
                 continue
             scored = sorted(((relevance(row, query), n, row) for n, row in enumerate(rows[2:], 2)),
                             key=lambda x: (-x[0], x[1]))
@@ -203,7 +424,10 @@ def project(body, query, budget):
         if len(block) <= budget:
             candidates.append((-relevance(block, query), index, block))
     selected, size = [], 0
-    for _, index, block in sorted(candidates):
+    ranked = sorted(candidates, key=lambda row: (
+        0 if _declaration_match(row[2], query) else 2 if row[2].startswith('[表格未展开：') else 1,
+        row[0], row[1])) if prefer_declarations else sorted(candidates)
+    for _, index, block in ranked:
         if size + len(block) <= budget:
             selected.append((index, block))
             size += len(block)

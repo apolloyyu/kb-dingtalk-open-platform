@@ -1168,6 +1168,8 @@ def _ctx_impl(terms, n, force_full=False, raw_question=None, history=""):
     supplements, supplement_errors = expand_reference_notes(ROOT, raw_query, docs)
     product_sources = peer_product_excerpt(ROOT, raw_query)
     timing = evidence_sections.time_fields(raw_question if raw_question is not None else raw_query, history)
+    parameter_evidence = intent['enumeration'] or '参数' in raw_q or '字段' in raw_q
+    declaration_priority = parameter_evidence and not intent['semantic']
 
     def render(top_k):
         parts = [part for part in (timing, supplements, product_sources) if part]
@@ -1183,7 +1185,7 @@ def _ctx_impl(terms, n, force_full=False, raw_question=None, history=""):
         if card_fast:
             parts.append("== API答案卡(card:full,首名明确,可直接作答) ==")
             parts.append(api_card["body"])
-        elif intent["enumeration"] or "参数" in raw_q or "字段" in raw_q:
+        elif parameter_evidence:
             # 参数/字段枚举题:卡片是官方参数表的紧凑投影,正文 3500 上限常切掉表格尾部(实录 Q53)。
             # API 表未激活时(问法无"接口"字样)退而取首篇正文对应的卡;卡片不直答,只作证据。
             # 首篇是教程页时,参数表在它正链指向的 API 文档里(实录 Q53:教程页→批量发送单聊消息 API)。
@@ -1222,7 +1224,8 @@ def _ctx_impl(terms, n, force_full=False, raw_question=None, history=""):
             parts.append(f"source_url: {d['source_url']} · updated_at: {d['updated_at'][:10]}")
             body = _sanitize_links(open(os.path.join(ROOT, lp), encoding="utf-8", errors="ignore").read())
             body, selection = evidence_sections.select(body, raw_query, _CTX_BODY_CAP,
-                                                       symbols=[t for t in tl if re.search(r'[a-z]', t)])
+                                                       symbols=[t for t in tl if re.search(r'[a-z]', t)],
+                                                       prefer_declarations=bool(declaration_priority))
             if selection['coverage'] != 'full':
                 body += f"\n[正文覆盖: excerpt; 未展开小节: {selection['omitted_units']}; 完整: dkdoc cat {lp}]"
             parts.append(body)
@@ -1271,7 +1274,8 @@ def _ctx_impl(terms, n, force_full=False, raw_question=None, history=""):
                 groups = evidence_sections.facets(raw_query)
                 if groups and not any(any(term in source for term in group) for group in groups):
                     continue
-                excerpt, coverage = evidence_sections.select(source, raw_query, 1800)
+                excerpt, coverage = evidence_sections.select(source, raw_query, 1800,
+                                                              prefer_declarations=bool(declaration_priority))
                 score = evidence_sections.relevance(excerpt, raw_query)
                 if score:
                     linked[target] = (score, excerpt, coverage)

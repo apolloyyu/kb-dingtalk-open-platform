@@ -1364,8 +1364,8 @@ def _ctx_impl(terms, n, force_full=False, raw_question=None, history=""):
         if navigation:
             blocks.append(navigation)
             text = "\n".join(blocks)
-    if len(text) > _CTX_TOTAL_CAP:
-        text = evidence_sections.pack_groups(blocks, _CTX_TOTAL_CAP)
+    blocks = evidence_sections.annotate_groups(blocks)
+    text = evidence_sections.pack_groups(blocks, _CTX_TOTAL_CAP)
     print(text)
     return 0
 

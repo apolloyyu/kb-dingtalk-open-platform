@@ -3,6 +3,7 @@
 The identical module is shipped by both KB adapters. Its content hash is checked
 by the cross-repository acceptance script; product facts belong to the sources.
 """
+import hashlib
 import json
 import math
 import re
@@ -276,27 +277,219 @@ def time_fields(question, history=''):
         'timestamp_fields': records}, ensure_ascii=False)
 
 
-def pack_groups(entries, cap):
-    """Budget complete evidence groups, preserving explicit deferred coverage."""
-    if len('\n'.join(entries)) <= cap:
-        return '\n'.join(entries)
+def literal_block(text, line_number):
+    """Return the complete paragraph, list item, table or fence for a line.
+
+    The body is an exact slice, including whitespace and line endings. Scope is
+    copied from actual ancestor headings, never inferred from a query.
+    """
+    lines = text.splitlines(keepends=True)
+    target = line_number - 1
+    if not 0 <= target < len(lines):
+        raise ValueError('source line is outside the document')
+    headings, scopes, fences, opened = [], [], [], None
+    for i, line in enumerate(lines):
+        marker = re.match(r'^\s*(`{3,}|~{3,})', line)
+        if marker:
+            if opened is None:
+                opened = (i, marker[1])
+            elif marker[1][0] == opened[1][0] and len(marker[1]) >= len(opened[1]):
+                fences.append((opened[0], i + 1))
+                opened = None
+        elif opened is None:
+            heading = re.match(r'^(#{1,6})\s+', line)
+            if heading:
+                depth = len(heading[1])
+                headings = [(d, h) for d, h in headings if d < depth]
+                headings.append((depth, line.rstrip('\r\n')))
+        scopes.append([h for _, h in headings])
+    if opened is not None:
+        fences.append((opened[0], len(lines)))
+    span = next(((start, end) for start, end in fences if start <= target < end), None)
+    if span is None:
+        item_pattern = re.compile(r'^([ \t]*)(?:[-+*]|\d+[.)])\s+')
+        i = 0
+        while i <= target:
+            item = item_pattern.match(lines[i])
+            if not item:
+                i += 1
+                continue
+            indent = len(item[1].expandtabs(4))
+            end, blank = i + 1, False
+            while end < len(lines):
+                line = lines[end]
+                if not line.strip():
+                    blank = True
+                    end += 1
+                    continue
+                child = item_pattern.match(line)
+                leading = len(line[:len(line) - len(line.lstrip(' \t'))].expandtabs(4))
+                if child and len(child[1].expandtabs(4)) <= indent:
+                    break
+                if leading <= indent and (blank or re.match(r'^(?:#{1,6}\s|\s*`{3,}|\s*~{3,}|\s*\|)', line)):
+                    break
+                blank = False
+                end += 1
+            while end > i + 1 and not lines[end - 1].strip():
+                end -= 1
+            if i <= target < end:
+                span = i, end
+                break
+            i = max(i + 1, end)
+    if span is None:
+        start, end = target, target + 1
+        table = lines[target].lstrip().startswith('|')
+        def same_block(index):
+            line = lines[index]
+            if table:
+                return line.lstrip().startswith('|')
+            return (bool(line.strip()) and not line.lstrip().startswith('|')
+                    and not re.match(r'^(?:#{1,6}\s|\s*`{3,}|\s*~{3,})', line))
+        if not re.match(r'^#{1,6}\s', lines[target]):
+            while start and same_block(start - 1):
+                start -= 1
+        while end < len(lines) and same_block(end):
+            end += 1
+        span = start, end
+    start, end = span
+    return {'body': ''.join(lines[start:end]), 'line': start + 1,
+            'end_line': end, 'scope': scopes[target]}
+
+
+def source_unit(body, source_refs, *, version='', kind='source', scope=()):
+    """Wrap an explicitly supplied source or summary without altering its body.
+
+    Identity binds literal references, recorded version, heading scope and exact
+    UTF-8 body bytes. Hash equality is byte identity, not semantic validation.
+    Callers classify content; this function never promotes a summary to source.
+    """
+    if kind not in ('source', 'derived_summary'):
+        raise ValueError('unknown evidence unit kind')
+    refs = sorted(set([source_refs] if isinstance(source_refs, str) else source_refs))
+    if not refs or not all(isinstance(ref, str) and ref for ref in refs):
+        raise ValueError('evidence units require literal source references')
+    metadata = {'kind': kind, 'source_refs': refs, 'version': version,
+                'scope': list(scope), 'body_chars': len(body),
+                'body_sha256': hashlib.sha256(body.encode('utf-8')).hexdigest()}
+    identity = {k: v for k, v in metadata.items() if k != 'body_chars'}
+    unit_id = hashlib.sha256(json.dumps(identity, ensure_ascii=False,
+        sort_keys=True, separators=(',', ':')).encode('utf-8')).hexdigest()[:24]
+    title = '来源证据单元' if kind == 'source' else '派生说明单元'
+    return (f"== {title} {unit_id} ==\nevidence_unit: "
+            + json.dumps(metadata, ensure_ascii=False, separators=(',', ':')) + '\n' + body)
+
+
+def _source_spans(text):
+    """Read only valid explicit envelopes; raw headings/fences are opaque."""
+    pattern = re.compile(r'(?m)^== (?:来源证据单元|派生说明单元) [0-9a-f]{24} ==\nevidence_unit: ([^\n]+)\n')
+    offset, fence = 0, None
+    while offset < len(text):
+        match = pattern.match(text, offset) if fence is None else None
+        if match:
+            try:
+                meta = json.loads(match[1])
+                end = match.end() + meta['body_chars']
+                if end <= len(text) and meta['body_chars'] >= 0:
+                    body = text[match.end():end]
+                    rendered = source_unit(body, meta['source_refs'], version=meta['version'],
+                                           kind=meta['kind'], scope=meta['scope'])
+                    if rendered == text[match.start():end]:
+                        offset = end
+                        yield match.start(), end, meta
+                        continue
+            except (KeyError, TypeError, ValueError):
+                pass
+        newline = text.find('\n', offset)
+        end = newline + 1 if newline >= 0 else len(text)
+        line = text[offset:end]
+        marker = re.match(r'^\s*(`{3,}|~{3,})(.*)', line)
+        if marker:
+            if fence is None:
+                fence = marker[1]
+            elif marker[1][0] == fence[0] and len(marker[1]) >= len(fence) and not marker[2].strip():
+                fence = None
+        offset = end
+
+
+def _groups(entries):
     groups = []
     for entry in entries:
         if entry.lstrip().startswith(('==', '--- notes/')) or not groups:
             groups.append([entry])
         else:
             groups[-1].append(entry)
-    bodies = ['\n'.join(group) for group in groups]
+    return ['\n'.join(group) for group in groups]
+
+
+def annotate_groups(entries):
+    """Deduplicate explicit source units and place them before derived notes.
+
+    Unmarked groups are retained, never guessed to be raw evidence. Each source
+    keeps its own envelope/scope; note headers and unresolved references remain
+    attached to the remaining note. Applying this function twice is harmless.
+    """
+    sources, remainder, seen, first_source, first_summary = [], [], set(), None, None
+    for group in _groups(entries):
+        pieces, cursor = [], 0
+        summary = (group.lstrip().startswith('--- notes/')
+                   or group.lstrip().startswith('== 行为语义'))
+        for start, end, meta in _source_spans(group):
+            if meta['kind'] == 'derived_summary':
+                summary = True
+                continue
+            if first_source is None:
+                first_source = len(remainder)
+            pieces.append(group[cursor:start])
+            unit = group[start:end]
+            # The validated envelope includes full provenance and full hash.
+            if unit not in seen:
+                seen.add(unit)
+                sources.append(unit)
+            cursor = end
+        pieces.append(group[cursor:])
+        rest = ''.join(pieces)
+        if rest.strip():
+            if summary and first_summary is None:
+                first_summary = len(remainder)
+            remainder.append(rest)
+    if not sources:
+        return remainder
+    position = min(x for x in (first_source, first_summary) if x is not None)
+    return remainder[:position] + sources + remainder[position:]
+
+
+def navigation_text(text):
+    """Return labelled derived summaries for navigation, not source evidence.
+
+    Without a validated summary envelope, preserve legacy input unchanged.
+    This does not change the evidence body or declare a summary authoritative.
+    """
+    summaries = [text[end - meta['body_chars']:end]
+                 for _, end, meta in _source_spans(text)
+                 if meta['kind'] == 'derived_summary']
+    return '\n\n'.join(summaries) if summaries else text
+
+
+def pack_groups(entries, cap):
+    """Budget complete evidence groups, preserving explicit deferred coverage."""
+    fallback = '== 证据覆盖 ==\ncoverage: deferred'
+    if cap < len(fallback):
+        raise ValueError('evidence budget must be at least ' + str(len(fallback)) + ' characters')
+    if len('\n'.join(entries)) <= cap:
+        return '\n'.join(entries)
+    bodies = _groups(entries)
     def priority(i):
         title = bodies[i].lstrip().splitlines()[0]
         if any(key in title for key in ('证据契约', '输入时间字段', '检索审计', '== 继续')):
             return 0
-        if title.startswith('--- notes/') or any(key in title for key in
-                ('行为语义', 'CHANGELOG', '定位字段', '产品原文', '原文直取')):
+        if any(meta['kind'] == 'derived_summary' for _, _, meta in _source_spans(bodies[i])):
+            return 3
+        if any(key in title for key in ('命令契约:', 'API参数卡', '答案卡', '篇目[', '正文[')):
             return 1
-        if '命令契约:' in title or 'API参数卡' in title or 'API答案卡' in title:
+        if title.startswith('== 来源证据单元') or any(key in title for key in
+                ('CHANGELOG', '定位字段', '产品原文', '原文直取')):
             return 2
-        if '篇目[' in title or '正文[' in title:
+        if title.startswith('--- notes/') or '行为语义' in title:
             return 3
         return 4
     notices = []
@@ -313,16 +506,67 @@ def pack_groups(entries, cap):
             continuation = 'dkdoc cat ' + api_doc[1]
         if 'CHANGELOG' in title:
             continuation = 'dwsdoc cat docs/CHANGELOG.md'
-        notices.append(title + (' | ' + continuation if continuation else ''))
-    reserve = len('\n'.join(notices)) + 100
-    if reserve > cap:
-        return '== 证据覆盖 ==\ncoverage: deferred; complete-group index exceeds budget; individual source lookup available'
-    chosen, used = set(), 0
-    for i in sorted(range(len(bodies)), key=lambda n: (priority(n), n)):
-        size = len(bodies[i]) + 1
-        if used + size + reserve <= cap:
-            chosen.add(i)
-            used += size
-    deferred = [notices[i] for i in range(len(bodies)) if i not in chosen]
-    result = '\n'.join(body for i, body in enumerate(bodies) if i in chosen)
-    return result + '\n== 证据覆盖 ==\ncoverage: excerpt; 未展开完整单元:\n' + '\n'.join(deferred)
+        source = next((meta for _, _, meta in _source_spans(body) if meta['kind'] == 'source'), None)
+        if source:
+            continuation = ' | '.join(source['source_refs'])
+            title = 'source ' + title.split()[-2]
+        # A command continuation already contains the complete selected path;
+        # repeating that path in its title consumes budget without new coverage.
+        notices.append(continuation if command else title + (' | ' + continuation if continuation else ''))
+    coverage_header = '\n== 证据覆盖 ==\ncoverage: excerpt; 未展开完整单元:\n'
+    def render(chosen):
+        included = '\n'.join(body for i, body in enumerate(bodies) if i in chosen)
+        deferred = '\n'.join(notice for i, notice in enumerate(notices) if i not in chosen)
+        return included + coverage_header + deferred
+    def category(i):
+        title = bodies[i].lstrip().splitlines()[0]
+        content = bodies[i].lstrip().partition('\n')[2].strip()
+        kinds = {meta['kind'] for _, _, meta in _source_spans(bodies[i])}
+        if 'derived_summary' in kinds:
+            return 'summary'
+        if 'source' in kinds:
+            return 'source'
+        if '命令契约:' in title:
+            return 'contract'
+        if 'API参数卡' in title or '答案卡' in title:
+            return 'card'
+        if '篇目[' in title or '正文[' in title:
+            return 'primary_document'
+        if 'CHANGELOG' in title:
+            return 'changelog'
+        if any(key in title for key in ('定位字段', '产品原文', '原文直取')):
+            return 'source' if content else None
+        if title.startswith('--- notes/') or '行为语义' in title:
+            return 'summary' if content else None
+        return None
+    chosen = set()
+    ordered = sorted(range(len(bodies)), key=lambda n: (priority(n), n))
+    controls = [i for i in ordered if priority(i) == 0]
+    categories = []
+    for i in ordered:
+        kind = category(i)
+        if i not in controls and kind is not None and kind not in categories:
+            categories.append(kind)
+    # Cover the selected evidence categories before another unit from one
+    # category consumes the remaining budget. All selection remains whole-unit.
+    def include(i):
+        candidate = chosen | {i}
+        if len(render(candidate)) > cap:
+            return False
+        chosen.add(i)
+        return True
+    for i in controls:
+        include(i)
+    for kind in categories:
+        for i in ordered:
+            if category(i) == kind and include(i):
+                break
+    # With every selected evidence category represented, expand original
+    # evidence before additional command/navigation candidates.
+    for i in sorted(ordered, key=lambda i: (0 if category(i) == 'source' else 1, priority(i), i)):
+        if i not in chosen:
+            include(i)
+    result = render(chosen)
+    if len(result) > cap:
+        return fallback
+    return result

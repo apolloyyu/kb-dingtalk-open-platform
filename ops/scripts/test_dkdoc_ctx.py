@@ -6,10 +6,7 @@ import runpy
 import subprocess
 import sys
 import tempfile
-import unittest
 from contextlib import redirect_stdout
-from test_dkdoc_subjects import SubjectEvidenceTest
-from test_reference_notes import ReferenceNotesTest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DKDOC = os.path.join(ROOT, "bin", "dkdoc")
@@ -39,57 +36,6 @@ def first_body_heading(output):
 
 
 def main():
-    precise = run("ctx", "dd.biz.util.uploadAttachment 报错 invalidParameter 怎么排查")
-    check("upload-attachment-to-nail-plate" in first_body_heading(precise), "完整 JSAPI 被错误词抢走")
-    check("归档" in first_body_heading(precise), "旧 JSAPI 丢失归档说明")
-    endpoint = run("ctx", "https://oapi.dingtalk.com/topapi/v2/user/create 的 userid 参数")
-    check("user-information-creation" in endpoint, "完整 endpoint 未召回自身接口")
-    check("exclusive/partners/users" not in endpoint.split("== 其他")[0], "显式 endpoint 被同字段接口替换")
-    roles = run("ctx", "查询角色列表")
-    check("upload-attachment-to-nail-plate" not in first_body_heading(roles), "精确实体误伤普通问题")
-    made = run("ctx", "userid 可以自定义吗，创建后能修改吗")
-    check("user-information-creation" in made, "用户标识生命周期缺创建证据")
-    dept = run("ctx", "如何查询主部门")
-    check("sys00-mainDeptId" in dept, "主部门缺精确字段证据")
-    events = run("ctx", "视频会议有哪些订阅事件")
-    check("event-meeting-status-change" in events, "会议事件枚举缺原始事件页")
-
-    dept_contract = run("ctx", "如何查询主部门")
-    check("mode: full-context-required" in dept_contract and "sys00-mainDeptId" in dept_contract, "缺少完整证据模式或字段来源")
-    product = run("ctx", "钉钉表格 字段级别权限 列权限 查看权限")
-    check("产品原文" in product and "按字段或行配置权限" in product and "source_commit:" in product, "产品权限需带固定版本的产品原文")
-    callback = run("ctx", "应用机器人能发送钉钉卡片并接收回调吗")
-    check("可选原文导航（未核验适用性）" in callback and "dkdoc cat event-callback-card" in callback,
-          "复杂卡片题需给可选补查入口，并明确尚不能当作事实证据")
-    # 导航可定位到现行原文；API能力仍由原文证明，不由候选列表自证。
-    callback_body = run("cat", "event-callback-card")
-    check("STREAM" in callback_body and "callbackRouteKey" in callback_body, "候选入口不能成为失效路径")
-    transfer_body = run("cat", "obtains-the-details-of-a-single-approval-instance-pop")
-    check("/v1.0/workflow/processInstances" in transfer_body, "审批补查入口应可读取现行原文")
-
-    multi = run("ctx", "https://oapi.dingtalk.com/topapi/v2/user/get https://oapi.dingtalk.com/topapi/v2/user/create 参数")
-    check("fast=0" in multi and "multiple_exact_entities" in multi, "多接口问法走了单卡捷径")
-    check("query-user-details" in multi and "user-information-creation" in multi, "多接口证据未分别展开")
-    js_pair = run("ctx", "dd.biz.util.uploadAttachment 对比 dd.uploadFile 参数")
-    check("upload-attachment-to-nail-plate" in js_pair and "jsapi-upload-file" in js_pair, "两个 JSAPI 未分别展开")
-
-    todo_identity = run("ctx", "创建待办时，creatorId 应该传 userId 还是 unionId")
-    check("user-information-creation" not in first_body_heading(todo_identity), "其他产品创建动作误触通讯录生命周期")
-    check("unionId" in todo_identity and "todo-faq" in todo_identity, "待办身份契约被泛标识路由挤走")
-    check("add-dingtalk-to-do-task" in first_body_heading(todo_identity), "明确待办创建主体未优先自身接口")
-
-    four = run("ctx", "dd.chooseImage dd.previewImage dd.uploadFile dd.downloadFile 参数")
-    headings = "\n".join(l for l in four.splitlines() if l.startswith("== 正文["))
-    check("jsapi-upload-file" in headings and len(headings.splitlines()) >= 4, "四个显式实体仍被三篇上限丢弃")
-    todo_creator = run("ctx", "待办 creatorId 的 userId 怎么生成")
-    check("add-dingtalk-to-do-task" in first_body_heading(todo_creator), "待办字段主体被用户标识生成泛词覆盖")
-
-    current = run("ctx", "dd.complexChoose PC端选人的用法")
-    check("jsapi-complex-choose" in first_body_heading(current) and "归档" not in first_body_heading(current), "同标识现行参考被归档页挤走")
-    check("showLabelPick" in current, "选人 JSAPI 的现行端限制丢失")
-    ready = run("ctx", "dd.ready 为什么回调不执行")
-    check("归档" not in first_body_heading(ready), "通用 JSAPI 回调从现行鉴权回退归档流程")
-
     simple = intent("通过免登码获取用户信息的接口地址和必填参数是什么")
     check(not any(simple.values()), f"简单 API 契约题被误拦截: {simple}")
     check(not intent("获取 access_token 接口")["truncated"],
@@ -114,7 +60,7 @@ def main():
     check("card=1(fast=1)" in out, "简单强锚点 API 题未走 full card 快路径")
     check("== 证据契约 ==" in out and "mode: card-only" in out,
           "快路径未输出 card-only 证据契约")
-    check("runtime_observed: no" in out, "证据缺少执行观测状态")
+    check("字段存在不等于它决定产品行为" in out, "证据契约缺少产品行为边界")
 
     out = run("ctx", "为什么通过免登码获取用户信息会报错")
     check("card=1(fast=0)" in out, "因果/报错题未退出 card-only 快路径")
@@ -204,7 +150,7 @@ def main():
     check("messageFiles/download" in out or "downloadCode" in out,
           "概念别名(聊天图片→downloadCode)未把机器人接收消息/文件下载文档带入上下文")
     out = run("ctx", "钉钉知识库正文是否有接口")
-    check("本轮命中的相关接口/文档" in out and "块元素" in out.split("== 证据契约 ==", 1)[0],
+    check("否定前必读" in out and "块元素" in out.split("== 证据契约 ==", 1)[0],
           "支持性题未前置存在性清单或未命中查询块元素")
     out = run("ctx", "钉钉小程序 离开页面二次确认")
     check("archived_only" in out and "离开二次确认配置" in out,
@@ -217,7 +163,7 @@ def main():
           "用户贴出闭合 JSON 报文仍走 card-only")
 
     out = run("ctx", "钉钉服务端 API 的 QPS 和每月调用量限制是多少")
-    check("mode: full-context-required" in out, "计费配额应展开原文")
+    check("整条逐字照抄，禁止解码成 url= 内嵌地址" in out and "禁止只留文字不给链接" in out, "证据契约缺少链接原样引用纪律")
     out = run("cat", "how-to-process-api-throttling-on-the-dingtalk-server")
     check("dingtalk://dingtalkclient/page/link?url=" in out and "${corpId}" in out and "钉钉专业版" in out,
           "正文中的 dingtalk:// 深链须逐字原样保留(实录:解码成内嵌 html 地址后 ${corpId} 失效)")
@@ -228,7 +174,7 @@ def main():
     check(out.count("![") == 3 and out.count("[图略:") == 5,
           "KB_IMG_KEEP=3 未把 8 张图裁到 3 张(首/中/尾)并留下 [图略] 标记")
     out = run("ctx", "使用容器搭建数据看板卡片的具体操作步骤是什么")
-    check("images: 正文配图只配必要的" not in out, "ctx不应重复注入Skill配图规则")
+    check("images: 正文配图只配必要的" in out, "契约缺 images 行(只配必要的图)")
 
     out = run("card", "H2mylS6eke")
     check("completeness: full" in out and "== 证据契约 ==" in out,
@@ -319,7 +265,7 @@ def main():
         check("cross_kb_form:" in out and form in out, f"数字员工开通题缺逐字申请表链接: {query}")
     out = run("ctx", "通过免登码获取用户信息的接口地址和必填参数是什么")
     check("cross_kb_form:" not in out, "非数字员工题不应出现申请表")
-    check("runtime_observed: no" in out, "缺少覆盖状态")
+    check("不得按格式自行构造" in out and "不得补全" in out, "证据契约缺少截断链接/构造链接禁令")
     # 截断点不得落在链接内部：全库长文 × 各档正文上限
     cut, span = MOD["_cut"], MOD["_LINK_SPAN_RE"]
     check(cut("ab [x](http://e.test/aaaa) cd", 12) == "ab [x](http://e.test/aaaa)", "短链未延到链接结尾")
@@ -344,19 +290,29 @@ def main():
     out = run("ctx", "审批实例的url只能填一个，多个审批人的情况下怎么让审批人在OA审批应用中看到自己的审批单详情")
     check("[提示] 以下命中同时含标准版与 premium" in out, "标准版/premium 并存未提示")
 
-    # grep 只给本地路径时出处曾被按 slug 拼成 /document/orgapp/mcp-square-introduction(空壳页)：每个命中文件须带 source_url
+    # 回退后必须恢复原先已展开的字段约束，而不是只保留文档标题或候选计数。
+    out = run("ctx", "自有OA审批创建实例的url只能填一个，多个审批人的情况下怎么让审批人在OA审批应用中看到自己的审批单详情")
+    check("| url | String | 是 | 第三方审批系统中审批单详情页地址，最大长度1024字符。 |" in out,
+          "自有OA请求体url必填/长度约束未展开")
+    check("== 产品原文" not in out, "开平题被同名DWS产品资料插入")
+    out = run("ctx", "--full", "https://open.dingtalk.com/document/development/send-group-helper-message outTrackId 需要保存吗")
+    check("需保存`outTrackId`，否则无法进行关闭互动卡片吊顶" in out,
+          "outTrackId保存约束未展开")
+    check("需要重新生成全新的 outTrackId，否则更改不会生效" in out,
+          "更改cardTemplateId/cardData的outTrackId约束未展开")
+    out = run("cat", "api-premiumgrantprocessinstancefordownloadfile")
+    check("评论中上传的附件fileId也支持获取下载链接" in out,
+          "高级版审批评论附件支持说明丢失")
+
+    # grep 命中必须给真实source_url，不能按slug猜命名空间。
     out = run("grep", "MCP 服务接入 > 概述")
     check("source_url: https://open.dingtalk.com/document/development/mcp-square-introduction" in out,
-          "grep 命中未附 frontmatter source_url")
+          "grep命中未附frontmatter source_url")
     files = {l.split(":", 1)[0] for l in out.splitlines() if l.startswith("docs/")}
     heads = {l[3:].split(" · source_url: ", 1)[0] for l in out.splitlines() if l.startswith("== docs/")}
-    check(files and files <= heads, f"有命中文件缺 source_url 行: {sorted(files - heads)[:3]}")
+    check(files and files <= heads, f"有命中文件缺source_url行: {sorted(files - heads)[:3]}")
 
-    result = unittest.TextTestRunner().run(unittest.defaultTestLoader.loadTestsFromTestCase(SubjectEvidenceTest))
-    check(result.wasSuccessful(), "主体路由/证据覆盖回归失败")
-    result = unittest.TextTestRunner().run(unittest.defaultTestLoader.loadTestsFromTestCase(ReferenceNotesTest))
-    check(result.wasSuccessful(), "补充原文依据回归失败")
-    print("OK: dkdoc ctx fast-path/evidence-contract/subject regression")
+    print("OK: dkdoc ctx fast-path/evidence-contract/rollback/source_url regression")
     return 0
 
 

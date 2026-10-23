@@ -35,7 +35,7 @@ updated_at: "2026-05-29 09:13:40"
 > 2020年11月27日以后创建的第三方企业应用，请调用[使用模板发送工作通知消息](0774-work-notification-templating-send-notification-interface.md)接口发送工作通知。
 
 - 适用场景：适用于发送通知类的消息，不包含审批任务等。
-- 不适用场景：需要发送一条任务类的通知提醒给员工，比如审批任务等，调用此接口无法实现。这种场景可以使用[创建待办](0793-add-dingtalk-to-do-task.md)接口。
+- 不适用场景：需要发送一条任务类的通知提醒给员工，比如审批任务等，调用此接口无法实现。这种场景可以使用[创建待办](0795-add-dingtalk-to-do-task.md)接口。
 
 ### **频率限制**
 
@@ -63,7 +63,7 @@ updated_at: "2026-05-29 09:13:40"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | bE74xxxx | 调用该API的应用凭证。   - 企业内部应用，通过[获取企业内部应用的access\_token](1443-obtain-orgapp-token.md)接口获取。 - 第三方企业应用，通过[获取第三方企业的access\_token](1445-obtain-isvapp-token.md)接口获取。 |
+| access\_token | String | 是 | bE74xxxx | 调用该API的应用凭证。   - 企业内部应用，通过[获取企业内部应用的access\_token](1445-obtain-orgapp-token.md)接口获取。 - 第三方企业应用，通过[获取第三方企业的access\_token](1447-obtain-isvapp-token.md)接口获取。 |
 
 ### **请求体**
 

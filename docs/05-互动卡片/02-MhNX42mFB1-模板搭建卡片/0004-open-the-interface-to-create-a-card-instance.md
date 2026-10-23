@@ -45,7 +45,7 @@ updated_at: "2026-08-04 09:07:22"
 目前可用的场域、以及如何配置和添加场域信息参见：
 
 - 通过服务端API-[创建卡片](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0780-interface-for-creating-a-card-instance.md)接口，实现场域的添加。
-- 通过服务端API-[新增或者更新卡片的场域信息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0787-add-field-interface.md)接口，实现对场域信息的添加和更新操作，详情参见[开放接口投放卡片实例](0006-open-interface-card-delivery-instance.md)。
+- 通过服务端API-[新增或者更新卡片的场域信息](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0788-add-field-interface.md)接口，实现对场域信息的添加和更新操作，详情参见[开放接口投放卡片实例](0006-open-interface-card-delivery-instance.md)。
 
 ## **前置准备**
 

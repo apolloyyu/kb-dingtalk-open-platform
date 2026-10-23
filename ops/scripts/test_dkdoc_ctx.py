@@ -344,6 +344,14 @@ def main():
     out = run("ctx", "审批实例的url只能填一个，多个审批人的情况下怎么让审批人在OA审批应用中看到自己的审批单详情")
     check("[提示] 以下命中同时含标准版与 premium" in out, "标准版/premium 并存未提示")
 
+    # grep 只给本地路径时出处曾被按 slug 拼成 /document/orgapp/mcp-square-introduction(空壳页)：每个命中文件须带 source_url
+    out = run("grep", "MCP 服务接入 > 概述")
+    check("source_url: https://open.dingtalk.com/document/development/mcp-square-introduction" in out,
+          "grep 命中未附 frontmatter source_url")
+    files = {l.split(":", 1)[0] for l in out.splitlines() if l.startswith("docs/")}
+    heads = {l[3:].split(" · source_url: ", 1)[0] for l in out.splitlines() if l.startswith("== docs/")}
+    check(files and files <= heads, f"有命中文件缺 source_url 行: {sorted(files - heads)[:3]}")
+
     result = unittest.TextTestRunner().run(unittest.defaultTestLoader.loadTestsFromTestCase(SubjectEvidenceTest))
     check(result.wasSuccessful(), "主体路由/证据覆盖回归失败")
     result = unittest.TextTestRunner().run(unittest.defaultTestLoader.loadTestsFromTestCase(ReferenceNotesTest))

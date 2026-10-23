@@ -494,30 +494,48 @@ def cmd_cat(terms, n):
     return 0
 
 
+def _grep_url_printer():
+    """grep 命中只给本地路径时，答案里的出处曾被按文件名 slug 拼成不存在的 /document/orgapp/<slug>
+    (真实为 /document/development/<slug>，错的命名空间返回空壳页)。每个命中文件第一次出现时
+    附上它 frontmatter 的 source_url，引用直接取这一行，不按格式自行构造。"""
+    urls = {d["local_path"]: d.get("source_url") for d in load_jsonl("meta/documents.jsonl") if d.get("local_path")}
+    seen = set()
+
+    def emit(line):
+        path = line.split(":", 1)[0]
+        if path not in seen:
+            seen.add(path)
+            if urls.get(path):
+                print(f"== {path} · source_url: {urls[path]}")
+        print(line)
+    return emit
+
+
 def cmd_grep(terms, n):
     if not terms:
         return usage("grep 需要 pattern")
     pattern, sub = terms[0], (terms[1] if len(terms) > 1 else "docs")
+    emit = _grep_url_printer()
     try:
         r = subprocess.run(["rg", "-n", "--no-heading", "-m", "5", pattern, sub],
                            cwd=ROOT, capture_output=True, text=True)
         lines = r.stdout.splitlines()
         for line in lines[:max(n * 5, 50)]:
-            print(line)
+            emit(line)
         if len(lines) > max(n * 5, 50):
             print(f"…共 {len(lines)} 行命中，收窄 pattern 或指定子路径")
         return 0 if lines else 1
     except FileNotFoundError:
         pat = re.compile(pattern)
         cnt = 0
-        for dirpath, _, files in os.walk(os.path.join(ROOT, sub)):
-            for fn in files:
+        for dirpath, _, files in sorted(os.walk(os.path.join(ROOT, sub))):
+            for fn in sorted(files):
                 if not fn.endswith(".md"):
                     continue
                 fp = os.path.join(dirpath, fn)
                 for i, line in enumerate(open(fp, encoding="utf-8", errors="ignore"), 1):
                     if pat.search(line):
-                        print(f"{os.path.relpath(fp, ROOT)}:{i}:{line.rstrip()[:200]}")
+                        emit(f"{os.path.relpath(fp, ROOT)}:{i}:{line.rstrip()[:200]}")
                         cnt += 1
                         if cnt >= max(n * 5, 50):
                             print("…已截断")

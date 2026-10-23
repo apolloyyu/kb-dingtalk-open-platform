@@ -5,13 +5,13 @@ namespace: "development"
 slug: "overview-card"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "即时通信 > 互动卡片 > 概述"
+breadcrumb: "即时通信 > 互动卡片 > 基础卡片 > 概述"
 doc_id: "6KgBcc70C0"
 updated_at: "2026-07-14 09:09:12"
 ---
 
 > Source: https://open.dingtalk.com/document/development/overview-card
-> Path: 应用开发 / 服务端 API / 即时通信 > 互动卡片 > 概述
+> Path: 应用开发 / 服务端 API / 即时通信 > 互动卡片 > 基础卡片 > 概述
 > Updated: 2026-07-14 09:09:12
 
 # 概述
@@ -107,8 +107,8 @@ updated_at: "2026-07-14 09:09:12"
 | [关闭吊顶卡片](0784-api-closetopcard.md) | 调用本接口可关闭通过卡片投放接口投放的吊顶卡片。 | 新版 |
 | [AI卡片流式更新](0785-api-streamingupdate.md) | 通过本接口持续更新的内容，在客户端会呈现一种打字机效果。 | 新版 |
 | [注册卡片回调地址](0786-register-card-callback-address.md) | 调用本接口注册卡片回调地址。 | 新版 |
-| [新增或者更新卡片的场域信息](0787-add-field-interface.md) | 调用本接口新增或者更新卡片实例的场域信息。 | 新版 |
-| [卡片平台模板复制](0788-api-copytemplate.md) | 调用本接口，根据模板ID复制模板。 | 新版 |
+| [新增或者更新卡片的场域信息](0788-add-field-interface.md) | 调用本接口新增或者更新卡片实例的场域信息。 | 新版 |
+| [卡片平台模板复制](0787-api-copytemplate.md) | 调用本接口，根据模板ID复制模板。 | 新版 |
 
 ## **使用教程**
 

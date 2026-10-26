@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "即时通信 > 互动卡片 > AI 卡片 > 更新 AI 卡片"
 doc_id: "3EhxX76bt2"
-updated_at: "2026-10-23 15:53:02"
+updated_at: "2026-10-26 09:07:36"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-updateaicard
 > Path: 应用开发 / 服务端 API / 即时通信 > 互动卡片 > AI 卡片 > 更新 AI 卡片
-> Updated: 2026-10-23 15:53:02
+> Updated: 2026-10-26 09:07:36
 
 # 更新 AI 卡片
 
@@ -25,7 +25,7 @@ updated_at: "2026-10-23 15:53:02"
 | HTTP URL | https://api.dingtalk.com/v1.0/card/ai/instances/update |
 | HTTP Method | PUT |
 | 支持的应用类型 | appType-企业内部应用appType-第三方企业应用 |
-| 权限要求 | permission-AICard.Instance.Write-互动卡片实例写权限 |
+| 权限要求 | permission-AICard.Instance.Write-AI卡片实例写权限 |
 
 ### **请求头**
 

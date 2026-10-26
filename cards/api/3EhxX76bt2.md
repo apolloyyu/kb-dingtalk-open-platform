@@ -36,4 +36,4 @@ permissions: AICard.Instance.Write
 - 组件语义标注，最多 100 项且不能重复。 **[!NOTE]** 不传或空列表表示不新增标注，不表示清空已有标注。
 
 source_url: https://open.dingtalk.com/document/development/api-updateaicard
-updated_at: 2026-10-23 15:53:02
+updated_at: 2026-10-26 09:07:36

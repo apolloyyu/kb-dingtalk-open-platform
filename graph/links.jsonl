@@ -4367,6 +4367,8 @@
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0777-overview-card.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0786-register-card-callback-address.md", "text": "注册卡片回调地址", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0777-overview-card.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0787-api-copytemplate.md", "text": "卡片平台模板复制", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0777-overview-card.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0788-add-field-interface.md", "text": "新增或者更新卡片的场域信息", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0777-overview-card.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-api-updateaicard.md", "text": "更新 AI 卡片", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0777-overview-card.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0792-api-createanddeliveraicard.md", "text": "创建并投放 AI 卡片", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0777-overview-card.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md", "text": "普通卡片模板", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0777-overview-card.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0003-create-a-card-instance-from-the-card-platform.md", "text": "卡片平台创建卡片实例", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0777-overview-card.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0004-open-the-interface-to-create-a-card-instance.md", "text": "开放接口创建卡片实例", "n": 1}

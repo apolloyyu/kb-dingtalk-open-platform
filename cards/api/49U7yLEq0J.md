@@ -42,4 +42,4 @@ permissions: AICard.Instance.Write
 - 创建后不可变的回调业务关联信息，最多 32 项。 **[!NOTE]** JSON 总计 4096 字节（UTF-8）；key 禁用 `__`、`sys.`、`dingtalk.` 前缀。
 
 source_url: https://open.dingtalk.com/document/development/api-createanddeliveraicard
-updated_at: 2026-10-23 15:52:18
+updated_at: 2026-10-26 09:07:38

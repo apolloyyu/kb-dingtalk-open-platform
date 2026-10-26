@@ -5,14 +5,14 @@ namespace: "development"
 slug: "overview-card"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "即时通信 > 互动卡片 > 基础卡片 > 概述"
+breadcrumb: "即时通信 > 互动卡片 > 概述"
 doc_id: "6KgBcc70C0"
-updated_at: "2026-07-14 09:09:12"
+updated_at: "2026-10-26 09:07:34"
 ---
 
 > Source: https://open.dingtalk.com/document/development/overview-card
-> Path: 应用开发 / 服务端 API / 即时通信 > 互动卡片 > 基础卡片 > 概述
-> Updated: 2026-07-14 09:09:12
+> Path: 应用开发 / 服务端 API / 即时通信 > 互动卡片 > 概述
+> Updated: 2026-10-26 09:07:34
 
 # 概述
 
@@ -98,6 +98,8 @@ updated_at: "2026-07-14 09:09:12"
 
 ## **开放概览**
 
+### **基础卡片**
+
 | **API** | **API说明** | **API版本** |
 | --- | --- | --- |
 | [创建卡片](0780-interface-for-creating-a-card-instance.md) | 调用本接口创建卡片实例，可以设置卡片的基本数据、设置动态数据源、卡片所在场域等内容。 | 新版 |
@@ -109,6 +111,13 @@ updated_at: "2026-07-14 09:09:12"
 | [注册卡片回调地址](0786-register-card-callback-address.md) | 调用本接口注册卡片回调地址。 | 新版 |
 | [新增或者更新卡片的场域信息](0788-add-field-interface.md) | 调用本接口新增或者更新卡片实例的场域信息。 | 新版 |
 | [卡片平台模板复制](0787-api-copytemplate.md) | 调用本接口，根据模板ID复制模板。 | 新版 |
+
+### **AI 卡片**
+
+| **API** | **API说明** | **API版本** |
+| --- | --- | --- |
+| [更新 AI 卡片](0791-api-updateaicard.md) | 调用本接口，更新AI卡片。 | 新版 |
+| [创建并投放 AI 卡片](0792-api-createanddeliveraicard.md) | 调用本接口，创建并且投递AI卡片。 | 新版 |
 
 ## **使用教程**
 

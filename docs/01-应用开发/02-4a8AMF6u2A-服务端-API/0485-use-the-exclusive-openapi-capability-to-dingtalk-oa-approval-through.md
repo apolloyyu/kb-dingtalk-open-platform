@@ -196,7 +196,7 @@ public void getAccessToken() throws Exception {
    - **自有OA审批集成：**三方业务系统分别对接钉钉自有OA审批，通过钉钉**自有OA审批相关接口**将业务系统的审批任务数据同步至钉钉OA审批流程中心，具体步骤参考[自有OA审批：三方流程与页面对接](0483-use-three-party-process-and-page-docking.md)。
    - **官方OA审批集成：**三方业务系统对接钉钉官方OA审批，通过钉钉**官方OA审批相关接口**直接在业务系统内发起钉钉官方OA审批流程，具体步骤参考：[官方OA审批：钉钉流程与页面对接](0482-use-the-dingtalk-oa-approval-process-and-page-interface.md)。
    - **用户主动发起：**可直接在钉钉官方OA审批应用内提交审批流程，通过上方两步骤将分散的业务流程集中到钉钉OA审批中心进行管理。
-2. **获取审批中心数据**：根据[关于新增OA审批高级版专享OpenAPI和解决方案的说明](1441-description-of-new-oa-approval-premium-exclusive-openapi-and-solutions.md)中高级版专享相关接口，获取用户在钉钉审批中心的[待处理](0534-api-premiumgettodotasks.md)、[已处理](0535-api-premiumgetdonetasks.md)、[已发起的](0526-api-premiumgetsubmittedinstances.md)、[已收到的](0527-api-premiumgetnoticedinstances.md)审批列表数据。
+2. **获取审批中心数据**：根据[关于新增OA审批高级版专享OpenAPI和解决方案的说明](1442-description-of-new-oa-approval-premium-exclusive-openapi-and-solutions.md)中高级版专享相关接口，获取用户在钉钉审批中心的[待处理](0534-api-premiumgettodotasks.md)、[已处理](0535-api-premiumgetdonetasks.md)、[已发起的](0526-api-premiumgetsubmittedinstances.md)、[已收到的](0527-api-premiumgetnoticedinstances.md)审批列表数据。
 
    - **查询审批中心用户待处理任务列表**
 

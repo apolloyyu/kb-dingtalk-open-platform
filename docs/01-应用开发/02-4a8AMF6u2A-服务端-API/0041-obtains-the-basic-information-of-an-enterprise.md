@@ -41,7 +41,7 @@ updated_at: "2026-04-29 22:27:44"
 
 > **[!NOTE]**
 >
-> - 在使用HTTP调用本接口时，必须设置**signature**参数，钉钉会对请求进行签名验证，用以提升安全水位。签名计算方式，请参考[第三方访问接口的签名计算方法](1428-the-signature-calculation-method-of-the-third-party-access-interface.md)。
+> - 在使用HTTP调用本接口时，必须设置**signature**参数，钉钉会对请求进行签名验证，用以提升安全水位。签名计算方式，请参考[第三方访问接口的签名计算方法](1429-the-signature-calculation-method-of-the-third-party-access-interface.md)。
 > - 在使用SDK调用本接口时，无需自行进行签名计算，钉钉SDK已自带签名功能**。**推荐使用钉钉提供的SDK进行调用，SDK下载地址参见[服务端SDK下载](0002-download-the-server-side-sdk.md)。
 
 ## **请求**
@@ -60,7 +60,7 @@ updated_at: "2026-04-29 22:27:44"
 | accessKey | String | 是 | 6ed1bxxxx | - 第三方企业应用的SuiteKey，可在[钉钉开发者后台](https://open-dev.dingtalk.com/#/appMgr/custom/h5/951603110/1)的应用详情页获取。 - 定制应用的CustomKey，可在[钉钉开发者后台](https://open-dev.dingtalk.com/#/appMgr/custom/h5/951603110/1)的应用详情页获取。 |
 | timestamp | String | 是 | 1598359962000 | 当前时间戳，单位毫秒。 |
 | suiteTicket | String | 是 | test | - 第三方企业应用，使用钉钉推送的suiteTicket。 - 定制应用，可指定任意值。 |
-| signature | String | 是 | xxx | 签名。签名计算方式请参考[第三方访问接口的签名计算方法](1428-the-signature-calculation-method-of-the-third-party-access-interface.md)。  **[!NOTE]**  计算出签名以后，需要进行urlencode，才能把签名参数拼接到url中。 |
+| signature | String | 是 | xxx | 签名。签名计算方式请参考[第三方访问接口的签名计算方法](1429-the-signature-calculation-method-of-the-third-party-access-interface.md)。  **[!NOTE]**  计算出签名以后，需要进行urlencode，才能把签名参数拼接到url中。 |
 
 ### **请求体**
 

@@ -36,32 +36,32 @@ updated_at: "2026-10-19 09:11:42"
 | [更新企业内部应用](0863-update-internal-h5-applications.md) | 更新企业内部应用信息。 | 新版 |
 | [删除企业内部应用](0864-delete-an-internal-h5-application.md) | 删除H5微应用。 | 新版 |
 | [获取企业所有应用列表](0865-obtains-a-list-of-all-enterprise-applications.md) | 获取企业所有的应用列表。 | 新版 |
-| [获取企业内部所有应用列表](0866-get-a-list-of-all-applications-inside-the-enterprise.md) | 获取企业内部所有应用列表 | 新版 |
-| [获取用户可见的企业应用列表](0867-obtains-the-list-of-enterprise-applications-visible-to-a-user.md) | 获取用户可使用的企业应用列表及应用信息。 | 新版 |
+| [获取企业内部所有应用列表](0867-get-a-list-of-all-applications-inside-the-enterprise.md) | 获取企业内部所有应用列表 | 新版 |
+| [获取用户可见的企业应用列表](0868-obtains-the-list-of-enterprise-applications-visible-to-a-user.md) | 获取用户可使用的企业应用列表及应用信息。 | 新版 |
 
 #### **版本管理**
 
 | **API** | **说明** | **API版本** |
 | --- | --- | --- |
-| [发布企业内部小程序版本](0868-release-internal-applet-version.md) | 可以对企业内部小程序进行线上和体验版的发布。 | 新版 |
-| [回滚企业内部小程序版本](0869-rollback-of-enterprise-internal-applet-version.md) | 回滚企业内部小程序版本。 | 新版 |
-| [获取企业内部小程序的版本列表](0870-get-the-version-list-of-the-enterprise-internal-applet.md) | 获取企业内部小程序的版本列表 | 新版 |
-| [获取企业内部小程序历史版本列表](0871-obtain-the-list-of-historical-versions-of-enterprise-internal-applets.md) | 获取企业内部小程序历史版本列表 | 新版 |
+| [发布企业内部小程序版本](0869-release-internal-applet-version.md) | 可以对企业内部小程序进行线上和体验版的发布。 | 新版 |
+| [回滚企业内部小程序版本](0870-rollback-of-enterprise-internal-applet-version.md) | 回滚企业内部小程序版本。 | 新版 |
+| [获取企业内部小程序的版本列表](0871-get-the-version-list-of-the-enterprise-internal-applet.md) | 获取企业内部小程序的版本列表 | 新版 |
+| [获取企业内部小程序历史版本列表](0872-obtain-the-list-of-historical-versions-of-enterprise-internal-applets.md) | 获取企业内部小程序历史版本列表 | 新版 |
 
 #### **使用范围**
 
 | **API** | **说明** | **API版本** |
 | --- | --- | --- |
-| [更新企业内部应用的可使用范围](0872-update-the-visible-range-of-micro-applications.md) | 更新企业内部应用的可使用范围。 | 新版 |
-| [获取企业应用的可使用范围](0873-obtains-the-application-visible-range.md) | 获取企业内部应用的可使用范围信息。 | 新版 |
+| [更新企业内部应用的可使用范围](0873-update-the-visible-range-of-micro-applications.md) | 更新企业内部应用的可使用范围。 | 新版 |
+| [获取企业应用的可使用范围](0874-obtains-the-application-visible-range.md) | 获取企业内部应用的可使用范围信息。 | 新版 |
 
 #### **智能体**
 
 | **API** | **说明** | **API版本** |
 | --- | --- | --- |
-| [创建企业智能体应用](0874-api-createagent.md) | 创建企业智能体应用。 | 新版 |
-| [提交创建企业自建Agent](0875-api-submitcreateenterpriseagent.md) | 提交创建企业自建 Agent 任务。 | 新版 |
-| [查询创建企业自建Agent任务进度](0876-api-querycreateenterpriseagent.md) | 根据任务ID获取任务进度信息。 | 新版 |
+| [创建企业智能体应用](0875-api-createagent.md) | 创建企业智能体应用。 | 新版 |
+| [提交创建企业自建Agent](0876-api-submitcreateenterpriseagent.md) | 提交创建企业自建 Agent 任务。 | 新版 |
+| [查询创建企业自建Agent任务进度](0877-api-querycreateenterpriseagent.md) | 根据任务ID获取任务进度信息。 | 新版 |
 
 ### **回调事件列表**
 

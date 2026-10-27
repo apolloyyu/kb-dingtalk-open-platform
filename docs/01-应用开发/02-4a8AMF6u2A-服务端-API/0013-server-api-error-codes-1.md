@@ -2164,7 +2164,7 @@ updated_at: "2026-05-06 10:20:52"
 | 33008 | 无效的微应用OA后台的主页 | 无效的微应用OA后台的主页。校验下微应用的后台管理的主页失败，必须以http开头或https开头。 |  |
 | 33012 | 无效的USERID | 无效的USERID。请检查userid是否正确，可通过[获取部门用户userid列表](0064-query-the-list-of-department-userids.md)接口获取。 |  |
 | 33013 | 企业自建微应用的个数过多，通过接口创建微应用受限 | 企业自建微应用的个数过多，通过接口创建微应用受限。此限制只针对企业自建微应用，对ISV应用没有限制。 |  |
-| 34001 | 无效的会话id | 无效的会话id。检查下所传的chatId字段是否为空。可通过[创建群](1482-session-management-creates-groups.md)接口获取chatId。 |  |
+| 34001 | 无效的会话id | 无效的会话id。检查下所传的chatId字段是否为空。可通过[创建群](1483-session-management-creates-groups.md)接口获取chatId。 |  |
 | 34002 | 无效的会话消息的发送者 | 无效的会话消息的发送者。检查下sender字段是否为空。 |  |
 | 34003 | 无效的会话消息的发送者的企业Id | 无效的会话消息的发送者的企业Id。检查下发送者的企业Id。可在[开发者后台](https://open-dev.dingtalk.com/#/index)首页获取。 |  |
 | 34004 | 无效的会话消息的类型 | 无效的会话消息的类型。检查下msgtype字段，是否为空，是否是定义的类型。msgtype请参考[消息通知类型](0775-message-types-and-data-format.md)。 |  |
@@ -2195,8 +2195,8 @@ updated_at: "2026-05-06 10:20:52"
 | 400023 | 用户不存在 | 用户不存在。无。 |  |
 | 40003 | 不合法的UserID | 不合法的UserID。确保该id在通讯录中存在，且是在你所传access\_token对应的企业里。可通过[获取部门用户userid列表](0064-query-the-list-of-department-userids.md)接口获取。 |  |
 | 40004 | 不合法的媒体文件类型 | 不合法的媒体文件类型。检查下type字段，只支持image、voice、file。 |  |
-| 400040 | 回调不存在 | 回调不存在。检查是否注册回调事件。可通过[查询订阅事件](1866-query-subscribed-events.md)接口获取。 |  |
-| 400041 | 回调已经存在 | 回调已经存在。检查该回调事件是否已注册过。可通过[查询订阅事件](1866-query-subscribed-events.md)接口获取。 |  |
+| 400040 | 回调不存在 | 回调不存在。检查是否注册回调事件。可通过[查询订阅事件](1867-query-subscribed-events.md)接口获取。 |  |
+| 400041 | 回调已经存在 | 回调已经存在。检查该回调事件是否已注册过。可通过[查询订阅事件](1867-query-subscribed-events.md)接口获取。 |  |
 | 400042 | 企业不存在 | 企业不存在。无。 |  |
 | 400043 | 企业不合法 | 企业不合法。无。 |  |
 | 40005 | 不合法的文件类型 | 不合法的文件类型。如果是文件类型，检查下是否是支持。目前只支持doc、docx、xls、xlsx、ppt、pptx、zip、pdf、rar。 |  |
@@ -2369,7 +2369,7 @@ updated_at: "2026-05-06 10:20:52"
 | 48002 | Api禁用 | Api禁用。无。 |  |
 | 48003 | suitetoken无效 | suitetoken无效。请检查该suitetoken是否已经过期或不正确。 |  |
 | 48004 | 授权关系无效 | 授权关系无效。无。 |  |
-| 49000 | 缺少chatid | 缺少chatid。请检查参数中是否有chatid。可通过[创建群](1482-session-management-creates-groups.md)接口获取chatId。 |  |
+| 49000 | 缺少chatid | 缺少chatid。请检查参数中是否有chatid。可通过[创建群](1483-session-management-creates-groups.md)接口获取chatId。 |  |
 | 49001 | 绑定的微应用超过个数限制 | 绑定的微应用超过个数限制。绑定群会话和微应用超过5个。 |  |
 | 49002 | 一个群只能被一个ISV套件绑定一次 | 一个群只能被一个ISV套件绑定一次。无。 |  |
 | 49003 | 操作者必须为群主 | 操作者必须为群主。无。 |  |
@@ -2502,8 +2502,8 @@ updated_at: "2026-05-06 10:20:52"
 | 900002 | 加密时间戳参数非法 | 加密时间戳参数非法。加密时间戳不能为空。 |  |
 | 900003 | 加密随机字符串参数非法 | 加密随机字符串参数非法。加密随机字符串不能为空。 |  |
 | 900004 | 不合法的aeskey | 不合法的aeskey。检查aeskey是否符合规格，长度固定为43个字符，从a-z, A-Z, 0-9共62个字符中选取，是AESKey的Base64编码。解码后即为32字节长的AESKey。 |  |
-| 900005 | 签名不匹配 | 签名不匹配。检查签名计算的参数是否正确。 \* 个人免登：[个人免登场景的签名计算方法](1427-signature-personal-registration.md) \* 第三方企业：[第三方访问接口的签名计算方法](1428-the-signature-calculation-method-of-the-third-party-access-interface.md) |  |
-| 900006 | 计算签名错误 | 计算签名错误。检查签名计算的参数是否正确。 \* 个人免登：[个人免登场景的签名计算方法](1427-signature-personal-registration.md) \* 第三方企业：[第三方访问接口的签名计算方法](1428-the-signature-calculation-method-of-the-third-party-access-interface.md) |  |
+| 900005 | 签名不匹配 | 签名不匹配。检查签名计算的参数是否正确。 \* 个人免登：[个人免登场景的签名计算方法](1428-signature-personal-registration.md) \* 第三方企业：[第三方访问接口的签名计算方法](1429-the-signature-calculation-method-of-the-third-party-access-interface.md) |  |
+| 900006 | 计算签名错误 | 计算签名错误。检查签名计算的参数是否正确。 \* 个人免登：[个人免登场景的签名计算方法](1428-signature-personal-registration.md) \* 第三方企业：[第三方访问接口的签名计算方法](1429-the-signature-calculation-method-of-the-third-party-access-interface.md) |  |
 | 900007 | 计算加密文字错误 | 计算加密文字错误。检查是否安装JRE补丁或者对应的JRE版本是否正常。 |  |
 | 900008 | 计算解密文字错误 | 计算解密文字错误。检查是否安装JRE补丁或者对应的JRE版本是否正常。 |  |
 | 900009 | 计算解密文字长度不匹配 | 计算解密文字长度不匹配。检查aeskey是否符合规格。长度固定为43个字符，从a-z, A-Z, 0-9共62个字符中选取，是AESKey的Base64编码。 |  |

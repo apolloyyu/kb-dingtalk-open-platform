@@ -80,7 +80,7 @@ OA审批场景下不支持编排和表达式，无法对官方或三方连接器
 
    ![OA审批接入集成流-入参映射设置](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/9531716661/p506148.png)
 
-   - **需要获取的花名册字段信息**：选择**固定值**，并设置为**sys01-positionLevel**，更多字段信息，请参考[花名册自定义字段业务code](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0944-roster-custom-field-business-code.md)。
+   - **需要获取的花名册字段信息**：选择**固定值**，并设置为**sys01-positionLevel**，更多字段信息，请参考[花名册自定义字段业务code](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0945-roster-custom-field-business-code.md)。
 
 ### **配置子流程出参**
 

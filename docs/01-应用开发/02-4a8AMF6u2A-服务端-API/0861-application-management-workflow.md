@@ -120,14 +120,14 @@ updated_at: "2026-10-16 09:23:13"
 步骤四：应用查询操作：
 
 1. 调用服务端API-[获取企业所有应用列表](0865-obtains-a-list-of-all-enterprise-applications.md)接口，获取企业应用信息。
-2. 调用服务端API-[获取用户可见的企业应用列表](0867-obtains-the-list-of-enterprise-applications-visible-to-a-user.md)接口，获取当前用户可使用的应用信息。
+2. 调用服务端API-[获取用户可见的企业应用列表](0868-obtains-the-list-of-enterprise-applications-visible-to-a-user.md)接口，获取当前用户可使用的应用信息。
 
 步骤五：应用管理操作：
 
 1. 调用服务端API-[创建企业内部应用](0862-create-an-h5-application-for-your-enterprise.md)接口，创建一个企业内部应用-H5微应用，获取应用的agentid。
 2. 根据应用agentid，调用服务端API-[更新企业内部应用](0863-update-internal-h5-applications.md)接口，更新企业内部应用-H5微应用信息。
-3. 根据应用agentid，调用服务端API-[获取企业应用的可使用范围](0873-obtains-the-application-visible-range.md)接口，获取当前应用的可使用范围。
-4. 根据应用agentid，调用服务端API-[更新企业内部应用的可使用范围](0872-update-the-visible-range-of-micro-applications.md)接口，更新当前应用的可使用范围。
+3. 根据应用agentid，调用服务端API-[获取企业应用的可使用范围](0874-obtains-the-application-visible-range.md)接口，获取当前应用的可使用范围。
+4. 根据应用agentid，调用服务端API-[更新企业内部应用的可使用范围](0873-update-the-visible-range-of-micro-applications.md)接口，更新当前应用的可使用范围。
 5. 根据应用agentid，调用服务端API-[删除企业内部应用](0864-delete-an-internal-h5-application.md)接口，删除对应的企业内部应用。
 
 ## **实施步骤**
@@ -224,7 +224,7 @@ public void getAccessToken() throws Exception {
    **返回字段：**
 
    - `appList`：企业所有应用的信息列表，包含应用名称、agentid、应用类型、应用状态等。
-2. 调用服务端API-[获取用户可见的企业应用列表](0867-obtains-the-list-of-enterprise-applications-visible-to-a-user.md)接口，获取当前用户可使用的应用信息。
+2. 调用服务端API-[获取用户可见的企业应用列表](0868-obtains-the-list-of-enterprise-applications-visible-to-a-user.md)接口，获取当前用户可使用的应用信息。
 
    ```
    public void usersApps() throws Exception {
@@ -371,7 +371,7 @@ public void getAccessToken() throws Exception {
    **返回字段：**
 
    - `result`：操作是否成功的布尔值。
-3. 根据应用agentid，调用服务端API-[获取企业应用的可使用范围](0873-obtains-the-application-visible-range.md)接口，获取当前应用的可使用范围。
+3. 根据应用agentid，调用服务端API-[获取企业应用的可使用范围](0874-obtains-the-application-visible-range.md)接口，获取当前应用的可使用范围。
 
    ```
    public void  appsScopes() throws Exception {
@@ -412,7 +412,7 @@ public void getAccessToken() throws Exception {
    - `deptIds`：可见部门ID列表。
    - `roleIds`可见角色ID列表。
    - `onlyAdminVisible`：是否仅管理员可使用。
-4. 根据应用agentid，调用服务端API-[更新企业内部应用的可使用范围](0872-update-the-visible-range-of-micro-applications.md)接口，更新当前应用的可使用范围。
+4. 根据应用agentid，调用服务端API-[更新企业内部应用的可使用范围](0873-update-the-visible-range-of-micro-applications.md)接口，更新当前应用的可使用范围。
 
    ```
     public void appsScopesUpdate() throws Exception {

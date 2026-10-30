@@ -322,6 +322,7 @@ def main():
     check("0137-attendance-day-statistics-change-event.md" not in run("event", "考勤组"),
           "单词 event 查询行为被改变(不应出现部分命中)")
     # grep：原短语能逐字命中时照旧；逐字无命中才按同一行/同一篇含全部词；正则照旧。
+    check("（多词" not in run("grep", "MCP 服务接入 > 概述"), "原短语能逐字命中时 grep 未照旧按短语返回")
     out = run("grep", "考勤 变更 事件")
     check("同一行含全部 3 个词" in out and "0164-attendance-overview.md" in out, "grep 多词同行模式失效")
     out = run("grep", "运营答疑群 自有渠道推广")

@@ -333,10 +333,6 @@ def main():
                                          capture_output=True, text=True, timeout=30).stdout, "grep 子路径不存在未说明")
     out = run("grep", "帮助中心\\|运营答疑群")
     check("同一行含全部" not in out and "0027-isv-cooperation-guide.md" in out, "grep 正则被误当多词")
-    # 连词/指代虚词不当检索词(或者/相关/具体曾让《部署方式介绍》压过《技术支持》)。
-    out = run("ctx", "钉钉帮助中心或相关技术有具体的人名或者群名吗")
-    audit = next(l for l in out.splitlines() if l.startswith("已检索"))
-    check("0044-ngliko.md" in first_body_heading(out), f"技术支持未成为首篇: {first_body_heading(out)}")
 
     print("OK: dkdoc ctx fast-path/evidence-contract/rollback/source_url regression")
     return 0

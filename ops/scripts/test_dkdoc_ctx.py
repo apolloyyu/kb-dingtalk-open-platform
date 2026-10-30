@@ -329,6 +329,8 @@ def main():
     check("同一篇内含全部词" in out and "0027-isv-cooperation-guide.md" in out, "grep 多词同篇模式失效")
     check("无命中" in subprocess.run(["python3", DKDOC, "grep", "考勤 不存在的词xyz"], cwd=ROOT,
                                     capture_output=True, text=True, timeout=30).stdout, "grep 多词无命中未说明")
+    check("子路径不存在" in subprocess.run(["python3", DKDOC, "grep", "考勤 变更", "docs/不存在"], cwd=ROOT,
+                                         capture_output=True, text=True, timeout=30).stdout, "grep 子路径不存在未说明")
     out = run("grep", "帮助中心\\|运营答疑群")
     check("同一行含全部" not in out and "0027-isv-cooperation-guide.md" in out, "grep 正则被误当多词")
     # 连词/指代虚词不当检索词(或者/相关/具体曾让《部署方式介绍》压过《技术支持》)。

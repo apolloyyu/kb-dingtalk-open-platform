@@ -516,6 +516,9 @@ def _grep_words(phrase, words, sub, n, emit):
     """多词纯文本(grep '考勤 变更 事件')：原样当正则时空格也要逐字匹配，几乎恒为 0。
     原短语逐字有命中时照旧只给这些行；没有时改为同一行含全部词，再没有就列同一篇里含全部词的
     文档(示该篇首个命中行)。"""
+    if not os.path.isdir(os.path.join(ROOT, sub)):
+        print(f"子路径不存在: {sub}(第二个参数是目录，如 docs/01-应用开发；多个词请放在同一个引号里)")
+        return 1
     low = [w.lower() for w in words]
     cap, exact, line_hits, file_hits = max(n * 5, 50), [], [], []
     for dirpath, _, files in sorted(os.walk(os.path.join(ROOT, sub))):

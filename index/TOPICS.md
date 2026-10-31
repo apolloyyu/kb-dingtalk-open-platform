@@ -11,7 +11,7 @@
 - 注意：旧版（归档）JSAPI 文档里的"工号/emplId"多为 userid 的历史命名混用，勿按字面理解
 - 会话标识 openConversationId：获取 = [创建群返回](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0736-create-common-group-new-version-v2.md) / [chatId 转换接口](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0743-obtain-group-openconversationid.md) / [JSAPI 选择会话 chooseChat](../docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0318-jsapi-choose-chat.md) / [机器人接收消息回调](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0080-robot-receive-message.md)；`openChatByConversationId` 是**消费**该 ID 的跳转 JSAPI，不是获取途径
 
-- 主部门与部门列表、部门主管是不同问题；先查 [花名册字段业务 code](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0942-roster-custom-field-business-code.md)、[按字段获取员工花名册](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0938-api-getemployeerosterbyfield.md)，按原文核对权限与应用类型。
+- 主部门与部门列表、部门主管是不同问题；先查 [花名册字段业务 code](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0945-roster-custom-field-business-code.md)、[按字段获取员工花名册](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0941-api-getemployeerosterbyfield.md)，按原文核对权限与应用类型。
 
 > 本次局部复核：2026-10-20，用户标识生命周期与部门字段入口；其余主题仍沿用原复核基线。
 
@@ -35,7 +35,7 @@
 - [添加接口调用权限](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0003-add-api-permission.md) · [敏感权限使用](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0004-use-sensitive-permissions.md)
 - 找某个接口 / 权限点 → 别翻目录，直接查 [graph/api.jsonl 与 permission.jsonl](../graph/GRAPH.md)
 - 新旧双轨：`api.dingtalk.com`（新版）与 `oapi.dingtalk.com`（旧版）并存，`graph/api.jsonl` 的 `version` 字段可判别
-- 限流/QPS/调用频率：[调用频率限制](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0012-call-frequency-limit.md)（规避实践/指数退避）+ [调用频次与限流](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1430-how-to-process-api-throttling-on-the-dingtalk-server.md)（应用/IP/组织/全局四维度阈值与 90018 等限流错误码；检索注意该文标题用「频次」不用「频率」），两篇一并给；按 appKey 维度为主，不按操作人；库内无"带宽"维度条目
+- 限流/QPS/调用频率：[调用频率限制](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0012-call-frequency-limit.md)（规避实践/指数退避）+ [调用频次与限流](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1433-how-to-process-api-throttling-on-the-dingtalk-server.md)（应用/IP/组织/全局四维度阈值与 90018 等限流错误码；检索注意该文标题用「频次」不用「频率」），两篇一并给；按 appKey 维度为主，不按操作人；库内无"带宽"维度条目
 
 ## 错误码排查
 
@@ -57,7 +57,7 @@
 
 ## 待办（Todo）
 
-- [概述](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0792-dingtalk-todo-task-overview.md)（工作待办/个人待办与客户端 tab 展示机制）· [FAQ](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0802-todo-faq.md) · [创建待办](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0793-add-dingtalk-to-do-task.md)（注意 detailUrl 等必填口径以该文参数表为准；bizTag 是响应字段不是入参）
+- [概述](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0794-dingtalk-todo-task-overview.md)（工作待办/个人待办与客户端 tab 展示机制）· [FAQ](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0804-todo-faq.md) · [创建待办](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0795-add-dingtalk-to-do-task.md)（注意 detailUrl 等必填口径以该文参数表为准；bizTag 是响应字段不是入参）
 
 ## OA 审批高频
 
@@ -82,7 +82,7 @@
 
 - [通讯录概述](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0046-contacts-overview.md) · [查询用户详情](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0055-query-user-details.md) · [获取部门用户 userid 列表](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0064-query-the-list-of-department-userids.md)
 - 全量接口清单见 [服务端API/通讯录管理](01-应用开发/02-服务端API/05-通讯录管理.md)（115 篇）
-- "主部门"无独立读写接口：文档承载字段是[智能人事员工调岗](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0953-intelligent-personnel-staff-transfer.md)的 `mainDeptIdAfterTransfer`（职位管理升级后修改主部门的文档支持途径）；[用户详情](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0055-query-user-details.md)的 `dept_id_list` 只是"所属部门id列表"，**文档未定义"第一个是主部门"之类语义**
+- "主部门"无独立读写接口：文档承载字段是[智能人事员工调岗](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0956-intelligent-personnel-staff-transfer.md)的 `mainDeptIdAfterTransfer`（职位管理升级后修改主部门的文档支持途径）；[用户详情](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0055-query-user-details.md)的 `dept_id_list` 只是"所属部门id列表"，**文档未定义"第一个是主部门"之类语义**
 
 ## 互动卡片
 

@@ -312,6 +312,28 @@ def main():
     heads = {l[3:].split(" · source_url: ", 1)[0] for l in out.splitlines() if l.startswith("== docs/")}
     check(files and files <= heads, f"有命中文件缺source_url行: {sorted(files - heads)[:3]}")
 
+    # 多个词放进一个引号：find/api/event/jsapi 拆词查，不能整串子串匹配落空(10-28 线上 46 次多词 find 41 次无命中)。
+    one, many = run("find", "考勤 变更 事件"), run("find", "考勤", "变更", "事件")
+    check("0137-attendance-day-statistics-change-event.md" in one and one == many,
+          "find 引号多词未与多参数等价")
+    check("attend_user_daily_summary_refresh" in run("event", "考勤 日统计"), "event 引号多词未拆词")
+    partial = run("event", "考勤 不存在的词xyz")
+    check(partial.splitlines()[0].startswith("考勤"), f"event 多词全中为空时未按命中词数给部分命中: {partial[:80]}")
+    check("0137-attendance-day-statistics-change-event.md" not in run("event", "考勤组"),
+          "单词 event 查询行为被改变(不应出现部分命中)")
+    # grep：原短语能逐字命中时照旧；逐字无命中才按同一行/同一篇含全部词；正则照旧。
+    check("（多词" not in run("grep", "MCP 服务接入 > 概述"), "原短语能逐字命中时 grep 未照旧按短语返回")
+    out = run("grep", "考勤 变更 事件")
+    check("同一行含全部 3 个词" in out and "0164-attendance-overview.md" in out, "grep 多词同行模式失效")
+    out = run("grep", "运营答疑群 自有渠道推广")
+    check("同一篇内含全部词" in out and "0027-isv-cooperation-guide.md" in out, "grep 多词同篇模式失效")
+    check("无命中" in subprocess.run(["python3", DKDOC, "grep", "考勤 不存在的词xyz"], cwd=ROOT,
+                                    capture_output=True, text=True, timeout=30).stdout, "grep 多词无命中未说明")
+    check("子路径不存在" in subprocess.run(["python3", DKDOC, "grep", "考勤 变更", "docs/不存在"], cwd=ROOT,
+                                         capture_output=True, text=True, timeout=30).stdout, "grep 子路径不存在未说明")
+    out = run("grep", "帮助中心\\|运营答疑群")
+    check("同一行含全部" not in out and "0027-isv-cooperation-guide.md" in out, "grep 正则被误当多词")
+
     print("OK: dkdoc ctx fast-path/evidence-contract/rollback/source_url regression")
     return 0
 

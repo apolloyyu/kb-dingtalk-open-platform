@@ -390,33 +390,37 @@ def cmd_err(terms, n):
     return 0
 
 
+def _and_or_rows(rows, hayf, tl):
+    """全部词命中优先；多词全中为空时按命中词数排序取部分命中(与 cmd_api 同口径)。"""
+    full = [r for r in rows if all(t in hayf(r) for t in tl)]
+    if full or len(tl) < 2:
+        return full
+    part = [(sum(1 for t in tl if t in hayf(r)), i, r) for i, r in enumerate(rows)]
+    return [r for k, _, r in sorted(part, key=lambda x: (-x[0], x[1])) if k]
+
+
 def cmd_event(terms, n):
     tl = [t.lower() for t in terms]
-    rows = []
-    for r in load_jsonl("graph/event.jsonl"):
-        hay = (r["title"] + " " + " ".join(r.get("event_types", []))).lower()
-        if all(t in hay for t in tl):
-            rows.append(r)
+    rows = _and_or_rows(load_jsonl("graph/event.jsonl"),
+                        lambda r: (r["title"] + " " + " ".join(r.get("event_types", []))).lower(), tl)
     for r in rows[:n]:
         tag = " ⚠归档" if r.get("archived") else ""
         print(f"{r['title']}{tag} · 事件: {', '.join(r.get('event_types', []))}")
         print(f"  {r['doc_path']}")
         print(f"  {r['source_url']}")
     if not rows:
-        print(f"事件表无命中（178 篇事件文档无标识未入表），自动全文兜底 dkdoc grep '{terms[0]}' :")
-        return cmd_grep([terms[0]], n)
+        print(f"事件表无命中（178 篇事件文档无标识未入表），自动全文兜底 dkdoc grep '{' '.join(terms)}' :")
+        return cmd_grep([" ".join(terms)], n)
     return 0
 
 
 def cmd_jsapi(terms, n):
     tl = [t.lower() for t in terms]
-    rows = []
-    for r in load_jsonl("graph/jsapi.jsonl"):
-        hay = (r["title"] + " " + " ".join(r.get("jsapi_names", []))).lower()
-        if all(t in hay for t in tl):
-            rows.append(r)
-    # 专页优先：现行压归档，调用名少的（专属文档）压总览页
-    rows.sort(key=lambda r: (r.get("archived", False), len(r.get("jsapi_names", [])), r["doc_path"]))
+    hayf = lambda r: (r["title"] + " " + " ".join(r.get("jsapi_names", []))).lower()  # noqa: E731
+    rows = _and_or_rows(load_jsonl("graph/jsapi.jsonl"), hayf, tl)
+    # 专页优先：现行压归档，调用名少的（专属文档）压总览页；部分命中时命中词多的仍在前
+    rows.sort(key=lambda r: (-sum(1 for t in tl if t in hayf(r)), r.get("archived", False),
+                             len(r.get("jsapi_names", [])), r["doc_path"]))
     for r in rows[:n]:
         tag = " ⚠归档" if r.get("archived") else ""
         names = [x for x in r.get("jsapi_names", []) if any(t in x.lower() for t in tl)] or r.get("jsapi_names", [])
@@ -424,8 +428,8 @@ def cmd_jsapi(terms, n):
         print(f"  {r['doc_path']}")
         print(f"  {r['source_url']}")
     if not rows:
-        print(f"JSAPI 表无命中（表只收正文含 dd.* 调用名的客户端JSAPI文档），自动全文兜底 dkdoc grep '{terms[0]}' :")
-        return cmd_grep([terms[0]], n)
+        print(f"JSAPI 表无命中（表只收正文含 dd.* 调用名的客户端JSAPI文档），自动全文兜底 dkdoc grep '{' '.join(terms)}' :")
+        return cmd_grep([" ".join(terms)], n)
     if len(rows) > n:
         print(f"…共 {len(rows)} 篇，-n 加大上限")
     return 0
@@ -508,11 +512,70 @@ def _grep_url_printer():
     return emit
 
 
+def _grep_words(phrase, words, sub, n, emit):
+    """多词纯文本(grep '考勤 变更 事件')：原样当正则时空格也要逐字匹配，几乎恒为 0。
+    原短语逐字有命中时照旧只给这些行；没有时改为同一行含全部词，再没有就列同一篇里含全部词的
+    文档(示该篇首个命中行)。"""
+    if not os.path.isdir(os.path.join(ROOT, sub)):
+        print(f"子路径不存在: {sub}(第二个参数是目录，如 docs/01-应用开发；多个词请放在同一个引号里)")
+        return 1
+    low = [w.lower() for w in words]
+    cap, exact, line_hits, file_hits = max(n * 5, 50), [], [], []
+    for dirpath, _, files in sorted(os.walk(os.path.join(ROOT, sub))):
+        for fn in sorted(files):
+            if not fn.endswith(".md"):
+                continue
+            fp = os.path.join(dirpath, fn)
+            try:
+                lines = open(fp, encoding="utf-8", errors="ignore").read().splitlines()
+            except OSError:
+                continue
+            rel, per, seen, first, per_exact = os.path.relpath(fp, ROOT), 0, set(), None, 0
+            for i, line in enumerate(lines, 1):
+                if phrase in line and per_exact < 5 and len(exact) < cap:
+                    exact.append(f"{rel}:{i}:{line.rstrip()[:200]}")
+                    per_exact += 1
+                ll = line.lower()
+                got = {w for w in low if w in ll}
+                if got and first is None:
+                    first = (i, line)
+                seen |= got
+                if len(got) == len(low) and per < 5 and len(line_hits) < cap:
+                    line_hits.append(f"{rel}:{i}:{line.rstrip()[:200]}")
+                    per += 1
+            if len(seen) == len(low) and first:
+                file_hits.append(f"{rel}:{first[0]}:{first[1].rstrip()[:200]}")
+    if exact:
+        for line in exact:
+            emit(line)
+        return 0
+    if line_hits:
+        print(f"（多词：原短语无逐字命中，以下为同一行含全部 {len(low)} 个词）")
+        for line in line_hits:
+            emit(line)
+        return 0
+    if file_hits:
+        print(f"（多词：没有同一行含全部词的；以下 {len(file_hits)} 篇同一篇内含全部词，示首个命中行）")
+        for line in file_hits[:cap]:
+            emit(line)
+        if len(file_hits) > cap:
+            print(f"…共 {len(file_hits)} 篇，加词收窄")
+        return 0
+    print(f"无命中（已拆成 {len(low)} 个词分别查：同一篇内也未同时出现 {' / '.join(words)}）；可减词或换同义词")
+    return 1
+
+
 def cmd_grep(terms, n):
     if not terms:
         return usage("grep 需要 pattern")
     pattern, sub = terms[0], (terms[1] if len(terms) > 1 else "docs")
     emit = _grep_url_printer()
+    words = [w for w in re.split(r"\s+", pattern.strip()) if w]
+    if len(words) > 1 and not re.search(r"[\\|()\[\]{}*+?^$]", pattern):
+        return _grep_words(pattern.strip(), words, sub, n, emit)
+    # 模型按 GNU grep 习惯写「或」：'词1\|词2'。rg 与 Python 正则里 \| 是字面竖线，恒为 0
+    # (10-28 线上错题 20 次 \| 写法全部无命中)。文档里没人要搜字面「\|」，按「或」处理。
+    pattern = pattern.replace("\\|", "|")
     try:
         r = subprocess.run(["rg", "-n", "--no-heading", "-m", "5", pattern, sub],
                            cwd=ROOT, capture_output=True, text=True)
@@ -1241,6 +1304,10 @@ def main():
     # 逐词检索退化成整句子串匹配而全部落空(实录:整串222B/0命中 vs 多参数14KB)。
     if cmd == "ctx" and len(terms) == 1:
         terms = [w for w in re.split(r"[\s,，、]+", terms[0]) if w] or terms
+    # find/api/event/jsapi 同理：模型常把多个词放进一个引号(find '考勤 变更 事件')，整串当一个词
+    # 子串匹配必然落空(10-28 线上错题 46 次多词 find 41 次「无命中」，拆词后全部有命中)。
+    if cmd in ("find", "api", "event", "jsapi"):
+        terms = list(dict.fromkeys(w for t in terms for w in re.split(r"[\s,，、]+", t) if w)) or terms
     if cmd == "ctx":
         if prev_q:
             # 追问(「不进行预览行不行」)单独检索必落空:上一问的实体词(dd.biz.util.uploadAttachment)

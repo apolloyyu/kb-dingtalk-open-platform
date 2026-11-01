@@ -5,13 +5,13 @@ namespace: "development"
 slug: "create-and-deliver-cards"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "即时通信 > 互动卡片 > 创建并投放卡片"
+breadcrumb: "即时通信 > 互动卡片 > 基础卡片 > 创建并投放卡片"
 doc_id: "O2gPy8KKZh"
 updated_at: "2026-07-14 09:22:14"
 ---
 
 > Source: https://open.dingtalk.com/document/development/create-and-deliver-cards
-> Path: 应用开发 / 服务端 API / 即时通信 > 互动卡片 > 创建并投放卡片
+> Path: 应用开发 / 服务端 API / 即时通信 > 互动卡片 > 基础卡片 > 创建并投放卡片
 > Updated: 2026-07-14 09:22:14
 
 # 创建并投放卡片

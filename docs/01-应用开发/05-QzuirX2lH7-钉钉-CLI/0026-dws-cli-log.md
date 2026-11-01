@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "钉钉 CLI"
 breadcrumb: "更新日志"
 doc_id: "JqaPUpyWXl"
-updated_at: "2026-10-08 17:38:17"
+updated_at: "2026-10-23 09:32:45"
 ---
 
 > Source: https://open.dingtalk.com/document/development/dws-cli-log
 > Path: 应用开发 / 钉钉 CLI / 更新日志
-> Updated: 2026-10-08 17:38:17
+> Updated: 2026-10-23 09:32:45
 
 # 更新日志
 
@@ -40,6 +40,69 @@ dws upgrade --list
 - 钉钉 CLI 每周发布更新，开发者可扫描下方二维码加入"**dws 开源沟通群**"获取最新动态。
 
   ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/6160536871/p1094200.png)
+
+## **2026-10-20**
+
+### **更新说明**
+
+本周重点：**通讯录好友体系开放**、**聊天图文消息一条发**、**OA 审批图片控件上传**三大方向，同步新增群公告静默发布与新人必看、AI 卡片标准输入与预览摘要自定义、版本更新检查等能力。建议通过 `dws upgrade` 升级到最新版[v1.0.63](https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli/releases/tag/v1.0.63)。
+
+### **新增功能**
+
+#### **通讯录：好友体系开放**
+
+- **好友关系全流程命令**
+
+  新增 6 个好友快捷命令：好友清单、查看收到的申请、发送申请、同意、拒绝、删除好友；发送、同意、拒绝、删除均需确认后才执行，删除好友为高风险操作、须二次确认。配套两个可订阅事件：收到好友申请（申请方标识、备注、来源、申请时间）与好友添加成功（好友标识、姓名、建立时间、主动/被动方向），订阅后即可实时感知好友动态，无需轮询。
+
+  - 相关命令：`dws contact +friend-list`、`dws contact +friend-request-list`、`dws contact +friend-request-send`、`dws contact +friend-request-accept`、`dws contact +friend-request-reject`、`dws contact +friend-remove`
+  - 事件 key：`user_contact_friend_request_received`、`user_contact_friend_added`
+
+#### **聊天：图文消息一条发**
+
+发消息时可以在正文里直接引用本地图片：CLI 自动把图片上传，并与文字合并成一条图文消息发出，文字和图片一起到达，不用分两条发。图片上传失败时整条不发并明确报错，不会发出缺图的消息；支持发送前预览，最多三张图片同时上传。
+
+- 相关命令：`dws chat message send`、`dws chat +messages-send`
+- 示例：`dws chat message send --open-dingtalk-id <openDingTalkId> --content '这是架构图 ![架构图](./arch.png)'`
+
+### OA 审批：图片控件上传
+
+新增图片上传命令：检查本地图片、超过 2MB 自动压缩，上传后返回图片编号，填进审批单的图片控件即可提交；同步修正联系人控件的取值格式与部门 ID 的核验指引。
+
+- 相关命令：`dws oa approval image upload`
+
+### 群公告：静默发布与新人必看
+
+创建和编辑群公告支持 `--no-card` 静默发布与 `--must-read` 新人必看；不需要时把对应参数设为 `false` 即可关闭。
+
+- 相关命令：`dws chat group notice create`、`dws chat group notice edit`
+
+### AI 卡片：长正文标准输入与预览摘要自定义
+
+- **标准输入读取**：卡片内容很长时，用 `--content -` 改从管道读入，不受命令行参数长度限制。
+- **预览摘要自定义**：发卡命令支持 `--summary` 自定义会话列表里显示的预览文字，不传则用默认文案。
+- 相关命令：`dws chat message send-a2ui-card`、`dws chat message update-a2ui-card`
+
+### **体验优化**
+
+#### **版本检查与未知命令纠错**
+
+`auth status`、`version` 与 `--version` 显示当前版本与更新检查结果，默认经 npm Registry 查询、可缓存也可关闭；命令拼错且有明确纠正建议时直接提示、不联网。
+
+- 相关命令：`dws auth status`、`dws version`、`dws --version`
+
+#### **升级链路重构**
+
+查更新默认走 npm Registry，不再受 GitHub API 限额影响；独立二进制可自更新、无需 npm 或 Node.js，v1.0.65 起只下载当前平台的安装包与技能包，下载量更小、校验更严格。
+
+- 相关命令：`dws upgrade --check`、`dws upgrade --dry-run`（展示预计下载量）、`dws upgrade --skip-skills`（省去技能包下载）
+
+### **问题优化**
+
+- **AI 表格写入**：写入结果不确定时不再自动重试，可凭原样保留的 clientToken 只读核对实际结果，避免重复写入；建表、建字段会等结构真正生效再返回，超时或取消不会重复创建；查询与批量更新共用同一套筛选校验，Help 与 Skill 说明同步统一。
+- **日历、白板与 AI 卡片**：日历写入后读回核验时区与忙闲，读回失败时保留已写入的结果、不会重复写入；白板在预览或保存前先校验节点格式，错误提前暴露；AI 卡片更新兼容性检查更完善，沿用服务端返回的卡片标识。
+- **升级版本比较**：`dws upgrade`、`dws upgrade --check` 与 `dws doctor` 比较版本时忽略 `+` 后的构建后缀，修复版本号带 `+` 时误报可升级或漏报新版本（#556）。
+- **消息转话题下线**：`chat thread promote` 下线，历史调用返回 `command_retired`，帮助与 Skill 不再推荐；已有消息转话题暂无等价替代，新建话题请改用 `chat thread send`，回复已有话题请改用 `chat thread reply`。
 
 ## **2026-10-03**
 

@@ -5,13 +5,13 @@ namespace: "development"
 slug: "instructions-for-filling-in-api-card-data"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "即时通信 > 互动卡片 > API 卡片数据的填写说明"
+breadcrumb: "即时通信 > 互动卡片 > 基础卡片 > API 卡片数据的填写说明"
 doc_id: "rv72oYn3zu"
 updated_at: "2026-06-15 16:46:46"
 ---
 
 > Source: https://open.dingtalk.com/document/development/instructions-for-filling-in-api-card-data
-> Path: 应用开发 / 服务端 API / 即时通信 > 互动卡片 > API 卡片数据的填写说明
+> Path: 应用开发 / 服务端 API / 即时通信 > 互动卡片 > 基础卡片 > API 卡片数据的填写说明
 > Updated: 2026-06-15 16:46:46
 
 # API 卡片数据的填写说明

@@ -5,13 +5,13 @@ namespace: "development"
 slug: "example-of-calling-the-card-api-interface"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "即时通信 > 互动卡片 > 示例与工具 > API 调用示例"
+breadcrumb: "即时通信 > 互动卡片 > 基础卡片 > 示例与工具 > API 调用示例"
 doc_id: "FtsWETyWUF"
 updated_at: "2025-09-23 19:18:11"
 ---
 
 > Source: https://open.dingtalk.com/document/development/example-of-calling-the-card-api-interface
-> Path: 应用开发 / 服务端 API / 即时通信 > 互动卡片 > 示例与工具 > API 调用示例
+> Path: 应用开发 / 服务端 API / 即时通信 > 互动卡片 > 基础卡片 > 示例与工具 > API 调用示例
 > Updated: 2025-09-23 19:18:11
 
 # API 调用示例

@@ -5,13 +5,13 @@ namespace: "development"
 slug: "interface-for-creating-a-card-instance"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "即时通信 > 互动卡片 > 创建卡片"
+breadcrumb: "即时通信 > 互动卡片 > 基础卡片 > 创建卡片"
 doc_id: "qWWpPB4lZs"
 updated_at: "2026-07-14 09:22:13"
 ---
 
 > Source: https://open.dingtalk.com/document/development/interface-for-creating-a-card-instance
-> Path: 应用开发 / 服务端 API / 即时通信 > 互动卡片 > 创建卡片
+> Path: 应用开发 / 服务端 API / 即时通信 > 互动卡片 > 基础卡片 > 创建卡片
 > Updated: 2026-07-14 09:22:13
 
 # 创建卡片

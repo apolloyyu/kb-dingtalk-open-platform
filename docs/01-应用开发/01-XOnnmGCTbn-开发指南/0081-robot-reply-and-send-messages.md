@@ -36,7 +36,7 @@ updated_at: "2026-06-30 09:01:08"
 
 1. 通过应用机器人 Webhook url 进行发送消息：
 
-   1. 在[机器人接收消息](0080-robot-receive-message.md)中，获取群内应用机器人的 Webhook url 地址。详情参考[获取应用机器人 Webhook](../02-4a8AMF6u2A-服务端-API/0791-faq-robot.md#3d0beea13di8p)。
+   1. 在[机器人接收消息](0080-robot-receive-message.md)中，获取群内应用机器人的 Webhook url 地址。详情参考[获取应用机器人 Webhook](../02-4a8AMF6u2A-服务端-API/0793-faq-robot.md#3d0beea13di8p)。
    2. Java 开发环境准备：
 
       - 引入 Java SDK ，更多语言 SDK 参考[旧版服务端SDK下载](../02-4a8AMF6u2A-服务端-API/0002-download-the-server-side-sdk.md)。

@@ -5,13 +5,13 @@ namespace: "development"
 slug: "api-closetopcard"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "即时通信 > 互动卡片 > 关闭吊顶卡片"
+breadcrumb: "即时通信 > 互动卡片 > 基础卡片 > 关闭吊顶卡片"
 doc_id: "dHqFcriJKF"
 updated_at: "2026-07-14 09:22:15"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-closetopcard
-> Path: 应用开发 / 服务端 API / 即时通信 > 互动卡片 > 关闭吊顶卡片
+> Path: 应用开发 / 服务端 API / 即时通信 > 互动卡片 > 基础卡片 > 关闭吊顶卡片
 > Updated: 2026-07-14 09:22:15
 
 # 关闭吊顶卡片

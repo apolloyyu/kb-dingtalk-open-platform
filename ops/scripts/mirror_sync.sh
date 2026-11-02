@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 知识库双远端同步：GitLab(写入口) <-> GitHub(助理沙箱读取的镜像)。
+# 知识库双远端同步：GitLab(写入口) <-> GitHub(助理沙箱读取的镜像)，每轮末尾再把 GitHub 版本发布到 OSS(国内下载源)。
 # main：快进或无冲突自动合并，冲突告警退出，绝不强推。staging(测试助理)：GitHub 侧强制跟随 GitLab，见下文。由应用 executor 的 kb.mirror 调度
 # (ECS/Aone 容器均适用)，也可手动执行。用法: mirror_sync.sh [仓库目录]，缺省为脚本所在仓。
 # gitlab 远端缺失时按 KB_GITLAB_NS(默认 git@code.alibaba-inc.com:dingtalk-openplatform-ai)自动补齐，
@@ -10,8 +10,18 @@ cd "$REPO" || { echo "ERR no repo $REPO"; exit 2; }
 # 与每日流水线(kb_pipeline.sh / dws_regen.py)互斥:它们 apply 阶段工作区有大量未提交改动,
 # 此时同步会 merge 失败或搅乱工作区(2026-09-05~09 实录)。流水线持有 .git/kb-pipeline.lock,
 # 这里 flock -n 探测到锁就让路;输出以 OK 开头,executor 不会当异常记日志。
+# ---- 国内下载源(OSS):把 GitHub 上的 main/staging(dws 仓另带上游源码)发布到 OSS,见 oss_publish.py ----
+# 只读 refs/对象、不碰工作区,所以流水线持锁时也照跑;结果只走 stderr("OSS " 开头),不改本脚本 stdout 与退出码。
+_oss(){
+  [ "${KB_OSS_DISABLE:-0}" = 1 ] && return 0
+  local py="$REPO/ops/scripts/oss_publish.py" bin to=""; [ -f "$py" ] || return 0
+  bin=$(command -v python3.11 || command -v python3) || return 0
+  command -v timeout >/dev/null 2>&1 && to="timeout 120"
+  $to "$bin" "$py" --repo "$REPO" 2>&1 | tail -1 >&2
+  return 0
+}
 exec 9>"$REPO/.git/kb-pipeline.lock"
-flock -n 9 || { echo "OK skip(pipeline-running)"; exit 0; }
+flock -n 9 || { echo "OK skip(pipeline-running)"; _oss; exit 0; }
 GH=origin; GL=gitlab
 # ---- staging 分支(测试助理拉取):GitLab→GitHub 搬运 + 每次把 main 追平进 staging ----
 # 只动 refs 和临时 worktree,不切换本仓工作区(流水线用的是 main 工作区)。缺分支=未启用,静默跳过。
@@ -65,12 +75,16 @@ sync_staging(){
 }
 _on_exit(){
   local rc=$?
-  [ "${KB_STAGING_DISABLE:-0}" = 1 ] && exit $rc
-  local out src; out=$(sync_staging 2>&1); src=$?
-  # 无事发生(absent/in-sync)不打印,避免每 10 分钟刷日志
-  case "$out" in *"OK absent"|*"OK in-sync"*) [ $src -eq 0 ] && exit $rc;; esac
-  echo "STAGING $(echo "$out" | tail -1)" >&2
-  [ $rc -eq 0 ] && [ $src -ne 0 ] && exit 4
+  if [ "${KB_STAGING_DISABLE:-0}" != 1 ]; then
+    local out src quiet=""; out=$(sync_staging 2>&1); src=$?
+    # 无事发生(absent/in-sync)不打印,避免每 10 分钟刷日志
+    case "$out" in *"OK absent"|*"OK in-sync"*) [ $src -eq 0 ] && quiet=1;; esac
+    if [ -z "$quiet" ]; then
+      echo "STAGING $(echo "$out" | tail -1)" >&2
+      [ $rc -eq 0 ] && [ $src -ne 0 ] && rc=4
+    fi
+  fi
+  _oss  # main/staging 都搬完再发布,同一轮里 OSS 就跟上 GitHub
   exit $rc
 }
 trap _on_exit EXIT

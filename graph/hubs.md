@@ -85,7 +85,7 @@
 - 11 ← [常见问题](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-faq-card.md)（服务端 API）
 - 11 ← [查询项目](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1025-query-enterprise-all-projects.md)（服务端 API）
 - 11 ← [创建自由任务](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1060-create-a-free-task.md)（服务端 API）
-- 11 ← [事件与回调流程](../docs/01-应用开发/04-LFcRvVD08N-事件订阅/0329-third-party-enterprise-application-address-book-change-event-subscription-process.md)（事件订阅）
+- 11 ← [事件与回调流程](../docs/01-应用开发/04-LFcRvVD08N-事件订阅/0331-third-party-enterprise-application-address-book-change-event-subscription-process.md)（事件订阅）
 - 11 ← [创建连接流](../docs/02-连接平台/02-XdgyZifJkr-我的连接/0001-create-a-connection-flow-1.md)（我的连接）
 - 10 ← [获取通讯录权限范围](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0052-obtain-corpsecret-authorization-scope.md)（服务端 API）
 - 10 ← [创建SSO企业账号](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0103-create-an-sso-account.md)（服务端 API）

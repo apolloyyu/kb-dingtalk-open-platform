@@ -20,7 +20,7 @@ updated_at: "2026-09-02 18:15:02"
 
 ## 配置事件回调
 
-第三方企业应用配置事件订阅流程，请参见[事件与回调流程](0329-third-party-enterprise-application-address-book-change-event-subscription-process.md)。
+第三方企业应用配置事件订阅流程，请参见[事件与回调流程](0331-third-party-enterprise-application-address-book-change-event-subscription-process.md)。
 
 ## 数据表
 

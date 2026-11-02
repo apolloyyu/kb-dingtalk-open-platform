@@ -118,7 +118,7 @@ updated_at: "2026-09-02 18:14:28"
 
 在[开发者后台](https://open-dev.dingtalk.com/#/index)创建好应用后，需要填写回调地址并验证回调地址有效性。若验证不成功，正式应用将不能进行开通，如下图所示。
 
-开发者点击**验证有效性**时，钉钉服务器对回调地址推送**验证回调URL有效性事件**，应用收到推送后需要返回`success`的加密值。完整HTTP回调实现请参考[开发小程序（HTTP回调）](0241-develop-mini-programs-http-callback.md)。
+开发者点击**验证有效性**时，钉钉服务器对回调地址推送**验证回调URL有效性事件**，应用收到推送后需要返回`success`的加密值。完整HTTP回调实现请参考[开发小程序（HTTP回调）](0243-develop-mini-programs-http-callback.md)。
 
 ![回调URL](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/9955600061/p166128.png)
 

@@ -23,11 +23,11 @@ updated_at: "2026-09-02 18:15:00"
 > 为提升事件的使用体验，钉钉针对OA审批相关事件进行了升级。本接口文档将于2023年5月15日迁移至**历史文档（不推荐）**目录下，事件不会下线。
 >
 > - 已接入的用户建议您根据自身实际情况评估是否切换至新事件。
-> - 新接入的用户请直接使用新事件[OA审批事件](0345-oa-approval-event.md)。
+> - 新接入的用户请直接使用新事件[OA审批事件](0347-oa-approval-event.md)。
 
 ## 配置事件回调
 
-第三方企业应用配置事件订阅流程，请参见[事件与回调流程](0329-third-party-enterprise-application-address-book-change-event-subscription-process.md)。
+第三方企业应用配置事件订阅流程，请参见[事件与回调流程](0331-third-party-enterprise-application-address-book-change-event-subscription-process.md)。
 
 ## 审批数据表
 

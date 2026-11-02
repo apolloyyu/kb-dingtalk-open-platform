@@ -22,7 +22,7 @@ updated_at: "2026-09-02 18:13:44"
 >
 > - 本接口后续将维持现有功能且不再新增能力，已接入用户不受影响。
 > - 本接口适用于第三方企业应用配置HTTP回调方式时，当授权企业开通该应用，调用本接口激活授权企业应用。
-> - 由于第三方企业应用的HTTP回调方式已不再支持，推荐使用[配置RDS推送（推荐）](../04-LFcRvVD08N-事件订阅/0332-configure-rds-push-table.md)和[配置SyncHTTP推送（推荐）](../04-LFcRvVD08N-事件订阅/0333-configure-synchttp-push.md)。
+> - 由于第三方企业应用的HTTP回调方式已不再支持，推荐使用[配置RDS推送（推荐）](../04-LFcRvVD08N-事件订阅/0334-configure-rds-push-table.md)和[配置SyncHTTP推送（推荐）](../04-LFcRvVD08N-事件订阅/0335-configure-synchttp-push.md)。
 
 ## 权限
 

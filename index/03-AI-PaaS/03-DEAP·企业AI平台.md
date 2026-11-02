@@ -14,6 +14,6 @@
 - [模型列表](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0010-distribution-of-ai-assistant.md) · 模型管理 › 模型广场 · 2026-07-08
 - [钉钉 AI 模型安全策略说明](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0011-dingtalk-ai-model-security-policy-description-1.md) · 模型管理 › 模型广场 · 2026-07-08
 - [自有模型接入](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0012-create-your-first-ai-assistant-1.md) · 模型管理 › 企业模型 · 2026-07-08
-- [数据看板](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0013-operation-process.md) · 2026-07-08
+- [数据看板](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0013-operation-process.md) · 运营中心 · 2026-07-08
 - [角色授权](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0014-share-dingtalk-ai-assistant.md) · 安全与权限 · 2026-07-08
 - [敏感词管控](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0015-debugging-skill-call-1.md) · 安全与权限 · 2026-07-08

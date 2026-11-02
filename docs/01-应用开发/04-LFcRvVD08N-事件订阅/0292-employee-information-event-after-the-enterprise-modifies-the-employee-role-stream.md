@@ -25,7 +25,7 @@ updated_at: "2026-09-02 18:14:40"
 
 ## 功能描述
 
-企业内部用户变更事件，eventType为user\_role\_change时表示企业修改员工所在角色(包括管理员变更)事件之后的员工信息，字段值来自于[通讯录事件](0343-address-book-events.md)。
+企业内部用户变更事件，eventType为user\_role\_change时表示企业修改员工所在角色(包括管理员变更)事件之后的员工信息，字段值来自于[通讯录事件](0345-address-book-events.md)。
 
 ## 支持应用类型
 

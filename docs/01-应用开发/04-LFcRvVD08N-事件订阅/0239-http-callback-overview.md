@@ -26,8 +26,8 @@ updated_at: "2026-09-02 18:14:27"
 
 ## 使用场景
 
-- 在你的业务对数据的实时性要求较高时。例如：在新员工入职或者离职时，应用需要第一时间变更用户数据，此时就可以订阅[通讯录事件](0343-address-book-events.md)。
-- 管理员开通第三方企业应用时，向应用推送[企业授权开通应用事件](0248-enterprise-authorization-to-open-application-event-history.md)，开发者可以根据推送的corpid进行企业激活和应用开通。
+- 在你的业务对数据的实时性要求较高时。例如：在新员工入职或者离职时，应用需要第一时间变更用户数据，此时就可以订阅[通讯录事件](0345-address-book-events.md)。
+- 管理员开通第三方企业应用时，向应用推送[企业授权开通应用事件](0250-enterprise-authorization-to-open-application-event-history.md)，开发者可以根据推送的corpid进行企业激活和应用开通。
 
 以上只是几个非常简单的使用场景，开发者可以根据不同的事件，进行不同的处理。
 
@@ -36,7 +36,7 @@ updated_at: "2026-09-02 18:14:27"
 HTTP事件回调流程如下图所示：
 
 1. 开发者需要在钉钉开放平台配置HTTP请求接收地址用于接收推送的回调事件。
-2. 钉钉会向应用配置的HTTP地址推送回调事件数据包。使用应用创建时开发者在开发者后台填写的应用加解密key来进行加密，开发者填写的应用Token进行签名。详情请参考[通用回调事件](0240-event-subscription-callback-test-url-event.md)。
+2. 钉钉会向应用配置的HTTP地址推送回调事件数据包。使用应用创建时开发者在开发者后台填写的应用加解密key来进行加密，开发者填写的应用Token进行签名。详情请参考[通用回调事件](0242-event-subscription-callback-test-url-event.md)。
 3. 应用在收到推送后需要进行验证签名和解密，并且返回包含经过加密的字符串的JSON数据。
 4. 调用[注册回调事件](../02-4a8AMF6u2A-服务端-API/1863-register-callback-events.md)接口接收回调事件。
 

@@ -1,31 +1,31 @@
 ---
-title: "企业修改员工部门后员工信息事件"
-source_url: "https://open.dingtalk.com/document/development/employee-information-event-after-the-enterprise-modifies-the-employee-dept-stream"
+title: "企业增加员工事件"
+source_url: "https://open.dingtalk.com/document/development/event-subscription-enterprises-increase-employee-events"
 namespace: "development"
-slug: "employee-information-event-after-the-enterprise-modifies-the-employee-dept-stream"
+slug: "event-subscription-enterprises-increase-employee-events"
 group: "应用开发"
 tab: "事件订阅"
-breadcrumb: "历史文档（不推荐） > Stream推送 > 通讯录事件 > 企业修改员工部门后员工信息事件"
-doc_id: "oNGUXHy8j9"
-updated_at: "2026-09-02 18:14:39"
+breadcrumb: "历史文档（不推荐） > Stream推送 > 通讯录事件 > 企业增加员工事件"
+doc_id: "hGxWCyCR5Q"
+updated_at: "2026-09-02 18:14:37"
 ---
 
-> Source: https://open.dingtalk.com/document/development/employee-information-event-after-the-enterprise-modifies-the-employee-dept-stream
-> Path: 应用开发 / 事件订阅 / 历史文档（不推荐） > Stream推送 > 通讯录事件 > 企业修改员工部门后员工信息事件
-> Updated: 2026-09-02 18:14:39
+> Source: https://open.dingtalk.com/document/development/event-subscription-enterprises-increase-employee-events
+> Path: 应用开发 / 事件订阅 / 历史文档（不推荐） > Stream推送 > 通讯录事件 > 企业增加员工事件
+> Updated: 2026-09-02 18:14:37
 
-# 企业修改员工部门后员工信息事件
+# 企业增加员工事件
 
 ## 事件信息
 
 | 名称 | 值 |
 | --- | --- |
-| 中文名称 | 企业修改员工部门后员工信息事件 |
-| 英文名称 | user\_dept\_change |
+| 中文名称 | 企业增加员工事件 |
+| 英文名称 | user\_add\_org |
 
 ## 功能描述
 
-企业内部用户变更事件，eventType为user\_dept\_change，表示企业修改员工所在部门事件之后的员工信息，字段值来自于[通讯录事件](0343-address-book-events.md) 。
+企业内部用户变更事件，eventType为user\_add\_org，表示企业发生员工增加时的推送的数据，字段值来自于[通讯录事件](0345-address-book-events.md)。
 
 ## 支持应用类型
 
@@ -46,7 +46,7 @@ updated_at: "2026-09-02 18:14:39"
 {
   "eventUnifiedAppId": "bbb381b6-f01xxxxx58daac",
   "eventCorpId": "ding9f50b15bxxxx16741",
-  "eventType": "user_dept_change",
+  "eventType": "user_add_org",
   "eventId": "c7c7120f2c07419**ebdba0318c8",
   "eventBornTime": 1683533823336,
   "data": {

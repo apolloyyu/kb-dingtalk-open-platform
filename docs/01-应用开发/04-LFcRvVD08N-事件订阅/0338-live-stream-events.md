@@ -20,7 +20,7 @@ updated_at: "2026-09-02 18:14:57"
 
 ## 准备工作
 
-- 钉钉会向第三方企业应用推送订阅的回调事件，详情参见[事件与回调流程](0329-third-party-enterprise-application-address-book-change-event-subscription-process.md)。
+- 钉钉会向第三方企业应用推送订阅的回调事件，详情参见[事件与回调流程](0331-third-party-enterprise-application-address-book-change-event-subscription-process.md)。
 
 ## 数据表
 

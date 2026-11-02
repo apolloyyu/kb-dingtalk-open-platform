@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "钉钉 CLI"
 breadcrumb: "新手入门 > 权限管理 > 如何单独管理企业自建Agent的权限"
 doc_id: "Z6AOhsjLM9"
-updated_at: "2026-10-29 11:52:40"
+updated_at: "2026-11-02 15:22:45"
 ---
 
 > Source: https://open.dingtalk.com/document/development/manage-permissions-enterprise
 > Path: 应用开发 / 钉钉 CLI / 新手入门 > 权限管理 > 如何单独管理企业自建Agent的权限
-> Updated: 2026-10-29 11:52:40
+> Updated: 2026-11-02 15:22:45
 
 # 如何单独管理企业自建Agent的权限
 
@@ -72,6 +72,37 @@ updated_at: "2026-10-29 11:52:40"
 - **权限范围管控**：支持按业务分类限定该渠道能用到哪些权限项。
 
 未通过本流程添加、成员以个人身份直接使用 CLI 登录的渠道，统一归入「其他渠道」进行管控。
+
+## **使用企业自建应用 / Agent登录**
+
+需要进行管控的自建应用 / Agent，主要区别在于登录时是否指定应用：
+
+- 未指定应用：按 DWS CLI 默认方式登录，管控归入「其他渠道」；
+- 指定企业自建应用：登录身份按该应用的 `clientId` 绑定，管理员可对该渠道单独设置 DWS 生效范围与人员范围。
+
+### **默认应用 / Agent 登录**
+
+不指定企业自建应用时，按 DWS CLI 默认登录流程完成认证。
+
+```
+dws auth login
+```
+
+### **指定企业自建应用 / Agent 登录**
+
+OAuth 登录：适用于本机可正常打开浏览器并完成授权的环境，执行后按终端提示在浏览器中完成授权。
+
+```
+dws auth login --client-id <clientId> --client-secret <clientSecret>
+```
+
+设备码模式：适用于服务器、远程终端或其他无法直接打开浏览器的环境，执行后按终端提示，在可访问浏览器的设备上完成设备码认证。
+
+```
+dws auth login --client-id <clientId> --client-secret <clientSecret> --device
+```
+
+渠道身份由登录时的 `clientId` 识别，只需在登录时传一次，后续命令无需重复传参，也无需配置其他渠道类参数。
 
 ## **更改事件订阅方式**
 

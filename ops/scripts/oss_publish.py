@@ -105,7 +105,8 @@ class Oss:
         req = urllib.request.Request(self.url(key), headers={"Cache-Control": "no-cache"})
         try:
             with urllib.request.urlopen(req, timeout=5) as r:
-                return json.loads(r.read())
+                m = json.loads(r.read())
+                return m if isinstance(m, dict) else {}
         except urllib.error.HTTPError as e:
             if e.code == 404:
                 return None
@@ -193,7 +194,7 @@ def publish_one(oss, name, git_args, ref, now, log, strip=False):
         log(f"{name}: read manifest failed ({str(e)[:80]}), republish")
         m = None
     if m and m.get("commit") == commit and m.get("sha256") and m.get("format") == FORMAT:
-        if now - float(m.get("checked_at") or 0) < REFRESH_S:
+        if isinstance(m.get("checked_at"), (int, float)) and now - m["checked_at"] < REFRESH_S:
             return "fresh"
         oss.put(mkey, json.dumps({**m, "checked_at": int(now)}).encode(), "application/json", timeout=15)
         return "refreshed"
@@ -259,7 +260,7 @@ def main(argv=None):
             act = publish_one(oss, name, git_args, ref, time.time(), log, strip)
             if act != "absent":
                 done.append(f"{name}={act}")
-        except (RuntimeError, subprocess.SubprocessError, OSError) as e:
+        except Exception as e:  # noqa: BLE001 一个包出错不影响其它包
             bad.append(f"{name}: {str(e)[:120]}")
             log(f"{name}: FAIL {str(e)[:200]}")
     if os.path.exists(logf) and os.path.getsize(logf) > 512_000:  # 只留最近一段

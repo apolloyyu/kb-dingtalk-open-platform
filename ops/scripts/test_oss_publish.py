@@ -40,8 +40,11 @@ class FakeOss:
     def __init__(self, fail_tgz=False):
         self.store, self.puts, self.fail_tgz = {}, [], fail_tgz
 
-    def get_json(self, key):
-        return json.loads(self.store[key]) if key in self.store else None
+    def get_json(self, key):  # 与 Oss.get_json 一致：非对象内容当空清单
+        if key not in self.store:
+            return None
+        m = json.loads(self.store[key])
+        return m if isinstance(m, dict) else {}
 
     def put(self, key, body, ctype, timeout=60):
         if self.fail_tgz and key.endswith(".tar.gz"):
@@ -107,6 +110,17 @@ class PublishTest(unittest.TestCase):
         self.assertEqual(oss.puts[-1], "dingzai-kb/kb-x-main.json")
         m2 = json.loads(oss.store["dingzai-kb/kb-x-main.json"])
         self.assertEqual((m2["sha256"], m2["built_at"], m2["checked_at"]), (m["sha256"], 1000, 1000 + op.REFRESH_S + 1))
+
+    def test_garbled_manifest_is_republished(self):
+        for junk in (b"[1]", b'{"commit": "x", "checked_at": "soon"}'):
+            oss = FakeOss()
+            oss.store["dingzai-kb/kb-x-main.json"] = junk
+            self.assertEqual(self.pub(oss, 1.0), "uploaded:" + self.c1[:7])
+        oss = FakeOss()
+        self.pub(oss, 1.0)
+        m = json.loads(oss.store["dingzai-kb/kb-x-main.json"])
+        oss.store["dingzai-kb/kb-x-main.json"] = json.dumps({**m, "checked_at": "soon"}).encode()
+        self.assertEqual(self.pub(oss, 2.0), "refreshed")  # 同一提交只重写清单，不重传包
 
     def test_same_commit_builds_identical_package(self):
         a, b = FakeOss(), FakeOss()

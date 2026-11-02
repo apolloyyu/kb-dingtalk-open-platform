@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """dkdoc ctx 快路径与证据边界回归测试（不访问网络，不修改生成物）。"""
 import io
+import json
 import os
 import runpy
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -29,6 +31,30 @@ def run(*args, env=None):
                             capture_output=True, text=True, timeout=30)
     check(result.returncode == 0, f"命令失败 {args}: {result.stderr or result.stdout}")
     return result.stdout
+
+
+def check_verbatim_link_fixture():
+    """链接保真由固定输入验证，不绑定上游可能删除的产品文案或购买入口。"""
+    deep = ("dingtalk://dingtalkclient/page/link?url="
+            "https%3A%2F%2Fexample.test%2Fentry%3FcorpId%3D${corpId}"
+            "%26title%3D%25E7%25A4%25BA%25E4%25BE%258B&popup_wnd=true")
+    body = "# Link fixture\n\n[示例入口](" + deep + ")\n\n" + deep + "\n"
+    with tempfile.TemporaryDirectory() as td:
+        for name in ("bin", "docs", "meta"):
+            os.makedirs(os.path.join(td, name))
+        cli = os.path.join(td, "bin", "dkdoc")
+        shutil.copyfile(DKDOC, cli)
+        with open(os.path.join(td, "docs", "link-fixture.md"), "w", encoding="utf-8") as fh:
+            fh.write(body)
+        with open(os.path.join(td, "meta", "documents.jsonl"), "w", encoding="utf-8") as fh:
+            fh.write(json.dumps({"local_path": "docs/link-fixture.md", "slug": "link-fixture"}) + "\n")
+        for keep in ("0", "3"):
+            result = subprocess.run([sys.executable, cli, "cat", "link-fixture"],
+                                    capture_output=True, text=True,
+                                    env=dict(os.environ, KB_IMG_KEEP=keep), timeout=30)
+            check(result.returncode == 0, result.stderr or result.stdout)
+            check(result.stdout == body,
+                  "cat 必须逐字保留深链、编码与 ${corpId}，包含图片裁剪模式")
 
 
 def first_body_heading(output):
@@ -164,9 +190,12 @@ def main():
 
     out = run("ctx", "钉钉服务端 API 的 QPS 和每月调用量限制是多少")
     check("整条逐字照抄，禁止解码成 url= 内嵌地址" in out and "禁止只留文字不给链接" in out, "证据契约缺少链接原样引用纪律")
-    out = run("cat", "how-to-process-api-throttling-on-the-dingtalk-server")
-    check("dingtalk://dingtalkclient/page/link?url=" in out and "${corpId}" in out and "钉钉专业版" in out,
-          "正文中的 dingtalk:// 深链须逐字原样保留(实录:解码成内嵌 html 地址后 ${corpId} 失效)")
+    check_verbatim_link_fixture()
+    slug = "how-to-process-api-throttling-on-the-dingtalk-server"
+    out = run("cat", slug)
+    doc = next(d for d in MOD["load_jsonl"]("meta/documents.jsonl") if d["slug"] == slug)
+    with open(os.path.join(ROOT, doc["local_path"]), encoding="utf-8") as fh:
+        check(out == fh.read(), "限流正文须原样输出当前官方快照，不锁定旧产品名或购买链接")
 
     out = run("cat", "use-containers-to-build-a-data-board-card")
     check(out.count("![") == 8 and "[图略:" not in out, "默认不裁图:8 张图应原样保留")
@@ -313,13 +342,15 @@ def main():
     check(files and files <= heads, f"有命中文件缺source_url行: {sorted(files - heads)[:3]}")
 
     # 多个词放进一个引号：find/api/event/jsapi 拆词查，不能整串子串匹配落空(10-28 线上 46 次多词 find 41 次无命中)。
+    attendance = next(d["local_path"] for d in MOD["load_jsonl"]("meta/documents.jsonl")
+                      if d["slug"] == "attendance-day-statistics-change-event")
     one, many = run("find", "考勤 变更 事件"), run("find", "考勤", "变更", "事件")
-    check("0137-attendance-day-statistics-change-event.md" in one and one == many,
+    check(attendance in one and one == many,
           "find 引号多词未与多参数等价")
     check("attend_user_daily_summary_refresh" in run("event", "考勤 日统计"), "event 引号多词未拆词")
     partial = run("event", "考勤 不存在的词xyz")
     check(partial.splitlines()[0].startswith("考勤"), f"event 多词全中为空时未按命中词数给部分命中: {partial[:80]}")
-    check("0137-attendance-day-statistics-change-event.md" not in run("event", "考勤组"),
+    check(attendance not in run("event", "考勤组"),
           "单词 event 查询行为被改变(不应出现部分命中)")
     # grep：原短语能逐字命中时照旧；逐字无命中才按同一行/同一篇含全部词；正则照旧。
     check("（多词" not in run("grep", "MCP 服务接入 > 概述"), "原短语能逐字命中时 grep 未照旧按短语返回")

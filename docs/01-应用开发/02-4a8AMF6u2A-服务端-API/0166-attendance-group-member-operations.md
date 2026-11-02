@@ -111,20 +111,20 @@ updated_at: "2026-09-23 12:04:26"
 
 步骤二：申请接口权限，申请 `qyapi_attendance_group_manage` 和 `qyapi_attendance_group_read` 权限。
 
-步骤三：获取应用访问凭证[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
+步骤三：获取应用访问凭证[获取企业内部应用的access\_token](1445-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
 
 步骤四：调用考勤相关API：
 
-1. 调用服务端API-[批量新增参与考勤人员](0183-batch-add-employees-under-the-attendance-group.md)接口，实现新增考勤组参与考勤人员。
-2. 调用服务端API-[获取用户考勤组](0182-queries-a-user-attendance-group.md)，获取用户所在考勤组信息。
+1. 调用服务端API-[批量新增参与考勤人员](0189-batch-add-employees-under-the-attendance-group.md)接口，实现新增考勤组参与考勤人员。
+2. 调用服务端API-[获取用户考勤组](0178-queries-a-user-attendance-group.md)，获取用户所在考勤组信息。
 3. 获取考勤组内参与考勤人员信息
 
-   - 调用服务端API-[获取参与考勤人员的userid](0186-query-attendance-group-personnel-information-in-batches.md)接口，获取参与考勤人员的userId信息。
-   - 调用服务端API-[获取参与考勤人员](0185-batch-query-of-attendance-group-members.md#undefined)接口，获取参与考勤人员信息。
-   - 调用服务端API-[查询参与考勤人员列表](0188-batch-query-of-employees-in-the-attendance-group.md)，获取参与考勤人员列表信息。
-4. 调用服务端API-[校验用户是否在当前考勤组](0189-query-members-by-id.md)接口，实现校验某个部门或者员工，是否在某考勤组内。
-5. 调用服务端API-[更新参与考勤人员](0184-attendance-group-member-update.md)接口，实现更新考勤组参与考勤人员。
-6. 调用服务端API-[批量删除参与考勤人员](0187-batch-delete-employees-under-the-attendance-group.md)接口，实现删除参与考勤人员。
+   - 调用服务端API-[获取参与考勤人员的userid](0195-query-attendance-group-personnel-information-in-batches.md)接口，获取参与考勤人员的userId信息。
+   - 调用服务端API-[获取参与考勤人员](0182-batch-query-of-attendance-group-members.md#undefined)接口，获取参与考勤人员信息。
+   - 调用服务端API-[查询参与考勤人员列表](0191-batch-query-of-employees-in-the-attendance-group.md)，获取参与考勤人员列表信息。
+4. 调用服务端API-[校验用户是否在当前考勤组](0196-query-members-by-id.md)接口，实现校验某个部门或者员工，是否在某考勤组内。
+5. 调用服务端API-[更新参与考勤人员](0181-attendance-group-member-update.md)接口，实现更新考勤组参与考勤人员。
+6. 调用服务端API-[批量删除参与考勤人员](0190-batch-delete-employees-under-the-attendance-group.md)接口，实现删除参与考勤人员。
 
 ## 实施步骤
 
@@ -153,7 +153,7 @@ updated_at: "2026-09-23 12:04:26"
 
 ### 步骤三：获取访问凭证（access\_token）
 
-根据步骤一中 的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)。
+根据步骤一中 的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的access\_token](1445-obtain-orgapp-token.md)。
 
 ```
 public void getAccessToken() throws ApiException {
@@ -179,7 +179,7 @@ public void getAccessToken() throws ApiException {
 >
 > 考勤组管理的操作流程，详情参见[考勤规则配置：考勤组的批量创建与动态调整](0165-operation-related-to-attendance-group.md)。
 
-1. **批量新增参与考勤人员**：调用服务端API-[批量新增参与考勤人员](0183-batch-add-employees-under-the-attendance-group.md)接口，实现新增考勤组参与考勤人员。
+1. **批量新增参与考勤人员**：调用服务端API-[批量新增参与考勤人员](0189-batch-add-employees-under-the-attendance-group.md)接口，实现新增考勤组参与考勤人员。
 
    ```
    public void  addAttendanceMembers() throws ApiException {
@@ -193,7 +193,7 @@ public void getAccessToken() throws ApiException {
            System.out.println(rsp.getBody());
        }
    ```
-2. **获取用户所在考勤组**：调用服务端API-[获取用户考勤组](0182-queries-a-user-attendance-group.md)，获取用户所在考勤组信息。
+2. **获取用户所在考勤组**：调用服务端API-[获取用户考勤组](0178-queries-a-user-attendance-group.md)，获取用户所在考勤组信息。
 
    ```
     public void attendanceUserGroup() throws ApiException {
@@ -210,13 +210,13 @@ public void getAccessToken() throws ApiException {
 
    | 接口列表 | 张三userid | 测试部门ID | 测试部门员工userId |
    | --- | --- | --- | --- |
-   | [获取参与考勤人员的userid](0186-query-attendance-group-personnel-information-in-batches.md) | ✅ | ❎ | ✅ |
-   | [获取参与考勤人员](0185-batch-query-of-attendance-group-members.md) | ✅ | ✅ | ❎ |
-   | [查询参与考勤人员列表](0188-batch-query-of-employees-in-the-attendance-group.md) | ✅ | ❎ | ❎ |
+   | [获取参与考勤人员的userid](0195-query-attendance-group-personnel-information-in-batches.md) | ✅ | ❎ | ✅ |
+   | [获取参与考勤人员](0182-batch-query-of-attendance-group-members.md) | ✅ | ✅ | ❎ |
+   | [查询参与考勤人员列表](0191-batch-query-of-employees-in-the-attendance-group.md) | ✅ | ❎ | ❎ |
 
    **注**：✅代表可以获取到 ❎代表获取不到
 
-   - **获取参与考勤人员的userId**：调用服务端API-[获取参与考勤人员的userid](0186-query-attendance-group-personnel-information-in-batches.md)接口，获取参与考勤人员的userId信息。
+   - **获取参与考勤人员的userId**：调用服务端API-[获取参与考勤人员的userid](0195-query-attendance-group-personnel-information-in-batches.md)接口，获取参与考勤人员的userId信息。
 
      ```
       public void attendanceGroupMemberUsers() throws ApiException {
@@ -229,7 +229,7 @@ public void getAccessToken() throws ApiException {
              System.out.println(rsp.getBody());
          }
      ```
-   - **获取参与考勤人员信息**：调用服务端API-[获取参与考勤人员](0185-batch-query-of-attendance-group-members.md)接口，获取参与考勤人员信息。
+   - **获取参与考勤人员信息**：调用服务端API-[获取参与考勤人员](0182-batch-query-of-attendance-group-members.md)接口，获取参与考勤人员信息。
 
      ```
       public void groupMemberList() throws ApiException {
@@ -242,7 +242,7 @@ public void getAccessToken() throws ApiException {
              System.out.println(rsp.getBody());
          }
      ```
-   - **查询参与考勤人员列表（支持分页）：**调用服务端API-[查询参与考勤人员列表](0188-batch-query-of-employees-in-the-attendance-group.md)，获取参与考勤人员列表信息。
+   - **查询参与考勤人员列表（支持分页）：**调用服务端API-[查询参与考勤人员列表](0191-batch-query-of-employees-in-the-attendance-group.md)，获取参与考勤人员列表信息。
 
      ```
        public void groupUsersQuery() throws ApiException {
@@ -256,7 +256,7 @@ public void getAccessToken() throws ApiException {
              System.out.println(rsp.getBody());
          }
      ```
-4. **校验用户是否在当前考勤组**：调用服务端API-[校验用户是否在当前考勤组](0189-query-members-by-id.md)接口，确认某员工是否属于指定考勤组。
+4. **校验用户是否在当前考勤组**：调用服务端API-[校验用户是否在当前考勤组](0196-query-members-by-id.md)接口，确认某员工是否属于指定考勤组。
 
    ```
    public void checkGroupMember() throws ApiException {
@@ -270,7 +270,7 @@ public void getAccessToken() throws ApiException {
            System.out.println(rsp.getBody());
        }
    ```
-5. **更新参与考勤人员**：调用服务端API-[更新参与考勤人员](0184-attendance-group-member-update.md)接口，调整考勤组成员名单（添加/移除员工或部门）。
+5. **更新参与考勤人员**：调用服务端API-[更新参与考勤人员](0181-attendance-group-member-update.md)接口，调整考勤组成员名单（添加/移除员工或部门）。
 
    ```
     public void updateGroupMember() throws ApiException {
@@ -291,7 +291,7 @@ public void getAccessToken() throws ApiException {
            System.out.println(rsp.getBody());
        }
    ```
-6. **批量删除参与考勤人员**：调用服务端API-[批量删除参与考勤人员](0187-batch-delete-employees-under-the-attendance-group.md)接口，从考勤组中移除离职或调岗员工。
+6. **批量删除参与考勤人员**：调用服务端API-[批量删除参与考勤人员](0190-batch-delete-employees-under-the-attendance-group.md)接口，从考勤组中移除离职或调岗员工。
 
    ```
     public void deleteGroupMember() throws ApiException {
@@ -318,9 +318,9 @@ public void getAccessToken() throws ApiException {
 
   A：三个接口针对不同成员类型场景：
 
-  - [获取参与考勤人员的userid](0186-query-attendance-group-personnel-information-in-batches.md)：仅返回userId列表，适合只需判断成员是否存在于考勤组的场景。
-  - [获取参与考勤人员](0185-batch-query-of-attendance-group-members.md)：返回成员详细信息（姓名、部门等），适合需要展示成员详情的场景。
-  - [查询参与考勤人员列表](0188-batch-query-of-employees-in-the-attendance-group.md)：支持分页查询，适合考勤组成员数量较多时的分批获取场景。
+  - [获取参与考勤人员的userid](0195-query-attendance-group-personnel-information-in-batches.md)：仅返回userId列表，适合只需判断成员是否存在于考勤组的场景。
+  - [获取参与考勤人员](0182-batch-query-of-attendance-group-members.md)：返回成员详细信息（姓名、部门等），适合需要展示成员详情的场景。
+  - [查询参与考勤人员列表](0191-batch-query-of-employees-in-the-attendance-group.md)：支持分页查询，适合考勤组成员数量较多时的分批获取场景。
 
   当考勤组包含部门成员时，需注意：若查询个人userId，可获取该员工信息；若查询部门ID，则无法直接获取部门下员工详情，需额外调用部门成员查询接口。
 - **Q2：批量新增成员时，部分成员失败如何处理？**
@@ -335,7 +335,7 @@ public void getAccessToken() throws ApiException {
 
   A：建议采用以下步骤确保彻底移除：
 
-  1. OA离职审批通过后，调用[获取用户考勤组](0182-queries-a-user-attendance-group.md)接口，获取该员工所在的所有考勤组ID。
-  2. 遍历所有考勤组，调用[批量删除参与考勤人员](0187-batch-delete-employees-under-the-attendance-group.md)接口移除该员工。
-  3. 调用[校验用户是否在当前考勤组](0189-query-members-by-id.md)接口，确认该员工已从所有考勤组中移除。
+  1. OA离职审批通过后，调用[获取用户考勤组](0178-queries-a-user-attendance-group.md)接口，获取该员工所在的所有考勤组ID。
+  2. 遍历所有考勤组，调用[批量删除参与考勤人员](0190-batch-delete-employees-under-the-attendance-group.md)接口移除该员工。
+  3. 调用[校验用户是否在当前考勤组](0196-query-members-by-id.md)接口，确认该员工已从所有考勤组中移除。
   4. 记录操作日志，包含考勤组ID列表、操作时间、操作人等信息。

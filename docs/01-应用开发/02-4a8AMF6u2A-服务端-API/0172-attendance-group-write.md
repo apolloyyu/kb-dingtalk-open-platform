@@ -31,7 +31,7 @@ updated_at: "2026-05-27 13:09:41"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | 4c9d5xxxx | 调用该接口的应用凭证，通过[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)接口获取。 |
+| access\_token | String | 是 | 4c9d5xxxx | 调用该接口的应用凭证，通过[获取企业内部应用的access\_token](1445-obtain-orgapp-token.md)接口获取。 |
 
 ### **请求体**
 
@@ -58,7 +58,7 @@ updated_at: "2026-05-27 13:09:41"
 | check\_need\_healthy\_code | Boolean | 否 | true | 打卡是否需要健康码：   - **true**：开启 - **false**（默认）：关闭 |
 | enable\_camera\_check | Boolean | 否 | true | 是否开启拍照打卡。   - **true**：开启 - **false**（默认）：关闭 |
 | shift\_vo\_list | List<TopShiftVo> | 否 |  | 班次相关配置信息。 |
-| id | Number | 否 | 123 | 班次ID，可通过[获取班次摘要信息](0205-enterprise-shift-query-in-batches.md)接口获取id参数值。 |
+| id | Number | 否 | 123 | 班次ID，可通过[获取班次摘要信息](0207-enterprise-shift-query-in-batches.md)接口获取id参数值。 |
 | enable\_outside\_check | Boolean | 否 | true | 是否可以外勤打卡。   - **true**（默认）：允许 - **false**：不允许 |
 | members | List<TopMemberVo> | 是 |  | 考勤组成员相关设置信息。 |
 | role | String | 是 | Attendance | 角色，固定值Attendance。 |
@@ -70,7 +70,7 @@ updated_at: "2026-05-27 13:09:41"
 | enable\_next\_day | Boolean | 否 | false | 是否第二天生效。   - **true**：是 - **false**：否 |
 | manager\_list | String[] | 否 | ["userId1","userId2"] | 考勤组子管理员userid列表。 |
 | workday\_class\_list | Number[] | 否 | [0,12,12,12,12,12,0] | 周班次列表。  **[!NOTE]**   - 固定班制必填，0表示休息。 - 数组内的值，从左到右依次代表周日到周六，每日的排班情况。 |
-| default\_class\_id | Number | 否 | 1234 | 默认班次ID。  **[!NOTE]**  固定班制必填，可通过[获取班次摘要信息](0205-enterprise-shift-query-in-batches.md)接口获取id参数值。 |
+| default\_class\_id | Number | 否 | 1234 | 默认班次ID。  **[!NOTE]**  固定班制必填，可通过[获取班次摘要信息](0207-enterprise-shift-query-in-batches.md)接口获取id参数值。 |
 | offset | Number | 否 | 500 | 考勤范围。 |
 | resource\_permission\_map | TopGroupManageRolePermissionVo | 否 |  | 子管理员权限范围。   - **w**：可管理 - **r**：可读 |
 | schedule | String | 否 | w | 员工排班。 |
@@ -91,7 +91,7 @@ updated_at: "2026-05-27 13:09:41"
 | disable\_check\_when\_rest | Boolean | 否 | false | 休息日打卡是否需审批：   - **true**：需要 - **false**：不需要 |
 | enable\_position\_ble | Boolean | 否 | false | 是否启用蓝牙定位。   - **true**：启用 - **false**：不启用 |
 | ble\_device\_list | List<TopAtBleDeviceVO> | 否 |  | 蓝牙打卡相关配置信息。 |
-| device\_id | Number | 否 | 1311089987 | 设备ID，调用[查询员工智能考勤机列表](0223-query-the-list-of-employee-intelligent-attendance-machines.md)获取deviceid参数值。 |
+| device\_id | Number | 否 | 1311089987 | 设备ID，调用[查询员工智能考勤机列表](0226-query-the-list-of-employee-intelligent-attendance-machines.md)获取deviceid参数值。 |
 
 ### **请求示例**
 

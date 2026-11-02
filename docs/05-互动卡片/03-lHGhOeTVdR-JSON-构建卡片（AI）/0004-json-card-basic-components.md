@@ -7,12 +7,12 @@ group: "互动卡片"
 tab: "JSON 构建卡片（AI）"
 breadcrumb: "构建卡片结构 > 组件 > 基础组件"
 doc_id: "aOjtrLc9jo"
-updated_at: "2026-09-30 09:14:27"
+updated_at: "2026-10-29 11:52:18"
 ---
 
 > Source: https://open.dingtalk.com/document/development/json-card-basic-components
 > Path: 互动卡片 / JSON 构建卡片（AI） / 构建卡片结构 > 组件 > 基础组件
-> Updated: 2026-09-30 09:14:27
+> Updated: 2026-10-29 11:52:18
 
 # 基础组件
 
@@ -86,7 +86,8 @@ Markdown，支持标题、列表、代码与引用。
 
 ### **注意事项**
 
-- 当前协议把 `<a atId>` 描述为纯文本降级，不保证可以点击提及，标签内只写显示名称。
+- 标签语法与投递参数需分别理解：属性表中的 `openDingTalkId`、`atIdList` 和解析限制来自当前协议说明，不能直接套用于下述机器人 OpenAPI。标签内只写显示名称，不自行添加 @。
+- [机器人发送卡片](0020-robot-send-aicard.md)：使用 `staffId` 时，正文 `atId` 填同一 `staffId`，创建请求传 `userIdType: 1` 和 `cardAtUserIds`；正文 @所有人 写 `<a atId="all">所有人</a>`，同时传 `atAll: true`。正文提及不等于消息级提醒。
 - 不相关的主题拆到不同的 `Column` 或 `Card` 分组中，不要全部塞进一个 Markdown。
 
 ### JSON 结构

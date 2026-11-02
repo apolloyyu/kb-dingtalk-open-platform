@@ -45,7 +45,7 @@ updated_at: "2026-10-09 14:34:35"
 | **术语** | **含义** |
 | --- | --- |
 | `bizId` | 卡片业务 ID，发送时返回，更新时用于定位卡片。 |
-| `flowStatus` | 卡片的流转状态，共 9 个取值，详见 [DWS 发送与更新](../03-lHGhOeTVdR-JSON-构建卡片（AI）/0017-json-card-dws-send-and-update.md)。 |
+| `flowStatus` | 卡片的流转状态，共 9 个取值，详见 [DWS 发送与更新](../03-lHGhOeTVdR-JSON-构建卡片（AI）/0019-json-card-dws-send-and-update.md)。 |
 | 宿主函数 | 即宿主动作，详见下方**协议术语**。 |
 
 ## JSON 构建术语

@@ -31,14 +31,14 @@ updated_at: "2026-05-27 13:09:44"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | 4c9ebd2xxxx | 调用该接口的应用凭证，通过[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)接口获取。 |
+| access\_token | String | 是 | 4c9ebd2xxxx | 调用该接口的应用凭证，通过[获取企业内部应用的access\_token](1445-obtain-orgapp-token.md)接口获取。 |
 
 ### **请求体**
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
 | op\_userid | String | 否 | user01 | 操作人userId。 |
-| group\_key | String | 是 | 0151E02xxxx | 考勤组ID。  **[!NOTE]**  如果你使用的考勤组标识是group\_id，可以调用[groupId转换为groupKey](0179-groupid-to-groupkey.md)接口将group\_id转换为group\_key。 |
+| group\_key | String | 是 | 0151E02xxxx | 考勤组ID。  **[!NOTE]**  如果你使用的考勤组标识是group\_id，可以调用[groupId转换为groupKey](0193-groupid-to-groupkey.md)接口将group\_id转换为group\_key。 |
 
 ### **请求示例**
 

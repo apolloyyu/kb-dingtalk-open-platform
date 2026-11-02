@@ -114,19 +114,19 @@ updated_at: "2026-09-23 12:04:28"
 
 步骤二：申请接口权限，申请考勤相关接口权限。
 
-步骤三：获取应用访问凭证[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
+步骤三：获取应用访问凭证[获取企业内部应用的access\_token](1445-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
 
 步骤四：调用考勤相关API：
 
-1. 员工在自有考勤系统提交补卡申请时，根据员工选择的补卡日期调用服务端API-[查询成员排班信息](0207-query-scheduling-for-a-day.md)接口，获取对应日期该员工的排班打卡时间点。
+1. 员工在自有考勤系统提交补卡申请时，根据员工选择的补卡日期调用服务端API-[查询成员排班信息](0208-query-scheduling-for-a-day.md)接口，获取对应日期该员工的排班打卡时间点。
 2. 员工使用自有假勤系统发起补卡审批单，审批结果不同，触发的操作不同。
 
-   - 如果审批通过，调用服务端API-[通知补卡通过](0230-make-up-the-card-after-approval.md)接口，提交的补卡信息会同步到钉钉考勤应用，考勤状态从缺卡修改为补卡通过。
+   - 如果审批通过，调用服务端API-[通知补卡通过](0231-make-up-the-card-after-approval.md)接口，提交的补卡信息会同步到钉钉考勤应用，考勤状态从缺卡修改为补卡通过。
 
      > **[!NOTE]**
      >
      > 本步骤不会在钉钉中产生补卡审批单。
-   - 如果员工撤销了补卡申请，可以调用服务端API-[通知审批撤销](0229-notify-the-attendance-to-modify-the-punch-result-when-the.md)接口，撤销已同步到钉钉的补卡审申请，考勤状态恢复到修改之前的打卡状态。
+   - 如果员工撤销了补卡申请，可以调用服务端API-[通知审批撤销](0230-notify-the-attendance-to-modify-the-punch-result-when-the.md)接口，撤销已同步到钉钉的补卡审申请，考勤状态恢复到修改之前的打卡状态。
 
 ## 实施步骤
 
@@ -155,7 +155,7 @@ updated_at: "2026-09-23 12:04:28"
 
 ### 步骤三：获取访问凭证（access\_token）
 
-根据步骤一中 的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)。
+根据步骤一中 的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的access\_token](1445-obtain-orgapp-token.md)。
 
 ```
 public void getAccessToken() throws ApiException {
@@ -177,7 +177,7 @@ public void getAccessToken() throws ApiException {
 
 ### **步骤四：核心API调用**
 
-1. **查询成员排班信息**：员工在自有考勤系统提交补卡申请时，根据员工选择的补卡日期调用服务端API-[查询成员排班信息](0207-query-scheduling-for-a-day.md)接口，获取对应日期该员工的排班打卡时间点。
+1. **查询成员排班信息**：员工在自有考勤系统提交补卡申请时，根据员工选择的补卡日期调用服务端API-[查询成员排班信息](0208-query-scheduling-for-a-day.md)接口，获取对应日期该员工的排班打卡时间点。
 
    ```
    public void scheduleInfo() throws ApiException {
@@ -190,7 +190,7 @@ public void getAccessToken() throws ApiException {
        System.out.println(rsp.getBody());
    }
    ```
-2. **通知补卡通过**：员工使用自有假勤系统发起补卡审批单，如果审批通过，调用服务端API-[通知补卡通过](0230-make-up-the-card-after-approval.md)接口，提交的补卡信息会同步到钉钉考勤应用，考勤状态从缺卡修改为补卡通过。
+2. **通知补卡通过**：员工使用自有假勤系统发起补卡审批单，如果审批通过，调用服务端API-[通知补卡通过](0231-make-up-the-card-after-approval.md)接口，提交的补卡信息会同步到钉钉考勤应用，考勤状态从缺卡修改为补卡通过。
 
    > **[!NOTE]**
    >
@@ -225,7 +225,7 @@ public void getAccessToken() throws ApiException {
    | approveId | String | 是 | 审批单ID，自定义值。 |
    | jumpUrl | String | 否 | 审批单跳转地址。 |
    | tagName | String | 否 | 审批单名称。 |
-3. **通知审批撤销**：如果员工撤销了补卡申请，可以调用服务端API-[通知审批撤销](0229-notify-the-attendance-to-modify-the-punch-result-when-the.md)接口，撤销已同步到钉钉的补卡审申请，考勤状态恢复到修改之前的打卡状态。
+3. **通知审批撤销**：如果员工撤销了补卡申请，可以调用服务端API-[通知审批撤销](0230-notify-the-attendance-to-modify-the-punch-result-when-the.md)接口，撤销已同步到钉钉的补卡审申请，考勤状态恢复到修改之前的打卡状态。
 
    ```
    public void approveCancel() throws ApiException {

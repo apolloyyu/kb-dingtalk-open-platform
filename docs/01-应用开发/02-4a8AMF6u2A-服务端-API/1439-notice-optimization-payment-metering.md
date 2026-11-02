@@ -35,7 +35,7 @@ updated_at: "2026-01-22 20:28:02"
 
 我们深知此次调整可能需要您投入时间进行适配，并在此期间提供不间断服务和预警支持。若预估用量将超出免费额度，您可以通过以下方式获取更高额度：
 
-**方案一：**如需更高调用次数，可独立购买【[企业应用开发增购包](dingtalk://dingtalkclient/page/link?url=https%3A%2F%2Fn.dingtalk.com%2Fdingding%2Fdd-pro-composite-order%2Fpc%2Findex.html%3Fpopup_wnd%3Dtrue%26dd_tab%3Dtrue%26width%3D900%26height%3D600%26title%3D%25E9%2592%2589%25E9%2592%2589%25E6%2595%25B0%25E5%25AD%2597%25E8%25B5%2584%25E4%25BA%25A7%26articleCode%3DDT_GOODS_dingtalkmemberplus%26channel%3Dopenpf_web_devdoc%26corpId%3D${corpId}%26accessoryProduct%3DpaasWithConnector%26tabKey%3DDT_GOODS_dingtalkmemberplus&popup_wnd=true&height=600&width=900)】，更多信息可查看[计费模型](1431-dingtalk-application-development-platform-billing-model.md)
+**方案一：**如需更高调用次数，可独立购买【[企业应用开发增购包](dingtalk://dingtalkclient/page/link?url=https%3A%2F%2Fn.dingtalk.com%2Fdingding%2Fdd-pro-composite-order%2Fpc%2Findex.html%3Fpopup_wnd%3Dtrue%26dd_tab%3Dtrue%26width%3D900%26height%3D600%26title%3D%25E9%2592%2589%25E9%2592%2589%25E6%2595%25B0%25E5%25AD%2597%25E8%25B5%2584%25E4%25BA%25A7%26articleCode%3DDT_GOODS_dingtalkmemberplus%26channel%3Dopenpf_web_devdoc%26corpId%3D${corpId}%26accessoryProduct%3DpaasWithConnector%26tabKey%3DDT_GOODS_dingtalkmemberplus&popup_wnd=true&height=600&width=900)】，更多信息可查看[计费模型](1432-dingtalk-application-development-platform-billing-model.md)
 
 **方案二：**升级至【钉钉专业版】或【钉钉专属版】，可在套餐内获得更高的免费调用额度及更多增值权益。
 

@@ -118,11 +118,11 @@ updated_at: "2026-09-23 12:04:29"
 
 步骤二：本示例无需申请接口权限。
 
-步骤三：获取应用访问凭证[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
+步骤三：获取应用访问凭证[获取企业内部应用的access\_token](1445-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
 
 步骤四：相关调用流程：
 
-1. 调用考勤服务端API-[批量获取考勤组详情](0181-batch-obtain-attendance-group-details.md)接口，获取企业考勤组内的排班上下班时间。
+1. 调用考勤服务端API-[批量获取考勤组详情](0188-batch-obtain-attendance-group-details.md)接口，获取企业考勤组内的排班上下班时间。
 2. 获取员工考勤打卡情况，需要注册企业考勤事件回调，参考文档[配置 Stream 推送（推荐）](../04-LFcRvVD08N-事件订阅/0003-configure-stream-push.md#151be9e66238j)，并订阅[考勤事件](../04-LFcRvVD08N-事件订阅/0129-employee-clock-in-event.md)。
 3. 实现智能状态判定逻辑：根据实时推送的打卡信息（userId、groupId、checkTime）与缓存的考勤组排班时间对比，判定打卡状态（Normal/Late/SeriousLate/Absent）。
 4. 提供标准化API接口供大屏系统调用，支持按部门、考勤组、时间段等维度查询实时在岗数据。
@@ -142,7 +142,7 @@ updated_at: "2026-09-23 12:04:29"
 
 ### **步骤二**：获取访问凭证（access\_token）
 
-根据步骤一中 的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)。
+根据步骤一中 的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的access\_token](1445-obtain-orgapp-token.md)。
 
 ```
 public void getAccessToken() throws ApiException {
@@ -164,7 +164,7 @@ public void getAccessToken() throws ApiException {
 
 ### **步骤三：核心API调用**
 
-1. **批量获取考勤组详情**：调用考勤服务端API-[批量获取考勤组详情](0181-batch-obtain-attendance-group-details.md)接口，获取企业考勤组内的排班上下班时间。
+1. **批量获取考勤组详情**：调用考勤服务端API-[批量获取考勤组详情](0188-batch-obtain-attendance-group-details.md)接口，获取企业考勤组内的排班上下班时间。
 
    ```
    public void batchGetAttendanceGroups() throws ApiException {

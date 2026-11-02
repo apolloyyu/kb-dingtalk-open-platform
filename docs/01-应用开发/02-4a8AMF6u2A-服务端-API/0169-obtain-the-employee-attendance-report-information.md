@@ -121,13 +121,13 @@ updated_at: "2026-09-23 12:04:30"
 
 1. 步骤一：获取应用凭证信息，获取应用 Client ID 和 Client Secret。
 
-   步骤二：获取应用访问凭证[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
+   步骤二：获取应用访问凭证[获取企业内部应用的access\_token](1445-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
 
    步骤三：调用考勤相关API：
 
-   1. 调用服务端API-[查询是否启用智能统计报表](0217-determine-whether-to-enable-attendance-intelligent-report.md)接口，确认是否已经开启智能统计。
-   2. 调用服务端API-[获取考勤报表列定义](0220-queries-the-enterprise-attendance-report-column.md)接口，获取考勤报表列`ID`。
-   3. 根据考勤报表列`ID`，调用服务端API-[获取考勤报表列值](0221-queries-the-column-value-of-the-attendance-report.md)接口，实现获取列定义对应的值的信息。
+   1. 调用服务端API-[查询是否启用智能统计报表](0222-determine-whether-to-enable-attendance-intelligent-report.md)接口，确认是否已经开启智能统计。
+   2. 调用服务端API-[获取考勤报表列定义](0221-queries-the-enterprise-attendance-report-column.md)接口，获取考勤报表列`ID`。
+   3. 根据考勤报表列`ID`，调用服务端API-[获取考勤报表列值](0220-queries-the-column-value-of-the-attendance-report.md)接口，实现获取列定义对应的值的信息。
    4. 对按天粒度的原始数据进行本地汇总计算，生成月度/季度/年度报表。
 
 ## 实施步骤
@@ -145,7 +145,7 @@ updated_at: "2026-09-23 12:04:30"
 
 ### **步骤二**：获取访问凭证（access\_token）
 
-根据步骤一中 的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)。
+根据步骤一中 的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的access\_token](1445-obtain-orgapp-token.md)。
 
 ```
 public void getAccessToken() throws ApiException {
@@ -167,7 +167,7 @@ public void getAccessToken() throws ApiException {
 
 ### **步骤三：核心API调用**
 
-1. **查询是否启用智能统计报表**：调用服务端API-[查询是否启用智能统计报表](0217-determine-whether-to-enable-attendance-intelligent-report.md)接口，确认企业是否已开启智能统计功能。
+1. **查询是否启用智能统计报表**：调用服务端API-[查询是否启用智能统计报表](0222-determine-whether-to-enable-attendance-intelligent-report.md)接口，确认企业是否已开启智能统计功能。
 
    > **[!NOTE]**
    >
@@ -182,7 +182,7 @@ public void getAccessToken() throws ApiException {
       // 解析响应，确认enabled字段是否为true
    }
    ```
-2. **获取考勤报表列定义**：调用服务端API-[获取考勤报表列定义](0220-queries-the-enterprise-attendance-report-column.md)接口，获取考勤报表所有可用列的ID与名称。
+2. **获取考勤报表列定义**：调用服务端API-[获取考勤报表列定义](0221-queries-the-enterprise-attendance-report-column.md)接口，获取考勤报表所有可用列的ID与名称。
 
    > **[!NOTE]**
    >
@@ -196,7 +196,7 @@ public void getAccessToken() throws ApiException {
        System.out.println(rsp.getBody());
    }
    ```
-3. **获取考勤报表列值（按天粒度）**：根据考勤报表列ID、用户ID、日期，调用服务端API-[获取考勤报表列值](0221-queries-the-column-value-of-the-attendance-report.md)接口，实现获取列定义对应的值的信息。
+3. **获取考勤报表列值（按天粒度）**：根据考勤报表列ID、用户ID、日期，调用服务端API-[获取考勤报表列值](0220-queries-the-column-value-of-the-attendance-report.md)接口，实现获取列定义对应的值的信息。
 
    ```
     public void attendanceColumnsValue() throws ApiException {

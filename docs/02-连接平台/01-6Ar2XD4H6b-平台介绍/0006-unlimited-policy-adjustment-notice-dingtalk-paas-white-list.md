@@ -5,13 +5,13 @@ namespace: "connection"
 slug: "unlimited-policy-adjustment-notice-dingtalk-paas-white-list"
 group: "连接平台"
 tab: "平台介绍"
-breadcrumb: "平台公告 > 钉钉PaaS“白名单”的不限量额度策略调整通知"
+breadcrumb: "历史文档（不推荐） > 钉钉PaaS“白名单”的不限量额度策略调整通知"
 doc_id: "iYmP1Oudr1"
 updated_at: "2026-01-22 21:25:24"
 ---
 
 > Source: https://open.dingtalk.com/document/connection/unlimited-policy-adjustment-notice-dingtalk-paas-white-list
-> Path: 连接平台 / 平台介绍 / 平台公告 > 钉钉PaaS“白名单”的不限量额度策略调整通知
+> Path: 连接平台 / 平台介绍 / 历史文档（不推荐） > 钉钉PaaS“白名单”的不限量额度策略调整通知
 > Updated: 2026-01-22 21:25:24
 
 # 钉钉PaaS“白名单”的不限量额度策略调整通知

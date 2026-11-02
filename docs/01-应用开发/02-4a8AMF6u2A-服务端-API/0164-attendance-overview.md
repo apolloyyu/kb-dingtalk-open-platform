@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "考勤 > 概述"
 doc_id: "LEAUqHYt7C"
-updated_at: "2026-10-19 09:11:18"
+updated_at: "2026-10-28 15:14:07"
 ---
 
 > Source: https://open.dingtalk.com/document/development/attendance-overview
 > Path: 应用开发 / 服务端 API / 考勤 > 概述
-> Updated: 2026-10-19 09:11:18
+> Updated: 2026-10-28 15:14:07
 
 # 概述
 
@@ -52,119 +52,120 @@ updated_at: "2026-10-19 09:11:18"
 | [创建考勤组](0172-attendance-group-write.md) | 调用本接口创建考勤组。 | 旧版 |
 | [更新考勤组](0173-attendance-group-update-interface.md) | 调用本接口根据考勤组id更新考勤组信息。 | 旧版 |
 | [删除考勤组](0174-delete-attendance-group.md) | 调用本接口批量删除考勤组。 | 旧版 |
-| [搜索考勤组摘要](0175-attendance-group-search.md) | 调用本接口按考勤组名称模糊搜索，获取考勤组摘要信息。 | 旧版 |
-| [获取考勤组详情](0176-query-a-single-attendance-group.md) | 调用本接口根据考勤组ID获取考勤组详情。 | 旧版 |
-| [根据groupKey查询考勤组信息](0177-queries-attendance-group-information-by-id.md) | 调用本接口根据考勤组id查询考勤组信息。 | 旧版 |
-| [groupKey转换为groupId](0178-convert-groupkey-to-groupid.md) | 调用本接口将考勤组的groupKey转换为groupId。 | 旧版 |
-| [groupId转换为groupKey](0179-groupid-to-groupkey.md) | 调用本接口将考勤组的groupId转换为groupKey。 | 旧版 |
-| [批量获取考勤组摘要](0180-batch-query-of-simple-information-of-the-attendance-group.md) | 调用本接口分页获取企业内所有考勤组摘要信息。 | 旧版 |
-| [批量获取考勤组详情](0181-batch-obtain-attendance-group-details.md) | 调用本接口查询所有的考勤组详情信息。 | 旧版 |
-| [获取用户考勤组](0182-queries-a-user-attendance-group.md) | 调用本接口获取员工的考勤组信息。 | 旧版 |
-| [批量新增参与考勤人员](0183-batch-add-employees-under-the-attendance-group.md) | 调用本接口在指定的考勤组下批量新增考勤组成员。 | 旧版 |
-| [更新参与考勤人员](0184-attendance-group-member-update.md) | 调用本接口更新考勤组成员，支持新增或删除人员、部门、无需考勤人员。 | 旧版 |
-| [获取参与考勤人员](0185-batch-query-of-attendance-group-members.md) | 调用本接口通过操作人的userid和考勤组id获取当前考勤组下的成员信息。 | 旧版 |
-| [获取参与考勤人员的userid](0186-query-attendance-group-personnel-information-in-batches.md) | 调用本接口分页获取某个考勤组下的所有员工的userId。 | 旧版 |
-| [批量删除参与考勤人员](0187-batch-delete-employees-under-the-attendance-group.md) | 调用本接口批量删除指定考勤组下的考勤组成员。 | 旧版 |
-| [查询参与考勤人员列表](0188-batch-query-of-employees-in-the-attendance-group.md) | 调用本接口查询指定考勤组下的员工列表。 | 旧版 |
-| [校验用户是否在当前考勤组](0189-query-members-by-id.md) | 调用本接口校验某个部门或者员工是否属于某个考勤组，返回值为属于这个考勤组的部门ID或者员工ID。 | 旧版 |
-| [批量新增Wi-Fi信息](0190-batch-add-wifi-under-attendance-group.md) | 调用本接口为指定考勤组批量新增wifi信息。 | 旧版 |
-| [批量查询Wi-Fi信息](0192-batch-query-wifi-under-attendance-group.md) | 调用本接口批量查询指定考勤组下的wifi列表信息。 | 旧版 |
-| [批量移除Wi-Fi信息](0191-batch-remove-wifi-under-attendance-group.md) | 调用本接口批量移除指定考勤组的wifi信息。 | 旧版 |
-| [批量新增地点](0193-atch-add-position-under-attendance-group.md) | 调用本接口在指定考勤组下批量新增position。 | 旧版 |
-| [批量查询地点](0195-batch-query-position-under-attendance-group.md) | 调用本接口批量查询指定考勤组下的position列表信息。 | 旧版 |
-| [批量删除地点](0194-delete-position-in-batches-under-the-attendance-group.md) | 调用本接口在指定考勤组下批量删除position。 | 旧版 |
-| [查询考勤写操作权限](0196-attendance-writing-operation-is-brand-new-query.md) | 用于查询企业员工在考勤组内的操作权限。 | 新版 |
+| [搜索考勤组摘要](0179-attendance-group-search.md) | 调用本接口按考勤组名称模糊搜索，获取考勤组摘要信息。 | 旧版 |
+| [获取考勤组详情](0180-query-a-single-attendance-group.md) | 调用本接口根据考勤组ID获取考勤组详情。 | 旧版 |
+| [根据groupKey查询考勤组信息](0197-queries-attendance-group-information-by-id.md) | 调用本接口根据考勤组id查询考勤组信息。 | 旧版 |
+| [groupKey转换为groupId](0192-convert-groupkey-to-groupid.md) | 调用本接口将考勤组的groupKey转换为groupId。 | 旧版 |
+| [groupId转换为groupKey](0193-groupid-to-groupkey.md) | 调用本接口将考勤组的groupId转换为groupKey。 | 旧版 |
+| [批量获取考勤组摘要](0187-batch-query-of-simple-information-of-the-attendance-group.md) | 调用本接口分页获取企业内所有考勤组摘要信息。 | 旧版 |
+| [批量获取考勤组详情](0188-batch-obtain-attendance-group-details.md) | 调用本接口查询所有的考勤组详情信息。 | 旧版 |
+| [获取用户考勤组](0178-queries-a-user-attendance-group.md) | 调用本接口获取员工的考勤组信息。 | 旧版 |
+| [批量新增参与考勤人员](0189-batch-add-employees-under-the-attendance-group.md) | 调用本接口在指定的考勤组下批量新增考勤组成员。 | 旧版 |
+| [更新参与考勤人员](0181-attendance-group-member-update.md) | 调用本接口更新考勤组成员，支持新增或删除人员、部门、无需考勤人员。 | 旧版 |
+| [获取参与考勤人员](0182-batch-query-of-attendance-group-members.md) | 调用本接口通过操作人的userid和考勤组id获取当前考勤组下的成员信息。 | 旧版 |
+| [获取参与考勤人员的userid](0195-query-attendance-group-personnel-information-in-batches.md) | 调用本接口分页获取某个考勤组下的所有员工的userId。 | 旧版 |
+| [批量删除参与考勤人员](0190-batch-delete-employees-under-the-attendance-group.md) | 调用本接口批量删除指定考勤组下的考勤组成员。 | 旧版 |
+| [查询参与考勤人员列表](0191-batch-query-of-employees-in-the-attendance-group.md) | 调用本接口查询指定考勤组下的员工列表。 | 旧版 |
+| [校验用户是否在当前考勤组](0196-query-members-by-id.md) | 调用本接口校验某个部门或者员工是否属于某个考勤组，返回值为属于这个考勤组的部门ID或者员工ID。 | 旧版 |
+| [批量新增Wi-Fi信息](0183-batch-add-wifi-under-attendance-group.md) | 调用本接口为指定考勤组批量新增wifi信息。 | 旧版 |
+| [批量查询Wi-Fi信息](0184-batch-query-wifi-under-attendance-group.md) | 调用本接口批量查询指定考勤组下的wifi列表信息。 | 旧版 |
+| [批量移除Wi-Fi信息](0185-batch-remove-wifi-under-attendance-group.md) | 调用本接口批量移除指定考勤组的wifi信息。 | 旧版 |
+| [批量新增地点](0175-atch-add-position-under-attendance-group.md) | 调用本接口在指定考勤组下批量新增position。 | 旧版 |
+| [批量查询地点](0176-batch-query-position-under-attendance-group.md) | 调用本接口批量查询指定考勤组下的position列表信息。 | 旧版 |
+| [批量删除地点](0177-delete-position-in-batches-under-the-attendance-group.md) | 调用本接口在指定考勤组下批量删除position。 | 旧版 |
+| [查询考勤写操作权限](0186-attendance-writing-operation-is-brand-new-query.md) | 用于查询企业员工在考勤组内的操作权限。 | 新版 |
+| [批量拉取考勤组蓝牙设备](0194-attendance-group-bluetooth-devices.md) | 调用本接口查询调用方所属企业的内部应用列表。 |  |
 
 #### **考勤打卡**
 
 | **API** | **API说明** | **API版本** |
 | --- | --- | --- |
-| [获取打卡结果](0197-open-attendance-clock-in-data.md) | 调用本接口返回企业内员工的实际打卡结果。 | 旧版 |
-| [获取打卡详情](0198-attendance-clock-in-record-is-open.md) | 调用本接口返回企业内员工的实际打卡详情。 | 旧版 |
-| [上传打卡记录](0199-upload-punch-records.md) | 调用本接口将三方考勤系统的刷卡或刷脸记录上传到钉钉考勤，做为钉钉打卡流水。 | 新版 |
+| [获取打卡结果](0198-open-attendance-clock-in-data.md) | 调用本接口返回企业内员工的实际打卡结果。 | 旧版 |
+| [获取打卡详情](0199-attendance-clock-in-record-is-open.md) | 调用本接口返回企业内员工的实际打卡详情。 | 旧版 |
+| [上传打卡记录](0200-upload-punch-records.md) | 调用本接口将三方考勤系统的刷卡或刷脸记录上传到钉钉考勤，做为钉钉打卡流水。 | 新版 |
 
 #### **考勤班次**
 
 | **API** | **API说明** | **API版本** |
 | --- | --- | --- |
-| [创建班次](0200-create-modify-shifts.md) | 调用本接口创建钉钉考勤班次。 | 旧版 |
-| [删除班次](0201-delete-shift.md) | 调用本接口根据班次ID删除考勤班次。 | 旧版 |
-| [按名称搜索班次](0204-search-shifts-by-rank.md) | 调用本接口根据名称模糊搜索班次，返回班次名称和ID信息。 | 旧版 |
-| [获取班次摘要信息](0205-enterprise-shift-query-in-batches.md) | 调用本接口查询所有的班次信息。 | 旧版 |
-| [获取班次详情](0206-shift-query.md) | 调用本接口根据班次ID查询班次的详细信息。 | 旧版 |
+| [创建班次](0201-create-modify-shifts.md) | 调用本接口创建钉钉考勤班次。 | 旧版 |
+| [删除班次](0202-delete-shift.md) | 调用本接口根据班次ID删除考勤班次。 | 旧版 |
+| [按名称搜索班次](0205-search-shifts-by-rank.md) | 调用本接口根据名称模糊搜索班次，返回班次名称和ID信息。 | 旧版 |
+| [获取班次摘要信息](0207-enterprise-shift-query-in-batches.md) | 调用本接口查询所有的班次信息。 | 旧版 |
+| [获取班次详情](0204-shift-query.md) | 调用本接口根据班次ID查询班次的详细信息。 | 旧版 |
 | [查询历史班次](0203-query-history-shifts.md) | 调用本接口根据班次ID和version查询历史班次信息。 | 旧版 |
-| [修改打卡时段设置](0202-modify-card-settings.md) | 调用本接口修改考勤班次卡点的设置信息。 | 旧版 |
+| [修改打卡时段设置](0206-modify-card-settings.md) | 调用本接口修改考勤班次卡点的设置信息。 | 旧版 |
 
 #### **考勤排班**
 
 | **API** | **API说明** | **API版本** |
 | --- | --- | --- |
-| [查询成员排班信息](0207-query-scheduling-for-a-day.md) | 调用本接口查询某人在某工作日的排班信息。 | 旧版 |
-| [批量查询人员排班信息](0208-query-batch-scheduling-information.md) | 调用本接口批量查询员工在工作日内的排班信息。 | 旧版 |
+| [查询成员排班信息](0208-query-scheduling-for-a-day.md) | 调用本接口查询某人在某工作日的排班信息。 | 旧版 |
+| [批量查询人员排班信息](0212-query-batch-scheduling-information.md) | 调用本接口批量查询员工在工作日内的排班信息。 | 旧版 |
 | [排班制考勤组排班](0209-scheduling-system-attendance-group-scheduling.md) | 调用此接口给排班制考勤组成员进行排班。 | 旧版 |
 | [查询排班打卡结果](0210-query-the-results-of-a-batch-of-tasks.md) | 调用本接口查询排班的打卡结果，打卡结果包含打卡时间、迟到、早退、内勤及外勤等信息。 | 旧版 |
-| [查询企业考勤排班详情](0211-interface-for-daily-full-query-of-attendance-scheduling-information.md) | 调用本接口查询某天的考勤排班信息。 | 旧版 |
-| [批量查询成员排班概要信息](0212-query-scheduling-summary-information.md) | 调用本接口查询用户在某个时间段内的排班概要信息。 | 旧版 |
+| [查询企业考勤排班详情](0213-interface-for-daily-full-query-of-attendance-scheduling-information.md) | 调用本接口查询某天的考勤排班信息。 | 旧版 |
+| [批量查询成员排班概要信息](0214-query-scheduling-summary-information.md) | 调用本接口查询用户在某个时间段内的排班概要信息。 | 旧版 |
 
 #### **考勤规则**
 
 | **API** | **API说明** | **API版本** |
 | --- | --- | --- |
-| [分页获取加班规则列表](0214-retrieve-a-list-of-overtime-rules-by-page.md) | 调用本接口分页获取考勤打卡中设置的加班规则列表。 | 新版 |
-| [分页获取补卡规则列表](0215-retrieve-a-list-of-replenishment-rules-by-page.md) | 调用本接口分页获取考勤打卡中设置的补卡规则列表。 | 新版 |
-| [批量获取加班规则设置](0216-batch-retrieve-overtime-rules.md) | 调用本接口用于根据多个加班规则ID，批量获取加班规则设置详情。 | 新版 |
+| [分页获取加班规则列表](0215-retrieve-a-list-of-overtime-rules-by-page.md) | 调用本接口分页获取考勤打卡中设置的加班规则列表。 | 新版 |
+| [分页获取补卡规则列表](0216-retrieve-a-list-of-replenishment-rules-by-page.md) | 调用本接口分页获取考勤打卡中设置的补卡规则列表。 | 新版 |
+| [批量获取加班规则设置](0217-batch-retrieve-overtime-rules.md) | 调用本接口用于根据多个加班规则ID，批量获取加班规则设置详情。 | 新版 |
 
 #### **考勤统计**
 
 | **API** | **API说明** | **API版本** |
 | --- | --- | --- |
-| [查询是否启用智能统计报表](0217-determine-whether-to-enable-attendance-intelligent-report.md) | 调用本接口判断企业是否开启了考勤智能报表，如果企业未启用智能报表，无法调用统计报表其他的接口。 | 旧版 |
+| [查询是否启用智能统计报表](0222-determine-whether-to-enable-attendance-intelligent-report.md) | 调用本接口判断企业是否开启了考勤智能报表，如果企业未启用智能报表，无法调用统计报表其他的接口。 | 旧版 |
 | [获取用户考勤数据](0218-obtain-the-attendance-update-data.md) | 调用本接口获取指定用户当天的考勤数据，包括打卡流水记录、打卡结果和审批列表等。 | 旧版 |
 | [获取报表假期数据](0219-obtains-the-holiday-data-from-the-smart-attendance-report.md) | 调用本接口根据假期名称和用户ID获取钉钉智能考勤报表的假期数据。 | 旧版 |
-| [获取考勤报表列定义](0220-queries-the-enterprise-attendance-report-column.md) | 调用本接口获取企业智能考勤报表中的列信息。 | 旧版 |
-| [获取考勤报表列值](0221-queries-the-column-value-of-the-attendance-report.md) | 调用本接口用于获取钉钉智能考勤报表的列值数据。 | 旧版 |
-| [查询用户某段时间内是否处于封账状态](0222-checks-whether-a-user-has-blocked-accounts-within-a-specified.md) | 调用本接口查询员工一段时间内是否处于封账状态，如果处于封账状态，不能发起审批、排班、换班等操作。 | 新版 |
+| [获取考勤报表列定义](0221-queries-the-enterprise-attendance-report-column.md) | 调用本接口获取企业智能考勤报表中的列信息。 | 旧版 |
+| [获取考勤报表列值](0220-queries-the-column-value-of-the-attendance-report.md) | 调用本接口用于获取钉钉智能考勤报表的列值数据。 | 旧版 |
+| [查询用户某段时间内是否处于封账状态](0223-checks-whether-a-user-has-blocked-accounts-within-a-specified.md) | 调用本接口查询员工一段时间内是否处于封账状态，如果处于封账状态，不能发起审批、排班、换班等操作。 | 新版 |
 
 #### **考勤机管理**
 
 | **API** | **API说明** | **API版本** |
 | --- | --- | --- |
-| [查询员工智能考勤机列表](0223-query-the-list-of-employee-intelligent-attendance-machines.md) | 调用本接口查询员工智能考勤机列表。 | 旧版 |
-| [根据设备ID获取员工信息](0224-obtain-information-about-employees-based-on-device-ids.md) | 调用本接口根据考勤机设备ID查询这台考勤机设备上的员工信息。 | 新版 |
-| [查询考勤机信息](0225-query-attendance-machine-information.md) | 调用本接口根据考勤机设备ID查询这台考勤机的相关信息。 | 新版 |
-| [变更智能考勤机员工](0226-change-intelligent-attendance-machine-staff.md) | 调用本接口变更智能考勤机员工。 | 新版 |
+| [查询员工智能考勤机列表](0226-query-the-list-of-employee-intelligent-attendance-machines.md) | 调用本接口查询员工智能考勤机列表。 | 旧版 |
+| [根据设备ID获取员工信息](0227-obtain-information-about-employees-based-on-device-ids.md) | 调用本接口根据考勤机设备ID查询这台考勤机设备上的员工信息。 | 新版 |
+| [查询考勤机信息](0224-query-attendance-machine-information.md) | 调用本接口根据考勤机设备ID查询这台考勤机的相关信息。 | 新版 |
+| [变更智能考勤机员工](0225-change-intelligent-attendance-machine-staff.md) | 调用本接口变更智能考勤机员工。 | 新版 |
 
 #### **假期审批**
 
 | **API** | **API说明** | **API版本** |
 | --- | --- | --- |
-| [通知审批通过](0228-api-processapprovefinish.md) | 调用本接口通知审批通过，支持加班、请假、外出和出差类型。 | 旧版 |
-| [通知审批撤销](0229-notify-the-attendance-to-modify-the-punch-result-when-the.md) | 调用本接口通知审批撤销，支持加班、请假、外出、出差和补卡类型。 | 旧版 |
-| [通知补卡通过](0230-make-up-the-card-after-approval.md) | 调用本接口通知考勤补卡通过。 | 旧版 |
-| [通知换班通过](0231-shift-change-operation-after-approval.md) | 通过本接口换班审批通过后，通知考勤执行换班动作，可以和自己换班，也可以和别人换班。 | 旧版 |
-| [预计算时长](0227-api-calculateduration.md) | 调用本接口根据考勤系统的排班情况，预计算员工加班、出差及请假的时长信息。 | 旧版 |
-| [计算请假时长](0232-calculate-leave-duration.md) | 调用本接口获取自动根据排班规则统计出每个员工的请假时长。 | 旧版 |
-| [查询请假状态](0233-query-status.md) | 调用本接口查询指定企业下指定用户在指定时间段内的请假状态。 | 旧版 |
+| [通知审批通过](0229-api-processapprovefinish.md) | 调用本接口通知审批通过，支持加班、请假、外出和出差类型。 | 旧版 |
+| [通知审批撤销](0230-notify-the-attendance-to-modify-the-punch-result-when-the.md) | 调用本接口通知审批撤销，支持加班、请假、外出、出差和补卡类型。 | 旧版 |
+| [通知补卡通过](0231-make-up-the-card-after-approval.md) | 调用本接口通知考勤补卡通过。 | 旧版 |
+| [通知换班通过](0232-shift-change-operation-after-approval.md) | 通过本接口换班审批通过后，通知考勤执行换班动作，可以和自己换班，也可以和别人换班。 | 旧版 |
+| [预计算时长](0228-api-calculateduration.md) | 调用本接口根据考勤系统的排班情况，预计算员工加班、出差及请假的时长信息。 | 旧版 |
+| [计算请假时长](0233-calculate-leave-duration.md) | 调用本接口获取自动根据排班规则统计出每个员工的请假时长。 | 旧版 |
+| [查询请假状态](0234-query-status.md) | 调用本接口查询指定企业下指定用户在指定时间段内的请假状态。 | 旧版 |
 
 #### **假期管理**
 
 | **API** | **API说明** | **API版本** |
 | --- | --- | --- |
-| [添加假期规则](0235-add-holiday-rules.md) | 调用本接口新建一个假期规则。 | 新版 |
-| [更新假期规则](0236-update-holiday-rules.md) | 调用本接口更新指定假期的相关规则。 | 新版 |
-| [删除假期规则](0237-api-for-deleting-holiday-types.md) | 调用本接口删除指定的假期规则。 | 旧版 |
-| [查询假期规则列表](0240-holiday-type-query.md) | 调用本接口查询企业内的假期规则列表。 | 旧版 |
-| [初始化假期余额](0238-initialize-holiday-balance.md) | 调用本接口批量初始化假期余额。 | 旧版 |
-| [查询假期余额](0241-query-holiday-balance.md) | 调用本接口根据企业或员工分页获取假期余额信息，每次返回50条数据。 | 旧版 |
-| [批量更新假期余额](0239-bulk-update-holiday-balance.md) | 调用本接口批量更新假期余额信息。 | 旧版 |
-| [批量查询员工假期余额变更记录](0242-batch-query-employee-leave-balance-change-record.md) | 调用本接口根据员工分页获取假期余额记录信息。 | 旧版 |
+| [添加假期规则](0236-add-holiday-rules.md) | 调用本接口新建一个假期规则。 | 新版 |
+| [更新假期规则](0237-update-holiday-rules.md) | 调用本接口更新指定假期的相关规则。 | 新版 |
+| [删除假期规则](0238-api-for-deleting-holiday-types.md) | 调用本接口删除指定的假期规则。 | 旧版 |
+| [查询假期规则列表](0242-holiday-type-query.md) | 调用本接口查询企业内的假期规则列表。 | 旧版 |
+| [初始化假期余额](0240-initialize-holiday-balance.md) | 调用本接口批量初始化假期余额。 | 旧版 |
+| [查询假期余额](0239-query-holiday-balance.md) | 调用本接口根据企业或员工分页获取假期余额信息，每次返回50条数据。 | 旧版 |
+| [批量更新假期余额](0241-bulk-update-holiday-balance.md) | 调用本接口批量更新假期余额信息。 | 旧版 |
+| [批量查询员工假期余额变更记录](0244-batch-query-employee-leave-balance-change-record.md) | 调用本接口根据员工分页获取假期余额记录信息。 | 旧版 |
 | [查询用户考勤节假日信息](0243-obtain-user-attendance-and-holiday-information.md) | 调用本接口查询员工一段时间内的节假日信息。 | 新版 |
 
 #### **封账规则**
 
 | **API** | **API说明** | **API版本** |
 | --- | --- | --- |
-| [查询指定用户的封账规则](0244-encapsulate-account-sealing-and-unsealing-rules.md) | 调用本接口查询指定用户的封账和解封规则。 | 新版 |
+| [查询指定用户的封账规则](0245-encapsulate-account-sealing-and-unsealing-rules.md) | 调用本接口查询指定用户的封账和解封规则。 | 新版 |
 
 ### **回调事件列表**
 
@@ -190,7 +191,7 @@ updated_at: "2026-10-19 09:11:18"
 
 > **[!NOTE]**
 >
-> 由于新旧接口规范等原因，考勤组的的唯一标识为group\_id或groupKey。groupKey值可以调用[groupKey转换为groupId](0178-convert-groupkey-to-groupid.md)接口转换为对应的group\_id。
+> 由于新旧接口规范等原因，考勤组的的唯一标识为group\_id或groupKey。groupKey值可以调用[groupKey转换为groupId](0192-convert-groupkey-to-groupid.md)接口转换为对应的group\_id。
 
 考勤组类型分为三类：
 

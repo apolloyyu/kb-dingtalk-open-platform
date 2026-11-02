@@ -31,15 +31,15 @@ updated_at: "2026-05-27 17:05:59"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | 73e9xxx | 调用该接口的应用凭证，通过[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)接口获取。 |
+| access\_token | String | 是 | 73e9xxx | 调用该接口的应用凭证，通过[获取企业内部应用的access\_token](1445-obtain-orgapp-token.md)接口获取。 |
 
 ### **请求体**
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
 | op\_user\_id | String | 是 | user123 | 操作者userId。 |
-| shift\_id | Number | 是 | 628380875 | 班次ID，可通过[获取班次摘要信息](0205-enterprise-shift-query-in-batches.md)接口获取id参数值。 |
-| version | Number | 是 | 624190327 | 班次版本，可通过[批量查询人员排班信息](0208-query-batch-scheduling-information.md)接口获取shift\_version参数值。 |
+| shift\_id | Number | 是 | 628380875 | 班次ID，可通过[获取班次摘要信息](0207-enterprise-shift-query-in-batches.md)接口获取id参数值。 |
+| version | Number | 是 | 624190327 | 班次版本，可通过[批量查询人员排班信息](0212-query-batch-scheduling-information.md)接口获取shift\_version参数值。 |
 
 ### **请求示例**
 

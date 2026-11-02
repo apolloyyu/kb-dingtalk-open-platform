@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "认证与授权 > 身份验证（免登） > 概述"
 doc_id: "QKBVgceaQ8"
-updated_at: "2026-09-02 18:13:35"
+updated_at: "2026-10-29 09:13:36"
 ---
 
 > Source: https://open.dingtalk.com/document/development/sso-overview
 > Path: 应用开发 / 服务端 API / 认证与授权 > 身份验证（免登） > 概述
-> Updated: 2026-09-02 18:13:35
+> Updated: 2026-10-29 09:13:36
 
 # 概述
 
@@ -26,11 +26,11 @@ updated_at: "2026-09-02 18:13:35"
 - **第三方企业应用（ISV 应用）**：由第三方服务商开发并提供给多个企业客户安装使用的 SaaS 类应用。
 - **应用管理后台系统**：需要企业管理员在钉钉管理后台直接访问的配置与管理系统。
 
-# 支持的免登场景
+## **支持的免登场景**
 
-- [网页应用（H5微应用）免登](0017-enterprise-internal-application-logon-free.md)
+- [企业内部网页应用免登](0017-enterprise-internal-application-logon-free.md)
 - [应用管理后台免登](0022-log-on-site-application-management-backend.md)
-- [实现网页方式登录应用（登录第三方网站）](0018-tutorial-obtaining-user-personal-information.md)
+- [网页方式登录应用（第三方网站）](0018-tutorial-obtaining-user-personal-information.md)
 
   - 浏览器内实现
 
@@ -41,7 +41,7 @@ updated_at: "2026-09-02 18:13:35"
 
 当企业开发者开发了一个企业内部应用时，企业员工在钉钉内使用该应用，无需输入账户密码即可自动登录所开发的系统。
 
-免登步骤，详情参见[网页应用（H5微应用）免登](0017-enterprise-internal-application-logon-free.md)。
+免登步骤，详情参见[企业内部网页应用免登](0017-enterprise-internal-application-logon-free.md)。
 
 | 步骤 | 说明 |
 | --- | --- |

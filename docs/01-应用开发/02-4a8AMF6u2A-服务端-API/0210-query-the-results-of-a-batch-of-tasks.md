@@ -31,14 +31,14 @@ updated_at: "2026-05-27 17:06:11"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | bE74xxxx | 调用该API的应用凭证。   - 企业内部应用，通过[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)接口获取。 - 第三方企业应用，通过[获取第三方企业的access\_token](1448-obtain-isvapp-token.md)接口获取。 |
+| access\_token | String | 是 | bE74xxxx | 调用该API的应用凭证。   - 企业内部应用，通过[获取企业内部应用的access\_token](1445-obtain-orgapp-token.md)接口获取。 - 第三方企业应用，通过[获取第三方企业的access\_token](1447-obtain-isvapp-token.md)接口获取。 |
 
 ### **请求体**
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
 | op\_user\_id | String | 是 | manager123 | 操作人userId。 |
-| schedule\_ids | String | 是 | 144872188723,144872188722 | 排班ID，通过[查询企业考勤排班详情](0211-interface-for-daily-full-query-of-attendance-scheduling-information.md)接口获取plan\_id参数值。多个排班ID之间用逗号分割，每次调用最多支持100个排班ID， |
+| schedule\_ids | String | 是 | 144872188723,144872188722 | 排班ID，通过[查询企业考勤排班详情](0213-interface-for-daily-full-query-of-attendance-scheduling-information.md)接口获取plan\_id参数值。多个排班ID之间用逗号分割，每次调用最多支持100个排班ID， |
 
 ### **请求示例**
 

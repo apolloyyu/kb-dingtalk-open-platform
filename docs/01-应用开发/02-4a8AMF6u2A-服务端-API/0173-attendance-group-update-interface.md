@@ -31,7 +31,7 @@ updated_at: "2026-05-27 13:09:42"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | b5e95d101165xxxx | 调用该接口的应用凭证，通过[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)接口获取。 |
+| access\_token | String | 是 | b5e95d101165xxxx | 调用该接口的应用凭证，通过[获取企业内部应用的access\_token](1445-obtain-orgapp-token.md)接口获取。 |
 
 ### **请求体**
 
@@ -40,8 +40,8 @@ updated_at: "2026-05-27 13:09:42"
 | op\_user\_id | String | 是 | 123dfd | 操作人userId。 |
 | top\_group | Object | 是 |  | 考勤组信息。 |
 | shift\_vo\_list | Object[] | 否 |  | 班次信息。 |
-| id | Number | 否 | 123 | 班次ID，可通过[获取班次摘要信息](0205-enterprise-shift-query-in-batches.md)接口获取id参数值。 |
-| id | Number | 是 | 123 | 考勤组ID。  **[!NOTE]**  如果你使用的是旧考勤组标识即group\_key，可以调用[groupKey转换为groupId](0178-convert-groupkey-to-groupid.md)接口将group\_key转换为group\_id。 |
+| id | Number | 否 | 123 | 班次ID，可通过[获取班次摘要信息](0207-enterprise-shift-query-in-batches.md)接口获取id参数值。 |
+| id | Number | 是 | 123 | 考勤组ID。  **[!NOTE]**  如果你使用的是旧考勤组标识即group\_key，可以调用[groupKey转换为groupId](0192-convert-groupkey-to-groupid.md)接口将group\_key转换为group\_id。 |
 | name | String | 否 | 白班考勤 | 考勤组名称。 |
 | positions | Object[] | 否 |  | 考勤地址设置。 |
 | address | String | 否 | 生物科技产业园区经二路21号 | 地址。 |

@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "钉钉 CLI"
 breadcrumb: "新手入门 > 安装与使用指南"
 doc_id: "XYk3YaeWim"
-updated_at: "2026-08-14 12:11:27"
+updated_at: "2026-10-29 15:00:27"
 ---
 
 > Source: https://open.dingtalk.com/document/development/dingtalk-dws-cli-install-guide
 > Path: 应用开发 / 钉钉 CLI / 新手入门 > 安装与使用指南
-> Updated: 2026-08-14 12:11:27
+> Updated: 2026-10-29 15:00:27
 
 # 安装与使用指南
 
@@ -117,6 +117,34 @@ dws auth login
     在CLI设置页面，可点击"**允许成员通过CLI访问个人数据**"一键开启，也可点击"**编辑**"按钮设置可用人员和可用功能。
 
     ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8100706871/p1093797.png)
+
+### **登录并获取权限**
+
+**安装完成后，执行以下命令完成登录：**
+
+```
+dws auth login
+```
+
+选择你的企业组织并授权即可完成：
+
+![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/7227523971/p1109364.png)
+
+**登录成功后，根据你使用的 AI Agent 渠道不同，权限获取方式有所区别：**
+
+- **千问办公**：开箱即用，默认开启、全员可用，无需额外配置。
+- **其他渠道（Codex、Cursor、Claude Code 等）**：默认关闭。需要管理员在开发者后台 → CLI 设置 → Agent 管理中打开"其他渠道"开关后，才能正常登录使用。
+
+管理员可通过[钉钉开发者后台](https://open-dev.dingtalk.com/fe/old?hash=%23%2FdeveloperSettings#/developerSettings) **→** 导航栏「更多」→「基本信息」→ 左侧「CLI 设置」进行权限管控。权限体系分为三层：
+
+| **层面** | **说明** |
+| --- | --- |
+| 组织总开关 | 控制整个组织是否允许使用 DWS CLI，**默认开启。** |
+| Agent 渠道 | 千问办公（默认开启）与其他渠道（默认关闭）分别管控；企业自建 Agent 可通过「添加」独立管控。 |
+| CLI 管控配置 | 按业务域（群聊、文档、日历、AI 表格等）逐项设置可用范围。 |
+
+- 完整权限管控操作说明，请参考[钉钉DWS权限管控指南](0003-dws-permission-management-guide.md)。
+- 如需对企业自建 Agent 做独立权限管控，请参考[如何单独管理企业自建Agent的权限](0005-manage-permissions-enterprise.md)。
 
 ### **快速试用**
 

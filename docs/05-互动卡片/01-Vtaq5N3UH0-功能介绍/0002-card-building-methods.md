@@ -26,9 +26,9 @@ updated_at: "2026-10-09 18:10:26"
 | 发送参数 | `cardTemplateId` + `cardParamMap` | 组件树 + 数据模型，无需模板 ID |
 | 修改结构 | 在平台修改模板并重新发布 | 修改生成 JSON 的代码即可，无需预先搭建和发布模板 |
 | 更新内容 | 通过[卡片更新](../02-MhNX42mFB1-模板搭建卡片/0009-card-update.md)接口修改模板变量 | 使用 `updateDataModel` 按 JSON Pointer 路径更新数据；结构变化使用 `updateComponents` |
-| 流转状态 | 仅 AI 卡片模板预设处理中、输入中、完成、失败四个状态，流式更新时传 `isFinalize`、`isError` | 与数据更新相互独立，由 `update-a2ui-card` 的 `flowStatus` 推进，取值详见[卡片状态](../03-lHGhOeTVdR-JSON-构建卡片（AI）/0017-json-card-dws-send-and-update.md) |
+| 流转状态 | 仅 AI 卡片模板预设处理中、输入中、完成、失败四个状态，流式更新时传 `isFinalize`、`isError` | 与数据更新相互独立，由 `update-a2ui-card` 的 `flowStatus` 推进，取值详见[卡片状态](../03-lHGhOeTVdR-JSON-构建卡片（AI）/0019-json-card-dws-send-and-update.md) |
 | 投递方式 | 创建卡片实例后投放到会话或场域，详见[开放接口投放卡片实例](../02-MhNX42mFB1-模板搭建卡片/0006-open-interface-card-delivery-instance.md) | 调用 `send-a2ui-card` 一步完成，返回 `bizId` |
-| 交互回调 | 通过事件回调返回业务侧 | 使用 `dws event consume` 监听当前登录用户收到的卡片操作事件；服务端 HTTP 回调尚未开放，标准 A2UI 响应暂不可用，详见[监听交互事件](../03-lHGhOeTVdR-JSON-构建卡片（AI）/0016-json-card-listen-to-interaction-events.md) |
+| 交互回调 | 通过事件回调返回业务侧 | 使用 `dws event consume` 监听当前登录用户收到的卡片操作事件；服务端 HTTP 回调尚未开放，标准 A2UI 响应暂不可用，详见[监听交互事件](../03-lHGhOeTVdR-JSON-构建卡片（AI）/0018-json-card-listen-to-interaction-events.md) |
 | 可视化配置 | 支持，运营人员可自行配置 | 不支持，结构由代码生成 |
 | 适用场景 | 结构固定、样式统一、需要运营配置 | 结构在运行时确定，由业务代码或 Agent 生成 |
 

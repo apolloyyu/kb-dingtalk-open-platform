@@ -5,13 +5,13 @@ namespace: "connection"
 slug: "announcement-connection-purchase"
 group: "连接平台"
 tab: "平台介绍"
-breadcrumb: "平台公告 > 关于“连接流增购包”价格与功能调整的公告"
+breadcrumb: "历史文档（不推荐） > 关于“连接流增购包”价格与功能调整的公告"
 doc_id: "gzWwqKMWXY"
 updated_at: "2026-01-13 13:44:44"
 ---
 
 > Source: https://open.dingtalk.com/document/connection/announcement-connection-purchase
-> Path: 连接平台 / 平台介绍 / 平台公告 > 关于“连接流增购包”价格与功能调整的公告
+> Path: 连接平台 / 平台介绍 / 历史文档（不推荐） > 关于“连接流增购包”价格与功能调整的公告
 > Updated: 2026-01-13 13:44:44
 
 # 关于“连接流增购包”价格与功能调整的公告

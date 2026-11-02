@@ -244,7 +244,7 @@ $userName=USER_ID$
 
 发通知消息时，可以在内容中以模板参数语法包含id，钉钉会将其替换为成员名或部门名，涉及服务端api：
 
-- [发送工作通知](0769-asynchronous-sending-of-enterprise-session-messages.md)
+- [发送工作通知](0770-asynchronous-sending-of-enterprise-session-messages.md)
 
 > **[!NOTE]**
 >

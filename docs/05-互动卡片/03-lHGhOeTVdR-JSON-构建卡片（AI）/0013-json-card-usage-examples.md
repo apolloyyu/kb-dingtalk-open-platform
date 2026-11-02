@@ -5,16 +5,20 @@ namespace: "development"
 slug: "json-card-usage-examples"
 group: "互动卡片"
 tab: "JSON 构建卡片（AI）"
-breadcrumb: "构建卡片结构 > 使用示例"
+breadcrumb: "构建卡片结构 > 场景示例 > 使用示例"
 doc_id: "DDsEo5xqO5"
-updated_at: "2026-09-30 09:14:05"
+updated_at: "2026-10-29 09:13:43"
 ---
 
 > Source: https://open.dingtalk.com/document/development/json-card-usage-examples
-> Path: 互动卡片 / JSON 构建卡片（AI） / 构建卡片结构 > 使用示例
-> Updated: 2026-09-30 09:14:05
+> Path: 互动卡片 / JSON 构建卡片（AI） / 构建卡片结构 > 场景示例 > 使用示例
+> Updated: 2026-10-29 09:13:43
 
 # 使用示例
+
+> **[!NOTE]**
+>
+> 本文演示单项协议能力，需要排版和交互都已设计好的完整业务卡片，见[场景模板](0014-scene-template.md)。
 
 ## **完整卡片示例**
 
@@ -34,7 +38,9 @@ dws aicard lint --file card.a2ui.json --preflight new-card
 dws aicard preview --file card.a2ui.json
 ```
 
-发到群聊或单聊，详见 [DWS 发送与更新](0017-json-card-dws-send-and-update.md)。
+- 发到群聊或单聊：以当前登录用户发送见 [DWS 发送与更新](0019-json-card-dws-send-and-update.md)。
+- 业务服务端以应用机器人身份发送，详见 [机器人发送卡片](0020-robot-send-aicard.md)。
+- 发出后更新：详见 [机器人更新卡片](0021-robot-update-aicard.md)。
 
 ## 表单交互
 

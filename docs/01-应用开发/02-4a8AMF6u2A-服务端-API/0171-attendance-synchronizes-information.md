@@ -114,12 +114,12 @@ updated_at: "2026-09-23 12:04:32"
 
 步骤二：[添加接口调用权限](0003-add-api-permission.md)。查找“通讯录”、“考勤”，申请对应接口的权限。
 
-步骤三：获取应用访问凭证[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
+步骤三：获取应用访问凭证[获取企业内部应用的access\_token](1445-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
 
 步骤四：调用通讯录、考勤相关API：
 
 1. 调用通讯录服务端API-[获取部门用户详情](0061-queries-the-complete-information-of-a-department-user.md)接口，获取企业员工在钉钉组织架构中的userId值信息。
-2. 调用考勤服务端API-[上传打卡记录](0199-upload-punch-records.md)接口，将企业自有系统的员工考勤打卡日期、时间等信息上传到钉钉考勤应用。实现同步考勤。
+2. 调用考勤服务端API-[上传打卡记录](0200-upload-punch-records.md)接口，将企业自有系统的员工考勤打卡日期、时间等信息上传到钉钉考勤应用。实现同步考勤。
 
 ## **实施步骤**
 
@@ -148,7 +148,7 @@ updated_at: "2026-09-23 12:04:32"
 
 ### 步骤三：获取访问凭证（access\_token）
 
-根据步骤一中 的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)。
+根据步骤一中 的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的access\_token](1445-obtain-orgapp-token.md)。
 
 ```
 public void getAccessToken() throws ApiException {
@@ -186,7 +186,7 @@ public void getAccessToken() throws ApiException {
        System.out.println(rsp.getBody());
    }
    ```
-2. **上传打卡记录**：调用考勤服务端API-[上传打卡记录](0199-upload-punch-records.md)接口，将企业自有系统的员工考勤打卡日期、时间等信息上传到钉钉考勤应用。实现同步考勤。
+2. **上传打卡记录**：调用考勤服务端API-[上传打卡记录](0200-upload-punch-records.md)接口，将企业自有系统的员工考勤打卡日期、时间等信息上传到钉钉考勤应用。实现同步考勤。
 
    ```
    public void attendanceRecordUpload() throws ApiException {

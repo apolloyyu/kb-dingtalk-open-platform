@@ -31,16 +31,16 @@ updated_at: "2026-05-27 17:06:08"
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
-| access\_token | String | 是 | bE74xxxx | 调用该API的应用凭证。   - 企业内部应用，通过[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)接口获取。 - 第三方企业应用，通过[获取第三方企业的access\_token](1448-obtain-isvapp-token.md)接口获取。 |
+| access\_token | String | 是 | bE74xxxx | 调用该API的应用凭证。   - 企业内部应用，通过[获取企业内部应用的access\_token](1445-obtain-orgapp-token.md)接口获取。 - 第三方企业应用，通过[获取第三方企业的access\_token](1447-obtain-isvapp-token.md)接口获取。 |
 
 ### **请求体**
 
 | 名称 | 类型 | 是否必填 | 示例值 | 描述 |
 | --- | --- | --- | --- | --- |
 | op\_user\_id | String | 是 | user456 | 操作人userId。 |
-| group\_id | Number | 是 | 2987 | 考勤组ID。  **[!NOTE]**  如果你使用的是旧考勤组标识即group\_key，可以调用[groupKey转换为groupId](0178-convert-groupkey-to-groupid.md)接口将group\_key转换为group\_id。 |
+| group\_id | Number | 是 | 2987 | 考勤组ID。  **[!NOTE]**  如果你使用的是旧考勤组标识即group\_key，可以调用[groupKey转换为groupId](0192-convert-groupkey-to-groupid.md)接口将group\_key转换为group\_id。 |
 | schedules | TopScheduleParam[] | 是 |  | 排班详情。示例如下：   ``` {   "is_rest": false,   "work_date": 1605150671000,   "shift_id": 1,   "userid": "user123" } ```   **[!NOTE]**  最大列表长度200。 |
-| shift\_id | Number | 是 | 1 | 班次ID，休息班次传1，可通过[获取班次摘要信息](0205-enterprise-shift-query-in-batches.md)接口获取id参数值。  **[!NOTE]**   - 当is\_rest参数传true时，shift\_id传1。 - 如果你需要清空排班，shift\_id传 -2。 |
+| shift\_id | Number | 是 | 1 | 班次ID，休息班次传1，可通过[获取班次摘要信息](0207-enterprise-shift-query-in-batches.md)接口获取id参数值。  **[!NOTE]**   - 当is\_rest参数传true时，shift\_id传1。 - 如果你需要清空排班，shift\_id传 -2。 |
 | work\_date | Number | 是 | 1564985177000 | 排班日期。  **[!NOTE]**  可排班日期不早于180天前，不晚于180天后。 |
 | is\_rest | Boolean | 否 | false | 是否休息：   - **true**：休息  **[!NOTE]**  当该参数为true时，shift\_id传1。 - **false**：不休息 |
 | userid | String | 是 | user123 | 用户的userId。 |

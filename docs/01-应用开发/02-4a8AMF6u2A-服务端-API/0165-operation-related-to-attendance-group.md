@@ -118,7 +118,7 @@ updated_at: "2026-09-23 12:04:24"
 
 步骤二：申请接口权限，申请考勤相关接口权限。
 
-步骤三：获取应用访问凭证[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
+步骤三：获取应用访问凭证[获取企业内部应用的access\_token](1445-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
 
 步骤四：调用考勤相关API：
 
@@ -130,22 +130,22 @@ updated_at: "2026-09-23 12:04:24"
 
    如果需要创建**固定班制考勤组**，调用创建考勤组接口前，需确保已设置了班次：
 
-   - 如果无班次，调用服务端API-[创建班次](0200-create-modify-shifts.md)接口，获取班次ID。
-   - 如果已有班次，调用服务端API-[获取班次摘要信息](0205-enterprise-shift-query-in-batches.md)接口，获取已有班次ID。
+   - 如果无班次，调用服务端API-[创建班次](0201-create-modify-shifts.md)接口，获取班次ID。
+   - 如果已有班次，调用服务端API-[获取班次摘要信息](0207-enterprise-shift-query-in-batches.md)接口，获取已有班次ID。
 2. 获取考勤组信息。
 
    - 获取企业下所有的考勤组信息
 
-     - 调用服务端API-[批量获取考勤组摘要](0180-batch-query-of-simple-information-of-the-attendance-group.md)，获取企业下所有的考勤组摘要信息。
-     - 调用服务端API-[批量获取考勤组详情](0181-batch-obtain-attendance-group-details.md)，获取企业下所有的考勤组详情。
-   - 调用服务端API-[搜索考勤组摘要](0175-attendance-group-search.md)接口，根据考勤组名称模糊查询考勤组信息。
+     - 调用服务端API-[批量获取考勤组摘要](0187-batch-query-of-simple-information-of-the-attendance-group.md)，获取企业下所有的考勤组摘要信息。
+     - 调用服务端API-[批量获取考勤组详情](0188-batch-obtain-attendance-group-details.md)，获取企业下所有的考勤组详情。
+   - 调用服务端API-[搜索考勤组摘要](0179-attendance-group-search.md)接口，根据考勤组名称模糊查询考勤组信息。
    - 获取单个考勤组信息
 
-     - 根据考勤组`id`，调用服务端API-[获取考勤组详情](0176-query-a-single-attendance-group.md)，获取单个考勤组的考勤组详情信息。
+     - 根据考勤组`id`，调用服务端API-[获取考勤组详情](0180-query-a-single-attendance-group.md)，获取单个考勤组的考勤组详情信息。
      - 根据groupKey获取考勤组详情
 
-       1. 根据考勤组`id`，调用服务端API-[groupId转换为groupKey](0179-groupid-to-groupkey.md)接口，获取考勤组`groupKey`。
-       2. 根据考勤组`groupKey`，调用服务端API-[根据groupKey查询考勤组信息](0177-queries-attendance-group-information-by-id.md)接口，获取考勤组信息。
+       1. 根据考勤组`id`，调用服务端API-[groupId转换为groupKey](0193-groupid-to-groupkey.md)接口，获取考勤组`groupKey`。
+       2. 根据考勤组`groupKey`，调用服务端API-[根据groupKey查询考勤组信息](0197-queries-attendance-group-information-by-id.md)接口，获取考勤组信息。
 3. 根据考勤组`id`，调用服务端API-[更新考勤组](0173-attendance-group-update-interface.md)，修改考勤组名称、考勤组班次等信息。
 4. 根据考勤组`groupKey`，调用服务端API-[删除考勤组](0174-delete-attendance-group.md)接口，实现删除考勤组。
 
@@ -176,7 +176,7 @@ updated_at: "2026-09-23 12:04:24"
 
 ### 步骤三：获取访问凭证（access\_token）
 
-根据步骤一中 的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)。
+根据步骤一中 的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的access\_token](1445-obtain-orgapp-token.md)。
 
 ```
 public void getAccessToken() throws ApiException {
@@ -206,7 +206,7 @@ public void getAccessToken() throws ApiException {
 
 如果需要创建固定班制考勤组，调用创建考勤组接口前，需确保已设置了班次：
 
-- 如果无班次，调用服务端API-[创建班次](0200-create-modify-shifts.md)接口，获取班次ID。
+- 如果无班次，调用服务端API-[创建班次](0201-create-modify-shifts.md)接口，获取班次ID。
 
   ```
   public void createShift() throws ApiException {
@@ -283,7 +283,7 @@ public void getAccessToken() throws ApiException {
       System.out.println(response.getBody());
   }
   ```
-- 如果已有班次，调用服务端API-[获取班次摘要信息](0205-enterprise-shift-query-in-batches.md)接口，获取已有班次ID。
+- 如果已有班次，调用服务端API-[获取班次摘要信息](0207-enterprise-shift-query-in-batches.md)接口，获取已有班次ID。
 
   ```
   public void shiftList() throws ApiException {
@@ -394,7 +394,7 @@ public void createGroup() throws ApiException {
 
 - **获取企业下所有的考勤组信息**
 
-  1. **批量获取考勤组摘要**：调用服务端API-[批量获取考勤组摘要](0180-batch-query-of-simple-information-of-the-attendance-group.md)，获取企业下所有的考勤组摘要信息。
+  1. **批量获取考勤组摘要**：调用服务端API-[批量获取考勤组摘要](0187-batch-query-of-simple-information-of-the-attendance-group.md)，获取企业下所有的考勤组摘要信息。
 
      ```
      public void groupMinimalismList() throws ApiException {
@@ -408,7 +408,7 @@ public void createGroup() throws ApiException {
          System.out.println(rsp.getBody());
      }
      ```
-  2. **批量获取考勤组详情**：调用服务端API-[批量获取考勤组详情](0181-batch-obtain-attendance-group-details.md)，获取企业下所有的考勤组详情。
+  2. **批量获取考勤组详情**：调用服务端API-[批量获取考勤组详情](0188-batch-obtain-attendance-group-details.md)，获取企业下所有的考勤组详情。
 
      ```
      public void simpleGroups() throws ApiException {
@@ -422,7 +422,7 @@ public void createGroup() throws ApiException {
          System.out.println(rsp.getBody());
      }
      ```
-  3. **搜索考勤组摘要**：调用服务端API-[搜索考勤组摘要](0175-attendance-group-search.md)接口，根据考勤组名称模糊查询考勤组信息。
+  3. **搜索考勤组摘要**：调用服务端API-[搜索考勤组摘要](0179-attendance-group-search.md)接口，根据考勤组名称模糊查询考勤组信息。
 
      ```
      public void groupSearch() throws ApiException {
@@ -438,7 +438,7 @@ public void createGroup() throws ApiException {
      ```
 - **获取单个考勤组信息**
 
-  1. **获取单个考勤组详情**：根据考勤组`id`，调用服务端API-[获取考勤组详情](0176-query-a-single-attendance-group.md)，获取单个考勤组的考勤组详情信息。
+  1. **获取单个考勤组详情**：根据考勤组`id`，调用服务端API-[获取考勤组详情](0180-query-a-single-attendance-group.md)，获取单个考勤组的考勤组详情信息。
 
      ```
      public void groupQuery() throws ApiException {
@@ -452,7 +452,7 @@ public void createGroup() throws ApiException {
          System.out.println(rsp.getBody());
      }
      ```
-  2. **groupId转换为groupKey**：根据考勤组`id`，调用服务端API-[groupId转换为groupKey](0179-groupid-to-groupkey.md)接口，获取考勤组`groupKey`。
+  2. **groupId转换为groupKey**：根据考勤组`id`，调用服务端API-[groupId转换为groupKey](0193-groupid-to-groupkey.md)接口，获取考勤组`groupKey`。
 
      ```
      public void groupsIdToKey() throws ApiException {
@@ -466,7 +466,7 @@ public void createGroup() throws ApiException {
          System.out.println(rsp.getBody());
      }
      ```
-  3. **根据groupKey查询考勤组信息**：根据考勤组`groupKey`，调用服务端API-[根据groupKey查询考勤组信息](0177-queries-attendance-group-information-by-id.md)接口，获取考勤组信息。
+  3. **根据groupKey查询考勤组信息**：根据考勤组`groupKey`，调用服务端API-[根据groupKey查询考勤组信息](0197-queries-attendance-group-information-by-id.md)接口，获取考勤组信息。
 
      ```
      public void groupInfo() throws ApiException {
@@ -564,13 +564,13 @@ public void deleteGroup() throws ApiException {
 
 - **Q1：创建考勤组时提示"班次不存在"怎么办？**
 
-  A：固定班制考勤组需要先创建班次。请先调用[创建班次](0200-create-modify-shifts.md)接口，或调用[获取班次摘要信息](0205-enterprise-shift-query-in-batches.md)接口获取已有班次ID，再创建考勤组。
+  A：固定班制考勤组需要先创建班次。请先调用[创建班次](0201-create-modify-shifts.md)接口，或调用[获取班次摘要信息](0207-enterprise-shift-query-in-batches.md)接口获取已有班次ID，再创建考勤组。
 - **Q2：如何批量获取所有考勤组信息？**
 
-  A：分两步操作：先调用[批量获取考勤组摘要](0180-batch-query-of-simple-information-of-the-attendance-group.md)获取所有考勤组的简要信息（含id），再根据需要调用[批量获取考勤组详情](0181-batch-obtain-attendance-group-details.md)获取完整详情。
+  A：分两步操作：先调用[批量获取考勤组摘要](0187-batch-query-of-simple-information-of-the-attendance-group.md)获取所有考勤组的简要信息（含id），再根据需要调用[批量获取考勤组详情](0188-batch-obtain-attendance-group-details.md)获取完整详情。
 - **Q3：考勤组id和groupKey有什么区别？**
 
-  A：`id`是考勤组的数字标识，`groupKey`是字符串标识。部分接口（如删除考勤组）需要使用`groupKey`。可通过[groupId转换为groupKey](0179-groupid-to-groupkey.md)接口进行转换。
+  A：`id`是考勤组的数字标识，`groupKey`是字符串标识。部分接口（如删除考勤组）需要使用`groupKey`。可通过[groupId转换为groupKey](0193-groupid-to-groupkey.md)接口进行转换。
 - **Q4：更新考勤组时是否需要传入所有字段？**
 
   A：不需要。只需传入要修改的字段和考勤组`id`即可，未传入的字段保持原值不变。

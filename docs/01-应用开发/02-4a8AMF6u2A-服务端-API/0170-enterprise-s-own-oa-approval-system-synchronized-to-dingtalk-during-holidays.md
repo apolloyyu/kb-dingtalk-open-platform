@@ -119,7 +119,7 @@ updated_at: "2026-09-23 12:04:31"
 
 步骤二：申请接口权限，申请考勤相关接口权限。
 
-步骤三：获取应用访问凭证[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
+步骤三：获取应用访问凭证[获取企业内部应用的access\_token](1445-obtain-orgapp-token.md)。调用接口时，通过accessToken鉴权调用者身份。
 
 步骤四：调用考勤相关API：
 
@@ -127,9 +127,9 @@ updated_at: "2026-09-23 12:04:31"
 >
 > 该功能支持企业自研系统的加班、出差和请假信息与钉钉同步。
 
-1. 调用服务端API-[预计算时长](0227-api-calculateduration.md)接口，实现根据考勤系统的排班情况，预计算员工加班、出差及请假的时长信息。
-2. 在企业自有审批系统提交了假勤申请，审批通过后通过该接口通知钉钉考勤，调用服务端API-[通知审批通过](0228-api-processapprovefinish.md)接口，实现钉钉考勤同步通过。保存自定义审批单ID`approve_id`。
-3. 在企业自有审批系统提交了撤销假勤申请，根据自定义审批单ID`approve_id`，调用服务端API-[通知审批撤销](0229-notify-the-attendance-to-modify-the-punch-result-when-the.md)接口，实现钉钉考勤同步撤销。
+1. 调用服务端API-[预计算时长](0228-api-calculateduration.md)接口，实现根据考勤系统的排班情况，预计算员工加班、出差及请假的时长信息。
+2. 在企业自有审批系统提交了假勤申请，审批通过后通过该接口通知钉钉考勤，调用服务端API-[通知审批通过](0229-api-processapprovefinish.md)接口，实现钉钉考勤同步通过。保存自定义审批单ID`approve_id`。
+3. 在企业自有审批系统提交了撤销假勤申请，根据自定义审批单ID`approve_id`，调用服务端API-[通知审批撤销](0230-notify-the-attendance-to-modify-the-punch-result-when-the.md)接口，实现钉钉考勤同步撤销。
 
 ## 实施步骤
 
@@ -158,7 +158,7 @@ updated_at: "2026-09-23 12:04:31"
 
 ### 步骤三：获取访问凭证（access\_token）
 
-根据步骤一中 的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的access\_token](1446-obtain-orgapp-token.md)。
+根据步骤一中 的 Client ID 和 Client Secret，获取应用访问凭证[获取企业内部应用的access\_token](1445-obtain-orgapp-token.md)。
 
 ```
 public void getAccessToken() throws ApiException {
@@ -180,14 +180,14 @@ public void getAccessToken() throws ApiException {
 
 ### **步骤四：**核心API调用
 
-1. **预计算时长**：调用服务端API-[预计算时长](0227-api-calculateduration.md)接口，实现根据考勤系统的排班情况，预计算员工加班、出差及请假的时长信息。
+1. **预计算时长**：调用服务端API-[预计算时长](0228-api-calculateduration.md)接口，实现根据考勤系统的排班情况，预计算员工加班、出差及请假的时长信息。
 
    > **[!NOTE]**
    >
    > 该步骤不可跳过，自有系统内的审批单信息同步到钉钉。例如，小明在10月15日的排班是8小时，10月16日的排班是4小时，如果正常上班，小明在10月15日、16日这2天的工作时间是12小时。小明在企业自有系统内提交请假审批单时，以下各情况，可提交的请假时长不同：
    >
-   > - 情况一，选择请假开始时间是10月15日，结束时间是10月15日；调用[预计算时长](1545-calculate-duration-based-on-attendance-scheduling.md)接口，获取的可提交请假时长最大是8小时。
-   > - 情况二，选择请假开始时间是10月15日，结束时间是10月16日，调用[预计算时长](1545-calculate-duration-based-on-attendance-scheduling.md)接口，获取的可提交请假时长最大是12小时。
+   > - 情况一，选择请假开始时间是10月15日，结束时间是10月15日；调用[预计算时长](1544-calculate-duration-based-on-attendance-scheduling.md)接口，获取的可提交请假时长最大是8小时。
+   > - 情况二，选择请假开始时间是10月15日，结束时间是10月16日，调用[预计算时长](1544-calculate-duration-based-on-attendance-scheduling.md)接口，获取的可提交请假时长最大是12小时。
 
    ```
    public CalculateDurationResponseBody durationCalculate(){
@@ -214,7 +214,7 @@ public void getAccessToken() throws ApiException {
      }
    }
    ```
-2. **通知审批通过**：在企业自有审批系统提交了假勤申请，审批通过后通过该接口通知钉钉考勤，调用服务端API-[通知审批通过](0228-api-processapprovefinish.md)接口，实现钉钉考勤同步通过。
+2. **通知审批通过**：在企业自有审批系统提交了假勤申请，审批通过后通过该接口通知钉钉考勤，调用服务端API-[通知审批通过](0229-api-processapprovefinish.md)接口，实现钉钉考勤同步通过。
 
    > **[!NOTE]**
    >
@@ -250,7 +250,7 @@ public void getAccessToken() throws ApiException {
      }
    }
    ```
-3. **通知审批撤销**：在企业自有审批系统提交了撤销假勤申请，根据自定义审批单ID `approve_id`，调用服务端API-[通知审批撤销](0229-notify-the-attendance-to-modify-the-punch-result-when-the.md)接口，实现钉钉考勤同步撤销。
+3. **通知审批撤销**：在企业自有审批系统提交了撤销假勤申请，根据自定义审批单ID `approve_id`，调用服务端API-[通知审批撤销](0230-notify-the-attendance-to-modify-the-punch-result-when-the.md)接口，实现钉钉考勤同步撤销。
 
    ```
    public void approveCancel() throws ApiException {

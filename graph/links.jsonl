@@ -10382,7 +10382,7 @@
 {"from": "docs/02-连接平台/06-PnMXTPmQSS-连接平台自动化/0013-multidimensional-introduction.md", "to": "docs/02-连接平台/06-PnMXTPmQSS-连接平台自动化/0014-automatic-verification-comparison.md", "text": "批次码与出库码智能比对", "n": 1}
 {"from": "docs/02-连接平台/06-PnMXTPmQSS-连接平台自动化/0015-connection-introduction-platform.md", "to": "docs/02-连接平台/06-PnMXTPmQSS-连接平台自动化/0002-automated-process-usage-guide.md", "text": "创建自动化流程", "n": 2}
 {"from": "docs/03-AI-PaaS/01-pm4vgiS9Br-平台介绍/0001-introduction-to-dingtalk-ai-paas-1.md", "to": "docs/03-AI-PaaS/02-UUtSqrTcwj-炼丹炉大模型平台/0001-introduction-of-large-model-platform-of-dingtalk-blast-furnace-1.md", "text": "炼丹炉大模型训练平台", "n": 1}
-{"from": "docs/03-AI-PaaS/01-pm4vgiS9Br-平台介绍/0001-introduction-to-dingtalk-ai-paas-1.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0001-ai-assistant-overview.md", "text": "AI 助理创建平台", "n": 1}
+{"from": "docs/03-AI-PaaS/01-pm4vgiS9Br-平台介绍/0001-introduction-to-dingtalk-ai-paas-1.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0001-ai-assistant-overview.md", "text": "DEAP·企业AI平台", "n": 1}
 {"from": "docs/03-AI-PaaS/01-pm4vgiS9Br-平台介绍/0002-supported-tuning-types-1.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1017-api-liandanluexclusivemodel.md", "text": "炼丹炉专属模型服务", "n": 1}
 {"from": "docs/03-AI-PaaS/01-pm4vgiS9Br-平台介绍/0002-supported-tuning-types-1.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1018-api-exclusivemodelcompleteservice.md", "text": "大模型推理服务（文生文模型）", "n": 1}
 {"from": "docs/03-AI-PaaS/01-pm4vgiS9Br-平台介绍/0002-supported-tuning-types-1.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1019-large-model-reasoning-service-interface-multimodal-model-1.md", "text": "大模型推理服务（多模态模型）", "n": 1}
@@ -10403,6 +10403,32 @@
 {"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0002-automatically-generate-an-ai-assistant-1.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0004-create-an-ai-assistant-workflow-1.md", "text": "新建工作流", "n": 1}
 {"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0002-automatically-generate-an-ai-assistant-1.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0007-manage-ai-assistant-workflow-1.md", "text": "自定义 MCP", "n": 1}
 {"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0012-create-your-first-ai-assistant-1.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0011-dingtalk-ai-model-security-policy-description-1.md", "text": "钉钉 AI 模型安全策略说明", "n": 1}
+{"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0018-create-a-dingtalk-ai-assistant-1.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0055-query-user-details.md", "text": "查询用户详情", "n": 1}
+{"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0018-create-a-dingtalk-ai-assistant-1.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0017-configuration-memory-1.md", "text": "调用授权", "n": 2}
+{"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0019-authentication-method.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0017-configuration-memory-1.md", "text": "调用授权", "n": 1}
+{"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0020-configure-an-awareness-trigger.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0017-configuration-memory-1.md", "text": "调用授权", "n": 1}
+{"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0021-group-message-aware-trigger-1.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0017-configuration-memory-1.md", "text": "调用授权", "n": 1}
+{"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0022-dialogue-and-interaction-1.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0017-configuration-memory-1.md", "text": "调用授权", "n": 1}
+{"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0023-advanced-settings.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0017-configuration-memory-1.md", "text": "调用授权", "n": 1}
+{"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0024-development-guide.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0017-configuration-memory-1.md", "text": "调用授权", "n": 1}
+{"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0025-ai-assistant-image-interpretation.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0017-configuration-memory-1.md", "text": "调用授权", "n": 1}
+{"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0026-field-extraction.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0017-configuration-memory-1.md", "text": "调用授权", "n": 1}
+{"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0027-server-exit-ip-1.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0017-configuration-memory-1.md", "text": "调用授权", "n": 1}
+{"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0028-tips-for-tuning-configuration-1.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0017-configuration-memory-1.md", "text": "调用授权", "n": 1}
+{"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0029-ai-development-large-screen-configuration.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0017-configuration-memory-1.md", "text": "调用授权", "n": 1}
+{"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0029-ai-development-large-screen-configuration.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0028-tips-for-tuning-configuration-1.md", "text": "查询文档列表", "n": 1}
+{"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0030-permission-configuration.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0017-configuration-memory-1.md", "text": "调用授权", "n": 1}
+{"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0031-intelligent-asking-number-2.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0017-configuration-memory-1.md", "text": "调用授权", "n": 1}
+{"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0032-intelligent-data-preprocessing-techniques-1.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0017-configuration-memory-1.md", "text": "调用授权", "n": 1}
+{"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0033-ai-assistant-message-sending-webhook-reply-message-mode.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0017-configuration-memory-1.md", "text": "调用授权", "n": 1}
+{"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0034-ai-assistant-development-guide.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0017-configuration-memory-1.md", "text": "调用授权", "n": 1}
+{"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0035-development-tools.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0017-configuration-memory-1.md", "text": "调用授权", "n": 1}
+{"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0036-the-ai-assistant-sends-a-card-to-reply-to-the.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0017-configuration-memory-1.md", "text": "调用授权", "n": 1}
+{"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0037-ai-assistant-sends-messages-active-sending-mode.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0017-configuration-memory-1.md", "text": "调用授权", "n": 1}
+{"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0038-execution-logic-1.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0017-configuration-memory-1.md", "text": "调用授权", "n": 1}
+{"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0039-the-ddautomator-framework.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0017-configuration-memory-1.md", "text": "调用授权", "n": 2}
+{"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0040-adaptive-plug-in-description-protocol-1.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0017-configuration-memory-1.md", "text": "调用授权", "n": 1}
+{"from": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0041-workflow-built-in-tools-1.md", "to": "docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0017-configuration-memory-1.md", "text": "调用授权", "n": 2}
 {"from": "docs/05-互动卡片/01-Vtaq5N3UH0-功能介绍/0001-what-is-a-card-platform.md", "to": "docs/05-互动卡片/01-Vtaq5N3UH0-功能介绍/0002-card-building-methods.md", "text": "构建方式", "n": 1}
 {"from": "docs/05-互动卡片/01-Vtaq5N3UH0-功能介绍/0001-what-is-a-card-platform.md", "to": "docs/05-互动卡片/01-Vtaq5N3UH0-功能介绍/0003-organization.md", "text": "名词释义", "n": 2}
 {"from": "docs/05-互动卡片/01-Vtaq5N3UH0-功能介绍/0001-what-is-a-card-platform.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0001-card-template-building-and-publishing.md", "text": "模板搭建卡片", "n": 3}

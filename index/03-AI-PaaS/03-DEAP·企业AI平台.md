@@ -1,6 +1,6 @@
 # AI PaaS / DEAP·企业AI平台
 
-> 15 篇 · 。上级：[总索引](../INDEX.md)
+> 41 篇 · 。上级：[总索引](../INDEX.md)
 
 - [概述](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0001-ai-assistant-overview.md) · 2026-08-07
 - [智能体开发](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0002-automatically-generate-an-ai-assistant-1.md) · 2026-08-03
@@ -17,3 +17,29 @@
 - [数据看板](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0013-operation-process.md) · 运营中心 · 2026-07-08
 - [角色授权](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0014-share-dingtalk-ai-assistant.md) · 安全与权限 · 2026-07-08
 - [敏感词管控](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0015-debugging-skill-call-1.md) · 安全与权限 · 2026-07-08
+- [模型微调](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0016-let-the-ai-assistant-play-a-better-role.md) · DEAP 开放API › 使用手册 · 2026-11-03
+- [调用授权](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0017-configuration-memory-1.md) · DEAP 开放API › 使用手册 · 2026-11-03
+- [调用企业智能体](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0018-create-a-dingtalk-ai-assistant-1.md) · DEAP 开放API › 智能体响应接口 · 2026-11-03
+- [创建DEAP智能体](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0019-authentication-method.md) · DEAP 开放API › 智能体管理接口 · 2026-11-03
+- [更新DEAP智能体](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0020-configure-an-awareness-trigger.md) · DEAP 开放API › 智能体管理接口 · 2026-11-03
+- [删除DEAP智能体](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0021-group-message-aware-trigger-1.md) · DEAP 开放API › 智能体管理接口 · 2026-11-03
+- [查询DEAP智能体信息](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0022-dialogue-and-interaction-1.md) · DEAP 开放API › 智能体管理接口 · 2026-11-03
+- [增加 FAQ](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0023-advanced-settings.md) · DEAP 开放API › 知识集接口 · 2026-11-03
+- [增加文档](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0024-development-guide.md) · DEAP 开放API › 知识集接口 · 2026-11-03
+- [删除文档](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0025-ai-assistant-image-interpretation.md) · DEAP 开放API › 知识集接口 · 2026-11-03
+- [创建知识集](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0026-field-extraction.md) · DEAP 开放API › 知识集接口 · 2026-11-03
+- [增加术语表](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0027-server-exit-ip-1.md) · DEAP 开放API › 知识集接口 · 2026-11-03
+- [查询文档列表](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0028-tips-for-tuning-configuration-1.md) · DEAP 开放API › 知识集接口 · 2026-11-03
+- [更新本地文档](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0029-ai-development-large-screen-configuration.md) · DEAP 开放API › 知识集接口 · 2026-11-03
+- [重新学习文档](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0030-permission-configuration.md) · DEAP 开放API › 知识集接口 · 2026-11-03
+- [查询知识集列表](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0031-intelligent-asking-number-2.md) · DEAP 开放API › 知识集接口 · 2026-11-03
+- [查询文档学习状态](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0032-intelligent-data-preprocessing-techniques-1.md) · DEAP 开放API › 知识集接口 · 2026-11-03
+- [DEAP智能体撤回消息](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0033-ai-assistant-message-sending-webhook-reply-message-mode.md) · DEAP 开放API › 智能交互接口 · 2026-11-03
+- [将DEAP智能体加入群聊](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0034-ai-assistant-development-guide.md) · DEAP 开放API › 智能交互接口 · 2026-11-03
+- [DEAP智能体发送群聊消息](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0035-development-tools.md) · DEAP 开放API › 智能交互接口 · 2026-11-03
+- [更新DEAP智能体发送的消息](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0036-the-ai-assistant-sends-a-card-to-reply-to-the.md) · DEAP 开放API › 智能交互接口 · 2026-11-03
+- [用户触发DEAP智能体发送消息](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0037-ai-assistant-sends-messages-active-sending-mode.md) · DEAP 开放API › 智能交互接口 · 2026-11-03
+- [用户查询DEAP智能体消息列表](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0038-execution-logic-1.md) · DEAP 开放API › 智能交互接口 · 2026-11-03
+- [DEAP智能体发送单聊消息（批量）](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0039-the-ddautomator-framework.md) · DEAP 开放API › 智能交互接口 · 2026-11-03
+- [DEAP智能体发送单聊消息（个人）](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0040-adaptive-plug-in-description-protocol-1.md) · DEAP 开放API › 智能交互接口 · 2026-11-03
+- [调用企业模型](../../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0041-workflow-built-in-tools-1.md) · DEAP 开放API › 模型调用接口 · 2026-11-03

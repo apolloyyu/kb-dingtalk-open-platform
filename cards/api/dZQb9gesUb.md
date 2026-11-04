@@ -23,10 +23,11 @@ permissions: Wiki.Node.Read
 - optional: option(Object), withStatisticalInfo(Boolean), withPermissionRole(Boolean)
 
 ## Returns
-- optional: nodes(Array), nodeId(String), workspaceId(String), name(String), size(Long), type(String), category(String), extension(String), url(String), creatorId(String), modifierId(String), createTime(String), modifiedTime(String), hasChildren(Boolean), statisticalInfo(Object), wordCount(Long), permissionRole(String), createTimestamp(Long), modifiedTimestamp(Long)
+- optional: nodes(Array), nodeId(String), workspaceId(String), name(String), size(Long), type(String), category(String), extension(String), url(String), creatorId(String), modifierId(String), createTime(String), modifiedTime(String), hasChildren(Boolean), statisticalInfo(Object), wordCount(Long), permissionRole(String), createTimestamp(Long), modifiedTimestamp(Long), failedNodes(Array), errorCode(String), errorMessage(String)
 
 ## Limits
 - 节点id。 最大size20。
+- 失败节点列表，与 nodes 一起按入参相对顺序给出，两者总数不超过入参 nodeIds 数量 最大size: 20
 
 source_url: https://open.dingtalk.com/document/development/obtain-nodes-in-batch
-updated_at: 2026-07-15 09:30:13
+updated_at: 2026-11-04 17:46:35

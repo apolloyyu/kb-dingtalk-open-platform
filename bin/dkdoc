@@ -105,6 +105,14 @@ def _is_sup(d):
     return bool(d and d.get("supplement"))
 
 
+def _sup_relevant(words):
+    """运营补充篇只在像是讲这件事时参与排序：命中两个以上不同的查询词，或一个英文/数字标识符、一个三字以上的中文词。
+    只撞上一个常见短词不算(实测：标题含「的含义」的运营篇在「grade_level 字段的取值范围和含义」这类题里排成首篇，
+    挤掉官方正文)。"""
+    words = set(words)
+    return len(words) >= 2 or any(re.search(r"[a-z0-9]", w) or len(w) >= 3 for w in words)
+
+
 def _sup_label(d):
     day = str(d.get("updated_at") or "")[:10]
     return f"钉仔运营补充说明({day})" if day else "钉仔运营补充说明"
@@ -916,8 +924,8 @@ def _ctx_impl(terms, n, force_full=False):
     docs = load_docs()
     doc_hint = _source_doc_hint(raw_query, docs)
     corpus = "\n".join((d["title"] + " " + " ".join(d.get("breadcrumb") or []) + " "
-                          + " ".join(d.get("headings") or [])).lower() for d in docs)
-    tl = _tokenize_query(terms, corpus, _STOP)
+                          + " ".join(d.get("headings") or [])).lower() for d in docs if not _is_sup(d))
+    tl = _tokenize_query(terms, corpus, _STOP)   # 分词只用官方篇的词料：加运营篇不改变其它问题怎么切词
     if not tl:
         tl = [w.lower() for w in terms if re.search(r"[a-zA-Z0-9一-鿿]", w)]
     raw_low = raw_query.lower()
@@ -1064,10 +1072,11 @@ def _ctx_impl(terms, n, force_full=False):
                 + d.get("slug", "") + " " + os.path.basename(d["local_path"])).lower()
         hays.append((title, crumb, " ".join((title, crumb, rest))))
     import math
-    n_docs = len(docs) or 1
+    official = [h for d, h in zip(docs, hays) if not _is_sup(d)]   # 词权重只按官方篇算：加运营篇不改变官方篇的分数
+    n_docs = len(official) or 1
     tw = {}
     for w in tl:
-        df = sum(1 for _, _, h in hays if w in h)
+        df = sum(1 for _, _, h in official if w in h)
         idf = math.log((n_docs + 1) / (df + 1))
         tw[w] = 10 * min(2.5, max(0.4, idf / 2.0))
     for d, (title, crumb, hay) in zip(docs, hays):
@@ -1080,6 +1089,8 @@ def _ctx_impl(terms, n, force_full=False):
         nhit = sum(1 for w in tl if w in hay)
         tscore = term_hits.get(d["local_path"], 0)
         if nhit == 0 and not tscore:
+            continue
+        if _is_sup(d) and not _sup_relevant([w for w in tl if w in hay]):
             continue
         # AND 太严(自然问句拆词很难同时命中一篇),改为 OR + 命中词数优先。
         # 枚举题优先汇总/配置页，降权单事件叶子页，避免“有哪些事件”只返回某一个监听 API。

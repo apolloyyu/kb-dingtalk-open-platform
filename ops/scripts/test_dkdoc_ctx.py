@@ -153,6 +153,25 @@ def check_supplement_docs():
             os.chmod(noperm, 0o600)
 
 
+VOCAB_TEXT = ("---\ntitle: 错误码 ZZ-7319 的含义（安装和使用说明）\nsource: ops\nupdated_at: 2026-11-05T18:00:00+08:00\n"
+              "questions:\n  - 错误码 ZZ-7319 是什么意思\n---\n## 安装和使用说明\n"
+              "接口返回 ZZ-7319 表示示例环境的调用配额已用完，次日零点恢复。\n")
+
+
+def check_supplement_isolation():
+    """运营篇不改变与它无关的问题的检索：分词词料与词权重只按官方篇算；只撞上一个常见短词(「含义」)的运营篇不参与
+    排序(实测：标题含「的含义」的样例在这类问题里排成首篇、挤掉官方正文)。与它有关的问题照常展开。"""
+    unrelated = ("grade_level 字段的取值范围和含义是什么？", "unionId参数的含义是什么", "status参数的含义是什么")
+    strip = lambda out: "\n".join(l for l in out.splitlines() if not l.startswith("已检索:"))  # 审计行含命中计数
+    with tempfile.TemporaryDirectory() as t0, tempfile.TemporaryDirectory() as t1:
+        bare, with_sup = _kb_with_supplement(t0, {}), _kb_with_supplement(t1, {"zz-test-ops-vocab.md": VOCAB_TEXT})
+        for q in unrelated:
+            a, b = (strip(_run_cli(c, "ctx", q).stdout) for c in (bare, with_sup))
+            check(a == b, f"运营篇改变了无关问题的检索结果: {q}")
+        check("(supplement/zz-test-ops-vocab.md) ==" in _run_cli(with_sup, "ctx", "错误码 ZZ-7319 是什么意思").stdout,
+              "运营篇在对口问题里未展开")
+
+
 def check_supplement_ranking_fixture():
     """合成小库：①只有运营篇讲到域限定词时，不能把归档旧页提回首位并宣称「归档页即唯一依据」；
     ②正文倒排索引(graph/terms.json)的行号只对应官方清单，越界行号不能落到运营篇上。"""
@@ -492,6 +511,7 @@ def main():
     check("同一行含全部" not in out and "0027-isv-cooperation-guide.md" in out, "grep 正则被误当多词")
 
     check_supplement_docs()
+    check_supplement_isolation()
     check_supplement_ranking_fixture()
 
     print("OK: dkdoc ctx fast-path/evidence-contract/rollback/source_url regression")

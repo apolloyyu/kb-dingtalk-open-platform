@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""dkdoc ctx 快路径与证据边界回归测试（不访问网络，不修改生成物）。"""
+"""dkdoc ctx 快路径与证据边界回归测试（不访问网络，不修改生成物；运营补充篇用例只写临时目录）。"""
 import io
 import json
 import os
@@ -61,35 +61,130 @@ def first_body_heading(output):
     return next((line for line in output.splitlines() if line.startswith("== 正文[1/")), "")
 
 
+SAMPLE = "zz-test-ops-sample.md"
+SAMPLE_TEXT = ("---\ntitle: 钉仔答疑群入群方式\nsource: ops\nupdated_at: 2026-11-05T18:00:00+08:00\nstage: trial\n"
+               "questions:\n  - 钉仔答疑群怎么加入\n  - 有没有开放平台答疑群\n---\n"
+               "开发者可以在开放平台官网首页右下角「联系我们」里找到钉仔答疑群二维码，扫码加入后直接提问。\n")
+
+
+def _kb_with_supplement(td, files):
+    """临时知识库根：复制 bin/dkdoc，其余顶层条目软链回真实库，运营篇只写进临时 supplement/。
+    测试中断也不会在真实库留下样例；真实库已有的运营篇不参与，结果与它们无关。"""
+    os.makedirs(os.path.join(td, "bin"))
+    cli = os.path.join(td, "bin", "dkdoc")
+    shutil.copyfile(DKDOC, cli)
+    for name in os.listdir(ROOT):
+        if name not in ("bin", "supplement") and not name.startswith("."):
+            os.symlink(os.path.join(ROOT, name), os.path.join(td, name))
+    os.makedirs(os.path.join(td, "supplement"))
+    for fn, text in files.items():
+        with open(os.path.join(td, "supplement", fn), "w", encoding="utf-8") as fh:
+            fh.write(text)
+    return cli
+
+
+def _run_cli(cli, *args, ok=True):
+    result = subprocess.run([sys.executable, cli, *args], cwd=os.path.dirname(os.path.dirname(cli)),
+                            capture_output=True, text=True, timeout=60)
+    if ok:
+        check(result.returncode == 0, f"命令失败 {args}: {result.stderr or result.stdout}")
+    return result
+
+
 def check_supplement_docs():
-    """运营补充篇(supplement/,ops 从钉钉文档同步):ctx/find/cat/grep 都能命中;不给链接、不露 frontmatter;
-    同分不压官方首篇。没有运营篇时其余输出不变,由空目录重放逐字节比对保证。"""
-    sd = os.path.join(ROOT, "supplement")
-    made = not os.path.isdir(sd)
-    os.makedirs(sd, exist_ok=True)
-    fp = os.path.join(sd, "zz-test-ops-sample.md")
-    with open(fp, "w", encoding="utf-8") as f:
-        f.write("---\ntitle: 钉仔答疑群入群方式\nsource: ops\nupdated_at: 2026-11-05T18:00:00+08:00\nstage: trial\n"
-                "questions:\n  - 钉仔答疑群怎么加入\n  - 有没有开放平台答疑群\n---\n"
-                "开发者可以在开放平台官网首页右下角「联系我们」里找到钉仔答疑群二维码，扫码加入后直接提问。\n")
-    try:
-        out = run("ctx", "钉仔答疑群怎么加入")
-        check("(supplement/zz-test-ops-sample.md) ==" in out, f"ctx 未展开运营补充篇: {out[:300]}")
-        check("钉仔运营补充说明,更新于 2026-11-05" in out and "「联系我们」" in out, "运营补充篇出处/正文缺失")
-        check("source: ops" not in out and "questions:" not in out, "运营补充篇 frontmatter 泄漏进正文")
-        check("supplement/zz-test-ops-sample.md" in run("find", "答疑群"), "find 未命中运营补充篇")
-        cat = run("cat", "supplement/zz-test-ops-sample.md")
-        check(cat.startswith("出处: 无链接(钉仔运营补充说明") and "questions:" not in cat, "cat 运营补充篇出处/frontmatter 不对")
-        check("supplement/zz-test-ops-sample.md" in run("grep", "联系我们"), "默认 grep 未覆盖 supplement/")
-        check("supplement/" not in subprocess.run(["python3", DKDOC, "grep", "联系我们", "docs"], cwd=ROOT,
-                                                 capture_output=True, text=True, timeout=30).stdout,
-              "显式子路径 grep 不应扩到 supplement/")
-        for q in ("获取企业内部应用的access_token", "机器人发送群聊消息", "免登流程是什么"):
-            check("supplement/" not in run("ctx", q), f"运营补充篇被无关问题带出: {q}")
-    finally:
-        os.remove(fp)
-        if made:
-            os.rmdir(sd)
+    """运营补充篇(supplement/，ops 从钉钉文档同步)：ctx/find/cat/grep/links 都能命中，出处无链接、不露 frontmatter；
+    冲突不按日期裁决；无关问题不带出样例；同分不压官方首篇；无 frontmatter/无日期/BOM/坏格式/读不了都不拖垮检索。
+    没有运营篇时其余输出不变，由空目录重放逐字节比对保证。"""
+    docs = MOD["load_jsonl"]("meta/documents.jsonl")
+    flags = MOD["kb_flags"]()
+    # 同分对照：一篇标题不被其它标题包含的现行官方篇，运营篇用同一标题
+    twin = next(d for d in sorted(docs, key=lambda x: x["local_path"])
+                if d["local_path"] not in flags and 6 <= len(d["title"]) <= 20
+                and sum(d["title"] in o["title"] for o in docs) == 1)
+    files = {
+        SAMPLE: SAMPLE_TEXT,
+        "zz-test-ops-twin.md": f"---\ntitle: {twin['title']}\nsource: ops\nupdated_at: 2026-11-05T18:00:00+08:00\n---\n"
+                               "同名运营补充篇正文。\n",
+        "zz-test-ops-nofm.md": "没有 frontmatter 的运营补充篇正文。\n",
+        "zz-test-ops-nodate.md": "---\ntitle: 无日期运营篇\nsource: ops\n---\n没有日期的运营补充篇正文。\n",
+        "zz-test-ops-bom.md": "﻿---\ntitle: 带BOM运营篇\nsource: ops\nupdated_at: 2026-11-04T09:00:00+08:00\n---\n"
+                              "开头带 BOM 的运营补充篇正文。\n",
+        "zz-test-ops-bad.md": "---\ntitle: 坏格式运营篇\nupdated_at: 2026-11-05\n  - 普通字段后面跟了列表项\n---\n坏格式运营篇正文。\n",
+        "zz-test-ops-noperm.md": "---\ntitle: 读不了的运营篇\n---\n正文\n",
+    }
+    with tempfile.TemporaryDirectory() as td:
+        cli = _kb_with_supplement(td, files)
+        noperm = os.path.join(td, "supplement", "zz-test-ops-noperm.md")
+        os.chmod(noperm, 0)
+        try:
+            r = _run_cli(cli, "ctx", "钉仔答疑群怎么加入")
+            out = r.stdout
+            check(f"(supplement/{SAMPLE}) ==" in out, f"ctx 未展开运营补充篇: {out[:300]}")
+            check("钉仔运营补充说明,更新于 2026-11-05" in out and "「联系我们」" in out, "运营补充篇出处/正文缺失")
+            check("不按日期裁决" in out and "日期较新者为准" not in out, "冲突规则不能按编辑日期裁决")
+            check("source: ops" not in out and "questions:" not in out, "运营补充篇 frontmatter 泄漏进正文")
+            if not os.access(noperm, os.R_OK):  # root 下 chmod 0 仍可读，跳过
+                check("跳过运营补充篇 supplement/zz-test-ops-noperm.md" in r.stderr, "读不了的运营篇应跳过并提示")
+            check(f"supplement/{SAMPLE}" in _run_cli(cli, "find", "答疑群").stdout, "find 未命中运营补充篇")
+            cat = _run_cli(cli, "cat", f"supplement/{SAMPLE}").stdout
+            check(cat.startswith("出处: 无链接(钉仔运营补充说明") and "questions:" not in cat,
+                  "cat 运营补充篇出处/frontmatter 不对")
+            grep = _run_cli(cli, "grep", "联系我们").stdout
+            check(f"== supplement/{SAMPLE} · 出处: 钉仔运营补充说明(2026-11-05)" in grep, "默认 grep 未覆盖 supplement/ 或缺出处")
+            check("supplement/" not in _run_cli(cli, "grep", "联系我们", "docs", ok=False).stdout,
+                  "显式子路径 grep 不应扩到 supplement/")
+            links = _run_cli(cli, "links", f"supplement/{SAMPLE}").stdout
+            check("不参与链接图" in links and " · \n" not in links, "links 对运营补充篇应给出处并说明不参与链接图")
+            for q in ("获取企业内部应用的access_token", "机器人发送群聊消息", "免登流程是什么"):
+                check(SAMPLE not in _run_cli(cli, "ctx", q).stdout, f"运营补充篇被无关问题带出: {q}")
+            found = _run_cli(cli, "find", twin["title"]).stdout
+            sup_twin = "supplement/zz-test-ops-twin.md"
+            check(twin["local_path"] in found and sup_twin in found
+                  and found.index(twin["local_path"]) < found.index(sup_twin), "同分时运营补充篇不能排在现行官方篇前面")
+            nofm = _run_cli(cli, "cat", "supplement/zz-test-ops-nofm.md").stdout
+            check("没有 frontmatter" in nofm and "更新日期未知" in nofm, "无 frontmatter 的运营篇应可读且标日期未知")
+            nodate = _run_cli(cli, "cat", "supplement/zz-test-ops-nodate.md").stdout
+            check("「据钉仔运营补充说明」" in nodate and "()" not in nodate, "无日期时作答指令不能出现空括号")
+            bom = _run_cli(cli, "cat", "supplement/zz-test-ops-bom.md").stdout
+            check("更新于 2026-11-04" in bom and "title:" not in bom, "带 BOM 的运营篇 frontmatter 未识别")
+            check("supplement/zz-test-ops-bom.md" in _run_cli(cli, "find", "带BOM运营篇").stdout, "带 BOM 的运营篇标题未识别")
+            check("坏格式运营篇正文" in _run_cli(cli, "cat", "supplement/zz-test-ops-bad.md").stdout, "坏格式运营篇拖垮了 cat")
+        finally:
+            os.chmod(noperm, 0o600)
+
+
+def check_supplement_ranking_fixture():
+    """合成小库：①只有运营篇讲到域限定词时，不能把归档旧页提回首位并宣称「归档页即唯一依据」；
+    ②正文倒排索引(graph/terms.json)的行号只对应官方清单，越界行号不能落到运营篇上。"""
+    with tempfile.TemporaryDirectory() as td:
+        for name in ("bin", "docs", "meta", "graph", "supplement"):
+            os.makedirs(os.path.join(td, name))
+        cli = os.path.join(td, "bin", "dkdoc")
+        shutil.copyfile(DKDOC, cli)
+        rows = [("docs/event-overview.md", "事件订阅概述", ["事件"], "事件订阅用于接收组织内的变更推送。"),
+                ("docs/old-miniapp-page.md", "小程序页面事件旧版", ["小程序"], "旧版小程序页面事件说明。")]
+        with open(os.path.join(td, "meta", "documents.jsonl"), "w", encoding="utf-8") as fh:
+            for lp, title, crumb, body in rows:
+                with open(os.path.join(td, lp), "w", encoding="utf-8") as doc:
+                    doc.write(f"# {title}\n\n{body}\n")
+                slug = os.path.basename(lp)[:-3]
+                fh.write(json.dumps({"local_path": lp, "slug": slug, "title": title, "breadcrumb": crumb,
+                                     "headings": [], "snippet": body, "updated_at": "2026-10-01",
+                                     "source_url": f"https://open.dingtalk.com/document/{slug}"}, ensure_ascii=False) + "\n")
+        with open(os.path.join(td, "meta", "kb_manifest.jsonl"), "w", encoding="utf-8") as fh:
+            fh.write(json.dumps({"local_path": "docs/old-miniapp-page.md", "tier": "T2"}) + "\n")
+        for name in ("api", "errcode", "event", "jsapi", "links", "permission"):
+            open(os.path.join(td, "graph", f"{name}.jsonl"), "w").close()
+        with open(os.path.join(td, "graph", "terms.json"), "w", encoding="utf-8") as fh:
+            json.dump({"foo_bar_field": [[len(rows), 9]]}, fh)  # 越界行号：恰好是第一篇运营篇的位置
+        with open(os.path.join(td, "supplement", "ops-a.md"), "w", encoding="utf-8") as fh:
+            fh.write("---\ntitle: 小程序页面事件说明\nsource: ops\nupdated_at: 2026-11-05T18:00:00+08:00\n---\n"
+                     "小程序页面事件的运营补充说明正文。\n")
+        out = _run_cli(cli, "ctx", "小程序 页面事件").stdout
+        check("supplement/ops-a.md" in first_body_heading(out) and "archived_only" not in out,
+              f"只有运营篇覆盖域限定词时不应提回归档页: {first_body_heading(out)}")
+        check("supplement/" not in _run_cli(cli, "ctx", "foo_bar_field 是什么", ok=False).stdout,
+              "倒排索引越界行号不能命中运营补充篇")
 
 
 def main():
@@ -397,6 +492,7 @@ def main():
     check("同一行含全部" not in out and "0027-isv-cooperation-guide.md" in out, "grep 正则被误当多词")
 
     check_supplement_docs()
+    check_supplement_ranking_fixture()
 
     print("OK: dkdoc ctx fast-path/evidence-contract/rollback/source_url regression")
     return 0

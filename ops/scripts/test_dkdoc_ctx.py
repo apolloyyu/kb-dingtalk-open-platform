@@ -61,6 +61,37 @@ def first_body_heading(output):
     return next((line for line in output.splitlines() if line.startswith("== 正文[1/")), "")
 
 
+def check_supplement_docs():
+    """运营补充篇(supplement/,ops 从钉钉文档同步):ctx/find/cat/grep 都能命中;不给链接、不露 frontmatter;
+    同分不压官方首篇。没有运营篇时其余输出不变,由空目录重放逐字节比对保证。"""
+    sd = os.path.join(ROOT, "supplement")
+    made = not os.path.isdir(sd)
+    os.makedirs(sd, exist_ok=True)
+    fp = os.path.join(sd, "zz-test-ops-sample.md")
+    with open(fp, "w", encoding="utf-8") as f:
+        f.write("---\ntitle: 钉仔答疑群入群方式\nsource: ops\nupdated_at: 2026-11-05T18:00:00+08:00\nstage: trial\n"
+                "questions:\n  - 钉仔答疑群怎么加入\n  - 有没有开放平台答疑群\n---\n"
+                "开发者可以在开放平台官网首页右下角「联系我们」里找到钉仔答疑群二维码，扫码加入后直接提问。\n")
+    try:
+        out = run("ctx", "钉仔答疑群怎么加入")
+        check("(supplement/zz-test-ops-sample.md) ==" in out, f"ctx 未展开运营补充篇: {out[:300]}")
+        check("钉仔运营补充说明,更新于 2026-11-05" in out and "「联系我们」" in out, "运营补充篇出处/正文缺失")
+        check("source: ops" not in out and "questions:" not in out, "运营补充篇 frontmatter 泄漏进正文")
+        check("supplement/zz-test-ops-sample.md" in run("find", "答疑群"), "find 未命中运营补充篇")
+        cat = run("cat", "supplement/zz-test-ops-sample.md")
+        check(cat.startswith("出处: 无链接(钉仔运营补充说明") and "questions:" not in cat, "cat 运营补充篇出处/frontmatter 不对")
+        check("supplement/zz-test-ops-sample.md" in run("grep", "联系我们"), "默认 grep 未覆盖 supplement/")
+        check("supplement/" not in subprocess.run(["python3", DKDOC, "grep", "联系我们", "docs"], cwd=ROOT,
+                                                 capture_output=True, text=True, timeout=30).stdout,
+              "显式子路径 grep 不应扩到 supplement/")
+        for q in ("获取企业内部应用的access_token", "机器人发送群聊消息", "免登流程是什么"):
+            check("supplement/" not in run("ctx", q), f"运营补充篇被无关问题带出: {q}")
+    finally:
+        os.remove(fp)
+        if made:
+            os.rmdir(sd)
+
+
 def main():
     simple = intent("通过免登码获取用户信息的接口地址和必填参数是什么")
     check(not any(simple.values()), f"简单 API 契约题被误拦截: {simple}")
@@ -364,6 +395,8 @@ def main():
                                          capture_output=True, text=True, timeout=30).stdout, "grep 子路径不存在未说明")
     out = run("grep", "帮助中心\\|运营答疑群")
     check("同一行含全部" not in out and "0027-isv-cooperation-guide.md" in out, "grep 正则被误当多词")
+
+    check_supplement_docs()
 
     print("OK: dkdoc ctx fast-path/evidence-contract/rollback/source_url regression")
     return 0

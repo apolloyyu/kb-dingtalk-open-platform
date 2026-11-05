@@ -35,6 +35,73 @@ def load_jsonl(rel):
         return [json.loads(line) for line in f]
 
 
+# 运营补充篇(supplement/,ops 从钉钉文档同步的整段/整篇内容):不在 docs/ 下，也不进 ECS 每日重建的
+# meta/documents.jsonl；读取时并入候选。运营文档多半没有小标题，匹配用 标题 + 小标题 +
+# 「希望能答对的问法」 + 首段；没有可对外访问的地址，出处行改为「钉仔运营补充说明(日期)」。
+SUPPLEMENT = "supplement"
+_SUP_LEAD = 200
+
+
+def _supplement_meta(path):
+    """(frontmatter 字典, 去掉 frontmatter 的正文)。只认 title/updated_at/questions 这几个简单字段。"""
+    with open(path, encoding="utf-8", errors="replace") as f:
+        text = f.read()
+    meta, body = {}, text
+    m = re.match(r"---\n(.*?)\n---\n?", text, re.S)
+    if m:
+        body = text[m.end():]
+        key = None
+        for line in m.group(1).splitlines():
+            item = re.match(r"\s+-\s+(.*)", line)
+            if item and key:
+                meta.setdefault(key, []).append(item.group(1).strip().strip('"'))
+                continue
+            kv = re.match(r"([A-Za-z_]+):\s*(.*)", line)
+            if kv:
+                key, val = kv.group(1), kv.group(2).strip().strip('"')
+                if val:
+                    meta[key] = val
+    return meta, body
+
+
+def supplement_docs():
+    sd = os.path.join(ROOT, SUPPLEMENT)
+    if not os.path.isdir(sd):
+        return []
+    out = []
+    for fn in sorted(os.listdir(sd)):
+        if not fn.endswith(".md"):
+            continue
+        meta, body = _supplement_meta(os.path.join(sd, fn))
+        qs = meta.get("questions") if isinstance(meta.get("questions"), list) else []
+        heads = [l.lstrip("# ").strip() for l in body.splitlines() if l.startswith("#")][:12]
+        lead = re.sub(r"\s+", " ", re.sub(r"(?m)^#.*$", "", body)).strip()[:_SUP_LEAD]
+        out.append({"local_path": f"{SUPPLEMENT}/{fn}", "slug": fn[:-3], "title": meta.get("title") or fn[:-3],
+                    "breadcrumb": ["运营补充"], "headings": heads + qs, "snippet": lead,
+                    "updated_at": str(meta.get("updated_at") or ""), "source_url": "", "supplement": True})
+    return out
+
+
+def load_docs():
+    """检索候选 = 官方文档清单 + 运营补充篇。"""
+    return load_jsonl("meta/documents.jsonl") + supplement_docs()
+
+
+def _is_sup(d):
+    return bool(d and d.get("supplement"))
+
+
+def _sup_cite(d):
+    day = str(d.get("updated_at") or "")[:10]
+    return (f"出处: 无链接(钉仔运营补充说明,更新于 {day or '日期未知'})。可作依据;回答注明「据钉仔运营补充说明"
+            f"({day})」,不给链接、不提文件名;与官方文档说法冲突时以日期较新者为准并说明差异")
+
+
+def _doc_src(d):
+    """单行出处:官方文档给 source_url,运营补充篇给来源与日期。"""
+    return f"钉仔运营补充说明({str(d.get('updated_at') or '')[:10]})" if _is_sup(d) else d["source_url"]
+
+
 def api_card_index():
     p = os.path.join(ROOT, "cards", "api-index.jsonl")
     return load_jsonl("cards/api-index.jsonl") if os.path.exists(p) else []
@@ -264,7 +331,7 @@ def kb_flags():
 
 def resolve_doc(query, docs=None):
     """按 局部路径/slug/文件名/子串 唯一定位一篇文档；多命中则返回列表。"""
-    docs = docs or load_jsonl("meta/documents.jsonl")
+    docs = docs or load_docs()
     q = query.strip().lstrip("./")
     exact = [d for d in docs if d["local_path"] == q or d["slug"] == q
              or os.path.basename(d["local_path"]) == os.path.basename(q)]
@@ -311,13 +378,13 @@ def print_doc_hit(d, flags, indent="  "):
     tag = " " + flags.get(d["local_path"], "") if flags.get(d["local_path"]) else ""
     print(d["local_path"] + tag)
     print(f"{indent}{d['title']} · {crumb} · {d['updated_at'][:10]}")
-    print(f"{indent}{d['source_url']}")
+    print(f"{indent}{_doc_src(d)}")
 
 
 def cmd_find(terms, n):
     if not terms:
         return usage("find 需要至少一个关键词")
-    docs = load_jsonl("meta/documents.jsonl")
+    docs = load_docs()
     flags = kb_flags()
     tl = [t.lower() for t in terms]
     scored = []
@@ -332,7 +399,8 @@ def cmd_find(terms, n):
             continue
         # AND 太严(自然问句拆词很难同时命中一篇),改为 OR + 命中词数优先
         score = nhit * 10 + sum(3 for w in tl if w in title) + sum(2 for w in tl if w in crumb)
-        tier_rank = 1 if d["local_path"] in flags else 0
+        # 同分时运营补充篇排在现行官方篇之后、归档篇之前
+        tier_rank = 1 if d["local_path"] in flags else (0.5 if _is_sup(d) else 0)
         scored.append((-score, tier_rank, d["local_path"], d))
     scored.sort()
     if not scored:
@@ -493,6 +561,10 @@ def cmd_cat(terms, n):
         for c in (cands or [])[:10]:
             print("  " + c["local_path"])
         return 1
+    if _is_sup(d):
+        print(_sup_cite(d))
+        sys.stdout.write(_supplement_meta(os.path.join(ROOT, d["local_path"]))[1])
+        return 0
     sys.stdout.write(_sanitize_links(open(os.path.join(ROOT, d["local_path"]), encoding="utf-8").read()))
     return 0
 
@@ -512,7 +584,13 @@ def _grep_url_printer():
     return emit
 
 
-def _grep_words(phrase, words, sub, n, emit):
+def _grep_subs(sub, extra):
+    """grep 的搜索目录:默认 docs/ 时先搜存在的 supplement/(排在前面,否则 docs/ 命中满 50 行截断后运营篇
+    永远出不来);显式子路径照旧只搜它。"""
+    return ([SUPPLEMENT] if extra and os.path.isdir(os.path.join(ROOT, SUPPLEMENT)) else []) + [sub]
+
+
+def _grep_words(phrase, words, sub, n, emit, extra=False):
     """多词纯文本(grep '考勤 变更 事件')：原样当正则时空格也要逐字匹配，几乎恒为 0。
     原短语逐字有命中时照旧只给这些行；没有时改为同一行含全部词，再没有就列同一篇里含全部词的
     文档(示该篇首个命中行)。"""
@@ -521,7 +599,8 @@ def _grep_words(phrase, words, sub, n, emit):
         return 1
     low = [w.lower() for w in words]
     cap, exact, line_hits, file_hits = max(n * 5, 50), [], [], []
-    for dirpath, _, files in sorted(os.walk(os.path.join(ROOT, sub))):
+    walk = [w for s in _grep_subs(sub, extra) for w in sorted(os.walk(os.path.join(ROOT, s)))]
+    for dirpath, _, files in walk:
         for fn in sorted(files):
             if not fn.endswith(".md"):
                 continue
@@ -569,17 +648,21 @@ def cmd_grep(terms, n):
     if not terms:
         return usage("grep 需要 pattern")
     pattern, sub = terms[0], (terms[1] if len(terms) > 1 else "docs")
+    # 未指定子路径时运营补充篇(supplement/)一起搜:模型常直接 grep 关键词,只搜 docs/ 会漏掉运营内容
+    extra = len(terms) <= 1
     emit = _grep_url_printer()
     words = [w for w in re.split(r"\s+", pattern.strip()) if w]
     if len(words) > 1 and not re.search(r"[\\|()\[\]{}*+?^$]", pattern):
-        return _grep_words(pattern.strip(), words, sub, n, emit)
+        return _grep_words(pattern.strip(), words, sub, n, emit, extra)
     # 模型按 GNU grep 习惯写「或」：'词1\|词2'。rg 与 Python 正则里 \| 是字面竖线，恒为 0
     # (10-28 线上错题 20 次 \| 写法全部无命中)。文档里没人要搜字面「\|」，按「或」处理。
     pattern = pattern.replace("\\|", "|")
     try:
-        r = subprocess.run(["rg", "-n", "--no-heading", "-m", "5", pattern, sub],
-                           cwd=ROOT, capture_output=True, text=True)
-        lines = r.stdout.splitlines()
+        lines = []
+        for path in _grep_subs(sub, extra):   # 逐目录调用:rg 多路径并行输出顺序不定,运营篇可能被截断丢掉
+            r = subprocess.run(["rg", "-n", "--no-heading", "-m", "5", pattern, path],
+                               cwd=ROOT, capture_output=True, text=True)
+            lines += r.stdout.splitlines()
         for line in lines[:max(n * 5, 50)]:
             emit(line)
         if len(lines) > max(n * 5, 50):
@@ -588,7 +671,7 @@ def cmd_grep(terms, n):
     except FileNotFoundError:
         pat = re.compile(pattern)
         cnt = 0
-        for dirpath, _, files in sorted(os.walk(os.path.join(ROOT, sub))):
+        for dirpath, _, files in [w for s in _grep_subs(sub, extra) for w in sorted(os.walk(os.path.join(ROOT, s)))]:
             for fn in sorted(files):
                 if not fn.endswith(".md"):
                     continue
@@ -793,7 +876,7 @@ def _ctx_impl(terms, n, force_full=False):
              "配额", "几个", "多久", "时长", "为什么", "原理", "机制", "原因", "怎么回事",
              "报错", "错误", "失败", "异常", "不通过", "提示", "全部", "所有", "哪些", "哪个",
              "什么", "如果", "情况下", "先", "再", "然后", "之后", "钉钉", "的", "吗", "呢", "怎么", "如何"}
-    docs = load_jsonl("meta/documents.jsonl")
+    docs = load_docs()
     doc_hint = _source_doc_hint(raw_query, docs)
     corpus = "\n".join((d["title"] + " " + " ".join(d.get("breadcrumb") or []) + " "
                           + " ".join(d.get("headings") or [])).lower() for d in docs)
@@ -994,7 +1077,7 @@ def _ctx_impl(terms, n, force_full=False):
                 score -= 8
         if d["local_path"] in flags and not intent["version"]:
             score -= 100
-        tier_rank = 1 if d["local_path"] in flags else 0
+        tier_rank = 1 if d["local_path"] in flags else (0.5 if _is_sup(d) else 0)   # 同分时运营补充篇排在现行官方篇之后
         doc_nhit[d["local_path"]] = nhit
         scored.append((-score, tier_rank, d["local_path"], d))
     scored.sort()
@@ -1120,6 +1203,9 @@ def _ctx_impl(terms, n, force_full=False):
     blocked_audit = ",".join(blocked_reasons) or "none"
 
     archived_first = bool(cand) and cand[0]["local_path"] in flags
+    # 运营补充篇篇目分数第一时追加展开:实体命中/流程篇常占满正文名额(快卡时正文为 0),运营篇只剩标题。
+    # 只追加不替换;不排第一的题正文不变。
+    sup_top = scored[0][3] if scored and _is_sup(scored[0][3]) else None
 
     def render(top_k):
         parts = []
@@ -1130,7 +1216,7 @@ def _ctx_impl(terms, n, force_full=False):
             parts.extend(ent_lines[:8])
             for d in cand[:5]:
                 tag = " " + flags.get(d["local_path"], "") if flags.get(d["local_path"]) else ""
-                parts.append(f"[doc] {d['title']}{tag} · {' › '.join(d.get('breadcrumb') or [])[:40]} · {d['source_url']}")
+                parts.append(f"[doc] {d['title']}{tag} · {' › '.join(d.get('breadcrumb') or [])[:40]} · {_doc_src(d)}")
             parts.append("(以上为实体表/篇目精确命中，存在即事实；未列出≠不存在，仍须 find 换词再查后才可否定)")
         if card_fast:
             parts.append("== API答案卡(card:full,首名明确,可直接作答) ==")
@@ -1167,12 +1253,23 @@ def _ctx_impl(terms, n, force_full=False):
         if ent_lines:
             parts.append("== 实体命中 ==")
             parts.extend(ent_lines)
+        if sup_top and sup_top not in cand[:top_k]:
+            parts.append(f"\n== 正文[运营补充] {sup_top['title']} ({sup_top['local_path']}) ==")
+            parts.append(_sup_cite(sup_top))
+            sup_body = _supplement_meta(os.path.join(ROOT, sup_top["local_path"]))[1]
+            if len(sup_body) > _CTX_BODY_CAP:
+                sup_body = _cut(sup_body, _CTX_BODY_CAP) + f"\n…[已截断，完整: dkdoc cat {sup_top['local_path']}]"
+            parts.append(sup_body)
         for i, d in enumerate(cand[:top_k]):
             lp = d["local_path"]
             tag = " " + flags.get(lp, "") if flags.get(lp) else ""
             parts.append(f"\n== 正文[{i+1}/{min(top_k, len(cand))}] {d['title']}{tag} ({lp}) ==")
-            parts.append(f"source_url: {d['source_url']} · updated_at: {d['updated_at'][:10]}")
-            body = _sanitize_links(open(os.path.join(ROOT, lp), encoding="utf-8", errors="ignore").read())
+            if _is_sup(d):
+                parts.append(_sup_cite(d))
+                body = _supplement_meta(os.path.join(ROOT, lp))[1]
+            else:
+                parts.append(f"source_url: {d['source_url']} · updated_at: {d['updated_at'][:10]}")
+                body = _sanitize_links(open(os.path.join(ROOT, lp), encoding="utf-8", errors="ignore").read())
             if len(body) > _CTX_BODY_CAP:
                 body = _cut(body, _CTX_BODY_CAP) + f"\n…[已截断，完整: dkdoc cat {lp}]"
             parts.append(body)

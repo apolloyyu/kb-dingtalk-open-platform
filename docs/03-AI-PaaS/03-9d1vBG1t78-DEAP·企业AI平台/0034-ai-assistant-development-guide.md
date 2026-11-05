@@ -7,12 +7,12 @@ group: "AI PaaS"
 tab: "DEAP·企业AI平台"
 breadcrumb: "DEAP 开放API > 智能交互接口 > 将DEAP智能体加入群聊"
 doc_id: "LmbUoTPHht"
-updated_at: "2026-11-03 14:57:28"
+updated_at: "2026-11-05 15:14:43"
 ---
 
 > Source: https://open.dingtalk.com/document/aipass/ai-assistant-development-guide
 > Path: AI PaaS / DEAP·企业AI平台 / DEAP 开放API > 智能交互接口 > 将DEAP智能体加入群聊
-> Updated: 2026-11-03 14:57:28
+> Updated: 2026-11-05 15:14:43
 
 # 将DEAP智能体加入群聊
 
@@ -61,7 +61,7 @@ updated_at: "2026-11-03 14:57:28"
 | --- | --- |
 | HTTP URL | https://api-deap.dingtalk.com/v1/assistant/assistants/{assistant\_id}/groups |
 | HTTP Method | POST |
-| 权限要求 | DEAP智能体管理的写入权限。 |
+| 权限要求 | DEAP智能体管理的写入权限 |
 
 ### **请求头**
 

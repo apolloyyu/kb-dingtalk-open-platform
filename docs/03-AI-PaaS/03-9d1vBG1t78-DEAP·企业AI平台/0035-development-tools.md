@@ -7,12 +7,12 @@ group: "AI PaaS"
 tab: "DEAP·企业AI平台"
 breadcrumb: "DEAP 开放API > 智能交互接口 > DEAP智能体发送群聊消息"
 doc_id: "HxFtBCxWqo"
-updated_at: "2026-11-03 14:57:30"
+updated_at: "2026-11-05 15:14:46"
 ---
 
 > Source: https://open.dingtalk.com/document/aipass/development-tools
 > Path: AI PaaS / DEAP·企业AI平台 / DEAP 开放API > 智能交互接口 > DEAP智能体发送群聊消息
-> Updated: 2026-11-03 14:57:30
+> Updated: 2026-11-05 15:14:46
 
 # DEAP智能体发送群聊消息
 
@@ -29,7 +29,7 @@ updated_at: "2026-11-03 14:57:30"
 | 钉钉互动卡片(按钮/表单/状态翻转) | ✅ |
 | 群内 @全员 | ✅ |
 | 群内 @指定成员 | ✅ 单次 1~100 人，支持 userId / unionId |
-| 顺丰内部群和外部群 | ✅ |
+| 普通群、内部群或外部群 | ✅ |
 | openConversationId 两种形态自动识别(base64 + 纯数字) | ✅ |
 | 消息撤回 / 更新 | ❌ V1 暂不支持 |
 | 批量发送(同消息多群) | ❌ V1 暂不支持 |
@@ -59,7 +59,7 @@ updated_at: "2026-11-03 14:57:30"
 | --- | --- |
 | HTTP URL | https://api-deap.dingtalk.com/v1/assistant/messages/group |
 | HTTP Method | POST |
-| 权限要求 | AI助理消息的写入权限 |
+| 权限要求 | DEAP智能体消息的写入权限 |
 
 ### **请求头**
 

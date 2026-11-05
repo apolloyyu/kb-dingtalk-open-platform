@@ -7,12 +7,12 @@ group: "AI PaaS"
 tab: "DEAP·企业AI平台"
 breadcrumb: "DEAP 开放API > 智能交互接口 > 用户查询DEAP智能体消息列表"
 doc_id: "JZsuQeHTjS"
-updated_at: "2026-11-03 14:57:35"
+updated_at: "2026-11-05 15:14:49"
 ---
 
 > Source: https://open.dingtalk.com/document/aipass/execution-logic-1
 > Path: AI PaaS / DEAP·企业AI平台 / DEAP 开放API > 智能交互接口 > 用户查询DEAP智能体消息列表
-> Updated: 2026-11-03 14:57:35
+> Updated: 2026-11-05 15:14:49
 
 # 用户查询DEAP智能体消息列表
 
@@ -24,7 +24,7 @@ updated_at: "2026-11-03 14:57:35"
 | --- | --- |
 | HTTP URL | https://api-deap.dingtalk.com/v1/assistant/messages |
 | HTTP Method | GET |
-| 权限要求 | AI助理消息的查询权限 |
+| 权限要求 | DEAP智能体消息的写入权限 |
 
 ### **请求头**
 

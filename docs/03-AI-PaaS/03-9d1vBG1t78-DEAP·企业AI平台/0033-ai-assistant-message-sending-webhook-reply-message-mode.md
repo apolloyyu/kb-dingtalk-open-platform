@@ -7,12 +7,12 @@ group: "AI PaaS"
 tab: "DEAP·企业AI平台"
 breadcrumb: "DEAP 开放API > 智能交互接口 > DEAP智能体撤回消息"
 doc_id: "m9FJiwmkZL"
-updated_at: "2026-11-03 14:57:34"
+updated_at: "2026-11-05 15:14:48"
 ---
 
 > Source: https://open.dingtalk.com/document/aipass/ai-assistant-message-sending-webhook-reply-message-mode
 > Path: AI PaaS / DEAP·企业AI平台 / DEAP 开放API > 智能交互接口 > DEAP智能体撤回消息
-> Updated: 2026-11-03 14:57:34
+> Updated: 2026-11-05 15:14:48
 
 # DEAP智能体撤回消息
 
@@ -24,7 +24,7 @@ updated_at: "2026-11-03 14:57:34"
 | --- | --- |
 | HTTP URL | https://api-deap.dingtalk.com/v1/assistant/messages |
 | HTTP Method | DELETE |
-| 权限要求 | AI助理消息的写入权限 |
+| 权限要求 | DEAP智能体消息的写入权限 |
 
 ### **请求头**
 

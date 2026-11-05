@@ -9686,6 +9686,8 @@
 {"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0002-org-event-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0118-events-aiot-device-uplink-event.md", "text": "AIoT设备上行事件", "n": 1}
 {"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0002-org-event-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0119-events-aone-device-info-changed.md", "text": "A1设备信息变更事件", "n": 1}
 {"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0002-org-event-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0120-events-aone-device-bind-changed.md", "text": "A1设备绑定状态变更事件", "n": 1}
+{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0002-org-event-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0121-events-aone-minutes-precreated.md", "text": "A1企业听记预创建事件", "n": 1}
+{"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0002-org-event-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0122-events-aone-industry-minutes-precreated.md", "text": "A1行业版听记预创建事件", "n": 1}
 {"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0002-org-event-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0123-events-aone-assistant-status-change-1.md", "text": "DingTalkA1小助理状态变更", "n": 1}
 {"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0002-org-event-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0124-events-aone-assistant-summary-change.md", "text": "DingTalkA1小助理总结完成事件", "n": 1}
 {"from": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0002-org-event-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0125-events-aone-industry-device-bind-changed.md", "text": "A1行业版设备绑定状态变更事件", "n": 1}

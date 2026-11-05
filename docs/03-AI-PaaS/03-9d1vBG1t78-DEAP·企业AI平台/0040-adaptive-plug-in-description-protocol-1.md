@@ -7,16 +7,16 @@ group: "AI PaaS"
 tab: "DEAP·企业AI平台"
 breadcrumb: "DEAP 开放API > 智能交互接口 > DEAP智能体发送单聊消息（个人）"
 doc_id: "CKvff4zoDY"
-updated_at: "2026-11-03 14:57:30"
+updated_at: "2026-11-05 15:14:45"
 ---
 
 > Source: https://open.dingtalk.com/document/aipass/adaptive-plug-in-description-protocol-1
 > Path: AI PaaS / DEAP·企业AI平台 / DEAP 开放API > 智能交互接口 > DEAP智能体发送单聊消息（个人）
-> Updated: 2026-11-03 14:57:30
+> Updated: 2026-11-05 15:14:45
 
 # DEAP智能体发送单聊消息（个人）
 
-该接口用于以AI助理身份向用户发送单聊消息
+该接口用于以DEAP智能体身份向用户发送单聊消息
 
 ## **请求**
 
@@ -24,7 +24,7 @@ updated_at: "2026-11-03 14:57:30"
 | --- | --- |
 | HTTP URL | https://api-deap.dingtalk.com/v1/assistant/messages |
 | HTTP Method | POST |
-| 权限要求 | AI助理消息的写入权限 |
+| 权限要求 | DEAP智能体消息的写入权限 |
 
 ### **请求头**
 

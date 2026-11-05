@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "事件订阅总览"
 doc_id: "XfFwKhqxhk"
-updated_at: "2026-09-01 09:16:14"
+updated_at: "2026-11-05 15:15:50"
 ---
 
 > Source: https://open.dingtalk.com/document/development/org-event-overview
 > Path: 应用开发 / 事件订阅 / 事件订阅总览
-> Updated: 2026-09-01 09:16:14
+> Updated: 2026-11-05 15:15:50
 
 # 事件订阅总览
 
@@ -274,6 +274,8 @@ updated_at: "2026-09-01 09:16:14"
 | [DingTalkA1小助理状态变更](0123-events-aone-assistant-status-change-1.md) | DingTalkA1小助理状态变更事件。 |
 | [A1设备信息变更事件](0119-events-aone-device-info-changed.md) | 当企业内A1设备的设备信息发生变化时，推送该事件。 |
 | [A1设备绑定状态变更事件](0120-events-aone-device-bind-changed.md) | 当企业内A1设备的绑定状态发生变化时，推送该事件。 |
+| [A1企业听记预创建事件](0121-events-aone-minutes-precreated.md) | A1的录音文件上传后，预分配听记UUID时推送。 |
+| [A1行业版听记预创建事件](0122-events-aone-industry-minutes-precreated.md) | A1的录音文件上传后，预分配听记UUID时推送。 |
 | [A1行业版设备绑定状态变更事件](0125-events-aone-industry-device-bind-changed.md) | 当行业版A1设备的绑定状态发生变化时，向三方组织推送该变更事件。 |
 
 ## **视听智能服务**

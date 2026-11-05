@@ -7,12 +7,12 @@ group: "AI PaaS"
 tab: "DEAP·企业AI平台"
 breadcrumb: "DEAP 开放API > 智能交互接口 > DEAP智能体发送单聊消息（批量）"
 doc_id: "h4dhsKT2RU"
-updated_at: "2026-11-03 14:57:29"
+updated_at: "2026-11-05 15:14:44"
 ---
 
 > Source: https://open.dingtalk.com/document/aipass/the-ddautomator-framework
 > Path: AI PaaS / DEAP·企业AI平台 / DEAP 开放API > 智能交互接口 > DEAP智能体发送单聊消息（批量）
-> Updated: 2026-11-03 14:57:29
+> Updated: 2026-11-05 15:14:44
 
 # DEAP智能体发送单聊消息（批量）
 
@@ -42,7 +42,7 @@ updated_at: "2026-11-03 14:57:29"
 调用前请确认：
 
 1. 已取得 DEAP OpenAPI API Key。
-2. API Key 对请求中的助理具有写入权限，如何获取参见[调用授权](0017-configuration-memory-1.md)。
+2. API Key 对请求中的智能体具有写入权限，如何获取参见[调用授权](0017-configuration-memory-1.md)。
 3. 目标企业已安装可用的智能体，并已配置钉钉单聊消息发送能力。
 4. `union_ids` 中的用户属于请求指定的企业。
 
@@ -52,7 +52,7 @@ updated_at: "2026-11-03 14:57:29"
 | --- | --- |
 | HTTP URL | https://api-deap.dingtalk.com/v1/assistant/messages/batch |
 | HTTP Method | POST |
-| 权限要求 | AI助理消息的写入权限 |
+| 权限要求 | DEAP智能体消息的写入权限 |
 
 ### **请求头**
 

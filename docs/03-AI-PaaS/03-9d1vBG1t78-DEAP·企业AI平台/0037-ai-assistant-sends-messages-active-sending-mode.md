@@ -7,12 +7,12 @@ group: "AI PaaS"
 tab: "DEAP·企业AI平台"
 breadcrumb: "DEAP 开放API > 智能交互接口 > 用户触发DEAP智能体发送消息"
 doc_id: "yHcWaG3yUs"
-updated_at: "2026-11-03 14:57:31"
+updated_at: "2026-11-05 15:14:47"
 ---
 
 > Source: https://open.dingtalk.com/document/aipass/ai-assistant-sends-messages-active-sending-mode
 > Path: AI PaaS / DEAP·企业AI平台 / DEAP 开放API > 智能交互接口 > 用户触发DEAP智能体发送消息
-> Updated: 2026-11-03 14:57:31
+> Updated: 2026-11-05 15:14:47
 
 # 用户触发DEAP智能体发送消息
 
@@ -24,7 +24,7 @@ updated_at: "2026-11-03 14:57:31"
 | --- | --- |
 | HTTP URL | https://api-deap.dingtalk.com/v1/assistant/runs |
 | HTTP Method | POST |
-| 权限要求 | AI助理运行时权限 |
+| 权限要求 | DEAP智能体消息的写入权限 |
 
 ### **请求头**
 

@@ -35,6 +35,106 @@ def load_jsonl(rel):
         return [json.loads(line) for line in f]
 
 
+# 运营补充篇(supplement/,ops 从钉钉文档同步的整段/整篇内容):不在 docs/ 下，也不进 ECS 每日重建的
+# meta/documents.jsonl；读取时并入候选。运营文档多半没有小标题，匹配用 标题 + 小标题 +
+# 「希望能答对的问法」 + 首段；没有可对外访问的地址，出处行改为「钉仔运营补充说明(日期)」。
+SUPPLEMENT = "supplement"
+_SUP_LEAD = 200
+
+
+def _supplement_meta(path):
+    """(frontmatter 字典, 去掉 frontmatter 的正文)。只认 title/updated_at/questions 这几个简单字段。
+    utf-8-sig 去掉开头的 BOM;CRLF 由文本模式读取统一成 \\n。"""
+    with open(path, encoding="utf-8-sig", errors="replace") as f:
+        text = f.read()
+    meta, body = {}, text
+    m = re.match(r"---\n(.*?)\n---\n?", text, re.S)
+    if m:
+        body = text[m.end():]
+        key = None
+        for line in m.group(1).splitlines():
+            item = re.match(r"\s+-\s+(.*)", line)
+            if item and key:
+                if isinstance(meta.get(key, []), list):   # 普通字段后面跟列表项:忽略,不抛错
+                    meta.setdefault(key, []).append(item.group(1).strip().strip('"'))
+                continue
+            kv = re.match(r"([A-Za-z_]+):\s*(.*)", line)
+            if kv:
+                key, val = kv.group(1), kv.group(2).strip().strip('"')
+                if val:
+                    meta[key] = val
+    return meta, body
+
+
+_SUP_DOCS = None
+
+
+def supplement_docs():
+    """运营补充篇的检索记录(本进程只读一次盘,正文挂在 _body 上供 ctx/cat 复用)。单篇读不了(同步中途被删、
+    权限等)就跳过并在 stderr 提示,不拖垮整个检索。"""
+    global _SUP_DOCS
+    if _SUP_DOCS is not None:
+        return _SUP_DOCS
+    sd = os.path.join(ROOT, SUPPLEMENT)
+    out = []
+    for fn in (sorted(os.listdir(sd)) if os.path.isdir(sd) else []):
+        if not fn.endswith(".md"):
+            continue
+        try:
+            meta, body = _supplement_meta(os.path.join(sd, fn))
+        except OSError as e:
+            print(f"dkdoc: 跳过运营补充篇 {SUPPLEMENT}/{fn}: {e}", file=sys.stderr)
+            continue
+        text = lambda k: meta[k] if isinstance(meta.get(k), str) else ""  # noqa: E731
+        qs = meta.get("questions") if isinstance(meta.get("questions"), list) else []
+        heads = [l.lstrip("# ").strip() for l in body.splitlines() if l.startswith("#")][:12]
+        lead = re.sub(r"\s+", " ", re.sub(r"(?m)^#.*$", "", body)).strip()[:_SUP_LEAD]
+        out.append({"local_path": f"{SUPPLEMENT}/{fn}", "slug": fn[:-3], "title": text("title") or fn[:-3],
+                    "breadcrumb": ["运营补充"], "headings": heads + qs, "snippet": lead,
+                    "updated_at": text("updated_at"), "source_url": "", "supplement": True, "_body": body})
+    _SUP_DOCS = out
+    return out
+
+
+def load_docs():
+    """检索候选 = 官方文档清单 + 运营补充篇(接在官方清单之后)。"""
+    return load_jsonl("meta/documents.jsonl") + supplement_docs()
+
+
+def _is_sup(d):
+    return bool(d and d.get("supplement"))
+
+
+def _sup_relevant(words):
+    """运营补充篇只在像是讲这件事时参与排序：命中两个以上不同的查询词，或一个英文/数字标识符、一个三字以上的中文词。
+    只撞上一个常见短词不算(实测：标题含「的含义」的运营篇在「grade_level 字段的取值范围和含义」这类题里排成首篇，
+    挤掉官方正文)。"""
+    words = set(words)
+    return len(words) >= 2 or any(re.search(r"[a-z0-9]", w) or len(w) >= 3 for w in words)
+
+
+def _sup_label(d):
+    day = str(d.get("updated_at") or "")[:10]
+    return f"钉仔运营补充说明({day})" if day else "钉仔运营补充说明"
+
+
+def _sup_cite(d):
+    day = str(d.get("updated_at") or "")[:10]
+    return (f"出处: 无链接(钉仔运营补充说明,{'更新于 ' + day if day else '更新日期未知'})。可作依据;回答注明"
+            f"「据{_sup_label(d)}」,不给链接、不提文件名;与官方文档说法不一致时不按日期裁决:接口参数、权限、"
+            "错误码、限额等以现行官方文档为准,运营说明只在它写明的适用范围和生效时间内补充;判断不了就两种说法都说明"
+            "并标注待核实")
+
+
+def _sup_body(d):
+    return _sanitize_links(d.get("_body") or "")
+
+
+def _doc_src(d):
+    """单行出处:官方文档给 source_url,运营补充篇给来源与日期(无链接)。"""
+    return _sup_label(d) if _is_sup(d) else d["source_url"]
+
+
 def api_card_index():
     p = os.path.join(ROOT, "cards", "api-index.jsonl")
     return load_jsonl("cards/api-index.jsonl") if os.path.exists(p) else []
@@ -246,7 +346,8 @@ def term_doc_hits(tl, docs):
             continue
         df = len(entry)
         for rank, (di, cnt) in enumerate(entry):
-            if 0 <= di < len(docs):
+            # 行号只对应 meta/documents.jsonl;运营补充篇接在其后、不在索引里,越界的行号不能落到它们身上
+            if 0 <= di < len(docs) and not _is_sup(docs[di]):
                 lp = docs[di]["local_path"]
                 hits[lp] = hits.get(lp, 0) + max(6, 40 - 4 * rank) + min(cnt, 10) - min(df, 10)
     return hits
@@ -264,7 +365,7 @@ def kb_flags():
 
 def resolve_doc(query, docs=None):
     """按 局部路径/slug/文件名/子串 唯一定位一篇文档；多命中则返回列表。"""
-    docs = docs or load_jsonl("meta/documents.jsonl")
+    docs = docs or load_docs()
     q = query.strip().lstrip("./")
     exact = [d for d in docs if d["local_path"] == q or d["slug"] == q
              or os.path.basename(d["local_path"]) == os.path.basename(q)]
@@ -292,7 +393,7 @@ def _normalized_source_url(value):
 def _source_doc_hint(query, docs):
     """用户贴 source_url（即使带 query/fragment）时，确定性锚定对应文档。"""
     by_url = {_normalized_source_url(d.get("source_url")): d for d in docs if d.get("source_url")}
-    by_slug = {str(d.get("slug") or "").lower(): d for d in docs if d.get("slug")}
+    by_slug = {str(d.get("slug") or "").lower(): d for d in docs if d.get("slug") and not _is_sup(d)}
     for raw in re.findall(r"https?://[^\s<>\"']+", query, re.I):
         normalized = _normalized_source_url(raw)
         if normalized in by_url:
@@ -311,13 +412,13 @@ def print_doc_hit(d, flags, indent="  "):
     tag = " " + flags.get(d["local_path"], "") if flags.get(d["local_path"]) else ""
     print(d["local_path"] + tag)
     print(f"{indent}{d['title']} · {crumb} · {d['updated_at'][:10]}")
-    print(f"{indent}{d['source_url']}")
+    print(f"{indent}{_doc_src(d)}")
 
 
 def cmd_find(terms, n):
     if not terms:
         return usage("find 需要至少一个关键词")
-    docs = load_jsonl("meta/documents.jsonl")
+    docs = load_docs()
     flags = kb_flags()
     tl = [t.lower() for t in terms]
     scored = []
@@ -332,7 +433,8 @@ def cmd_find(terms, n):
             continue
         # AND 太严(自然问句拆词很难同时命中一篇),改为 OR + 命中词数优先
         score = nhit * 10 + sum(3 for w in tl if w in title) + sum(2 for w in tl if w in crumb)
-        tier_rank = 1 if d["local_path"] in flags else 0
+        # 同分时运营补充篇排在现行官方篇之后、归档篇之前
+        tier_rank = 1 if d["local_path"] in flags else (0.5 if _is_sup(d) else 0)
         scored.append((-score, tier_rank, d["local_path"], d))
     scored.sort()
     if not scored:
@@ -469,6 +571,9 @@ def cmd_links(terms, n):
             print("  " + c["local_path"])
         return 1
     lp = d["local_path"]
+    if _is_sup(d):
+        print(f"{lp}\n  {d['title']} · {_doc_src(d)}\n\n运营补充篇不参与链接图(没有正链/反链)")
+        return 0
     edges = load_jsonl("graph/links.jsonl")
     out = [e for e in edges if e["from"] == lp]
     inc = [e for e in edges if e["to"] == lp]
@@ -493,13 +598,18 @@ def cmd_cat(terms, n):
         for c in (cands or [])[:10]:
             print("  " + c["local_path"])
         return 1
+    if _is_sup(d):
+        print(_sup_cite(d))
+        sys.stdout.write(_sup_body(d))
+        return 0
     sys.stdout.write(_sanitize_links(open(os.path.join(ROOT, d["local_path"]), encoding="utf-8").read()))
     return 0
 
 
 def _grep_url_printer():
-    """每个命中文件附 source_url，引用不按文件名或 slug 自行构造。"""
+    """每个命中文件附 source_url，引用不按文件名或 slug 自行构造；运营补充篇附来源与日期(无链接)。"""
     urls = {d["local_path"]: d.get("source_url") for d in load_jsonl("meta/documents.jsonl") if d.get("local_path")}
+    sups = {d["local_path"]: d for d in supplement_docs()}
     seen = set()
 
     def emit(line):
@@ -508,11 +618,19 @@ def _grep_url_printer():
             seen.add(path)
             if urls.get(path):
                 print(f"== {path} · source_url: {urls[path]}")
+            elif path in sups:
+                print(f"== {path} · 出处: {_sup_label(sups[path])}(无链接,回答不给链接、不提文件名)")
         print(line)
     return emit
 
 
-def _grep_words(phrase, words, sub, n, emit):
+def _grep_subs(sub, extra):
+    """grep 的搜索目录:默认 docs/ 时先搜存在的 supplement/(排在前面,否则 docs/ 命中满 50 行截断后运营篇
+    永远出不来);显式子路径照旧只搜它。"""
+    return ([SUPPLEMENT] if extra and os.path.isdir(os.path.join(ROOT, SUPPLEMENT)) else []) + [sub]
+
+
+def _grep_words(phrase, words, sub, n, emit, extra=False):
     """多词纯文本(grep '考勤 变更 事件')：原样当正则时空格也要逐字匹配，几乎恒为 0。
     原短语逐字有命中时照旧只给这些行；没有时改为同一行含全部词，再没有就列同一篇里含全部词的
     文档(示该篇首个命中行)。"""
@@ -521,7 +639,8 @@ def _grep_words(phrase, words, sub, n, emit):
         return 1
     low = [w.lower() for w in words]
     cap, exact, line_hits, file_hits = max(n * 5, 50), [], [], []
-    for dirpath, _, files in sorted(os.walk(os.path.join(ROOT, sub))):
+    walk = [w for s in _grep_subs(sub, extra) for w in sorted(os.walk(os.path.join(ROOT, s)))]
+    for dirpath, _, files in walk:
         for fn in sorted(files):
             if not fn.endswith(".md"):
                 continue
@@ -569,17 +688,21 @@ def cmd_grep(terms, n):
     if not terms:
         return usage("grep 需要 pattern")
     pattern, sub = terms[0], (terms[1] if len(terms) > 1 else "docs")
+    # 未指定子路径时运营补充篇(supplement/)一起搜:模型常直接 grep 关键词,只搜 docs/ 会漏掉运营内容
+    extra = len(terms) <= 1
     emit = _grep_url_printer()
     words = [w for w in re.split(r"\s+", pattern.strip()) if w]
     if len(words) > 1 and not re.search(r"[\\|()\[\]{}*+?^$]", pattern):
-        return _grep_words(pattern.strip(), words, sub, n, emit)
+        return _grep_words(pattern.strip(), words, sub, n, emit, extra)
     # 模型按 GNU grep 习惯写「或」：'词1\|词2'。rg 与 Python 正则里 \| 是字面竖线，恒为 0
     # (10-28 线上错题 20 次 \| 写法全部无命中)。文档里没人要搜字面「\|」，按「或」处理。
     pattern = pattern.replace("\\|", "|")
     try:
-        r = subprocess.run(["rg", "-n", "--no-heading", "-m", "5", pattern, sub],
-                           cwd=ROOT, capture_output=True, text=True)
-        lines = r.stdout.splitlines()
+        lines = []
+        for path in _grep_subs(sub, extra):   # 逐目录调用:rg 多路径并行输出顺序不定,运营篇可能被截断丢掉
+            r = subprocess.run(["rg", "-n", "--no-heading", "-m", "5", pattern, path],
+                               cwd=ROOT, capture_output=True, text=True)
+            lines += r.stdout.splitlines()
         for line in lines[:max(n * 5, 50)]:
             emit(line)
         if len(lines) > max(n * 5, 50):
@@ -588,19 +711,24 @@ def cmd_grep(terms, n):
     except FileNotFoundError:
         pat = re.compile(pattern)
         cnt = 0
-        for dirpath, _, files in sorted(os.walk(os.path.join(ROOT, sub))):
+        for dirpath, _, files in [w for s in _grep_subs(sub, extra) for w in sorted(os.walk(os.path.join(ROOT, s)))]:
             for fn in sorted(files):
                 if not fn.endswith(".md"):
                     continue
                 fp = os.path.join(dirpath, fn)
-                for i, line in enumerate(open(fp, encoding="utf-8", errors="ignore"), 1):
-                    if pat.search(line):
-                        emit(f"{os.path.relpath(fp, ROOT)}:{i}:{line.rstrip()[:200]}")
-                        cnt += 1
-                        if cnt >= max(n * 5, 50):
-                            print("…已截断")
-                            return 0
-                        break
+                try:
+                    fh = open(fp, encoding="utf-8", errors="ignore")
+                except OSError:   # 运营篇同步中途被删、权限等：跳过这一篇，不让整个 grep 报错
+                    continue
+                with fh:
+                    for i, line in enumerate(fh, 1):
+                        if pat.search(line):
+                            emit(f"{os.path.relpath(fp, ROOT)}:{i}:{line.rstrip()[:200]}")
+                            cnt += 1
+                            if cnt >= max(n * 5, 50):
+                                print("…已截断")
+                                return 0
+                            break
         return 0 if cnt else 1
 
 
@@ -793,11 +921,11 @@ def _ctx_impl(terms, n, force_full=False):
              "配额", "几个", "多久", "时长", "为什么", "原理", "机制", "原因", "怎么回事",
              "报错", "错误", "失败", "异常", "不通过", "提示", "全部", "所有", "哪些", "哪个",
              "什么", "如果", "情况下", "先", "再", "然后", "之后", "钉钉", "的", "吗", "呢", "怎么", "如何"}
-    docs = load_jsonl("meta/documents.jsonl")
+    docs = load_docs()
     doc_hint = _source_doc_hint(raw_query, docs)
     corpus = "\n".join((d["title"] + " " + " ".join(d.get("breadcrumb") or []) + " "
-                          + " ".join(d.get("headings") or [])).lower() for d in docs)
-    tl = _tokenize_query(terms, corpus, _STOP)
+                          + " ".join(d.get("headings") or [])).lower() for d in docs if not _is_sup(d))
+    tl = _tokenize_query(terms, corpus, _STOP)   # 分词只用官方篇的词料：加运营篇不改变其它问题怎么切词
     if not tl:
         tl = [w.lower() for w in terms if re.search(r"[a-zA-Z0-9一-鿿]", w)]
     raw_low = raw_query.lower()
@@ -944,10 +1072,11 @@ def _ctx_impl(terms, n, force_full=False):
                 + d.get("slug", "") + " " + os.path.basename(d["local_path"])).lower()
         hays.append((title, crumb, " ".join((title, crumb, rest))))
     import math
-    n_docs = len(docs) or 1
+    official = [h for d, h in zip(docs, hays) if not _is_sup(d)]   # 词权重只按官方篇算：加运营篇不改变官方篇的分数
+    n_docs = len(official) or 1
     tw = {}
     for w in tl:
-        df = sum(1 for _, _, h in hays if w in h)
+        df = sum(1 for _, _, h in official if w in h)
         idf = math.log((n_docs + 1) / (df + 1))
         tw[w] = 10 * min(2.5, max(0.4, idf / 2.0))
     for d, (title, crumb, hay) in zip(docs, hays):
@@ -960,6 +1089,8 @@ def _ctx_impl(terms, n, force_full=False):
         nhit = sum(1 for w in tl if w in hay)
         tscore = term_hits.get(d["local_path"], 0)
         if nhit == 0 and not tscore:
+            continue
+        if _is_sup(d) and not _sup_relevant([w for w in tl if w in hay]):
             continue
         # AND 太严(自然问句拆词很难同时命中一篇),改为 OR + 命中词数优先。
         # 枚举题优先汇总/配置页，降权单事件叶子页，避免“有哪些事件”只返回某一个监听 API。
@@ -994,7 +1125,7 @@ def _ctx_impl(terms, n, force_full=False):
                 score -= 8
         if d["local_path"] in flags and not intent["version"]:
             score -= 100
-        tier_rank = 1 if d["local_path"] in flags else 0
+        tier_rank = 1 if d["local_path"] in flags else (0.5 if _is_sup(d) else 0)   # 同分时运营补充篇排在现行官方篇之后
         doc_nhit[d["local_path"]] = nhit
         scored.append((-score, tier_rank, d["local_path"], d))
     scored.sort()
@@ -1005,8 +1136,9 @@ def _ctx_impl(terms, n, force_full=False):
     # 此时把最强归档篇提回首位，⚠归档 标签保留，由模型按归档纪律声明时效。
     if scored and not intent["version"] and len(tl) >= 2:
         _tc = lambda d: (d["title"] + " " + " ".join(d.get("breadcrumb") or [])).lower()
-        act_top = [d for _, t, _, d in scored if t == 0][:8]
-        best_active_score = next((-s for s, t, _, _ in scored if t == 0), 0)
+        # 现行 = 官方现行篇(0) + 运营补充篇(0.5)：只有运营篇讲到某个域限定词时不算「现行区缺席」
+        act_top = [d for _, t, _, d in scored if t < 1][:8]
+        best_active_score = next((-s for s, t, _, _ in scored if t < 1), 0)
         lost = [w for w in tl if len(w) >= 2 and not any(w in _tc(d) for d in act_top)]
         arch_entry = next(((-s + 100, d) for s, t, _, d in scored
                            if t == 1 and any(w in _tc(d) for w in lost)), None) if lost else None
@@ -1120,6 +1252,9 @@ def _ctx_impl(terms, n, force_full=False):
     blocked_audit = ",".join(blocked_reasons) or "none"
 
     archived_first = bool(cand) and cand[0]["local_path"] in flags
+    # 运营补充篇篇目分数第一时追加展开:实体命中/流程篇常占满正文名额(快卡时正文为 0),运营篇只剩标题。
+    # 只追加不替换;不排第一的题正文不变。
+    sup_top = scored[0][3] if scored and _is_sup(scored[0][3]) else None
 
     def render(top_k):
         parts = []
@@ -1130,7 +1265,7 @@ def _ctx_impl(terms, n, force_full=False):
             parts.extend(ent_lines[:8])
             for d in cand[:5]:
                 tag = " " + flags.get(d["local_path"], "") if flags.get(d["local_path"]) else ""
-                parts.append(f"[doc] {d['title']}{tag} · {' › '.join(d.get('breadcrumb') or [])[:40]} · {d['source_url']}")
+                parts.append(f"[doc] {d['title']}{tag} · {' › '.join(d.get('breadcrumb') or [])[:40]} · {_doc_src(d)}")
             parts.append("(以上为实体表/篇目精确命中，存在即事实；未列出≠不存在，仍须 find 换词再查后才可否定)")
         if card_fast:
             parts.append("== API答案卡(card:full,首名明确,可直接作答) ==")
@@ -1171,8 +1306,12 @@ def _ctx_impl(terms, n, force_full=False):
             lp = d["local_path"]
             tag = " " + flags.get(lp, "") if flags.get(lp) else ""
             parts.append(f"\n== 正文[{i+1}/{min(top_k, len(cand))}] {d['title']}{tag} ({lp}) ==")
-            parts.append(f"source_url: {d['source_url']} · updated_at: {d['updated_at'][:10]}")
-            body = _sanitize_links(open(os.path.join(ROOT, lp), encoding="utf-8", errors="ignore").read())
+            if _is_sup(d):
+                parts.append(_sup_cite(d))
+                body = _sup_body(d)
+            else:
+                parts.append(f"source_url: {d['source_url']} · updated_at: {d['updated_at'][:10]}")
+                body = _sanitize_links(open(os.path.join(ROOT, lp), encoding="utf-8", errors="ignore").read())
             if len(body) > _CTX_BODY_CAP:
                 body = _cut(body, _CTX_BODY_CAP) + f"\n…[已截断，完整: dkdoc cat {lp}]"
             parts.append(body)
@@ -1200,7 +1339,14 @@ def _ctx_impl(terms, n, force_full=False):
                         shown += 1
                     else:
                         parts.append(f"  {arrow} {tgt}")
-        others = cand[top_k:top_k + 8]
+        if sup_top and sup_top not in cand[:top_k]:   # 排在官方正文之后：同分时官方优先，不抢开头位置
+            parts.append(f"\n== 正文[运营补充] {sup_top['title']} ({sup_top['local_path']}) ==")
+            parts.append(_sup_cite(sup_top))
+            sup_body = _sup_body(sup_top)
+            if len(sup_body) > _CTX_BODY_CAP:
+                sup_body = _cut(sup_body, _CTX_BODY_CAP) + f"\n…[已截断，完整: dkdoc cat {sup_top['local_path']}]"
+            parts.append(sup_body)
+        others = [d for d in cand[top_k:top_k + 8] if d is not sup_top]   # 已展开的运营篇不再列为「未展开」
         if others:
             parts.append("\n== 其他候选(未展开) ==")
             for d in others:
@@ -1210,7 +1356,8 @@ def _ctx_impl(terms, n, force_full=False):
             lim = []
             for d in cand[:3]:
                 try:
-                    b = open(os.path.join(ROOT, d["local_path"]), encoding="utf-8", errors="ignore").read()
+                    b = _sup_body(d) if _is_sup(d) else \
+                        open(os.path.join(ROOT, d["local_path"]), encoding="utf-8", errors="ignore").read()
                 except OSError:
                     continue
                 for l in _limit_lines(b, 6):

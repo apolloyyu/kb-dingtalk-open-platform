@@ -7,12 +7,12 @@ group: "AI PaaS"
 tab: "平台介绍"
 breadcrumb: "钉钉 AI PaaS 介绍"
 doc_id: "LrDmf7VeKg"
-updated_at: "2025-09-23 19:18:47"
+updated_at: "2026-11-03 14:57:14"
 ---
 
 > Source: https://open.dingtalk.com/document/aipass/introduction-to-dingtalk-ai-paas-1
 > Path: AI PaaS / 平台介绍 / 钉钉 AI PaaS 介绍
-> Updated: 2025-09-23 19:18:47
+> Updated: 2026-11-03 14:57:14
 
 # 钉钉 AI PaaS 介绍
 
@@ -42,9 +42,7 @@ updated_at: "2025-09-23 19:18:47"
 
 ![使用 AI 助理](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/9571874071/p755256.png)
 
----
-
 ## 相关文档
 
-- [AI 助理创建平台](../03-9d1vBG1t78-DEAP·企业AI平台/0001-ai-assistant-overview.md)
+- [DEAP·企业AI平台](../03-9d1vBG1t78-DEAP·企业AI平台/0001-ai-assistant-overview.md)
 - [炼丹炉大模型训练平台](../02-UUtSqrTcwj-炼丹炉大模型平台/0001-introduction-of-large-model-platform-of-dingtalk-blast-furnace-1.md)

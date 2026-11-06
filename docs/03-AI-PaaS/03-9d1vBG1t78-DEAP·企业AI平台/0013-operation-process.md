@@ -5,13 +5,13 @@ namespace: "aipass"
 slug: "operation-process"
 group: "AI PaaS"
 tab: "DEAP·企业AI平台"
-breadcrumb: "数据看板"
+breadcrumb: "运营中心 > 数据看板"
 doc_id: "OGBi32Y5zK"
 updated_at: "2026-07-08 15:48:56"
 ---
 
 > Source: https://open.dingtalk.com/document/aipass/operation-process
-> Path: AI PaaS / DEAP·企业AI平台 / 数据看板
+> Path: AI PaaS / DEAP·企业AI平台 / 运营中心 > 数据看板
 > Updated: 2026-07-08 15:48:56
 
 # 数据看板

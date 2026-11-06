@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "文档/文件 > 知识库 > 知识库目录树管理 > 批量获取节点"
 doc_id: "dZQb9gesUb"
-updated_at: "2026-07-15 09:30:13"
+updated_at: "2026-11-04 17:46:35"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-nodes-in-batch
 > Path: 应用开发 / 服务端 API / 文档/文件 > 知识库 > 知识库目录树管理 > 批量获取节点
-> Updated: 2026-07-15 09:30:13
+> Updated: 2026-11-04 17:46:35
 
 # 批量获取节点
 
@@ -530,6 +530,10 @@ namespace AlibabaCloud.SDK.Sample
 | permissionRole | String | 当前用户对知识库节点的权限角色，枚举值:   - **OWNER**：拥有者 - **MANAGER**：管理者 - **EDITOR**：编辑者 - **DOWNLOADER**：可查看下载者 - **READER**：仅可查看者 - **NONE**：无权限者 |
 | createTimestamp | Long | 创建时间戳。 |
 | modifiedTimestamp | Long | 修改时间戳。 |
+| failedNodes | Array | 失败节点列表，与 nodes 一起按入参相对顺序给出，两者总数不超过入参 nodeIds 数量  最大size:  20 |
+| nodeId | String | 失败节点的id（与入参 nodeIds 中的值一致）。 |
+| errorCode | String | 失败错误码。 |
+| errorMessage | String | 失败原因。 |
 
 ### 响应体示例
 
@@ -558,6 +562,11 @@ Content-Type:application/json
     "permissionRole" : "READER",
     "createTimestamp" : 1776134460000,
     "modifiedTimestamp" : 1783996860000
+  } ],
+  "failedNodes" : [ {
+    "nodeId" : "a9E05BxxxxxzgkYA",
+    "errorCode" : "paramError",
+    "errorMessage" : "参数错误"
   } ]
 }
 ```

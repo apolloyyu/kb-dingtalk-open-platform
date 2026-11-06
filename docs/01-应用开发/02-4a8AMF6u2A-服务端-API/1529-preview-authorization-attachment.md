@@ -63,7 +63,7 @@ updated_at: "2026-08-25 09:37:48"
 | --- | --- | --- | --- | --- |
 | request | GrantCspaceRequest | 是 |  | 请求信息。 |
 | agentid | Number | 否 | 868810166 | 应用标识。可在开发者后台的应用详情页获取。 |
-| process\_instance\_id | String | 是 | a17444d1-075b-4a4d-xxxx | 实例ID：   - 企业内部应用，通过[获取审批实例ID列表](1532-operation-to-retrieve-a-list-of.md)接口获取。 - 第三方企业应用，通过推送的审批事件中获取，参考[biz\_type=22](../04-LFcRvVD08N-事件订阅/0338-approval-events-3.md)。 |
+| process\_instance\_id | String | 是 | a17444d1-075b-4a4d-xxxx | 实例ID：   - 企业内部应用，通过[获取审批实例ID列表](1532-operation-to-retrieve-a-list-of.md)接口获取。 - 第三方企业应用，通过推送的审批事件中获取，参考[biz\_type=22](../04-LFcRvVD08N-事件订阅/0340-approval-events-3.md)。 |
 | file\_id | String | 是 | 11 | 审批附件ID。  **[!NOTE]**  file\_id必须与发起审批实例中附件组件中的文件fileId保持一致，否则出现无权限错误信息。 |
 | userid | String | 是 | user123 | 授权允许预览附件的用户userid。 |
 | fileid\_list | String[] | 否 | 123 | 附件ID列表，支持批量授权，最大列表长度：20。 |

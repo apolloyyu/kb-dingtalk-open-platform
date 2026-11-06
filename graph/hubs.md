@@ -7,7 +7,7 @@
 - 1094 ← [获取企业内部应用的accessToken](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md)（服务端 API）
 - 773 ← [获取第三方应用授权企业的accessToken](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0033-obtain-the-access-token-of-the-authorized-enterprise-1.md)（服务端 API）
 - 383 ← [获取企业内部应用的access_token](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1445-obtain-orgapp-token.md)（服务端 API）
-- 270 ← [查询用户详情](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0055-query-user-details.md)（服务端 API）
+- 271 ← [查询用户详情](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0055-query-user-details.md)（服务端 API）
 - 246 ← [服务商获取第三方应用授权企业的access_token](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1447-obtain-isvapp-token.md)（服务端 API）
 - 91 ← [应用创建与配置](../docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md)（开发指南）
 - 78 ← [获取用户token](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0031-obtain-user-token.md)（服务端 API）
@@ -30,6 +30,7 @@
 - 26 ← [dd.canIUse](../docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0477-dd-caniuse.md)（客户端 JSAPI）
 - 24 ← [添加接口调用权限](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0003-add-api-permission.md)（服务端 API）
 - 24 ← [创建场景群](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0745-create-a-scene-group.md)（服务端 API）
+- 24 ← [调用授权](../docs/03-AI-PaaS/03-9d1vBG1t78-DEAP·企业AI平台/0017-configuration-memory-1.md)（DEAP·企业AI平台）
 - 22 ← [创建并投放卡片](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0784-create-and-deliver-cards.md)（服务端 API）
 - 21 ← [获取单个审批实例详情](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0498-obtains-the-details-of-a-single-approval-instance-pop.md)（服务端 API）
 - 21 ← [创建连接器](../docs/02-连接平台/02-XdgyZifJkr-我的连接/0010-create-connector.md)（我的连接）
@@ -85,7 +86,7 @@
 - 11 ← [常见问题](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-faq-card.md)（服务端 API）
 - 11 ← [查询项目](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1025-query-enterprise-all-projects.md)（服务端 API）
 - 11 ← [创建自由任务](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1060-create-a-free-task.md)（服务端 API）
-- 11 ← [事件与回调流程](../docs/01-应用开发/04-LFcRvVD08N-事件订阅/0329-third-party-enterprise-application-address-book-change-event-subscription-process.md)（事件订阅）
+- 11 ← [事件与回调流程](../docs/01-应用开发/04-LFcRvVD08N-事件订阅/0331-third-party-enterprise-application-address-book-change-event-subscription-process.md)（事件订阅）
 - 11 ← [创建连接流](../docs/02-连接平台/02-XdgyZifJkr-我的连接/0001-create-a-connection-flow-1.md)（我的连接）
 - 10 ← [获取通讯录权限范围](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0052-obtain-corpsecret-authorization-scope.md)（服务端 API）
 - 10 ← [创建SSO企业账号](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0103-create-an-sso-account.md)（服务端 API）
@@ -102,4 +103,3 @@
 - 10 ← [创建钉钉客联普通互通群](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1847-create-common-group-new-version.md)（服务端 API）
 - 10 ← [创建钉钉客联两人互通群](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1848-creating-two-groups-of-people.md)（服务端 API）
 - 10 ← [getAuthCode](../docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0006-jsapi-get-auth-code.md)（客户端 JSAPI）
-- 10 ← [数据格式](../docs/01-应用开发/04-LFcRvVD08N-事件订阅/0005-development-data-format-help.md)（事件订阅）

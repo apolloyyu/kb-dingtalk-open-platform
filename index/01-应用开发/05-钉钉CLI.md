@@ -6,7 +6,7 @@
 - [安装与使用指南](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0002-dingtalk-dws-cli-install-guide.md) · 新手入门 · 2026-10-29
 - [钉钉DWS权限管控指南](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0003-dws-permission-management-guide.md) · 新手入门 › 权限管理 · 2026-10-29
 - [如何开通组织成员CLI权限申请](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0004-cli-permissions-organizational-members.md) · 新手入门 › 权限管理 · 2026-10-29
-- [如何单独管理企业自建Agent的权限](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0005-manage-permissions-enterprise.md) · 新手入门 › 权限管理 · 2026-10-29
+- [如何单独管理企业自建Agent的权限](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0005-manage-permissions-enterprise.md) · 新手入门 › 权限管理 · 2026-11-02
 - [开发者命令行 · CLI 应用管理指南](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0006-dev-cli-app-management-guide.md) · 新手入门 › 命令速查 · 2026-06-26
 - [在千问办公中接入钉钉](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0007-qwenwork-dingtalk-integration.md) · 新手入门 › 快速尝试 · 2026-08-14
 - [5分钟配置：给自己配个嘴替AI 机器人](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0008-ai-bot-configuration-guide.md) · 新手入门 › 快速尝试 · 2026-08-31

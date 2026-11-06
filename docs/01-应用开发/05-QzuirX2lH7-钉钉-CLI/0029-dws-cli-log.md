@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "钉钉 CLI"
 breadcrumb: "更新日志"
 doc_id: "JqaPUpyWXl"
-updated_at: "2026-10-29 15:05:52"
+updated_at: "2026-11-06 11:38:00"
 ---
 
 > Source: https://open.dingtalk.com/document/development/dws-cli-log
 > Path: 应用开发 / 钉钉 CLI / 更新日志
-> Updated: 2026-10-29 15:05:52
+> Updated: 2026-11-06 11:38:00
 
 # 更新日志
 
@@ -40,6 +40,89 @@ dws upgrade --list
 - 钉钉 CLI 每周发布更新，开发者可扫描下方二维码加入"**dws 开源沟通群**"获取最新动态。
 
   ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/6160536871/p1094200.png)
+
+## **2026-****11-04**
+
+### **更新说明**
+
+本周重点：新增**听记与日历个人事件订阅**，让 Agent 在听记生成、日程变化时第一时间通知你；同时带来**AI 卡片模板化管理**、**AI 听记模板与标签**、**AI 表格链接直达**，并补齐开放平台 H5 应用管理和文档块区间替换。建议通过 `dws upgrade` 升级到最新版[v1.0.63](https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli/releases/tag/v1.0.63)。
+
+### 新增功能
+
+#### **事件订阅：听记生成、日程变化都能收到通知**
+
+新增三类通知：一条听记创建完成、默认纪要第一次生成，以及日历事件被新建、修改或取消。Agent 订阅后，事情一发生就能通知你，再按需去读取详细内容。听记通知只告诉你哪条听记有动静，不包含正文或纪要内容，收到后需要再用听记编号去查；日历通知可以只看某个日历，也可以只看新建、修改、取消中的某一类。
+
+- 相关命令：`dws event list --category minutes`、`dws event schema user_minutes_summary_generated --flatten`、`dws event consume user_calendar_event_changed --calendar-ids <ID> --change-types eventUpdated --flatten`
+
+#### **AI 卡片：卡片样式存云端，发送更灵活**
+
+- **卡片样式存到云端**
+
+  把一套做好的卡片样式存到云端，会得到一个模板编号。以后按编号和版本就能取回这套样式，也可以在同一个模板下继续发布新版本，方便反复使用和迭代。保存前会先检查模板是否完整、能不能正常显示成一张卡片。模板只保存样式，发卡片仍是单独一步。
+
+  - 相关命令：`dws aicard template create`、`dws aicard template get`、`dws aicard template update`
+  - 说明：模板文件为不超过 768 KiB 的 JSON；使用时需要指定模板服务（`--mcp-id` 或环境变量 `DWS_AICARD_TEMPLATE_MCP_ID`），没有默认值。
+- **发卡片能加兜底说明、能转发、能 @ 人**
+
+  发卡片时，可以给卡片配一句兜底文案：卡片加载不出来时，用户看到的就是这句话。还能决定这张卡片允不允许被转发。在群里发卡片时，可以直接 @ 指定同事，或者 @所有人，单次最多 @ 100 人。发之前可以先校验卡片格式，或先发给自己预览一下，确认 @ 的人有没有写对。
+
+  - 相关命令：`dws chat message send-a2ui-card`、`dws aicard lint`、`dws aicard preview`
+  - 新增参数：`--summary`（兜底文案）、`--support-forward`（允许转发）、`--extension`（附加信息）、`--at-open-dingtalk-ids`（@ 成员）、`--at-all`（@所有人）
+
+#### **AI 听记：纪要模板和标签都能自己管**
+
+- **纪要模板自己管**
+
+  可以查看系统自带的纪要模板，也能创建自己的模板：写好标题和希望纪要怎么总结的提示词，之后反复使用。个人模板可以修改、删除，还能把某个模板设为以后新建听记时的默认模板。
+
+  - 相关命令：`dws minutes template list-system`、`dws minutes template list-custom`、`dws minutes template create`、`dws minutes template update`、`dws minutes template delete`、`dws minutes template set-default`
+- **听记标签自己加**
+
+  可以创建、删除自己的标签，也可以给一条听记一次加上或去掉多个标签。标签名最多 50 个字，一次最多处理 20 个标签。如果之前配置了知识库同步，给听记加标签时可能会顺带触发同步。
+
+  - 相关命令：`dws minutes tag create`、`dws minutes tag delete`、`dws minutes tag add`、`dws minutes tag remove`
+
+#### **AI 表格：一条链接定位对象，建完直接拿打开链接**
+
+- **一条链接就能定位到具体对象**
+
+  拿到一条 AI 表格链接，现在能认出它指向的是整张表、某个视图、某条记录、某个字段、表单、应用页面、仪表盘还是自动化流程，并给出后续命令要用的编号。加上 `--verify` 还能顺便确认这个对象确实存在、确实属于链接里说的那张表。只有 App 链接没有只读的核验方式，会直接告诉你验证不了，而不是冒险去新建一个 App。
+
+  - 相关命令：`dws aitable +url-resolve --url <URL> --verify`
+- **建完就能拿到打开链接**
+
+  新建 Base、表、字段、仪表盘、表单、应用或导入数据后，结果里会直接带上这个对象的打开链接，以及它所在 Base 和表的链接，方便点开确认。
+
+  - 相关命令：`dws aitable base create`、`dws aitable table create`、`dws aitable field create`、`dws aitable dashboard create`、`dws aitable form create`
+- **写记录可以直接写字段名**
+
+  批量新增或修改记录时，字段那一栏既可以用系统给的字段编号，也可以直接写表里唯一的字段名，写起来更直观。字段名要和表里一致，仍建议优先用编号。
+
+  - 相关命令：`dws aitable record create`、`dws aitable record update`
+
+#### **钉钉文档：整段替换，按位置插入**
+
+改文档时，可以选中一段连续的顶层内容，一次性替换成新的文字或结构，不用一块一块改，也不会只改成功一半。插入内容时，可以指定插到第几个块之前，想放哪儿就放哪儿。两种操作都支持直接传 Markdown，也支持传更精细的 JSONML 结构。
+
+- 相关命令：`dws doc block update --start-block-id <ID> --end-block-id <ID>`、`dws doc block insert --index 2`
+
+### **体验优化**
+
+#### **传大文件时，等待时间由 --timeout 统一控制**
+
+`--timeout` 现在同时管普通请求和文件上传：上传最少等 5 分钟、最多等 24 小时。邮箱、钉盘、待办、审批里的文件上传都按这个时间执行，不会传一半提前中断，也不会一直卡着不返回。
+
+- 适用命令：`dws mail`、`dws drive`、`dws todo`、`dws oa` 中涉及文件上传的子命令
+- 示例：`--timeout 600`
+
+#### **白板写失败会告诉你下一步怎么办**
+
+白板写入出错时，报错会直接说明该怎么做：是内容格式不对要改，还是版本冲突要重新取最新版本，或者结果不确定要先查一下再决定。
+
+### **问题优化**
+
+- **内容为空不再崩溃**：修复了部分命令在内容为空时直接崩溃的问题。
 
 ## **2026-10-28**
 

@@ -30,4 +30,4 @@
 - [项目进度管理 Agent](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0026-project-progress-management-agent.md) · Agent 场景案例库 › 典型 Agent 实现 › 项目进度管理 Agent  · 2026-06-16
 - [多 Agent 垂直专家协同](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0027-multi-agent-expert-collaboration.md) · Agent 场景案例库 › 典型 Agent 实现 · 2026-06-16
 - [常见问题](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0028-dws-cli-frequently-asked-questions.md) · 2026-08-12
-- [更新日志](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0029-dws-cli-log.md) · 2026-10-29
+- [更新日志](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0029-dws-cli-log.md) · 2026-11-06

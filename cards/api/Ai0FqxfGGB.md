@@ -27,7 +27,7 @@ permissions: qyapi_attendance_isv_query_result, qyapi_get_attendance_data
 - optional: isI18n(Boolean)
 
 ## Returns
-- optional: recordresult(Recordresult[]), sourceType(String), baseCheckTime(Date), userCheckTime(Date), procInstId(String), approveId(Number), locationResult(String), timeResult(String), checkType(String), userId(String), workDate(Date), recordId(Number), planId(Number), groupId(Number), id(Number), hasMore(Boolean), errmsg(String), errcode(Number)
+- optional: recordresult(Recordresult[]), sourceType(String), baseCheckTime(Date), userCheckTime(Date), procInstId(String), approveId(Number), locationResult(String), timeResult(String), checkType(String), userId(String), workDate(Date), recordId(Number), planId(Number), groupId(Number), id(Number), timeZoneId(String), hasMore(Boolean), errmsg(String), errcode(Number)
 
 ## Limits
 - 查询考勤打卡记录的起始工作日。格式为yyyy-MM-dd HH:mm:ss，HH:mm:ss可以使用00:00:00，将返回此日期从0点到24点的结果。 例如，参数传"2021-12-01 10:00"，获取的是12月1日一整天的考勤结果。 **[!IMPORTANT]** workDateFrom和workDateTo参数 相隔最多7天（包含7天）。
@@ -36,4 +36,4 @@ permissions: qyapi_attendance_isv_query_result, qyapi_get_attendance_data
 - 表示获取考勤数据的条数，最大值50。
 
 source_url: https://open.dingtalk.com/document/development/open-attendance-clock-in-data
-updated_at: 2026-05-27 17:05:51
+updated_at: 2026-11-09 18:14:12

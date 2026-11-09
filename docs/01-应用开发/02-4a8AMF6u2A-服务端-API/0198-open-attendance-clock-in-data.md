@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "考勤 > 考勤打卡 > 获取打卡结果"
 doc_id: "Ai0FqxfGGB"
-updated_at: "2026-05-27 17:05:51"
+updated_at: "2026-11-09 18:14:12"
 ---
 
 > Source: https://open.dingtalk.com/document/development/open-attendance-clock-in-data
 > Path: 应用开发 / 服务端 API / 考勤 > 考勤打卡 > 获取打卡结果
-> Updated: 2026-05-27 17:05:51
+> Updated: 2026-11-09 18:14:12
 
 # 获取打卡结果
 
@@ -159,6 +159,7 @@ Console.WriteLine(rsp.Body);
 | planId | Number | 145342017988 | 排班ID。 |
 | groupId | Number | 685935028 | 考勤组ID。 |
 | id | Number | 101135139831 | 唯一标识ID。 |
+| timeZoneId | String | Asia/Shanghai | 打卡时区，默认“Asia/Shanghai”。  **[!NOTE]**   - 如需使用该参数，请使用HTTP的方式调用该接口，SDK不返回该参数。 - 该参数需购买了钉钉假勤旗舰版，并且开通了钉钉考勤多时区权益后返回，如何开通可参考[多时区考勤管理](https://alidocs.dingtalk.com/i/p/Y7kmbokZp3pgGLq2/docs/amweZ92PV6vZQrObivBOaaamVxEKBD6p?dontjump=true)。 |
 | hasMore | Boolean | false | 分页返回参数，表示是否还有更多数据。   - **true**：有 - **false**：没有 |
 | errmsg | String | ok | 返回码描述。 |
 | errcode | Number | 0 | 返回码。 |
@@ -181,7 +182,8 @@ Console.WriteLine(rsp.Body);
       "sourceType": "APPROVE",
       "userCheckTime": 1599372300000,
       "planId": 145583519353,
-      "id": 100068640553
+      "id": 100068640553,
+      "timeZoneId":"Asia/Shanghai"
     },
     {
       "checkType": "OffDuty",   
@@ -195,7 +197,8 @@ Console.WriteLine(rsp.Body);
       "sourceType": "USER",
       "userCheckTime": 1599373608000,
       "planId": 144623724178,
-      "id": 100375228689
+      "id": 100375228689,
+      "timeZoneId":"Asia/Shanghai"
     }
   ],
   "hasMore": false,

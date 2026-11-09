@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "考勤 > 考勤打卡 > 获取打卡详情"
 doc_id: "iVGmyqQjSb"
-updated_at: "2026-05-27 17:05:52"
+updated_at: "2026-11-09 18:14:29"
 ---
 
 > Source: https://open.dingtalk.com/document/development/attendance-clock-in-record-is-open
 > Path: 应用开发 / 服务端 API / 考勤 > 考勤打卡 > 获取打卡详情
-> Updated: 2026-05-27 17:05:52
+> Updated: 2026-11-09 18:14:29
 
 # 获取打卡详情
 
@@ -175,6 +175,7 @@ Console.WriteLine(rsp.Body);
 | deviceSN | String | gd53354xxxx | 打卡设备序列号。 |
 | bizId | String | E171DCCExxxx | 关联的业务ID。 |
 | photoUrl | String | https://static.dingtalk.com/media/lQDPM369C6xxxxK6PiY | 拍照图片 URL。  **[!NOTE]**   - 如需使用该参数，请使用HTTP的方式调用该接口，SDK不返回该参数。 - 若打卡详情中有拍照的图片信息，会返回 photoUrl，否则该字段不返回。 |
+| timeZoneId | String | Asia/Shanghai | 打卡时区，默认“Asia/Shanghai”。  **[!NOTE]**   - 如需使用该参数，请使用HTTP的方式调用该接口，SDK不返回该参数。 - 该参数需购买了钉钉假勤旗舰版，并且开通了钉钉考勤多时区权益后返回，如何开通可参考[多时区考勤管理](https://alidocs.dingtalk.com/i/p/Y7kmbokZp3pgGLq2/docs/amweZ92PV6vZQrObivBOaaamVxEKBD6p?dontjump=true)。 |
 
 ### **响应体示例**
 
@@ -210,7 +211,8 @@ Console.WriteLine(rsp.Body);
       "userLatitude": 30.285413,
       "sourceType": "USER",
       "userCheckTime": 1599441505000,
-      "locationMethod": "MAP"
+      "locationMethod": "MAP",
+      "timeZoneId":"Asia/Shanghai"
     },
     {
       "gmtModified": 1599450909000,
@@ -229,7 +231,8 @@ Console.WriteLine(rsp.Body);
       "userLatitude": 30.285622,
       "sourceType": "USER",
       "userCheckTime": 1599450909000,
-      "locationMethod": "MAP"
+      "locationMethod": "MAP",
+      "timeZoneId":"Asia/Shanghai"
     }
   ]
 }

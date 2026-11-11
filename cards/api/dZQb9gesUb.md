@@ -29,4 +29,4 @@ permissions: Wiki.Node.Read
 - 节点id。 最大size20。
 
 source_url: https://open.dingtalk.com/document/development/obtain-nodes-in-batch
-updated_at: 2026-11-06 13:55:47
+updated_at: 2026-11-11 09:19:58

@@ -113,34 +113,43 @@ def check_faq_entries():
         {"id": "faq-test-suspended", "question": "钉钉考勤打卡结果怎么区分请假类型", "status": "suspended",
          "sources": [{"doc_id": FAQ_DOC, "quote": FAQ_QUOTE}]},
     ]
-    with tempfile.TemporaryDirectory() as td:
+    def make_root(td, faq_lines):
         os.makedirs(os.path.join(td, "bin"))
         cli = os.path.join(td, "bin", "dkdoc")
         shutil.copyfile(DKDOC, cli)
         for name in os.listdir(ROOT):
             if name not in ("bin", "faq") and not name.startswith("."):
                 os.symlink(os.path.join(ROOT, name), os.path.join(td, name))
-        os.makedirs(os.path.join(td, "faq"))
-        with open(os.path.join(td, "faq", "faq.jsonl"), "w", encoding="utf-8") as fh:
-            fh.write("{坏行\n" + "".join(json.dumps(e, ensure_ascii=False) + "\n" for e in entries))
+        if faq_lines is not None:
+            os.makedirs(os.path.join(td, "faq"))
+            with open(os.path.join(td, "faq", "faq.jsonl"), "w", encoding="utf-8") as fh:
+                fh.write(faq_lines)
+        return cli
+
+    # 基线在另一个不带 faq/ 的临时库根里跑：真实库合入 faq/ 之后「只追加、未命中逐字不变」仍有测试保护
+    with tempfile.TemporaryDirectory() as td, tempfile.TemporaryDirectory() as tb:
+        cli = make_root(td, "{坏行\n" + json.dumps({"id": "faq-test-badsrc", "question": "坏出处条目也不能拖垮整块",
+                                                      "status": "live", "sources": "不是列表"}, ensure_ascii=False)
+                        + "\n" + "".join(json.dumps(e, ensure_ascii=False) + "\n" for e in entries))
+        base_cli = make_root(tb, None)
+        base = lambda q: _run_cli(base_cli, "ctx", q).stdout  # noqa: E731
         hit_q = "自定义机器人可以接收群消息自动回复吗"
         out = _run_cli(cli, "ctx", hit_q).stdout
-        base = run("ctx", hit_q) if not os.path.exists(os.path.join(ROOT, "faq")) else None
         check(out.startswith("== 相似问题"), f"相似问法应在 ctx 开头出块: {out[:200]}")
         check("[faq-test-live]" in out and "常见误答：说自定义机器人只能发消息" in out, "块里缺条目编号或常见误答")
         check("https://open.dingtalk.com/document/dingstart/custom-bot-creation-and-installation" in out,
               "块里应给出处 source_url")
         check(f"「{FAQ_QUOTE}」" in out and "== 相似问题出处原文：创建自定义机器人" in out, "块里缺原文句或出处片段")
-        if base is not None:
-            check(out.endswith(base), "原 ctx 输出必须逐字保留在相似问题块之后")
-        key_out = _run_cli(cli, "ctx", '{"deliverResults":[{"errorMsg":"spaceTypeModel not exist in cardInstance","spaceId":"x"}]}').stdout
-        check("[faq-test-key]" in key_out, "条目 keys(错误信息原文)原样出现在问题里应命中")
+        check(out.endswith(base(hit_q)), "原 ctx 输出必须逐字保留在相似问题块之后")
+        key_q = '{"deliverResults":[{"errorMsg":"spaceTypeModel not exist in cardInstance","spaceId":"x"}]}'
+        check("[faq-test-key]" in _run_cli(cli, "ctx", key_q).stdout, "条目 keys(错误信息原文)原样出现在问题里应命中")
+        check("[faq-test-key]" in _run_cli(cli, "ctx", key_q.replace("not exist", "not  exist")).stdout,
+              "keys 归一化后匹配：多一个空格也应命中")
         for q in ("群模板机器人能不能装到已有群", "宜搭表单实例 ID 和流程实例 ID 有什么区别",
-                  "钉钉考勤打卡结果怎么区分请假类型", "如何获取企业内部应用的 accessToken"):
+                  "钉钉考勤打卡结果怎么区分请假类型", "如何获取企业内部应用的 accessToken", "坏出处条目也不能拖垮整块"):
             got = _run_cli(cli, "ctx", q).stdout
-            check("== 相似问题" not in got, f"失效/停用/无关条目不应出块: {q}")
-            if base is not None:
-                check(got == run("ctx", q), f"未命中时 ctx 输出应逐字不变: {q}")
+            check("== 相似问题" not in got, f"失效/停用/坏数据/无关条目不应出块: {q}")
+            check(got == base(q), f"未命中时 ctx 输出应逐字不变: {q}")
 
 
 def check_supplement_docs():

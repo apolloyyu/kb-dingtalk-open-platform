@@ -1290,7 +1290,8 @@ def _ctx_impl(terms, n, force_full=False):
             # 参数/字段枚举题:卡片是官方参数表的紧凑投影,正文 3500 上限常切掉表格尾部(实录 Q53)。
             # API 表未激活时(问法无"接口"字样)退而取首篇正文对应的卡;卡片不直答,只作证据。
             # 首篇是教程页时,参数表在它正链指向的 API 文档里(实录 Q53:教程页→批量发送单聊消息 API)。
-            evidence_card = api_card or (read_api_card(cand[0]["local_path"]) if cand else None)
+            evidence_card = None if card_source_mismatch else api_card
+            evidence_card = evidence_card or (read_api_card(cand[0]["local_path"]) if cand else None)
             if not evidence_card and cand:
                 for e in [e for e in edges if e["from"] == cand[0]["local_path"]][:10]:
                     c = read_api_card(e["to"])

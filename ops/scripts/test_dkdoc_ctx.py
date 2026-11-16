@@ -270,7 +270,7 @@ def check_concept_evidence_priority():
                 os.makedirs(os.path.join(td, "cards"))
                 faq = next(d for d in docs if d["slug"] == "documentation-faq")
                 with open(os.path.join(td, "cards", "faq.md"), "w", encoding="utf-8") as fh:
-                    fh.write("# GetRange usedRange 常见问题\ncompleteness: full\n")
+                    fh.write("# GetRange usedRange 常见问题\ncompleteness: full\nFAQ_CARD_MUST_NOT_RENDER\n")
                 with open(os.path.join(td, "cards", "api-index.jsonl"), "w", encoding="utf-8") as fh:
                     json.dump({"doc_path": faq["local_path"], "path": "cards/faq.md",
                                "completeness": "full", "archived": False}, fh)
@@ -287,6 +287,8 @@ def check_concept_evidence_priority():
                 if strong_card:
                     check("card=1(fast=0)" in out and "evidence_source" in out,
                           "不同出处的高分卡片不应覆盖已核实的主证据，审计须说明原因")
+                    check("FAQ_CARD_MUST_NOT_RENDER" not in out,
+                          "不同出处的卡片也不应作为参数证据展示")
             url = "https://open.dingtalk.com/document/development/documentation-faq"
             out = _run_cli(cli, "ctx", "--full", query + " " + url).stdout
             check("常见问题" in first_body_heading(out), "概念事实不能覆盖用户显式 source_url")

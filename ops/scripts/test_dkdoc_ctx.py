@@ -206,7 +206,94 @@ def check_supplement_ranking_fixture():
               "倒排索引越界行号不能命中运营补充篇")
 
 
+def check_concept_evidence_priority():
+    """其它篇增删改变 df/同分顺序时，已核实事实的出处仍应是主正文；显式 URL 优先。"""
+    for extra_faq, reverse, missing_row, strong_card in (
+            (False, False, False, False), (True, False, False, False),
+            (False, True, False, False), (True, True, False, False),
+            (False, False, True, False), (False, False, False, True)):
+        query = "GetRange 会跳过空行吗 usedRange" + (" 参数" if strong_card else "")
+        with tempfile.TemporaryDirectory() as td:
+            for name in ("bin", "docs", "meta", "graph"):
+                os.makedirs(os.path.join(td, name))
+            cli = os.path.join(td, "bin", "dkdoc")
+            shutil.copyfile(DKDOC, cli)
+            rows = [
+                ("obtain-worksheet-properties", "获取工作表", "lastNonEmptyRow lastNonEmptyRow\n"
+                 "| lastNonEmptyRow | Long | 最后一行非空行的位置。 |\n", {}),
+                ("get-cell-properties", "获取单元格区域", "| values | Array | Range范围内的所有行 |\n", {}),
+                ("documentation-faq", "GetRange usedRange 常见问题" if strong_card else "常见问题",
+                 "GetRange 的综合说明。\n", {"getrange": 5}),
+                ("sheet", "Sheet", "GetRange\n", {"getrange": 4}),
+                ("workbook", "Workbook", "GetRange\n", {"getrange": 4}),
+                ("filter", "Filter", "GetRange\n", {"getrange": 1}),
+            ]
+            if not missing_row:
+                rows[0][3]["lastnonemptyrow"] = 2
+            else:
+                rows[0] = (rows[0][0], rows[0][1], "此页尚无可用的响应字段表。\n", {})
+            if extra_faq:
+                rows.append(("old-table-faq", "旧表格 FAQ", "GetRange\n", {"getrange": 5}))
+            if reverse:
+                rows.reverse()
+            docs, apis, postings = [], [], {}
+            for i, (slug, title, body, counts) in enumerate(rows):
+                path = f"docs/{i:04d}-{slug}.md"
+                url = "https://open.dingtalk.com/document/development/" + slug
+                doc = {"local_path": path, "slug": slug, "title": title, "source_url": url,
+                       "breadcrumb": ["应用开发"], "headings": [], "snippet": "",
+                       "updated_at": "2026-11-16T00:00:00+08:00"}
+                docs.append(doc)
+                with open(os.path.join(td, path), "w", encoding="utf-8") as fh:
+                    fh.write("# " + title + "\n" + body)
+                if slug in ("obtain-worksheet-properties", "documentation-faq"):
+                    apis.append({"title": title, "source_url": url, "doc_path": path,
+                                 "endpoint": "https://api.dingtalk.com/v1.0/doc/" +
+                                 ("getrange/usedrange" if strong_card and slug == "documentation-faq" else slug),
+                                 "method": "GET", "archived": False, "breadcrumb": []})
+                for term, count in counts.items():
+                    postings.setdefault(term, []).append([i, count])
+            for entries in postings.values():
+                entries.sort(key=lambda item: (-item[1], item[0]))
+            data = {"meta/documents.jsonl": docs,
+                    "meta/kb_manifest.jsonl": [{"local_path": d["local_path"], "tier": "T1"} for d in docs],
+                    "graph/api.jsonl": apis}
+            for name in ("errcode", "event", "jsapi", "permission", "links"):
+                data[f"graph/{name}.jsonl"] = []
+            for rel, records in data.items():
+                with open(os.path.join(td, rel), "w", encoding="utf-8") as fh:
+                    for record in records:
+                        fh.write(json.dumps(record, ensure_ascii=False) + "\n")
+            with open(os.path.join(td, "graph", "terms.json"), "w", encoding="utf-8") as fh:
+                json.dump(postings, fh)
+            if strong_card:
+                os.makedirs(os.path.join(td, "cards"))
+                faq = next(d for d in docs if d["slug"] == "documentation-faq")
+                with open(os.path.join(td, "cards", "faq.md"), "w", encoding="utf-8") as fh:
+                    fh.write("# GetRange usedRange 常见问题\ncompleteness: full\n")
+                with open(os.path.join(td, "cards", "api-index.jsonl"), "w", encoding="utf-8") as fh:
+                    json.dump({"doc_path": faq["local_path"], "path": "cards/faq.md",
+                               "completeness": "full", "archived": False}, fh)
+
+            out = _run_cli(cli, "ctx", query).stdout
+            if missing_row:
+                check("获取工作表" not in first_body_heading(out), "没有匹配事实行时仍强行锚定旧来源")
+                check("| lastNonEmptyRow |" not in out, "缺失的事实行不应被补造")
+            else:
+                check("获取工作表" in first_body_heading(out),
+                      f"df/行序变化挤掉事实出处: extra={extra_faq}, reverse={reverse}")
+                check("| lastNonEmptyRow |" in out and "Range范围内的所有行" in out,
+                      "稳定主正文时丢失了原文直取证据")
+                if strong_card:
+                    check("card=1(fast=0)" in out and "evidence_source" in out,
+                          "不同出处的高分卡片不应覆盖已核实的主证据，审计须说明原因")
+            url = "https://open.dingtalk.com/document/development/documentation-faq"
+            out = _run_cli(cli, "ctx", "--full", query + " " + url).stdout
+            check("常见问题" in first_body_heading(out), "概念事实不能覆盖用户显式 source_url")
+
+
 def main():
+    check_concept_evidence_priority()
     simple = intent("通过免登码获取用户信息的接口地址和必填参数是什么")
     check(not any(simple.values()), f"简单 API 契约题被误拦截: {simple}")
     check(not intent("获取 access_token 接口")["truncated"],

@@ -13,7 +13,7 @@
 
 - 主部门与部门列表、部门主管是不同问题；先查 [花名册字段业务 code](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0946-roster-custom-field-business-code.md)、[按字段获取员工花名册](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0942-api-getemployeerosterbyfield.md)，按原文核对权限与应用类型。
 
-> 本次局部复核：2026-10-20，用户标识生命周期与部门字段入口；其余主题仍沿用原复核基线。
+> 局部复核：2026-10-20，用户标识生命周期与部门字段入口；2026-11-16，媒体文件时效依据；其余主题仍沿用原复核基线。
 
 ## 凭证与鉴权
 
@@ -53,7 +53,7 @@
 - 机器人收到的消息文件/图片：回调里拿 `downloadCode` → [下载机器人接收消息的文件内容](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0720-download-the-file-content-of-the-robot-receiving-message.md)
 - **负面清单**：开放平台没有"拉取群历史消息/历史聊天图片"的服务端接口——只能经机器人回调实时接收（downloadCode 线），别给用户编造 `im/conversations/*/messages/query` 类接口
 - 群文件下载三步链：[查询群存储空间](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0640-obtain-group-storage-space-information.md) → 获取文件列表(dentries) → [获取文件下载信息](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0679-obtains-the-download-information-about-a-file.md)
-- media_id 时效：见[媒体文件概述](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0644-apsara-file-storage-for-hdfs-overview.md)——存储有效期无限制、可一直使用（旧版"3 天过期"说法已过时）
+- media_id 时效：见[上传媒体文件](../docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0646-upload-media-files.md)——原文说明可复用、不占钉盘空间，未说明有效期；旧媒体文件概述已于 2026-11-13 从官方目录移除，其“永久有效”结论不再作为现行依据，也不能将“3 天过期”泛化到本接口。
 
 ## 待办（Todo）
 

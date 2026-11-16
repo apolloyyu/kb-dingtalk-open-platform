@@ -858,6 +858,28 @@ _CONCEPT_FACTS = {
 }
 
 
+def _concept_evidence(concept_terms, docs):
+    """只把实际匹配到事实行的出处作为正文锚点，与原文直取共用一份证据。"""
+    by_slug = {d.get("slug"): d for d in docs}
+    facts, sources, seen = [], [], set()
+    for term in concept_terms:
+        for slug, pat in _CONCEPT_FACTS.get(term, []):
+            d = by_slug.get(slug)
+            if not d or d["source_url"] in seen:
+                continue
+            try:
+                body = open(os.path.join(ROOT, d["local_path"]), encoding="utf-8", errors="ignore").read()
+            except OSError:
+                continue
+            lines = [line.strip() for line in body.splitlines() if re.search(pat, line)]
+            if lines:
+                facts.append(f"[{d['title']}] {d['source_url']}")
+                facts.extend(f"  {line[:220]}" for line in dict.fromkeys(lines))
+                sources.append(d)
+                seen.add(d["source_url"])
+    return facts, sources
+
+
 def _tokenize_query(terms, corpus, stop):
     """自然中文按语料最长匹配，不产生跨边界伪词；常见英文概念补中文同义词。"""
     out = []
@@ -1181,7 +1203,9 @@ def _ctx_impl(terms, n, force_full=False):
         if perm_guide and perm_guide not in flow_reps:
             flow_reps.append(perm_guide)
 
-    # 3) 候选合并：显式 source_url 永远第一；流程题先覆盖教程、凭证和身份等阶段，再补相关正文。
+    # 3) 候选合并：显式 source_url 永远第一；流程题先覆盖各阶段。
+    # 已逐字核过的概念事实优先展开其出处，不让 df/标题同分排序把主正文换成泛用 FAQ。
+    concept_facts, concept_docs = _concept_evidence(concept_terms, docs)
     cand, seen = [], set()
     def add_doc(d):
         if d and d["local_path"] not in seen:
@@ -1191,6 +1215,8 @@ def _ctx_impl(terms, n, force_full=False):
     for d in stage_reps:
         add_doc(d)
     for d in flow_reps:
+        add_doc(d)
+    for d in concept_docs:
         add_doc(d)
     if guide_query or intent["cross_doc"] or intent["enumeration"]:
         for _, _, _, d in scored:
@@ -1204,22 +1230,6 @@ def _ctx_impl(terms, n, force_full=False):
             add_doc(d)
 
     edges = load_jsonl("graph/links.jsonl") if cand else []
-
-    concept_facts = []
-    by_slug = {d.get("slug"): d for d in docs}
-    for term in concept_terms:
-        for slug, pat in _CONCEPT_FACTS.get(term, []):
-            d = by_slug.get(slug)
-            if not d:
-                continue
-            try:
-                body = open(os.path.join(ROOT, d["local_path"]), encoding="utf-8", errors="ignore").read()
-            except OSError:
-                continue
-            lines = [l.strip() for l in body.splitlines() if re.search(pat, l)]
-            if lines and not any(d["source_url"] in x for x in concept_facts):
-                concept_facts.append(f"[{d['title']}] {d['source_url']}")
-                concept_facts.extend(f"  {l[:220]}" for l in dict.fromkeys(lines))
 
     # API 卡片只在“未归档 + full + 首名明显胜出 + 非复杂问法”时替代正文。
     cards_enabled = (not force_full and os.environ.get("KB_NO_CARDS") != "1")
@@ -1240,11 +1250,17 @@ def _ctx_impl(terms, n, force_full=False):
                    "请求头", "请求体", "查询参数", "路径参数", "参数", "字段", "必填",
                    "返回值", "返回字段", "响应", "权限点", "调用", "用法", "示例")))
     card_blocked = any(intent.values())
+    # 原文事实已锚定到另一篇时，不能让高分卡片绕过主证据，仍走正文与原文直取。
+    card_source_mismatch = bool(api_card and concept_docs and cand
+                                and api_top["doc_path"] != cand[0]["local_path"])
     card_fast = bool(api_card and api_card["full"] and not api_card.get("archived")
-                     and confident and strong_anchor and card_scope and not card_blocked)
+                     and confident and strong_anchor and card_scope and not card_blocked
+                     and not card_source_mismatch)
     # 审计必须能区分「意图阻断」与「人为关卡」：--full/KB_NO_CARDS 下 card=0 却报
     # blocked=none 会被误读成"本可 fast 而未 fast"。
     blocked_reasons = [k for k, v in intent.items() if v]
+    if card_source_mismatch:
+        blocked_reasons.append("evidence_source")
     if force_full:
         blocked_reasons.append("forced_full")
     elif os.environ.get("KB_NO_CARDS") == "1":
@@ -1274,7 +1290,8 @@ def _ctx_impl(terms, n, force_full=False):
             # 参数/字段枚举题:卡片是官方参数表的紧凑投影,正文 3500 上限常切掉表格尾部(实录 Q53)。
             # API 表未激活时(问法无"接口"字样)退而取首篇正文对应的卡;卡片不直答,只作证据。
             # 首篇是教程页时,参数表在它正链指向的 API 文档里(实录 Q53:教程页→批量发送单聊消息 API)。
-            evidence_card = api_card or (read_api_card(cand[0]["local_path"]) if cand else None)
+            evidence_card = None if card_source_mismatch else api_card
+            evidence_card = evidence_card or (read_api_card(cand[0]["local_path"]) if cand else None)
             if not evidence_card and cand:
                 for e in [e for e in edges if e["from"] == cand[0]["local_path"]][:10]:
                     c = read_api_card(e["to"])

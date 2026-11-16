@@ -141,6 +141,7 @@ def _doc_src(d):
 FAQ = "faq/faq.jsonl"
 _FAQ_MIN = 0.5          # 字 2-gram Jaccard 下限(离线按历史题误命中率校准)
 _FAQ_MAX_HITS = 2
+_FAQ_KEY_SCORE = 0.75
 _FAQ_EXCERPT_LINES = 12
 _FAQ_EXCERPT_CAP = 1200
 _FAQ = None
@@ -174,6 +175,22 @@ def _faq_norm(s):
 def _faq_grams(s):
     s = _faq_norm(s)
     return {s[i:i + 2] for i in range(len(s) - 1)}
+
+
+_FAQ_SHELL = re.compile(r"请结合下面的文档(?:回答用户问题|解释选中的内容)[:：]?|文档标题[:：][^\n]*?(?=文档[:：])|"
+                        r"文档[:：]\s*https?://\S+|用户问题[:：]|选中文字[:：]")
+
+
+def _faq_clean(q):
+    """去掉文档页提问/工单表单/图片附件的模板外壳和链接，只留用户自己的问法(与离线生成条目时同口径)。"""
+    q = str(q).split("当前文档原文摘录")[0]
+    m = re.search(r"解释用户询问的词语/概念[:：](.*?)[。\n]", q)
+    if m:
+        q = m.group(1)
+    q = re.sub(r"<!-- dev-assistant-images:v1 -->.*", " ", q, flags=re.S)
+    q = re.sub(r"我想要解决以下问题[:：]\s*问题名称[:：](.*?)涉及产品模块[:：].*?问题详情[:：]", r"\1 ", q, flags=re.S)
+    q = re.sub(r"https?://\S+", " ", _FAQ_SHELL.sub(" ", q))
+    return re.sub(r"\s+", " ", q).strip()
 
 
 def _faq_score(qg, e):
@@ -214,8 +231,12 @@ def faq_prefix(raw_query):
     entries = faq_entries()
     if not entries:
         return ""
-    qg = _faq_grams(raw_query)
-    scored = sorted(((s, e) for e in entries if (s := _faq_score(qg, e)) >= _FAQ_MIN), key=lambda x: -x[0])
+    cq = _faq_clean(raw_query)
+    qg, low = _faq_grams(cq), cq.lower()
+    # keys：条目里能唯一指认这类问题的错误码/错误信息原文/接口名(离线校验过在 ≥2 道原题里原样出现)，原样出现即算命中
+    key_hit = lambda e: any(len(k) >= 6 and k.lower() in low for k in e.get("keys") or [])  # noqa: E731
+    scored = sorted(((s, e) for e in entries if (s := max(_faq_score(qg, e), _FAQ_KEY_SCORE if key_hit(e) else 0))
+                     >= _FAQ_MIN), key=lambda x: -x[0])
     if not scored:
         return ""
     by_id = {d.get("doc_id"): d for d in load_jsonl("meta/documents.jsonl") if d.get("doc_id")}

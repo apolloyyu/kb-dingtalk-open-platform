@@ -107,6 +107,9 @@ def check_faq_entries():
          "sources": [{"doc_id": FAQ_DOC, "quote": "这句原文已经不在出处篇里了，条目应当失效"}]},
         {"id": "faq-test-nodoc", "question": "宜搭表单实例 ID 和流程实例 ID 有什么区别", "status": "live",
          "sources": [{"doc_id": "no-such-doc", "quote": FAQ_QUOTE}]},
+        {"id": "faq-test-key", "question": "投放卡片报错怎么排查", "status": "live",
+         "keys": ["spaceTypeModel not exist in cardInstance"],
+         "sources": [{"doc_id": FAQ_DOC, "quote": FAQ_QUOTE}]},
         {"id": "faq-test-suspended", "question": "钉钉考勤打卡结果怎么区分请假类型", "status": "suspended",
          "sources": [{"doc_id": FAQ_DOC, "quote": FAQ_QUOTE}]},
     ]
@@ -130,6 +133,8 @@ def check_faq_entries():
         check(f"「{FAQ_QUOTE}」" in out and "== 相似问题出处原文：创建自定义机器人" in out, "块里缺原文句或出处片段")
         if base is not None:
             check(out.endswith(base), "原 ctx 输出必须逐字保留在相似问题块之后")
+        key_out = _run_cli(cli, "ctx", '{"deliverResults":[{"errorMsg":"spaceTypeModel not exist in cardInstance","spaceId":"x"}]}').stdout
+        check("[faq-test-key]" in key_out, "条目 keys(错误信息原文)原样出现在问题里应命中")
         for q in ("群模板机器人能不能装到已有群", "宜搭表单实例 ID 和流程实例 ID 有什么区别",
                   "钉钉考勤打卡结果怎么区分请假类型", "如何获取企业内部应用的 accessToken"):
             got = _run_cli(cli, "ctx", q).stdout

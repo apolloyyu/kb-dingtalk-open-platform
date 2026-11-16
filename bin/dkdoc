@@ -135,6 +135,116 @@ def _doc_src(d):
     return _sup_label(d) if _is_sup(d) else d["source_url"]
 
 
+# 相似问题(faq/faq.jsonl,日评里问得多、容易错的问题离线核实后生成):一条 = 通用问法 + 相似问法 + 出处(doc_id +
+# 原文逐字句) + 常见误答。不是答案也不是证据:ctx 命中时只在原输出前加一块提示和出处片段,原输出逐字不变。
+# 出处篇不在本库或原文句已不在该篇(官方文档改了)就不用这条，不等离线流水线。
+FAQ = "faq/faq.jsonl"
+_FAQ_MIN = 0.5          # 字 2-gram Jaccard 下限(离线按历史题误命中率校准)
+_FAQ_MAX_HITS = 2
+_FAQ_EXCERPT_LINES = 12
+_FAQ_EXCERPT_CAP = 1200
+_FAQ = None
+
+
+def faq_entries():
+    """status=live 的相似问题条目(本进程只读一次)。坏行跳过,不拖垮检索。"""
+    global _FAQ
+    if _FAQ is not None:
+        return _FAQ
+    out, p = [], os.path.join(ROOT, FAQ)
+    try:
+        lines = open(p, encoding="utf-8-sig").read().splitlines() if os.path.exists(p) else []
+    except OSError:
+        lines = []
+    for line in lines:
+        try:
+            e = json.loads(line) if line.strip() else None
+        except ValueError:
+            continue
+        if isinstance(e, dict) and e.get("status") == "live" and e.get("question") and e.get("sources"):
+            out.append(e)
+    _FAQ = out
+    return out
+
+
+def _faq_norm(s):
+    return re.sub(r"[^\w一-鿿]+", "", str(s).lower())
+
+
+def _faq_grams(s):
+    s = _faq_norm(s)
+    return {s[i:i + 2] for i in range(len(s) - 1)}
+
+
+def _faq_score(qg, e):
+    best = 0.0
+    for p in [e["question"]] + list(e.get("variants") or []):
+        pg = _faq_grams(p)
+        if qg and pg:
+            best = max(best, len(qg & pg) / len(qg | pg))
+    return best
+
+
+def _faq_source(src, by_id):
+    """(文档记录, 正文行, 原文句起始行号) 或 None:出处篇不在本库、读不到或原文句已不在篇中都算失效。
+    按去空白/标点后的全文定位原文句，再换算回行号(原文句可跨行)。"""
+    d = by_id.get(src.get("doc_id"))
+    quote = _faq_norm(src.get("quote") or "")
+    if not d or len(quote) < 6:
+        return None
+    try:
+        lines = open(os.path.join(ROOT, d["local_path"]), encoding="utf-8", errors="ignore").read().splitlines()
+    except OSError:
+        return None
+    starts, buf, pos = [], [], 0
+    for l in lines:
+        starts.append(pos)
+        n = _faq_norm(l)
+        buf.append(n)
+        pos += len(n)
+    at = "".join(buf).find(quote)
+    if at < 0:
+        return None
+    i = max(k for k, s in enumerate(starts) if s <= at)
+    return d, lines, i
+
+
+def faq_prefix(raw_query):
+    """ctx 输出前追加的「相似问题」块;没有命中或没有 faq/ 时返回空串(ctx 输出逐字不变)。"""
+    entries = faq_entries()
+    if not entries:
+        return ""
+    qg = _faq_grams(raw_query)
+    scored = sorted(((s, e) for e in entries if (s := _faq_score(qg, e)) >= _FAQ_MIN), key=lambda x: -x[0])
+    if not scored:
+        return ""
+    by_id = {d.get("doc_id"): d for d in load_jsonl("meta/documents.jsonl") if d.get("doc_id")}
+    hits = []
+    for s, e in scored:
+        srcs = [(r, x) for x in e["sources"][:3] if (r := _faq_source(x, by_id))]
+        if srcs:
+            hits.append((s, e, srcs))
+        if len(hits) >= _FAQ_MAX_HITS:
+            break
+    if not hits:
+        return ""
+    parts = ["== 相似问题（日评里反复出现、已核实出处的问题；不是答案，结论以官方原文为准；与所问不是同一件事就忽略本块）=="]
+    excerpts = []
+    for s, e, srcs in hits:
+        parts.append(f"[{e.get('id', 'faq')}] 相似问法：{e['question']}（相似度 {s:.2f}）")
+        for (d, _lines, _i), src in srcs:
+            parts.append(f"  出处：{d['title']} · {d['source_url']}")
+            parts.append(f"  原文：「{src['quote'][:200]}」")
+        for p in (e.get("pitfalls") or [])[:2]:
+            parts.append(f"  常见误答：{p[:120]}")
+        (d, lines, i), _src = srcs[0]
+        lo = max(0, i - _FAQ_EXCERPT_LINES // 2)
+        body = _sanitize_links("\n".join(lines[lo:i + _FAQ_EXCERPT_LINES]))
+        excerpts.append(f"== 相似问题出处原文：{d['title']} ({d['local_path']} 第 {lo + 1} 行起) ==\n"
+                        + _cut(body, _FAQ_EXCERPT_CAP))
+    return "\n".join(parts + excerpts) + "\n"
+
+
 def api_card_index():
     p = os.path.join(ROOT, "cards", "api-index.jsonl")
     return load_jsonl("cards/api-index.jsonl") if os.path.exists(p) else []
@@ -752,6 +862,12 @@ def _ident_rows(rows, hayf, tl):
 
 def cmd_ctx(terms, n, force_full=False):
     """一次打包检索：安全时答案卡直答，否则正文+links；异常→CTX_ERROR。"""
+    try:
+        pre = faq_prefix(" ".join(terms)) if terms else ""
+    except Exception:  # 相似问题块只是附加提示：出错就不加，不影响原检索
+        pre = ""
+    if pre:
+        print(pre)
     try:
         return _ctx_impl(terms, n, force_full=force_full)
     except SystemExit:

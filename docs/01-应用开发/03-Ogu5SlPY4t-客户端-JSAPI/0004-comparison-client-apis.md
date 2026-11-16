@@ -81,8 +81,8 @@ import * as dd from 'dingtalk-jsapi'; // 此方式为整体加载，也可按需
 - 新版客户端 API，详情参考新版[JSAPI 总览](0001-jsapi-overview.md)。
 - 旧版客户端 API，分为小程序和H5微应用：
 
-  - 小程序详情参考旧版[小程序JSAPI总览](0430-mini-program-jsapi-overview.md)。
-  - H5微应用详情参考旧版[H5微应用JSAPI总览](0713-jsapi-overview-1.md)。
+  - 小程序详情参考旧版[小程序JSAPI总览](0431-mini-program-jsapi-overview.md)。
+  - H5微应用详情参考旧版[H5微应用JSAPI总览](0714-jsapi-overview-1.md)。
 
 ### 核心区别
 
@@ -170,29 +170,29 @@ import * as dd from 'dingtalk-jsapi'; // 此方式为整体加载，也可按需
 
 | **类目** | **新版客户端API** | **旧版客户端API** |
 | --- | --- | --- |
-| **UUID** | [getDeviceUUID](0356-jsapi-get-device-uuid.md) | device.base.getUUID |
-| **NFC** | [writeNFC](0409-jsapi-write-nfc.md) | device.nfc.nfcWrite |
-| [readNFC](0408-jsapi-read-nfc.md#undefined) | device.nfc.nfcRead |
-| **振动** | [vibrate](0381-jsapi-vibrate.md) | device.notification.vibrate |
-| **扫码** | [scanCard](0407-jsapi-scan-card.md) | biz.util.scanCard |
-| **摇一摇** | [clearShake](0410-jsapi-clear-shake.md) | device.accelerometer.clearShake |
-| [watchShake](0411-jsapi-watch-shake.md) | device.accelerometer.watchShake |
-| **剪贴板** | [setClipboard](0380-jsapi-set-clipboard.md) | biz.clipboardData.setData |
-| **Wi-Fi** | [getWifiStatus](0372-jsapi-get-wifi-status.md) | device.base.getWifiStatus |
-| **屏幕亮度** | [setKeepScreenOn](0412-jsapi-set-keep-screen-on.md) | biz.util.setScreenKeepOn |
-| [setScreenBrightness](0414-jsapi-set-screen-brightness.md) | device.screen.setScreenBrightness |
-| **拨打电话** | [addPhoneContact](0416-jsapi-add-phone-contact.md) | biz.phoneContact.add |
-| **设备电量** | [getBatteryInfo](0415-jsapi-get-battery-info.md) | device.base.getBatteryInfo |
-| **网络状态** | [getNetworkType](0364-jsapi-get-network-type.md) | device.connection.getNetworkType |
-| [getWifiHotspotStatus](0365-jsapi-get-wifi-hotspot-status.md) | device.base.getInterface |
-| **系统信息** | [getSystemInfo](0359-jsapi-get-system-info.md) | device.base.getPhoneInfo |
-| [rsa](0357-jsapi-rsa.md) | biz.data.rsa |
-| [showAuthGuide](0360-jsapi-show-auth-guide.md) | biz.util.showAuthGuide |
-| [checkAuth](0358-jsapi-check-auth.md) | biz.util.checkAuth |
-| [isScreenReaderEnabled](0363-jsapi-is-screen-reader-enabled.md) | device.screen.isScreenReaderEnabled |
-| [getSystemSettings](0361-jsapi-get-system-settings.md) | device.base.openSystemSetting |
-| **设备方向** | [resetScreenView](0417-jsapi-reset-screen-view.md) | device.screen.resetView |
-| [rotateScreenView](0418-jsapi-rotate-screen-view.md) | device.screen.rotateView |
+| **UUID** | [getDeviceUUID](0357-jsapi-get-device-uuid.md) | device.base.getUUID |
+| **NFC** | [writeNFC](0410-jsapi-write-nfc.md) | device.nfc.nfcWrite |
+| [readNFC](0409-jsapi-read-nfc.md#undefined) | device.nfc.nfcRead |
+| **振动** | [vibrate](0382-jsapi-vibrate.md) | device.notification.vibrate |
+| **扫码** | [scanCard](0408-jsapi-scan-card.md) | biz.util.scanCard |
+| **摇一摇** | [clearShake](0411-jsapi-clear-shake.md) | device.accelerometer.clearShake |
+| [watchShake](0412-jsapi-watch-shake.md) | device.accelerometer.watchShake |
+| **剪贴板** | [setClipboard](0381-jsapi-set-clipboard.md) | biz.clipboardData.setData |
+| **Wi-Fi** | [getWifiStatus](0373-jsapi-get-wifi-status.md) | device.base.getWifiStatus |
+| **屏幕亮度** | [setKeepScreenOn](0413-jsapi-set-keep-screen-on.md) | biz.util.setScreenKeepOn |
+| [setScreenBrightness](0415-jsapi-set-screen-brightness.md) | device.screen.setScreenBrightness |
+| **拨打电话** | [addPhoneContact](0417-jsapi-add-phone-contact.md) | biz.phoneContact.add |
+| **设备电量** | [getBatteryInfo](0416-jsapi-get-battery-info.md) | device.base.getBatteryInfo |
+| **网络状态** | [getNetworkType](0365-jsapi-get-network-type.md) | device.connection.getNetworkType |
+| [getWifiHotspotStatus](0366-jsapi-get-wifi-hotspot-status.md) | device.base.getInterface |
+| **系统信息** | [getSystemInfo](0360-jsapi-get-system-info.md) | device.base.getPhoneInfo |
+| [rsa](0358-jsapi-rsa.md) | biz.data.rsa |
+| [showAuthGuide](0361-jsapi-show-auth-guide.md) | biz.util.showAuthGuide |
+| [checkAuth](0359-jsapi-check-auth.md) | biz.util.checkAuth |
+| [isScreenReaderEnabled](0364-jsapi-is-screen-reader-enabled.md) | device.screen.isScreenReaderEnabled |
+| [getSystemSettings](0362-jsapi-get-system-settings.md) | device.base.openSystemSetting |
+| **设备方向** | [resetScreenView](0418-jsapi-reset-screen-view.md) | device.screen.resetView |
+| [rotateScreenView](0419-jsapi-rotate-screen-view.md) | device.screen.rotateView |
 
 #### **跳转**
 
@@ -246,13 +246,13 @@ import * as dd from 'dingtalk-jsapi'; // 此方式为整体加载，也可按需
 
 | **新版客户端API** | **旧版客户端API** |
 | --- | --- |
-| [getLocation](0322-jsapi-get-location.md) | device.geolocation.get |
-| [openLocation](0325-jsapi-open-location.md) | biz.map.view |
-| [searchMap](0323-jsapi-search-map.md) | biz.map.search |
-| [locateInMap](0324-jsapi-locate-in-map.md) | biz.map.locate |
-| [getLocatingStatus](0328-jsapi-get-locating-status.md) | device.geolocation.status |
-| [stopLocating](0326-jsapi-stop-locating.md) | device.geolocation.stop |
-| [startLocating](0327-jsapi-start-locating.md) | device.geolocation.start |
+| [getLocation](0323-jsapi-get-location.md) | device.geolocation.get |
+| [openLocation](0326-jsapi-open-location.md) | biz.map.view |
+| [searchMap](0324-jsapi-search-map.md) | biz.map.search |
+| [locateInMap](0325-jsapi-locate-in-map.md) | biz.map.locate |
+| [getLocatingStatus](0329-jsapi-get-locating-status.md) | device.geolocation.status |
+| [stopLocating](0327-jsapi-stop-locating.md) | device.geolocation.stop |
+| [startLocating](0328-jsapi-start-locating.md) | device.geolocation.start |
 
 #### **网络**
 
@@ -286,10 +286,10 @@ import * as dd from 'dingtalk-jsapi'; // 此方式为整体加载，也可按需
 
 | **新版客户端API** | **旧版客户端API** |
 | --- | --- |
-| [chooseChat](0318-jsapi-choose-chat.md) | biz.chat.chooseConversationByCorpId |
-| [openChatByChatId](0319-jsapi-open-chat-by-chat-id.md) | biz.chat.toConversation |
-| [openChatByUserId](0320-jsapi-open-chat-by-user-id.md) | biz.chat.openSingleChat |
-| [openChatByConversationId](0321-jsapi-open-chat-by-conversation-id.md) | biz.chat.toConversationByOpenConversationId |
+| [chooseChat](0319-jsapi-choose-chat.md) | biz.chat.chooseConversationByCorpId |
+| [openChatByChatId](0320-jsapi-open-chat-by-chat-id.md) | biz.chat.toConversation |
+| [openChatByUserId](0321-jsapi-open-chat-by-user-id.md) | biz.chat.openSingleChat |
+| [openChatByConversationId](0322-jsapi-open-chat-by-conversation-id.md) | biz.chat.toConversationByOpenConversationId |
 
 #### **通讯录**
 
@@ -320,12 +320,12 @@ import * as dd from 'dingtalk-jsapi'; // 此方式为整体加载，也可按需
 
 | **新版客户端API** | **旧版客户端API** |
 | --- | --- |
-| [callUsers](0311-jsapi-call-users.md) | biz.telephone.call |
-| [checkBizCall](0313-jsapi-check-biz-call.md) | biz.telephone.checkBizCall |
-| [getCloudCallList](0317-jsapi-get-cloud-call-list.md) | biz.conference.getCloudCallList |
-| [makeCloudCall](0315-jsapi-make-cloud-call.md) | biz.conference.createCloudCall |
-| [getCloudCallInfo](0316-jsapi-get-cloud-call-info.md) | biz.conference.getCloudCallInfo |
-| [quickCallList](0312-jsapi-quick-call-list.md) | biz.telephone.quickCallList |
+| [callUsers](0312-jsapi-call-users.md) | biz.telephone.call |
+| [checkBizCall](0314-jsapi-check-biz-call.md) | biz.telephone.checkBizCall |
+| [getCloudCallList](0318-jsapi-get-cloud-call-list.md) | biz.conference.getCloudCallList |
+| [makeCloudCall](0316-jsapi-make-cloud-call.md) | biz.conference.createCloudCall |
+| [getCloudCallInfo](0317-jsapi-get-cloud-call-info.md) | biz.conference.getCloudCallInfo |
+| [quickCallList](0313-jsapi-quick-call-list.md) | biz.telephone.quickCallList |
 
 #### **钉盘**
 
@@ -333,11 +333,11 @@ import * as dd from 'dingtalk-jsapi'; // 此方式为整体加载，也可按需
 
 | **新版客户端API** | **旧版客户端API** |
 | --- | --- |
-| [saveFileToDingTalk](0330-jsapi-save-file-to-ding-talk.md) | biz.cspace.saveFile |
-| [previewFileInDingTalk](0331-jsapi-preview-file-in-ding-talk.md) | biz.cspace.preview |
-| [uploadAttachmentToDingTalk](0332-jsapi-upload-attachment-to-ding-talk.md) | biz.util.uploadAttachment |
-| [chooseDingTalkDir](0329-jsapi-choose-ding-talk-dir.md) | biz.cspace.chooseSpaceDir |
-| [previewImagesInDingTalkBatch](0333-jsapi-preview-images-in-ding-talk-batch.md) | biz.cspace.previewDentryImages |
+| [saveFileToDingTalk](0331-jsapi-save-file-to-ding-talk.md) | biz.cspace.saveFile |
+| [previewFileInDingTalk](0332-jsapi-preview-file-in-ding-talk.md) | biz.cspace.preview |
+| [uploadAttachmentToDingTalk](0333-jsapi-upload-attachment-to-ding-talk.md) | biz.util.uploadAttachment |
+| [chooseDingTalkDir](0330-jsapi-choose-ding-talk-dir.md) | biz.cspace.chooseSpaceDir |
+| [previewImagesInDingTalkBatch](0334-jsapi-preview-images-in-ding-talk-batch.md) | biz.cspace.previewDentryImages |
 
 #### **文件**
 
@@ -345,8 +345,8 @@ import * as dd from 'dingtalk-jsapi'; // 此方式为整体加载，也可按需
 
 | **新版客户端API** | **旧版客户端API** |
 | --- | --- |
-| [openLocalFile](0335-jsapi-open-local-file.md) | biz.util.openLocalFile |
-| [isLocalFileExist](0336-jsapi-is-local-file-exist.md) | biz.util.isLocalFileExist |
+| [openLocalFile](0336-jsapi-open-local-file.md) | biz.util.openLocalFile |
+| [isLocalFileExist](0337-jsapi-is-local-file-exist.md) | biz.util.isLocalFileExist |
 
 #### **视频**
 
@@ -354,7 +354,7 @@ import * as dd from 'dingtalk-jsapi'; // 此方式为整体加载，也可按需
 
 | **新版客户端API** | **旧版客户端API** |
 | --- | --- |
-| [makeVideoConfCall](0308-jsapi-make-video-conf-call.md) | biz.conference.videoConfCall |
+| [makeVideoConfCall](0309-jsapi-make-video-conf-call.md) | biz.conference.videoConfCall |
 
 #### **专属开放**
 
@@ -362,7 +362,7 @@ import * as dd from 'dingtalk-jsapi'; // 此方式为整体加载，也可按需
 
 | **新版客户端API** | **旧版客户端API** |
 | --- | --- |
-| [getUserExclusiveInfo](0424-jsapi-get-user-exclusive-info.md) | biz.realm.getUserExclusiveInfo |
+| [getUserExclusiveInfo](0425-jsapi-get-user-exclusive-info.md) | biz.realm.getUserExclusiveInfo |
 
 ## 迁移操作指南
 

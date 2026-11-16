@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "钉钉 CLI"
 breadcrumb: "更新日志"
 doc_id: "JqaPUpyWXl"
-updated_at: "2026-11-06 11:38:00"
+updated_at: "2026-11-12 15:16:02"
 ---
 
 > Source: https://open.dingtalk.com/document/development/dws-cli-log
 > Path: 应用开发 / 钉钉 CLI / 更新日志
-> Updated: 2026-11-06 11:38:00
+> Updated: 2026-11-12 15:16:02
 
 # 更新日志
 
@@ -41,11 +41,69 @@ dws upgrade --list
 
   ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/6160536871/p1094200.png)
 
+## **2026-****11-11**
+
+### **更新说明**
+
+本周重点：**钉钉运动**能力接入，企业步数、排行榜和比赛都能查能建；**开放平台应用事件**支持自建定义从草稿管到上线；**Windows 上多个 Agent 可以各用各的登录状态**；同时加固**聊天消息读取**与**AI 表格结果**的可靠性。。建议通过 `dws upgrade` 升级到最新版[v1.0.68](https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli/releases/tag/v1.0.68)。
+
+### 新增功能
+
+#### **钉钉运动：企业步数、排行榜和比赛都能查能建**
+
+新接入企业运动健康（钉钉运动）能力，共 21 个子命令，覆盖开通状态、企业/部门/员工步数、比赛发起与效果统计。前提是企业已在钉钉客户端开通运动步数榜，比赛还需要开通运动健康服务。属于长尾能力，不在 `dws --help` 一级列表里，用 `dws sport --help` 进入，或在 dingtalk-misc Skill 里按「钉钉运动」找到说明。
+
+#### **步数与排行：企业、部门、员工都能看**
+
+先查企业有没有开通步数榜，再看单日步数概况和区间总步数；员工排行支持日/周/月，部门和部门内员工排行支持周/月，用 `--cursor` 和 `--size`（1~100）翻页。某个员工或部门想看多日明细，一次可以传 1~30 个日期。企业没开通步数榜时，状态查询会直接返回 false，排行返回空列表。
+
+- 相关命令：`dws sport org status`、`dws sport step org-info`、`dws sport step org-total`
+- 排行与明细：`dws sport step emp-ranking`、`dws sport step dept-ranking`、`dws sport step dept-emp-ranking`、`dws sport step emp-info`、`dws sport step emp-infos`、`dws sport step dept-infos`
+- 示例：`dws sport step emp-ranking --stat-date 20261110 --stat-type W --cursor 0 --size 20`
+
+#### **比赛：发起、查规则和期次、开赛播报、看效果**
+
+可以创建固定不循环的步数、跑步或综合运动挑战赛，查比赛配置、规则和当前/下一期，开赛时往群里发播报，并统计报名、每日参与、累计参与、达标和趋势。创建比赛和开赛播报都是写操作，执行前会要求确认；比赛创建后不能删除，同一个规则重复播报会重复打扰群成员，操作前请确认好对象。
+
+- 相关命令：`dws sport competition create`、`dws sport competition config`、`dws sport competition rule-detail`、`dws sport competition instances`、`dws sport competition current-instance`、`dws sport competition next-instance`、`dws sport competition announce`
+- 统计命令：`dws sport stats signup`、`dws sport stats participants-daily`、`dws sport stats participants`、`dws sport stats reached`、`dws sport stats trend`
+- 说明：所有子命令都支持 `--dry-run`，先看要调用的工具和参数，不会真的发出去。
+
+### **体验优化**
+
+#### **Windows 上多个 Agent 各用各的登录状态**
+
+同一台 Windows 机器跑多个 Agent 时，用 `DWS_KEYCHAIN_DIR` 给每个 Agent 指定独立的凭据空间，登录、执行命令、退出和重置互不影响。它需要和 `DWS_CONFIG_DIR` 成对设置，并在每次调用时传同一个 Agent 专属的绝对路径；凭据仍保存在注册表里，不会作为文件写进这个目录。不设置时沿用原来的注册表位置，已有登录不受影响；升级后第一次设置会进入新的空间，需要重新登录一次。
+
+- 相关变量：`DWS_KEYCHAIN_DIR`、`DWS_CONFIG_DIR`
+- 说明：在 macOS、Linux 和 OpenHarmony 上，`DWS_KEYCHAIN_DIR` 仍然是加密文件的存放目录，用法不变；`DWS_DISABLE_KEYCHAIN` 依旧只对 macOS 生效。
+
+### **问题优化**
+
+- **聊天消息读取更可信**
+
+  - **解密失败给出具体原因**：策略查询失败、组织未开启加密、加密开关关闭分别报出，批量解密失败会按消息保留 `messageId` 和 `conversationId`，不再只给一条不知道属于哪条消息的报错；
+  - **分页读取不再把不完整当完整**：单聊全量读取和智能读取在解密失败、分页成功时仍标记为不完整，`dws chat +messages-mget` 等原子读取补齐 `decryptAllowedCount`；分页未知时不再声称分页完整，DING 列表允许游标递减但不重复；
+  - **策略响应缺字段不再被读成“未开通”**：只有不含任何策略字段的纯成功回执才按关闭处理，缺少 `mode` 但带有原因、提示或错误信息的响应直接失败。
+- **AI 表格结果更可信**
+
+  - **写入丢响应后能恢复原操作**：含创建的 `dws aitable +record-upsert` 会在发送前保存原 token、对象身份和目标信息，保存失败就不发送；超时后按原信息只读核对，不重复写入；
+  - **结果未知不再误报失败**：`dws aitable +record-write-result` 收到 `unknown` 回执时返回 `pending`，并保留只读恢复方式，不把未知结果当成失败或未写入；
+  - **链接交付更完整**：`dws aitable base list` 和 `dws aitable base search` 保留每个对象的导航字段；新建后返回的具名完整链接原样保留 URL 编码，可以直接转发；面向填写者的场景不会给出管理页链接。
+- **钉钉文档内联图片可以正常预览**
+
+  - 上传回执带资源 ID 时，内联图片会写入 `extraData.resourceId`；同时兼容不带资源 ID 的旧回执，其他依赖资源 ID 的写入仍然严格校验。
+- **重要兼容性变更**
+
+  - **更新考勤组成员必须声明成员范围**：`dws attendance group update-members` 现在必须显式传入 `--member-join-policy SPECIFIC_USERS`，不传会直接报参数错误。更新已有脚本时，把人员和部门变更项与这个参数一起传。
+  - **钉钉表格批量改样式一次最多 20 项**：`dws sheet range batch-set-style` 的 `--ranges` 和 `--batch` 统一为最多 20 项，与服务端单次批量上限一致。超出会在本地直接返回参数错误（退出码 3），需要拆成多批提交；合法输入仍然一次提交，任一项失败整批回滚。
+  - **AI 卡片默认允许转发**：`dws chat message send-a2ui-card` 现在默认带 `supportForward=true`。需要禁止转发时显式传 `--support-forward=false`；显式传 `--support-forward=true` 仍然有效。数字员工回复仍按各自的 `--reply-card-forward` 设置执行，审批卡片仍然不可转发。
+
 ## **2026-****11-04**
 
 ### **更新说明**
 
-本周重点：新增**听记与日历个人事件订阅**，让 Agent 在听记生成、日程变化时第一时间通知你；同时带来**AI 卡片模板化管理**、**AI 听记模板与标签**、**AI 表格链接直达**，并补齐开放平台 H5 应用管理和文档块区间替换。建议通过 `dws upgrade` 升级到最新版[v1.0.63](https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli/releases/tag/v1.0.63)。
+本周重点：新增**听记与日历个人事件订阅**，让 Agent 在听记生成、日程变化时第一时间通知你；同时带来**AI 卡片模板化管理**、**AI 听记模板与标签**、**AI 表格链接直达**，并补齐开放平台 H5 应用管理和文档块区间替换。建议通过 `dws upgrade` 升级到最新版[v1.0.67](https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli/releases/tag/v1.0.67)。
 
 ### 新增功能
 
@@ -128,7 +186,7 @@ dws upgrade --list
 
 ### **更新说明**
 
-本周重点：**支持脑图创建**、**AI 表格高级权限与成体系搭建**、**凭群号或邀请链接申请入群**三大方向，同时权限管理改版升级，使用钉钉DWS CLI更安全。建议通过 `dws upgrade` 升级到最新版[v1.0.63](https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli/releases/tag/v1.0.63)。
+本周重点：**支持脑图创建**、**AI 表格高级权限与成体系搭建**、**凭群号或邀请链接申请入群**三大方向，同时权限管理改版升级，使用钉钉DWS CLI更安全。建议通过 `dws upgrade` 升级到最新版[v1.0.66](https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli/releases/tag/v1.0.66)。
 
 ### 新增功能
 
@@ -212,7 +270,7 @@ DWS CLI 权限管控体系完成安全升级，新增「组织级 → 渠道级 
 
 ### **更新说明**
 
-本周重点：**通讯录好友体系开放**、**聊天图文消息一条发**、**OA 审批图片控件上传**三大方向，同步新增群公告静默发布与新人必看、AI 卡片标准输入与预览摘要自定义、版本更新检查等能力。建议通过 `dws upgrade` 升级到最新版[v1.0.63](https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli/releases/tag/v1.0.63)。
+本周重点：**通讯录好友体系开放**、**聊天图文消息一条发**、**OA 审批图片控件上传**三大方向，同步新增群公告静默发布与新人必看、AI 卡片标准输入与预览摘要自定义、版本更新检查等能力。建议通过 `dws upgrade` 升级到最新版[v1.0.65](https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli/releases/tag/v1.0.65)。
 
 ### **新增功能**
 
@@ -268,7 +326,7 @@ DWS CLI 权限管控体系完成安全升级，新增「组织级 → 渠道级 
 
 - **AI 表格写入**：写入结果不确定时不再自动重试，可凭原样保留的 clientToken 只读核对实际结果，避免重复写入；建表、建字段会等结构真正生效再返回，超时或取消不会重复创建；查询与批量更新共用同一套筛选校验，Help 与 Skill 说明同步统一。
 - **日历、白板与 AI 卡片**：日历写入后读回核验时区与忙闲，读回失败时保留已写入的结果、不会重复写入；白板在预览或保存前先校验节点格式，错误提前暴露；AI 卡片更新兼容性检查更完善，沿用服务端返回的卡片标识。
-- **升级版本比较**：`dws upgrade`、`dws upgrade --check` 与 `dws doctor` 比较版本时忽略 `+` 后的构建后缀，修复版本号带 `+` 时误报可升级或漏报新版本（#556）。
+- **升级版本比较**：`dws upgrade`、`dws upgrade --check` 与 `dws doctor` 比较版本时忽略 `+` 后的构建后缀，修复版本号带 `+` 时误报可升级或漏报新版本。
 - **消息转话题下线**：`chat thread promote` 下线，历史调用返回 `command_retired`，帮助与 Skill 不再推荐；已有消息转话题暂无等价替代，新建话题请改用 `chat thread send`，回复已有话题请改用 `chat thread reply`。
 
 ## **2026-10-03**
@@ -453,9 +511,9 @@ AI 搜问（`dws aisearch`）搜索结果补充证据与解析详情，配套使
 
 ### **问题优化**
 
-- **跨平台发布**：修复 Windows SafeChat CGO 运行库崩溃与 Darwin amd64 产物无法启动的问题（#1441），发布前对签名资产静态检查并实际启动每个可执行产物。
+- **跨平台发布**：修复 Windows SafeChat CGO 运行库崩溃与 Darwin amd64 产物无法启动的问题，发布前对签名资产静态检查并实际启动每个可执行产物。
 - **消息与事件**：修复单聊引用回复误拒绝；`event consume --flatten` 为全部 7 类 OA 审批事件保留 `staff_id` 等关键字段，抄送事件提供 `cc_time`；个人 Stream 不再把系统控制帧投递为业务消息；数字员工连接改进断线重连（升级后需重启员工 worker 生效）。
-- **模板与协议修复**：修正 OA TableField 的 Skill 示例（#1347）；修复 Windows 自动转换 CRLF 后 AI 卡片协议哈希校验失败、卡片查询与校验命令不可用的问题。
+- **模板与协议修复**：修正 OA TableField 的 Skill 示例；修复 Windows 自动转换 CRLF 后 AI 卡片协议哈希校验失败、卡片查询与校验命令不可用的问题。
 - **登录恢复**：本地登录加密密钥缺失或旧密文确认不匹配时允许重新授权，旧密文在新凭据可用前保持不动。
 
 ## **2026-09-16**

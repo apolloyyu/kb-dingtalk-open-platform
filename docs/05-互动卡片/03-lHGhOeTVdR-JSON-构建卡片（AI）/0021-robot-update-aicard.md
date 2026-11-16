@@ -20,7 +20,7 @@ updated_at: "2026-10-29 11:52:29"
 
 ## **说明**
 
-**用企业内部应用的机器人，**通过调用[更新 AI 卡片](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0792-api-updateaicard.md)接口，**更新已经发出的卡片内容和状态**。
+**用企业内部应用的机器人，**通过调用[更新 AI 卡片](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0788-api-updateaicard.md)接口，**更新已经发出的卡片内容和状态**。
 
 卡片要先用[机器人发送卡片](0020-robot-send-aicard.md)创建并投递，更新时用创建时的 `outTrackId` 定位这张卡片。access\_token 的获取方式和所需权限 `AICard.Instance.Write` 与发送相同。
 

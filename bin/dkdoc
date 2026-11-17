@@ -1125,6 +1125,7 @@ def _ctx_impl(terms, n, force_full=False):
 
     # 1) 五张实体表（匹配逻辑与各子命令一致；此处只收集不打印）
     ent_lines, ent_paths, ent_counts = [], [], {}
+    weak_api_paths, strong_ent_paths = set(), set()   # 接口行按是否锚定分开；事件/JSAPI 命中一律算锚定
     def _hay_api(r):
         return " ".join([str(r.get(k) or "") for k in
                          ("title", "endpoint", "method", "permission_raw", "source_url", "doc_path")]
@@ -1177,6 +1178,10 @@ def _ctx_impl(terms, n, force_full=False):
             score += 5000
         rr = dict(r)
         rr["_ctx_score"] = score
+        # 锚定 = 问法有接口信号、source_url 锚点、标题/endpoint 整串命中(+500 起)、原文直取命中
+        # (concept_bonus 来自 _CONCEPT_FACTS 的逐字实现名)或英文标识符；只靠中文泛词凑够命中数的不算。
+        rr["_ctx_anchored"] = bool(hinted or exact or api_signal or concept_bonus or score >= 500 or any(
+            w in hay and re.fullmatch(r"[a-z0-9_.:/-]+", w) and len(w) >= 6 for w in api_terms))
         api_scored.append((bool(r.get("archived")), -score, r["title"], r["doc_path"], rr))
     api_scored.sort()
     rows = [r for _, _, _, _, r in api_scored]
@@ -1193,6 +1198,7 @@ def _ctx_impl(terms, n, force_full=False):
         perm = f" · 权限:{','.join(r.get('permission_scopes') or [])}" if r.get("permission_scopes") else ""
         ent_lines.append(f"[api] {r['title']}{tag} · {(r.get('method') or '?')} {r.get('endpoint') or ''}{perm}\n      {r['doc_path']} · {r['source_url']}")
         ent_paths.append(r["doc_path"])
+        (strong_ent_paths if r["_ctx_anchored"] else weak_api_paths).add(r["doc_path"])
     # 自然句里嵌入的错误码/权限点优先做精确实体键，不能拿整句 terms[0] 去等值比较。
     q0 = next((x for x in tl if x.isdigit() or "." in x), tl[0] if tl else terms[0])
     err_rows = load_jsonl("graph/errcode.jsonl")
@@ -1213,6 +1219,7 @@ def _ctx_impl(terms, n, force_full=False):
         tag = " ⚠归档" if r.get("archived") else ""
         ent_lines.append(f"[event] {r['title']}{tag} · {', '.join(r.get('event_types', [])[:4])}\n      {r['doc_path']} · {r['source_url']}")
         ent_paths.append(r["doc_path"])
+        strong_ent_paths.add(r["doc_path"])
     _hay_js = lambda r: (r["title"] + " " + " ".join(r.get("jsapi_names", []))).lower()
     _js_rows = load_jsonl("graph/jsapi.jsonl")
     js = [r for r in _js_rows if all(t in _hay_js(r) for t in tl)] or _ident_rows(_js_rows, _hay_js, tl)
@@ -1222,6 +1229,7 @@ def _ctx_impl(terms, n, force_full=False):
         tag = " ⚠归档" if r.get("archived") else ""
         ent_lines.append(f"[jsapi] {r['title']}{tag} · 含: {', '.join(r.get('jsapi_names', [])[:4])}\n      {r['doc_path']} · {r['source_url']}")
         ent_paths.append(r["doc_path"])
+        strong_ent_paths.add(r["doc_path"])
     pm_rows = load_jsonl("graph/permission.jsonl")
     pm = [r for r in pm_rows if r["permission_scope"].lower() == q0.lower()] or \
          [r for r in pm_rows if q0.lower() in r["permission_scope"].lower()]
@@ -1384,6 +1392,16 @@ def _ctx_impl(terms, n, force_full=False):
             add_doc(bymap.get(p))
         for _, _, _, d in scored:
             add_doc(d)
+    # 问法没提接口、也没点名接口时，接口表只靠中文泛词命中(「如何搭建自动回复群消息的机器人」→
+    # 「撤回机器人消息」)。它占唯一正文位时，篇目检索第一的指南页只剩「其他候选(未展开)」；
+    # 但同类泛词命中也常就是正确接口(「如何获取已离职员工信息」)，不能简单让位。此时把篇目第一
+    # 追加展开为「正文[篇目第一]」：只追加，不改候选顺序、编号与已有段落(同「正文[运营补充]」)。
+    # 只用于单篇题：流程/枚举题本就展开 3 篇且篇目在前。
+    lead = cand[0]["local_path"] if cand else ""
+    find_top = next((d for _, _, _, d in scored if not _is_sup(d)), None)
+    single_doc = not (intent["stage"] or intent["semantic"] or intent["cross_doc"] or intent["enumeration"])
+    extra_top = find_top if (single_doc and lead in weak_api_paths and lead not in strong_ent_paths
+                             and find_top and find_top["local_path"] != lead) else None
 
     edges = load_jsonl("graph/links.jsonl") if cand else []
 
@@ -1512,6 +1530,16 @@ def _ctx_impl(terms, n, force_full=False):
                         shown += 1
                     else:
                         parts.append(f"  {arrow} {tgt}")
+        extra = extra_top if (top_k and extra_top and extra_top not in cand[:top_k]) else None
+        if extra:   # 首篇是泛词接口页时追加篇目检索第一(见候选合并处)；正文上限同单篇
+            etag = " " + flags.get(extra["local_path"], "") if flags.get(extra["local_path"]) else ""
+            parts.append(f"\n== 正文[篇目第一] {extra['title']}{etag} ({extra['local_path']}) ==")
+            parts.append(f"source_url: {extra['source_url']} · updated_at: {extra['updated_at'][:10]}")
+            ebody = _sanitize_links(open(os.path.join(ROOT, extra["local_path"]), encoding="utf-8",
+                                         errors="ignore").read())
+            if len(ebody) > _CTX_BODY_CAP:
+                ebody = _cut(ebody, _CTX_BODY_CAP) + f"\n…[已截断，完整: dkdoc cat {extra['local_path']}]"
+            parts.append(ebody)
         if sup_top and sup_top not in cand[:top_k]:   # 排在官方正文之后：同分时官方优先，不抢开头位置
             parts.append(f"\n== 正文[运营补充] {sup_top['title']} ({sup_top['local_path']}) ==")
             parts.append(_sup_cite(sup_top))
@@ -1519,7 +1547,8 @@ def _ctx_impl(terms, n, force_full=False):
             if len(sup_body) > _CTX_BODY_CAP:
                 sup_body = _cut(sup_body, _CTX_BODY_CAP) + f"\n…[已截断，完整: dkdoc cat {sup_top['local_path']}]"
             parts.append(sup_body)
-        others = [d for d in cand[top_k:top_k + 8] if d is not sup_top]   # 已展开的运营篇不再列为「未展开」
+        # 已展开的运营篇/篇目第一不再列为「未展开」
+        others = [d for d in cand[top_k:top_k + 8] if d is not sup_top and d is not extra]
         if others:
             parts.append("\n== 其他候选(未展开) ==")
             for d in others:

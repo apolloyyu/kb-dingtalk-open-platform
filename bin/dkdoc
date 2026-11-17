@@ -1394,17 +1394,14 @@ def _ctx_impl(terms, n, force_full=False):
             add_doc(d)
     # 问法没提接口、也没点名接口时，接口表只靠中文泛词命中(「如何搭建自动回复群消息的机器人」→
     # 「撤回机器人消息」)。它占唯一正文位时，篇目检索第一的指南页只剩「其他候选(未展开)」；
-    # 但同类泛词命中也常就是正确接口(「如何获取已离职员工信息」)，不能简单让位。此时两篇都展开。
-    # 只用于单篇题：流程/枚举题本就展开 3 篇且篇目在前，插队会把原第 3 篇挤出正文。
+    # 但同类泛词命中也常就是正确接口(「如何获取已离职员工信息」)，不能简单让位。此时把篇目第一
+    # 追加展开为「正文[篇目第一]」：只追加，不改候选顺序、编号与已有段落(同「正文[运营补充]」)。
+    # 只用于单篇题：流程/枚举题本就展开 3 篇且篇目在前。
     lead = cand[0]["local_path"] if cand else ""
     find_top = next((d for _, _, _, d in scored if not _is_sup(d)), None)
     single_doc = not (intent["stage"] or intent["semantic"] or intent["cross_doc"] or intent["enumeration"])
-    weak_lead = False
-    if (single_doc and lead in weak_api_paths and lead not in strong_ent_paths and find_top
-            and find_top["local_path"] != lead and find_top in cand):
-        cand.remove(find_top)
-        cand.insert(1, find_top)
-        weak_lead = True
+    extra_top = find_top if (single_doc and lead in weak_api_paths and lead not in strong_ent_paths
+                             and find_top and find_top["local_path"] != lead) else None
 
     edges = load_jsonl("graph/links.jsonl") if cand else []
 
@@ -1533,6 +1530,16 @@ def _ctx_impl(terms, n, force_full=False):
                         shown += 1
                     else:
                         parts.append(f"  {arrow} {tgt}")
+        extra = extra_top if (top_k and extra_top and extra_top not in cand[:top_k]) else None
+        if extra:   # 首篇是泛词接口页时追加篇目检索第一(见候选合并处)；正文上限同单篇
+            etag = " " + flags.get(extra["local_path"], "") if flags.get(extra["local_path"]) else ""
+            parts.append(f"\n== 正文[篇目第一] {extra['title']}{etag} ({extra['local_path']}) ==")
+            parts.append(f"source_url: {extra['source_url']} · updated_at: {extra['updated_at'][:10]}")
+            ebody = _sanitize_links(open(os.path.join(ROOT, extra["local_path"]), encoding="utf-8",
+                                         errors="ignore").read())
+            if len(ebody) > _CTX_BODY_CAP:
+                ebody = _cut(ebody, _CTX_BODY_CAP) + f"\n…[已截断，完整: dkdoc cat {extra['local_path']}]"
+            parts.append(ebody)
         if sup_top and sup_top not in cand[:top_k]:   # 排在官方正文之后：同分时官方优先，不抢开头位置
             parts.append(f"\n== 正文[运营补充] {sup_top['title']} ({sup_top['local_path']}) ==")
             parts.append(_sup_cite(sup_top))
@@ -1540,7 +1547,8 @@ def _ctx_impl(terms, n, force_full=False):
             if len(sup_body) > _CTX_BODY_CAP:
                 sup_body = _cut(sup_body, _CTX_BODY_CAP) + f"\n…[已截断，完整: dkdoc cat {sup_top['local_path']}]"
             parts.append(sup_body)
-        others = [d for d in cand[top_k:top_k + 8] if d is not sup_top]   # 已展开的运营篇不再列为「未展开」
+        # 已展开的运营篇/篇目第一不再列为「未展开」
+        others = [d for d in cand[top_k:top_k + 8] if d is not sup_top and d is not extra]
         if others:
             parts.append("\n== 其他候选(未展开) ==")
             for d in others:
@@ -1587,8 +1595,6 @@ def _ctx_impl(terms, n, force_full=False):
         # 多篇题每篇 3500：R10.2.1 实录 3 篇×5000 使 Q24/Q59 上下文 19K、正文时延 70–100s；
         # 本地验证 3500 仍保留 ssoUserInfo/x-acs 头/执行动作/onLoad 等关键证据。
         _CTX_BODY_CAP = 3500 if multi_doc else 5000
-    if weak_lead:   # 泛词接口 + 篇目第一各一篇；单篇正文上限不变(2×5000 远低于总量上限)
-        top_k_default = 2
 
     if not cand and not ent_lines:
         print(_evidence_contract(None, intent, False))

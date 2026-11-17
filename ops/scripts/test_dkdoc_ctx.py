@@ -59,22 +59,25 @@ def check_verbatim_link_fixture():
 
 
 def body_paths(output):
-    return re.findall(r"^== 正文\[\d+/\d+\] .*\(([^()]+\.md)\) ==", output, re.M)
+    return re.findall(r"^== 正文\[(?:\d+/\d+|篇目第一)\] .*\(([^()]+\.md)\) ==", output, re.M)
 
 
 def check_weak_api_lead():
-    """接口表只靠中文泛词命中时不独占正文位：篇目检索第一的指南页同时展开(11-12/11-16 日评)；
-    问法提了接口或点名接口时照旧。"""
-    # 正例：泛词接口(撤回/下载)占首位时，泛词接口页留在第 1 位(它也常是对的，不让位)，
-    # 篇目检索第一的指南页进第 2 位
+    """接口表只靠中文泛词命中时不独占正文位：篇目检索第一的指南页追加展开为「正文[篇目第一]」
+    (11-12/11-16 日评)；只追加，不改原有正文编号与候选清单。问法提了接口或点名接口时照旧。"""
+    # 正例：泛词接口(撤回/下载)仍是「正文[1/1]」(它也常是对的，不让位)，篇目检索第一追加在后
     for query, api, guide in (("机器人的消息预览图是干嘛用的", "download-the-file-content", "configure-the-robot-application"),
                               ("管理员权限无法打包代码上传吗？", "check-whether-the-administrator", "upload-miniapp")):
         out = run("ctx", query)
         paths = body_paths(out)
         check(len(paths) == 2 and api in paths[0] and guide in paths[1],
               f"泛词接口题应为「接口页 + 篇目第一」两篇: {query} → {paths}")
-        # 单篇正文上限不因多展开一篇而压到多篇口径(首篇原文约 2 万字，应在 5000 处截断)
-        first = re.split(r"\n== ", out.split("== 正文[1/2]", 1)[1])[0]
+        check(re.search(r"^== 正文\[1/1\] .*" + api, out, re.M) and "== 正文[篇目第一] " in out,
+              f"原正文编号被改变或未追加「正文[篇目第一]」: {query}")
+        others = out.split("== 其他候选(未展开) ==", 1)[1].split("\n== ", 1)[0] if "== 其他候选" in out else ""
+        check(guide not in others, f"已追加展开的篇目第一仍列在「其他候选(未展开)」: {query}")
+        # 单篇正文上限不变(首篇原文约 2 万字，应在 5000 处截断)
+        first = re.split(r"\n== ", out.split("== 正文[1/1]", 1)[1])[0]
         check(4500 < len(first) < 5600, f"泛词接口题首篇正文上限被改变: {len(first)}")
     # 反例：问法带「接口」信号时，接口页照旧按原排序展开，不额外插指南页
     paths = body_paths(run("ctx", "撤回机器人消息接口怎么调用"))

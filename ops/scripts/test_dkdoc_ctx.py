@@ -65,18 +65,27 @@ def body_paths(output):
 def check_weak_api_lead():
     """接口表只靠中文泛词命中时不独占正文位：篇目检索第一的指南页同时展开(11-12/11-16 日评)；
     问法提了接口或点名接口时照旧。"""
-    # 正例：泛词接口(撤回/下载)占首位时，篇目检索第一的指南页进正文
-    for query, guide in (("机器人的消息预览图是干嘛用的", "configure-the-robot-application"),
-                         ("管理员权限无法打包代码上传吗？", "upload-miniapp")):
-        paths = body_paths(run("ctx", query))
-        check(len(paths) == 2 and any(guide in p for p in paths),
-              f"泛词接口独占正文位，指南页未展开: {query} → {paths}")
+    # 正例：泛词接口(撤回/下载)占首位时，泛词接口页留在第 1 位(它也常是对的，不让位)，
+    # 篇目检索第一的指南页进第 2 位
+    for query, api, guide in (("机器人的消息预览图是干嘛用的", "download-the-file-content", "configure-the-robot-application"),
+                              ("管理员权限无法打包代码上传吗？", "check-whether-the-administrator", "upload-miniapp")):
+        out = run("ctx", query)
+        paths = body_paths(out)
+        check(len(paths) == 2 and api in paths[0] and guide in paths[1],
+              f"泛词接口题应为「接口页 + 篇目第一」两篇: {query} → {paths}")
+        # 单篇正文上限不因多展开一篇而压到多篇口径(首篇原文约 2 万字，应在 5000 处截断)
+        first = re.split(r"\n== ", out.split("== 正文[1/2]", 1)[1])[0]
+        check(4500 < len(first) < 5600, f"泛词接口题首篇正文上限被改变: {len(first)}")
     # 反例：问法带「接口」信号时，接口页照旧按原排序展开，不额外插指南页
     paths = body_paths(run("ctx", "撤回机器人消息接口怎么调用"))
-    check(paths and all("withdraw" in p or "recall" in p or "call-records" in p for p in paths),
+    check(len(paths) == 3 and all("withdraw" in p or "recall" in p or "call-records" in p for p in paths),
           f"带接口信号的问法正文被改变: {paths}")
     paths = body_paths(run("ctx", "获取用户详情接口"))
     check(len(paths) == 1, f"带接口信号的实体题不应扩成两篇: {paths}")
+    # 反例：枚举题本就篇目在前、展开 3 篇，不插队
+    paths = body_paths(run("ctx", "机器人有哪些消息类型"))
+    check(len(paths) == 3 and "custom-bot-creation-and-installation" in paths[0],
+          f"枚举题正文顺序被改变: {paths}")
 
 
 def first_body_heading(output):

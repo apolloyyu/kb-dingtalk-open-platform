@@ -91,6 +91,67 @@ def _run_cli(cli, *args, ok=True):
     return result
 
 
+FAQ_DOC = "WLcV0ZR1Eh"   # 创建自定义机器人
+FAQ_QUOTE = "通过 @ 群机器人，将消息发送到指定外部服务，还可以将外部服务的响应结果返回到群聊会话。"
+
+
+def check_faq_entries():
+    """相似问题(faq/faq.jsonl)：命中时只在原 ctx 输出前加一块(出处、原文句、常见误答、出处片段)，其余逐字不变；
+    原文句已不在出处篇、出处篇不在本库、坏行、非 live 条目都不出块；无关问题输出不变。"""
+    entries = [
+        {"id": "faq-test-live", "question": "自定义机器人能不能接收群消息并自动回复",
+         "variants": ["webhook 机器人能收消息吗"], "status": "live",
+         "sources": [{"doc_id": FAQ_DOC, "quote": FAQ_QUOTE}],
+         "pitfalls": ["说自定义机器人只能发消息、不能接收 @ 消息"]},
+        {"id": "faq-test-stale", "question": "群模板机器人能不能装到已有群", "status": "live",
+         "sources": [{"doc_id": FAQ_DOC, "quote": "这句原文已经不在出处篇里了，条目应当失效"}]},
+        {"id": "faq-test-nodoc", "question": "宜搭表单实例 ID 和流程实例 ID 有什么区别", "status": "live",
+         "sources": [{"doc_id": "no-such-doc", "quote": FAQ_QUOTE}]},
+        {"id": "faq-test-key", "question": "投放卡片报错怎么排查", "status": "live",
+         "keys": ["spaceTypeModel not exist in cardInstance"],
+         "sources": [{"doc_id": FAQ_DOC, "quote": FAQ_QUOTE}]},
+        {"id": "faq-test-suspended", "question": "钉钉考勤打卡结果怎么区分请假类型", "status": "suspended",
+         "sources": [{"doc_id": FAQ_DOC, "quote": FAQ_QUOTE}]},
+    ]
+    def make_root(td, faq_lines):
+        os.makedirs(os.path.join(td, "bin"))
+        cli = os.path.join(td, "bin", "dkdoc")
+        shutil.copyfile(DKDOC, cli)
+        for name in os.listdir(ROOT):
+            if name not in ("bin", "faq") and not name.startswith("."):
+                os.symlink(os.path.join(ROOT, name), os.path.join(td, name))
+        if faq_lines is not None:
+            os.makedirs(os.path.join(td, "faq"))
+            with open(os.path.join(td, "faq", "faq.jsonl"), "w", encoding="utf-8") as fh:
+                fh.write(faq_lines)
+        return cli
+
+    # 基线在另一个不带 faq/ 的临时库根里跑：真实库合入 faq/ 之后「只追加、未命中逐字不变」仍有测试保护
+    with tempfile.TemporaryDirectory() as td, tempfile.TemporaryDirectory() as tb:
+        cli = make_root(td, "{坏行\n" + json.dumps({"id": "faq-test-badsrc", "question": "坏出处条目也不能拖垮整块",
+                                                      "status": "live", "sources": "不是列表"}, ensure_ascii=False)
+                        + "\n" + "".join(json.dumps(e, ensure_ascii=False) + "\n" for e in entries))
+        base_cli = make_root(tb, None)
+        base = lambda q: _run_cli(base_cli, "ctx", q).stdout  # noqa: E731
+        hit_q = "自定义机器人可以接收群消息自动回复吗"
+        out = _run_cli(cli, "ctx", hit_q).stdout
+        check(out.startswith("== 相似问题"), f"相似问法应在 ctx 开头出块: {out[:200]}")
+        check("[faq-test-live]" in out and "常见误答：说自定义机器人只能发消息" in out, "块里缺条目编号或常见误答")
+        check("https://open.dingtalk.com/document/dingstart/custom-bot-creation-and-installation" in out,
+              "块里应给出处 source_url")
+        check(f"「{FAQ_QUOTE}」" in out and "== 相似问题出处原文：创建自定义机器人" in out, "块里缺原文句或出处片段")
+        check(out.endswith(base(hit_q)), "原 ctx 输出必须逐字保留在相似问题块之后")
+        key_q = '{"deliverResults":[{"errorMsg":"spaceTypeModel not exist in cardInstance","spaceId":"x"}]}'
+        check("[faq-test-key]" in _run_cli(cli, "ctx", key_q).stdout, "条目 keys(错误信息原文)原样出现在问题里应命中")
+        check("[faq-test-key]" in _run_cli(cli, "ctx", key_q.replace("not exist", "not  exist")).stdout,
+              "keys 归一化后匹配：多一个空格也应命中")
+        for q in ("群模板机器人能不能装到已有群", "宜搭表单实例 ID 和流程实例 ID 有什么区别",
+                  "钉钉考勤打卡结果怎么区分请假类型", "如何获取企业内部应用的 accessToken", "坏出处条目也不能拖垮整块"):
+            got = _run_cli(cli, "ctx", q).stdout
+            check("== 相似问题" not in got, f"失效/停用/坏数据/无关条目不应出块: {q}")
+            check(got == base(q), f"未命中时 ctx 输出应逐字不变: {q}")
+
+
 def check_supplement_docs():
     """运营补充篇(supplement/，ops 从钉钉文档同步)：ctx/find/cat/grep/links 都能命中，出处无链接、不露 frontmatter；
     冲突不按日期裁决；无关问题不带出样例；同分不压官方首篇；无 frontmatter/无日期/BOM/坏格式/读不了都不拖垮检索。
@@ -602,6 +663,7 @@ def main():
     check_supplement_docs()
     check_supplement_isolation()
     check_supplement_ranking_fixture()
+    check_faq_entries()
 
     print("OK: dkdoc ctx fast-path/evidence-contract/rollback/source_url regression")
     return 0

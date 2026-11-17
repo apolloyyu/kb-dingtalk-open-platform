@@ -5,13 +5,13 @@ namespace: "development"
 slug: "api-listservicerecord"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "视听智能服务 > 分页获取企业下的服务记录信息"
+breadcrumb: "视听智能服务 > DingTalk B1 > 分页获取企业下的服务记录信息"
 doc_id: "AVexb0PqpV"
 updated_at: "2026-07-15 17:03:04"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-listservicerecord
-> Path: 应用开发 / 服务端 API / 视听智能服务 > 分页获取企业下的服务记录信息
+> Path: 应用开发 / 服务端 API / 视听智能服务 > DingTalk B1 > 分页获取企业下的服务记录信息
 > Updated: 2026-07-15 17:03:04
 
 # 分页获取企业下的服务记录信息
@@ -42,8 +42,8 @@ updated_at: "2026-07-15 17:03:04"
 | endTime | Long | 否 | 服务结束时间，单位毫秒。 |
 | startTime | Long | 否 | 服务开始时间，单位毫秒。 |
 | userId | String | 否 | 员工ID。 |
-| teamCode | String | 否 | 团队编码，可通过[分页查询客户列表](1280-api-listcustomer.md)接口获取。 |
-| customerId | String | 否 | 服务客户的客户ID，可通过[分页查询客户列表](1280-api-listcustomer.md)接口获取。 |
+| teamCode | String | 否 | 团队编码，可通过[分页查询客户列表](1287-api-listcustomer.md)接口获取。 |
+| customerId | String | 否 | 服务客户的客户ID，可通过[分页查询客户列表](1287-api-listcustomer.md)接口获取。 |
 
 ### **请求示例**
 

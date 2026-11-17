@@ -29,4 +29,4 @@ permissions: Todo.Todo.Write
 - 执行者状态列表，id需传用户的unionId，调用查询用户详情接口获取unionid参数值，最大数量1000。
 
 source_url: https://open.dingtalk.com/document/development/update-dingtalk-to-do-status
-updated_at: 2026-06-04 19:09:52
+updated_at: 2026-11-17 17:35:07

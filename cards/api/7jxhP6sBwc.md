@@ -32,4 +32,4 @@ permissions: Todo.Todo.Write
 - 参与者的unionId列表，可调用查询用户详情接口获取，最大数量1000。
 
 source_url: https://open.dingtalk.com/document/development/updates-dingtalk-to-do-tasks
-updated_at: 2026-06-02 19:09:48
+updated_at: 2026-11-17 17:35:05

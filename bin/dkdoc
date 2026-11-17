@@ -1125,6 +1125,7 @@ def _ctx_impl(terms, n, force_full=False):
 
     # 1) 五张实体表（匹配逻辑与各子命令一致；此处只收集不打印）
     ent_lines, ent_paths, ent_counts = [], [], {}
+    weak_api_paths = set()   # 未锚定的接口命中(只靠中文泛词)：见候选合并后的 weak_lead
     def _hay_api(r):
         return " ".join([str(r.get(k) or "") for k in
                          ("title", "endpoint", "method", "permission_raw", "source_url", "doc_path")]
@@ -1177,6 +1178,10 @@ def _ctx_impl(terms, n, force_full=False):
             score += 5000
         rr = dict(r)
         rr["_ctx_score"] = score
+        # 锚定 = 问法有接口信号、点名了该接口(标题/endpoint/source_url/英文标识符)或原文直取命中；
+        # 只靠中文泛词(机器人/群/消息)凑够命中数的不算，见下方候选合并。
+        rr["_ctx_anchored"] = bool(hinted or exact or api_signal or concept_bonus or score >= 500 or any(
+            w in hay and re.fullmatch(r"[a-z0-9_.:/-]+", w) and len(w) >= 6 for w in api_terms))
         api_scored.append((bool(r.get("archived")), -score, r["title"], r["doc_path"], rr))
     api_scored.sort()
     rows = [r for _, _, _, _, r in api_scored]
@@ -1193,6 +1198,8 @@ def _ctx_impl(terms, n, force_full=False):
         perm = f" · 权限:{','.join(r.get('permission_scopes') or [])}" if r.get("permission_scopes") else ""
         ent_lines.append(f"[api] {r['title']}{tag} · {(r.get('method') or '?')} {r.get('endpoint') or ''}{perm}\n      {r['doc_path']} · {r['source_url']}")
         ent_paths.append(r["doc_path"])
+        if not r["_ctx_anchored"]:
+            weak_api_paths.add(r["doc_path"])
     # 自然句里嵌入的错误码/权限点优先做精确实体键，不能拿整句 terms[0] 去等值比较。
     q0 = next((x for x in tl if x.isdigit() or "." in x), tl[0] if tl else terms[0])
     err_rows = load_jsonl("graph/errcode.jsonl")
@@ -1384,6 +1391,17 @@ def _ctx_impl(terms, n, force_full=False):
             add_doc(bymap.get(p))
         for _, _, _, d in scored:
             add_doc(d)
+    # 问法没提接口、也没点名接口时，接口表只靠中文泛词命中(「如何搭建自动回复群消息的机器人」→
+    # 「撤回机器人消息」)。它占唯一正文位时，篇目检索第一的指南页只剩「其他候选(未展开)」；
+    # 但同类泛词命中也常就是正确接口(「如何获取已离职员工信息」)，不能简单让位。此时两篇都展开。
+    lead = cand[0]["local_path"] if cand else ""
+    strong_paths = {r["doc_path"] for r in rows[:6] if r["_ctx_anchored"]} | set(ent_paths[len(rows[:6]):])
+    find_top = next((d for _, _, _, d in scored if not _is_sup(d)), None)
+    weak_lead = bool(lead in weak_api_paths and lead not in strong_paths and find_top
+                     and find_top["local_path"] != lead)
+    if weak_lead and find_top in cand:
+        cand.remove(find_top)
+        cand.insert(1, find_top)
 
     edges = load_jsonl("graph/links.jsonl") if cand else []
 
@@ -1566,6 +1584,8 @@ def _ctx_impl(terms, n, force_full=False):
         # 多篇题每篇 3500：R10.2.1 实录 3 篇×5000 使 Q24/Q59 上下文 19K、正文时延 70–100s；
         # 本地验证 3500 仍保留 ssoUserInfo/x-acs 头/执行动作/onLoad 等关键证据。
         _CTX_BODY_CAP = 3500 if multi_doc else 5000
+    if weak_lead and top_k_default < 2:   # 泛词接口 + 篇目第一各一篇，按多篇口径压单篇正文
+        top_k_default, _CTX_BODY_CAP = 2, 3500
 
     if not cand and not ent_lines:
         print(_evidence_contract(None, intent, False))

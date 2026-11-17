@@ -3,6 +3,7 @@
 import io
 import json
 import os
+import re
 import runpy
 import shutil
 import subprocess
@@ -55,6 +56,27 @@ def check_verbatim_link_fixture():
             check(result.returncode == 0, result.stderr or result.stdout)
             check(result.stdout == body,
                   "cat 必须逐字保留深链、编码与 ${corpId}，包含图片裁剪模式")
+
+
+def body_paths(output):
+    return re.findall(r"^== 正文\[\d+/\d+\] .*\(([^()]+\.md)\) ==", output, re.M)
+
+
+def check_weak_api_lead():
+    """接口表只靠中文泛词命中时不独占正文位：篇目检索第一的指南页同时展开(11-12/11-16 日评)；
+    问法提了接口或点名接口时照旧。"""
+    # 正例：泛词接口(撤回/下载)占首位时，篇目检索第一的指南页进正文
+    for query, guide in (("机器人的消息预览图是干嘛用的", "configure-the-robot-application"),
+                         ("管理员权限无法打包代码上传吗？", "upload-miniapp")):
+        paths = body_paths(run("ctx", query))
+        check(len(paths) == 2 and any(guide in p for p in paths),
+              f"泛词接口独占正文位，指南页未展开: {query} → {paths}")
+    # 反例：问法带「接口」信号时，接口页照旧按原排序展开，不额外插指南页
+    paths = body_paths(run("ctx", "撤回机器人消息接口怎么调用"))
+    check(paths and all("withdraw" in p or "recall" in p or "call-records" in p for p in paths),
+          f"带接口信号的问法正文被改变: {paths}")
+    paths = body_paths(run("ctx", "获取用户详情接口"))
+    check(len(paths) == 1, f"带接口信号的实体题不应扩成两篇: {paths}")
 
 
 def first_body_heading(output):
@@ -660,6 +682,7 @@ def main():
     out = run("grep", "帮助中心\\|运营答疑群")
     check("同一行含全部" not in out and "0027-isv-cooperation-guide.md" in out, "grep 正则被误当多词")
 
+    check_weak_api_lead()
     check_supplement_docs()
     check_supplement_isolation()
     check_supplement_ranking_fixture()

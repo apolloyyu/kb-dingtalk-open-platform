@@ -6,11 +6,11 @@
 - [安装与使用指南](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0002-dingtalk-dws-cli-install-guide.md) · 新手入门 · 2026-10-29
 - [钉钉DWS权限管控指南](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0003-dws-permission-management-guide.md) · 新手入门 › 权限管理 · 2026-10-29
 - [如何开通组织成员CLI权限申请](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0004-cli-permissions-organizational-members.md) · 新手入门 › 权限管理 · 2026-10-29
-- [如何单独管理企业自建Agent的权限](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0005-manage-permissions-enterprise.md) · 新手入门 › 权限管理 · 2026-10-29
+- [如何单独管理企业自建Agent的权限](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0005-manage-permissions-enterprise.md) · 新手入门 › 权限管理 · 2026-11-02
 - [开发者命令行 · CLI 应用管理指南](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0006-dev-cli-app-management-guide.md) · 新手入门 › 命令速查 · 2026-06-26
 - [在千问办公中接入钉钉](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0007-qwenwork-dingtalk-integration.md) · 新手入门 › 快速尝试 · 2026-08-14
 - [5分钟配置：给自己配个嘴替AI 机器人](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0008-ai-bot-configuration-guide.md) · 新手入门 › 快速尝试 · 2026-08-31
-- [钉钉 CLI 事件订阅 — 给你的 Agent 装上钉钉的"耳朵"](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0009-dingtalk-cli-event-subscription.md) · 进阶实战 › 事件驱动开发 · 2026-08-17
+- [钉钉 CLI 事件订阅 — 给你的 Agent 装上钉钉的"耳朵"](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0009-dingtalk-cli-event-subscription.md) · 进阶实战 › 事件驱动开发 · 2026-11-10
 - [概述](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0010-mcp-square-introduction.md) · 进阶实战 › MCP 服务接入 · 2026-07-22
 - [钉钉Deap平台使用MCP服务](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0011-dingtalk-deap-platform-using-mcp-services.md) · 进阶实战 › MCP 服务接入 · 2026-05-19
 - [阿里云百炼使用钉钉MCP服务](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0012-alibaba-cloud-uses-dingtalk-mcp-services.md) · 进阶实战 › MCP 服务接入 · 2026-05-19
@@ -30,4 +30,4 @@
 - [项目进度管理 Agent](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0026-project-progress-management-agent.md) · Agent 场景案例库 › 典型 Agent 实现 › 项目进度管理 Agent  · 2026-06-16
 - [多 Agent 垂直专家协同](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0027-multi-agent-expert-collaboration.md) · Agent 场景案例库 › 典型 Agent 实现 · 2026-06-16
 - [常见问题](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0028-dws-cli-frequently-asked-questions.md) · 2026-08-12
-- [更新日志](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0029-dws-cli-log.md) · 2026-10-29
+- [更新日志](../../docs/01-应用开发/05-QzuirX2lH7-钉钉-CLI/0029-dws-cli-log.md) · 2026-11-12

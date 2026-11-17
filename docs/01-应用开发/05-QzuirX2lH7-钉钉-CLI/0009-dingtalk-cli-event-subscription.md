@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "钉钉 CLI"
 breadcrumb: "进阶实战 > 事件驱动开发 > 钉钉 CLI 事件订阅 — 给你的 Agent 装上钉钉的\"耳朵\""
 doc_id: "e6ollBomSO"
-updated_at: "2026-08-17 17:38:37"
+updated_at: "2026-11-10 11:11:58"
 ---
 
 > Source: https://open.dingtalk.com/document/development/dingtalk-cli-event-subscription
 > Path: 应用开发 / 钉钉 CLI / 进阶实战 > 事件驱动开发 > 钉钉 CLI 事件订阅 — 给你的 Agent 装上钉钉的"耳朵"
-> Updated: 2026-08-17 17:38:37
+> Updated: 2026-11-10 11:11:58
 
 # 钉钉 CLI 事件订阅 — 给你的 Agent 装上钉钉的"耳朵"
 
@@ -52,9 +52,10 @@ dws event consume <event_key>  [flags]  -f ndjson  # 开始监听事件
 
 **事件订阅指令清单**
 
-| 目标 | 命令 |
+| **目标** | **命令** |
 | --- | --- |
 | 看事件目录 | `dws event list` |
+| 按领域看事件目录 | `dws event list --category <minutes|calendar>` |
 | 看字段（写解析依据） | `dws event schema <event_key>` |
 | 建连消费 | `dws event consume <event_key> [flags]` |
 | IM 意图快捷监听【推荐】 | `dws event +listen-im --kind <意图> -f ndjson` |
@@ -62,6 +63,35 @@ dws event consume <event_key>  [flags]  -f ndjson  # 开始监听事件
 | 取消订阅 | `dws event stop <subscribe_id>` / `--all` |
 
 订阅管理：`--subscribe-id` 复用已有订阅、`--ttl 24h`（`0` 不过期）、`--ephemeral`（退出即取消）。有界自测：`--duration 10m` 或 `--max-events N`。输出格式 `-f`：`ndjson`（默认）/ `json` / `raw` / `compact`。
+
+### **订阅 AI 听记与日历事件**
+
+AI 听记与日历事件同样通过 `dws event consume` 订阅，先按领域查看事件目录和字段：
+
+```
+dws event list --category minutes      # 查看 AI 听记事件
+dws event list --category calendar     # 查看日历事件
+
+dws event schema user_minutes_task_created --flatten
+dws event schema user_calendar_event_changed --flatten
+```
+
+同时监听听记创建和默认纪要生成：
+
+```
+dws event consume user_minutes_task_created user_minutes_summary_generated --flatten -f ndjson
+```
+
+监听主日历的日程创建、修改与取消：
+
+```
+dws event consume user_calendar_event_changed \
+  --calendar-ids primary \
+  --change-types eventCreated,eventUpdated,eventCancelled \
+  --flatten -f ndjson
+```
+
+注意：`--calendar-ids` / `--change-types` 只支持 `user_calendar_event_changed`，不能与听记等其他事件写在同一条 `consume` 命令里；两个维度都可省略表示通配，`*` 不可与具体值混用。
 
 ### **IM 意图快捷入口**
 
@@ -84,7 +114,7 @@ OA 审批事件仍走 `dws event consume <event_key>` 显式订阅（见下节
 
 只需在被 @ 时收到提醒，无需任何额外参数。
 
-| 目标场景 | 对应命令 |
+| **目标场景** | **对应命令** |
 | --- | --- |
 | 有人 @ 我就触发 | `dws event consume user_im_message_receive_at -f ndjson` |
 
@@ -92,7 +122,7 @@ OA 审批事件仍走 `dws event consume <event_key>` 显式订阅（见下节
 
 关注特定的人或会话，由服务端完成过滤，开销最小。
 
-| 目标场景 | 对应命令 |
+| **目标场景** | **对应命令** |
 | --- | --- |
 | 关注与某人的单聊 | `dws event consume user_im_message_receive_o2o --user <userId>` |
 | 关注某个群 | `dws event consume user_im_message_receive_group --group <openConversationId>` |
@@ -101,8 +131,8 @@ OA 审批事件仍走 `dws event consume <event_key>` 显式订阅（见下节
 
 ID 的获取方式：
 
-- 人名 → `dws aisearch person --keyword "<名字>" --dimension name -f json` 取 `userId`；
-- 群名 → `dws chat search --query "<群名>" -f json` 取 `openConversationId`
+- **人名** → `dws aisearch person --keyword "<名字>" --dimension name -f json` 取 `userId`；
+- **群名** → `dws chat search --query "<群名>" -f json` 取 `openConversationId`
 
 ### **IM + 审批双通道场景**
 
@@ -117,7 +147,7 @@ IM 与审批事件共享同一条 Stream 底座，可组合出完整业务闭环
 
 一行一事件，天然适合交给 `jq` 做类型路由、关键词过滤、按类型落盘。
 
-| 目标场景 | 对应命令 |
+| **目标场景** | **对应命令** |
 | --- | --- |
 | 按类型路由 / 过滤 / 落盘 | `dws event consume ... -f ndjson`，配 `--query "关键词1,关键词2"`、`--filter-json '<DSL>'`、`--output-dir` / `--route` |
 
@@ -125,20 +155,56 @@ IM 与审批事件共享同一条 Stream 底座，可组合出完整业务闭环
 
 “来消息就自动处理”是一个常见诉求，现在可以直接落地：建立一条连接，每收到一条消息就交给你的处理逻辑，自动回复。
 
-| 目标场景 | 对应命令 |
+| **目标场景** | **对应命令** |
 | --- | --- |
 | 关注与某人的单聊，收到消息即交给你的逻辑自动回复 | `dws event consume user_im_message_receive_o2o --user <userId> -f ndjson`每条消息一行 JSON，`data` 里带 `content`/`sender`/`conversation_id`/`message_id` 等完整字段。 |
 
-### **审批驱动的自动化：OA 审批事件**
+### 审批驱动的自动化：OA 审批事件
 
 v1.0.58 起，审批状态变化不再需要轮询 `oa list-pending`，六个审批事件实时推送：
 
-| 目标场景 | 对应命令 |
+| **目标场景** | **对应命令** |
 | --- | --- |
 | 有人发审批给我，即时提醒 | `dws event consume user_oa_approval_task_created -f ndjson` |
 | 我发起的审批走完，自动收尾 | `dws event consume user_oa_approval_instance_finished -f ndjson` |
 | 审批被转交给我，接盘提醒 | `dws event consume user_oa_approval_task_redirected -f ndjson` |
 | 审批任务处理完成（同意/拒绝） | `dws event consume user_oa_approval_task_finished -f ndjson` |
+
+### 听记驱动的自动化：AI 听记事件
+
+听记创建完成与默认纪要生成可实时推送，不再需要轮询听记列表：
+
+| **目标场景** | **对应命令** |
+| --- | --- |
+| 有新的听记创建完成，自动归档或通知 | `dws event consume user_minutes_task_created -f ndjson` |
+| 默认纪要首次生成，自动摘要或派发待办 | `dws event consume user_minutes_summary_generated -f ndjson` |
+| 两类通知一起监听 | `dws event consume user_minutes_task_created user_minutes_summary_generated --flatten -f ndjson` |
+
+事件只携带听记任务标识，不含正文或纪要内容；收到后按 `task_uuid` 读取：
+
+```
+dws minutes get summary --id <task_uuid>   # 纪要
+dws minutes get info --id <task_uuid>      # 基础信息
+```
+
+### 日程驱动的自动化：日历事件
+
+当前用户主日历的日程创建及新增参与、修改、取消可实时推送：
+
+| **目标场景** | **对应命令** |
+| --- | --- |
+| 主日历有日程创建或新增参与 | `dws event consume user_calendar_event_changed --calendar-ids primary --change-types eventCreated -f ndjson` |
+| 主日历日程被修改 | `dws event consume user_calendar_event_changed --calendar-ids primary --change-types eventUpdated -f ndjson` |
+| 主日历日程被取消 | `dws event consume user_calendar_event_changed --calendar-ids primary --change-types eventCancelled -f ndjson` |
+| 三类变化一起监听 | `dws event consume user_calendar_event_changed --calendar-ids primary --change-types eventCreated,eventUpdated,eventCancelled -f ndjson` |
+
+`--calendar-ids` 可指定具体日历本 ID，`primary` 表示主日历；省略表示通配。收到通知后按 `calendar_event_id` 读取详情：
+
+```
+dws calendar event get --id <calendar_event_id> --calendar-id primary
+```
+
+日程取消只推送 `eventCancelled`，不会自动取消订阅；需要停止时按常规方式 `dws event stop <subscribe_id>`。
 
 ## 事件能力清单
 
@@ -165,7 +231,7 @@ v1.0.58 起，审批状态变化不再需要轮询 `oa list-pending`，六个�
 | 群成员退出 | user\_im\_group\_member\_exited | 指定群聊有成员退出 |
 | 群解散 | user\_im\_group\_disbanded | 指定群聊被解散 |
 
-### **OA 审批领域**
+### OA 审批领域
 
 | **事件名称** | **event\_key** | **事件描述** |
 | --- | --- | --- |
@@ -175,6 +241,19 @@ v1.0.58 起，审批状态变化不再需要轮询 `oa list-pending`，六个�
 | 发起审批单 | user\_oa\_approval\_instance\_started | 审批实例已发起 |
 | 审批单终止 | user\_oa\_approval\_instance\_terminated | 审批实例已终止 |
 | 审批单完成 | user\_oa\_approval\_instance\_finished | 审批实例完成，发送给审批单发起人 |
+
+### **AI 听记领域**
+
+| **事件名称** | **event\_key** | **事件描述** |
+| --- | --- | --- |
+| 听记创建 | `user_minutes_task_created` | 听记对象、必要关联和默认权限初始化成功后通知符合订阅和读取权限条件的接收人；不含复用已有听记 |
+| 默认纪要生成 | `user_minutes_summary_generated` | 默认纪要首次生成成功、保存完成且可读取后通知符合订阅和读取权限条件的接收人；失败后首次成功计入，成功后重新生成、切换模板和人工修改不通知 |
+
+### 日历领域
+
+| **事件名称** | **event\_key** | **事件描述** |
+| --- | --- | --- |
+| 日程变化 | `user_calendar_event_changed` | 当前用户的主日历日程变化：创建及新增参与 `eventCreated`、修改 `eventUpdated`、取消 `eventCancelled` |
 
 ## 常见问题
 

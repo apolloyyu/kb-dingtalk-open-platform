@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "认证与授权 > 访问凭证 > 应用身份凭证 > 获取第三方应用授权企业的accessToken"
 doc_id: "QXkyTi5zqS"
-updated_at: "2026-06-08 12:02:03"
+updated_at: "2026-11-04 17:45:37"
 ---
 
 > Source: https://open.dingtalk.com/document/development/obtain-the-access-token-of-the-authorized-enterprise-1
 > Path: 应用开发 / 服务端 API / 认证与授权 > 访问凭证 > 应用身份凭证 > 获取第三方应用授权企业的accessToken
-> Updated: 2026-06-08 12:02:03
+> Updated: 2026-11-04 17:45:37
 
 # 获取第三方应用授权企业的accessToken
 
@@ -22,7 +22,7 @@ updated_at: "2026-06-08 12:02:03"
 
 | **基本信息** | |
 | --- | --- |
-| HTTP URL | https://api.dingtalk.com/oauth2/corpAccessToken |
+| HTTP URL | https://api.dingtalk.com/v1.0/oauth2/corpAccessToken |
 | HTTP Method | POST |
 | 支持的应用类型 | `appType-企业内部应用（委托产品服务商）``appType-第三方企业应用` |
 | 权限要求 | `permission-isvapi_base-三方应用开通使用基础权限` |

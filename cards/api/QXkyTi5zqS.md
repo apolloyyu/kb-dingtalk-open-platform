@@ -4,7 +4,7 @@ doc_id: QXkyTi5zqS
 completeness: full
 archived: false
 method: POST
-endpoint: https://api.dingtalk.com/oauth2/corpAccessToken
+endpoint: https://api.dingtalk.com/v1.0/oauth2/corpAccessToken
 api_version: v2-new
 app_types: 企业内部应用（委托产品服务商）``, 第三方企业应用`
 permissions: isvapi_base
@@ -32,4 +32,4 @@ permissions: isvapi_base
 - 定制应用的accessToken超时时间，单位秒。 **[!NOTE]** accessToken的有效期为7200秒（2小时），有效期内重复获取会返回新的accessToken。
 
 source_url: https://open.dingtalk.com/document/development/obtain-the-access-token-of-the-authorized-enterprise-1
-updated_at: 2026-06-08 12:02:03
+updated_at: 2026-11-04 17:45:37

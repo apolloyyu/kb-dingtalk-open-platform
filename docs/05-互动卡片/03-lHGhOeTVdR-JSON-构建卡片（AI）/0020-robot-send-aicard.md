@@ -20,7 +20,7 @@ updated_at: "2026-10-29 11:52:27"
 
 ## **说明**
 
-用企业内部应用的机器人，通过调用[创建并投放 AI 卡片](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0793-api-createanddeliveraicard.md)接口把卡片发到群聊。卡片发出后要更新内容或状态，详见[机器人更新卡片](0021-robot-update-aicard.md)。
+用企业内部应用的机器人，通过调用[创建并投放 AI 卡片](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0789-api-createanddeliveraicard.md)接口把卡片发到群聊。卡片发出后要更新内容或状态，详见[机器人更新卡片](0021-robot-update-aicard.md)。
 
 ## 前置条件
 
@@ -215,7 +215,7 @@ print(call("PUT", "/v1.0/card/ai/instances/update", {
 - 接收「提交」事件还需配置回调接收端。
 
   - 创建时用 callbackType 指定方式：`STREAM` 不传 `callbackRouteKey`；
-  - HTTP 需传已注册的 `callbackRouteKey`，参数参见[创建并投放 AI 卡片](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0793-api-createanddeliveraicard.md)接口文档说明。
+  - HTTP 需传已注册的 `callbackRouteKey`，参数参见[创建并投放 AI 卡片](../../01-应用开发/02-4a8AMF6u2A-服务端-API/0789-api-createanddeliveraicard.md)接口文档说明。
 
 **incident-form.a2ui.json**
 

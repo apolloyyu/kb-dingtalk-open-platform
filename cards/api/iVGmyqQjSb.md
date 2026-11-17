@@ -25,7 +25,7 @@ permissions: qyapi_get_attendance_data
 - optional: isI18n(Boolean)
 
 ## Returns
-- optional: errmsg(String), errcode(String), recordresult(Array of Object), userAccuracy(String), classId(Long), userLatitude(String), userLongitude(String), userAddress(String), deviceId(String), locationMethod(String), isLegal(String), userCheckTime(String), procInstId(String), baseCheckTime(String), approveId(String), timeResult(String), locationResult(String), checkType(String), sourceType(String), userId(String), workDate(String), corpId(String), planId(String), groupId(String), id(String), invalidRecordType(String), userSsid(String), userMacAddr(String), planCheckTime(String), baseAddress(String), baseLongitude(String), baseLatitude(String), baseAccuracy(String), baseSsid(String), baseMacAddr(String), gmtCreate(String), invalidRecordMsg(String), gmtModified(String), outsideRemark(String), deviceSN(String), bizId(String), photoUrl(String)
+- optional: errmsg(String), errcode(String), recordresult(Array of Object), userAccuracy(String), classId(Long), userLatitude(String), userLongitude(String), userAddress(String), deviceId(String), locationMethod(String), isLegal(String), userCheckTime(String), procInstId(String), baseCheckTime(String), approveId(String), timeResult(String), locationResult(String), checkType(String), sourceType(String), userId(String), workDate(String), corpId(String), planId(String), groupId(String), id(String), invalidRecordType(String), userSsid(String), userMacAddr(String), planCheckTime(String), baseAddress(String), baseLongitude(String), baseLatitude(String), baseAccuracy(String), baseSsid(String), baseMacAddr(String), gmtCreate(String), invalidRecordMsg(String), gmtModified(String), outsideRemark(String), deviceSN(String), bizId(String), photoUrl(String), timeZoneId(String)
 
 ## Limits
 - 企业内的员工ID列表，最大值50。 **[!IMPORTANT]** 务必确保userId参数的正确性，否则本接口获取信息为空。
@@ -34,4 +34,4 @@ permissions: qyapi_get_attendance_data
 - - 本接口不支持查询180天之前的数据。
 
 source_url: https://open.dingtalk.com/document/development/attendance-clock-in-record-is-open
-updated_at: 2026-05-27 17:05:52
+updated_at: 2026-11-09 18:14:29

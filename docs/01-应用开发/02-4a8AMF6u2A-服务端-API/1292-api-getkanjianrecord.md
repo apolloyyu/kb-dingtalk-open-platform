@@ -5,13 +5,13 @@ namespace: "development"
 slug: "api-getkanjianrecord"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "视听智能服务 > BV 看鉴 > 看鉴记录 > 查询看鉴记录详情"
+breadcrumb: "视听智能服务 > DingTalk BV > 看鉴记录 > 查询看鉴记录详情"
 doc_id: "doc_e287c1a5c4114e43"
 updated_at: "2026-11-17 17:35:09"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-getkanjianrecord
-> Path: 应用开发 / 服务端 API / 视听智能服务 > BV 看鉴 > 看鉴记录 > 查询看鉴记录详情
+> Path: 应用开发 / 服务端 API / 视听智能服务 > DingTalk BV > 看鉴记录 > 查询看鉴记录详情
 > Updated: 2026-11-17 17:35:09
 
 # 查询看鉴记录详情

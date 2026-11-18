@@ -5,13 +5,13 @@ namespace: "development"
 slug: "api-bindkanjianrecordtask"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "视听智能服务 > BV 看鉴 > 看鉴记录 > 看鉴记录首次绑定主任务"
+breadcrumb: "视听智能服务 > DingTalk BV > 看鉴记录 > 看鉴记录首次绑定主任务"
 doc_id: "doc_b5d89782ea6b4293"
 updated_at: "2026-11-17 17:35:11"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-bindkanjianrecordtask
-> Path: 应用开发 / 服务端 API / 视听智能服务 > BV 看鉴 > 看鉴记录 > 看鉴记录首次绑定主任务
+> Path: 应用开发 / 服务端 API / 视听智能服务 > DingTalk BV > 看鉴记录 > 看鉴记录首次绑定主任务
 > Updated: 2026-11-17 17:35:11
 
 # 看鉴记录首次绑定主任务

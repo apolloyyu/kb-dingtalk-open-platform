@@ -5,13 +5,13 @@ namespace: "development"
 slug: "api-stopkanjianrecording"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "视听智能服务 > BV 看鉴 > 看鉴设备 > BV 设备结束录制"
+breadcrumb: "视听智能服务 > DingTalk BV > 看鉴设备 > BV 设备结束录制"
 doc_id: "doc_a59fcb832bfc4afa"
 updated_at: "2026-11-17 17:35:21"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-stopkanjianrecording
-> Path: 应用开发 / 服务端 API / 视听智能服务 > BV 看鉴 > 看鉴设备 > BV 设备结束录制
+> Path: 应用开发 / 服务端 API / 视听智能服务 > DingTalk BV > 看鉴设备 > BV 设备结束录制
 > Updated: 2026-11-17 17:35:21
 
 # BV 设备结束录制

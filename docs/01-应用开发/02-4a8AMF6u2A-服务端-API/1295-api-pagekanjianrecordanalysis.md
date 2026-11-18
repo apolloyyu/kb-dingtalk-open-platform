@@ -5,13 +5,13 @@ namespace: "development"
 slug: "api-pagekanjianrecordanalysis"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "视听智能服务 > BV 看鉴 > 看鉴记录 > 分页拉取看鉴记录的关键识别结果"
+breadcrumb: "视听智能服务 > DingTalk BV > 看鉴记录 > 分页拉取看鉴记录的关键识别结果"
 doc_id: "doc_bfc82527e81f453f"
 updated_at: "2026-11-17 17:35:13"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-pagekanjianrecordanalysis
-> Path: 应用开发 / 服务端 API / 视听智能服务 > BV 看鉴 > 看鉴记录 > 分页拉取看鉴记录的关键识别结果
+> Path: 应用开发 / 服务端 API / 视听智能服务 > DingTalk BV > 看鉴记录 > 分页拉取看鉴记录的关键识别结果
 > Updated: 2026-11-17 17:35:13
 
 # 分页拉取看鉴记录的关键识别结果

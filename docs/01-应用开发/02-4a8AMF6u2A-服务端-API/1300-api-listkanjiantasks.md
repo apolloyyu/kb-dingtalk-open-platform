@@ -5,13 +5,13 @@ namespace: "development"
 slug: "api-listkanjiantasks"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "视听智能服务 > BV 看鉴 > 看鉴任务 > 分页查询看鉴任务列表"
+breadcrumb: "视听智能服务 > DingTalk BV > 看鉴任务 > 分页查询看鉴任务列表"
 doc_id: "doc_2e1b897b49194eb5"
 updated_at: "2026-11-17 17:35:18"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-listkanjiantasks
-> Path: 应用开发 / 服务端 API / 视听智能服务 > BV 看鉴 > 看鉴任务 > 分页查询看鉴任务列表
+> Path: 应用开发 / 服务端 API / 视听智能服务 > DingTalk BV > 看鉴任务 > 分页查询看鉴任务列表
 > Updated: 2026-11-17 17:35:18
 
 # 分页查询看鉴任务列表

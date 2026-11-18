@@ -5,13 +5,13 @@ namespace: "development"
 slug: "api-getkanjiandevice"
 group: "应用开发"
 tab: "服务端 API"
-breadcrumb: "视听智能服务 > BV 看鉴 > 看鉴设备 > 查询企业看鉴 BV 设备详情"
+breadcrumb: "视听智能服务 > DingTalk BV > 看鉴设备 > 查询企业看鉴 BV 设备详情"
 doc_id: "doc_af1450b768314952"
 updated_at: "2026-11-17 17:35:23"
 ---
 
 > Source: https://open.dingtalk.com/document/development/api-getkanjiandevice
-> Path: 应用开发 / 服务端 API / 视听智能服务 > BV 看鉴 > 看鉴设备 > 查询企业看鉴 BV 设备详情
+> Path: 应用开发 / 服务端 API / 视听智能服务 > DingTalk BV > 看鉴设备 > 查询企业看鉴 BV 设备详情
 > Updated: 2026-11-17 17:35:23
 
 # 查询企业看鉴 BV 设备详情

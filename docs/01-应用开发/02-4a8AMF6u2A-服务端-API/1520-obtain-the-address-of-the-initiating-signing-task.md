@@ -21,7 +21,7 @@ updated_at: "2026-08-25 09:37:35"
 > **[!IMPORTANT]**
 >
 > - 本接口已完成升级，后续将维持现有功能且不再新增能力。
-> - 未接入的开发者建议使用新版[获取发起签署任务的地址](1163-obtain-the-address-used-to-initiate-a-signed-task.md)接口，已接入用户不受影响。
+> - 未接入的开发者建议使用新版[获取发起签署任务的地址](1165-obtain-the-address-used-to-initiate-a-signed-task.md)接口，已接入用户不受影响。
 
 ## 请求
 

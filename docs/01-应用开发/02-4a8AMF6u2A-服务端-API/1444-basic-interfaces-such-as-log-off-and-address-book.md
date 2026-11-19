@@ -165,47 +165,47 @@ updated_at: "2026-07-22 16:24:53"
 
 | **API** | **接口说明** |
 | --- | --- |
-| [机票城市搜索](1088-air-ticket-city-search.md) | 搜索火车票城市。 |
-| [火车票城市搜索](1089-train-ticket-city-search.md) | 搜索机票城市。 |
-| [新建成本中心](1090-new-cost-center.md) | 新建成本中心。 |
-| [修改成本中心](1091-modify-basic-cost-center-information.md) | 修改成本中心基本信息。 |
-| [删除成本中心](1092-delete-cost-center.md) | 删除成本中心。 |
-| [查询成本中心](1093-query-cost-center.md) | 查询成本中心信息。 |
-| [设置成本中心人员信息](1094-set-up-cost-center-personnel-information.md) | 设置成本中心人员信息。 |
-| [删除成本中心人员信息](1095-delete-the-personnel-information-of-the-cost-center.md) | 删除成本中心人员信息。 |
-| [商旅成本中心转换为外部成本中心](1096-business-travel-cost-center-converted-to-external-cost-center.md) | 商旅成本中心转换为外部成本中心。 |
-| [添加项目](1097-add-a-project.md) | 添加商旅项目。 |
-| [修改项目](1098-project-change.md) | 修改项目信息。 |
-| [删除项目](1099-delete-a-project.md) | 删除项目。 |
-| [新建审批单](1100-user-new-approval-form.md) | 新建审批单。 |
-| [获取申请单列表](1101-search-enterprise-approval-form-data.md) | 查询企业审批单数据。 |
-| [获取申请单详情](1102-obtains-the-detailed-data-of-a-single-request.md) | 获取单个申请单的详细信息。 |
-| [修改申请单](1103-user-modify-approval-form.md) | 修改出差申请单。 |
-| [更新申请单状态](1104-update-approval-form.md) | 更新审批单状态。 |
-| [搜索第三方酒店超标审批单](1105-dingtalk-oapi-alitrip-btrip-exceedapply-hotel-get.md) | 搜索第三方酒店超标审批单。 |
-| [搜索第三方火车票超标审批单](1106-dingtalk-oapi-alitrip-btrip-exceedapply-train-get.md) | 搜索第三方火车票超标审批单。 |
-| [回传第三方超标审批结果](1107-dingtalk-oapi-alitrip-btrip-exceedapply-sync.md) | 回传第三方超标审批结果。 |
-| [搜索第三方机票超标审批单](1108-dingtalk-oapi-alitrip-btrip-exceedapply-flight.md) | 搜索第三方机票的超标审批单。 |
-| [获取企业机票订单数据](1109-obtains-enterprise-ticket-order-data.md) | 获取企业机票订单数据 |
-| [获取企业商旅酒店订单数据](1110-enterprises-obtain-order-data-for-business-hotels.md) | 获取商旅酒店订单数据。 |
-| [获取企业火车票订单数据](1111-obtains-the-enterprise-train-ticket-order-data.md) | 获取企业火车票订单数据。 |
-| [获取用车订单数据](1112-vehicle-order-query-interface.md) | 获取企业用车订单数据。 |
-| [关联单号查询相关订单信息列表](1113-related-order-information.md) | 申请单中关联单号获取订单信息。 |
-| [获取商旅访问地址](1114-obtain-business-travel-access-addresses.md) | 获取各个场景预订访问地址，以及我的订单地址。 |
-| [新增发票配置](1115-new-invoice-configuration.md) | 新增发票配置。 |
-| [配置发票适用人群](1116-configure-invoice-users.md) | 配置发票适用人群。 |
-| [查询可用发票列表](1117-query-available-invoices.md) | 查询可用发票列表。 |
-| [修改发票配置](1118-modify-invoice-configuration.md) | 修改发票配置。 |
-| [删除发票信息](1119-delete-invoice-information.md) | 删除发票信息。 |
-| [同步市内用车申请单](1120-synchronize-third-party-city-vehicle-approval-form.md) | 同步市内用车申请单。 |
-| [审批市内用车申请单](1121-approval-of-third-party-city-car-application-form.md) | 审批市内用车申请单。 |
-| [查询市内用车申请单](1122-query-the-application-form-for-third-party-vehicles-in-the-city.md) | 查询市内用车申请单。 |
-| [查询用车结算记账记录](1123-query-interface-for-vehicle-settlement-and-bookkeeping.md) | 查询商旅用车的结算记账数据。 |
-| [查询商旅火车票结算记账数据](1124-business-travel-train-ticket-settlement-bookkeeping-query-interface.md) | 查询商旅火车票结算记账数据。 |
-| [查询酒店结算记账数据](1125-hotel-settlement-bookkeeping-query-interface.md) | 查询商旅酒店结算记账数据。 |
-| [查询机票结算记账数据](1126-ticket-settlement-bookkeeping-query-interface.md) | 查询机票结算记账数据。 |
-| [获取月对账结算数据](1127-obtain-monthly-reconciliation-settlement-data.md) | 获取月对账结算数据下载地址。 |
-| [查询预估价](1128-query-estimated-price.md) | 查询预估价。 |
+| [机票城市搜索](1090-air-ticket-city-search.md) | 搜索火车票城市。 |
+| [火车票城市搜索](1091-train-ticket-city-search.md) | 搜索机票城市。 |
+| [新建成本中心](1092-new-cost-center.md) | 新建成本中心。 |
+| [修改成本中心](1093-modify-basic-cost-center-information.md) | 修改成本中心基本信息。 |
+| [删除成本中心](1094-delete-cost-center.md) | 删除成本中心。 |
+| [查询成本中心](1095-query-cost-center.md) | 查询成本中心信息。 |
+| [设置成本中心人员信息](1096-set-up-cost-center-personnel-information.md) | 设置成本中心人员信息。 |
+| [删除成本中心人员信息](1097-delete-the-personnel-information-of-the-cost-center.md) | 删除成本中心人员信息。 |
+| [商旅成本中心转换为外部成本中心](1098-business-travel-cost-center-converted-to-external-cost-center.md) | 商旅成本中心转换为外部成本中心。 |
+| [添加项目](1099-add-a-project.md) | 添加商旅项目。 |
+| [修改项目](1100-project-change.md) | 修改项目信息。 |
+| [删除项目](1101-delete-a-project.md) | 删除项目。 |
+| [新建审批单](1102-user-new-approval-form.md) | 新建审批单。 |
+| [获取申请单列表](1103-search-enterprise-approval-form-data.md) | 查询企业审批单数据。 |
+| [获取申请单详情](1104-obtains-the-detailed-data-of-a-single-request.md) | 获取单个申请单的详细信息。 |
+| [修改申请单](1105-user-modify-approval-form.md) | 修改出差申请单。 |
+| [更新申请单状态](1106-update-approval-form.md) | 更新审批单状态。 |
+| [搜索第三方酒店超标审批单](1107-dingtalk-oapi-alitrip-btrip-exceedapply-hotel-get.md) | 搜索第三方酒店超标审批单。 |
+| [搜索第三方火车票超标审批单](1108-dingtalk-oapi-alitrip-btrip-exceedapply-train-get.md) | 搜索第三方火车票超标审批单。 |
+| [回传第三方超标审批结果](1109-dingtalk-oapi-alitrip-btrip-exceedapply-sync.md) | 回传第三方超标审批结果。 |
+| [搜索第三方机票超标审批单](1110-dingtalk-oapi-alitrip-btrip-exceedapply-flight.md) | 搜索第三方机票的超标审批单。 |
+| [获取企业机票订单数据](1111-obtains-enterprise-ticket-order-data.md) | 获取企业机票订单数据 |
+| [获取企业商旅酒店订单数据](1112-enterprises-obtain-order-data-for-business-hotels.md) | 获取商旅酒店订单数据。 |
+| [获取企业火车票订单数据](1113-obtains-the-enterprise-train-ticket-order-data.md) | 获取企业火车票订单数据。 |
+| [获取用车订单数据](1114-vehicle-order-query-interface.md) | 获取企业用车订单数据。 |
+| [关联单号查询相关订单信息列表](1115-related-order-information.md) | 申请单中关联单号获取订单信息。 |
+| [获取商旅访问地址](1116-obtain-business-travel-access-addresses.md) | 获取各个场景预订访问地址，以及我的订单地址。 |
+| [新增发票配置](1117-new-invoice-configuration.md) | 新增发票配置。 |
+| [配置发票适用人群](1118-configure-invoice-users.md) | 配置发票适用人群。 |
+| [查询可用发票列表](1119-query-available-invoices.md) | 查询可用发票列表。 |
+| [修改发票配置](1120-modify-invoice-configuration.md) | 修改发票配置。 |
+| [删除发票信息](1121-delete-invoice-information.md) | 删除发票信息。 |
+| [同步市内用车申请单](1122-synchronize-third-party-city-vehicle-approval-form.md) | 同步市内用车申请单。 |
+| [审批市内用车申请单](1123-approval-of-third-party-city-car-application-form.md) | 审批市内用车申请单。 |
+| [查询市内用车申请单](1124-query-the-application-form-for-third-party-vehicles-in-the-city.md) | 查询市内用车申请单。 |
+| [查询用车结算记账记录](1125-query-interface-for-vehicle-settlement-and-bookkeeping.md) | 查询商旅用车的结算记账数据。 |
+| [查询商旅火车票结算记账数据](1126-business-travel-train-ticket-settlement-bookkeeping-query-interface.md) | 查询商旅火车票结算记账数据。 |
+| [查询酒店结算记账数据](1127-hotel-settlement-bookkeeping-query-interface.md) | 查询商旅酒店结算记账数据。 |
+| [查询机票结算记账数据](1128-ticket-settlement-bookkeeping-query-interface.md) | 查询机票结算记账数据。 |
+| [获取月对账结算数据](1129-obtain-monthly-reconciliation-settlement-data.md) | 获取月对账结算数据下载地址。 |
+| [查询预估价](1130-query-estimated-price.md) | 查询预估价。 |
 
 ### **小蜜客服**
 
@@ -221,10 +221,10 @@ updated_at: "2026-07-22 16:24:53"
 
 | **API** | **接口说明** |
 | --- | --- |
-| [创建自助单](1079-create-a-self-service-ticket.md) | 创建用户自定义的自助单。 |
-| [执行工单活动](1080-intelligent-customer-service-execute-work-order-activities.md) | 执行工单活动。 |
-| [查询动作记录](1081-intelligent-customer-service-query-action-records.md) | 查询动作记录。 |
-| [分页查询工单](1082-intelligent-customer-service-paging-query-work-order.md) | 分页查询工单。 |
+| [创建自助单](1081-create-a-self-service-ticket.md) | 创建用户自定义的自助单。 |
+| [执行工单活动](1082-intelligent-customer-service-execute-work-order-activities.md) | 执行工单活动。 |
+| [查询动作记录](1083-intelligent-customer-service-query-action-records.md) | 查询动作记录。 |
+| [分页查询工单](1084-intelligent-customer-service-paging-query-work-order.md) | 分页查询工单。 |
 
 ### **员工服务台**
 
@@ -236,54 +236,54 @@ updated_at: "2026-07-22 16:24:53"
 
 | **API** | **接口说明** |
 | --- | --- |
-| [计件报工](1182-riqing-monthly-settlement-piece-rate-reporting-interface.md) | 用于MES系统上报计件数据到平台。 |
-| [查询计件报工数据](1183-riqing-monthly-settlement-query-interface-for-piece-rate-reporting.md) | 查询计件报工的数据。 |
+| [计件报工](1184-riqing-monthly-settlement-piece-rate-reporting-interface.md) | 用于MES系统上报计件数据到平台。 |
+| [查询计件报工数据](1185-riqing-monthly-settlement-query-interface-for-piece-rate-reporting.md) | 查询计件报工的数据。 |
 
 ### **e签宝**
 
 | **API** | **接口说明** |
 | --- | --- |
-| [e签宝数据初始化](1145-isv-service-provider-data-initialization.md) | 帮助钉钉企业进行e签宝开放平台的数据初始化。 |
-| [获取授权的页面地址](1146-obtain-the-address-of-the-authorized-page.md) | 获取企业授权的页面地址。 |
-| [取消企业授权](1147-cancel-enterprise-authorization.md) | 取消授权过企业的授权状态。 |
-| [套餐转售—分润模式](1148-package-resale-1-distribution-mode.md) | 为使用电子合同的用户创建转售订单。 |
-| [套餐转售—底价结算模式](1149-package-resale-2-reserve-price-settlement-mode.md) | 直接转售e签宝订单给最终真正使用电子合同的用户。 |
-| [查询套餐余量](1150-query-package-balance.md) | 查询当前企业的套餐余量。 |
-| [获取企业的e签宝微应用状态](1151-obtain-the-current-status-of-the-company-s-e-sign-micro-application.md) | 获取企业的e签宝微应用状态。 |
-| [查询企业是否实名认证](1152-query-enterprise-information.md) | 查询企业是否已在e签宝完成实名认证。 |
-| [获取企业控制台地址](1153-get-enterprise-console-address.md) | 获取的企业在e签宝的控制台地址。 |
-| [查询个人是否实名认证](1154-query-personal-information.md) | 查询当前用户是否已在e签宝完成实名认证。 |
-| [获取个人实名的地址](1155-obtain-the-address-that-is-redirected-to-the-user-s-real.md) | 通过个人信息接口查询到个人未实名时，可调用本接口获取个人实名认证地址。 |
-| [获取跳转到企业实名的地址](1156-obtain-the-address-that-is-redirected-to-the-enterprise-s-real.md) | 通过企业信息接口查询到企业未实名时，可调用本接口获取实名地址，在应用内展示给企业。 |
-| [获取文件上传地址](1159-obtain-the-upload-url-of-a-file-1.md) | 获取到文件上传地址。 |
-| [获取文件详情](1158-gets-the-file-details.md) | 查询文件详情。 |
-| [获取发起签署任务的地址](1163-obtain-the-address-used-to-initiate-a-signed-task.md) | 获取发起签署任务的地址。 |
-| [创建签署流程](1160-use-the-api-to-initiate-a-signature-process.md) | 当ISV侧企业有文件需签署时，可调用本接口获取发起签署地址。 |
-| [获取签署人签署地址](1161-get-signatory-address.md) | 获取签署人签署地址。 |
-| [获取流程的签署详情](1162-get-the-details-of-process-signing.md) | 根据taskId获取流程签署相关的详细信息。 |
-| [获取流程任务用印审批列表](1164-obtains-the-print-approval-list-for-process-tasks.md) | 获取流程任务用印审批列表。 |
-| [获取流程详细信息及操作记录](1165-obtains-the-task-details.md) | 获取流程详细信息及操作记录。 |
-| [获取流程任务的所有合同列表](1166-get-a-list-of-all-contracts-for-the-process-task.md) | 获取流程任务的所有合同列表，收到签署完成消息后查询。 |
+| [e签宝数据初始化](1147-isv-service-provider-data-initialization.md) | 帮助钉钉企业进行e签宝开放平台的数据初始化。 |
+| [获取授权的页面地址](1148-obtain-the-address-of-the-authorized-page.md) | 获取企业授权的页面地址。 |
+| [取消企业授权](1149-cancel-enterprise-authorization.md) | 取消授权过企业的授权状态。 |
+| [套餐转售—分润模式](1150-package-resale-1-distribution-mode.md) | 为使用电子合同的用户创建转售订单。 |
+| [套餐转售—底价结算模式](1151-package-resale-2-reserve-price-settlement-mode.md) | 直接转售e签宝订单给最终真正使用电子合同的用户。 |
+| [查询套餐余量](1152-query-package-balance.md) | 查询当前企业的套餐余量。 |
+| [获取企业的e签宝微应用状态](1153-obtain-the-current-status-of-the-company-s-e-sign-micro-application.md) | 获取企业的e签宝微应用状态。 |
+| [查询企业是否实名认证](1154-query-enterprise-information.md) | 查询企业是否已在e签宝完成实名认证。 |
+| [获取企业控制台地址](1155-get-enterprise-console-address.md) | 获取的企业在e签宝的控制台地址。 |
+| [查询个人是否实名认证](1156-query-personal-information.md) | 查询当前用户是否已在e签宝完成实名认证。 |
+| [获取个人实名的地址](1157-obtain-the-address-that-is-redirected-to-the-user-s-real.md) | 通过个人信息接口查询到个人未实名时，可调用本接口获取个人实名认证地址。 |
+| [获取跳转到企业实名的地址](1158-obtain-the-address-that-is-redirected-to-the-enterprise-s-real.md) | 通过企业信息接口查询到企业未实名时，可调用本接口获取实名地址，在应用内展示给企业。 |
+| [获取文件上传地址](1161-obtain-the-upload-url-of-a-file-1.md) | 获取到文件上传地址。 |
+| [获取文件详情](1160-gets-the-file-details.md) | 查询文件详情。 |
+| [获取发起签署任务的地址](1165-obtain-the-address-used-to-initiate-a-signed-task.md) | 获取发起签署任务的地址。 |
+| [创建签署流程](1162-use-the-api-to-initiate-a-signature-process.md) | 当ISV侧企业有文件需签署时，可调用本接口获取发起签署地址。 |
+| [获取签署人签署地址](1163-get-signatory-address.md) | 获取签署人签署地址。 |
+| [获取流程的签署详情](1164-get-the-details-of-process-signing.md) | 根据taskId获取流程签署相关的详细信息。 |
+| [获取流程任务用印审批列表](1166-obtains-the-print-approval-list-for-process-tasks.md) | 获取流程任务用印审批列表。 |
+| [获取流程详细信息及操作记录](1167-obtains-the-task-details.md) | 获取流程详细信息及操作记录。 |
+| [获取流程任务的所有合同列表](1168-get-a-list-of-all-contracts-for-the-process-task.md) | 获取流程任务的所有合同列表，收到签署完成消息后查询。 |
 
 ### 金智CRM
 
 | **API** | **接口说明** |
 | --- | --- |
-| [客户资料](1131-add-or-edit-customer-profile.md) | 新增或编辑客户资料。 |
-| [客户公共池](1132-add-or-edit-customer-public-pools.md) | 新增或编辑客户公共池。 |
-| [联系人](1133-add-or-edit-contacts.md) | 新增或编辑联系人。 |
-| [合同订单](1134-add-or-edit-contract-orders.md) | 新增或编辑合同订单。 |
-| [发货单](1135-add-or-edit-invoices.md) | 新增或编辑发货单。 |
-| [销售换货单](1136-add-or-edit-a-sales-order.md) | 新增或编辑销售换货单。 |
+| [客户资料](1133-add-or-edit-customer-profile.md) | 新增或编辑客户资料。 |
+| [客户公共池](1134-add-or-edit-customer-public-pools.md) | 新增或编辑客户公共池。 |
+| [联系人](1135-add-or-edit-contacts.md) | 新增或编辑联系人。 |
+| [合同订单](1136-add-or-edit-contract-orders.md) | 新增或编辑合同订单。 |
+| [发货单](1137-add-or-edit-invoices.md) | 新增或编辑发货单。 |
+| [销售换货单](1138-add-or-edit-a-sales-order.md) | 新增或编辑销售换货单。 |
 | [销售机会](https://open.dingtalk.com/document/development/add-or-edit-opportunities) | 新增或编辑销售机会。 |
 | [报价记录](https://open.dingtalk.com/document/development/add-or-edit-quotation-records) | 新增或编辑报价记录。 |
-| [采购单](1137-edit-purchase-order.md) | 新增或编辑采购单。 |
-| [生产单](1138-add-or-edit-a-production-order.md) | 新增或编辑生产单。 |
-| [产品信息](1139-add-or-edit-product-information.md) | 新增或编辑产品信息。 |
-| [入库单](1140-add-or-edit-a-shipment-record.md) | 新增或编辑入库单。 |
-| [出库单](1141-add-or-edit-an-issue-ticket.md) | 新增或编辑出库单。 |
-| [获取数据列表](1143-obtain-the-data-list.md) | 获取各种单据的列表数据。 |
-| [获取数据详情](1142-queries-data-details.md) | 获取各种单据的详情数据。 |
+| [采购单](1139-edit-purchase-order.md) | 新增或编辑采购单。 |
+| [生产单](1140-add-or-edit-a-production-order.md) | 新增或编辑生产单。 |
+| [产品信息](1141-add-or-edit-product-information.md) | 新增或编辑产品信息。 |
+| [入库单](1142-add-or-edit-a-shipment-record.md) | 新增或编辑入库单。 |
+| [出库单](1143-add-or-edit-an-issue-ticket.md) | 新增或编辑出库单。 |
+| [获取数据列表](1145-obtain-the-data-list.md) | 获取各种单据的列表数据。 |
+| [获取数据详情](1144-queries-data-details.md) | 获取各种单据的详情数据。 |
 
 ### 氚云
 

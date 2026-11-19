@@ -21,7 +21,7 @@ updated_at: "2026-08-25 09:37:39"
 > **[!IMPORTANT]**
 >
 > - 本接口已完成升级，后续将维持现有功能且不再新增能力。
-> - 未接入的开发者建议使用新版[获取流程任务的所有合同列表](1166-get-a-list-of-all-contracts-for-the-process-task.md)接口，已接入用户不受影响。
+> - 未接入的开发者建议使用新版[获取流程任务的所有合同列表](1168-get-a-list-of-all-contracts-for-the-process-task.md)接口，已接入用户不受影响。
 
 ## 请求
 

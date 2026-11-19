@@ -89,12 +89,12 @@ updated_at: "2026-10-19 09:11:43"
 
 智能人事支持人事档案变动等回调事件。
 
-- [人事档案变动](../04-LFcRvVD08N-事件订阅/0152-personnel-file-change.md)
-- [人事解决方案变更事件](../04-LFcRvVD08N-事件订阅/0154-personnel-solution-change-event.md)
-- [人事平台员工异动事件v2](../04-LFcRvVD08N-事件订阅/0156-personnel-platform-employee-change-event-v2.md)
-- [人事商业化方案事件](../04-LFcRvVD08N-事件订阅/0153-personnel-commercialization-program-event.md)
-- [培训学习记录同步事件](../04-LFcRvVD08N-事件订阅/0155-training-learning-record-sync-events.md)
-- [智能人事一体化应用授权](../04-LFcRvVD08N-事件订阅/0157-intelligent-personnel-integration-application-authorization.md)
+- [人事档案变动](../04-LFcRvVD08N-事件订阅/0153-personnel-file-change.md)
+- [人事解决方案变更事件](../04-LFcRvVD08N-事件订阅/0155-personnel-solution-change-event.md)
+- [人事平台员工异动事件v2](../04-LFcRvVD08N-事件订阅/0157-personnel-platform-employee-change-event-v2.md)
+- [人事商业化方案事件](../04-LFcRvVD08N-事件订阅/0154-personnel-commercialization-program-event.md)
+- [培训学习记录同步事件](../04-LFcRvVD08N-事件订阅/0156-training-learning-record-sync-events.md)
+- [智能人事一体化应用授权](../04-LFcRvVD08N-事件订阅/0158-intelligent-personnel-integration-application-authorization.md)
 
 ## 集成方案
 

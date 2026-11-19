@@ -28,4 +28,4 @@ permissions: Todo.Todo.Read
 - - 接口最多可以获取到180天内已完成状态的待办任务；未完成状态的待办任务无此限制。
 
 source_url: https://open.dingtalk.com/document/development/query-the-to-do-list-of-enterprise-users
-updated_at: 2026-06-04 19:09:52
+updated_at: 2026-11-17 17:35:08

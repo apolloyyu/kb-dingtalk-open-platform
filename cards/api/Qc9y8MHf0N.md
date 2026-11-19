@@ -20,7 +20,7 @@ permissions: Todo.PersonalTodo.Write
 
 ## Body
 - subject (String, required): 待办标题，最大长度1024字节。
-- executorIds (Array of String, required): 执行者列表，需传用户的unionId，可调用查询用户详情接口获取，最大数量100。
+- executorIds (Array of String, required): 执行者列表，需传用户的unionId，通过查询用户详情获取，最大数量100。
 - optional: description(String), dueTime(Long), participantIds(Array of String), notifyConfigs(Object), dingNotify(String), reminderTimeStamp(Long)
 
 ## Returns
@@ -29,9 +29,9 @@ permissions: Todo.PersonalTodo.Write
 ## Limits
 - 待办标题，最大长度1024字节。
 - 待办备注，最大长度4096字节。
-- 执行者列表，需传用户的unionId，可调用查询用户详情接口获取，最大数量100。
-- 参与者列表，需传用户的unionId，可调用查询用户详情接口获取，最大长度100。
+- 执行者列表，需传用户的unionId，通过查询用户详情获取，最大数量100。
+- 参与者列表，需传用户的unionId，通过查询用户详情获取，最大长度100。
 - 待办任务的提醒时间，Unix时间戳，单位毫秒。要求必须大于当前时间，推荐设置为早于待办截止时间的5～10分钟。
 
 source_url: https://open.dingtalk.com/document/development/api-createpersonaltodotask
-updated_at: 2026-06-04 19:09:50
+updated_at: 2026-11-17 17:35:03

@@ -1,0 +1,510 @@
+---
+title: "分页拉取看鉴记录的关键识别结果"
+source_url: "https://open.dingtalk.com/document/development/api-pagekanjianrecordanalysis"
+namespace: "development"
+slug: "api-pagekanjianrecordanalysis"
+group: "应用开发"
+tab: "服务端 API"
+breadcrumb: "视听智能服务 > DingTalk BV > 看鉴记录 > 分页拉取看鉴记录的关键识别结果"
+doc_id: "doc_bfc82527e81f453f"
+updated_at: "2026-11-17 17:35:13"
+---
+
+> Source: https://open.dingtalk.com/document/development/api-pagekanjianrecordanalysis
+> Path: 应用开发 / 服务端 API / 视听智能服务 > DingTalk BV > 看鉴记录 > 分页拉取看鉴记录的关键识别结果
+> Updated: 2026-11-17 17:35:13
+
+# 分页拉取看鉴记录的关键识别结果
+
+调用本接口，分页拉取看鉴 BV 记录的关键识别结果。同一帧命中多个子任务时，每个子任务各返回一条。
+
+## **请求**
+
+| **基本信息** | |
+| --- | --- |
+| HTTP URL | https://api.dingtalk.com/v1.0/dvi/bv/kanjian/records/analysis |
+| HTTP Method | GET |
+| 支持的应用类型 | appType-企业内部应用 |
+| 权限要求 | permission-Dvi.KanJian.Record.Read-钉钉AI看鉴记录数据读权限 |
+
+### **请求头**
+
+| 名称 | 类型 | 是否必填 | 描述 |
+| --- | --- | --- | --- |
+| x-acs-dingtalk-access-token | String | 是 | 调用该接口的访问凭证，通过调用[获取企业内部应用的accessToken](0032-obtain-the-access-token-of-an-internal-app.md)接口获取。 |
+
+### **查询参数**
+
+| 名称 | 类型 | 是否必填 | 描述 |
+| --- | --- | --- | --- |
+| recordId | String | 是 | 记录 ID，可通过[分页查询看鉴记录列表](1293-api-listkanjianrecords.md)接口获取。 |
+| cursor | String | 否 | 不透明游标，首页不传，取上一页返回的 nextCursor。 |
+| pageSize | Long | 否 | 每页条数，默认值为1，取值 1 到 2。 |
+
+### **请求示例**
+
+HTTP
+
+```
+GET /v1.0/dvi/bv/kanjian/records/analysis?recordId=record0001&cursor=cGc6bzE&pageSize=1 HTTP/1.1
+Host:api.dingtalk.com
+x-acs-dingtalk-access-token:f0917xxxx2f18901d52
+Content-Type:application/json
+```
+
+Java
+
+```
+package com.aliyun.sample;
+
+import com.aliyun.tea.*;
+
+public class Sample {
+
+    /**
+     * <b>description</b> :
+     * <p>使用 Token 初始化账号Client</p>
+     * @return Client
+     * 
+     * @throws Exception
+     */
+    public static com.aliyun.dingtalkdvi_1_0.Client createClient() throws Exception {
+        com.aliyun.teaopenapi.models.Config config = new com.aliyun.teaopenapi.models.Config();
+        config.protocol = "https";
+        config.regionId = "central";
+        return new com.aliyun.dingtalkdvi_1_0.Client(config);
+    }
+
+    public static void main(String[] args_) throws Exception {
+        
+        com.aliyun.dingtalkdvi_1_0.Client client = Sample.createClient();
+        com.aliyun.dingtalkdvi_1_0.models.PageKanjianRecordAnalysisHeaders pageKanjianRecordAnalysisHeaders = new com.aliyun.dingtalkdvi_1_0.models.PageKanjianRecordAnalysisHeaders();
+        pageKanjianRecordAnalysisHeaders.xAcsDingtalkAccessToken = "<your access token>";
+        com.aliyun.dingtalkdvi_1_0.models.PageKanjianRecordAnalysisRequest pageKanjianRecordAnalysisRequest = new com.aliyun.dingtalkdvi_1_0.models.PageKanjianRecordAnalysisRequest()
+                .setRecordId("record0001")
+                .setCursor("cGc6bzE")
+                .setPageSize(1L);
+        try {
+            client.pageKanjianRecordAnalysisWithOptions(pageKanjianRecordAnalysisRequest, pageKanjianRecordAnalysisHeaders, new com.aliyun.teautil.models.RuntimeOptions());
+        } catch (TeaException err) {
+            if (!com.aliyun.teautil.Common.empty(err.code) && !com.aliyun.teautil.Common.empty(err.message)) {
+                // err 中含有 code 和 message 属性，可帮助开发定位问题
+            }
+
+        } catch (Exception _err) {
+            TeaException err = new TeaException(_err.getMessage(), _err);
+            if (!com.aliyun.teautil.Common.empty(err.code) && !com.aliyun.teautil.Common.empty(err.message)) {
+                // err 中含有 code 和 message 属性，可帮助开发定位问题
+            }
+
+        }        
+    }
+}
+```
+
+Python
+
+```
+# -*- coding: utf-8 -*-
+# This file is auto-generated, don't edit it. Thanks.
+import os
+import sys
+import json
+
+from typing import List
+
+from alibabacloud_dingtalk.dvi_1_0.client import Client as dingtalkdvi_1_0Client
+from alibabacloud_tea_openapi import models as open_api_models
+from alibabacloud_dingtalk.dvi_1_0 import models as dingtalkdvi__1__0_models
+from alibabacloud_tea_util import models as util_models
+from alibabacloud_tea_util.client import Client as UtilClient
+
+class Sample:
+    def __init__(self):
+        pass
+
+    @staticmethod
+    def create_client() -> dingtalkdvi_1_0Client:
+        """
+        使用 Token 初始化账号Client
+        @return: Client
+        @throws Exception
+        """
+        config = open_api_models.Config()
+        config.protocol = 'https'
+        config.region_id = 'central'
+        return dingtalkdvi_1_0Client(config)
+
+    @staticmethod
+    def main(
+        args: List[str],
+    ) -> None:
+        client = Sample.create_client()
+        page_kanjian_record_analysis_headers = dingtalkdvi__1__0_models.PageKanjianRecordAnalysisHeaders()
+        page_kanjian_record_analysis_headers.x_acs_dingtalk_access_token = '<your access token>'
+        page_kanjian_record_analysis_request = dingtalkdvi__1__0_models.PageKanjianRecordAnalysisRequest(
+            record_id='record0001',
+            cursor='cGc6bzE',
+            page_size=1
+        )
+        try:
+            client.page_kanjian_record_analysis_with_options(page_kanjian_record_analysis_request, page_kanjian_record_analysis_headers, util_models.RuntimeOptions())
+        except Exception as err:
+            if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
+                # err 中含有 code 和 message 属性，可帮助开发定位问题
+                pass
+
+    @staticmethod
+    async def main_async(
+        args: List[str],
+    ) -> None:
+        client = Sample.create_client()
+        page_kanjian_record_analysis_headers = dingtalkdvi__1__0_models.PageKanjianRecordAnalysisHeaders()
+        page_kanjian_record_analysis_headers.x_acs_dingtalk_access_token = '<your access token>'
+        page_kanjian_record_analysis_request = dingtalkdvi__1__0_models.PageKanjianRecordAnalysisRequest(
+            record_id='record0001',
+            cursor='cGc6bzE',
+            page_size=1
+        )
+        try:
+            await client.page_kanjian_record_analysis_with_options_async(page_kanjian_record_analysis_request, page_kanjian_record_analysis_headers, util_models.RuntimeOptions())
+        except Exception as err:
+            if not UtilClient.empty(err.code) and not UtilClient.empty(err.message):
+                # err 中含有 code 和 message 属性，可帮助开发定位问题
+                pass
+
+if __name__ == '__main__':
+    Sample.main(sys.argv[1:])
+```
+
+PHP
+
+```
+<?php
+
+// This file is auto-generated, don't edit it. Thanks.
+namespace AlibabaCloud\SDK\Sample;
+
+use AlibabaCloud\SDK\Dingtalk\Vdvi_1_0\Dingtalk;
+use \Exception;
+use AlibabaCloud\Tea\Exception\TeaError;
+use AlibabaCloud\Tea\Utils\Utils;
+
+use Darabonba\OpenApi\Models\Config;
+use AlibabaCloud\SDK\Dingtalk\Vdvi_1_0\Models\PageKanjianRecordAnalysisHeaders;
+use AlibabaCloud\SDK\Dingtalk\Vdvi_1_0\Models\PageKanjianRecordAnalysisRequest;
+use AlibabaCloud\Tea\Utils\Utils\RuntimeOptions;
+
+class Sample {
+
+    /**
+     * 使用 Token 初始化账号Client
+     * @return Dingtalk Client
+     */
+    public static function createClient(){
+        $config = new Config([]);
+        $config->protocol = "https";
+        $config->regionId = "central";
+        return new Dingtalk($config);
+    }
+
+    /**
+     * @param string[] $args
+     * @return void
+     */
+    public static function main($args){
+        $client = self::createClient();
+        $pageKanjianRecordAnalysisHeaders = new PageKanjianRecordAnalysisHeaders([]);
+        $pageKanjianRecordAnalysisHeaders->xAcsDingtalkAccessToken = "<your access token>";
+        $pageKanjianRecordAnalysisRequest = new PageKanjianRecordAnalysisRequest([
+            "recordId" => "record0001",
+            "cursor" => "cGc6bzE",
+            "pageSize" => 1
+        ]);
+        try {
+            $client->pageKanjianRecordAnalysisWithOptions($pageKanjianRecordAnalysisRequest, $pageKanjianRecordAnalysisHeaders, new RuntimeOptions([]));
+        }
+        catch (Exception $err) {
+            if (!($err instanceof TeaError)) {
+                $err = new TeaError([], $err->getMessage(), $err->getCode(), $err);
+            }
+            if (!Utils::empty_($err->code) && !Utils::empty_($err->message)) {
+                // err 中含有 code 和 message 属性，可帮助开发定位问题
+            }
+        }
+    }
+}
+$path = __DIR__ . \DIRECTORY_SEPARATOR . '..' . \DIRECTORY_SEPARATOR . 'vendor' . \DIRECTORY_SEPARATOR . 'autoload.php';
+if (file_exists($path)) {
+    require_once $path;
+}
+Sample::main(array_slice($argv, 1));
+```
+
+Go
+
+```
+package main
+
+import (
+  "encoding/json"
+  "strings"
+  "fmt"
+  "os"
+  util  "github.com/alibabacloud-go/tea-utils/v2/service"
+  dingtalkdvi_1_0  "github.com/alibabacloud-go/dingtalk/dvi_1_0"
+  openapi  "github.com/alibabacloud-go/darabonba-openapi/v2/client"
+  "github.com/alibabacloud-go/tea/tea"
+)
+
+// Description:
+// 
+// 使用 Token 初始化账号Client
+// 
+// @return Client
+// 
+// @throws Exception
+func CreateClient () (_result *dingtalkdvi_1_0.Client, _err error) {
+  config := &openapi.Config{}
+  config.Protocol = tea.String("https")
+  config.RegionId = tea.String("central")
+  _result = &dingtalkdvi_1_0.Client{}
+  _result, _err = dingtalkdvi_1_0.NewClient(config)
+  return _result, _err
+}
+
+func _main (args []*string) (_err error) {
+  client, _err := CreateClient()
+  if _err != nil {
+    return _err
+  }
+
+  pageKanjianRecordAnalysisHeaders := &dingtalkdvi_1_0.PageKanjianRecordAnalysisHeaders{}
+  pageKanjianRecordAnalysisHeaders.XAcsDingtalkAccessToken = tea.String("<your access token>")
+  pageKanjianRecordAnalysisRequest := &dingtalkdvi_1_0.PageKanjianRecordAnalysisRequest{
+    RecordId: tea.String("record0001"),
+    Cursor: tea.String("cGc6bzE"),
+    PageSize: tea.Int64(1),
+  }
+  tryErr := func()(_e error) {
+    defer func() {
+      if r := tea.Recover(recover()); r != nil {
+        _e = r
+      }
+    }()
+    _, _err = client.PageKanjianRecordAnalysisWithOptions(pageKanjianRecordAnalysisRequest, pageKanjianRecordAnalysisHeaders, &util.RuntimeOptions{})
+    if _err != nil {
+      return _err
+    }
+
+    return nil
+  }()
+
+  if tryErr != nil {
+    var err = &tea.SDKError{}
+    if _t, ok := tryErr.(*tea.SDKError); ok {
+      err = _t
+    } else {
+      err.Message = tea.String(tryErr.Error())
+    }
+    if !tea.BoolValue(util.Empty(err.Code)) && !tea.BoolValue(util.Empty(err.Message)) {
+      // err 中含有 code 和 message 属性，可帮助开发定位问题
+    }
+
+  }
+  return _err
+}
+
+func main() {
+  err := _main(tea.StringSlice(os.Args[1:]))
+  if err != nil {
+    panic(err)
+  }
+}
+```
+
+Node.js
+
+```
+'use strict';
+// This file is auto-generated, don't edit it
+const Util = require('@alicloud/tea-util');
+const dingtalkdvi_1_0 = require('@alicloud/dingtalk/dvi_1_0');
+const OpenApi = require('@alicloud/openapi-client');
+const Tea = require('@alicloud/tea-typescript');
+
+class Client {
+
+  /**
+   * 使用 Token 初始化账号Client
+   * @return Client
+   * @throws Exception
+   */
+  static createClient() {
+    let config = new OpenApi.Config({ });
+    config.protocol = 'https';
+    config.regionId = 'central';
+    return new dingtalkdvi_1_0.default(config);
+  }
+
+  static async main(args) {
+    let client = Client.createClient();
+    let pageKanjianRecordAnalysisHeaders = new dingtalkdvi_1_0.PageKanjianRecordAnalysisHeaders({ });
+    pageKanjianRecordAnalysisHeaders.xAcsDingtalkAccessToken = '<your access token>';
+    let pageKanjianRecordAnalysisRequest = new dingtalkdvi_1_0.PageKanjianRecordAnalysisRequest({
+      recordId: 'record0001',
+      cursor: 'cGc6bzE',
+      pageSize: 1,
+    });
+    try {
+      await client.pageKanjianRecordAnalysisWithOptions(pageKanjianRecordAnalysisRequest, pageKanjianRecordAnalysisHeaders, new Util.RuntimeOptions({ }));
+    } catch (err) {
+      if (!Util.default.empty(err.code) && !Util.default.empty(err.message)) {
+        // err 中含有 code 和 message 属性，可帮助开发定位问题
+      }
+
+    }    
+  }
+
+}
+
+exports.Client = Client;
+Client.main(process.argv.slice(2));
+```
+
+C#
+
+```
+using Newtonsoft.Json;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using System.Threading.Tasks;
+
+using Tea;
+using Tea.Utils;
+
+namespace AlibabaCloud.SDK.Sample
+{
+    public class Sample 
+    {
+
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用 Token 初始化账号Client</para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// Client
+        /// </returns>
+        /// 
+        /// <term><b>Exception:</b></term>
+        /// Exception
+        public static AlibabaCloud.SDK.Dingtalkdvi_1_0.Client CreateClient()
+        {
+            AlibabaCloud.OpenApiClient.Models.Config config = new AlibabaCloud.OpenApiClient.Models.Config();
+            config.Protocol = "https";
+            config.RegionId = "central";
+            return new AlibabaCloud.SDK.Dingtalkdvi_1_0.Client(config);
+        }
+
+        public static void Main(string[] args)
+        {
+            AlibabaCloud.SDK.Dingtalkdvi_1_0.Client client = CreateClient();
+            AlibabaCloud.SDK.Dingtalkdvi_1_0.Models.PageKanjianRecordAnalysisHeaders pageKanjianRecordAnalysisHeaders = new AlibabaCloud.SDK.Dingtalkdvi_1_0.Models.PageKanjianRecordAnalysisHeaders();
+            pageKanjianRecordAnalysisHeaders.XAcsDingtalkAccessToken = "<your access token>";
+            AlibabaCloud.SDK.Dingtalkdvi_1_0.Models.PageKanjianRecordAnalysisRequest pageKanjianRecordAnalysisRequest = new AlibabaCloud.SDK.Dingtalkdvi_1_0.Models.PageKanjianRecordAnalysisRequest
+            {
+                RecordId = "record0001",
+                Cursor = "cGc6bzE",
+                PageSize = 1,
+            };
+            try
+            {
+                client.PageKanjianRecordAnalysisWithOptions(pageKanjianRecordAnalysisRequest, pageKanjianRecordAnalysisHeaders, new AlibabaCloud.TeaUtil.Models.RuntimeOptions());
+            }
+            catch (TeaException err)
+            {
+                if (!AlibabaCloud.TeaUtil.Common.Empty(err.Code) && !AlibabaCloud.TeaUtil.Common.Empty(err.Message))
+                {
+                    // err 中含有 code 和 message 属性，可帮助开发定位问题
+                }
+            }
+            catch (Exception _err)
+            {
+                TeaException err = new TeaException(new Dictionary<string, object>
+                {
+                    { "message", _err.Message }
+                });
+                if (!AlibabaCloud.TeaUtil.Common.Empty(err.Code) && !AlibabaCloud.TeaUtil.Common.Empty(err.Message))
+                {
+                    // err 中含有 code 和 message 属性，可帮助开发定位问题
+                }
+            }
+        }
+
+    }
+}
+```
+
+## **响应**
+
+### **响应体**
+
+| 名称 | 类型 | 描述 |
+| --- | --- | --- |
+| result | Object | 业务结果。 |
+| executionId | String | 本页内容对应的分析版本 ID。 |
+| hasMore | Boolean | 是否还有下一页：   - **true**：是 - **false**：否 |
+| details | Array | 单帧识别结果列表。 |
+| items | Array | 结果list。 |
+| asrText | String | 对应语音转写文本。 |
+| description | String | 识别说明。 |
+| keyFrames | Array of String | 关键帧url。 |
+| name | String | 子任务名称。 |
+| result | String | 识别结果。  **[!NOTE]**   - 后端为 Object，值随题型变化，网关按 string 配置。 - 随子任务 type 变化，type 见 `task.get` 的`items[].type`。 |
+| taskName | String | 子任务名称。 |
+| timestampMs | Long | 帧时间点，相对视频起点毫秒。 |
+| nextCursor | String | 下一页游标，没有下一页时为空。 |
+| recordId | String | 记录 ID。 |
+
+### **响应体示例**
+
+```
+HTTP/1.1 200 OK
+Content-Type:application/json
+
+{
+  "result" : {
+    "executionId" : "exec0001",
+    "hasMore" : true,
+    "details" : [ {
+      "items" : [ {
+        "asrText" : "shelf ok",
+        "description" : "shelf is tidy",
+        "keyFrames" : [ "https://example.com/frame.jpg" ],
+        "name" : "item0001",
+        "result" : "true",
+        "taskName" : "shelf-check"
+      } ],
+      "timestampMs" : 12000
+    } ],
+    "nextCursor" : "cGc6bzE",
+    "recordId" : "record0001"
+  }
+}
+```
+
+### **错误码**
+
+若调用该接口报错，可根据错误信息在[全局错误码](0013-server-api-error-codes-1.md)文档中查找解决方案。
+
+| HttpCode | 错误码 | 错误信息 | 说明 |
+| --- | --- | --- | --- |
+| 400 | invalidParameter | 参数非法。pageSize 为 1 到 2，不传默认 1；cursor 不传为首页，传入须为上次返回的游标 | 参数非法。pageSize 为 1 到 2，不传默认 1；cursor 不传为首页，传入须为上次返回的游标 |
+| 400 | param.empty | 参数为空。recordId 必填 | 参数为空。recordId 必填 |
+| 400 | invalid.corpId | 企业标识无效 | 企业标识无效 |
+| 400 | orgId.mismatch | 企业标识不一致 | 企业标识不一致 |
+| 400 | record.notFound | 看鉴记录不存在或已删除 | 看鉴记录不存在或已删除 |
+| 400 | no.permission | 无操作权限 | 无操作权限 |

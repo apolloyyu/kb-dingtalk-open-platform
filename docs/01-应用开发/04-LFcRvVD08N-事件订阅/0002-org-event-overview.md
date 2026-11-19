@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "事件订阅"
 breadcrumb: "事件订阅总览"
 doc_id: "XfFwKhqxhk"
-updated_at: "2026-11-05 15:15:50"
+updated_at: "2026-11-17 18:14:40"
 ---
 
 > Source: https://open.dingtalk.com/document/development/org-event-overview
 > Path: 应用开发 / 事件订阅 / 事件订阅总览
-> Updated: 2026-11-05 15:15:50
+> Updated: 2026-11-17 18:14:40
 
 # 事件订阅总览
 
@@ -282,6 +282,9 @@ updated_at: "2026-11-05 15:15:50"
 
 | **名称** | **描述** |
 | --- | --- |
+| [BV看鉴设备上下线事件](0126-events-kanjian-device-online-changed.md) | 设备上线或离线时通知订阅应用，便于掌握设备是否在线、能否发起录制。 |
+| [BV看鉴记录状态变更事件](0127-events-kanjian-record-status-changed.md) | 上传完成、分析完成或总结完成时通知订阅应用，便于在记录可查询、可拉取分析结果或总结时继续处理。 |
+| [BV看鉴录制状态变更事件](0128-events-kanjian-recording-status-changed.md) | 开始录制或录制结束时通知订阅应用，便于感知一次录制的起止。 |
 | [AI销售管理设备使用人变更事件](0130-events-dvi-device-owner-change.md) | AI销售管理中的设备使用人发生变更时产生的事件。 |
 | [智能工牌自定义AI分析项完成事件](0131-events-dvi-custom-ai-analysis-completed.md) | 智能工牌应用中客户自定义的AI分析项分析完成的通知事件。 |
 | [DingTalkB1设备状态变更事件](0129-events-badge-device-status-change.md) | DingTalkB1设备状态发生变更事件。 |

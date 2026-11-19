@@ -55,13 +55,13 @@ updated_at: "2026-07-20 09:25:45"
 
 | **API** | **API说明** | **API版本** |
 | --- | --- | --- |
-| [查询DingTalkA1小助理分析](0987-api-querysmartdeviceaisummary.md) | 查询DingTalkA1小助理分析结果。 | 新版 |
-| [创建DingTalkA1小助理分析](0988-api-createsmartdeviceaisummary.md) | 创建DingTalkA1小助理分析。 | 新版 |
+| [查询DingTalkA1小助理分析](0988-api-querysmartdeviceaisummary.md) | 查询DingTalkA1小助理分析结果。 | 新版 |
+| [创建DingTalkA1小助理分析](0989-api-createsmartdeviceaisummary.md) | 创建DingTalkA1小助理分析。 | 新版 |
 
 ### **回调事件列表**
 
 智能硬件支持小助理总结完成、小助理状态变更和AIoT设备上行等回调事件，更多事件可参考[事件订阅总览](../04-LFcRvVD08N-事件订阅/0002-org-event-overview.md)。
 
-- [DingTalkA1小助理总结完成事件](../04-LFcRvVD08N-事件订阅/0124-events-aone-assistant-summary-change.md)
-- [DingTalkA1小助理状态变更](../04-LFcRvVD08N-事件订阅/0123-events-aone-assistant-status-change-1.md)
-- [AIoT设备上行事件](../04-LFcRvVD08N-事件订阅/0118-events-aiot-device-uplink-event.md)
+- [DingTalkA1小助理总结完成事件](../04-LFcRvVD08N-事件订阅/0125-events-aone-assistant-summary-change.md)
+- [DingTalkA1小助理状态变更](../04-LFcRvVD08N-事件订阅/0124-events-aone-assistant-status-change-1.md)
+- [AIoT设备上行事件](../04-LFcRvVD08N-事件订阅/0119-events-aiot-device-uplink-event.md)

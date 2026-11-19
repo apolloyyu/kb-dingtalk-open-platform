@@ -21,7 +21,7 @@ updated_at: "2026-08-25 09:37:25"
 > **[!IMPORTANT]**
 >
 > - 本接口已完成升级，后续将维持现有功能且不再新增能力。
-> - 未接入的开发者建议使用新版[获取授权的页面地址](1146-obtain-the-address-of-the-authorized-page.md)接口，已接入用户不受影响。
+> - 未接入的开发者建议使用新版[获取授权的页面地址](1148-obtain-the-address-of-the-authorized-page.md)接口，已接入用户不受影响。
 
 ## **请求**
 

@@ -21,7 +21,7 @@ updated_at: "2026-08-25 09:37:38"
 > **[!IMPORTANT]**
 >
 > - 本接口已完成升级，后续将维持现有功能且不再新增能力。
-> - 未接入的开发者建议使用新版[获取流程任务用印审批列表](1164-obtains-the-print-approval-list-for-process-tasks.md)接口，已接入用户不受影响。
+> - 未接入的开发者建议使用新版[获取流程任务用印审批列表](1166-obtains-the-print-approval-list-for-process-tasks.md)接口，已接入用户不受影响。
 
 ## 请求
 

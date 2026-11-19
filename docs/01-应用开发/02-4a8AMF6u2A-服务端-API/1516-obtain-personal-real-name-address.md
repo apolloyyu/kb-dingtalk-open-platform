@@ -21,7 +21,7 @@ updated_at: "2026-08-25 09:37:33"
 > **[!IMPORTANT]**
 >
 > - 本接口已完成升级，后续将维持现有功能且不再新增能力。
-> - 未接入的开发者建议使用新版[获取个人实名的地址](1155-obtain-the-address-that-is-redirected-to-the-user-s-real.md)接口，已接入用户不受影响。
+> - 未接入的开发者建议使用新版[获取个人实名的地址](1157-obtain-the-address-that-is-redirected-to-the-user-s-real.md)接口，已接入用户不受影响。
 
 ## 请求
 

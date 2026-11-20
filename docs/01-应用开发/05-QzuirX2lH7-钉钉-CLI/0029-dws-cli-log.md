@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "钉钉 CLI"
 breadcrumb: "更新日志"
 doc_id: "JqaPUpyWXl"
-updated_at: "2026-11-12 15:16:02"
+updated_at: "2026-11-20 15:52:46"
 ---
 
 > Source: https://open.dingtalk.com/document/development/dws-cli-log
 > Path: 应用开发 / 钉钉 CLI / 更新日志
-> Updated: 2026-11-12 15:16:02
+> Updated: 2026-11-20 15:52:46
 
 # 更新日志
 
@@ -41,11 +41,98 @@ dws upgrade --list
 
   ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/6160536871/p1094200.png)
 
+## **2026-****11-19**
+
+### **更新说明**
+
+本周重点：**AI 语音外呼上线**、**钉钉运动比赛运营与榜单补齐**，以及 **Skill 安装新增其他Agent**。建议通过 `dws upgrade` 升级到最新版[v1.0.69](https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli/releases/tag/v1.0.69)。
+
+### 新增功能
+
+#### **AI 语音外呼：创建外呼任务，回查状态与听记**
+
+新增 AI 语音外呼能力：指定被叫人和任务目标，AI 按开场白发起外呼，结束后可查任务状态和听记链接。创建前支持预览，提交结果不确定时会保留任务信息，不会重复创建。
+
+- 相关命令：`dws outbound-call create`、`dws outbound-call detail`
+- 示例：`dws outbound-call create --callee '<userId>' --task '提醒明天九点开会并确认能否参加' --opening '你好，我是会议提醒助手……' --dry-run`
+- 回查：`dws outbound-call detail --task-id <taskId>`
+
+#### **钉钉运动：比赛能邀请、审批、导出，榜单和个人进度随时查**
+
+v1.0.68 已上线步数与排行，本次补齐比赛运营动作和个人视角查询，比赛从邀请到复盘都能在命令行里完成。属于长尾能力，用 `dws sport --help` 进入。
+
+- **比赛运营：邀请、编辑、删除、审批与导出**
+
+  - 邀请员工或目标群参赛，两者至少提供一个；工号保持字符串原样；
+  - 编辑比赛传完整 `--request` 对象（支持 `@文件`），保留数值与显式 null，漏字段会直接拒绝，避免误清空配置；
+  - 删除不可恢复；审批同意会补发广播；两类操作执行前都会确认，也不会自动重放；
+  - 比赛数据导出提交后返回 pending 与真实任务 ID，可按 ID 点查 PROCESSING/SUCCESS/FAILED，并拿到钉盘链接；步数报表只报告受理成功，文件由钉钉异步投递，不自动等待或下载。
+  - 相关命令：`dws sport competition invite`、`dws sport competition update`、`dws sport competition delete`、`dws sport competition audit`、`dws sport competition export`、`dws sport competition export-task`、`dws sport step export`
+- **榜单与个人进度：TopN、全员排行、我参与的期次**
+
+  - 查企业启用中的比赛、TopN 榜（含本期总榜）、全员分页排行榜；
+  - 查我的比赛与可参与数量、我参与过的期次与总数、活动详情与我的报名状态、我的达标进度。
+  - 相关命令：`dws sport competition list`、`dws sport competition rank-top`、`dws sport competition ranking`、`dws sport competition my-list`、`dws sport competition my-can-join-count`、`dws sport competition my-participated`、`dws sport competition my-participated-count`、`dws sport competition activity-detail`、`dws sport competition my-achievement`
+  - 说明：这批只读命令不需要 `--yes`；企业与个人身份由平台注入，不接受 `--user-id`/`--corp-id`，也不能查看他人的个人视角数据。
+
+#### **Skill 安装新增更多Agengt**
+
+Skill 可以直接装到更多Agent：安装器和升级会自动识别 `~/.workbuddy`（或用 `WORKBUDDY_CONFIG_DIR` 指定目录），沿用现有共享 Skill 链接，链接不可用时复制兜底。
+
+- 相关命令：`dws skill setup --target workbuddy`、`dws skill install <skillId> workbuddy`
+
+### **体验优化**
+
+#### **其他体验优化**
+
+- A2UI 卡片可引用原消息
+
+  `dws chat message send-a2ui-card` 发送卡片时可以引用原消息，回复场景不必再单独补一条文字说明。
+
+  - 相关命令：`dws chat message send-a2ui-card`
+- **A2UI 图表卡片支持离线预设与生成**
+
+  `dws aicard chart` 可以在本地查找图表预设、解释预设用法并生成图表卡片，不必先发到会话里试。校验会区分“完整新卡”和“延迟注入数据的模板”，模板类卡片不会被误判。
+
+  - 相关命令：`dws aicard chart list`、`dws aicard chart explain`、`dws aicard chart build`
+  - 示例：`dws aicard chart build --file <spec.json> --out <new-card.json>`
+- **入群审批一条命令处理通过、删除、忽略、拒绝与拉黑**
+
+  `dws chat +chat-audit-join` 的 `--status` 支持五种审批动作：`AuditApprove`（通过）、`AuditDelete`（删除）、`AuditIgnore`（忽略）、`AuditRefuse`（拒绝）、`AuditBlock`（拒绝并拉黑）。先拉起待处理申请拿到记录 ID、申请人和邀请人，再逐条处理。
+
+  - 相关命令：`dws chat +chat-list-join-requests`、`dws chat +chat-audit-join`
+  - 示例：`dws chat +chat-audit-join --group <openConversationId> --record-id <recordId> --applicant <userId> --inviter <userId> --status AuditApprove`
+- **白板可插入本地图片并读回校验**
+
+  `dws whiteboard +insert-image` 支持给独立白板或文档内嵌白板插入本地 PNG/JPEG，插入后读回校验结果。内嵌白板需传承载文档的 `--node` 和真实的 `--part-id`；上传回执会保留在本地，提交或校验状态不明时按回执核对，不会重复上传。
+
+  - 相关命令：`dws whiteboard +insert-image`
+- **表格类：错误提示更清楚，AI 表格翻页更大**
+
+  - **在线电子表格：** `dws sheet info` 遇到空值、非对象或无效 JSON 时返回结构化错误，不再给含糊提示；
+  - **AI 表格：** 普通记录查询支持更大的服务页，分页不完整时会返回明确的恢复指引，不会把半页结果当成完整数据。
+  - 相关命令：`dws sheet info`、`dws aitable record query`
+- **钉钉语音通话事件：入会凭据读取更稳**
+
+  读取钉钉语音通话事件时，主叫标识优先读新的 `callerUserId`，同时兼容旧的 `callerUid`；事件会带出非敏感的应用 ID（`sdk_app_id`）和过期时间（`sdk_expire_time`）。数字员工需要动态 token 入会时，显式加 `--include-voip-sdk-token`（仅配合 `--as user`）；默认输出仍会移除 `roomCode` 和 token。
+
+  - 相关命令：`dws event consume --as user --include-voip-sdk-token`
+
+#### **兼容性说明（行为变更）**
+
+- **事件消费的群参数不再接受逗号分隔**
+
+  `dws event consume --group` 现在只接受单个群，传逗号分隔的多群会在提交订阅前直接报参数错误。需要监听多个群时，改为对每个群分别运行一次。
+
+### **问题优化**
+
+本周无。
+
 ## **2026-****11-11**
 
 ### **更新说明**
 
-本周重点：**钉钉运动**能力接入，企业步数、排行榜和比赛都能查能建；**开放平台应用事件**支持自建定义从草稿管到上线；**Windows 上多个 Agent 可以各用各的登录状态**；同时加固**聊天消息读取**与**AI 表格结果**的可靠性。。建议通过 `dws upgrade` 升级到最新版[v1.0.68](https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli/releases/tag/v1.0.68)。
+本周重点：**钉钉运动**能力接入，企业步数、排行榜和比赛都能查能建；**开放平台应用事件**支持自建定义从草稿管到上线；**Windows 上多个 Agent 可以各用各的登录状态**；同时加固**聊天消息读取**与**AI 表格结果**的可靠性。建议通过 `dws upgrade` 升级到最新版[v1.0.68](https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli/releases/tag/v1.0.68)。
 
 ### 新增功能
 
@@ -71,12 +158,12 @@ dws upgrade --list
 
 ### **体验优化**
 
-#### **Windows 上多个 Agent 各用各的登录状态**
+- **Windows 上多个 Agent 各用各的登录状态**
 
-同一台 Windows 机器跑多个 Agent 时，用 `DWS_KEYCHAIN_DIR` 给每个 Agent 指定独立的凭据空间，登录、执行命令、退出和重置互不影响。它需要和 `DWS_CONFIG_DIR` 成对设置，并在每次调用时传同一个 Agent 专属的绝对路径；凭据仍保存在注册表里，不会作为文件写进这个目录。不设置时沿用原来的注册表位置，已有登录不受影响；升级后第一次设置会进入新的空间，需要重新登录一次。
+  同一台 Windows 机器跑多个 Agent 时，用 `DWS_KEYCHAIN_DIR` 给每个 Agent 指定独立的凭据空间，登录、执行命令、退出和重置互不影响。它需要和 `DWS_CONFIG_DIR` 成对设置，并在每次调用时传同一个 Agent 专属的绝对路径；凭据仍保存在注册表里，不会作为文件写进这个目录。不设置时沿用原来的注册表位置，已有登录不受影响；升级后第一次设置会进入新的空间，需要重新登录一次。
 
-- 相关变量：`DWS_KEYCHAIN_DIR`、`DWS_CONFIG_DIR`
-- 说明：在 macOS、Linux 和 OpenHarmony 上，`DWS_KEYCHAIN_DIR` 仍然是加密文件的存放目录，用法不变；`DWS_DISABLE_KEYCHAIN` 依旧只对 macOS 生效。
+  - 相关变量：`DWS_KEYCHAIN_DIR`、`DWS_CONFIG_DIR`
+  - 说明：在 macOS、Linux 和 OpenHarmony 上，`DWS_KEYCHAIN_DIR` 仍然是加密文件的存放目录，用法不变；`DWS_DISABLE_KEYCHAIN` 依旧只对 macOS 生效。
 
 ### **问题优化**
 
@@ -167,16 +254,15 @@ dws upgrade --list
 
 ### **体验优化**
 
-#### **传大文件时，等待时间由 --timeout 统一控制**
+- **传大文件时，等待时间由 --timeout 统一控制**
 
-`--timeout` 现在同时管普通请求和文件上传：上传最少等 5 分钟、最多等 24 小时。邮箱、钉盘、待办、审批里的文件上传都按这个时间执行，不会传一半提前中断，也不会一直卡着不返回。
+  `--timeout` 现在同时管普通请求和文件上传：上传最少等 5 分钟、最多等 24 小时。邮箱、钉盘、待办、审批里的文件上传都按这个时间执行，不会传一半提前中断，也不会一直卡着不返回。
 
-- 适用命令：`dws mail`、`dws drive`、`dws todo`、`dws oa` 中涉及文件上传的子命令
-- 示例：`--timeout 600`
+  - 适用命令：`dws mail`、`dws drive`、`dws todo`、`dws oa` 中涉及文件上传的子命令
+  - 示例：`--timeout 600`
+- **白板写失败会告诉你下一步怎么办**
 
-#### **白板写失败会告诉你下一步怎么办**
-
-白板写入出错时，报错会直接说明该怎么做：是内容格式不对要改，还是版本冲突要重新取最新版本，或者结果不确定要先查一下再决定。
+  白板写入出错时，报错会直接说明该怎么做：是内容格式不对要改，还是版本冲突要重新取最新版本，或者结果不确定要先查一下再决定。
 
 ### **问题优化**
 
@@ -254,11 +340,11 @@ DWS CLI 权限管控体系完成安全升级，新增「组织级 → 渠道级 
 
 ### **体验优化**
 
-#### **表单分享：更新后逐项核对实际生效配置**
+- **表单分享：更新后逐项核对实际生效配置**
 
-更新 AI 表格表单分享后，CLI 会逐项读回权限、匿名填写、查看范围、通知、时间和封面等配置，与服务端实际生效的值比对：不一致就明确报"部分失败"，不会把没生效的配置说成成功；本地上传封面后配置更新失败时，整条命令不再自动重试，也不会重复上传封面。
+  更新 AI 表格表单分享后，CLI 会逐项读回权限、匿名填写、查看范围、通知、时间和封面等配置，与服务端实际生效的值比对：不一致就明确报"部分失败"，不会把没生效的配置说成成功；本地上传封面后配置更新失败时，整条命令不再自动重试，也不会重复上传封面。
 
-- 相关命令：`dws aitable +form-share-update`、`dws aitable +form-share-get`
+  - 相关命令：`dws aitable +form-share-update`、`dws aitable +form-share-get`
 
 ### **问题优化**
 
@@ -310,17 +396,16 @@ DWS CLI 权限管控体系完成安全升级，新增「组织级 → 渠道级 
 
 ### **体验优化**
 
-#### **版本检查与未知命令纠错**
+- **版本检查与未知命令纠错**
 
-`auth status`、`version` 与 `--version` 显示当前版本与更新检查结果，默认经 npm Registry 查询、可缓存也可关闭；命令拼错且有明确纠正建议时直接提示、不联网。
+  `auth status`、`version` 与 `--version` 显示当前版本与更新检查结果，默认经 npm Registry 查询、可缓存也可关闭；命令拼错且有明确纠正建议时直接提示、不联网。
 
-- 相关命令：`dws auth status`、`dws version`、`dws --version`
+  - 相关命令：`dws auth status`、`dws version`、`dws --version`
+- **升级链路重构**
 
-#### **升级链路重构**
+  查更新默认走 npm Registry，不再受 GitHub API 限额影响；独立二进制可自更新、无需 npm 或 Node.js，v1.0.65 起只下载当前平台的安装包与技能包，下载量更小、校验更严格。
 
-查更新默认走 npm Registry，不再受 GitHub API 限额影响；独立二进制可自更新、无需 npm 或 Node.js，v1.0.65 起只下载当前平台的安装包与技能包，下载量更小、校验更严格。
-
-- 相关命令：`dws upgrade --check`、`dws upgrade --dry-run`（展示预计下载量）、`dws upgrade --skip-skills`（省去技能包下载）
+  - 相关命令：`dws upgrade --check`、`dws upgrade --dry-run`（展示预计下载量）、`dws upgrade --skip-skills`（省去技能包下载）
 
 ### **问题优化**
 
@@ -485,29 +570,24 @@ AI 卡片（A2UI）是钉钉会话中的可交互富卡片：一张卡上可组�
 
 ### **体验优化**
 
-#### **Schema 生成、缓存与启动性能**
+- **Schema 生成、缓存与启动性能**
 
-Schema 内置在单一 `dws` 可执行文件中交付：支持的平台（darwin / linux / windows 的 amd64 / arm64）在安装或首次执行 `dws schema` 时由本机从实时声明生成身份，将经认证的 protobuf 分片写入共享或用户级缓存目录，后续校验摘要命中后直接读取；缓存缺失或损坏时从实时装配修复，共享缓存存在但无法加锁修复（典型为 root 只读）时回退到用户级缓存。存在插件等运行时扩展时，缓存的装配与修复由隔离子进程完成（使用未注册插件的原始环境），持久缓存保持有效且不继承插件运行时副作用，插件命令不进入 Schema 命令面。运行期每次执行保持完整、实时的命令树（根帮助渲染完整命令树，补充注册的命令与产品、工具命令一同可见），并减少元数据与初始化分配。
+  Schema 内置在单一 `dws` 可执行文件中交付：支持的平台（darwin / linux / windows 的 amd64 / arm64）在安装或首次执行 `dws schema` 时由本机从实时声明生成身份，将经认证的 protobuf 分片写入共享或用户级缓存目录，后续校验摘要命中后直接读取；缓存缺失或损坏时从实时装配修复，共享缓存存在但无法加锁修复（典型为 root 只读）时回退到用户级缓存。存在插件等运行时扩展时，缓存的装配与修复由隔离子进程完成（使用未注册插件的原始环境），持久缓存保持有效且不继承插件运行时副作用，插件命令不进入 Schema 命令面。运行期每次执行保持完整、实时的命令树（根帮助渲染完整命令树，补充注册的命令与产品、工具命令一同可见），并减少元数据与初始化分配。
+- **聊天消息密文解密扩展到读路径**
 
-#### **聊天消息密文解密扩展到读路径**
+  智能消息读取快捷命令（`+chat-messages`、`+at-me`、`+search-msg`、`+thread-replies`）在加密策略允许时先解密第三方加密消息再投影：消息投影新增 `contentDecrypted`、`cryptoLayer`、`dingKeyVersion`（大于 0 时），payload 增加解密台账（`decryptCandidateCount`、`decryptAllowedCount`、`decryptedCount`、`decryptFailedCount`、`decryptFailures[ ]`）；单项解密失败记录台账并标记 `partial: true`，不改变退出码。策略关闭时保留密文并逐候选记录 `policy_disabled` 失败。加密策略缓存遵循服务端 TTL：同一会话在窗口内只取一次策略，不再每条消息都请求。
+- **大整数 ID 输出保精度**
 
-智能消息读取快捷命令（`+chat-messages`、`+at-me`、`+search-msg`、`+thread-replies`）在加密策略允许时先解密第三方加密消息再投影：消息投影新增 `contentDecrypted`、`cryptoLayer`、`dingKeyVersion`（大于 0 时），payload 增加解密台账（`decryptCandidateCount`、`decryptAllowedCount`、`decryptedCount`、`decryptFailedCount`、`decryptFailures[ ]`）；单项解密失败记录台账并标记 `partial: true`，不改变退出码。策略关闭时保留密文并逐候选记录 `policy_disabled` 失败。加密策略缓存遵循服务端 TTL：同一会话在窗口内只取一次策略，不再每条消息都请求。
+  解码 MCP 文本响应以及在 `--jq`、`--fields` 与格式化输出中保留超出 `float64` 精确范围的大整数 ID，不再发生精度丢失。
+- **参数校验错误分类统一**
 
-#### **大整数 ID 输出保精度**
+  框架自身的参数校验失败统一按验证错误处理（退出码 3），API 错误、显式退出码、取消与超时的原有语义不变；父命令遍历与 wiki 代理解析失败走同一校验边界并保留目标命令提示。必填参数缺失的报错统一为 `missing required flag(s): --name` 格式（原始错误仍作为 cause 可查）。
+- **AI 搜问结果附带证据链**
 
-解码 MCP 文本响应以及在 `--jq`、`--fields` 与格式化输出中保留超出 `float64` 精确范围的大整数 ID，不再发生精度丢失。
+  AI 搜问（`dws aisearch`）搜索结果补充证据与解析详情，配套使用说明要求先核对证据再给出结论或交接后续操作。
+- **内置 Skill 与场景文档精进**
 
-#### **参数校验错误分类统一**
-
-框架自身的参数校验失败统一按验证错误处理（退出码 3），API 错误、显式退出码、取消与超时的原有语义不变；父命令遍历与 wiki 代理解析失败走同一校验边界并保留目标命令提示。必填参数缺失的报错统一为 `missing required flag(s): --name` 格式（原始错误仍作为 cause 可查）。
-
-#### **AI 搜问结果附带证据链**
-
-AI 搜问（`dws aisearch`）搜索结果补充证据与解析详情，配套使用说明要求先核对证据再给出结论或交接后续操作。
-
-#### **内置 Skill 与场景文档精进**
-
-内置 Skill 与场景文档同步精进：OA 模板写入路由从 `oa.md` 拆分为独立的 `oa-template-write.md`（渐进披露），新增连接器审批人规则 `target_connect_approval.md`，补充 50+ 个控件 schema、流程节点与选人规则子文档；数字员工可见范围文档补齐 `ALL` / `PARTIAL`，主程序类型、Skill/MCP 输入的字段契约更明确；文档列表路由覆盖 Devapp / Devdoc 流程与搜索预算；AI 搜问补充意图引导（intent-guide）与轻量配方（lite-recipes）。
+  内置 Skill 与场景文档同步精进：OA 模板写入路由从 `oa.md` 拆分为独立的 `oa-template-write.md`（渐进披露），新增连接器审批人规则 `target_connect_approval.md`，补充 50+ 个控件 schema、流程节点与选人规则子文档；数字员工可见范围文档补齐 `ALL` / `PARTIAL`，主程序类型、Skill/MCP 输入的字段契约更明确；文档列表路由覆盖 Devapp / Devdoc 流程与搜索预算；AI 搜问补充意图引导（intent-guide）与轻量配方（lite-recipes）。
 
 ### **问题优化**
 
@@ -643,21 +723,18 @@ HR Brain 可以直接管理人才池：支持创建或更新人才池（名称�
 
 ### **体验优化**
 
-#### **授权申请与拒绝提示更清晰**
+- **授权申请与拒绝提示更清晰**
 
-浏览器授权申请现在落到专门的"审批等待页"，轮询并在审批通过后自动跳转，重复申请幂等，回调页统一 `Cache-Control: no-store`；终端拒绝原因按"是否可申请"区分：`cli_not_enabled` 保留申请流程并提示个人数据权限未开通、审批人选择改为"选择审批人"，`user_forbidden`/`user_not_allowed` 统一为"该组织未开启 CLI 数据访问"。
+  浏览器授权申请现在落到专门的"审批等待页"，轮询并在审批通过后自动跳转，重复申请幂等，回调页统一 `Cache-Control: no-store`；终端拒绝原因按"是否可申请"区分：`cli_not_enabled` 保留申请流程并提示个人数据权限未开通、审批人选择改为"选择审批人"，`user_forbidden`/`user_not_allowed` 统一为"该组织未开启 CLI 数据访问"。
+- **Chat Shortcut 优先发现与对齐**
 
-#### **Chat Shortcut 优先发现与对齐**
+  `dws chat --help` 优先展示精选 Shortcut，完整规范目录仍可发现，重叠的原子命令帮助指向已评审的 Shortcut 所有者；补充兼容别名、创建默认值、消息上下文定位、文本与 Thread 回复、筛选排序及分页控制，严格区分空集合、不完整结果与失败，增加资源分段重试、版本校验和原子落盘。
+- **单可执行文件交付与包体瘦身**
 
-`dws chat --help` 优先展示精选 Shortcut，完整规范目录仍可发现，重叠的原子命令帮助指向已评审的 Shortcut 所有者；补充兼容别名、创建默认值、消息上下文定位、文本与 Thread 回复、筛选排序及分页控制，严格区分空集合、不完整结果与失败，增加资源分段重试、版本校验和原子落盘。
+  平台运行时负载打包进 `dws` 单一可执行文件，新安装包移除 sidecar 目录树（既有安装保留发现）；构建与运行时提取移除辅助 ps 文件，单二进制包体减小；遥测 SDK 升级到 v0.4.0，完成的命令事件由有界后台进程发送，网络等待不再占用命令执行时间。
+- **运行时请求上下文**
 
-#### **单可执行文件交付与包体瘦身**
-
-平台运行时负载打包进 `dws` 单一可执行文件，新安装包移除 sidecar 目录树（既有安装保留发现）；构建与运行时提取移除辅助 ps 文件，单二进制包体减小；遥测 SDK 升级到 v0.4.0，完成的命令事件由有界后台进程发送，网络等待不再占用命令执行时间。
-
-#### **运行时请求上下文**
-
-支持打包可选运行时负载，`dws doctor` 报告脱敏后的就绪状态，受支持的业务请求会附带精简上下文元数据。
+  支持打包可选运行时负载，`dws doctor` 报告脱敏后的就绪状态，受支持的业务请求会附带精简上下文元数据。
 
 ### **问题优化**
 

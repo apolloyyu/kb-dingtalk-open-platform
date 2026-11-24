@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "认证与授权 > 身份验证（免登） > 集成方案 > 企业内部应用 > 网页方式登录应用（第三方网站）"
 doc_id: "fhfqc76nqi"
-updated_at: "2026-09-10 14:32:58"
+updated_at: "2026-11-18 15:56:46"
 ---
 
 > Source: https://open.dingtalk.com/document/development/tutorial-obtaining-user-personal-information
 > Path: 应用开发 / 服务端 API / 认证与授权 > 身份验证（免登） > 集成方案 > 企业内部应用 > 网页方式登录应用（第三方网站）
-> Updated: 2026-09-10 14:32:58
+> Updated: 2026-11-18 15:56:46
 
 # 网页方式登录应用（第三方网站）
 
@@ -305,7 +305,7 @@ redirect_uri=https%3A%2F%2Fwww.aaaaa.com%2Fauth
 ### **方式一：钉钉页面登录授权**
 
 1. 确保已经完成上方步骤，获取运行下方demo示例的参数和基本配置。
-2. 下载[web-login-application-demo-java-construct-link.zip](https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20251210/qagtgn/web-login-application-demo-java-construct-link.zip)示例 Demo。
+2. 下载[web-login-application-demo-java-construct-link.zip](https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20261118/epfnxd/web-login-application-demo-java-construct-link.zip)示例 Demo。
 3. 打开 IDE，并导入已下载的 Demo。
 
    > *示例代码分为 backend（后端代码目录）和frontend（前端代码目录）。*
@@ -342,7 +342,7 @@ redirect_uri=https%3A%2F%2Fwww.aaaaa.com%2Fauth
 ### **方式二：内嵌二维码方式登录授权**
 
 1. 确保已经完成上方步骤，获取运行下方demo示例的参数和基本配置。
-2. 下载[web-login-application-demo-java-scan-code.zip](https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20251113/tpcjjr/web-login-application-demo-java-scan-code.zip)示例 Demo。
+2. 下载[web-login-application-demo-java-scan-code.zip](https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20261118/gjwrln/web-login-application-demo-java-scan-code.zip)示例 Demo。
 3. 打开 IDE，并导入已下载的 Demo。
 
    > *示例代码分为 backend（后端代码目录）和frontend（前端代码目录）。*

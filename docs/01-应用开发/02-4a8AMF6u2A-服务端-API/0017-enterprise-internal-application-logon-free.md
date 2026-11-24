@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "认证与授权 > 身份验证（免登） > 集成方案 > 企业内部应用 > 企业内部网页应用免登"
 doc_id: "NtFrVltzL7"
-updated_at: "2026-09-16 09:04:56"
+updated_at: "2026-11-18 16:09:36"
 ---
 
 > Source: https://open.dingtalk.com/document/development/enterprise-internal-application-logon-free
 > Path: 应用开发 / 服务端 API / 认证与授权 > 身份验证（免登） > 集成方案 > 企业内部应用 > 企业内部网页应用免登
-> Updated: 2026-09-16 09:04:56
+> Updated: 2026-11-18 16:09:36
 
 # 企业内部网页应用免登
 
@@ -168,7 +168,7 @@ updated_at: "2026-09-16 09:04:56"
 #### **步骤四：构建服务**
 
 1. 确保完成上述准备工作，完成下方 Demo 运行的条件。
-2. 你可以下载示例[web-app-sso.zip](https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20251113/vrmiiu/web-app-sso.zip)Demo。
+2. 你可以下载示例[web-app-sso.zip](https://help-static-aliyun-doc.aliyuncs.com/file-manage-files/zh-CN/20261118/mujtqm/web-app-sso.zip)Demo。
 3. 打开 IDE，并导入已下载的 Demo。
 
    > *示例代码分为 backend（后端代码目录）和frontend（前端代码目录）。*

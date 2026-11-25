@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "日程 > 日程 > 修改日程"
 doc_id: "68Mxcrdh14"
-updated_at: "2026-06-02 09:24:59"
+updated_at: "2026-11-25 17:26:36"
 ---
 
 > Source: https://open.dingtalk.com/document/development/modify-event
 > Path: 应用开发 / 服务端 API / 日程 > 日程 > 修改日程
-> Updated: 2026-06-02 09:24:59
+> Updated: 2026-11-25 17:26:36
 
 # 修改日程
 
@@ -27,9 +27,7 @@ updated_at: "2026-06-02 09:24:59"
 
 ## 请求
 
-### 基本信息
-
-| 字段 | 值 |
+| **基本信息** | |
 | --- | --- |
 | HTTP URL | https://api.dingtalk.com/v1.0/calendar/users/{userId}/calendars/{calendarId}/events/{eventId} |
 | HTTP Method | PUT |
@@ -47,7 +45,7 @@ updated_at: "2026-06-02 09:24:59"
 
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
-| userId | String | 是 | 日程组织者的unionId。   - 企业内部应用和第三方企业应用，调用[查询用户详情](0055-query-user-details.md)接口获取unionid参数值。 - 第三方个人应用，调用[获取用户通讯录个人信息](0053-dingtalk-retrieve-user-information.md)接口获取unionId参数值。 |
+| userId | String | 是 | 日程组织者的unionId。   - 企业内部应用或第三方企业应用，通过[查询用户详情](0055-query-user-details.md)接口获取。 - 第三方个人应用，通过[获取用户通讯录个人信息](0053-dingtalk-retrieve-user-information.md)接口获取。 |
 | calendarId | String | 是 | 日程所属的日历ID，统一为primary，表示用户的主日历。 |
 | eventId | String | 是 | 日程ID，可调用[查询日程列表](0258-query-an-event-list.md)接口获取id参数值。 |
 
@@ -56,16 +54,16 @@ updated_at: "2026-06-02 09:24:59"
 | 名称 | 类型 | 是否必填 | 描述 |
 | --- | --- | --- | --- |
 | summary | String | 否 | 日程标题。 |
-| id | String | 是 | 日程ID。 |
+| id | String | 是 | 日程ID，可调用[查询日程列表](0258-query-an-event-list.md)接口获取id参数值。 |
 | description | String | 否 | 日程描述。 |
 | start | Object | 否 | 日程开始时间。 |
-| date | String | 否 | 日程开始日期，格式：yyyy-MM-dd。     - 全天日程必须有值 - 非全天日程必须留空 |
-| dateTime | String | 否 | 日程开始时间，格式为ISO-8601的date-time格式。     - 全天日程必须留空 - 非全天日程必须有值 |
-| timeZone | String | 否 | 日程开始时间所属时区，TZ database name格式。     - 全天日程必须留空 - 非全天日程必须有值 |
-| end | Object | 否 | 日程结束时间。    日程循环次数**numberOfOccurrences**和日程结束时间**end**不可同时设置。 |
-| date | String | 否 | 日程结束日期，格式：yyyy-MM-dd。     - 全天日程必须有值 - 非全天日程必须留空 |
-| dateTime | String | 否 | 日程结束时间，格式为ISO-8601的date-time格式。     - 全天日程必须留空 - 非全天日程必须有值 |
-| timeZone | String | 否 | 日程结束时间所属时区，必须和开始时间所属时区相同，TZ database name格式。     - 全天日程必须留空 - 非全天日程必须有值 |
+| date | String | 否 | 日程开始日期，格式：yyyy-MM-dd。  **[!NOTE]**  - 全天日程必须有值 - 非全天日程必须留空 |
+| dateTime | String | 否 | 日程开始时间，格式为ISO-8601的date-time格式。  **[!NOTE]**  - 全天日程必须留空 - 非全天日程必须有值 |
+| timeZone | String | 否 | 日程开始时间所属时区，TZ database name格式。  **[!NOTE]**  - 全天日程必须留空 - 非全天日程必须有值 |
+| end | Object | 否 | 日程结束时间。  **[!NOTE]**  日程循环次数**numberOfOccurrences**和日程结束时间**end**不可同时设置。 |
+| date | String | 否 | 日程结束日期，格式：yyyy-MM-dd。  **[!NOTE]**  - 全天日程必须有值 - 非全天日程必须留空 |
+| dateTime | String | 否 | 日程结束时间，格式为ISO-8601的date-time格式。  **[!NOTE]**  - 全天日程必须留空 - 非全天日程必须有值 |
+| timeZone | String | 否 | 日程结束时间所属时区，必须和开始时间所属时区相同，TZ database name格式。  **[!NOTE]**  - 全天日程必须留空 - 非全天日程必须有值 |
 | isAllDay | Boolean | 否 | 是否全天日程。   - **true**：是 - **false**：不是 |
 | recurrence | Object | 否 | 日程循环规则。 |
 | pattern | Object | 否 | 循环规则。 |
@@ -73,19 +71,19 @@ updated_at: "2026-06-02 09:24:59"
 | dayOfMonth | Integer | 否 | 当循环规则的**type**值为**absoluteMonthly**时，用于指定是每个月的第几天。 |
 | daysOfWeek | String | 否 | 英文小写单词指定星期几，如果有多个值逗号分割。 |
 | index | String | 否 | 当type值为relativeMonthly时，用于指定每月第几周。   - **first**：第一周 - **second**：第二周 - **third**：第三周 - **fourth**：第四周 - **last**：最后一周 |
-| interval | Integer | 否 | 循环间隔，根据type不同单位不同。      例如：   - 当**type**取值为**daily**时表示间隔N天。 - 当**type**取值为**absoluteYearly**则表示间隔N年。 |
+| interval | Integer | 否 | 循环间隔，根据type不同单位不同。  **[!NOTE]**  例如：   - 当**type**取值为**daily**时表示间隔N天。 - 当**type**取值为**absoluteYearly**则表示间隔N年。 |
 | firstDayOfWeek | String | 否 | 一周起始日，可取值包括：sunday、monday、tuesday、wednesday、thursday、friday、saturday。 默认值为“sunday”。 |
 | range | Object | 否 | 循环范围。 |
 | type | String | 否 | 循环范围类型。   - **noEnd**：永不结束 - **endDate**：循环至指定日期结束 - **numbered**：循环指定次数后结束 |
-| endDate | String | 否 | 循环结束时间。      **endDate**和**numberOfOccurrences**不可同时设定。 |
-| numberOfOccurrences | Integer | 否 | 循环次数。      **endDate**和**numberOfOccurrences**不可同时设定。 |
-| attendees | Array | 否 | 日程参与人列表。 |
+| endDate | String | 否 | 循环结束时间。  **[!NOTE]**  **endDate**和**numberOfOccurrences**不可同时设定。 |
+| numberOfOccurrences | Integer | 否 | 循环次数。  **[!NOTE]**  **endDate**和**numberOfOccurrences**不可同时设定。 |
+| attendees | Array | 否 | 日程参与人列表，建议使用[添加日程参与者](0260-add-schedule-participant.md)和[删除日程参与者](0261-delete-schedule-participant.md)接口对日程参与者进行管理。 |
 | id | String | 否 | 用户的unionId。 |
 | email | String | 否 | 邮箱。 |
 | isOptional | Boolean | 否 | 是否为可选参与人。   - **true**：是 - **false**：不是 |
 | location | Object | 否 | 日程地点。 |
 | displayName | String | 否 | 日程地点的名称。 |
-| extra | Map<String, String> | 否 | JSON格式的扩展能力开关，选填，具体属性定义如下。   - **noPushNotification**：创建日程时是否向关联人员发送钉钉推送通知。    - **true**：不发送   - **false**：发送 - **noChatNotification**：创建日程时是否向参与人发送单聊卡片。    - **true**：不发送   - **false**：发送 |
+| extra | Map<String, String> | 否 | JSON格式的扩展能力开关，选填，具体属性定义如下。   - **noPushNotification**：创建日程时是否向关联人员发送钉钉推送通知。      - **true**：不发送   - **false**：发送 - **noChatNotification**：创建日程时是否向参与人发送单聊卡片。      - **true**：不发送   - **false**：发送 |
 | reminders | Array | 否 | 日程提醒，可以添加多个。   - 如果不传默认提醒时间为：    - **非全天日程**：开始前15分钟提醒   - **全天日程**：开始前一天9点提醒 - 如果传空数据表示不创建任何提醒。 |
 | method | String | 否 | 提醒方式。   - **dingtalk**: 钉钉内提醒 |
 | minutes | Integer | 否 | 在日程开始前N分钟发出提醒。 |
@@ -95,7 +93,8 @@ updated_at: "2026-06-02 09:24:59"
 | text | String | 否 | 富文本值。 |
 | uiConfigs | Array | 否 | UI配置，控制日程详情页内组件的展示。 |
 | uiName | String | 是 | 组件名称，可取值（持续更新）：   - **updateEventButton**：编辑日程按钮 - **deleteEventButton**：删除日程按钮 - **transferEventButton**：转让日程按钮 - **attendee**：参与人区域 - **comment**：日程评论区域 |
-| uiStatus | String | 是 | 组件状态，可取值：   - **hide**：隐藏 - **disable**: 禁用（新版详情页支持，低版本暂不支持disable，组件将被隐藏）    按钮类：无法点击。   区域类：无法交互。如将评论区域设置为disable，那么无法写评论，但是评论内容依然可见。 - **enable**：可使用（默认状态） |
+| uiStatus | String | 是 | 组件状态，可取值：   - **hide**：隐藏 - **disable**: 禁用（新版详情页支持，低版本暂不支持disable，组件将被隐藏）  **[!NOTE]**  按钮类：无法点击。  区域类：无法交互。如将评论区域设置为disable，那么无法写评论，但是评论内容依然可见。 - **enable**：可使用（默认状态） |
+| freeBusyStatus | String | 否 | 本次日程的忙闲状态：   - **free**：空闲 - **busy**：忙碌 |
 
 ### 请求示例
 
@@ -963,13 +962,13 @@ namespace AlibabaCloud.SDK.Sample
 | summary | String | 日程标题。 |
 | description | String | 日程描述。 |
 | start | Object | 日程开始时间。 |
-| date | String | 日程开始日期，格式：yyyy-MM-dd。       - 全天日程必须有值 - 非全天日程必须留空 |
-| dateTime | String | 日程开始时间，格式为ISO-8601的date-time格式。       - 全天日程必须留空 - 非全天日程必须有值 |
-| timeZone | String | 日程开始时间所属时区，TZ database name格式。       - 全天日程必须留空 - 非全天日程必须有值 |
+| date | String | 日程开始日期，格式：yyyy-MM-dd。  **[!NOTE]**  - 全天日程必须有值 - 非全天日程必须留空 |
+| dateTime | String | 日程开始时间，格式为ISO-8601的date-time格式。  **[!NOTE]**  - 全天日程必须留空 - 非全天日程必须有值 |
+| timeZone | String | 日程开始时间所属时区，TZ database name格式。  **[!NOTE]**  - 全天日程必须留空 - 非全天日程必须有值 |
 | end | Object | 日程结束时间。 |
-| date | String | 日程结束日期，格式：yyyy-MM-dd。       - 全天日程必须有值 - 非全天日程必须留空 |
-| dateTime | String | 日程结束时间，格式为ISO-8601的date-time格式。       - 全天日程必须留空 - 非全天日程必须有值 |
-| timeZone | String | 日程结束时间所属时区，必须和开始时间所属时区相同，TZ database name格式。       - 全天日程必须留空 - 非全天日程必须有值 |
+| date | String | 日程结束日期，格式：yyyy-MM-dd。  **[!NOTE]**  - 全天日程必须有值 - 非全天日程必须留空 |
+| dateTime | String | 日程结束时间，格式为ISO-8601的date-time格式。  **[!NOTE]**  - 全天日程必须留空 - 非全天日程必须有值 |
+| timeZone | String | 日程结束时间所属时区，必须和开始时间所属时区相同，TZ database name格式。  **[!NOTE]**  - 全天日程必须留空 - 非全天日程必须有值 |
 | isAllDay | Boolean | 是否全天日程。   - **true**：是 - **false**：不是 |
 | recurrence | Object | 日程循环规则。 |
 | pattern | Object | 循环规则。 |
@@ -977,7 +976,7 @@ namespace AlibabaCloud.SDK.Sample
 | dayOfMonth | Integer | 当循环规则的**type**值为**absoluteMonthly**时，用于指定是每个月的第几天。 |
 | daysOfWeek | String | 英文小写单词指定星期几，如果有多个值逗号分割。 |
 | index | String | 当type值为relativeMonthly时，用于指定每月第几周。   - **first**：第一周 - **second**：第二周 - **third**：第三周 - **fourth**：第四周 - **last**：最后一周 |
-| interval | Integer | 循环间隔，根据type不同单位不同。      例如：   - 当**type**取值为**daily**时表示间隔N天。 - 当**type**取值为**absoluteYearly**则表示间隔N年。 |
+| interval | Integer | 循环间隔，根据type不同单位不同。  **[!NOTE]**  例如：   - 当**type**取值为**daily**时表示间隔N天。 - 当**type**取值为**absoluteYearly**则表示间隔N年。 |
 | firstDayOfWeek | String | 一周起始日，可取值包括：sunday、monday、tuesday、wednesday、thursday、friday、saturday。 默认值为“sunday”。 |
 | range | Object | 循环范围。 |
 | type | String | 循环范围类型。   - **noEnd**：永不结束 - **endDate**：循环至指定日期结束 - **numbered**：循环指定次数后结束 |
@@ -1006,11 +1005,17 @@ namespace AlibabaCloud.SDK.Sample
 | type | String | 线上会议类型。   - **dingtalk**：钉钉视频会议 |
 | conferenceId | String | 会议id。 |
 | url | String | 参会url。 |
+| extraInfo | Map | 其他扩展信息。 |
 | richTextDescription | Object | 富文本字段。 |
 | text | String | 富文本值。 |
 | uiConfigs | Array | UI配置，控制日程详情页内组件的展示。 |
 | uiName | String | 组件名称，可取值（持续更新）：   - **updateEventButton**：编辑日程按钮 - **deleteEventButton**：删除日程按钮 - **transferEventButton**：转让日程按钮 - **attendee**：参与人区域 - **comment**：日程评论区域 |
-| uiStatus | String | 组件状态，可取值：   - **hide**：隐藏 - **disable**: 禁用（新版详情页支持，低版本暂不支持disable，组件将被隐藏）      按钮类：无法点击。   区域类：无法交互。如将评论区域设置为disable，那么无法写评论，但是评论内容依然可见。 - **enable**：可使用（默认状态） |
+| uiStatus | String | 组件状态，可取值：   - **hide**：隐藏 - **disable**: 禁用（新版详情页支持，低版本暂不支持disable，组件将被隐藏）  **[!NOTE]**  按钮类：无法点击。  区域类：无法交互。如将评论区域设置为disable，那么无法写评论，但是评论内容依然可见。 - **enable**：可使用（默认状态） |
+| extendedProperties | Object | 拓展信息。 |
+| sharedProperties | Object | 公共拓展信息。 |
+| sourceOpenCid | String | 源会话id。 |
+| belongCorpId | String | 日程归属组织id。 |
+| freeBusyStatus | String | 忙闲状态。 |
 
 ### 响应体示例
 
@@ -1019,7 +1024,7 @@ HTTP/1.1 200 OK
 Content-Type:application/json
 
 {
-  "id" : "iiiP35sJadba8aBSgjrwPRKgiEiF",
+  "id" : "iiiP35xxxxKgiEiF",
   "summary" : "some event",
   "description" : "something about this event",
   "start" : {
@@ -1048,14 +1053,14 @@ Content-Type:application/json
     }
   },
   "attendees" : [ {
-    "id" : "iiiP35sJadba8aBSgjrwPRKgiEiF",
+    "id" : "iiiP35sJxxxxgiEiF",
     "displayName" : "jack",
     "responseStatus" : "accepted",
     "self" : false,
     "isOptional" : false
   } ],
   "organizer" : {
-    "id" : "iiiP35sJadba8aBSgjrwPRKgiEiF",
+    "id" : "iiiP35sJxxxxgiEiF",
     "displayName" : "tony",
     "responseStatus" : "accepted",
     "self" : false

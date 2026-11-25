@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "开发指南"
 breadcrumb: "开发指南 > 三方应用部署 > 钉钉安全域名"
 doc_id: "kQgmYqYj58"
-updated_at: "2026-07-22 16:55:15"
+updated_at: "2026-11-25 18:46:43"
 ---
 
 > Source: https://open.dingtalk.com/document/dingstart/config-domain-name
 > Path: 应用开发 / 开发指南 / 开发指南 > 三方应用部署 > 钉钉安全域名
-> Updated: 2026-07-22 16:55:15
+> Updated: 2026-11-25 18:46:43
 
 # 钉钉安全域名
 
@@ -113,4 +113,4 @@ updated_at: "2026-07-22 16:55:15"
   **答：**安全域名默认提供了HTTPS访问，开发者侧不需要获取安全域名的证书和进行配置，在云上的SLB上配置HTTP即可，不需要配置HTTPS，安全域名网关会将HTTP流量走专有通道转发到开发者的私网SLB。
 - **访问安全域名不断重定向问题**
 
-  **答：**检查私网SLB的配置，取消SLB上80端口（或其他HTTP端口）的**重定向至HTTPS:443**的配置，转发到后端服务器的Web端口，服务器组配置后端服务的Web服务器，如下图所示。![88779](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/7450288561/p470575.png)取消重定向配置，请参考[使用CLB将HTTP访问重定向至HTTPS](https://open.dingtalk.com/document/clb-advanced-forwarding/redirect-requests-from-http-to-https)。
+  **答：**检查私网SLB的配置，取消SLB上80端口（或其他HTTP端口）的**重定向至HTTPS:443**的配置，转发到后端服务器的Web端口，服务器组配置后端服务的Web服务器，如下图所示。![88779](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/7450288561/p470575.png)取消重定向配置，请参考[使用CLB将HTTP访问重定向至HTTPS](https://help.aliyun.com/zh/slb/classic-load-balancer/use-cases/redirect-requests-from-http-to-https)。

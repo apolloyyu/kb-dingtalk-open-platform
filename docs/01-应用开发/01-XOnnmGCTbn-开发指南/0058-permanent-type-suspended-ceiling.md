@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "开发指南"
 breadcrumb: "开发酷应用 > 开发群聊酷应用 > 开发参考 > 吊顶卡片"
 doc_id: "KYvNodytKm"
-updated_at: "2026-06-30 09:00:57"
+updated_at: "2026-11-25 18:46:47"
 ---
 
 > Source: https://open.dingtalk.com/document/dingstart/permanent-type-suspended-ceiling
 > Path: 应用开发 / 开发指南 / 开发酷应用 > 开发群聊酷应用 > 开发参考 > 吊顶卡片
-> Updated: 2026-06-30 09:00:57
+> Updated: 2026-11-25 18:46:47
 
 # 吊顶卡片
 
@@ -28,7 +28,7 @@ updated_at: "2026-06-30 09:00:57"
 
 在开始配置吊顶卡片前，请确认已完成以下准备工作：
 
-- 已成功创建群聊酷应用，详情请参考[创建酷应用](https://open.dingtalk.com/document/dingstart/create-coolapp)。
+- 已成功创建群聊酷应用，详情请参考[应用创建与配置](0007-create-application.md)。
 - 已完成快捷入口配置，以便在群内触发酷应用，详情请参考[接入群聊酷应用](0046-configuration-group-chat-quick-entry.md)。
 - 已获取应用凭证信息（Client ID / Client Secret），路径为：**基础信息 > 凭证与基础信息**。
 - 已在权限管理中申请并审批通过相关API权限。

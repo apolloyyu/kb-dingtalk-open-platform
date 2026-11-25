@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "开发指南"
 breadcrumb: "开发酷应用 > 开发单聊酷应用 > 开发互动卡片"
 doc_id: "9IqOy1vj76"
-updated_at: "2026-07-22 16:55:22"
+updated_at: "2026-11-25 18:46:49"
 ---
 
 > Source: https://open.dingtalk.com/document/dingstart/private-chat-coolapp-develop-interactive-cards
 > Path: 应用开发 / 开发指南 / 开发酷应用 > 开发单聊酷应用 > 开发互动卡片
-> Updated: 2026-07-22 16:55:22
+> Updated: 2026-11-25 18:46:49
 
 # 开发互动卡片
 
@@ -52,9 +52,9 @@ updated_at: "2026-07-22 16:55:22"
 
 | 搭建平台 | 适用场景 | 组件类型 | 布局方式 | 卡片形式 |
 | --- | --- | --- | --- | --- |
-| [互动卡片高级版](https://open.dingtalk.com/document/download/card-building-platform)搭建平台 | 面向进阶和有强定制化需求的开发者，能力丰富强大，支持自定义布局和更精细力度的组件属性配置，有一定的上手门槛。 | 原子组件 | - 上下布局 - 左右布局 - 嵌套布局 | 模板+数据 |
+| [互动卡片高级版](../../05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md#8ea07cac63f7j)搭建平台 | 面向进阶和有强定制化需求的开发者，能力丰富强大，支持自定义布局和更精细力度的组件属性配置，有一定的上手门槛。 | 原子组件 | - 上下布局 - 左右布局 - 嵌套布局 | 模板+数据 |
 
-更多详情参见[互动卡片高级版搭建平台](https://open.dingtalk.com/document/download/card-building-platform)。
+更多详情参见[互动卡片高级版搭建平台](../../05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md#8ea07cac63f7j)。
 
 ## 发送互动卡片效果示例
 
@@ -73,7 +73,7 @@ updated_at: "2026-07-22 16:55:22"
 
 ## 互动卡片高级版发送吊顶卡片
 
-1. 了[互动卡片高级版编辑器](https://open.dingtalk.com/document/download/interactive-card-editor)详细信息，通过[互动卡片高级版搭建平台](https://open.dingtalk.com/document/download/card-building-platform)创建吊顶卡片模板。
+1. 了解[高级版编辑器](../../05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0021-interactive-card-editor.md)详细信息，通过[互动卡片高级版搭建平台](../../05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md)创建吊顶卡片模板。
 
    ![image](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/0621872871/p1084375.png)
 2. 调用[创建并开启互动卡片吊顶](../02-4a8AMF6u2A-服务端-API/0756-send-group-helper-message.md)接口，创建并开启卡片吊顶。

@@ -7,12 +7,12 @@ group: "硬件开发"
 tab: "SDK 接入（通用）"
 breadcrumb: "SDK概览"
 doc_id: "UXG1gv3OYY"
-updated_at: "2026-08-03 09:19:30"
+updated_at: "2026-11-25 18:45:51"
 ---
 
 > Source: https://open.dingtalk.com/document/development/sdk-overview
 > Path: 硬件开发 / SDK 接入（通用） / SDK概览
-> Updated: 2026-08-03 09:19:30
+> Updated: 2026-11-25 18:45:51
 
 # SDK概览
 
@@ -37,7 +37,7 @@ SDK的整体分层架构如下图所示。
 
   接入SDK后，接入厂家可以通过蓝牙通道上的物模型协议，完成各种不同业务场景的业务实现，理论上SDK不会限制接入设备的任何类型和业务形态。
 
-  关于物模型请参考[使用说明](https://open.dingtalk.com/document/device-side-development-guide/overview-27)。
+  关于物模型请参考[使用说明](https://help.aliyun.com/zh/iot/developer-reference/overview-27)。
 
   在网络通讯能力上，如果接入厂家设备支持WIFI，4G等能力，目前建议采用阿里云AIOT开源方案通过网络接入钉钉服务端。
 - SDK资源使用情况

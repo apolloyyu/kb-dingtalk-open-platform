@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "开发指南"
 breadcrumb: "开发酷应用 > 开发群聊酷应用 > 群聊酷应用 > 接入群聊酷应用"
 doc_id: "MIeD8Ouh51"
-updated_at: "2025-09-03 15:56:17"
+updated_at: "2026-11-25 18:46:44"
 ---
 
 > Source: https://open.dingtalk.com/document/dingstart/configuration-group-chat-quick-entry
 > Path: 应用开发 / 开发指南 / 开发酷应用 > 开发群聊酷应用 > 群聊酷应用 > 接入群聊酷应用
-> Updated: 2025-09-03 15:56:17
+> Updated: 2026-11-25 18:46:44
 
 # 接入群聊酷应用
 
@@ -20,7 +20,7 @@ updated_at: "2025-09-03 15:56:17"
 
 ## **前提条件**
 
-需要完成[创建酷应用](https://open.dingtalk.com/document/dingstart/create-coolapp)流程。
+完成[应用创建与配置](0007-create-application.md)流程，并创建一个酷应用。
 
 ## **操作步骤**
 

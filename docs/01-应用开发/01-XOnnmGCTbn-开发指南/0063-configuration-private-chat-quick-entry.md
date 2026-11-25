@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "开发指南"
 breadcrumb: "开发酷应用 > 开发单聊酷应用 > 接入单聊酷应用"
 doc_id: "oBsF6IJ2SU"
-updated_at: "2026-01-29 14:52:02"
+updated_at: "2026-11-25 18:46:48"
 ---
 
 > Source: https://open.dingtalk.com/document/dingstart/configuration-private-chat-quick-entry
 > Path: 应用开发 / 开发指南 / 开发酷应用 > 开发单聊酷应用 > 接入单聊酷应用
-> Updated: 2026-01-29 14:52:02
+> Updated: 2026-11-25 18:46:48
 
 # 接入单聊酷应用
 
@@ -21,7 +21,7 @@ updated_at: "2026-01-29 14:52:02"
 ## **前提条件**
 
 - 企业已完成认证。
-- 已完成[创建酷应用](https://open.dingtalk.com/document/dingstart/create-coolapp)流程。
+- 已完成[应用创建与配置](0007-create-application.md)流程，并创建一个酷应用。
 - 确保已获取有效的`AppKey`和`AppSecret`，用于后续接口调用鉴权。
 
 ## **操作步骤**

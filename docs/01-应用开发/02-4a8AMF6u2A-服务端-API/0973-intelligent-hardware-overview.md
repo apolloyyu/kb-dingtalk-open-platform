@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "智能硬件 > 概述"
 doc_id: "9ZkRKNS5XF"
-updated_at: "2026-07-20 09:25:45"
+updated_at: "2026-11-25 18:45:20"
 ---
 
 > Source: https://open.dingtalk.com/document/development/intelligent-hardware-overview
 > Path: 应用开发 / 服务端 API / 智能硬件 > 概述
-> Updated: 2026-07-20 09:25:45
+> Updated: 2026-11-25 18:45:20
 
 # 概述
 
@@ -55,8 +55,10 @@ updated_at: "2026-07-20 09:25:45"
 
 | **API** | **API说明** | **API版本** |
 | --- | --- | --- |
+| [获取文件转写的概要信息](0987-api-gettranscriptsummary.md) | 获取智能语音设备产生的音频文件转写概要信息。 |  |
 | [查询DingTalkA1小助理分析](0988-api-querysmartdeviceaisummary.md) | 查询DingTalkA1小助理分析结果。 | 新版 |
 | [创建DingTalkA1小助理分析](0989-api-createsmartdeviceaisummary.md) | 创建DingTalkA1小助理分析。 | 新版 |
+| [根据听记ID获取A1音频文件信息](0990-api-queryfileinfobyminutesid.md) | 使用A1文件产生的听记ID反查A1文件信息。 |  |
 
 ### **回调事件列表**
 

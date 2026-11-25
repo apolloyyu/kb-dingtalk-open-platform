@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "开发指南"
 breadcrumb: "开发机器人应用 > 企业机器人 > 企业机器人 > 机器人接收消息"
 doc_id: "hJQd2sPi7J"
-updated_at: "2026-06-30 09:01:09"
+updated_at: "2026-11-25 18:46:53"
 ---
 
 > Source: https://open.dingtalk.com/document/dingstart/robot-receive-message
 > Path: 应用开发 / 开发指南 / 开发机器人应用 > 企业机器人 > 企业机器人 > 机器人接收消息
-> Updated: 2026-06-30 09:01:09
+> Updated: 2026-11-25 18:46:53
 
 # 机器人接收消息
 
@@ -37,13 +37,13 @@ updated_at: "2026-06-30 09:01:09"
 - 运行环境：JDK 1.8 及以上
 - 安装 Java SDK：
 
-  添加依赖项到工程的`pom.xml`文件或下载对应的 jar 包，最新的 SDK 版本可以在[这里](https://s01.oss.sonatype.org/?spm=openapi-amp.sdkpublish.0.0.78cefAyIfAyImO#nexus-search;quick~app-stream-client)查看和下载。
+  添加依赖项到工程的`pom.xml`文件或下载对应的 jar 包。
 
   ```
   <dependency>
     <groupId>com.dingtalk.open</groupId>
     <artifactId>app-stream-client</artifactId>
-    <version>{sdk-version}</version>
+    <version>1.3.7</version>
   </dependency>
   ```
 

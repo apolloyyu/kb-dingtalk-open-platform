@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "开发指南"
 breadcrumb: "接入移动客户端 > 接入钉钉分享 > 接入流程"
 doc_id: "T1ayomqmbQ"
-updated_at: "2026-07-02 10:31:47"
+updated_at: "2026-11-25 18:46:54"
 ---
 
 > Source: https://open.dingtalk.com/document/dingstart/mini-app-access
 > Path: 应用开发 / 开发指南 / 接入移动客户端 > 接入钉钉分享 > 接入流程
-> Updated: 2026-07-02 10:31:47
+> Updated: 2026-11-25 18:46:54
 
 # 接入流程
 
@@ -224,7 +224,7 @@ updated_at: "2026-07-02 10:31:47"
 
    > **[!NOTE]**
    >
-   > 签名获取方式请参考[签名方法](https://open.dingtalk.com/document/orgapp/share-sdk-download)。
+   > 签名获取方式请参考[签名方法](#c335a21c79o75)。
 
    ![image..png](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/5128872871/p676009.png)
 

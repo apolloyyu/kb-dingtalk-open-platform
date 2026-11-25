@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "开发指南"
 breadcrumb: "开发酷应用 > 开发成员资料页酷应用 > 接入成员资料页"
 doc_id: "MfD3uL8Mph"
-updated_at: "2026-07-21 14:49:33"
+updated_at: "2026-11-25 18:46:50"
 ---
 
 > Source: https://open.dingtalk.com/document/dingstart/access-member-profile-coolapp
 > Path: 应用开发 / 开发指南 / 开发酷应用 > 开发成员资料页酷应用 > 接入成员资料页
-> Updated: 2026-07-21 14:49:33
+> Updated: 2026-11-25 18:46:50
 
 # 接入成员资料页
 
@@ -36,7 +36,7 @@ updated_at: "2026-07-21 14:49:33"
 在开始操作前，请确认满足以下要求：
 
 - 企业已完成认证。
-- 已完成[创建酷应用](https://open.dingtalk.com/document/dingstart/create-coolapp)流程。
+- 已完成[应用创建与配置](0007-create-application.md)流程，并创建一个酷应用。
 - 在开发者后台已开启“成员资料页扩展”相关能力。
 - 应用类型为企业内部应用或已上架的第三方企业应用。
 

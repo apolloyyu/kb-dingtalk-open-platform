@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "平台服务"
 breadcrumb: "平台基础规则 > 产品方案商 > 设计规范"
 doc_id: "icrJatMT6R"
-updated_at: "2026-08-19 09:15:24"
+updated_at: "2026-11-25 18:42:20"
 ---
 
 > Source: https://open.dingtalk.com/document/services/design-specification-for-dingtalk-product-solution-provider
 > Path: 应用开发 / 平台服务 / 平台基础规则 > 产品方案商 > 设计规范
-> Updated: 2026-08-19 09:15:24
+> Updated: 2026-11-25 18:42:20
 
 # 设计规范
 
@@ -168,7 +168,7 @@ updated_at: "2026-08-19 09:15:24"
 | 通讯录角色 | 获取成员在组织内部的角色 | 统一管理组织内用户信息 | [角色详情](../02-4a8AMF6u2A-服务端-API/0089-queries-role-details.md) |
 | 通讯录权限 | 获取管理员在组织内部的权限范围 | 统一管理组织内用户信息 | [获取管理员通讯录权限范围](../02-4a8AMF6u2A-服务端-API/0069-query-permissions-of-the-administrator-address-book.md) |
 | 外部联系人 | 获取组织的客户管理列表与详情 | 统一管理组织的客户/外部联系人 | [获取外部联系人列表](../02-4a8AMF6u2A-服务端-API/0099-obtain-the-external-contact-list.md) |
-| 钉盘相关 | 上传文件、发送文件 | 在钉钉可以统一管理团队文件 | [钉盘](https://open.dingtalk.com/document/development/ding-drive-overview) |
+| 钉盘相关 | 上传文件、发送文件 | 在钉钉可以统一管理团队文件 | [云盘](../02-4a8AMF6u2A-服务端-API/0554-dingtalk-document-overview.md#d7b5ec92cedeh) |
 | 电话 | 拨打电话联系 | 拨打钉钉电话，使用智能办公电话 | [拨打钉钉电话](../03-Ogu5SlPY4t-客户端-JSAPI/0773-call-dingtalk-h5.md)  [拨打钉钉电话](../03-Ogu5SlPY4t-客户端-JSAPI/0700-call-dingtalk.md) |
 | 选人 | 通讯录选人 | 选择组织中的人或部门 | [微应用选择部门和人](../03-Ogu5SlPY4t-客户端-JSAPI/0737-select-department-and-person.md)  [小程序选人与部门](../03-Ogu5SlPY4t-客户端-JSAPI/0692-candidates-and-departments.md) |
 | DING | 发送紧急通知 | 通过DING发送紧急事项，可支持唤起DING、任务、会议 | [微应用发DING](../03-Ogu5SlPY4t-客户端-JSAPI/0777-ding-2-0-hair-pin.md)  [小程序发DING](../03-Ogu5SlPY4t-客户端-JSAPI/0699-ding-1.md) |

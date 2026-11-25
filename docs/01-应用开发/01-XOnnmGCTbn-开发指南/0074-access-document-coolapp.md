@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "开发指南"
 breadcrumb: "开发酷应用 > 开发文档酷应用 > 接入文档酷应用"
 doc_id: "A8B490ozrG"
-updated_at: "2026-01-29 14:49:52"
+updated_at: "2026-11-25 18:46:51"
 ---
 
 > Source: https://open.dingtalk.com/document/dingstart/access-document-coolapp
 > Path: 应用开发 / 开发指南 / 开发酷应用 > 开发文档酷应用 > 接入文档酷应用
-> Updated: 2026-01-29 14:49:52
+> Updated: 2026-11-25 18:46:51
 
 # 接入文档酷应用
 
@@ -20,7 +20,7 @@ updated_at: "2026-01-29 14:49:52"
 
 ## **前提条件**
 
-需要完成[创建酷应用](https://open.dingtalk.com/document/dingstart/create-coolapp)流程。
+完成[应用创建与配置](0007-create-application.md)流程，并创建一个酷应用。
 
 ## **操作步骤**
 

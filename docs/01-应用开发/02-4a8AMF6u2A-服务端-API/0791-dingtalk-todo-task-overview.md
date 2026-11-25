@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "待办任务 > 概述"
 doc_id: "H6aJIvi3kT"
-updated_at: "2026-07-30 09:19:03"
+updated_at: "2026-11-25 18:45:14"
 ---
 
 > Source: https://open.dingtalk.com/document/development/dingtalk-todo-task-overview
 > Path: 应用开发 / 服务端 API / 待办任务 > 概述
-> Updated: 2026-07-30 09:19:03
+> Updated: 2026-11-25 18:45:14
 
 # 概述
 
@@ -78,9 +78,9 @@ updated_at: "2026-07-30 09:19:03"
 | [更新钉钉待办任务](0796-updates-dingtalk-to-do-tasks.md) | 更新钉钉待办任务信息及状态。 | 新版 |
 | [更新钉钉待办执行者状态](0797-update-dingtalk-to-do-status.md) | 当待办存在多个执行者时，可调用本接口更新部分执行者的完成状态。 | 新版 |
 | [查询企业下用户待办列表](0798-query-the-to-do-list-of-enterprise-users.md) | 获取该授权企业下某用户的待办列表。 | 新版 |
-| [新增待办卡片类型配置](0799-add-todo-cardtype-configuration.md) | 新增一个待办卡片类型。 | 新版 |
+| [创建待办卡片类型配置](0799-add-todo-cardtype-configuration.md) | 新增一个待办卡片类型。 | 新版 |
 | [更新待办卡片类型配置](0800-update-the-to-do-card-type-configuration.md) | 更新已有的待办卡片类型。 | 新版 |
-| [获取待办卡片类型配置详情](0801-queries-the-to-do-card-type-configuration-details.md) | 根据ID获取一个待办卡片类型配置详情。。 | 新版 |
+| [根据id获取待办卡片类型配置](0801-queries-the-to-do-card-type-configuration-details.md) | 根据ID获取一个待办卡片类型配置详情。。 | 新版 |
 
 ### **回调事件列表**
 
@@ -89,6 +89,12 @@ updated_at: "2026-07-30 09:19:03"
 - [待办任务新增](../04-LFcRvVD08N-事件订阅/0027-event-todo-task-create.md)
 - [待办任务更新](../04-LFcRvVD08N-事件订阅/0028-event-todo-task-update.md)
 - [待办任务删除](../04-LFcRvVD08N-事件订阅/0029-event-todo-task-delete.md)
+
+## **集成方案**
+
+企业若需要集成更多待办相关能力，可参考下方内容进行接入：
+
+- [培训任务督办：让企业学习的跟踪督办更高效](0792-supervision-tasks-tracking-supervision.md)
 
 ## 名词解释
 

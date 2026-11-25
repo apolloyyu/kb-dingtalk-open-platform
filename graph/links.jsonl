@@ -110,6 +110,7 @@
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0044-coolapp-overview.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0073-develop-document-coolapp-overview.md", "text": "扩展到文档", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0045-group-chat-coolapp-overview.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0057-group-chat-coolapp-interactive-card.md", "text": "互动卡片", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0045-group-chat-coolapp-overview.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0058-permanent-type-suspended-ceiling.md", "text": "吊顶卡片", "n": 1}
+{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0046-configuration-group-chat-quick-entry.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "应用创建与配置", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0046-configuration-group-chat-quick-entry.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0019-publish-dingtalk-application.md", "text": "发布应用", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0046-configuration-group-chat-quick-entry.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0047-group-chat-coolapp-access-robot-app.md", "text": "接入机器人能力", "n": 2}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0046-configuration-group-chat-quick-entry.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0048-develop-group-chat-coolapp-interactive-card.md", "text": "开发互动卡片", "n": 1}
@@ -136,9 +137,11 @@
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0051-introduction-to-yida-group-chat-coolapp.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0055-yida-cool-application-release.md", "text": "酷应用发布", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0051-introduction-to-yida-group-chat-coolapp.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0056-yida-cool-application-enabled.md", "text": "酷应用启用", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0054-yida-cool-process-design.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0053-yida-cool-card-design.md", "text": "酷卡片设计", "n": 1}
+{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0057-group-chat-coolapp-interactive-card.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "应用创建与配置", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0057-group-chat-coolapp-interactive-card.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0046-configuration-group-chat-quick-entry.md", "text": "接入群聊酷应用", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0057-group-chat-coolapp-interactive-card.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0780-create-and-deliver-cards.md", "text": "发送钉钉互动卡片（高级版）", "n": 2}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0057-group-chat-coolapp-interactive-card.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0783-register-card-callback-address.md", "text": "注册卡片回调地址", "n": 1}
+{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0058-permanent-type-suspended-ceiling.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "应用创建与配置", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0058-permanent-type-suspended-ceiling.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0046-configuration-group-chat-quick-entry.md", "text": "接入群聊酷应用", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0058-permanent-type-suspended-ceiling.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0756-send-group-helper-message.md", "text": "创建并开启互动卡片吊顶", "n": 2}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0058-permanent-type-suspended-ceiling.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0757-close-interactive-card-ceiling.md", "text": "关闭互动卡片吊顶", "n": 1}
@@ -147,6 +150,7 @@
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0060-group-chat-coolapp-event.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0004-develop-stream-mode-push-server.md", "text": "开发 HTTP 模式", "n": 2}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0061-group-chat-coolapp-expands-immersive-container.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1407-structure-of-applink.md", "text": "AppLink协议", "n": 3}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0062-private-chat-coolapp-overview.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0277-batch-chat-session.md", "text": "批量安装酷应用到单聊会话", "n": 1}
+{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0063-configuration-private-chat-quick-entry.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "应用创建与配置", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0063-configuration-private-chat-quick-entry.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0019-publish-dingtalk-application.md", "text": "发布应用", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0063-configuration-private-chat-quick-entry.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0047-group-chat-coolapp-access-robot-app.md", "text": "接入机器人能力", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0063-configuration-private-chat-quick-entry.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0065-private-chat-coolapp-develop-interactive-cards.md", "text": "开发互动卡片", "n": 1}
@@ -158,6 +162,8 @@
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0065-private-chat-coolapp-develop-interactive-cards.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0756-send-group-helper-message.md", "text": "创建并开启互动卡片吊顶", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0065-private-chat-coolapp-develop-interactive-cards.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0757-close-interactive-card-ceiling.md", "text": "关闭互动卡片吊顶", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0065-private-chat-coolapp-develop-interactive-cards.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0780-create-and-deliver-cards.md", "text": "创建并投放卡片", "n": 1}
+{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0065-private-chat-coolapp-develop-interactive-cards.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "text": "互动卡片高级版", "n": 3}
+{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0065-private-chat-coolapp-develop-interactive-cards.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0021-interactive-card-editor.md", "text": "高级版编辑器", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0066-private-chat-related-jump-protocol.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0001-basic-concepts-beta.md", "text": "基础概念", "n": 2}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0066-private-chat-related-jump-protocol.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0442-scheme-of-mini-programs-1.md", "text": "小程序 scheme", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0068-access-link-enhancements-coolapp.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "创建酷应用", "n": 1}
@@ -165,10 +171,12 @@
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0068-access-link-enhancements-coolapp.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0777-interface-for-creating-a-card-instance.md", "text": "创建卡片", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0068-access-link-enhancements-coolapp.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0008-dynamic-data-source.md", "text": "动态数据源", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0068-access-link-enhancements-coolapp.md", "to": "docs/05-互动卡片/02-MhNX42mFB1-模板搭建卡片/0011-platform-building-overview.md", "text": "互动卡片高级版", "n": 1}
+{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0070-access-member-profile-coolapp.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "应用创建与配置", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0070-access-member-profile-coolapp.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0019-publish-dingtalk-application.md", "text": "发布应用", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0070-access-member-profile-coolapp.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0071-create-contact-card.md", "text": "创建通讯录卡片", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0070-access-member-profile-coolapp.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0072-member-information-page-expands-interactive-card-capability-beta.md", "text": "成员资料页扩展互动卡片能力", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0073-develop-document-coolapp-overview.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0075-configure-document-coolapp-manifest.md", "text": "配置文档酷应用Manifest", "n": 1}
+{"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0074-access-document-coolapp.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "应用创建与配置", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0074-access-document-coolapp.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0019-publish-dingtalk-application.md", "text": "发布应用", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0074-access-document-coolapp.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0075-configure-document-coolapp-manifest.md", "text": "配置文档酷应用Manifest", "n": 1}
 {"from": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0075-configure-document-coolapp-manifest.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0074-access-document-coolapp.md", "text": "接入文档酷应用", "n": 1}
@@ -1461,9 +1469,9 @@
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0256-modify-event.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0033-obtain-the-access-token-of-the-authorized-enterprise-1.md", "text": "获取第三方应用授权企业的accessToken", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0256-modify-event.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0053-dingtalk-retrieve-user-information.md", "text": "获取用户通讯录个人信息", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0256-modify-event.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0055-query-user-details.md", "text": "查询用户详情", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0256-modify-event.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0258-query-an-event-list.md", "text": "查询日程列表", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0256-modify-event.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0260-add-schedule-participant.md", "text": "添加日程参与者", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0256-modify-event.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0261-delete-schedule-participant.md", "text": "删除日程参与者", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0256-modify-event.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0258-query-an-event-list.md", "text": "查询日程列表", "n": 2}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0256-modify-event.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0260-add-schedule-participant.md", "text": "添加日程参与者", "n": 2}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0256-modify-event.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0261-delete-schedule-participant.md", "text": "删除日程参与者", "n": 2}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0257-query-details-about-an-event.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0013-server-api-error-codes-1.md", "text": "全局错误码", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0257-query-details-about-an-event.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0031-obtain-user-token.md", "text": "获取用户token", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0257-query-details-about-an-event.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md", "text": "获取企业内部应用的accessToken", "n": 1}
@@ -4452,15 +4460,16 @@
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0790-faq-robot.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0770-gets-the-result-of-sending-messages-asynchronously-to-the-enterprise.md", "text": "获取工作通知消息的发送结果", "n": 3}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0790-faq-robot.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0772-message-types-and-data-format.md", "text": "消息通知类型-OA消息", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0790-faq-robot.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0773-message-link-description.md", "text": "消息链接说明", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-dingtalk-todo-task-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0792-supervision-tasks-tracking-supervision.md", "text": "培训任务督办：让企业学习的跟踪督办更高效", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-dingtalk-todo-task-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0793-add-dingtalk-to-do-task.md", "text": "创建钉钉待办任务", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-dingtalk-todo-task-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0794-api-createpersonaltodotask.md", "text": "创建钉钉个人待办任务", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-dingtalk-todo-task-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0795-delete-dingtalk-to-do-tasks.md", "text": "删除钉钉待办任务", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-dingtalk-todo-task-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0796-updates-dingtalk-to-do-tasks.md", "text": "更新钉钉待办任务", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-dingtalk-todo-task-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0797-update-dingtalk-to-do-status.md", "text": "更新钉钉待办执行者状态", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-dingtalk-todo-task-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0798-query-the-to-do-list-of-enterprise-users.md", "text": "查询企业下用户待办列表", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-dingtalk-todo-task-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0799-add-todo-cardtype-configuration.md", "text": "新增待办卡片类型配置", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-dingtalk-todo-task-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0799-add-todo-cardtype-configuration.md", "text": "创建待办卡片类型配置", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-dingtalk-todo-task-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0800-update-the-to-do-card-type-configuration.md", "text": "更新待办卡片类型配置", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-dingtalk-todo-task-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0801-queries-the-to-do-card-type-configuration-details.md", "text": "获取待办卡片类型配置详情", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-dingtalk-todo-task-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0801-queries-the-to-do-card-type-configuration-details.md", "text": "根据id获取待办卡片类型配置", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-dingtalk-todo-task-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0027-event-todo-task-create.md", "text": "待办任务新增", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-dingtalk-todo-task-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0028-event-todo-task-update.md", "text": "待办任务更新", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0791-dingtalk-todo-task-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0029-event-todo-task-delete.md", "text": "待办任务删除", "n": 1}
@@ -5203,8 +5212,10 @@
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0973-intelligent-hardware-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0984-api-checkdeviceupdate.md", "text": "检查指定设备的固件升级", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0973-intelligent-hardware-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0985-api-getdeviceproperties.md", "text": "读取指定设备的属性快照", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0973-intelligent-hardware-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0986-api-invokedeviceservice.md", "text": "调用指定设备的物模型服务", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0973-intelligent-hardware-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0987-api-gettranscriptsummary.md", "text": "获取文件转写的概要信息", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0973-intelligent-hardware-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0988-api-querysmartdeviceaisummary.md", "text": "查询DingTalkA1小助理分析", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0973-intelligent-hardware-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0989-api-createsmartdeviceaisummary.md", "text": "创建DingTalkA1小助理分析", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0973-intelligent-hardware-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0990-api-queryfileinfobyminutesid.md", "text": "根据听记ID获取A1音频文件信息", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0973-intelligent-hardware-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0002-org-event-overview.md", "text": "事件订阅总览", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0973-intelligent-hardware-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0119-events-aiot-device-uplink-event.md", "text": "AIoT设备上行事件", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0973-intelligent-hardware-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0124-events-aone-assistant-status-change-1.md", "text": "DingTalkA1小助理状态变更", "n": 1}
@@ -6474,8 +6485,6 @@
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "应用创建与配置", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0003-add-api-permission.md", "text": "添加接口调用权限", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md", "text": "获取企业内部应用的accessToken", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0987-api-gettranscriptsummary.md", "text": "获取文件转写的概要信息", "n": 1}
-{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0990-api-queryfileinfobyminutesid.md", "text": "根据听记ID获取A1音频文件信息", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1276-api-querydevicestatus.md", "text": "查询设备属性", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1277-api-querydevicedetail.md", "text": "批量获取设备详情", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1278-api-getaudiofileinfo.md", "text": "获取音频文件信息", "n": 1}
@@ -6492,8 +6501,28 @@
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1289-api-getservicechaptersummary.md", "text": "获取服务对话章节摘要", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1290-api-getcustomerinsight.md", "text": "获取AI销售管理客户洞察信息", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1291-api-listservicerecord.md", "text": "分页获取企业下的服务记录信息", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1292-api-getkanjianrecord.md", "text": "查询看鉴记录详情", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1293-api-listkanjianrecords.md", "text": "分页查询看鉴记录列表", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1294-api-bindkanjianrecordtask.md", "text": "看鉴记录首次绑定主任务", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1295-api-pagekanjianrecordanalysis.md", "text": "分页拉取看鉴记录的关键识别结果", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1296-api-pagekanjianrecordprocess.md", "text": "分页拉取看鉴记录的过程记录结果", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1297-api-createkanjiantask.md", "text": "创建看鉴任务", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1298-api-deletekanjiantask.md", "text": "删除看鉴任务", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1299-api-updatekanjiantask.md", "text": "更新看鉴主任务", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1300-api-listkanjiantasks.md", "text": "分页查询看鉴任务列表", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1301-api-getkanjiantask.md", "text": "查询看鉴主任务详情及子任务列表", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1302-api-startkanjianrecording.md", "text": "BV 设备开始录制", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1303-api-stopkanjianrecording.md", "text": "BV 设备结束录制", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1304-api-listkanjiandevices.md", "text": "分页查询看鉴 BV 设备列表", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1305-api-getkanjiandevice.md", "text": "查询企业看鉴 BV 设备详情", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1306-api-getasrtranscription.md", "text": "查询ASR转写结果", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1307-api-createasrtranscription.md", "text": "创建ASR离线转写任务", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0127-events-kanjian-device-online-changed.md", "text": "BV看鉴设备上下线事件", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0128-events-kanjian-record-status-changed.md", "text": "BV看鉴记录状态变更事件", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0129-events-kanjian-recording-status-changed.md", "text": "BV看鉴录制状态变更事件", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0130-events-badge-device-status-change.md", "text": "DingTalkB1设备状态变更事件", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0131-events-dvi-device-owner-change.md", "text": "AI销售管理设备使用人变更事件", "n": 1}
+{"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1275-audiovisual-intelligence-service-overview.md", "to": "docs/01-应用开发/04-LFcRvVD08N-事件订阅/0132-events-dvi-custom-ai-analysis-completed.md", "text": "智能工牌自定义AI分析项完成事件", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1276-api-querydevicestatus.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0013-server-api-error-codes-1.md", "text": "全局错误码", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1276-api-querydevicestatus.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0032-obtain-the-access-token-of-an-internal-app.md", "text": "获取企业内部应用的accessToken", "n": 1}
 {"from": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/1277-api-querydevicedetail.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0013-server-api-error-codes-1.md", "text": "全局错误码", "n": 1}
@@ -10015,6 +10044,7 @@
 {"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0005-design-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0089-queries-role-details.md", "text": "角色详情", "n": 1}
 {"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0005-design-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0099-obtain-the-external-contact-list.md", "text": "获取外部联系人列表", "n": 1}
 {"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0005-design-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0477-workflow-overview.md", "text": "OA工作流概述", "n": 1}
+{"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0005-design-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0554-dingtalk-document-overview.md", "text": "云盘", "n": 1}
 {"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0005-design-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0771-work-notification-templating-send-notification-interface.md", "text": "使用模板发送工作通知消息", "n": 1}
 {"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0005-design-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0876-application-market-overview.md", "text": "应用内购", "n": 1}
 {"from": "docs/01-应用开发/07-TjCzIgfQs3-平台服务/0005-design-specification-for-dingtalk-product-solution-provider.md", "to": "docs/01-应用开发/03-Ogu5SlPY4t-客户端-JSAPI/0692-candidates-and-departments.md", "text": "小程序选人与部门", "n": 1}
@@ -10371,6 +10401,7 @@
 {"from": "docs/02-连接平台/05-gUzBRSLRRd-连接器中心/0024-oa-approval-integration.md", "to": "docs/02-连接平台/02-XdgyZifJkr-我的连接/0011-add-trigger-event-1.md", "text": "添加触发事件", "n": 1}
 {"from": "docs/02-连接平台/05-gUzBRSLRRd-连接器中心/0024-oa-approval-integration.md", "to": "docs/02-连接平台/02-XdgyZifJkr-我的连接/0012-add-execution-action-1.md", "text": "添加执行动作", "n": 1}
 {"from": "docs/02-连接平台/05-gUzBRSLRRd-连接器中心/0025-oa-approval-attachment-is-synchronized-to-the-knowledge-base.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0006-get-developer-permissions.md", "text": "开发者权限", "n": 1}
+{"from": "docs/02-连接平台/05-gUzBRSLRRd-连接器中心/0025-oa-approval-attachment-is-synchronized-to-the-knowledge-base.md", "to": "docs/01-应用开发/02-4a8AMF6u2A-服务端-API/0554-dingtalk-document-overview.md", "text": "知识库", "n": 2}
 {"from": "docs/02-连接平台/05-gUzBRSLRRd-连接器中心/0026-send-notification-message.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0006-get-developer-permissions.md", "text": "开发者权限", "n": 1}
 {"from": "docs/02-连接平台/05-gUzBRSLRRd-连接器中心/0026-send-notification-message.md", "to": "docs/01-应用开发/01-XOnnmGCTbn-开发指南/0007-create-application.md", "text": "企业内部应用", "n": 1}
 {"from": "docs/02-连接平台/05-gUzBRSLRRd-连接器中心/0026-send-notification-message.md", "to": "docs/02-连接平台/02-XdgyZifJkr-我的连接/0001-create-a-connection-flow-1.md", "text": "创建连接流", "n": 1}

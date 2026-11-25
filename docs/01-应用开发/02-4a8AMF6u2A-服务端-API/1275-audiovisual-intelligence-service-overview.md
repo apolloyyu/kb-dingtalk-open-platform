@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "服务端 API"
 breadcrumb: "视听智能服务 > 概述"
 doc_id: "kK63kCLgqH"
-updated_at: "2026-08-12 09:20:37"
+updated_at: "2026-11-25 18:45:49"
 ---
 
 > Source: https://open.dingtalk.com/document/development/audiovisual-intelligence-service-overview
 > Path: 应用开发 / 服务端 API / 视听智能服务 > 概述
-> Updated: 2026-08-12 09:20:37
+> Updated: 2026-11-25 18:45:49
 
 # 概述
 
@@ -85,28 +85,80 @@ updated_at: "2026-08-12 09:20:37"
 
 ## **开放概览**
 
+### **开放接口列表**
+
+#### **通用接口**
+
+| **API** | **API说明** | **API版本** |
+| --- | --- | --- |
+| [查询设备属性](1276-api-querydevicestatus.md) | 通过本接口，批量获取指定的智能语音设备（A1或B1）的状态。 | 新版 |
+| [批量获取设备详情](1277-api-querydevicedetail.md) | 通过本接口，批量获取指定SN的智能音频设备（A1或B1）详情。 | 新版 |
+| [获取音频文件信息](1278-api-getaudiofileinfo.md) | 通过本接口，获取智能音频设备（A1或B1）产生的音频文件信息。 | 新版 |
+| [分页查询指定设备的音频文件列表](1279-api-queryaudiofile.md) | 通过本接口，分页查询智能设备（A1或B1）产生的音频文件。 | 新版 |
+
+#### **DingTalk B1**
+
 | **API** | **API说明** | **API版本** |
 | --- | --- | --- |
 | [获取客户信息](1281-api-getcustomerinfo.md) | 通过本接口，获取AI销售管理中的单条客户数据。 | 新版 |
 | [查询团队列表](1280-api-listteam.md) | 调用本接口，获取AI销售管理中的团队列表信息。 | 新版 |
-| [查询设备属性](1276-api-querydevicestatus.md) | 通过本接口，批量获取指定的智能语音设备（A1或B1）的状态。 | 新版 |
 | [查询单条服务记录](1284-api-getservicerecord.md) | 通过本接口，使用服务记录ID获取AI销售管理中的指定服务记录。 | 新版 |
 | [获取服务待办信息](1288-api-listservicetodo.md) | 调用本接口，通过服务记录ID，获取AI销售管理中的服务记录待列表。 | 新版 |
 | [获取服务会话总结](1283-api-getservicechatsummary.md) | 调用本接口，通过服务记录ID，获取AI销售管理中的服务会话总结。 | 新版 |
 | [获取服务表现数据](1282-api-getservicequalityinspection.md) | 通过本接口，根据服务记录ID，获取AI销售管理中的服务表现数据。 | 新版 |
 | [分页查询客户列表](1287-api-listcustomer.md) | 通过本接口，分页获取AI销售管理中的客户数据。 | 新版 |
 | [分页查询设备列表](1285-api-listdevice.md) | 调用本接口，分页查询AI销售管理中的设备列表。 | 新版 |
-| [批量获取设备详情](1277-api-querydevicedetail.md) | 通过本接口，批量获取指定SN的智能音频设备（A1或B1）详情。 | 新版 |
 | [更新设备绑定关系](1286-api-updatedevicebinding.md) | 通过本接口，更新AI销售管理中硬件设备与使用人之间的绑定关系。 | 新版 |
-| [获取音频文件信息](1278-api-getaudiofileinfo.md) | 通过本接口，获取智能音频设备（A1或B1）产生的音频文件信息。 | 新版 |
+| [获取服务对话章节摘要](1289-api-getservicechaptersummary.md) | 通过本接口，获取AI销售管理中的服务记录对话章节摘要。 | 新版 |
+| [获取AI销售管理客户洞察信息](1290-api-getcustomerinsight.md) | 通过本接口，获取AI销售管理中的客户洞察信息。 | 新版 |
+| [分页获取企业下的服务记录信息](1291-api-listservicerecord.md) | 调用本接口，分页获取企业下的服务记录信息。 | 新版 |
+
+#### **BV 看鉴**
+
+- **看鉴记录**
+
+  | **API** | **API说明** | **API版本** |
+  | --- | --- | --- |
+  | [查询看鉴记录详情](1292-api-getkanjianrecord.md) | 调用本接口，按记录 ID 查询看鉴 BV 记录详情。 | 新版 |
+  | [分页查询看鉴记录列表](1293-api-listkanjianrecords.md) | 调用本接口，分页查询企业下的看鉴 BV 设备录制记录。 | 新版 |
+  | [看鉴记录首次绑定主任务](1294-api-bindkanjianrecordtask.md) | 调用本接口，给看鉴 BV 记录首次绑定主任务。 | 新版 |
+  | [分页拉取看鉴记录的关键识别结果](1295-api-pagekanjianrecordanalysis.md) | 调用本接口，分页拉取看鉴 BV 记录的关键识别结果。 | 新版 |
+  | [分页拉取看鉴记录的过程记录结果](1296-api-pagekanjianrecordprocess.md) | 调用本接口，分页拉取看鉴 BV 记录的过程记录。 | 新版 |
+- **看鉴任务**
+
+  | **API** | **API说明** | **API版本** |
+  | --- | --- | --- |
+  | [创建看鉴任务](1297-api-createkanjiantask.md) | 调用本接口，创建看鉴主任务及子任务。 | 新版 |
+  | [删除看鉴任务](1298-api-deletekanjiantask.md) | 调用本接口，删除指定的看鉴主任务，并同时删除其下全部子任务。 | 新版 |
+  | [更新看鉴主任务](1299-api-updatekanjiantask.md) | 调用本接口，更新看鉴主任务，只修改传入的非空字段。 | 新版 |
+  | [分页查询看鉴任务列表](1300-api-listkanjiantasks.md) | 调用本接口，分页查询企业看鉴主任务列表。 | 新版 |
+  | [查询看鉴主任务详情及子任务列表](1301-api-getkanjiantask.md) | 调用本接口，按任务 ID 查询看鉴主任务详情及其子任务列表。 | 新版 |
+- **看鉴设备**
+
+  | **API** | **API说明** | **API版本** |
+  | --- | --- | --- |
+  | [BV 设备开始录制](1302-api-startkanjianrecording.md) | 调用本接口，让企业看鉴 BV 设备开始录制。 | 新版 |
+  | [BV 设备结束录制](1303-api-stopkanjianrecording.md) | 调用本接口，按会话 ID 停止看鉴 BV 设备录制。 | 新版 |
+  | [分页查询看鉴 BV 设备列表](1304-api-listkanjiandevices.md) | 调用本接口，分页查询企业下的看鉴 BV 设备。 | 新版 |
+  | [查询企业看鉴 BV 设备详情](1305-api-getkanjiandevice.md) | 调用本接口，按设备序列号查询企业看鉴 BV 设备详情。 | 新版 |
+
+#### **音频转写服务**
+
+| **API** | **API说明** | **API版本** |
+| --- | --- | --- |
 | [查询ASR转写结果](1306-api-getasrtranscription.md) | 调用本接口查询[创建ASR离线转写任务]的转写结果。 | 新版 |
 | [创建ASR离线转写任务](1307-api-createasrtranscription.md) | 调用本接口，创建音频离线转写任务。 | 新版 |
-| [获取服务对话章节摘要](1289-api-getservicechaptersummary.md) | 通过本接口，获取AI销售管理中的服务记录对话章节摘要。 | 新版 |
-| [获取文件转写的概要信息](0987-api-gettranscriptsummary.md) | 通过本接口，获取智能语音设备产生的音频文件转写概要信息。 | 新版 |
-| [获取AI销售管理客户洞察信息](1290-api-getcustomerinsight.md) | 通过本接口，获取AI销售管理中的客户洞察信息。 | 新版 |
-| [根据听记ID获取A1音频文件信息](0990-api-queryfileinfobyminutesid.md) | 通过本接口，可以使用A1文件产生的听记ID反查A1文件信息。 | 新版 |
-| [分页获取企业下的服务记录信息](1291-api-listservicerecord.md) | 调用本接口，分页获取企业下的服务记录信息。 | 新版 |
-| [分页查询指定设备的音频文件列表](1279-api-queryaudiofile.md) | 通过本接口，分页查询智能设备（A1或B1）产生的音频文件。 | 新版 |
+
+### 回调事件列表
+
+视听智能服务支持BV看鉴设备上下线事件、记录状态变更等回调事件：
+
+- [BV看鉴设备上下线事件](../04-LFcRvVD08N-事件订阅/0127-events-kanjian-device-online-changed.md)
+- [BV看鉴录制状态变更事件](../04-LFcRvVD08N-事件订阅/0129-events-kanjian-recording-status-changed.md)
+- [BV看鉴记录状态变更事件](../04-LFcRvVD08N-事件订阅/0128-events-kanjian-record-status-changed.md)
+- [DingTalkB1设备状态变更事件](../04-LFcRvVD08N-事件订阅/0130-events-badge-device-status-change.md)
+- [AI销售管理设备使用人变更事件](../04-LFcRvVD08N-事件订阅/0131-events-dvi-device-owner-change.md)
+- [智能工牌自定义AI分析项完成事件](../04-LFcRvVD08N-事件订阅/0132-events-dvi-custom-ai-analysis-completed.md)
 
 ## **使用教程**
 

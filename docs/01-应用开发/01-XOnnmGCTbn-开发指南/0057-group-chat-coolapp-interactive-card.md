@@ -7,12 +7,12 @@ group: "应用开发"
 tab: "开发指南"
 breadcrumb: "开发酷应用 > 开发群聊酷应用 > 开发参考 > 互动卡片"
 doc_id: "3v3i5MFZu4"
-updated_at: "2026-07-22 16:55:21"
+updated_at: "2026-11-25 18:46:46"
 ---
 
 > Source: https://open.dingtalk.com/document/dingstart/group-chat-coolapp-interactive-card
 > Path: 应用开发 / 开发指南 / 开发酷应用 > 开发群聊酷应用 > 开发参考 > 互动卡片
-> Updated: 2026-07-22 16:55:21
+> Updated: 2026-11-25 18:46:46
 
 # 互动卡片
 
@@ -66,7 +66,7 @@ updated_at: "2026-07-22 16:55:21"
 
 > **[!IMPORTANT]**
 >
-> 1. 配置互动卡片前，请先创建群聊酷应用，详情请参考[创建酷应用](https://open.dingtalk.com/document/dingstart/create-coolapp)。
+> 1. 配置互动卡片前，请先创建群聊酷应用，详情请参考[应用创建与配置](0007-create-application.md)。
 > 2. 配置互动卡片前，请先配置快捷入口，详情请参考[接入群聊酷应用](0046-configuration-group-chat-quick-entry.md)。
 
 1. 在**基础信息**页面，配置**群聊酷应用信息**后，单击**保存**。

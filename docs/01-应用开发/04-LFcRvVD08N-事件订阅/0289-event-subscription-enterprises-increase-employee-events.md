@@ -25,7 +25,7 @@ updated_at: "2026-09-02 18:14:37"
 
 ## 功能描述
 
-企业内部用户变更事件，eventType为user\_add\_org，表示企业发生员工增加时的推送的数据，字段值来自于[通讯录事件](0349-address-book-events.md)。
+企业内部用户变更事件，eventType为user\_add\_org，表示企业发生员工增加时的推送的数据，字段值来自于[通讯录事件](0347-address-book-events.md)。
 
 ## 支持应用类型
 

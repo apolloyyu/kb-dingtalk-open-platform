@@ -31,7 +31,7 @@ updated_at: "2026-09-02 18:14:50"
 ## 准备工作
 
 - 注册了钉钉管理员账号。若未注册，单击[这里](https://oa.dingtalk.com/register_new.htm?source=1008_OA&lwfrom=2018122711522903000&succJump=oa#/)完成注册。
-- 绑定聚石塔账号，详情请参考[入驻聚石塔](https://open.dingtalk.com/document/development/create-tmallcloud-account)。
+- 绑定聚石塔账号，详情请参考[入驻聚石塔](0334-create-tmallcloud-account.md)。
 - 安装小程序开发者工具IDE，单击[这里](../06-JDICnQyZLF-开发工具/0001-miniapp-tool.md)下载安装。
 - 本教程中的示例Demo使用Java开发，确保您已经安装了Java开发环境（安装JDK）以及Java项目构建工具Maven。
 

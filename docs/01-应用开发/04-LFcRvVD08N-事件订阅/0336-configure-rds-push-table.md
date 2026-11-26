@@ -172,8 +172,8 @@ updated_at: "2026-09-02 18:14:51"
 >
 > 已入驻聚石塔的应用，可以在聚石塔配置RDS数据源。新应用无法入驻聚石塔，部署方式请选择计算巢。
 
-1. 完成聚石塔账号绑定，在钉钉业务域下的vpc完成RDS购买，详情请参考文档[入驻聚石塔](https://open.dingtalk.com/document/development/create-tmallcloud-account)。
-2. 完成聚石塔RDS配置，详情请参考文档[使用聚石塔RDS数据库](https://open.dingtalk.com/document/development/use-tmallcloud-rds)。
+1. 完成聚石塔账号绑定，在钉钉业务域下的vpc完成RDS购买，详情请参考文档[入驻聚石塔](0334-create-tmallcloud-account.md)。
+2. 完成聚石塔RDS配置，详情请参考文档[使用聚石塔RDS数据库](0335-use-tmallcloud-rds.md)。
 3. 登录开发者后台，选择聚石塔 > 云推送数据源。找到已创建的RDS实例，然后单击设置。
 
    ![设置数据源](https://help-static-aliyun-doc.aliyuncs.com/assets/img/zh-CN/8429018461/p422214.png)

@@ -28,11 +28,11 @@ updated_at: "2026-08-27 12:31:27"
 
 首先，需要将钉钉账号绑定到聚石塔。
 
-1. 申请聚石塔账号，详情请参考[入驻聚石塔](https://open.dingtalk.com/document/development/create-tmallcloud-account)。
+1. 申请聚石塔账号，详情请参考[入驻聚石塔](../04-LFcRvVD08N-事件订阅/0334-create-tmallcloud-account.md)。
 2. 添加迁移白名单。
 
    请扫描文档底部提供的钉钉群二维码，提供企业的corpid和要迁移的云产品列表，由钉钉小二添加白名单。
-3. 开发者后台绑定聚石塔账号，详情请参考[入驻聚石塔](https://open.dingtalk.com/document/development/create-tmallcloud-account)。
+3. 开发者后台绑定聚石塔账号，详情请参考[入驻聚石塔](../04-LFcRvVD08N-事件订阅/0334-create-tmallcloud-account.md)。
 
 ## 步骤二：准备迁移环境
 
